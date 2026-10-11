@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Copie</translation>
     </message>
@@ -746,7 +746,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Lingvist</translation>
     </message>
@@ -771,9 +771,9 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Editați cu Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Text</translation>
     </message>
@@ -789,7 +789,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt Rapid</translation>
     </message>
@@ -804,14 +804,14 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Previzualizare Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Deschide fișierul curent în vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Editați cu vi</translation>
     </message>
@@ -6727,16 +6727,16 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+240" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -6875,8 +6875,8 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-210" />
-        <location line="+170" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
@@ -6900,7 +6900,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-415" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nu există setări DFU pentru tipul de placă selectat!</translation>
     </message>
@@ -6922,7 +6922,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-179" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+7" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
@@ -7006,7 +7006,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7053,7 +7053,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Scrieți ROMFS</translation>
@@ -7063,7 +7063,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7096,6 +7096,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Reconectați camera OpenMV...</translation>
     </message>
@@ -7122,6 +7123,7 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
         <location line="+1979" />
@@ -7194,9 +7196,9 @@ Continuați?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Se șterge...</translation>
@@ -7327,7 +7329,7 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Actualizarea firmware-ului BOSSAC a eșuat!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-111" />
         <source>the detected board</source>
         <translation>placa detectată</translation>
     </message>
@@ -7357,12 +7359,12 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Pentru a scrie o imagine de bootloader, camera OpenMV trebuie să fie în modul de recuperare a bootloaderului. Deconectați camera, conectați BOOT0/SBL/RECOVERY la 3.3V cu un jumper, apoi reconectați camera înainte de a încerca din nou.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>Citirea ROMFS prin DFU a eșuat!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>Scrierea ROMFS prin DFU a eșuat!</translation>
     </message>
@@ -7534,11 +7536,11 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation type="vanished">Vă rugăm să introduceți rețeaua WiFi aici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-374" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7556,7 +7558,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Editor de set de date</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Vă rugăm să introduceți un nume de clasă</translation>
     </message>
@@ -7576,7 +7578,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Nu s-a putut crea „%L1”!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7585,7 +7587,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Şterge</translation>
@@ -7919,7 +7921,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-912" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Convertiți modelul</translation>
@@ -7990,7 +7992,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+162" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Deschiderea eșuată: „%L1”</translation>
     </message>
@@ -9611,11 +9613,11 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
@@ -10599,12 +10601,12 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Cod Profiler</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Plat</translation>
     </message>
@@ -10639,7 +10641,7 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
         <translation>Resetați</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Funcții: %1, Total apeluri: %2, Total μs: %3, Total cicluri: %4, Total evenimente: %5</translation>
     </message>
@@ -10649,7 +10651,7 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
         <translation>Funcții: %1, Total apeluri: %2, Total μs: %3, Total cicluri: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1011" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
         <source>Please select the target</source>
         <translation>Vă rugăm să selectați ținta</translation>
     </message>
@@ -10688,7 +10690,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
 %1 va copia doar modelul ca atare.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -11030,7 +11032,7 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Obțineți dispozitive</translation>
@@ -11044,17 +11046,17 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
         <translation>Interogarea a eșuat!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -11086,6 +11088,11 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Poate dura ceva timp, pauză de apă?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>Dispozitivul DFU este ocupat, se reîncearcă (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -13496,112 +13503,112 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Boost.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location line="-568" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Locația proiectului</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Locaţie</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-336" />
         <source>Boost Test (header only)</source>
         <translation>Boost Test (numai antet)</translation>
     </message>
@@ -13611,32 +13618,32 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Boost Test (biblioteci partajate)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Cadrul de testare:</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="-166" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Nume suită de teste:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Numele cazului de testare:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-169" />
         <source>Boost include directory (optional):</source>
         <translation>Boost include directorul (opțional):</translation>
     </message>
@@ -13646,154 +13653,154 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Boost director de instalare (opțional):</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-534" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qfake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Sistem de construcție:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informații despre proiect și test</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Detalii</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Selecția trusei</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -13801,126 +13808,126 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Truse</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Management de proiect</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Rezumat</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-321" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Creează un nou proiect de testare unitară folosind Boost. Testele unitare vă permit să verificați dacă codul este potrivit pentru utilizare și că nu există regresii.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Proiect de testare</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Proiectul Boost Test</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Catch2.</translation>
     </message>
@@ -13965,7 +13972,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiectul de testare Catch2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Google Test.</translation>
     </message>
@@ -14000,7 +14007,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiect de testare Google</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Qt Test.</translation>
     </message>
@@ -14016,13 +14023,13 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generați codul de inițializare și curățare</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-209" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Creează un nou proiect de test unitar folosind Qt Test. Testele unitare vă permit să verificați dacă codul este potrivit pentru utilizare și că nu există regresii.</translation>
     </message>
@@ -14032,7 +14039,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiectul de testare Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Qt Quick Test.</translation>
     </message>
@@ -14057,36 +14064,36 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Nume complet calificat, inclusiv spații de nume</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Nume clasa:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Personalizat&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Clasa de baza:</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Includeți QObject</translation>
     </message>
@@ -14121,62 +14128,62 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Adăugați QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Fișier antet:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Fișier sursă:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Cale:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Definiți clasa</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Creează un antet C++ și un fișier sursă pentru o nouă clasă pe care o puteți adăuga la un proiect C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>Clasa C++</translation>
     </message>
@@ -14217,16 +14224,16 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Qt Item Model</translation>
     </message>
@@ -14262,17 +14269,17 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Clasa Python</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Creează un proiect de testare bazat pe CMake pentru care poate fi introdus un fragment de cod.</translation>
     </message>
@@ -14317,20 +14324,20 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Creează un proiect de testare bazat pe CMake în care puteți introduce un fragment de cod pentru al compila și a-l verifica.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-148" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Alt Proiect</translation>
     </message>
     <message>
-        <location line="-544" />
+        <location line="+1" />
         <source>Code Snippet</source>
         <translation>Fragment de cod</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Creează un fișier antet pe care îl puteți adăuga la un proiect C/C++.</translation>
     </message>
@@ -14340,7 +14347,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier antet C/C++</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Creează un fișier sursă pe care îl puteți adăuga la un proiect C/C++.</translation>
     </message>
@@ -14350,7 +14357,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier sursă C/C++</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Alegeți un șablon de formular</translation>
     </message>
@@ -14370,12 +14377,12 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Formular Qt Widgets Designer</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-146" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Creează un shader de fragment în limbajul de umbrire Desktop OpenGL (GLSL). Umbritoarele de fragmente generează culorile finale ale pixelilor pentru triunghiuri, puncte și linii redate cu OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14383,7 +14390,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
@@ -14398,7 +14405,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Creează un shader de fragment în limbajul de umbrire OpenGL/ES 2.0 (GLSL/ES). Umbritoarele de fragmente generează culorile finale ale pixelilor pentru triunghiuri, puncte și linii redate cu OpenGL.</translation>
     </message>
@@ -14418,7 +14425,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Creează un fișier Java cu cod standard.</translation>
     </message>
@@ -14433,7 +14440,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier Java</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Bibliotecă apatridă</translation>
     </message>
@@ -14454,44 +14461,44 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișierul JS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-84" />
         <source>Creates a markdown file.</source>
         <translation>Creează un fișier de reducere.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location line="-111" />
+        <location line="-119" />
         <source>Markdown File</source>
         <translation>Fișier Markdown</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>Nume model:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Locaţie:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(value(’TargetPath’))}” există în sistemul de fișiere.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Numele modelului și locația</translation>
     </message>
@@ -14501,19 +14508,19 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Creează un nou model gol cu ​​o diagramă goală.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Modelare</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Creează un model de zgârietură folosind un fișier temporar.</translation>
     </message>
@@ -14523,23 +14530,23 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Model Scratch</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Creează un fișier Nim gol folosind setul de caractere UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Fișierul Nim</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Creează un fișier script Nim gol folosind un set de caractere UTF-8.</translation>
     </message>
@@ -14559,7 +14566,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier Python</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Creează un fișier de resurse Qt (.qrc).</translation>
     </message>
@@ -14569,7 +14576,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișierul de resurse Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Creează un fișier QML cu cod standard, începând cu „import QtQuick”.</translation>
     </message>
@@ -14579,7 +14586,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Creează un buffer scratch folosind un fișier temporar.</translation>
     </message>
@@ -14589,7 +14596,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Numele diagramei de stat:</translation>
     </message>
@@ -14609,7 +14616,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Diagrama de stat</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14669,7 +14676,7 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Caz de testare</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Creează un fișier gol.</translation>
     </message>
@@ -14679,7 +14686,7 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Fișier gol</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Creează un fișier de traducere pe care îl puteți adăuga la un proiect Qt.</translation>
     </message>
@@ -14689,61 +14696,61 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Fișierul de traducere Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Acest expert creează o aplicație simplă de consolă bazată pe Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Definiți sistemul de construcție</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Build System</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Fișier de traducere</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Traducere</translation>
     </message>
     <message>
-        <location line="-475" />
+        <location line="-406" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14753,30 +14760,30 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Aplicație (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Aplicația Qt Console</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Acest expert creează un proiect de bibliotecă C++.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Specificați informații de bază despre clasele pentru care doriți să generați fișiere de cod sursă schelet.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Bibliotecă comună</translation>
     </message>
@@ -14791,14 +14798,14 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Pluginul Qt</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Tip:</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -14864,55 +14871,55 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Modulul Qt:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Definiți detaliile proiectului</translation>
     </message>
     <message>
-        <location line="-428" />
+        <location line="-60" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Creează o bibliotecă C++. Puteți crea:&lt;ul&gt;&lt;li&gt;o bibliotecă C++ partajată pentru a fi utilizată cu &lt;tt&gt;QPluginLoader&lt;/tt&gt; și runtime (Plugin-uri)&lt;/li&gt;&lt;li&gt;o bibliotecă C++ partajată sau statică pentru a fi utilizată cu un alt proiect la momentul link-ului&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-425" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Bibliotecă</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>Biblioteca C++</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Creează o aplicație Nim simplă.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Proiect non-Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Aplicația Nim</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Binar</translation>
     </message>
@@ -14928,12 +14935,12 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Descriere:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14999,12 +15006,12 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Licenţă:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15046,21 +15053,21 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Configurare</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Creează o aplicație Nim cu Nimble.</translation>
     </message>
@@ -15070,7 +15077,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație agilă</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Creează o aplicație C simplă, fără dependențe.</translation>
     </message>
@@ -15080,7 +15087,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație C simplă</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Creează o aplicație C++ simplă, fără dependențe.</translation>
     </message>
@@ -15090,7 +15097,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație C++ simplă</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Acest expert creează un fișier .pro gol.</translation>
     </message>
@@ -15105,46 +15112,46 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Proiectul qmake gol</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+22" />
+        <location line="-180" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-60" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-53" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>PySide 2</translation>
     </message>
     <message>
-        <location line="-54" />
+        <location line="+7" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Creează o aplicație Qt pentru Python care conține doar codul principal pentru o aplicație Q.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Aplicație (Qt pentru Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Aplicație goală</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Fișier proiect:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Creează o aplicație Qt pentru Python care conține o fereastră goală.</translation>
     </message>
@@ -15154,7 +15161,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Fereastra goală</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+27" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -15184,7 +15191,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Qt Quick Application - Gol</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-26" />
         <source>Define Python Interpreter</source>
         <translation>Definiți Python Interpreter</translation>
     </message>
@@ -15204,45 +15211,45 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Interfața de utilizare a ferestrei</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Versiunea Qt minimă necesară:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -15282,14 +15289,14 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Plugin de extensie Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Utilizați tastatura virtuală Qt</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-180" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -15309,7 +15316,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație rapidă Qt</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15323,7 +15330,7 @@ Utilizați această versiune „compat” dacă doriți să utilizați alte sist
         <translation>Aplicație rapidă Qt (compat)</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-92" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15337,7 +15344,7 @@ Pentru a dezvolta o aplicație completă, creați un proiect Qt Quick Applicatio
         <translation>Prototip Qt Quick UI</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Acest expert generează un proiect Qt Widgets Application. Aplicația derivă implicit din QApplication și include un widget gol.</translation>
     </message>
@@ -15371,50 +15378,50 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicația Qt Widgets</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vă rugăm să configurați &lt;b&gt;%{vcsName}&lt;/b&gt; acum.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Repertoriu:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>Adresa URL a depozitului nu este validă</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Director:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(’%{TargetPath}’)}” există în sistemul de fișiere.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Utilizați directorul existent</translation>
     </message>
@@ -15489,14 +15496,14 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Revizuire:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Specificați adresa URL a depozitului, directorul de plată și calea.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Sucursala Bazarului de conducere...</translation>
     </message>
@@ -15515,22 +15522,22 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clonează o ramură Bazaar și încearcă să încarce proiectul conținut.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Import proiect</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Clona de bazar (sau ramură)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -15545,19 +15552,19 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Se execută verificarea CVS...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Verifică</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Verifică un depozit CVS și încearcă să încarce proiectul conținut.</translation>
     </message>
@@ -15567,7 +15574,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>CVS Checkout</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;ramură implicită&gt;</translation>
     </message>
@@ -15607,7 +15614,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clona Git</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Rulează clona Mercurial...</translation>
     </message>
@@ -15622,7 +15629,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clona mercurială</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Certificat de server de încredere</translation>
     </message>
@@ -15642,7 +15649,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Acest expert creează un plugin personalizat Qt Creator.</translation>
     </message>
@@ -21803,7 +21810,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivat din QObject</translation>
@@ -21869,7 +21876,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>(nume tip CITEȘTE nume SCRIE setNume NOTIFICARE numeSchimbat FINAL)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>cu tinte</translation>
@@ -21893,7 +21900,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>cu tinta</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Caz de testare QuickTest</translation>

@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Kopier</translation>
     </message>
@@ -3755,7 +3755,7 @@ For å gjøre dette, skriver du inn denne snarveien og et mellomrom i oppføring
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Språkforsker</translation>
     </message>
@@ -3780,9 +3780,9 @@ For å gjøre dette, skriver du inn denne snarveien og et mellomrom i oppføring
         <translation>Rediger med Notisblokk</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Tekst</translation>
     </message>
@@ -3798,7 +3798,7 @@ For å gjøre dette, skriver du inn denne snarveien og et mellomrom i oppføring
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt Rask</translation>
     </message>
@@ -3813,14 +3813,14 @@ For å gjøre dette, skriver du inn denne snarveien og et mellomrom i oppføring
         <translation>Qt Quick 2 forhåndsvisning (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Åpner gjeldende fil i vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Rediger med vi</translation>
     </message>
@@ -7077,7 +7077,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7095,7 +7095,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <translation>Datasettredigerer</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Skriv inn et klassenavn</translation>
     </message>
@@ -7104,13 +7104,13 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+455" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7149,7 +7149,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <translation>Feil: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
@@ -7164,7 +7164,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
         <translation>Kunne ikke opprette &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7173,7 +7173,7 @@ Se dokumentasjonen til den spesifikke språkserveren for gyldige innstillinger.<
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Slett</translation>
@@ -7717,6 +7717,7 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
         <location line="+1979" />
@@ -7877,16 +7878,16 @@ Sjekk json-filen for feil og fiks dem.</translation>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+131" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8313,7 +8314,7 @@ Vil du velja eit anna namn?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konverter modell</translation>
@@ -9500,7 +9501,7 @@ Vil du registrera OpenMV Cam-en din no?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
         <source>What would you like to do?</source>
         <translation>Hva har du lyst til å gjøre?</translation>
     </message>
@@ -9628,11 +9629,11 @@ Vil du registrera OpenMV Cam-en din no?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
         <location line="+50" />
@@ -10218,6 +10219,7 @@ Trykk på Avbryt for å gå til DFU-omprogrammering.</translation>
     </message>
     <message>
         <location line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Koble til OpenMV-kameraet på nytt...</translation>
     </message>
@@ -10248,9 +10250,9 @@ Fortsette?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Sletter ...</translation>
@@ -10260,7 +10262,7 @@ Fortsette?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10361,7 +10363,7 @@ Fortsette?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+170" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10502,7 +10504,7 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Ingen DFU-innstillinger for valgt bretttype!</translation>
     </message>
@@ -10521,14 +10523,14 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
     </message>
     <message>
         <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
         <source>Read ROMFS</source>
         <translation>Les ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Skriv ROMFS</translation>
@@ -10538,7 +10540,7 @@ Klikk på OK-knappen etter at OpenMV Cams SBL Bootloader er registrert.</transla
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10874,12 +10876,12 @@ Klikk på OK-knappen etter at OpenMV Cams DFU Bootloader er registrert.</transla
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Kodeprofiler</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Flat</translation>
     </message>
@@ -10914,7 +10916,7 @@ Klikk på OK-knappen etter at OpenMV Cams DFU Bootloader er registrert.</transla
         <translation>Nullstille</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Funksjoner: %1, totalt anrop: %2, totalt μs: %3, totalt sykluser: %4, totalt hendelser: %5</translation>
     </message>
@@ -11214,7 +11216,7 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Få enheter</translation>
@@ -11228,17 +11230,17 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
         <translation>Søket mislyktes!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -11261,6 +11263,11 @@ Vil du at OpenMV IDE skal kopiere den til din OpenMV Cam?</translation>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Dette kan ta litt tid, vannpause?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>DFU-eininga er oppteken, prøver på nytt (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -11295,7 +11302,7 @@ Prosentdel
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11966,7 +11973,7 @@ OpenMV IDE-installasjonen din kan vera ufullstendig.</translation>
         <translation>Skjul detaljer</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
         <source>Please select the target</source>
         <translation>Vennligst velg målet</translation>
     </message>
@@ -12005,7 +12012,7 @@ OpenMV IDE vil bare kopiere modellen som den er.</translation>
 %1 kopierer berre modellen som han er.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -12416,7 +12423,7 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
         <translation>STM32-programmerer støttes ikke på denne plattformen.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
         <source>the detected board</source>
         <translation>det oppdagede brettet</translation>
     </message>
@@ -12446,12 +12453,12 @@ OpenMV Cam er framleis i oppstartslastar-modus: klikk på Kopla til og bruk vala
         <translation>For å flasha eit oppstartslastarbilete må OpenMV Cam-en din vera i gjenopprettingsmodus for oppstartslastar. Kopla frå kameraet, kopla BOOT0/SBL/RECOVERY til 3.3V med ein jumpar, og kopla deretter kameraet til att før du prøver på nytt.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>DFU-lesing av ROMFS mislukkast!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>DFU-skriving av ROMFS mislukkast!</translation>
     </message>
@@ -14015,102 +14022,102 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Denne veiviseren lager et enkelt enhetstestprosjekt.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Prosjektplassering</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>plassering</translation>
     </message>
@@ -14119,7 +14126,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Qt-test</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-171" />
         <source>Google Test</source>
         <translation>Google Test</translation>
     </message>
@@ -14139,49 +14146,49 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Fangst 2</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+25" />
+        <location line="-192" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Testrammeverk:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-215" />
         <source>GUI Application</source>
         <translation>GUI-applikasjon</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="+49" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Navn på testsuite:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Navn på testtilfelle:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-221" />
         <source>Requires QApplication</source>
         <translation>Krever QApplication</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+98" />
         <source>Generate setup code</source>
         <translation>Generer oppsettkode</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="-96" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generer initialiserings- og oppryddingskode</translation>
     </message>
@@ -14190,17 +14197,17 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Aktiver C++11</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-145" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest kildekatalog (valgfritt):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="-25" />
         <source>Boost include directory (optional):</source>
         <translation>Boost inkluderer katalog (valgfritt):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 inkluderer katalog (valgfritt):</translation>
     </message>
@@ -14210,154 +14217,154 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Bruk Qt-biblioteker</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-509" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Bygg system:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Prosjekt- og testinformasjon</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Detaljer</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Utvalg av sett</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -14365,101 +14372,101 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Sett</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Prosjektledelse</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Sammendrag</translation>
@@ -14469,9 +14476,9 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Oppretter et nytt enhetstestprosjekt. Enhetstester lar deg verifisere at koden er egnet for bruk og at det ikke er noen regresjoner.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-542" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Annet prosjekt</translation>
@@ -14481,36 +14488,36 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Autotestprosjekt</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="+123" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Fullt kvalifisert navn, inkludert navneområder</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Klassenavn:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Egendefinert&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Grunnklasse:</translation>
     </message>
@@ -14519,7 +14526,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Inkluder QObject</translation>
     </message>
@@ -14561,10 +14568,10 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Overskriftsfil:</translation>
     </message>
@@ -14573,54 +14580,54 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Kildefil:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Sti:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Definer klasse</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Oppretter en C++-header og en kildefil for en ny klasse som du kan legge til i et C++-prosjekt.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>C++ klasse</translation>
     </message>
@@ -14661,16 +14668,16 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Qt-varemodell</translation>
     </message>
@@ -14710,17 +14717,17 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Python klasse</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Oppretter et CMake-basert testprosjekt som en kodebit kan legges inn for.</translation>
     </message>
@@ -14775,7 +14782,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Kodebit</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Oppretter en overskriftsfil som du kan legge til i et C/C++-prosjekt.</translation>
     </message>
@@ -14785,7 +14792,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>C/C++ topptekstfil</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Oppretter en kildefil som du kan legge til i et C/C++-prosjekt.</translation>
     </message>
@@ -14795,7 +14802,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>C/C++ kildefil</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Velg en skjemamal</translation>
     </message>
@@ -14813,12 +14820,12 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation type="vanished">Qt Designer-skjema</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-139" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Oppretter en fragmentskyggelegging i Desktop OpenGL Shading Language (GLSL). Fragmentskyggelegging genererer de endelige pikselfargene for trekanter, punkter og linjer gjengitt med OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14826,7 +14833,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
@@ -14841,7 +14848,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Oppretter en fragmentskyggelegging i OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragmentskyggelegging genererer de endelige pikselfargene for trekanter, punkter og linjer gjengitt med OpenGL.</translation>
     </message>
@@ -14861,7 +14868,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Oppretter en Java-fil med standardkode.</translation>
     </message>
@@ -14876,7 +14883,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Java-fil</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Statsløst bibliotek</translation>
     </message>
@@ -14897,25 +14904,25 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>JS fil</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-74" />
         <source>Model name:</source>
         <translation>Modell navn:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Plassering:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; finnes i filsystemet.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Modellnavn og plassering</translation>
     </message>
@@ -14925,19 +14932,19 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Oppretter en ny tom modell med et tomt diagram.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Modellering</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Modell</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Oppretter en skrapemodell ved hjelp av en midlertidig fil.</translation>
     </message>
@@ -14947,23 +14954,23 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Skrapemodell</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Oppretter en tom Nim-fil ved hjelp av UTF-8-tegnsett.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Nim fil</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Oppretter en tom Nim-skriptfil ved hjelp av UTF-8-tegnsett.</translation>
     </message>
@@ -14983,7 +14990,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Python-fil</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Oppretter en Qt Resource-fil (.qrc).</translation>
     </message>
@@ -14993,7 +15000,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Qt ressursfil</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Oppretter en QML-fil med standardkode, som starter med &quot;import QtQuick&quot;.</translation>
     </message>
@@ -15003,21 +15010,21 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>QML-fil (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Oppretter en skrapebuffer ved hjelp av en midlertidig fil.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="-51" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Generell</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-316" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Denne veiviseren lager et enkelt enhetstestprosjekt ved hjelp av Boost.</translation>
     </message>
@@ -15042,21 +15049,21 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Oppretter et nytt enhetstestprosjekt ved hjelp av Boost. Enhetstester lar deg bekrefte at koden er egnet for bruk og at det ikke er noen regresjoner.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Testprosjekt</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Boost testprosjekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Denne veiviseren lager et enkelt enhetstestprosjekt ved hjelp av Catch2.</translation>
     </message>
@@ -15091,7 +15098,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Catch2 testprosjekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Denne veiviseren lager et enkelt enhetstestprosjekt ved hjelp av Google Test.</translation>
     </message>
@@ -15121,7 +15128,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Google testprosjekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Denne veiviseren lager et enkelt enhetstestprosjekt ved hjelp av Qt Test.</translation>
     </message>
@@ -15136,7 +15143,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Qt testprosjekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Denne veiviseren lager et enkelt enhetstestprosjekt ved hjelp av Qt Quick Test.</translation>
     </message>
@@ -15156,12 +15163,12 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Inkluder QQuickItem</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Oppretter et CMake-basert testprosjekt hvor du kan skrive inn en kodebit for å kompilere og sjekke den.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+350" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Oppretter et Qt Widgets Designer-skjema som du kan legge til et Qt Widget-prosjekt. Dette er nyttig hvis du allerede har en eksisterende klasse for brukergrensesnittets forretningslogikk.</translation>
     </message>
@@ -15171,7 +15178,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Qt Widgets Designer-skjema</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-104" />
         <source>Creates a markdown file.</source>
         <translation>Oppretter en markdown-fil.</translation>
     </message>
@@ -15181,12 +15188,12 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Markdown-fil</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+52" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Navn på tilstandskart:</translation>
     </message>
@@ -15206,7 +15213,7 @@ Dette slettar korta, fastvara og døma det inneheld.</translation>
         <translation>Statskart</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15246,7 +15253,7 @@ Du bør ikke blande flere testrammer i et prosjekt.</translation>
         <translation>Test Case</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Oppretter en tom fil.</translation>
     </message>
@@ -15256,7 +15263,7 @@ Du bør ikke blande flere testrammer i et prosjekt.</translation>
         <translation>Tom fil</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Oppretter en oversettelsesfil som du kan legge til i et Qt-prosjekt.</translation>
     </message>
@@ -15266,61 +15273,61 @@ Du bør ikke blande flere testrammer i et prosjekt.</translation>
         <translation>Qt-oversettelsesfil</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Denne veiviseren lager en enkel Qt-basert konsollapplikasjon.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Definer byggesystem</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Bygg system</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Oversettelsesfil</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Oversettelse</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-178" />
         <source>Define Python Interpreter</source>
         <translation>Definer Python-tolk</translation>
     </message>
@@ -15335,7 +15342,7 @@ Du bør ikke blande flere testrammer i et prosjekt.</translation>
         <translation>Oppretter en Qt for Python-applikasjon som inkluderer en Qt Widgets Designer-basert widget (ui-fil). Krever konvertering fra .ui til Python.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="-52" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -15350,7 +15357,7 @@ Du bør ikke blande flere testrammer i et prosjekt.</translation>
         <translation>Oppretter en Qt Quick-applikasjon som kan ha både QML- og C++-kode. Du kan bygge applikasjonen og distribuere den til stasjonære, innebygde og mobile målplattformer.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+90" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15359,7 +15366,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
 For å utvikle en fullstendig applikasjon, lag et Qt Quick Application-prosjekt i stedet.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-108" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15376,31 +15383,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-172" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Søknad (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Qt-konsollapplikasjon</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Denne veiviseren oppretter et C++ bibliotekprosjekt.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Spesifiser grunnleggende informasjon om klassene du vil generere skjelettkildekodefiler for.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Delt bibliotek</translation>
     </message>
@@ -15415,8 +15422,8 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Qt-plugin</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Type:</translation>
@@ -15426,7 +15433,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15492,14 +15499,14 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Qt-modul:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Definer prosjektdetaljer</translation>
     </message>
@@ -15508,38 +15515,38 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">Oppretter et C++-bibliotek. Dette kan brukes til å lage:&lt;ul&gt;&lt;li&gt;et delt C++-bibliotek for bruk med &lt;tt&gt;QPluginLoader&lt;/tt&gt; og runtime (Plugins)&lt;/li&gt;&lt;li&gt;et delt eller statisk C++-bibliotek for bruk med en annen prosjekt på linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-485" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Bibliotek</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>C++ bibliotek</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Oppretter en enkel Nim-applikasjon.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Ikke-Qt-prosjekt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Nim-applikasjon</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Binær</translation>
     </message>
@@ -15555,12 +15562,12 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Beskrivelse:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15626,12 +15633,12 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Tillatelse:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15673,21 +15680,21 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfigurasjon</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Oppretter en Nim-applikasjon med Nimble.</translation>
     </message>
@@ -15697,7 +15704,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Kvikk applikasjon</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Oppretter en enkel C-applikasjon uten avhengigheter.</translation>
     </message>
@@ -15707,7 +15714,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Vanlig C-applikasjon</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Oppretter en enkel C++-applikasjon uten avhengigheter.</translation>
     </message>
@@ -15717,7 +15724,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Vanlig C++-applikasjon</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Denne veiviseren oppretter en tom .pro-fil.</translation>
     </message>
@@ -15736,20 +15743,20 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">PySide versjon:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-118" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Oppretter en Qt for Python-applikasjon som bare inneholder hovedkoden for en QApplication.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Applikasjon (Qt for Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Tom søknad</translation>
     </message>
@@ -15766,13 +15773,13 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Prosjektfil:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Oppretter en Qt for Python-applikasjon som inneholder et tomt vindu.</translation>
     </message>
@@ -15782,15 +15789,15 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Tomt vindu</translation>
     </message>
     <message>
-        <location line="-32" />
-        <location line="+22" />
+        <location line="-10" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-259" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15799,19 +15806,19 @@ Preselects a desktop Qt for building the application if available.</source>
 Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Oppretter et C++-bibliotek. Du kan opprette:&lt;ul&gt;&lt;li&gt;et delt C++-bibliotek for bruk med &lt;tt&gt;QPluginLoader&lt;/tt&gt; og runtime (Plugins)&lt;/li&gt;&lt;li&gt;et delt eller statisk C++-bibliotek for bruk med et annet prosjekt ved linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-137" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>PySide 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="-18" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -15845,50 +15852,50 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">Oppretter en Qt for Python-applikasjon som inkluderer en Qt Designer-basert widget (ui-fil) - Krever konvertering fra .ui til Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-18" />
         <source>Window UI</source>
         <translation>Vindu UI</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Minimum nødvendig Qt-versjon:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -15936,9 +15943,9 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">Lag et prosjekt med en struktur som er kompatibel både med Qt Design Studio (via .qmlproject) og med Qt Creator (via CMakeLists.txt). Den inneholder et .ui.qml-skjema som du visuelt kan redigere i Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Bruk Qt Virtual Keyboard</translation>
     </message>
@@ -15951,12 +15958,12 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">Oppretter en Qt Quick-applikasjon som inneholder et tomt vindu. Eventuelt kan du lage et Qt Design Studio-prosjekt.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-169" />
         <source>Qt Quick Application</source>
         <translation>Qt hurtigapplikasjon</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15978,12 +15985,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Bruk dette bare hvis du er prototyping. Du kan ikke opprette en fullstendig applikasjon med denne. Vurder å bruke et Qt Quick Application-prosjekt i stedet.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-90" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI Prototype</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Denne veiviseren genererer et Qt Widgets-applikasjonsprosjekt. Applikasjonen stammer som standard fra QApplication og inkluderer en tom widget.</translation>
     </message>
@@ -16024,28 +16031,28 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Qt Widgets-applikasjon</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vennligst konfigurer &lt;b&gt;%{vcsName}&lt;/b&gt; nå.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Oppbevaringssted:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>Repository URL er ikke gyldig</translation>
     </message>
@@ -16054,24 +16061,24 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Katalog:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; finnes i filsystemet.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Bruk eksisterende katalog</translation>
     </message>
@@ -16146,14 +16153,14 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Revisjon:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Angi depot-URL, utsjekkingskatalog og bane.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Kjører Bazaar-grenen...</translation>
     </message>
@@ -16172,22 +16179,22 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Kloner en Bazaar-gren og prøver å laste det inneholdte prosjektet.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Importer prosjekt</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (eller gren)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -16202,19 +16209,19 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Kjører CVS-utsjekking...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Sjekk ut</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Sjekker ut et CVS-lager og prøver å laste det inneholdte prosjektet.</translation>
     </message>
@@ -16224,7 +16231,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>CVS Checkout</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;standard gren&gt;</translation>
     </message>
@@ -16264,7 +16271,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Kjører Mercurial-klone...</translation>
     </message>
@@ -16279,7 +16286,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Mercurial Clone</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Trust Server Certificate</translation>
     </message>
@@ -16299,7 +16306,7 @@ Forhåndsvelger en desktop Qt for å bygge applikasjonen hvis tilgjengelig.</tra
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Denne veiviseren lager en tilpasset Qt Creator-plugin.</translation>
     </message>
@@ -25441,7 +25448,7 @@ Blir ikke brukt på mellomrom i kommentarer og strenger.</translation>
         <translation>Ikke en fargeskjemafil.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>avledet fra QObject</translation>
@@ -25512,7 +25519,7 @@ Blir ikke brukt på mellomrom i kommentarer og strenger.</translation>
         <translation type="vanished">(skriv navn LES navn SKRIV settNavn VARSEL navnEndret)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>med mål</translation>
@@ -25536,7 +25543,7 @@ Blir ikke brukt på mellomrom i kommentarer og strenger.</translation>
         <translation>med mål</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest Test Case</translation>

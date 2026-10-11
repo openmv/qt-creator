@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Kopēt</translation>
     </message>
@@ -3756,7 +3756,7 @@ Lai to izdarītu, ievades laukā Locator ierakstiet šo saīsni un atstarpi un p
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Valodnieks</translation>
     </message>
@@ -3781,9 +3781,9 @@ Lai to izdarītu, ievades laukā Locator ierakstiet šo saīsni un atstarpi un p
         <translation>Rediģēt ar Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Teksts</translation>
     </message>
@@ -3799,7 +3799,7 @@ Lai to izdarītu, ievades laukā Locator ierakstiet šo saīsni un atstarpi un p
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt Quick</translation>
     </message>
@@ -3814,14 +3814,14 @@ Lai to izdarītu, ievades laukā Locator ierakstiet šo saīsni un atstarpi un p
         <translation>Qt Quick&#xa0;2 priekšskatījums (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Atver pašreizējo failu programmā vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Rediģēt ar vi</translation>
     </message>
@@ -7084,7 +7084,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7102,7 +7102,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Datu kopas redaktors</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Lūdzu, ievadiet klases nosaukumu</translation>
     </message>
@@ -7111,13 +7111,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+455" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7156,7 +7156,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Kļūda: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
@@ -7171,7 +7171,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Neizdevās izveidot &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7180,7 +7180,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Dzēst</translation>
@@ -7679,6 +7679,7 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
         <location line="+1979" />
@@ -7839,16 +7840,16 @@ Pārbaudiet json failā kļūdas un izlabojiet tās.</translation>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+131" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8267,7 +8268,7 @@ Vai vēlaties izvēlēties citu nosaukumu?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Pārveidot modeli</translation>
@@ -9503,7 +9504,7 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
         <source>What would you like to do?</source>
         <translation>Ko tu gribētu darīt?</translation>
     </message>
@@ -9632,11 +9633,11 @@ Vai vēlaties reģistrēt savu OpenMV Cam tagad?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
         <location line="+50" />
@@ -10230,6 +10231,7 @@ Nospiediet Atcelt, lai pārietu uz DFU pārprogrammēšanu.</translation>
     </message>
     <message>
         <location line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Atkārtoti pievienojiet savu OpenMV kameru...</translation>
     </message>
@@ -10260,9 +10262,9 @@ Turpināt?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Notiek dzēšana...</translation>
@@ -10272,7 +10274,7 @@ Turpināt?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10373,7 +10375,7 @@ Turpināt?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+170" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10514,7 +10516,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nav DFU iestatījumu atlasītajam plates tipam!</translation>
     </message>
@@ -10533,14 +10535,14 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
     </message>
     <message>
         <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
         <source>Read ROMFS</source>
         <translation>Lasīt romfs</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Rakstiet romfs</translation>
@@ -10550,7 +10552,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam SBL sāknēšanas programma 
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10886,12 +10888,12 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam DFU sāknēšanas programma 
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Kodu profilētājs</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Dzīvoklis</translation>
     </message>
@@ -10926,7 +10928,7 @@ Noklikšķiniet uz pogas Labi, kad jūsu OpenMV Cam DFU sāknēšanas programma 
         <translation>Atiestatīt</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Funkcijas: %1, Kopējais zvanu skaits: %2, Kopējais μs: %3, Kopējais ciklu skaits: %4, Kopējais notikumu skaits: %5</translation>
     </message>
@@ -11226,7 +11228,7 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Iegūstiet ierīces</translation>
@@ -11240,17 +11242,17 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <translation>Vaicājums neizdevās!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>DFU util</translation>
     </message>
@@ -11273,6 +11275,11 @@ Vai vēlaties, lai OpenMV IDE to kopētu jūsu OpenMV kamerā?</translation>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Tas var aizņemt kādu laiku, ūdens pārtraukums?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>DFU ierīce ir aizņemta, mēģina vēlreiz (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -11307,7 +11314,7 @@ Procenti
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11986,7 +11993,7 @@ Jūsu OpenMV IDE instalācija var būt nepilnīga.</translation>
         <translation type="vanished">Nav atlasītā faila nosaukuma atbilstošas ​​saskarnes!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
         <source>Please select the target</source>
         <translation>Lūdzu, atlasiet mērķi</translation>
     </message>
@@ -12025,7 +12032,7 @@ OpenMV IDE vienkārši kopē modeli tādam, kāds tas ir.</translation>
 %1 vienkārši kopēs modeli tāds, kāds tas ir.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -12440,7 +12447,7 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
         <translation>Šajā platformā netiek atbalstīts STM32 programmētājs.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
         <source>the detected board</source>
         <translation>atklātais dēlis</translation>
     </message>
@@ -12470,12 +12477,12 @@ Jūsu OpenMV Cam joprojām ir sāknēšanas ielādētāja režīmā: noklikšķi
         <translation>Lai ierakstītu sāknētāja attēlu, jūsu OpenMV Cam ir jābūt sāknētāja atkopšanas režīmā. Atvienojiet kameru, ar savienotāju savienojiet BOOT0/SBL/RECOVERY ar 3.3V un pēc tam pievienojiet kameru atpakaļ, pirms mēģiniet vēlreiz.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>ROMFS nolasīšana ar DFU neizdevās!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>ROMFS ierakstīšana ar DFU neizdevās!</translation>
     </message>
@@ -14042,102 +14049,102 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Šis vednis izveido vienkāršu vienības pārbaudes projektu.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Projekta atrašanās vieta</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Atrašanās vieta</translation>
     </message>
@@ -14146,7 +14153,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Qt tests</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-171" />
         <source>Google Test</source>
         <translation>Google tests</translation>
     </message>
@@ -14166,49 +14173,49 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+25" />
+        <location line="-192" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Testa ietvars:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-215" />
         <source>GUI Application</source>
         <translation>GUI lietojumprogramma</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="+49" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Testa komplekta nosaukums:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Pārbaudes gadījuma nosaukums:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-221" />
         <source>Requires QApplication</source>
         <translation>Nepieciešama QApplication</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+98" />
         <source>Generate setup code</source>
         <translation>Ģenerējiet iestatīšanas kodu</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="-96" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Ģenerējiet inicializācijas un tīrīšanas kodu</translation>
     </message>
@@ -14217,17 +14224,17 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Iespējot C++11</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-145" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest avota direktorijs (neobligāti):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="-25" />
         <source>Boost include directory (optional):</source>
         <translation>Palielinājuma ietveršanas direktorijs (neobligāti):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 ietver direktoriju (neobligāti):</translation>
     </message>
@@ -14237,154 +14244,154 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Izmantojiet Qt bibliotēkas</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-509" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Veidot sistēmu:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informācija par projektu un testu</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Sīkāka informācija</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Komplekta izvēle</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -14392,101 +14399,101 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Komplekti</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Projektu vadība</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Kopsavilkums</translation>
@@ -14496,9 +14503,9 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Izveido jaunu vienības pārbaudes projektu. Vienību testi ļauj pārbaudīt, vai kods ir piemērots lietošanai un vai nav regresijas.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-542" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Cits projekts</translation>
@@ -14508,36 +14515,36 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Auto testa projekts</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="+123" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Pilnībā kvalificēts nosaukums, tostarp nosaukumvietas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Klases nosaukums:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Pielāgots&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Bāzes klase:</translation>
     </message>
@@ -14546,7 +14553,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Iekļaut QObject</translation>
     </message>
@@ -14588,10 +14595,10 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Galvenes fails:</translation>
     </message>
@@ -14600,54 +14607,54 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Avota fails:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Ceļš:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Definējiet klasi</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Izveido C++ galveni un avota failu jaunai klasei, ko varat pievienot C++ projektam.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>C++ klase</translation>
     </message>
@@ -14688,16 +14695,16 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Qt preču modelis</translation>
     </message>
@@ -14737,17 +14744,17 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Python klase</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Izveido uz CMake balstītu testa projektu, kuram var ievadīt koda fragmentu.</translation>
     </message>
@@ -14802,7 +14809,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Koda fragments</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Izveido galvenes failu, ko varat pievienot C/C++ projektam.</translation>
     </message>
@@ -14812,7 +14819,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>C/C++ galvenes fails</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Izveido avota failu, ko varat pievienot C/C++ projektam.</translation>
     </message>
@@ -14822,7 +14829,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>C/C++ avota fails</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Izvēlieties veidlapas veidni</translation>
     </message>
@@ -14840,12 +14847,12 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation type="vanished">Qt dizainera veidlapa</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-139" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Izveido fragmentu ēnotāju darbvirsmas OpenGL ēnošanas valodā (GLSL). Fragmentu ēnotāji ģenerē galīgās pikseļu krāsas trijstūriem, punktiem un līnijām, kas renderētas ar OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14853,7 +14860,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragmentu ēnotājs (darbvirsmas OpenGL)</translation>
     </message>
@@ -14868,7 +14875,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Vertex Shader (darbvirsmas OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Izveido fragmentu ēnotāju OpenGL/ES 2.0 ēnošanas valodā (GLSL/ES). Fragmentu ēnotāji ģenerē galīgās pikseļu krāsas trijstūriem, punktiem un līnijām, kas renderētas ar OpenGL.</translation>
     </message>
@@ -14888,7 +14895,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Vertex Shader (OpenGL/ES&#xa0;2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Izveido Java failu ar standarta kodu.</translation>
     </message>
@@ -14903,7 +14910,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Java fails</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Bezvalstnieku bibliotēka</translation>
     </message>
@@ -14924,25 +14931,25 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>JS fails</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-74" />
         <source>Model name:</source>
         <translation>Modeļa nosaukums:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Atrašanās vieta:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>Failu sistēmā pastāv &quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot;.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Modeļa nosaukums un atrašanās vieta</translation>
     </message>
@@ -14952,19 +14959,19 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Izveido jaunu tukšu modeli ar tukšu diagrammu.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Modelēšana</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Modelis</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Izveido skrāpējuma modeli, izmantojot pagaidu failu.</translation>
     </message>
@@ -14974,23 +14981,23 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Scratch modelis</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Izveido tukšu Nim failu, izmantojot UTF-8 rakstzīmju kopu.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Nim fails</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Izveido tukšu Nim skripta failu, izmantojot UTF-8 rakstzīmju kopu.</translation>
     </message>
@@ -15010,7 +15017,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Python fails</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Izveido Qt resursa failu (.qrc).</translation>
     </message>
@@ -15020,7 +15027,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Qt resursu fails</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Izveido QML failu ar standarta kodu, sākot ar &quot;import QtQuick&quot;.</translation>
     </message>
@@ -15030,21 +15037,21 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>QML fails (Qt Quick&#xa0;2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Izveido scratch buferi, izmantojot pagaidu failu.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="-51" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Ģenerālis</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-316" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Šis vednis rada vienkāršu vienības testa projektu, izmantojot Boost.</translation>
     </message>
@@ -15069,21 +15076,21 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Izveido jaunu vienības testa projektu, izmantojot Boost. Vienības testi ļauj pārbaudīt, vai kods ir piemērots lietošanai un ka nav regresiju.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Testa projekts</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Palielināt testa projektu</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Šis vednis izveido vienkāršu vienības testa projektu, izmantojot Catch2.</translation>
     </message>
@@ -15118,7 +15125,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Catch2 testa projekts</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Šis vednis izveido vienkāršu vienības testa projektu, izmantojot Google testu.</translation>
     </message>
@@ -15148,7 +15155,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Google testa projekts</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Šis vednis izveido vienkāršu vienības testa projektu, izmantojot QT testu.</translation>
     </message>
@@ -15163,7 +15170,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>QT testa projekts</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Šis vednis izveido vienkāršu vienības testa projektu, izmantojot QT Quick Test.</translation>
     </message>
@@ -15183,12 +15190,12 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Iekļaujiet QquickItem</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Izveido uz CMAKE balstītu testa projektu, kurā jūs varat ievadīt koda fragmentu, lai to apkopotu un pārbaudītu.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+350" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Izveido QT logrīku dizainera formu, kuru varat pievienot QT logrīka projektam. Tas ir noderīgi, ja jums jau ir esoša UI biznesa loģikas klase.</translation>
     </message>
@@ -15198,7 +15205,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>QT logrīku dizainera forma</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-104" />
         <source>Creates a markdown file.</source>
         <translation>Izveido marķējuma failu.</translation>
     </message>
@@ -15208,12 +15215,12 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Atzīmēšanas fails</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+52" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Štata diagrammas nosaukums:</translation>
     </message>
@@ -15233,7 +15240,7 @@ Tas dzēš tā plates, programmaparatūru un piemērus.</translation>
         <translation>Stāvokļa diagramma</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15273,7 +15280,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Testa korpuss</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Izveido tukšu failu.</translation>
     </message>
@@ -15283,7 +15290,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Tukšs fails</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Izveido tulkošanas failu, kuru varat pievienot QT projektam.</translation>
     </message>
@@ -15293,61 +15300,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT tulkošanas fails</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Šis vednis izveido vienkāršu Qt bāzes konsoles lietojumprogrammu.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Mesons</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Definējiet Build System</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Veidot sistēmu</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Tulkošanas fails</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Tulkošana</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-178" />
         <source>Define Python Interpreter</source>
         <translation>Definējiet python tulku</translation>
     </message>
@@ -15362,7 +15369,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Izveido QT Python lietojumprogrammai, kas ietver QT logrīku dizaineru bāzes logrīku (UI fails). Nepieciešama .ui uz python pārveidošanu.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="-52" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -15377,7 +15384,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Izveido QT ātro lietojumprogrammu, kurai var būt gan QML, gan C ++ kods. Jūs varat izveidot lietojumprogrammu un izvietot to darbvirsmas, iegultās un mobilajās mērķa platformās.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+90" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15386,7 +15393,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Lai izstrādātu pilnu lietojumprogrammu, tā vietā izveidojiet QT ātrās lietojumprogrammas projektu.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-108" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15403,31 +15410,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejama.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-172" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Lietojumprogramma (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Qt konsoles lietojumprogramma</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Šis vednis izveido C++ bibliotēkas projektu.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Norādiet pamatinformāciju par klasēm, kurām vēlaties ģenerēt skeleta pirmkoda failus.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Koplietojama bibliotēka</translation>
     </message>
@@ -15442,8 +15449,8 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Qt spraudnis</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Veids:</translation>
@@ -15453,7 +15460,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation type="vanished">%{JS: value(&apos;Tips&apos;) === &apos;qtplugin&apos;? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15519,14 +15526,14 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Qt modulis:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Definējiet projekta detaļas</translation>
     </message>
@@ -15535,38 +15542,38 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation type="vanished">Izveido C++ bibliotēku. To var izmantot, lai izveidotu:&lt;ul&gt;&lt;li&gt;koplietojamu C++ bibliotēku lietošanai ar &lt;tt&gt;QPluginLoader&lt;/tt&gt; un izpildlaiku (spraudņiem)&lt;/li&gt;&lt;li&gt;koplietojamu vai statisku C++ bibliotēku lietošanai ar citu projekts linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-485" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Bibliotēka</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>C++ bibliotēka</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Izveido vienkāršu Nim lietojumprogrammu.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Projekts, kas nav Qt projekts</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Nim pieteikums</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Binārs</translation>
     </message>
@@ -15582,12 +15589,12 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Apraksts:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15653,12 +15660,12 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Licence:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15700,21 +15707,21 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfigurācija</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Izveido Nim lietojumprogrammu ar Nimble.</translation>
     </message>
@@ -15724,7 +15731,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Izveicīgs pieteikums</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Izveido vienkāršu C lietojumprogrammu bez atkarībām.</translation>
     </message>
@@ -15734,7 +15741,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Vienkārša C lietojumprogramma</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Izveido vienkāršu C++ lietojumprogrammu bez atkarībām.</translation>
     </message>
@@ -15744,7 +15751,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Vienkārša C++ lietojumprogramma</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Šis vednis izveido tukšu .pro failu.</translation>
     </message>
@@ -15763,20 +15770,20 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation type="vanished">PySide versija:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-118" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Izveido Python lietojumprogrammu Qt, kurā ir tikai galvenais QApplication kods.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Lietojumprogramma (Qt Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Tukšs pieteikums</translation>
     </message>
@@ -15793,13 +15800,13 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Projekta fails:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Izveido Python lietojumprogrammu Qt, kurā ir tukšs logs.</translation>
     </message>
@@ -15809,15 +15816,15 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Tukšs logs</translation>
     </message>
     <message>
-        <location line="-32" />
-        <location line="+22" />
+        <location line="-10" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>PySide&#xa0;6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-259" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15826,19 +15833,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Ievieto darbvirsmas QT lietojumprogrammas izveidošanai, ja tas ir pieejams.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Izveido C ++ bibliotēku. Jūs varat izveidot: &lt;ul&gt; &lt;li&gt; koplietotu C ++ bibliotēku izmantošanai ar &lt;TT&gt; qPluginloader &lt;/tt&gt; un izpildlaiku (spraudņi) &lt;/li&gt; &lt;li&gt; Kopīga vai statiska C ++ bibliotēka izmantošanai ar citu projektu LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-137" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="-18" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -15872,50 +15879,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Izveido lietojumprogrammu Qt for Python, kurā ir iekļauts uz Qt Designer balstīts logrīks (UI fails) — nepieciešama konvertēšana no .ui uz Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-18" />
         <source>Window UI</source>
         <translation>Logu lietotāja saskarne</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Minimālā nepieciešamā Qt versija:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>Mans vienums</translation>
     </message>
@@ -15963,9 +15970,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Izveidojiet projektu ar struktūru, kas ir saderīga gan ar Qt Design Studio (izmantojot .qmlproject), gan ar Qt Creator (izmantojot CMakeLists.txt). Tajā ir .ui.qml veidlapa, kuru varat vizuāli rediģēt programmā Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Izmantojiet Qt virtuālo tastatūru</translation>
     </message>
@@ -15978,12 +15985,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Izveido Qt Quick lietojumprogrammu, kurā ir tukšs logs. Pēc izvēles varat izveidot Qt Design Studio projektu.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-169" />
         <source>Qt Quick Application</source>
         <translation>Qt ātrā lietojumprogramma</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16005,12 +16012,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Izmantojiet to tikai tad, ja veidojat prototipu. Ar šo nevar izveidot pilnu lietojumprogrammu. Tā vietā apsveriet iespēju izmantot Qt Quick Application projektu.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-90" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI prototips</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Šis vednis ģenerē Qt logrīku lietojumprogrammas projektu. Lietojumprogramma pēc noklusējuma tiek iegūta no QApplication un ietver tukšu logrīku.</translation>
     </message>
@@ -16051,28 +16058,28 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Qt logrīku lietojumprogramma</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Lūdzu, konfigurējiet &lt;b&gt;%{vcsName}&lt;/b&gt; tūlīt.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Repozitorijs:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>Krātuves&#xa0;URL nav derīgs</translation>
     </message>
@@ -16081,24 +16088,24 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Katalogs:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>Failu sistēmā pastāv &quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot;.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Izmantojiet esošo direktoriju</translation>
     </message>
@@ -16173,14 +16180,14 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Pārskatīšana:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Norādiet repozitorija URL, izrakstīšanās direktoriju un ceļu.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Darbojas Bazaar filiāle...</translation>
     </message>
@@ -16199,22 +16206,22 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Klonē Bazaar filiāli un mēģina ielādēt ietverto projektu.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Importēt projektu</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (vai filiāle)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modulis:</translation>
     </message>
@@ -16229,19 +16236,19 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Notiek CVS izrakstīšanās...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Izrakstīties</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Pārbauda CVS repozitoriju un mēģina ielādēt ietverto projektu.</translation>
     </message>
@@ -16251,7 +16258,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>CVS Checkout</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;noklusējuma filiāle&gt;</translation>
     </message>
@@ -16291,7 +16298,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Gits Klons</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Darbojas Mercurial klons...</translation>
     </message>
@@ -16306,7 +16313,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Dzīvsudraba klons</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Uzticamības servera sertifikāts</translation>
     </message>
@@ -16326,7 +16333,7 @@ Iepriekš atlasa darbvirsmas Qt lietojumprogrammas izveidei, ja tāda ir pieejam
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Šis vednis izveido pielāgotu Qt Creator spraudni.</translation>
     </message>
@@ -25474,7 +25481,7 @@ Netiks lietots atstarpēm komentāros un virknēs.</translation>
         <translation>Nav krāsu shēmas fails.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>atvasināts no QObject</translation>
@@ -25545,7 +25552,7 @@ Netiks lietots atstarpēm komentāros un virknēs.</translation>
         <translation type="vanished">(tipa nosaukums READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>ar mērķiem</translation>
@@ -25569,7 +25576,7 @@ Netiks lietots atstarpēm komentāros un virknēs.</translation>
         <translation>ar mērķi</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest testa gadījums</translation>

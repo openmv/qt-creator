@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Kopirati</translation>
     </message>
@@ -3756,7 +3756,7 @@ Za to upiši ovaj prečac i jedan razmak u polje za unos mjesta, a zatim riječ 
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Linguist</translation>
     </message>
@@ -3781,9 +3781,9 @@ Za to upiši ovaj prečac i jedan razmak u polje za unos mjesta, a zatim riječ 
         <translation>Uredi pomoću Notepada</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Tekst</translation>
     </message>
@@ -3799,7 +3799,7 @@ Za to upiši ovaj prečac i jedan razmak u polje za unos mjesta, a zatim riječ 
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt Quick</translation>
     </message>
@@ -3814,14 +3814,14 @@ Za to upiši ovaj prečac i jedan razmak u polje za unos mjesta, a zatim riječ 
         <translation>Qt Quick 2 pregled(qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Otvara trenutačnu datoteku u vi-ju</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Uredi pomoću vi</translation>
     </message>
@@ -7084,7 +7084,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7102,7 +7102,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Uređivač skupova podataka</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Unesite naziv klase</translation>
     </message>
@@ -7111,13 +7111,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+455" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7156,7 +7156,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Greška: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
@@ -7171,7 +7171,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Stvaranje &quot;%L1&quot; nije uspjelo!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7180,7 +7180,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Ukloni</translation>
@@ -7679,6 +7679,7 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
         <location line="+1979" />
@@ -7839,16 +7840,16 @@ Check the json file for errors and fix them.</source>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+131" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8275,7 +8276,7 @@ Would you like to choose a different name?</source>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Pretvori model</translation>
@@ -9511,7 +9512,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
         <source>What would you like to do?</source>
         <translation>Što biste htjeli raditi?</translation>
     </message>
@@ -9640,11 +9641,11 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
         <location line="+50" />
@@ -10238,6 +10239,7 @@ Pritisnite Odustani za prelazak na DFU reprogramiranje.</translation>
     </message>
     <message>
         <location line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Ponovno spojite svoj OpenMV Cam...</translation>
     </message>
@@ -10268,9 +10270,9 @@ Nastaviti?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Brisanje...</translation>
@@ -10280,7 +10282,7 @@ Nastaviti?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10381,7 +10383,7 @@ Nastaviti?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+170" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10522,7 +10524,7 @@ Kliknite gumb U redu nakon što je SBL Bootloader vašeg OpenMV Cama nabrojao.</
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nema DFU postavki za odabranu vrstu ploče!</translation>
     </message>
@@ -10541,14 +10543,14 @@ Kliknite gumb U redu nakon što je SBL Bootloader vašeg OpenMV Cama nabrojao.</
     </message>
     <message>
         <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
         <source>Read ROMFS</source>
         <translation>Čitajte ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Napišite ROMFS</translation>
@@ -10558,7 +10560,7 @@ Kliknite gumb U redu nakon što je SBL Bootloader vašeg OpenMV Cama nabrojao.</
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10894,12 +10896,12 @@ Kliknite gumb U redu nakon što DFU Bootloader vašeg OpenMV Cam-a nabroji.</tra
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Profiler koda</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Stan</translation>
     </message>
@@ -10934,7 +10936,7 @@ Kliknite gumb U redu nakon što DFU Bootloader vašeg OpenMV Cam-a nabroji.</tra
         <translation>Resetiraj</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Funkcije: %1, Ukupan broj poziva: %2, Ukupan broj μs: %3, Ukupan broj ciklusa: %4, Ukupan broj događaja: %5</translation>
     </message>
@@ -11234,7 +11236,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Nabavite uređaje</translation>
@@ -11248,17 +11250,17 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>Upit nije uspio!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -11281,6 +11283,11 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Ovo može potrajati neko vrijeme, pauza za vodu?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>DFU uređaj je zauzet, ponovni pokušaj (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -11315,7 +11322,7 @@ Postotak
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11994,7 +12001,7 @@ Vaša instalacija OpenMV IDE-a možda je nepotpuna.</translation>
         <translation type="vanished">Nema odgovarajućeg sučelja za odabrani naziv datoteke!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
         <source>Please select the target</source>
         <translation>Molimo odaberite cilj</translation>
     </message>
@@ -12033,7 +12040,7 @@ OpenMV IDE će samo kopirati model kakav jest.</translation>
 %1 će samo kopirati model kakav jest.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -12448,7 +12455,7 @@ Vaš OpenMV Cam još je u načinu bootloadera: kliknite Poveži i upotrijebite o
         <translation>STM32 programer nije podržan na ovoj platformi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
         <source>the detected board</source>
         <translation>otkrivena ploča</translation>
     </message>
@@ -12478,12 +12485,12 @@ Vaš OpenMV Cam još je u načinu bootloadera: kliknite Poveži i upotrijebite o
         <translation>Za bljeskanje slike bootloadera vaša OpenMV Cam mora biti u načinu oporavka bootloadera. Isključite kameru, spojite BOOT0/SBL/RECOVERY na 3.3V pomoću premosnice, a zatim ponovno priključite kameru prije nego što pokušate ponovno.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>Čitanje ROMFS-a putem DFU-a nije uspjelo!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>Pisanje ROMFS-a putem DFU-a nije uspjelo!</translation>
     </message>
@@ -14050,102 +14057,102 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Ovaj čarobnjak stvara jednostavan jedinični testni projekt.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Mjesto projekta</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Mjesto</translation>
     </message>
@@ -14154,7 +14161,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Qt test</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-171" />
         <source>Google Test</source>
         <translation>Google test</translation>
     </message>
@@ -14174,49 +14181,49 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+25" />
+        <location line="-192" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Testni okvir:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-215" />
         <source>GUI Application</source>
         <translation>Aplikacija grafičkog sučelja</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="+49" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Naziv paketa za testiranje:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Naziv testnog slučaja:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-221" />
         <source>Requires QApplication</source>
         <translation>Zahtijeva QApplication</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+98" />
         <source>Generate setup code</source>
         <translation>Generiraj kod za postavljanje</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="-96" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Stvori inicijalizaciju i ispravi kȏd</translation>
     </message>
@@ -14225,17 +14232,17 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Omogući C++11</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-145" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest izvorni direktorij (izborno):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="-25" />
         <source>Boost include directory (optional):</source>
         <translation>Pojačajte direktorij za uključivanje (izborno):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 uključuje direktorij (opcionalno):</translation>
     </message>
@@ -14245,154 +14252,154 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Koristite Qt biblioteke</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-509" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Sustav izrade:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Podaci projekta i testiranja</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Detalji</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Odabir kompleta</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -14400,101 +14407,101 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Kompleti</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Upravljanje projektima</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Sažetak</translation>
@@ -14504,9 +14511,9 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Stvara novi jedinični testni projekt. Jedinični testovi omogućuju vam da potvrdite da je kod prikladan za upotrebu i da nema regresija.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-542" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Drugi projekt</translation>
@@ -14516,36 +14523,36 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Projekt automatskog testiranja</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="+123" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Potpuno kvalificirano ime, uključujući prostore imena</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Naziv klase:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Prilagođeno&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Osnovna klasa:</translation>
     </message>
@@ -14554,7 +14561,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Uključi QObject</translation>
     </message>
@@ -14596,10 +14603,10 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Datoteka zaglavlja:</translation>
     </message>
@@ -14608,54 +14615,54 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Izvorna datoteka:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Staza:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Definirajte klasu</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Stvara C++ zaglavlje i izvornu datoteku za novu klasu koju možete dodati u C++ projekt.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>C++ klasa</translation>
     </message>
@@ -14696,16 +14703,16 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Qt model stavke</translation>
     </message>
@@ -14745,17 +14752,17 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Python klasa</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Stvara testni projekt temeljen na CMakeu za koji se može unijeti isječak koda.</translation>
     </message>
@@ -14810,7 +14817,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Isječak kȏda</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Stvara datoteku zaglavlja koju možete dodati u C/C++ projekt.</translation>
     </message>
@@ -14820,7 +14827,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>C/C++ datoteka zaglavlja</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Stvara izvornu datoteku koju možete dodati u C/C++ projekt.</translation>
     </message>
@@ -14830,7 +14837,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>C/C++ izvorna datoteka</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Odaberi predložak za obrasce</translation>
     </message>
@@ -14848,12 +14855,12 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation type="vanished">Qt Designer obrazac</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-139" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Stvara shader fragmenta u Desktop OpenGL Shading Language (GLSL). Shaderi fragmenata generiraju konačne boje piksela za trokute, točke i linije prikazane pomoću OpenGL-a.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14861,7 +14868,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
@@ -14876,7 +14883,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Stvara sjenčilo fragmenata u jeziku sjenčanja OpenGL/ES 2.0 (GLSL/ES). Shaderi fragmenata generiraju konačne boje piksela za trokute, točke i linije prikazane pomoću OpenGL-a.</translation>
     </message>
@@ -14896,7 +14903,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Vertex shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Stvara Java datoteku s standardnim kodom.</translation>
     </message>
@@ -14911,7 +14918,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Java datoteka</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Knjižnica bez države</translation>
     </message>
@@ -14932,25 +14939,25 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>JS datoteka</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-74" />
         <source>Model name:</source>
         <translation>Ime modela:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Mjesto:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; postoji u datotečnom sustavu.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Naziv modela i lokacija</translation>
     </message>
@@ -14960,19 +14967,19 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Stvara novi prazan model s praznim dijagramom.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Modeliranje</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Stvara model ogrebotine pomoću privremene datoteke.</translation>
     </message>
@@ -14982,23 +14989,23 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Model za ogrebotine</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Stvara praznu Nim datoteku koristeći UTF-8 skup znakova.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Nim File</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Stvara praznu datoteku Nim skripte koristeći UTF-8 skup znakova.</translation>
     </message>
@@ -15018,7 +15025,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Python datoteka</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Stvara datoteku Qt resursa (.qrc).</translation>
     </message>
@@ -15028,7 +15035,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Qt datoteka resursa</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Stvara QML datoteku s standardnim kodom, počevši s &quot;import QtQuick&quot;.</translation>
     </message>
@@ -15038,21 +15045,21 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>QML datoteka (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Stvara međuspremnik za grebanje pomoću privremene datoteke.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="-51" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Opće</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-316" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Ovaj čarobnjak stvara jednostavan projekt testnog jedinica koristeći Boost.</translation>
     </message>
@@ -15077,21 +15084,21 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Stvara novi projekt ispitivanja jedinice koristeći Boost. Jedinstveni testovi omogućuju vam da provjerite je li kôd prikladan za upotrebu i da nema regresije.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Testni projekt</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Pojačajte projekt testa</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Ovaj čarobnjak stvara jednostavan projekt testnog jedinica pomoću Catch2.</translation>
     </message>
@@ -15126,7 +15133,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Projekt testa Catch2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Ovaj čarobnjak stvara jednostavan testni projekt jedinice pomoću Google testa.</translation>
     </message>
@@ -15156,7 +15163,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Google testni projekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Ovaj čarobnjak stvara jednostavan projekt testa jedinice pomoću QT testa.</translation>
     </message>
@@ -15171,7 +15178,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>QT test projekt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Ovaj čarobnjak stvara jednostavan projekt testnog jedinica pomoću QT Quick testa.</translation>
     </message>
@@ -15191,12 +15198,12 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Uključite qquicKitem</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>Stvara testni projekt temeljen na Cmakeu gdje možete unijeti isječak koda za sastavljanje i provjeriti.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+350" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Stvara obrazac dizajnera QT widgeta koji možete dodati u QT widget projekt. Ovo je korisno ako već imate postojeću klasu za poslovnu logiku korisničkog sučelja.</translation>
     </message>
@@ -15206,7 +15213,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>QT widgeti dizajner obrazac</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-104" />
         <source>Creates a markdown file.</source>
         <translation>Stvara datoteku Markdown.</translation>
     </message>
@@ -15216,12 +15223,12 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Oznaka</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+52" />
         <source>Scratch Buffer</source>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Naziv državne karte:</translation>
     </message>
@@ -15241,7 +15248,7 @@ Ovo briše njegove ploče, firmver i primjere.</translation>
         <translation>Državna karta</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15281,7 +15288,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Testni slučaj</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Stvara praznu datoteku.</translation>
     </message>
@@ -15291,7 +15298,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Prazna datoteka</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Stvara datoteku za prijevod koju možete dodati u QT projekt.</translation>
     </message>
@@ -15301,61 +15308,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Qt prijevod datoteka</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Ovaj čarobnjak stvara jednostavnu konzolnu aplikaciju temeljenu na Qt-u.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Mezon</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Definirajte sustav izgradnje</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Sustav gradnje</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Prijevod datoteke</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Prijevod</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-178" />
         <source>Define Python Interpreter</source>
         <translation>Definirajte tumač Pythona</translation>
     </message>
@@ -15370,7 +15377,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Stvara QT za Python aplikaciju koja uključuje qt widgets dizajnerski widget (UI datoteka). Zahtijeva .ui za pretvorbu Pythona.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="-52" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -15385,7 +15392,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Stvara QT brzu aplikaciju koja može imati i QML i C ++ kod. Aplikaciju možete izgraditi i rasporediti na radnoj površini, ugrađene i mobilne ciljane platforme.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+90" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15394,7 +15401,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Da biste razvili potpunu aplikaciju, umjesto toga stvorite QT projekt brze aplikacije.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-108" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15411,31 +15418,31 @@ Preselects a desktop Qt for building the application if available.</source>
 Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-172" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Aplikacija (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Aplikacija Qt konzole</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Ovaj čarobnjak stvara projekt C++ knjižnice.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Navedite osnovne informacije o klasama za koje želite generirati datoteke kostura izvornog koda.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Dijeljena biblioteka</translation>
     </message>
@@ -15450,8 +15457,8 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Qt dodatak</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Vrsta:</translation>
@@ -15461,7 +15468,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15527,14 +15534,14 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Qt modul:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Definirajte pojedinosti projekta</translation>
     </message>
@@ -15543,38 +15550,38 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation type="vanished">Stvara C++ biblioteku. Ovo se može koristiti za stvaranje:&lt;ul&gt;&lt;li&gt;dijeljene C++ biblioteke za korištenje s &lt;tt&gt;QPluginLoader&lt;/tt&gt; i runtimeom (dodaci)&lt;/li&gt;&lt;li&gt;dijeljene ili statične C++ biblioteke za korištenje s drugim projekt u vrijeme povezivanja&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-485" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Biblioteka</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>C++ knjižnica</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Stvara jednostavnu aplikaciju Nim.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Projekt koji nije Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Aplikacija Nim</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Binarno</translation>
     </message>
@@ -15590,12 +15597,12 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Opis:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15661,12 +15668,12 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Licenca:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15708,21 +15715,21 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfiguracija</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>S Nimbleom stvara Nim aplikaciju.</translation>
     </message>
@@ -15732,7 +15739,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Spretna aplikacija</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Stvara jednostavnu C aplikaciju bez ovisnosti.</translation>
     </message>
@@ -15742,7 +15749,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Obična C aplikacija</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Stvara jednostavnu C++ aplikaciju bez ovisnosti.</translation>
     </message>
@@ -15752,7 +15759,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Obična C++ aplikacija</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Ovaj čarobnjak stvara praznu .pro datoteku.</translation>
     </message>
@@ -15771,20 +15778,20 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation type="vanished">PySide verzija:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-118" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Stvara Qt za Python aplikaciju koja sadrži samo glavni kod za QApplication.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Aplikacija (Qt za Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Prazna prijava</translation>
     </message>
@@ -15801,13 +15808,13 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Projektna datoteka:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Stvara Qt for Python aplikaciju koja sadrži prazan prozor.</translation>
     </message>
@@ -15817,15 +15824,15 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Prazan prozor</translation>
     </message>
     <message>
-        <location line="-32" />
-        <location line="+22" />
+        <location line="-10" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-259" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15834,19 +15841,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Preporučuje desktop QT za izgradnju aplikacije ako je dostupna.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Stvara biblioteku C ++. Možete stvoriti: &lt;ul&gt; &lt;li&gt; Zajednička biblioteka C ++ za upotrebu s &lt;TT&gt; QPLUGINLOADER &lt;/TT&gt; i Runtime (dodaci) &lt;/li&gt; &lt;li&gt; Zajednička ili statička biblioteka C ++ za upotrebu s drugim projektom na Linktimeu &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-137" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="-18" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -15880,50 +15887,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Stvara Qt za Python aplikaciju koja uključuje widget temeljen na Qt Designeru (ui datoteka) - Zahtijeva pretvorbu .ui u Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-18" />
         <source>Window UI</source>
         <translation>UI prozora</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Minimalna potrebna verzija Qt-a:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>Moja stavka</translation>
     </message>
@@ -15971,9 +15978,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Napravite projekt sa strukturom koja je kompatibilna i s Qt Design Studio (putem .qmlproject) i s Qt Creatorom (putem CMakeLists.txt). Sadrži .ui.qml obrazac koji možete vizualno uređivati u Qt Design Studiju.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Koristite Qt virtualnu tipkovnicu</translation>
     </message>
@@ -15986,12 +15993,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Stvara Qt Quick aplikaciju koja sadrži prazan prozor. Po izboru, možete kreirati Qt Design Studio projekt.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-169" />
         <source>Qt Quick Application</source>
         <translation>Qt brza aplikacija</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16013,12 +16020,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Koristite ovo samo ako izrađujete prototip. Ovim ne možete izraditi potpunu aplikaciju. Umjesto toga razmislite o korištenju projekta Qt Quick Application.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-90" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI prototip</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Ovaj čarobnjak generira projekt Qt Widgets aplikacije. Aplikacija prema zadanim postavkama proizlazi iz QApplication i uključuje prazan widget.</translation>
     </message>
@@ -16059,28 +16066,28 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Aplikacija Qt Widgets</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Molimo konfigurirajte &lt;b&gt;%{vcsName}&lt;/b&gt; sada.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Spremište:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>URL spremišta nije valjan</translation>
     </message>
@@ -16089,24 +16096,24 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Direktorij:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; postoji u datotečnom sustavu.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Koristi postojeći direktorij</translation>
     </message>
@@ -16181,14 +16188,14 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Revizija:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Navedite URL spremišta, direktorij za naplatu i put.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Running Bazaar podružnica...</translation>
     </message>
@@ -16207,22 +16214,22 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Klonira Bazaar granu i pokušava učitati sadržani projekt.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Uvezi projekt</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar klon (ili grana)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -16237,19 +16244,19 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Pokretanje CVS provjere...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Provjeri</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Provjerava CVS spremište i pokušava učitati sadržani projekt.</translation>
     </message>
@@ -16259,7 +16266,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>CVS naplata</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;zadana grana&gt;</translation>
     </message>
@@ -16299,7 +16306,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Git klon</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Pokreće se Mercurialov klon...</translation>
     </message>
@@ -16314,7 +16321,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Mercurial klon</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Vjeruj certifikatu poslužitelja</translation>
     </message>
@@ -16334,7 +16341,7 @@ Unaprijed odabire Qt desktop za izradu aplikacije ako je dostupan.</translation>
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Ovaj čarobnjak stvara prilagođeni Qt Creator dodatak.</translation>
     </message>
@@ -25482,7 +25489,7 @@ Neće se primijeniti na bjeline u komentarima i znakovnim nizovima.</translation
         <translation>Nije datoteka sheme boja.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>izvedeno iz QObject-a</translation>
@@ -25553,7 +25560,7 @@ Neće se primijeniti na bjeline u komentarima i znakovnim nizovima.</translation
         <translation type="vanished">(naziv tipa READ name WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>s metama</translation>
@@ -25577,7 +25584,7 @@ Neće se primijeniti na bjeline u komentarima i znakovnim nizovima.</translation
         <translation>s metom</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Testni slučaj QuickTest</translation>

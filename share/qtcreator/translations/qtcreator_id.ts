@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Menyalin</translation>
     </message>
@@ -746,7 +746,7 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Ahli bahasa</translation>
     </message>
@@ -771,9 +771,9 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Edit dengan Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Teks</translation>
     </message>
@@ -789,7 +789,7 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt Cepat</translation>
     </message>
@@ -804,14 +804,14 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Pratinjau Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Membuka file saat ini di vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Sunting dengan vi</translation>
     </message>
@@ -6714,16 +6714,16 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+240" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -6862,8 +6862,8 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-210" />
-        <location line="+170" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
@@ -6887,7 +6887,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-415" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Tidak ada pengaturan DFU untuk jenis papan yang dipilih!</translation>
     </message>
@@ -6909,7 +6909,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-179" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+7" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
@@ -6993,7 +6993,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7040,7 +7040,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Tulis ROMFS</translation>
@@ -7050,7 +7050,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7083,6 +7083,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Hubungkan kembali Kamera OpenMV Anda...</translation>
     </message>
@@ -7109,6 +7110,7 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
         <location line="+1979" />
@@ -7181,9 +7183,9 @@ Lanjutkan?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Menghapus...</translation>
@@ -7314,7 +7316,7 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Pembaruan firmware BOSSAC gagal!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-111" />
         <source>the detected board</source>
         <translation>papan yang terdeteksi</translation>
     </message>
@@ -7344,12 +7346,12 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Untuk mem-flash citra bootloader, OpenMV Cam Anda harus berada dalam mode pemulihan bootloader. Cabut kamera, hubungkan BOOT0/SBL/RECOVERY ke 3.3V dengan jumper, lalu pasang kembali kamera sebelum mencoba lagi.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>Pembacaan ROMFS lewat DFU gagal!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>Penulisan ROMFS lewat DFU gagal!</translation>
     </message>
@@ -7521,11 +7523,11 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation type="vanished">Silakan masukkan jaringan WiFi Anda di sini</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-374" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7543,7 +7545,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Editor Kumpulan Data</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Silakan masukkan nama kelas</translation>
     </message>
@@ -7563,7 +7565,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Gagal membuat &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7572,7 +7574,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Menghapus</translation>
@@ -7906,7 +7908,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-912" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konversi Model</translation>
@@ -7977,7 +7979,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+162" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Gagal membuka: &quot;%L1&quot;</translation>
     </message>
@@ -9596,11 +9598,11 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
@@ -10584,12 +10586,12 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Profiler Kode</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Datar</translation>
     </message>
@@ -10624,7 +10626,7 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
         <translation>Mengatur ulang</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Fungsi: %1, Total Panggilan: %2, Total μs: %3, Total Siklus: %4, Total Peristiwa: %5</translation>
     </message>
@@ -10634,7 +10636,7 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
         <translation>Fungsi: %1, Total Panggilan: %2, Total μs: %3, Total Siklus: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1011" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
         <source>Please select the target</source>
         <translation>Silakan pilih targetnya</translation>
     </message>
@@ -10673,7 +10675,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
 %1 hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -11015,7 +11017,7 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Dapatkan Perangkat</translation>
@@ -11029,17 +11031,17 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
         <translation>Kueri gagal!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>Kegunaan DFU</translation>
     </message>
@@ -11071,6 +11073,11 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Ini mungkin memakan waktu cukup lama, air pecah?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>Perangkat DFU sedang sibuk, mencoba lagi (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -13475,112 +13482,112 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Boost.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location line="-568" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Lokasi Proyek</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Lokasi</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-336" />
         <source>Boost Test (header only)</source>
         <translation>Tes Peningkatan (hanya header)</translation>
     </message>
@@ -13590,32 +13597,32 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Boost Test (perpustakaan bersama)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Kerangka pengujian:</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="-166" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Nama rangkaian pengujian:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Nama kasus uji:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-169" />
         <source>Boost include directory (optional):</source>
         <translation>Tingkatkan penyertaan direktori (opsional):</translation>
     </message>
@@ -13625,154 +13632,154 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Direktori pemasangan Boost (opsional):</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-534" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMembuat</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qb</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Membangun sistem:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informasi Proyek dan Tes</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Detail</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Pemilihan Perlengkapan</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -13780,126 +13787,126 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>perlengkapan</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Manajemen Proyek</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Ringkasan</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-321" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Membuat proyek pengujian unit baru menggunakan Boost. Pengujian unit memungkinkan Anda memverifikasi bahwa kode layak digunakan dan tidak ada regresi.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Proyek Uji</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Tingkatkan Proyek Uji</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Catch2.</translation>
     </message>
@@ -13944,7 +13951,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Catch2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Google Test.</translation>
     </message>
@@ -13979,7 +13986,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Google</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Qt Test.</translation>
     </message>
@@ -13995,13 +14002,13 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Hasilkan kode inisialisasi dan pembersihan</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-209" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Membuat proyek pengujian unit baru menggunakan Qt Test. Pengujian unit memungkinkan Anda memverifikasi bahwa kode layak digunakan dan tidak ada regresi.</translation>
     </message>
@@ -14011,7 +14018,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Qt Quick Test.</translation>
     </message>
@@ -14036,36 +14043,36 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Nama yang sepenuhnya memenuhi syarat, termasuk namespace</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Nama kelas:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Kustom&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Kelas dasar:</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Sertakan QObject</translation>
     </message>
@@ -14100,62 +14107,62 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Tambahkan QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Berkas tajuk:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Sumber berkas:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Jalur:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Tentukan Kelas</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Membuat header C++ dan file sumber untuk kelas baru yang dapat Anda tambahkan ke proyek C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>Kelas C++</translation>
     </message>
@@ -14196,16 +14203,16 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Jumlah</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Model Barang Qt</translation>
     </message>
@@ -14241,17 +14248,17 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>ular piton</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Kelas Python</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Membuat proyek pengujian berbasis CMake yang cuplikan kodenya dapat dimasukkan.</translation>
     </message>
@@ -14296,20 +14303,20 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Membuat proyek pengujian berbasis CMake tempat Anda dapat memasukkan cuplikan kode untuk dikompilasi dan diperiksa.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-148" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Proyek Lainnya</translation>
     </message>
     <message>
-        <location line="-544" />
+        <location line="+1" />
         <source>Code Snippet</source>
         <translation>Cuplikan Kode</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Membuat file header yang dapat Anda tambahkan ke proyek C/C++.</translation>
     </message>
@@ -14319,7 +14326,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Tajuk C/C++</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Membuat file sumber yang dapat Anda tambahkan ke proyek C/C++.</translation>
     </message>
@@ -14329,7 +14336,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Sumber C/C++</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Pilih Templat Formulir</translation>
     </message>
@@ -14349,12 +14356,12 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Formulir Perancang Widget Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-146" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Membuat shader fragmen di Desktop OpenGL Shading Language (GLSL). Fragment shader menghasilkan warna piksel akhir untuk segitiga, titik, dan garis yang dirender dengan OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14362,7 +14369,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragmen Shader (Desktop OpenGL)</translation>
     </message>
@@ -14377,7 +14384,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Membuat shader fragmen dalam OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shader menghasilkan warna piksel akhir untuk segitiga, titik, dan garis yang dirender dengan OpenGL.</translation>
     </message>
@@ -14397,7 +14404,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Membuat file Java dengan kode boilerplate.</translation>
     </message>
@@ -14412,7 +14419,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas Jawa</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Perpustakaan tanpa kewarganegaraan</translation>
     </message>
@@ -14433,44 +14440,44 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas JS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-84" />
         <source>Creates a markdown file.</source>
         <translation>Membuat file penurunan harga.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Umum</translation>
     </message>
     <message>
-        <location line="-111" />
+        <location line="-119" />
         <source>Markdown File</source>
         <translation>File Penurunan Harga</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>Nama model:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Lokasi:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; ada di sistem file.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Nama Model dan Lokasi</translation>
     </message>
@@ -14480,19 +14487,19 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Membuat model kosong baru dengan diagram kosong.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Pemodelan</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Model</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Membuat model awal menggunakan file sementara.</translation>
     </message>
@@ -14502,23 +14509,23 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Model Goresan</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Membuat file Nim kosong menggunakan rangkaian karakter UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Berkas Nim</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Membuat file skrip Nim kosong menggunakan rangkaian karakter UTF-8.</translation>
     </message>
@@ -14538,7 +14545,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas Python</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Membuat file Sumber Daya Qt (.qrc).</translation>
     </message>
@@ -14548,7 +14555,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Sumber Daya Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Membuat file QML dengan kode boilerplate, dimulai dengan &quot;import QtQuick&quot;.</translation>
     </message>
@@ -14558,7 +14565,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File QML (Qt Cepat 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Membuat buffer awal menggunakan file sementara.</translation>
     </message>
@@ -14568,7 +14575,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Penyangga Goresan</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Nama bagan negara bagian:</translation>
     </message>
@@ -14588,7 +14595,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Bagan Negara</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14648,7 +14655,7 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>Kasus Uji</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Membuat file kosong.</translation>
     </message>
@@ -14658,7 +14665,7 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>Berkas Kosong</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Membuat file terjemahan yang dapat Anda tambahkan ke proyek Qt.</translation>
     </message>
@@ -14668,61 +14675,61 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>File Terjemahan Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Wizard ini membuat aplikasi konsol sederhana berbasis Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Tentukan Sistem Bangun</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Membangun Sistem</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Berkas Terjemahan</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Terjemahan</translation>
     </message>
     <message>
-        <location line="-475" />
+        <location line="-406" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14732,30 +14739,30 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Aplikasi (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Aplikasi Konsol Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Wizard ini membuat proyek perpustakaan C++.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Tentukan informasi dasar tentang kelas yang ingin Anda buatkan file kode sumber kerangkanya.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Perpustakaan Bersama</translation>
     </message>
@@ -14770,14 +14777,14 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Plugin Qt</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Jenis:</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QPlugin yang Dapat Diakses</translation>
     </message>
@@ -14843,55 +14850,55 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Modul Qt:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Tentukan Detail Proyek</translation>
     </message>
     <message>
-        <location line="-428" />
+        <location line="-60" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Membuat perpustakaan C++. Anda dapat membuat:&lt;ul&gt;&lt;li&gt;pustaka C++ bersama untuk digunakan dengan &lt;tt&gt;QPluginLoader&lt;/tt&gt; dan waktu proses (Plugin)&lt;/li&gt;&lt;li&gt;pustaka C++ bersama atau statis untuk digunakan dengan proyek lain pada waktu tautan&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-425" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Perpustakaan</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>Perpustakaan C++</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Membuat aplikasi Nim sederhana.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Proyek Non-Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Aplikasi Nim</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Biner</translation>
     </message>
@@ -14907,12 +14914,12 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Keterangan:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14978,12 +14985,12 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Lisensi:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15025,21 +15032,21 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfigurasi</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Membuat aplikasi Nim dengan Nimble.</translation>
     </message>
@@ -15049,7 +15056,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cekatan</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Membuat aplikasi C sederhana tanpa ketergantungan.</translation>
     </message>
@@ -15059,7 +15066,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi C Biasa</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Membuat aplikasi C++ sederhana tanpa ketergantungan.</translation>
     </message>
@@ -15069,7 +15076,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi C++ Biasa</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Wizard ini membuat file .pro kosong.</translation>
     </message>
@@ -15084,46 +15091,46 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Proyek qmake kosong</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+22" />
+        <location line="-180" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>Sisi Py 6</translation>
     </message>
     <message>
-        <location line="-60" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-53" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>Sisi Py 2</translation>
     </message>
     <message>
-        <location line="-54" />
+        <location line="+7" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Membuat aplikasi Qt untuk Python yang hanya berisi kode utama untuk QApplication.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Aplikasi (Qt untuk Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Aplikasi Kosong</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Berkas proyek:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Membuat aplikasi Qt untuk Python yang berisi jendela kosong.</translation>
     </message>
@@ -15133,7 +15140,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Jendela Kosong</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+27" />
         <source>PySide 5.15</source>
         <translation>Sisi Py 5.15</translation>
     </message>
@@ -15163,7 +15170,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cepat Qt - Kosong</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-26" />
         <source>Define Python Interpreter</source>
         <translation>Definisikan Penerjemah Python</translation>
     </message>
@@ -15183,45 +15190,45 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>UI Jendela</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Versi Qt minimum yang diperlukan:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>Barang Saya</translation>
     </message>
@@ -15261,14 +15268,14 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Plugin Ekstensi Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Gunakan Papan Ketik Virtual Qt</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-180" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -15288,7 +15295,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cepat Qt</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15302,7 +15309,7 @@ Gunakan versi &quot;compat&quot; ini jika Anda ingin menggunakan sistem build la
         <translation>Aplikasi Cepat Qt (kompatibel)</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-92" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15316,7 +15323,7 @@ Untuk mengembangkan aplikasi lengkap, buatlah proyek Aplikasi Qt Quick.</transla
         <translation>Prototipe UI Cepat Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Wizard ini menghasilkan proyek Aplikasi Qt Widgets. Aplikasi ini diturunkan secara default dari QApplication dan menyertakan widget kosong.</translation>
     </message>
@@ -15350,50 +15357,50 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Widget Qt</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Harap konfigurasikan &lt;b&gt;%{vcsName}&lt;/b&gt; sekarang.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Gudang:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>URL repositori tidak valid</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Direktori:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; ada di sistem file.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Gunakan direktori yang ada</translation>
     </message>
@@ -15468,14 +15475,14 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Revisi:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Tentukan URL repositori, direktori checkout, dan jalur.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Menjalankan cabang Bazaar...</translation>
     </message>
@@ -15494,22 +15501,22 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Mengkloning cabang Bazaar dan mencoba memuat proyek yang ada di dalamnya.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Proyek Impor</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Klon Bazaar (Atau Cabang)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -15524,19 +15531,19 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Menjalankan pembayaran CVS...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Check-out</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Memeriksa repositori CVS dan mencoba memuat proyek yang ada di dalamnya.</translation>
     </message>
@@ -15546,7 +15553,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Pembayaran CVS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;cabang default&gt;</translation>
     </message>
@@ -15586,7 +15593,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Klon Git</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Menjalankan klon Mercurial...</translation>
     </message>
@@ -15601,7 +15608,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Klon Mercurial</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Sertifikat Server Percaya</translation>
     </message>
@@ -15621,7 +15628,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Pembayaran Subversi</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Wizard ini membuat plugin Qt Creator khusus.</translation>
     </message>
@@ -21770,7 +21777,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>berasal dari QObject</translation>
@@ -21836,7 +21843,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>(ketik nama BACA nama TULIS setName PEMBERITAHUAN nama BERUBAH FINAL)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>dengan target</translation>
@@ -21860,7 +21867,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>dengan sasaran</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Kasus Uji Tes Cepat</translation>

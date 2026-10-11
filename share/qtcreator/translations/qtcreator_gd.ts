@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Dèan lethbhreac</translation>
     </message>
@@ -3757,7 +3757,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>Cànanach</translation>
     </message>
@@ -3782,9 +3782,9 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Deasaich le Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Teacs</translation>
     </message>
@@ -3800,7 +3800,7 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt gu sgiobalta</translation>
     </message>
@@ -3815,14 +3815,14 @@ Gus seo a dhèanamh, bidh thu a’ taipeadh an ath-ghoirid seo agus àite san ra
         <translation>Ro-shealladh Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Fosglaidh seo am faidhle làithreach ann an vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Deasaich le vi</translation>
     </message>
@@ -7091,7 +7091,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7109,7 +7109,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Deasaiche stòr-dàta</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Feuch an cuir thu a-steach ainm clas</translation>
     </message>
@@ -7118,13 +7118,13 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+455" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7163,7 +7163,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Mearachd: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-316" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
         <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
         <location line="+34" />
@@ -7178,7 +7178,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Dh&apos;fhàillig cruthachadh &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7187,7 +7187,7 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Sguab às</translation>
@@ -7686,6 +7686,7 @@ Sgrùd am faidhle json airson mhearachdan agus càraich iad.</translation>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
         <location line="+1979" />
@@ -7846,16 +7847,16 @@ Sgrùd am faidhle json airson mhearachdan agus càraich iad.</translation>
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+131" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -8274,7 +8275,7 @@ Am bu toigh leat ainm eile a thaghadh?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-887" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Modail tionndaidh</translation>
@@ -9510,7 +9511,7 @@ Am bu toigh leat an OpenMV Cam agad a chlàradh a-nis?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+926" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
         <source>What would you like to do?</source>
         <translation>Dè bu toil leat a dhèanamh?</translation>
     </message>
@@ -9640,11 +9641,11 @@ Am bu toigh leat an OpenMV Cam agad a chlàradh a-nis?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
         <location line="+50" />
@@ -10238,6 +10239,7 @@ Buail air cuir dheth gus leum gu ath-chlàradh DFU.</translation>
     </message>
     <message>
         <location line="-1" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Ath-cheangail an OpenMV Cam agad...</translation>
     </message>
@@ -10268,9 +10270,9 @@ Lean air adhart?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+239" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>A&apos; sguabadh às...</translation>
@@ -10280,7 +10282,7 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-231" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
@@ -10381,7 +10383,7 @@ Lean air adhart?</translation>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+170" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
@@ -10522,7 +10524,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-414" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Chan eil suidheachadh DFU ann airson an seòrsa bùird taghte!</translation>
     </message>
@@ -10541,14 +10543,14 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
         <source>Read ROMFS</source>
         <translation>Leugh romfs</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Sgrìobh romfs</translation>
@@ -10558,7 +10560,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader SBL OpenMV Cam àireamhachadh.<
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
@@ -10894,12 +10896,12 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Pròifil còd</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Flat</translation>
     </message>
@@ -10934,7 +10936,7 @@ Cliog air a’ phutan Ok às deidh do Bootloader DFU OpenMV Cam àireamhachadh.<
         <translation>Ath-shuidhich</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Foincseanan: %1, Gairmean Iomlan: %2, μs Iomlan: %3, Cuairtean Iomlan: %4, Tachartasan Iomlan: %5</translation>
     </message>
@@ -11234,7 +11236,7 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Faigh Innealan</translation>
@@ -11248,17 +11250,17 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <translation>Dh&apos;fhàillig a&apos; cheist!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>DFU Util</translation>
     </message>
@@ -11281,6 +11283,11 @@ Am bu toil leat OpenMV IDE a chopaigeadh chun OpenMV Cam agad?</translation>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Is dòcha gun toir seo greis, briseadh uisge?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>Tha an t-uidheam DFU trang, a&apos; feuchainn a-rithist (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -11315,7 +11322,7 @@ Ceudad
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-128" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11994,7 +12001,7 @@ Dh&apos;fhaodadh gu bheil stàladh OpenMV IDE agad neo-choileanta.</translation>
         <translation type="vanished">Gun eadar-aghaidh maidsidh airson ainm faidhle taghte!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-970" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
         <source>Please select the target</source>
         <translation>Tagh an targaid</translation>
     </message>
@@ -12033,7 +12040,7 @@ Cha dèan %1 ach lethbhreac den mhodail mar a tha e.</translation>
 Cha dèan %1 ach lethbhreac den mhodail mar a tha e.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -12448,7 +12455,7 @@ Tha an OpenMV Cam agad fhathast ann am modh an luchdaiche-tòiseachaidh: briog a
         <translation>Chan eil taic ri Stm32 pròiseact a &apos;faighinn taic air an àrd-ùrlar seo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
         <source>the detected board</source>
         <translation>am bòrd a chaidh a lorg</translation>
     </message>
@@ -12478,12 +12485,12 @@ Tha an OpenMV Cam agad fhathast ann am modh an luchdaiche-tòiseachaidh: briog a
         <translation>Gus ìomhaigh bootloader a lasadh feumaidh an OpenMV Cam agad a bhith ann am modh aisig bootloader. Thoir a-mach am plog aig a&apos; chamara, ceangail BOOT0/SBL/RECOVERY ri 3.3V le leum, agus an uair sin cuir am plog aig a&apos; chamara air ais a-steach mus feuch thu a-rithist.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>Dh&apos;fhàillig leughadh ROMFS tro DFU!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>Dh&apos;fhàillig sgrìobhadh ROMFS tro DFU!</translation>
     </message>
@@ -14053,102 +14060,102 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Bidh an draoidh seo a’ cruthachadh pròiseact deuchainn aonad sìmplidh.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Àite pròiseict</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Àite</translation>
     </message>
@@ -14157,7 +14164,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Deuchainn Qt</translation>
     </message>
     <message>
-        <location line="-516" />
+        <location line="-171" />
         <source>Google Test</source>
         <translation>Deuchainn Google</translation>
     </message>
@@ -14177,49 +14184,49 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Glac 2</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+25" />
+        <location line="-192" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Frèam deuchainn:</translation>
     </message>
     <message>
-        <location line="-296" />
+        <location line="-215" />
         <source>GUI Application</source>
         <translation>Iarrtas GUI</translation>
     </message>
     <message>
-        <location line="-75" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="+49" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Ainm an t-sreath deuchainn:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Ainm na cùise deuchainn:</translation>
     </message>
     <message>
-        <location line="-302" />
+        <location line="-221" />
         <source>Requires QApplication</source>
         <translation>Tha feum air QApplication</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+98" />
         <source>Generate setup code</source>
         <translation>Cruthaich còd rèiteachaidh</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="-96" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Cruthaich còd tòiseachaidh is glanaidh</translation>
     </message>
@@ -14228,17 +14235,17 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Cuir an comas C++11</translation>
     </message>
     <message>
-        <location line="-324" />
+        <location line="-145" />
         <source>Googletest source directory (optional):</source>
         <translation>Eòlaire stòr Googletest (roghainneil):</translation>
     </message>
     <message>
-        <location line="-51" />
+        <location line="-25" />
         <source>Boost include directory (optional):</source>
         <translation>Brosnachadh a’ toirt a-steach eòlaire (roghainneil):</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="-27" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 gabhail a-steach eòlaire (roghainneil):</translation>
     </message>
@@ -14248,154 +14255,154 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Cleachd leabharlannan Qt</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-509" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>dèan</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Siostam togail:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Fiosrachadh mu phròiseact agus deuchainn</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Mion-fhiosrachadh</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Taghadh Kit</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -14403,101 +14410,101 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Cisean</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Stiùireadh pròiseict</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Geàrr-chunntas</translation>
@@ -14507,9 +14514,9 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Cruthaich pròiseact deuchainn aonad ùr. Leigidh deuchainnean aonaid leat dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil ais-tharraing ann.</translation>
     </message>
     <message>
-        <location line="-715" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-542" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Pròiseact Eile</translation>
@@ -14519,36 +14526,36 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Pròiseact fèin-deuchainn a</translation>
     </message>
     <message>
-        <location line="-620" />
+        <location line="+123" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Ainm làn-teisteanas, a’ gabhail a-steach ainmean-àite</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Ainm clas:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Custom&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Bun-chlas:</translation>
     </message>
@@ -14557,7 +14564,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Cuir a-steach QObject</translation>
     </message>
@@ -14599,10 +14606,10 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">%{JS: Cpp.classToFileName(luach(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Faidhle ceann-cinn:</translation>
     </message>
@@ -14611,54 +14618,54 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">%{JS: Cpp.classToFileName(luach(&apos;Clas&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Stòr faidhle:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Slighe:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Sònraich Clas</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Cruthaich bann-cinn C ++ agus faidhle stòr airson clas ùr as urrainn dhut a chur ri pròiseact C ++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>Clas C++</translation>
     </message>
@@ -14699,16 +14706,16 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Modail Nì Qt</translation>
     </message>
@@ -14748,17 +14755,17 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Clas Python</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>A’ cruthachadh pròiseact deuchainn stèidhichte air CMake airson an tèid criomag còd a chuir a-steach.</translation>
     </message>
@@ -14813,7 +14820,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Geàrr-chunntas còd</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Cruthaich faidhle cinn as urrainn dhut a chur ri pròiseact C/C ++.</translation>
     </message>
@@ -14823,7 +14830,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>C/C++ faidhle cinn</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Cruthaich faidhle stòr as urrainn dhut a chur ri pròiseact C/C ++.</translation>
     </message>
@@ -14833,7 +14840,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>C/C++ Source File</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Tagh Teamplaid Foirm</translation>
     </message>
@@ -14851,12 +14858,12 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation type="vanished">Foirm Qt Designer</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-139" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear criomag anns a’ Chànan Sgàilidh OpenGL Desktop (GLSL). Bidh sgàilearan bloigh a’ gineadh na dathan piogsail mu dheireadh airson triantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14864,7 +14871,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Sgàil-sgàilean (Desktop OpenGL)</translation>
     </message>
@@ -14879,7 +14886,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>A’ cruthachadh sgàilear criomag anns a’ chànan sgàileadh OpenGL/ES 2.0 (GLSL/ES). Bidh sgàilearan bloigh a’ gineadh na dathan piogsail mu dheireadh airson triantanan, puingean agus loidhnichean air an toirt seachad le OpenGL.</translation>
     </message>
@@ -14899,7 +14906,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Cruthaich faidhle Java le còd boilerplate.</translation>
     </message>
@@ -14914,7 +14921,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Faidhle Java</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Leabharlann gun stàit</translation>
     </message>
@@ -14935,25 +14942,25 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>JS Faidhle</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-74" />
         <source>Model name:</source>
         <translation>Ainm a&apos; mhodail:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Àite:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>Tha &quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; san t-siostam fhaidhlichean.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Ainm Modail agus Àite</translation>
     </message>
@@ -14963,19 +14970,19 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Cruthaich modail falamh ùr le diagram falamh.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Modaileadh</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Modail</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>A &apos;cruthachadh modail sgrìobadh a&apos; cleachdadh faidhle sealach.</translation>
     </message>
@@ -14985,23 +14992,23 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Modail Scratch</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Cruthaich faidhle Nim falamh a’ cleachdadh charset UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Nim File</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Cruthaich faidhle sgriobt Nim falamh a’ cleachdadh charset UTF-8.</translation>
     </message>
@@ -15021,7 +15028,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Faidhle Python</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Cruthaich faidhle goireas Qt (.qrc).</translation>
     </message>
@@ -15031,7 +15038,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Qt File Goireas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Cruthaich faidhle QML le còd boilerplate, a’ tòiseachadh le “import QtQuick”.</translation>
     </message>
@@ -15041,21 +15048,21 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Faidhle QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Cruthaich bufair sgrìob a’ cleachdadh faidhle sealach.</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="-51" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Coitcheann</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-316" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh àrdachadh.</translation>
     </message>
@@ -15080,21 +15087,21 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>A &apos;cruthachadh pròiseact deuchainn aonad ùr a&apos; cleachdadh àrdachadh. Leigidh deuchainnean aonadan dhut dearbhadh gu bheil an còd iomchaidh airson a chleachdadh agus nach eil de luchd-casaid ann.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Pròiseact deuchainn</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Pròiseact Deuchainn Bood</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Gets2.</translation>
     </message>
@@ -15129,7 +15136,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Pròiseact Deuchainn Catchte2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Google Deuchainn.</translation>
     </message>
@@ -15159,7 +15166,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Pròiseact Deuchainn Google</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh Deuchainn QT.</translation>
     </message>
@@ -15174,7 +15181,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Pròiseact Deuchainn QT</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Bidh an draoidh seo a &apos;cruthachadh pròiseact deuchainn aonad sìmplidh a&apos; cleachdadh deuchainn luath QT.</translation>
     </message>
@@ -15194,12 +15201,12 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Cuir a-steach qquickitem</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
         <translation>A &apos;cruthachadh pròiseact deuchainn stèidhichte air camake far am faod thu a dhol a-steach do chriomag còd gus cur ri chèile agus sùil a thoirt air.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+350" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>A &apos;cruthachadh dealbhaiche dealbhaidh Qt Former as urrainn dhut cur ri Pròiseact Widged Qt. Tha seo feumail ma tha clas gnàthach agad mu thràth airson loidsig gnìomhachas UI.</translation>
     </message>
@@ -15209,7 +15216,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Foirm dealbhaidh QT</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-104" />
         <source>Creates a markdown file.</source>
         <translation>A &apos;cruthachadh faidhle Markdown.</translation>
     </message>
@@ -15219,12 +15226,12 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Faidhle Markdown</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+52" />
         <source>Scratch Buffer</source>
         <translation>Bufair sgrìobadh</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Ainm cairt stàite:</translation>
     </message>
@@ -15244,7 +15251,7 @@ Sguabaidh seo às na bùird, am bathar-stèidhichte agus na h-eisimpleirean aige
         <translation>Cairt Stàite</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15284,7 +15291,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Cùis deuchainn</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Cruthaich faidhle falamh.</translation>
     </message>
@@ -15294,7 +15301,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Faidhle falamh</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>A &apos;cruthachadh faidhle eadar-theangachaidh as urrainn dhut cur ri pròiseact QT.</translation>
     </message>
@@ -15304,61 +15311,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Faidhle eadar-theangachaidh Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh tagradh tòcan sìmplidh stèidhichte air Qt.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Sònraich siostam togail</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Siostam togail</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Eadar-theangachadh Faidhle</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Eadar-theangachadh</translation>
     </message>
     <message>
-        <location line="-262" />
+        <location line="-178" />
         <source>Define Python Interpreter</source>
         <translation>Mìnich eadar-theangair Python</translation>
     </message>
@@ -15373,7 +15380,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>A &apos;cruthachadh QT airson Iarrtas Python a tha a&apos; toirt a-steach substget lidgetse agus faidhle UI). Feumach air .ui gu tionndadh python.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="-52" />
         <source>Qt 6.4</source>
         <translation>QT 6.4</translation>
     </message>
@@ -15388,7 +15395,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>A &apos;cruthachadh tagradh luath QT a dh&apos; fhaodas an dà chuid còd Qml agus C ++. Faodaidh tu an tagradh agus an cleachdadh a thogail gu àrd-ùrlaran cuairteachaidh, agus gluasadach-làimhe agus gluasadach.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+90" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15397,7 +15404,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Gus làn thagradh a leasachadh, pròiseact tagraidh QT Qt QT a chruthachadh na àite.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-108" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15414,31 +15421,31 @@ Preselects a desktop Qt for building the application if available.</source>
 A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</translation>
     </message>
     <message>
-        <location line="-337" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="-172" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Iarrtas (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Iarrtas Qt Console</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh pròiseact leabharlainn C ++.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Sònraich fiosrachadh bunaiteach mu na clasaichean airson a bheil thu airson faidhlichean còd stòr cnàimhneach a ghineadh.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Leabharlann co-roinnte</translation>
     </message>
@@ -15453,8 +15460,8 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Plugin Qt</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Seòrsa:</translation>
@@ -15464,7 +15471,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">%{ JS: value(&apos;Type&apos;) === &apos;qtplugin&apos; ? luach (&apos;BaseClassName&apos;). slice(1) : (luach (&apos;ProjectName&apos;).charAt(0).toUpperCase() + luach(&apos;ProjectName&apos;). slice(1))}</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15530,14 +15537,14 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Qt modal:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Sònraich mion-fhiosrachadh a’ phròiseict</translation>
     </message>
@@ -15546,38 +15553,38 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">Cruthaich leabharlann C ++. Gabhaidh seo a chleachdadh gus: &lt;ul&gt;&lt;li&gt;leabharlann C++ co-roinnte a chruthachadh airson a chleachdadh le &lt;tt&gt;QPluginLoader&lt;/tt&gt; agus ùine ruith (Plugins)&lt;/li&gt;&lt;li&gt;leabharlann C++ co-roinnte neo statach airson a chleachdadh le fear eile pròiseact aig àm ceangail&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-427" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-485" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Leabharlann</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>Leabharlann C++</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>A &apos;cruthachadh tagradh Nim sìmplidh.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Pròiseact neo-Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Iarrtas Nim</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>Binary</translation>
     </message>
@@ -15593,12 +15600,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Tuairisgeul:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15664,12 +15671,12 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Cead:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>c</translation>
@@ -15711,21 +15718,21 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Rèiteachadh</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>A’ cruthachadh tagradh Nim le Nimble.</translation>
     </message>
@@ -15735,7 +15742,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas sùbailte</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>A’ cruthachadh tagradh C sìmplidh gun eisimeileachd sam bith.</translation>
     </message>
@@ -15745,7 +15752,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas àbhaisteach C</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Cruthaich tagradh sìmplidh C ++ gun eisimeileachd sam bith.</translation>
     </message>
@@ -15755,7 +15762,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas soilleir C++</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Bidh an draoidh seo a’ cruthachadh faidhle .pro falamh.</translation>
     </message>
@@ -15774,20 +15781,20 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">Tionndadh PySide:</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-118" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>A’ cruthachadh tagradh Qt for Python anns nach eil ach am prìomh chòd airson QApplication.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Iarrtas (Qt airson Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Iarrtas falamh</translation>
     </message>
@@ -15804,13 +15811,13 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Faidhle pròiseict:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>A’ cruthachadh tagradh Qt for Python anns a bheil uinneag falamh.</translation>
     </message>
@@ -15820,15 +15827,15 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Uinneag falamh</translation>
     </message>
     <message>
-        <location line="-32" />
-        <location line="+22" />
+        <location line="-10" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>Taobh 6</translation>
     </message>
     <message>
-        <location line="-211" />
+        <location line="-259" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15837,19 +15844,19 @@ Preselects a desktop Qt for building the application if available.</source>
  Cuir a-steach deasgg qt airson an tagradh a thogail ma tha iad rim faighinn.</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+343" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Cruthaichidh seo leabharlann C++. &apos;S urrainn dhut a chruthachadh:&lt;ul&gt;&lt;li&gt;leabharlann C++ cho-roinnte airson a chleachdadh le &lt;tt&gt;QPluginLoader&lt;/tt&gt; agus àm-ruith (Plugins)&lt;/li&gt;&lt;li&gt;leabharlann C++ cho-roinnte no stadaigeach airson a chleachdadh le pròiseact eile aig àm-ceangail&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+107" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-137" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>Pyside 2</translation>
     </message>
     <message>
-        <location line="-24" />
+        <location line="-18" />
         <source>PySide 5.15</source>
         <translation>Taobh Pytha 5.15</translation>
     </message>
@@ -15883,50 +15890,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">A’ cruthachadh tagradh Qt for Python anns a bheil widget stèidhichte air Qt Designer (faidhle ui) - Feumaidh tionndadh .ui gu Python</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="-18" />
         <source>Window UI</source>
         <translation>UI uinneag</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Tionndadh Qt as ìsle a tha a dhìth:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>Mo Nì</translation>
     </message>
@@ -15974,9 +15981,9 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cruthaich pròiseact le structar a tha co-chòrdail an dà chuid le Qt Design Studio (via .qmlproject) agus le Qt Creator (tro CMakeLists.txt). Tha foirm .ui.qml ann as urrainn dhut a dheasachadh gu fradharcach ann an Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Cleachd Qt Virtual Keyboard</translation>
     </message>
@@ -15989,12 +15996,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Cruthaich tagradh Qt Quick anns a bheil uinneag falamh. Gu roghnach, faodaidh tu pròiseact Qt Design Studio a chruthachadh.</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="-169" />
         <source>Qt Quick Application</source>
         <translation>Iarrtas luath Qt</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16016,12 +16023,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Cleachd seo a-mhàin ma tha thu a’ prototyping. Chan urrainn dhut tagradh slàn a chruthachadh le seo. Beachdaich air pròiseact Qt Quick Application a chleachdadh na àite.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-90" />
         <source>Qt Quick UI Prototype</source>
         <translation>Prototype UI Quick Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Bidh an draoidh seo a’ gineadh pròiseact Iarrtas Qt Widgets. Bidh an aplacaid a’ tighinn gu bunaiteach bho QApplication agus a’ toirt a-steach widget falamh.</translation>
     </message>
@@ -16062,28 +16069,28 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Iarrtas Qt Widgets</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Feuch an rèiteachadh thu &lt;b&gt;%{vcsName}&lt;/b&gt; an-dràsta fhèin.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Stòr-tasgaidh:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>Chan eil URL an stòrais dligheach</translation>
     </message>
@@ -16092,24 +16099,24 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Leabhar-seòlaidh:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>Tha &quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; san t-siostam fhaidhlichean.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Cleachd eòlaire gnàthaichte</translation>
     </message>
@@ -16184,14 +16191,14 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Ath-sgrùdadh:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Sònraich URL stòr-dàta, eòlaire pàighidh, agus slighe.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>A’ ruith meur Bazaar...</translation>
     </message>
@@ -16210,22 +16217,22 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Clones meur Bazaar agus feuchaidh e ris a’ phròiseact a tha ann a luchdachadh.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Pròiseact ion-phortadh</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Clone Bazaar (no meur)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Modal:</translation>
     </message>
@@ -16240,19 +16247,19 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>A&apos; ruith CVS checkout...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Dèan sgrùdadh air</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Thoir sùil air stòr CVS agus feuchaidh sinn ris a’ phròiseact a tha ann a luchdachadh.</translation>
     </message>
@@ -16262,7 +16269,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Cunntas CVS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;meur bunaiteach&gt;</translation>
     </message>
@@ -16302,7 +16309,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>A &apos;ruith clone Mercurial ...</translation>
     </message>
@@ -16317,7 +16324,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Clone Mercurial</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Teisteanas Freiceadan Urras</translation>
     </message>
@@ -16337,7 +16344,7 @@ A’ taghadh Qt deasg airson an tagradh a thogail ma tha sin ri fhaighinn.</tran
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Cruthaichidh an draoidh seo plugan gnàthaichte Qt Creator.</translation>
     </message>
@@ -25491,7 +25498,7 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
         <translation>Chan e faidhle sgeama dathan a th’ ann.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>a thàinig bho QObject</translation>
@@ -25562,7 +25569,7 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
         <translation type="vanished">(seòrsa ainm LÀRR ainm SGRÌOBH seataName FIOSRACHADH ainm air atharrachadh)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>le targaidean</translation>
@@ -25586,7 +25593,7 @@ Cha tèid a chuir an sàs ann an àite geal ann am beachdan agus sreathan.</tran
         <translation>le targaid</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Cùis deuchainn Quicktest</translation>

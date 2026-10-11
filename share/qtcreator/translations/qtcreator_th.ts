@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>สำเนา</translation>
     </message>
@@ -746,7 +746,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>นักภาษาศาสตร์</translation>
     </message>
@@ -771,9 +771,9 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>แก้ไขด้วย Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>ข้อความ</translation>
     </message>
@@ -789,7 +789,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt ด่วน</translation>
     </message>
@@ -804,14 +804,14 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>ดูตัวอย่าง Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>เปิดไฟล์ปัจจุบันใน vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>แก้ไขด้วย vi</translation>
     </message>
@@ -6714,16 +6714,16 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+240" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -6862,8 +6862,8 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-210" />
-        <location line="+170" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
@@ -6887,7 +6887,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-415" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
         <source>No DFU settings for the selected board type!</source>
         <translation>ไม่มีการตั้งค่า DFU สำหรับประเภทบอร์ดที่เลือก!</translation>
     </message>
@@ -6909,7 +6909,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-179" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+7" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
@@ -6993,7 +6993,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7040,7 +7040,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>เขียน ROMFS</translation>
@@ -7050,7 +7050,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7083,6 +7083,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>เชื่อมต่อ OpenMV Cam ของคุณอีกครั้ง...</translation>
     </message>
@@ -7109,6 +7110,7 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
         <location line="+1979" />
@@ -7181,9 +7183,9 @@ Continue?</source>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>กำลังลบ...</translation>
@@ -7314,7 +7316,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>การอัพเดตเฟิร์มแวร์ BOSSAC ล้มเหลว!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-111" />
         <source>the detected board</source>
         <translation>บอร์ดที่ตรวจพบ</translation>
     </message>
@@ -7344,12 +7346,12 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>หากต้องการแฟลชอิมเมจ bootloader OpenMV Cam ของคุณต้องอยู่ในโหมดกู้คืน bootloader ถอดกล้องออก เชื่อมต่อ BOOT0/SBL/RECOVERY กับ 3.3V ด้วยจัมเปอร์ แล้วเสียบกล้องกลับเข้าไปก่อนลองอีกครั้ง</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>การอ่าน ROMFS ผ่าน DFU ล้มเหลว!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>การเขียน ROMFS ผ่าน DFU ล้มเหลว!</translation>
     </message>
@@ -7521,11 +7523,11 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation type="vanished">กรุณากรอกเครือข่าย WiFi ของคุณที่นี่</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-374" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7543,7 +7545,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>ตัวแก้ไขชุดข้อมูล</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>กรุณากรอกชื่อชั้นเรียน</translation>
     </message>
@@ -7563,7 +7565,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>ไม่สามารถสร้าง &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7572,7 +7574,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>ลบ</translation>
@@ -7906,7 +7908,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-912" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>แปลงโมเดล</translation>
@@ -7977,7 +7979,7 @@ OpenMV IDE เวอร์ชันก่อน v4.3.0 ไม่มีไฟล�
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+162" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>ไม่สามารถเปิดได้: &quot;%L1&quot;</translation>
     </message>
@@ -9596,11 +9598,11 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
@@ -10584,12 +10586,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>โค้ดโปรไฟล์</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>แบน</translation>
     </message>
@@ -10624,7 +10626,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>รีเซ็ต</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>ฟังก์ชัน: %1 การโทรทั้งหมด: %2 รวม μs: %3 รอบทั้งหมด: %4 เหตุการณ์ทั้งหมด: %5</translation>
     </message>
@@ -10634,7 +10636,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>ฟังก์ชัน: %1, การโทรทั้งหมด: %2, μs ทั้งหมด: %3, รอบทั้งหมด: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1011" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
         <source>Please select the target</source>
         <translation>กรุณาเลือกเป้าหมาย</translation>
     </message>
@@ -10673,7 +10675,7 @@ OpenMV IDE จะคัดลอกโมเดลตามที่เป็น
 %1 จะคัดลอกโมเดลตามที่เป็นอยู่</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -11015,7 +11017,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>บอสแซค</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>รับอุปกรณ์</translation>
@@ -11029,17 +11031,17 @@ The camera must be power cycled after a system package update.</source>
         <translation>การค้นหาล้มเหลว!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>ปิ๊ดฟู่</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>ยูทิลิตี้ DFU</translation>
     </message>
@@ -11071,6 +11073,11 @@ The camera must be power cycled after a system package update.</source>
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>อาจใช้เวลาสักครู่น้ำแตก?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>อุปกรณ์ DFU ไม่ว่าง กำลังลองใหม่ (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -13475,112 +13482,112 @@ This deletes its boards, firmware, and examples.</source>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>วิซาร์ดนี้สร้างโปรเจ็กต์การทดสอบหน่วยอย่างง่ายโดยใช้ Boost</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location line="-568" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>ที่ตั้งโครงการ</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>ที่ตั้ง</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-336" />
         <source>Boost Test (header only)</source>
         <translation>การทดสอบบูสต์ (ส่วนหัวเท่านั้น)</translation>
     </message>
@@ -13590,32 +13597,32 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Boost Test (ไลบรารีที่แชร์)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>กรอบการทดสอบ:</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="-166" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>ชื่อชุดทดสอบ:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>ชื่อกรณีทดสอบ:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-169" />
         <source>Boost include directory (optional):</source>
         <translation>เพิ่มไดเร็กทอรีรวม (ตัวเลือก):</translation>
     </message>
@@ -13625,154 +13632,154 @@ This deletes its boards, firmware, and examples.</source>
         <translation>เพิ่มไดเร็กทอรีการติดตั้ง (ตัวเลือก):</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-534" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>คิวเมค</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>ซีเมค</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>คิวบีเอส</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>ระบบสร้าง:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>ข้อมูลโครงการและการทดสอบ</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>รายละเอียด</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>การเลือกชุดอุปกรณ์</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -13780,126 +13787,126 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ชุดอุปกรณ์</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>การจัดการโครงการ</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>สรุป</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-321" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>สร้างโครงการทดสอบหน่วยใหม่โดยใช้ Boost การทดสอบหน่วยช่วยให้คุณตรวจสอบได้ว่ารหัสนั้นเหมาะสำหรับการใช้งานและไม่มีการถดถอย</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>โครงการทดสอบ</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>โครงการทดสอบบูสต์</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>ตัวช่วยสร้างนี้สร้างโครงการทดสอบหน่วยอย่างง่ายโดยใช้ Catch2</translation>
     </message>
@@ -13944,7 +13951,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>โครงการทดสอบ Catch2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>วิซาร์ดนี้สร้างโครงการทดสอบหน่วยอย่างง่ายโดยใช้ Google Test</translation>
     </message>
@@ -13979,7 +13986,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>โครงการทดสอบของ Google</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>วิซาร์ดนี้สร้างโครงการทดสอบหน่วยอย่างง่ายโดยใช้การทดสอบ Qt</translation>
     </message>
@@ -13995,13 +14002,13 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>สร้างการเริ่มต้นและโค้ดการล้างข้อมูล</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-209" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>สร้างโครงการทดสอบหน่วยใหม่โดยใช้การทดสอบ Qt การทดสอบหน่วยช่วยให้คุณตรวจสอบได้ว่ารหัสนั้นเหมาะสำหรับการใช้งานและไม่มีการถดถอย</translation>
     </message>
@@ -14011,7 +14018,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>โครงการทดสอบ Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>วิซาร์ดนี้สร้างโปรเจ็กต์การทดสอบหน่วยอย่างง่ายโดยใช้ Qt Quick Test</translation>
     </message>
@@ -14036,36 +14043,36 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ชื่อที่มีคุณสมบัติครบถ้วน รวมถึงเนมสเปซ</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>ชื่อชั้นเรียน:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;กำหนดเอง&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>คลาสพื้นฐาน:</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>รวม QObject</translation>
     </message>
@@ -14100,62 +14107,62 @@ This deletes its boards, firmware, and examples.</source>
         <translation>เพิ่ม QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>ไฟล์ส่วนหัว:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>ไฟล์ต้นฉบับ:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>เส้นทาง:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>กำหนดคลาส</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>สร้างส่วนหัว C++ และไฟล์ต้นฉบับสำหรับคลาสใหม่ที่คุณสามารถเพิ่มลงในโปรเจ็กต์ C++ ได้</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>ซี/ซี++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>คลาส C++</translation>
     </message>
@@ -14196,16 +14203,16 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>จำนวน</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>โมเดลรายการ Qt</translation>
     </message>
@@ -14241,17 +14248,17 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>หลาม</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>คลาสหลาม</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>สร้างโครงการทดสอบที่ใช้ CMake ซึ่งสามารถป้อนข้อมูลโค้ดได้</translation>
     </message>
@@ -14296,20 +14303,20 @@ This deletes its boards, firmware, and examples.</source>
         <translation>สร้างโปรเจ็กต์ทดสอบที่ใช้ CMake ซึ่งคุณสามารถป้อนข้อมูลโค้ดเพื่อคอมไพล์และตรวจสอบได้</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-148" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>โครงการอื่นๆ</translation>
     </message>
     <message>
-        <location line="-544" />
+        <location line="+1" />
         <source>Code Snippet</source>
         <translation>ข้อมูลโค้ด</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>สร้างไฟล์ส่วนหัวที่คุณสามารถเพิ่มลงในโปรเจ็กต์ C/C++</translation>
     </message>
@@ -14319,7 +14326,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์ส่วนหัว C/C++</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>สร้างไฟล์ต้นฉบับที่คุณสามารถเพิ่มลงในโปรเจ็กต์ C/C++</translation>
     </message>
@@ -14329,7 +14336,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์ต้นฉบับ C/C++</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>เลือกเทมเพลตฟอร์ม</translation>
     </message>
@@ -14349,12 +14356,12 @@ This deletes its boards, firmware, and examples.</source>
         <translation>แบบฟอร์มนักออกแบบวิดเจ็ต Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-146" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>สร้างตัวแบ่งส่วนใน Desktop OpenGL Shading Language (GLSL) ตัวเชเดอร์แฟรกเมนต์จะสร้างสีพิกเซลสุดท้ายสำหรับสามเหลี่ยม จุด และเส้นที่เรนเดอร์ด้วย OpenGL</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14362,7 +14369,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (เดสก์ท็อป OpenGL)</translation>
     </message>
@@ -14377,7 +14384,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Vertex Shader (เดสก์ท็อป OpenGL)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>สร้างตัวแบ่งส่วนใน OpenGL/ES 2.0 Shading Language (GLSL/ES) ตัวเชเดอร์แฟรกเมนต์จะสร้างสีพิกเซลสุดท้ายสำหรับสามเหลี่ยม จุด และเส้นที่เรนเดอร์ด้วย OpenGL</translation>
     </message>
@@ -14397,7 +14404,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>เวอร์เท็กซ์เชเดอร์ (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>สร้างไฟล์ Java ด้วยโค้ดสำเร็จรูป</translation>
     </message>
@@ -14412,7 +14419,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์จาวา</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>ห้องสมุดไร้สัญชาติ</translation>
     </message>
@@ -14433,44 +14440,44 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์ JS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-84" />
         <source>Creates a markdown file.</source>
         <translation>สร้างไฟล์มาร์กดาวน์</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>ทั่วไป</translation>
     </message>
     <message>
-        <location line="-111" />
+        <location line="-119" />
         <source>Markdown File</source>
         <translation>ไฟล์มาร์กดาวน์</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>ชื่อรุ่น:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>ที่ตั้ง:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>ชื่อรุ่นและที่ตั้ง</translation>
     </message>
@@ -14480,19 +14487,19 @@ This deletes its boards, firmware, and examples.</source>
         <translation>สร้างโมเดลว่างใหม่พร้อมไดอะแกรมว่าง</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>การสร้างแบบจำลอง</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>แบบอย่าง</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>สร้างโมเดลเริ่มต้นโดยใช้ไฟล์ชั่วคราว</translation>
     </message>
@@ -14502,23 +14509,23 @@ This deletes its boards, firmware, and examples.</source>
         <translation>แบบจำลองรอยขีดข่วน</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>สร้างไฟล์ Nim เปล่าโดยใช้ชุดอักขระ UTF-8</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>นิม</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>นิมไฟล์</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>สร้างไฟล์สคริปต์ Nim ที่ว่างเปล่าโดยใช้ชุดอักขระ UTF-8</translation>
     </message>
@@ -14538,7 +14545,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์หลาม</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>สร้างไฟล์ทรัพยากร Qt (.qrc)</translation>
     </message>
@@ -14548,7 +14555,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์ทรัพยากร Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>สร้างไฟล์ QML ด้วยโค้ดสำเร็จรูป โดยเริ่มต้นด้วย &quot;import QtQuick&quot;</translation>
     </message>
@@ -14558,7 +14565,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ไฟล์ QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>สร้างบัฟเฟอร์รอยขีดข่วนโดยใช้ไฟล์ชั่วคราว</translation>
     </message>
@@ -14568,7 +14575,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>บัฟเฟอร์รอยขีดข่วน</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>ชื่อแผนภูมิสถานะ:</translation>
     </message>
@@ -14588,7 +14595,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>แผนภูมิรัฐ</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14648,7 +14655,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>กรณีทดสอบ</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>สร้างไฟล์เปล่า</translation>
     </message>
@@ -14658,7 +14665,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>ไฟล์เปล่า</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>สร้างไฟล์การแปลที่คุณสามารถเพิ่มลงในโครงการ Qt</translation>
     </message>
@@ -14668,61 +14675,61 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>ไฟล์แปล Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>วิซาร์ดนี้สร้างแอปพลิเคชันคอนโซลที่ใช้ Qt อย่างง่าย</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>เมสัน</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>กำหนดระบบการสร้าง</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>สร้างระบบ</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>ไฟล์แปล</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>การแปล</translation>
     </message>
     <message>
-        <location line="-475" />
+        <location line="-406" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14732,30 +14739,30 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>ใบสมัคร (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>แอปพลิเคชันคอนโซล Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>ตัวช่วยสร้างนี้สร้างโครงการไลบรารี C++</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>ระบุข้อมูลพื้นฐานเกี่ยวกับคลาสที่คุณต้องการสร้างไฟล์ซอร์สโค้ดโครงร่าง</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>ไลบรารีที่ใช้ร่วมกัน</translation>
     </message>
@@ -14770,14 +14777,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>ปลั๊กอิน Qt</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>พิมพ์:</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -14843,55 +14850,55 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>โมดูลคิวที:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>กำหนดรายละเอียดโครงการ</translation>
     </message>
     <message>
-        <location line="-428" />
+        <location line="-60" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>สร้างไลบรารี C++ คุณสามารถสร้าง:&lt;ul&gt;&lt;li&gt;ไลบรารี C++ ที่ใช้ร่วมกันสำหรับใช้กับ &lt;tt&gt;QPluginLoader&lt;/tt&gt; และรันไทม์ (ปลั๊กอิน)&lt;/li&gt;&lt;li&gt;ไลบรารี C++ ที่ใช้ร่วมกันหรือแบบคงที่สำหรับใช้กับโปรเจ็กต์อื่นในเวลาลิงก์&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-425" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>ห้องสมุด</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>ไลบรารี C++</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>สร้างแอปพลิเคชัน Nim อย่างง่าย</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>โครงการที่ไม่ใช่ Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>แอปพลิเคชั่น นิ่ม</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>ไบนารี่</translation>
     </message>
@@ -14907,12 +14914,12 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>คำอธิบาย:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14978,12 +14985,12 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>ใบอนุญาต:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>ค</translation>
@@ -15025,21 +15032,21 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>การกำหนดค่า</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>สร้างแอปพลิเคชัน Nim ด้วย Nimble</translation>
     </message>
@@ -15049,7 +15056,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชั่นที่ว่องไว</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>สร้างแอปพลิเคชัน C อย่างง่ายโดยไม่ต้องพึ่งพา</translation>
     </message>
@@ -15059,7 +15066,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชัน C ธรรมดา</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>สร้างแอปพลิเคชัน C++ อย่างง่ายโดยไม่ต้องพึ่งพา</translation>
     </message>
@@ -15069,7 +15076,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชัน C ++ ธรรมดา</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>วิซาร์ดนี้จะสร้างไฟล์ .pro ที่ว่างเปล่า</translation>
     </message>
@@ -15084,46 +15091,46 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>โครงการ qmake ว่างเปล่า</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+22" />
+        <location line="-180" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>ไพไซด์ 6</translation>
     </message>
     <message>
-        <location line="-60" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-53" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>ไพไซด์ 2</translation>
     </message>
     <message>
-        <location line="-54" />
+        <location line="+7" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>สร้างแอปพลิเคชัน Qt สำหรับ Python ที่มีเฉพาะรหัสหลักสำหรับ QApplication</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>แอปพลิเคชัน (Qt สำหรับ Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>ใบสมัครที่ว่างเปล่า</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>ไฟล์โครงการ:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>สร้างแอปพลิเคชัน Qt สำหรับ Python ที่มีหน้าต่างว่าง</translation>
     </message>
@@ -15133,7 +15140,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>หน้าต่างว่างเปล่า</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+27" />
         <source>PySide 5.15</source>
         <translation>ไพไซด์ 5.15</translation>
     </message>
@@ -15163,7 +15170,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชันด่วน Qt - ว่างเปล่า</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-26" />
         <source>Define Python Interpreter</source>
         <translation>กำหนดล่ามหลาม</translation>
     </message>
@@ -15183,45 +15190,45 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>หน้าต่าง UI</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>ควอท 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>ควอเตอร์ 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>ควอเตอร์ 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>ควอเตอร์ 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>ควอเตอร์ 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>เวอร์ชัน Qt ขั้นต่ำที่ต้องการ:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>รายการของฉัน</translation>
     </message>
@@ -15261,14 +15268,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>ปลั๊กอินส่วนขยาย Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>ใช้แป้นพิมพ์เสมือน Qt</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-180" />
         <source>Qt 6.4</source>
         <translation>ควอเตอร์ 6.4</translation>
     </message>
@@ -15288,7 +15295,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชัน Qt ด่วน</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15302,7 +15309,7 @@ Use this &quot;compat&quot; version if you want to use other build systems than 
         <translation>Qt Quick Application (เข้ากันได้)</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-92" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15316,7 +15323,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
         <translation>Qt ต้นแบบ UI ด่วน</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>วิซาร์ดนี้สร้างโปรเจ็กต์แอปพลิเคชัน Qt Widgets แอปพลิเคชันได้รับมาตามค่าเริ่มต้นจาก QApplication และมีวิดเจ็ตว่าง</translation>
     </message>
@@ -15350,50 +15357,50 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>แอปพลิเคชันวิดเจ็ต Qt</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>โปรดกำหนดค่า &lt;b&gt;%{vcsName}&lt;/b&gt; ทันที</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>พื้นที่เก็บข้อมูล:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>URL ของที่เก็บไม่ถูกต้อง</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>ไดเรกทอรี:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; มีอยู่ในระบบไฟล์</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>ใช้ไดเร็กทอรีที่มีอยู่</translation>
     </message>
@@ -15468,14 +15475,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>การแก้ไข:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>ระบุ URL ของที่เก็บ ไดเรกทอรีการชำระเงิน และเส้นทาง</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>สาขารันนิ่งบาซาร์...</translation>
     </message>
@@ -15494,22 +15501,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>โคลนสาขา Bazaar และพยายามโหลดโปรเจ็กต์ที่มีอยู่</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>โครงการนำเข้า</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (หรือสาขา)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>โมดูล:</translation>
     </message>
@@ -15524,19 +15531,19 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>กำลังดำเนินการชำระเงิน CVS...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>ชำระเงิน</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>ตรวจสอบที่เก็บ CVS และพยายามโหลดโปรเจ็กต์ที่มีอยู่</translation>
     </message>
@@ -15546,7 +15553,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>การชำระเงิน CVS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;สาขาเริ่มต้น&gt;</translation>
     </message>
@@ -15586,7 +15593,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>คอมไพล์โคลน</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>กำลังรัน Mercurial clone...</translation>
     </message>
@@ -15601,7 +15608,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>เมอร์คิวเรียล โคลน</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>ใบรับรองเซิร์ฟเวอร์ที่เชื่อถือได้</translation>
     </message>
@@ -15621,7 +15628,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>การโค่นล้มการชำระเงิน</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>วิซาร์ดนี้สร้างปลั๊กอิน Qt Creator แบบกำหนดเอง</translation>
     </message>
@@ -21770,7 +21777,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>มาจาก QObject</translation>
@@ -21836,7 +21843,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>(พิมพ์ชื่อ อ่านชื่อ เขียน setName แจ้งเปลี่ยนชื่อ FINAL)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>มีเป้าหมาย</translation>
@@ -21860,7 +21867,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>โดยมีเป้าหมาย</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>กรณีทดสอบ QuickTest</translation>

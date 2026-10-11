@@ -12,7 +12,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
         <source>Copy</source>
         <translation>Sao chép</translation>
     </message>
@@ -746,7 +746,7 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Linguist</source>
         <translation>nhà ngôn ngữ học</translation>
     </message>
@@ -771,9 +771,9 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Chỉnh sửa bằng Notepad</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+15" />
-        <location line="+5" />
+        <location line="-19" />
+        <location line="+10" />
+        <location line="+10" />
         <source>Text</source>
         <translation>Chữ</translation>
     </message>
@@ -789,7 +789,7 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+1" />
-        <location line="+5" />
+        <location line="+20" />
         <source>Qt Quick</source>
         <translation>Qt nhanh</translation>
     </message>
@@ -804,14 +804,14 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Xem trước Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+5" />
+        <location line="-26" />
+        <location line="+10" />
         <source>Opens the current file in vi</source>
         <translation>Mở tệp hiện tại trong vi</translation>
     </message>
     <message>
-        <location line="-4" />
-        <location line="+5" />
+        <location line="-9" />
+        <location line="+10" />
         <source>Edit with vi</source>
         <translation>Chỉnh sửa bằng vi</translation>
     </message>
@@ -6714,16 +6714,16 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+240" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
-        <location line="+40" />
+        <location line="+61" />
         <location line="+19" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+33" />
-        <location line="+31" />
+        <location line="+42" />
+        <location line="+40" />
         <location line="+41" />
         <location line="+26" />
         <location line="+18" />
@@ -6862,8 +6862,8 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+139" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-210" />
-        <location line="+170" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
+        <location line="+188" />
         <location line="+41" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
@@ -6887,7 +6887,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-415" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Không có cài đặt DFU cho loại bảng đã chọn!</translation>
     </message>
@@ -6909,7 +6909,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-179" />
         <location line="+65" />
         <location line="+78" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+7" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
         <location line="+22" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
@@ -6993,7 +6993,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
         <location line="+7" />
-        <location line="+79" />
+        <location line="+75" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
@@ -7040,7 +7040,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+35" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Viết ROMFS</translation>
@@ -7050,7 +7050,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+28" />
         <location line="+24" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+50" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
         <location line="+25" />
         <location line="+40" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
@@ -7083,6 +7083,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Kết nối lại Cam OpenMV của bạn...</translation>
     </message>
@@ -7109,6 +7110,7 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
         <location line="+1979" />
@@ -7181,9 +7183,9 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+302" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
         <location line="+46" />
-        <location line="+191" />
+        <location line="+193" />
         <location line="+47" />
         <source>Erasing...</source>
         <translation>Đang xóa...</translation>
@@ -7314,7 +7316,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Cập nhật firmware BOSSAC không thành công!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-610" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-111" />
         <source>the detected board</source>
         <translation>bảng được phát hiện</translation>
     </message>
@@ -7344,12 +7346,12 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Để nạp một ảnh bootloader, OpenMV Cam của bạn phải ở chế độ khôi phục bootloader. Rút camera ra, nối BOOT0/SBL/RECOVERY với 3.3V bằng một dây nối, rồi cắm camera trở lại trước khi thử lại.</translation>
     </message>
     <message>
-        <location line="+412" />
+        <location line="+488" />
         <source>DFU ROMFS read failed!</source>
         <translation>Đọc ROMFS qua DFU không thành công!</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+40" />
         <source>DFU ROMFS write failed!</source>
         <translation>Ghi ROMFS qua DFU không thành công!</translation>
     </message>
@@ -7521,11 +7523,11 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation type="vanished">Vui lòng nhập mạng WiFi của bạn tại đây</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-374" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
         <location line="+43" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+40" />
+        <location line="+36" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7543,7 +7545,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Trình chỉnh sửa tập dữ liệu</translation>
     </message>
     <message>
-        <location line="-373" />
+        <location line="-369" />
         <source>Please enter a class name</source>
         <translation>Vui lòng nhập tên lớp</translation>
     </message>
@@ -7563,7 +7565,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Không tạo được &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+36" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
         <location line="+1577" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
@@ -7572,7 +7574,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+713" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
         <location line="+355" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
@@ -7906,7 +7908,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-912" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Chuyển đổi mô hình</translation>
@@ -7977,7 +7979,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+14" />
         <location line="+409" />
         <location line="+1184" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+162" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Không mở được: &quot;%L1&quot;</translation>
     </message>
@@ -9596,11 +9598,11 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="+165" />
         <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-284" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
+        <location line="+46" />
+        <location line="+74" />
         <location line="+46" />
         <location line="+73" />
-        <location line="+46" />
-        <location line="+72" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
         <location line="+50" />
@@ -10584,12 +10586,12 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
     </message>
     <message>
         <location line="+396" />
-        <location line="+184" />
+        <location line="+181" />
         <source>Code Profiler</source>
         <translation>Trình phân tích mã</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-151" />
         <source>Flat</source>
         <translation>Phẳng</translation>
     </message>
@@ -10624,7 +10626,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Cài lại</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+169" />
         <source>Functions: %1, Total Calls: %2, Total μs: %3, Total Cycles: %4, Total Events: %5</source>
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4, Tổng số sự kiện: %5</translation>
     </message>
@@ -10634,7 +10636,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1011" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
         <source>Please select the target</source>
         <translation>Hãy chọn mục tiêu</translation>
     </message>
@@ -10673,7 +10675,7 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
 %1 sẽ chỉ sao chép mô hình như hiện trạng.</translation>
     </message>
     <message>
-        <location line="+160" />
+        <location line="+158" />
         <location line="+35" />
         <location line="+6" />
         <location line="+8" />
@@ -11015,7 +11017,7 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-413" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
         <source>Get Devices</source>
         <translation>Nhận thiết bị</translation>
@@ -11029,17 +11031,17 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <translation>Truy vấn không thành công!</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+162" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
     <message>
-        <location line="+119" />
+        <location line="+120" />
         <source>PyDfu</source>
         <translation>PyDfu</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+119" />
         <source>DFU Util</source>
         <translation>Sử dụng DFU</translation>
     </message>
@@ -11071,6 +11073,11 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <location line="+4" />
         <source>This may take a while, water break?</source>
         <translation>Việc này có thể mất một lúc, nghỉ giải lao?</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>DFU device busy, retrying (%1/%2)...</source>
+        <translation>Thiết bị DFU đang bận, đang thử lại (%1/%2)...</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-85" />
@@ -13475,112 +13482,112 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
+        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Boost.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
-        <location line="+22" />
-        <location line="+81" />
-        <location line="+235" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
+        <location line="-568" />
         <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
         <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
+        <location line="+126" />
         <location line="+29" />
         <location line="+18" />
-        <location line="+28" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
         <location line="+15" />
-        <location line="+144" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
         <source>Project Location</source>
         <translation>Vị trí dự án</translation>
     </message>
     <message>
-        <location line="-886" />
-        <location line="+25" />
-        <location line="+26" />
-        <location line="+25" />
+        <location line="-618" />
+        <location line="+40" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
         <location line="+22" />
-        <location line="+81" />
+        <location line="+1" />
         <location line="+17" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+10" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
+        <location line="+33" />
         <location line="+1" />
         <location line="+12" />
+        <location line="+29" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+29" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
+        <location line="+26" />
+        <location line="+25" />
+        <location line="+25" />
+        <location line="+79" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+32" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <location line="+13" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+8" />
+        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
-        <location line="+21" />
-        <location line="+43" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+11" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+15" />
-        <location line="+51" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+22" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+8" />
         <location line="+1" />
-        <location line="+12" />
+        <location line="+8" />
+        <location line="+1" />
         <source>Location</source>
         <translation>Vị trí</translation>
     </message>
     <message>
-        <location line="-886" />
+        <location line="-336" />
         <source>Boost Test (header only)</source>
         <translation>Kiểm tra tăng cường (chỉ tiêu đề)</translation>
     </message>
@@ -13590,32 +13597,32 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Kiểm tra tăng cường (thư viện dùng chung)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+25" />
+        <location line="-25" />
         <location line="+26" />
-        <location line="+321" />
+        <location line="+25" />
+        <location line="+142" />
         <source>Test framework:</source>
         <translation>Khung kiểm tra:</translation>
     </message>
     <message>
-        <location line="-371" />
-        <location line="+51" />
-        <location line="+324" />
+        <location line="-166" />
+        <location line="+25" />
+        <location line="+145" />
         <source>Test suite name:</source>
         <translation>Tên bộ thử nghiệm:</translation>
     </message>
     <message>
-        <location line="-374" />
-        <location line="+24" />
+        <location line="-221" />
+        <location line="+25" />
         <location line="+27" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+22" />
-        <location line="+281" />
+        <location line="+124" />
         <source>Test case name:</source>
         <translation>Tên trường hợp thử nghiệm:</translation>
     </message>
     <message>
-        <location line="-374" />
+        <location line="-169" />
         <source>Boost include directory (optional):</source>
         <translation>Tăng cường bao gồm thư mục (tùy chọn):</translation>
     </message>
@@ -13625,154 +13632,154 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Thư mục cài đặt Boost (tùy chọn):</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-534" />
+        <location line="+29" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+107" />
-        <location line="+46" />
-        <location line="+43" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-582" />
+        <location line="+31" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+105" />
-        <location line="+48" />
-        <location line="+43" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-735" />
+        <location line="-551" />
+        <location line="+20" />
+        <location line="+145" />
+        <location line="+136" />
+        <location line="+19" />
+        <location line="+43" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+313" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+153" />
-        <location line="+44" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-582" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
+        <location line="+92" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+314" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
         <source>Build system:</source>
         <translation>Xây dựng hệ thống:</translation>
     </message>
     <message>
-        <location line="-736" />
+        <location line="-96" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Thông tin dự án và thử nghiệm</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-569" />
+        <location line="+192" />
+        <location line="+20" />
+        <location line="+18" />
+        <location line="+4" />
+        <location line="+17" />
+        <location line="+22" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
+        <location line="+43" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+216" />
-        <location line="+79" />
-        <location line="+116" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+18" />
-        <location line="+17" />
-        <location line="+33" />
-        <location line="+18" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+28" />
-        <location line="+142" />
+        <location line="+59" />
         <source>Details</source>
         <translation>Chi tiết</translation>
     </message>
     <message>
-        <location line="-887" />
+        <location line="-720" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
         <source>Kit Selection</source>
         <translation>Lựa chọn bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
-        <location line="+79" />
-        <location line="+237" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
-        <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
-        <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
         <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
         <location line="+2" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
@@ -13780,126 +13787,126 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-598" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+18" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+8" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <source>Project Management</source>
         <translation>Quản lý dự án</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-874" />
+        <location line="+29" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+11" />
+        <location line="+144" />
+        <location line="+18" />
+        <location line="+22" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+18" />
+        <location line="+44" />
+        <location line="+28" />
+        <location line="+12" />
+        <location line="+28" />
+        <location line="+19" />
+        <location line="+22" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <location line="+23" />
         <location line="+19" />
-        <location line="+37" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+11" />
+        <location line="+27" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+17" />
         <location line="+24" />
         <location line="+9" />
+        <location line="+17" />
         <location line="+9" />
-        <location line="+21" />
-        <location line="+44" />
-        <location line="+11" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
         <location line="+12" />
-        <location line="+15" />
-        <location line="+22" />
-        <location line="+18" />
-        <location line="+21" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+28" />
+        <location line="+9" />
         <location line="+14" />
-        <location line="+30" />
-        <location line="+142" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+11" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
         <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
         <source>Summary</source>
         <translation>Bản tóm tắt</translation>
     </message>
     <message>
-        <location line="-889" />
+        <location line="-321" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Tạo một dự án thử nghiệm đơn vị mới bằng Boost. Kiểm tra đơn vị cho phép bạn xác minh rằng mã phù hợp để sử dụng và không có hồi quy.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-50" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+22" />
+        <location line="+25" />
         <location line="+21" />
         <source>Test Project</source>
         <translation>Dự án thử nghiệm</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="-45" />
         <source>Boost Test Project</source>
         <translation>Dự án thử nghiệm tăng cường</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-48" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng cách sử dụng Catch2.</translation>
     </message>
@@ -13944,7 +13951,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm Catch2</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+28" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Google Test.</translation>
     </message>
@@ -13979,7 +13986,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm của Google</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-95" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Qt Test.</translation>
     </message>
@@ -13995,13 +14002,13 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+21" />
-        <location line="+280" />
+        <location line="+97" />
+        <location line="+123" />
         <source>Generate initialization and cleanup code</source>
         <translation>Tạo mã khởi tạo và dọn dẹp</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-209" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Tạo một dự án thử nghiệm đơn vị mới bằng Qt Test. Kiểm tra đơn vị cho phép bạn xác minh rằng mã phù hợp để sử dụng và không có hồi quy.</translation>
     </message>
@@ -14011,7 +14018,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+79" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng cách sử dụng Qt Quick Test.</translation>
     </message>
@@ -14036,36 +14043,36 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tên đủ điều kiện, bao gồm cả không gian tên</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-395" />
+        <location line="+39" />
+        <location line="+22" />
+        <location line="+99" />
+        <location line="+236" />
         <location line="+22" />
         <location line="+19" />
-        <location line="+289" />
-        <location line="+145" />
-        <location line="+40" />
-        <location line="+119" />
         <source>Class name:</source>
         <translation>Tên lớp:</translation>
     </message>
     <message>
-        <location line="-633" />
+        <location line="-397" />
+        <location line="+357" />
         <location line="+42" />
-        <location line="+433" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Tùy chỉnh&gt;</translation>
     </message>
     <message>
-        <location line="-474" />
+        <location line="-438" />
+        <location line="+40" />
+        <location line="+21" />
+        <location line="+106" />
+        <location line="+230" />
         <location line="+21" />
         <location line="+21" />
-        <location line="+294" />
-        <location line="+139" />
-        <location line="+39" />
-        <location line="+119" />
         <source>Base class:</source>
         <translation>Lớp cơ sở:</translation>
     </message>
     <message>
-        <location line="-632" />
+        <location line="-41" />
         <source>Include QObject</source>
         <translation>Bao gồm QObject</translation>
     </message>
@@ -14100,62 +14107,62 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Thêm QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-403" />
+        <location line="+172" />
+        <location line="+232" />
         <location line="+19" />
-        <location line="+315" />
-        <location line="+292" />
         <source>Header file:</source>
         <translation>Tệp tiêu đề:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+215" />
-        <location line="+1" />
-        <location line="+80" />
-        <location line="+133" />
+        <location line="-422" />
         <location line="+39" />
-        <location line="+120" />
+        <location line="+21" />
+        <location line="+112" />
+        <location line="+232" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+58" />
+        <location line="+1" />
         <source>Source file:</source>
         <translation>Tập tin nguồn:</translation>
     </message>
     <message>
-        <location line="-625" />
-        <location line="+19" />
-        <location line="+19" />
-        <location line="+216" />
-        <location line="+392" />
-        <location line="+34" />
+        <location line="-624" />
         <location line="+20" />
         <location line="+21" />
+        <location line="+21" />
+        <location line="+18" />
+        <location line="+448" />
         <location line="+19" />
+        <location line="+19" />
+        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Con đường:</translation>
     </message>
     <message>
-        <location line="-739" />
+        <location line="-461" />
+        <location line="+21" />
+        <location line="+344" />
         <location line="+38" />
-        <location line="+429" />
-        <location line="+39" />
         <source>Define Class</source>
         <translation>Xác định lớp</translation>
     </message>
     <message>
-        <location line="-502" />
+        <location line="-34" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Tạo tiêu đề C++ và tệp nguồn cho một lớp mới mà bạn có thể thêm vào dự án C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+65" />
-        <location line="+9" />
+        <location line="+176" />
+        <location line="+77" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-73" />
+        <location line="-252" />
         <source>C++ Class</source>
         <translation>Lớp C++</translation>
     </message>
@@ -14196,16 +14203,16 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+66" />
-        <location line="+57" />
-        <location line="+62" />
+        <location line="+113" />
+        <location line="+56" />
         <location line="+9" />
-        <location line="+59" />
+        <location line="+11" />
+        <location line="+9" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-197" />
         <source>Qt Item Model</source>
         <translation>Mô hình mục Qt</translation>
     </message>
@@ -14241,17 +14248,17 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+158" />
+        <location line="+207" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-157" />
+        <location line="-206" />
         <source>Python Class</source>
         <translation>Lớp Python</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
         <translation>Tạo một dự án thử nghiệm dựa trên CMake để có thể nhập đoạn mã.</translation>
     </message>
@@ -14296,20 +14303,20 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tạo một dự án thử nghiệm dựa trên CMake nơi bạn có thể nhập đoạn mã để biên dịch và kiểm tra nó.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+380" />
-        <location line="+165" />
+        <location line="-148" />
+        <location line="+102" />
+        <location line="+47" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
         <source>Other Project</source>
         <translation>Dự án khác</translation>
     </message>
     <message>
-        <location line="-544" />
+        <location line="+1" />
         <source>Code Snippet</source>
         <translation>Đoạn mã</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Tạo tệp tiêu đề mà bạn có thể thêm vào dự án C/C++.</translation>
     </message>
@@ -14319,7 +14326,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp tiêu đề C/C++</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+75" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Tạo một tệp nguồn mà bạn có thể thêm vào dự án C/C++.</translation>
     </message>
@@ -14329,7 +14336,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp nguồn C/C++</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-53" />
         <source>Choose a Form Template</source>
         <translation>Chọn một mẫu biểu mẫu</translation>
     </message>
@@ -14349,12 +14356,12 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Mẫu thiết kế tiện ích Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-146" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Tạo trình đổ bóng phân đoạn trong Ngôn ngữ tạo bóng OpenGL dành cho máy tính để bàn (GLSL). Trình đổ bóng mảnh tạo ra màu pixel cuối cùng cho hình tam giác, điểm và đường được hiển thị bằng OpenGL.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-17" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14362,7 +14369,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="-8" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Trình đổ bóng mảnh (OpenGL trên máy tính để bàn)</translation>
     </message>
@@ -14377,7 +14384,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Vertex Shader (OpenGL dành cho máy tính để bàn)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-29" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Tạo trình đổ bóng phân đoạn bằng Ngôn ngữ tạo bóng OpenGL/ES 2.0 (GLSL/ES). Trình đổ bóng mảnh tạo ra màu pixel cuối cùng cho hình tam giác, điểm và đường được hiển thị bằng OpenGL.</translation>
     </message>
@@ -14397,7 +14404,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Trình tạo bóng đỉnh (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+96" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Tạo một tệp Java với mã soạn sẵn.</translation>
     </message>
@@ -14412,7 +14419,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp Java</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+28" />
         <source>Stateless library</source>
         <translation>Thư viện không quốc tịch</translation>
     </message>
@@ -14433,44 +14440,44 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp JS</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-84" />
         <source>Creates a markdown file.</source>
         <translation>Tạo một tập tin đánh dấu.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
-        <location line="+45" />
+        <location line="+52" />
+        <location line="+68" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
         <source>General</source>
         <translation>Tổng quan</translation>
     </message>
     <message>
-        <location line="-111" />
+        <location line="-119" />
         <source>Markdown File</source>
         <translation>Tệp đánh dấu</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Model name:</source>
         <translation>Tên mẫu:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+67" />
+        <location line="+21" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Vị trí:</translation>
     </message>
     <message>
-        <location line="-66" />
-        <location line="+67" />
+        <location line="-20" />
+        <location line="+21" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; tồn tại trong hệ thống tệp.</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model Name and Location</source>
         <translation>Tên mẫu và vị trí</translation>
     </message>
@@ -14480,19 +14487,19 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tạo một mô hình trống mới với sơ đồ trống.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+5" />
-        <location line="+62" />
+        <location line="-11" />
+        <location line="+12" />
+        <location line="+21" />
         <source>Modeling</source>
         <translation>Làm người mẫu</translation>
     </message>
     <message>
-        <location line="-66" />
+        <location line="-20" />
         <source>Model</source>
         <translation>Người mẫu</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
         <translation>Tạo mô hình vết xước bằng cách sử dụng tệp tạm thời.</translation>
     </message>
@@ -14502,23 +14509,23 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Mô hình vết xước</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Tạo một tệp Nim trống bằng bộ ký tự UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+9" />
+        <location line="+68" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-67" />
         <source>Nim File</source>
         <translation>Tập tin Nim</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+66" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Tạo một tập lệnh Nim trống bằng cách sử dụng bộ ký tự UTF-8.</translation>
     </message>
@@ -14538,7 +14545,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp Python</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-49" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Tạo tệp Tài nguyên Qt (.qrc).</translation>
     </message>
@@ -14548,7 +14555,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp tài nguyên Qt</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+18" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Tạo tệp QML với mã soạn sẵn, bắt đầu bằng &quot;nhập QtQuick&quot;.</translation>
     </message>
@@ -14558,7 +14565,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp QML (Qt nhanh 2)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-61" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Tạo vùng đệm đầu bằng cách sử dụng tệp tạm thời.</translation>
     </message>
@@ -14568,7 +14575,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Bộ đệm đầu</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-23" />
         <source>State chart name:</source>
         <translation>Tên biểu đồ trạng thái:</translation>
     </message>
@@ -14588,7 +14595,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Biểu đồ bang</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-68" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14648,7 +14655,7 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Trường hợp thử nghiệm</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+127" />
         <source>Creates an empty file.</source>
         <translation>Tạo một tập tin trống.</translation>
     </message>
@@ -14658,7 +14665,7 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Tệp trống</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-96" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Tạo một tệp dịch mà bạn có thể thêm vào dự án Qt.</translation>
     </message>
@@ -14668,61 +14675,61 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Tệp dịch Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-722" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Trình hướng dẫn này tạo một ứng dụng bảng điều khiển dựa trên Qt đơn giản.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+195" />
+        <location line="+20" />
+        <location line="+143" />
+        <location line="+138" />
+        <location line="+19" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-326" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-350" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Define Build System</source>
         <translation>Xác định hệ thống xây dựng</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+21" />
-        <location line="+94" />
-        <location line="+18" />
-        <location line="+104" />
-        <location line="+48" />
-        <location line="+44" />
+        <location line="-393" />
+        <location line="+32" />
+        <location line="+20" />
+        <location line="+144" />
+        <location line="+137" />
+        <location line="+19" />
+        <location line="+42" />
         <source>Build System</source>
         <translation>Xây dựng hệ thống</translation>
     </message>
     <message>
-        <location line="-328" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-361" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation File</source>
         <translation>Tệp dịch</translation>
     </message>
     <message>
-        <location line="-479" />
-        <location line="+44" />
-        <location line="+250" />
-        <location line="+44" />
-        <location line="+142" />
+        <location line="-410" />
+        <location line="+173" />
+        <location line="+170" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Translation</source>
         <translation>Dịch thuật</translation>
     </message>
     <message>
-        <location line="-475" />
+        <location line="-406" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14732,30 +14739,30 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+266" />
-        <location line="+28" />
-        <location line="+44" />
+        <location line="+173" />
+        <location line="+18" />
+        <location line="+180" />
         <source>Application (Qt)</source>
         <translation>Ứng dụng (Qt)</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-370" />
         <source>Qt Console Application</source>
         <translation>Ứng dụng bảng điều khiển Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+302" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Trình hướng dẫn này tạo một dự án thư viện C++.</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+308" />
+        <location line="-146" />
+        <location line="+156" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Chỉ định thông tin cơ bản về các lớp mà bạn muốn tạo các tệp mã nguồn khung.</translation>
     </message>
     <message>
-        <location line="-307" />
+        <location line="+1" />
         <source>Shared Library</source>
         <translation>Thư viện chia sẻ</translation>
     </message>
@@ -14770,14 +14777,14 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Plugin Qt</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+46" />
+        <location line="-397" />
+        <location line="+398" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
         <source>Type:</source>
         <translation>Kiểu:</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="+2" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -14843,55 +14850,55 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>mô-đun Qt:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+116" />
+        <location line="-147" />
         <location line="+22" />
-        <location line="+18" />
-        <location line="+68" />
-        <location line="+26" />
-        <location line="+16" />
-        <location line="+170" />
+        <location line="+39" />
+        <location line="+15" />
+        <location line="+14" />
+        <location line="+60" />
+        <location line="+28" />
+        <location line="+40" />
         <source>Define Project Details</source>
         <translation>Xác định chi tiết dự án</translation>
     </message>
     <message>
-        <location line="-428" />
+        <location line="-60" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Tạo thư viện C++. Bạn có thể tạo:&lt;ul&gt;&lt;li&gt;thư viện C++ dùng chung để sử dụng với &lt;tt&gt;QPluginLoader&lt;/tt&gt; và thời gian chạy (Plugin)&lt;/li&gt;&lt;li&gt;thư viện C++ dùng chung hoặc tĩnh để sử dụng với dự án khác tại linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+186" />
-        <location line="+232" />
+        <location line="-425" />
+        <location line="+62" />
+        <location line="+364" />
+        <location line="+68" />
         <source>Library</source>
         <translation>Thư viện</translation>
     </message>
     <message>
-        <location line="-435" />
+        <location line="-67" />
         <source>C++ Library</source>
         <translation>Thư viện C++</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-316" />
         <source>Creates a simple Nim application.</source>
         <translation>Tạo một ứng dụng Nim đơn giản.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+40" />
-        <location line="+18" />
-        <location line="+18" />
+        <location line="-78" />
+        <location line="+68" />
+        <location line="+11" />
+        <location line="+270" />
         <source>Non-Qt Project</source>
         <translation>Dự án không phải Qt</translation>
     </message>
     <message>
-        <location line="-75" />
+        <location line="-269" />
         <source>Nim Application</source>
         <translation>Ứng dụng Nim</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-114" />
         <source>Binary</source>
         <translation>nhị phân</translation>
     </message>
@@ -14907,12 +14914,12 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+402" />
+        <location line="+478" />
         <source>Description:</source>
         <translation>Sự miêu tả:</translation>
     </message>
     <message>
-        <location line="-401" />
+        <location line="-477" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14978,12 +14985,12 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+386" />
+        <location line="+462" />
         <source>License:</source>
         <translation>Giấy phép:</translation>
     </message>
     <message>
-        <location line="-385" />
+        <location line="-461" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
         <source>C</source>
         <translation>C</translation>
@@ -15025,21 +15032,21 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
+        <location line="+89" />
         <location line="+1" />
-        <location line="+33" />
+        <location line="+19" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Cấu hình</translation>
     </message>
     <message>
-        <location line="-343" />
+        <location line="-165" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Tạo ứng dụng Nim bằng Nimble.</translation>
     </message>
@@ -15049,7 +15056,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh nhẹn</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+66" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Tạo một ứng dụng C đơn giản không có phần phụ thuộc.</translation>
     </message>
@@ -15059,7 +15066,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng C đơn giản</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+279" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Tạo một ứng dụng C++ đơn giản không có phần phụ thuộc.</translation>
     </message>
@@ -15069,7 +15076,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng C++ đơn giản</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+75" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Trình hướng dẫn này tạo một tệp .pro trống.</translation>
     </message>
@@ -15084,46 +15091,46 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Dự án qmake trống</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+22" />
+        <location line="-180" />
+        <location line="+21" />
         <location line="+15" />
-        <location line="+24" />
+        <location line="+18" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-60" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="-53" />
+        <location line="+21" />
+        <location line="+33" />
         <source>PySide 2</source>
         <translation>PySide 2</translation>
     </message>
     <message>
-        <location line="-54" />
+        <location line="+7" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Tạo ứng dụng Qt cho Python chỉ chứa mã chính cho QApplication.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+18" />
+        <location line="-53" />
         <location line="+21" />
+        <location line="+18" />
+        <location line="+15" />
         <source>Application (Qt for Python)</source>
         <translation>Ứng dụng (Qt cho Python)</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="+1" />
         <source>Empty Application</source>
         <translation>Ứng dụng trống</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location line="+39" />
+        <location line="-67" />
+        <location line="+21" />
         <source>Project file:</source>
         <translation>Tập tin dự án:</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="-10" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Tạo một ứng dụng Qt cho Python có chứa một cửa sổ trống.</translation>
     </message>
@@ -15133,7 +15140,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Cửa sổ trống</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+27" />
         <source>PySide 5.15</source>
         <translation>PySide 5.15</translation>
     </message>
@@ -15163,7 +15170,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh Qt - Trống</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="-26" />
         <source>Define Python Interpreter</source>
         <translation>Xác định trình thông dịch Python</translation>
     </message>
@@ -15183,45 +15190,45 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Giao diện người dùng cửa sổ</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+25" />
-        <location line="+23" />
+        <location line="-274" />
+        <location line="+219" />
+        <location line="+175" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+48" />
+        <location line="-393" />
+        <location line="+394" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-47" />
-        <location line="+23" />
-        <location line="+25" />
+        <location line="-393" />
+        <location line="+217" />
+        <location line="+177" />
         <source>Minimum required Qt version:</source>
         <translation>Phiên bản Qt yêu cầu tối thiểu:</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-393" />
         <source>MyItem</source>
         <translation>Mục của tôi</translation>
     </message>
@@ -15261,14 +15268,14 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Plugin mở rộng Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+30" />
-        <location line="+16" />
+        <location line="+199" />
+        <location line="+94" />
+        <location line="+88" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Sử dụng bàn phím ảo Qt</translation>
     </message>
     <message>
-        <location line="-44" />
+        <location line="-180" />
         <source>Qt 6.4</source>
         <translation>Qt 6.4</translation>
     </message>
@@ -15288,7 +15295,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh Qt</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+178" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15302,7 +15309,7 @@ Sử dụng phiên bản &quot;tương thích&quot; này nếu bạn muốn sử
         <translation>Ứng dụng nhanh Qt (tương thích)</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="-92" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15316,7 +15323,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
         <translation>Nguyên mẫu giao diện người dùng nhanh Qt</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-135" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Trình hướng dẫn này tạo dự án Ứng dụng Qt Widget. Theo mặc định, ứng dụng bắt nguồn từ QApplication và bao gồm một tiện ích trống.</translation>
     </message>
@@ -15350,50 +15357,50 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng tiện ích Qt</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-139" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vui lòng định cấu hình &lt;b&gt;%{vcsName&lt;/b&gt; ngay bây giờ.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+52" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+41" />
         <source>Repository:</source>
         <translation>Kho lưu trữ:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+34" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+19" />
+        <location line="+23" />
+        <location line="+18" />
         <source>Repository URL is not valid</source>
         <translation>URL kho lưu trữ không hợp lệ</translation>
     </message>
     <message>
-        <location line="-92" />
-        <location line="+54" />
+        <location line="-78" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+19" />
+        <location line="+39" />
         <source>Directory:</source>
         <translation>Thư mục:</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+33" />
+        <location line="-79" />
+        <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
+        <location line="+20" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; tồn tại trong hệ thống tệp.</translation>
     </message>
     <message>
-        <location line="-93" />
+        <location line="+1" />
         <source>Use existing directory</source>
         <translation>Sử dụng thư mục hiện có</translation>
     </message>
@@ -15468,14 +15475,14 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ôn tập:</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+60" />
-        <location line="+20" />
+        <location line="-91" />
+        <location line="+19" />
+        <location line="+75" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Chỉ định URL kho lưu trữ, thư mục thanh toán và đường dẫn.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Running Bazaar branch...</source>
         <translation>Đang điều hành chi nhánh Bazaar...</translation>
     </message>
@@ -15494,22 +15501,22 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Sao chép một nhánh Bazaar và cố gắng tải dự án chứa trong đó.</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+23" />
+        <location line="-93" />
         <location line="+19" />
-        <location line="+20" />
+        <location line="+23" />
+        <location line="+18" />
+        <location line="+34" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
         <source>Import Project</source>
         <translation>Dự án nhập khẩu</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+1" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (Hoặc chi nhánh)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-46" />
         <source>Module:</source>
         <translation>Mô-đun:</translation>
     </message>
@@ -15524,19 +15531,19 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Đang chạy thanh toán CVS...</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+1" />
-        <location line="+22" />
+        <location line="-59" />
         <location line="+1" />
         <location line="+18" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+17" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Thanh toán</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+1" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Kiểm tra kho lưu trữ CVS và cố gắng tải dự án chứa trong đó.</translation>
     </message>
@@ -15546,7 +15553,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Thanh toán CVS</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-33" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;nhánh mặc định&gt;</translation>
     </message>
@@ -15586,7 +15593,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Bản sao Git</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-28" />
         <source>Running Mercurial clone...</source>
         <translation>Chạy bản sao Mercurial...</translation>
     </message>
@@ -15601,7 +15608,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>bản sao thủy ngân</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-28" />
         <source>Trust Server Certificate</source>
         <translation>Chứng chỉ máy chủ tin cậy</translation>
     </message>
@@ -15621,7 +15628,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Thanh toán lật đổ</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+337" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Trình hướng dẫn này tạo một plugin Qt Creator tùy chỉnh.</translation>
     </message>
@@ -21770,7 +21777,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+5" />
+        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>bắt nguồn từ QObject</translation>
@@ -21836,7 +21843,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>(gõ tên ĐỌC tên VIẾT setName THÔNG BÁO tên Đã thay đổi CUỐI CÙNG)</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-18" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>với mục tiêu</translation>
@@ -21860,7 +21867,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>với mục tiêu</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-16" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Trường hợp thử nghiệm QuickTest</translation>
