@@ -274,8 +274,6 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
         connect(m_model, &MergedFilesystemModel::directoryLoaded, this, [this] () {
             if (!m_listToExpand.isEmpty())
             {
-                // OPENMV-DIFF //
-                // restoreExpandedState(QString(), m_treeView->rootIndex());
                 // Deferred and gated on visibility: expanding rows synchronously
                 // inside the async directoryLoaded delivery can hit the tree
                 // while hidden or mid-activation and trip the macOS Cocoa a11y
@@ -287,7 +285,6 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
                         restoreExpandedState(QString(), m_treeView->rootIndex());
                     }
                 });
-                // OPENMV-DIFF //
             }
         });
 
@@ -321,9 +318,6 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
             {
                 QTimer::singleShot(1, this, [this] () {
                     QModelIndex index = m_filter->mapFromSource(m_model->index(m_settings->value(SETTINGS_GROUP "/" LAST_MODEL_ZOO_DIALOG_SELECTED_INDEX).toString()));
-                    // OPENMV-DIFF //
-                    // m_treeView->setCurrentIndex(index);
-                    // m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
                     // A stale saved path yields an invalid index; pushing that
                     // into a view mid-activation trips the macOS Cocoa a11y
                     // bridge (NSRangeException).
@@ -332,7 +326,6 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
                         m_treeView->setCurrentIndex(index);
                         m_treeView->scrollTo(index, QTreeView::PositionAtCenter);
                     }
-                    // OPENMV-DIFF //
                 });
 
                 m_initialized = true;
