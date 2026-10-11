@@ -30,6 +30,8 @@
 
 #include "openmvpluginserialport.h"
 #include "protocol/omv_debug.h"
+#include "protocol/omv_constants.h"
+#include "protocol/omv_crc.h"
 
 #include <QtCore/QAtomicInt>
 #include <QtCore/QDateTime>
@@ -116,6 +118,32 @@ void serializeByte(QByteArray &buffer, int value) // LittleEndian
     buffer.append(reinterpret_cast<const char *>(&value), 1);
 }
 
+// True when `data` holds a complete V2 packet header that passes its CRC16:
+// little-endian sync word, then the 10-byte header whose last two bytes are the
+// CRC16 of the first eight (exactly what OMVTransport validates). REPL text can't
+// produce one - the sync bytes 0xAA 0xD5 are not ASCII and the CRC must match.
+static bool containsV2Header(const QByteArray &data)
+{
+    const int headerSize = OMVProto::HEADER_SIZE;
+    const quint8 syncLo = quint8(OMVProto::SYNC_WORD & 0xFF);
+    const quint8 syncHi = quint8((OMVProto::SYNC_WORD >> 8) & 0xFF);
+
+    for (int i = 0; (i + headerSize) <= data.size(); i++) {
+        if ((quint8(data.at(i)) != syncLo) || (quint8(data.at(i + 1)) != syncHi)) {
+            continue;
+        }
+
+        const quint16 crc = quint16(quint8(data.at(i + headerSize - 2)))
+                          | (quint16(quint8(data.at(i + headerSize - 1))) << 8);
+
+        if (crc16(QByteArrayView(data.constData() + i, headerSize - 2)) == crc) {
+            return true;
+        }
+    }
+
+    return false;
+}
+
 void serializeWord(QByteArray &buffer, int value) // LittleEndian
 {
     buffer.append(reinterpret_cast<const char *>(&value), 2);
@@ -193,6 +221,7 @@ OpenMVPluginSerialPort_private::OpenMVPluginSerialPort_private(const QJsonDocume
     m_port = Q_NULLPTR;
     m_camera = Q_NULLPTR;
     m_v2ProtocolEnabled = false;
+    m_probeSawV2 = false;
     m_bootloaderStop = false;
     m_firmwareSettings = settings;
 
@@ -249,6 +278,8 @@ void OpenMVPluginSerialPort_private::open(const QString &portName) {
         delete m_port;
         m_port = Q_NULLPTR;
     }
+
+    m_probeSawV2 = false; // a new connection is probed afresh
 
     m_port = OMVPortFactory::createPort(portName, this);
     // QSerialPort is buggy unless this is set.
@@ -542,16 +573,69 @@ void OpenMVPluginSerialPort_private::command(const OpenMVPluginSerialPortCommand
             QElapsedTimer flushTimer;
             flushTimer.start();
 
+            // For the protocol probe, watch the drained bytes for a V2 packet. A
+            // camera already in V2 debug mode may never go idle (a script printing
+            // in a loop makes it send a stdout notify event every 50 ms), so once
+            // one is seen stop draining and answer the probe as V2 below. Keep the
+            // last HEADER_SIZE - 1 bytes so a header split across reads is found.
+            QByteArray probeTail;
+            bool probeSawV2 = false;
+
             do
             {
                 m_port->waitForReadyRead(0);
 
-                if(!m_port->readAll().isEmpty())
+                QByteArray data = m_port->readAll();
+
+                if(!data.isEmpty())
                 {
                     elaspedTimer.restart();
+
+                    if(command.m_protocolProbe)
+                    {
+                        probeTail.append(data);
+
+                        if(containsV2Header(probeTail))
+                        {
+                            probeSawV2 = true;
+                            break;
+                        }
+
+                        probeTail = probeTail.right(OMVProto::HEADER_SIZE - 1);
+                    }
                 }
             }
             while((!elaspedTimer.hasExpired(flush_timeout)) && (!flushTimer.hasExpired(flush_max_timeout)));
+
+            if(command.m_protocolProbe)
+            {
+                m_probeSawV2 = probeSawV2; // the drain runs on the probe's first part only
+            }
+        }
+
+        // The camera is known to be in V2 mode: don't write the probe (the V1 half
+        // is pointless and the camera is busy sending), just report what a V2
+        // camera answers - the sync word - to whichever probe part expects a
+        // response. Split probes skip every part; only the last expects data.
+        if(command.m_protocolProbe && m_probeSawV2)
+        {
+            QByteArray response;
+
+            if(command.m_responseLen > 0)
+            {
+                serializeWord(response, OMVProto::SYNC_WORD);
+                response.append(QByteArray(qMax(0, command.m_responseLen - int(response.size())), char(0)));
+                response = response.left(command.m_responseLen);
+            }
+
+            if(s_debugLevel.loadRelaxed() >= 1)
+            {
+                omv::OMVDebug().noquote().nospace()
+                    << "🔎 Probe  V2 packets seen while draining - skipping the V1/V2 probe write";
+            }
+
+            emit commandResult(OpenMVPluginSerialPortCommandResult(true, response));
+            return;
         }
 
         int write_timeout = WRITE_TIMEOUT;

@@ -1680,7 +1680,7 @@ void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
                                                                 (i == (ii - USBDBG_LEN)) ? len : 0,
                                                                 SCRIPT_RUNNING_START_DELAY,
                                                                 SCRIPT_RUNNING_END_DELAY,
-                                                                true, false, i == 0));
+                                                                true, false, i == 0, true));
             m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL_SPLIT);
         }
     }
@@ -1690,7 +1690,7 @@ void OpenMVPluginIO::checkProtocolVerison(bool splitCommand)
                                                             len,
                                                             SCRIPT_RUNNING_START_DELAY,
                                                             SCRIPT_RUNNING_END_DELAY,
-                                                            true, false, len > 0));
+                                                            true, false, len > 0, true));
         m_completionQueue.enqueue(CHECK_PROTOCOL_VERSION_CPL);
     }
 

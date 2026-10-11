@@ -320,14 +320,16 @@ public:
                                            int endWait = int(),
                                            bool perCommandWait = true,
                                            bool commandAbortOkay = false,
-                                           bool readFlushBeforeCommnad = false) :
+                                           bool readFlushBeforeCommnad = false,
+                                           bool protocolProbe = false) :
         m_data(data),
         m_responseLen(responseLen),
         m_startWait(startWait),
         m_endWait(endWait),
         m_perCommandWait(perCommandWait),
         m_commandAbortOkay(commandAbortOkay),
-        m_readFlushBeforeCommnad(readFlushBeforeCommnad)
+        m_readFlushBeforeCommnad(readFlushBeforeCommnad),
+        m_protocolProbe(protocolProbe)
     {
     }
     QByteArray m_data;
@@ -337,6 +339,9 @@ public:
     bool m_perCommandWait;
     bool m_commandAbortOkay;
     bool m_readFlushBeforeCommnad;
+    // Part of checkProtocolVerison()'s V1/V2 detection probe (see
+    // OpenMVPluginSerialPort_private::m_probeSawV2).
+    bool m_protocolProbe;
 };
 
 class OpenMVPluginSerialPortCommandResult
@@ -470,6 +475,12 @@ private:
     QPointer<OMVPort> m_port;
     OMVCamera *m_camera;
     bool m_v2ProtocolEnabled;
+    // Set by the protocol probe's pre-command drain when it sees a CRC-valid V2
+    // packet header: the camera is already in V2 debug mode and talking (it sends
+    // unsolicited events, e.g. a stdout notify every 50 ms while a script prints),
+    // so the probe is answered locally as V2 instead of being written - the drain
+    // would otherwise never see the port go idle. Reset by each probe's drain.
+    bool m_probeSawV2;
     bool m_bootloaderStop;
     QJsonDocument m_firmwareSettings;
 };
