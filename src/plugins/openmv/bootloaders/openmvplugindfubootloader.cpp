@@ -129,6 +129,52 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             QApplication::processEvents();
         }
     }
+    else
+    {
+        // Nothing was attached when the connect started (e.g. after a bootloader
+        // repair). Boards with an internal fallback bootloader wait for the camera
+        // in openmvInternalBootloader(); boards without one land here directly, so
+        // explicitly ask for the camera instead of leaving dfu-util's "-w" to wait
+        // silently in the loader dialog.
+        QString vidpid = selectedDfuDevice.split(QStringLiteral(",")).first().toLower();
+
+        auto dfuDevicePresent = [vidpid] {
+            for(const QString &device : getDevices())
+            {
+                if(device.split(QStringLiteral(",")).first().toLower() == vidpid)
+                {
+                    return true;
+                }
+            }
+
+            return false;
+        };
+
+        if(!dfuDevicePresent())
+        {
+            QProgressDialog dialog(Tr::tr("Reconnect your OpenMV Cam..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
+                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
+            dialog.setWindowModality(Qt::ApplicationModal);
+            dialog.setAttribute(Qt::WA_ShowWithoutActivating);
+            dialog.show();
+
+            bool found = false;
+
+            while((!found) && (!dialog.wasCanceled()))
+            {
+                QApplication::processEvents();
+                found = dfuDevicePresent();
+            }
+
+            dialog.close();
+
+            if(!found)
+            {
+                CONNECT_END();
+            }
+        }
+    }
 
     QString selectedDfuDeviceVidPid = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).first();
     QString selectedDfuDeviceSerialNumber = selectedDfuDevice.isEmpty() ? QString() : selectedDfuDevice.split(QStringLiteral(",")).last();
