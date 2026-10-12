@@ -271,7 +271,15 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     else if(Utils::HostOsInfo::isMacHost())
     {
         pythonPath = Core::ICore::resourcePath(QStringLiteral("mpy-cross/mac"));
-        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

@@ -104,20 +104,44 @@ if (WIN32)
 endif()
 
 if (APPLE)
+  if (CMAKE_OSX_ARCHITECTURES)
+    set(_openmv_mac_arch "${CMAKE_OSX_ARCHITECTURES}")
+  else()
+    set(_openmv_mac_arch "${CMAKE_SYSTEM_PROCESSOR}")
+  endif()
+
+  # Universal tool (runs on both architectures).
   set(resource_directories ${resource_directories}
-    alif/mac
-    ffmpeg/mac
-    dfu-util/osx
-    bossac/osx
-    node/mac
-    picotool/osx
-    python/mac
-    python/mac-aarch64
-    pylsp/mac
-    mpy-cross/mac
-    vela/mac-aarch64
-    spsdk/mac
-    stcubeprogrammer/mac)
+    mpy-cross/mac)
+
+  # Bundle only the matching architecture's tools so the shipped application
+  # does not carry both an Intel and an Apple Silicon copy. alif and vela are
+  # Apple Silicon only (no Intel build exists).
+  if (_openmv_mac_arch MATCHES "arm64")
+    set(resource_directories ${resource_directories}
+      alif/mac
+      ffmpeg/mac-aarch64
+      dfu-util/osx-aarch64
+      bossac/osx-aarch64
+      node/mac-aarch64
+      picotool/osx-aarch64
+      python/mac-aarch64
+      pylsp/mac-aarch64
+      vela/mac-aarch64
+      spsdk/mac-aarch64
+      stcubeprogrammer/mac-aarch64)
+  else()
+    set(resource_directories ${resource_directories}
+      ffmpeg/mac
+      dfu-util/osx
+      bossac/osx
+      node/mac
+      picotool/osx
+      python/mac
+      pylsp/mac
+      spsdk/mac
+      stcubeprogrammer/mac)
+  endif()
   set(resource_files ${resource_files} pydfu/pydfu.py)
   set(downloaded_resource_directories
     https://download.openmv.io/stedgeai/stedgeai-macarm-4.0.0.tar.gz

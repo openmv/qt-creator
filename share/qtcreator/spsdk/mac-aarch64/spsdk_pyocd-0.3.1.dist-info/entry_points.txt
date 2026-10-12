@@ -1,0 +1,5 @@
+[pyinstaller40]
+hook-dirs = spsdk_pyocd.__pyinstaller:get_hook_dirs
+
+[spsdk.debug_probe]
+pyocd = spsdk_pyocd.probe

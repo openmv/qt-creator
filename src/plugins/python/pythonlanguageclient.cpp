@@ -89,7 +89,15 @@ static PythonLanguageServerState checkPythonLanguageServer(const FilePath &pytho
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        path = Core::ICore::resourcePath() / "pylsp" / "mac";
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            path = Core::ICore::resourcePath() / "pylsp" / "mac-aarch64";
+        }
+        else
+        {
+            path = Core::ICore::resourcePath() / "pylsp" / "mac";
+        }
     }
     else if (Utils::HostOsInfo::isLinuxHost())
     {
@@ -177,7 +185,15 @@ protected:
         }
         else if(Utils::HostOsInfo::isMacHost())
         {
-            path = Core::ICore::resourcePath() / "pylsp" / "mac";
+            if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+                || Utils::HostOsInfo::isRunningUnderRosetta())
+            {
+                path = Core::ICore::resourcePath() / "pylsp" / "mac-aarch64";
+            }
+            else
+            {
+                path = Core::ICore::resourcePath() / "pylsp" / "mac";
+            }
         }
         else if (Utils::HostOsInfo::isLinuxHost())
         {

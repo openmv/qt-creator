@@ -612,7 +612,15 @@ static QString getInputFormats()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac-aarch64/ffmpeg"));
+        }
+        else
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        }
         process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-demuxers")));
         process.runBlocking(timeout, Utils::EventLoopMode::On);
     }
@@ -697,7 +705,15 @@ static QString getOutputFormats()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac-aarch64/ffmpeg"));
+        }
+        else
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        }
         process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-hide_banner") << QStringLiteral("-muxers")));
         process.runBlocking(timeout, Utils::EventLoopMode::On);
     }
@@ -930,7 +946,15 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac-aarch64/ffmpeg"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffmpeg"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -1185,8 +1209,18 @@ static bool playVideoFile(const QString &path)
 
         if(file.open(QIODevice::WriteOnly))
         {
+            Utils::FilePath ffplayBinary;
+            if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+                || Utils::HostOsInfo::isRunningUnderRosetta())
+            {
+                ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac-aarch64/ffplay"));
+            }
+            else
+            {
+                ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay"));
+            }
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toString())) + QStringLiteral("\" -hide_banner \"") +
                 QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"")).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())
@@ -1385,8 +1419,18 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
 
         if(file.open(QIODevice::WriteOnly))
         {
+            Utils::FilePath ffplayBinary;
+            if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+                || Utils::HostOsInfo::isRunningUnderRosetta())
+            {
+                ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac-aarch64/ffplay"));
+            }
+            else
+            {
+                ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay"));
+            }
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toString())) + QStringLiteral("\" -hide_banner \"") +
                 url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer") : QStringLiteral("\" -fflags nobuffer"))).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())

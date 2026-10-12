@@ -1,0 +1,17 @@
+[console_scripts]
+pyocd = pyocd.__main__:main
+pyocd-gdbserver = pyocd.tools.gdb_server:main
+
+[pyocd.probe]
+cmsisdap = pyocd.probe.cmsis_dap_probe:CMSISDAPProbePlugin
+jlink = pyocd.probe.jlink_probe:JLinkProbePlugin
+picoprobe = pyocd.probe.picoprobe:PicoprobePlugin
+remote = pyocd.probe.tcp_client_probe:TCPClientProbePlugin
+stlink = pyocd.probe.stlink_probe:StlinkProbePlugin
+
+[pyocd.rtos]
+argon = pyocd.rtos.argon:ArgonPlugin
+freertos = pyocd.rtos.freertos:FreeRTOSPlugin
+rtx5 = pyocd.rtos.rtx5:RTX5Plugin
+threadx = pyocd.rtos.threadx:ThreadXPlugin
+zephyr = pyocd.rtos.zephyr:ZephyrPlugin

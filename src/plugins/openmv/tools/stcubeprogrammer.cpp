@@ -187,7 +187,15 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/mac/bin/STM32_Programmer_CLI"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/mac-aarch64/bin/STM32_Programmer_CLI"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("stcubeprogrammer/mac/bin/STM32_Programmer_CLI"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

@@ -61,7 +61,15 @@ CopilotSettings::CopilotSettings()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac/bin/node"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac-aarch64/bin/node"));
+        }
+        else
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac/bin/node"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

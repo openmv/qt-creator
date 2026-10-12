@@ -181,7 +181,14 @@ static Utils::FilePath bundledPythonBinary()
     if(Utils::HostOsInfo::isWindowsHost())
         return Core::ICore::resourcePath(QStringLiteral("python/win/python.exe"));
     if(Utils::HostOsInfo::isMacHost())
+    {
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            return Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
         return Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+    }
     if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         return Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
     if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))

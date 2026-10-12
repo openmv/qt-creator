@@ -1,0 +1,749 @@
+# Copyright 2023-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+---
+whole_ahab_image:
+  type: object
+  required:
+    - containers
+    - output
+  properties:
+    image_type:
+      type: string
+      title: Type of image
+      description: "[Deprecated] The final use of image, this setting is changing the style of offsets in final container."
+      enum: [xip, non_xip, serial_downloader, nand]
+      template_value: xip
+      example: xip
+      skip_in_template: true
+      deprecated: true
+    target_memory:
+      type: string
+      title: Target memory
+      description: Target memory for AHAB container
+      enum: [standard, nor, serial_downloader, nand_2k, nand_4k]
+      enum_template: [serial_downloader, standard, nand_2k, nand_4k]
+      template_value: standard
+    output:
+      type: string
+      title: Output file name
+      description: Output AHAB file name
+      format: file_name
+      template_value: generated_ahab.bin
+    container_version:
+      type: number
+      title: Container version
+      description:
+        Force container version, if not specified the default version is used.
+        This configuration option is valid only for chips that supports both AHAB container versions. Possible options <2, 1>
+      minimal: 1
+      maximal: 2
+      template_value: 2
+      skip_in_template: True
+
+    containers:
+      title: List of containers present in AHAB
+      description: The order of containers in the list defines the order in AHAB.
+      type: array
+      minItems: 1
+      items:
+        oneOf:
+          - type: object
+            required: [binary_container]
+            properties:
+              binary_container:
+                type: object
+                title: Binary AHAB container
+                description: Binary Container format to add to AHAB image, Typically it could be used to add ELE Firmware.
+                required: [path]
+                properties:
+                  path:
+                    type: string
+                    title: The AHAB container binary file
+                    description: The binary file that contains AHAB "my_binary_container.bin
+                    template_value: my_ahab_container.bin
+          - type: object
+            required: [container]
+            properties:
+              container:
+                type: object
+                title: AHAB Container
+                description: Configurable Container format to add to AHAB image. This allow to configure all aspects of the AHAB container.
+                required: [srk_set, images]
+                if:
+                  properties:
+                    srk_set:
+                      const: none
+                then:
+                  required: []
+                else:
+                  required: [srk_table, used_srk_id]
+                properties:
+                  srk_set:
+                    type: string
+                    title: Super Root Key (SRK) set
+                    description: Defines which set is used to authenticate the container.
+                    enum: [none, oem, nxp]
+                    template_value: none
+                  used_srk_id:
+                    type: [number, string]
+                    title: Used SRK
+                    description: Which key from SRK set is being used.
+                    format: number
+                    template_value: 0
+                  srk_revoke_mask:
+                    type: [number, string]
+                    title: SRK revoke mask
+                    description:
+                      Bit-mask to indicate which SRKs to revoke. Bit set to 1 means revoke
+                      key. Bit 0 = revoke SRK_0, bit 1 = revoke SRK_1 etc.
+                      Example of revocation SRK_0 and SRK_1 - the value should be 0x03
+                    format: number
+                    template_value: "0x00"
+                  gdet_runtime_behavior:
+                    type: string
+                    title: GDET runtime behavior
+                    description:
+                      "This option defines runtime behavior of Glitch detector. Not supported by all devices and their ELE firmware.\n
+                      - disabled:       GDET is disabled after the first OEM container has been authenticated (default behavior)\n
+                      - enabled_eleapi: Automatically enable GDET during all ELE API calls\n
+                      - enabled:        Leave GDET enabled"
+                    enum: [disabled, enabled_eleapi, enabled]
+                    template_value: disabled
+                  check_all_signatures:
+                    type: string
+                    title: Check all signatures
+                    description:
+                      "This option overrides a fuse to select verification mode.\n
+                      - default: Apply default fuse policy.\n
+                      - check_all_signatures: Force verification of all present signatures."
+                    enum: [default, check_all_signatures]
+                    template_value: default
+                    skip_in_template: True
+                  fast_boot:
+                    type: string
+                    title: Fast boot
+                    description: "This option enables fast boot mode.\n
+                      - enabled: Fast boot enabled.\n
+                      - slice_hash: Slice and hash mode.\n
+                      - on_fly: On the fly hash."
+                    enum: [enabled, slice_hash, on_fly]
+                    template_value: enabled
+                    skip_in_template: True
+                  fuse_version:
+                    type: [number, string]
+                    title: Fuse version
+                    description:
+                      The value must be equal or greater than the version stored in fuses
+                      to allow loading this container.
+                    format: number
+                    template_value: 0
+                  sw_version:
+                    type: [number, string]
+                    title: Software version
+                    description:
+                      Number used by Privileged Host Boot Companion (PHBC) to select between
+                      multiple images with same Fuse version field.
+                    format: number
+                    template_value: 0
+                  signing_key:
+                    type: string
+                    title: AHAB container signing key
+                    description:
+                      Private key used for sign the container header. Header can be signed by SRK.
+                      The referenced SRK must not have been revoked.
+                    format: file
+                    template_value: my_signing_key.pem
+                  signature_provider:
+                    type: string
+                    title: Signature Provider
+                    description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'. The signature provider could be used instead of definition of 'signing_key'.
+                    template_value: type=file;file_path=my_prv_key.pem
+                  signing_key_#2:
+                    type: string
+                    title: AHAB container signing key for second signature (PQC only)
+                    description:
+                      Private key used for second sign (PQC only) of the container header. Header can be signed by SRK.
+                      The referenced SRK must not have been revoked.
+                    format: file
+                    template_value: my_signing_key.pem
+                    skip_in_template: True
+                  signature_provider_#2:
+                    type: string
+                    title: Signature Provider for second signature (PQC)
+                    description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'. The signature provider could be used instead of definition of 'signing_key'.
+                    template_value: type=file;file_path=my_prv_key.pem
+                    skip_in_template: True
+                  images:
+                    type: array
+                    title: Image array
+                    description: Array of image entries.
+                    template_title: Configuration of AHAB Container images (array of multiple images)
+                    minItems: 1
+                    maxItems: 8
+                    items:
+                      oneOf:
+                        - type: object
+                          template_title: SPL with optional DDR tunning images
+                          image_identifier: spl_ddr
+                          skip_in_template: True
+                          description: U-Boot SPL with optional DDR PHY tunning images
+                          required:
+                            [
+                              spl_ddr,
+                              lpddr_imem_1d,
+                              lpddr_imem_2d,
+                              lpddr_dmem_1d,
+                              lpddr_dmem_2d,
+                            ]
+                          properties:
+                            lpddr_imem_1d:
+                              type: string
+                              title: LPDDR memory FW in 1D mode
+                              description: Firmware for LPDDR4/5 memory in 1D mode.
+                              template_value: lpddr_imem_1d.bin
+                              format: file
+                            lpddr_imem_2d:
+                              type: string
+                              title: LPDDR memory FW in 2D mode
+                              description: Firmware for LPDDR4/5 memory in 2D mode.
+                              template_value: lpddr_imem_2d.bin
+                              format: file
+                            lpddr_dmem_1d:
+                              type: string
+                              title: LPDDR memory data in 1D mode
+                              description: Data for LPDDR4/5 memory in 1D mode.
+                              template_value: lpddr_dmem_1d.bin
+                              format: file
+                            lpddr_dmem_2d:
+                              type: string
+                              title: LPDDR memory data in 2D mode
+                              description: Data for LPDDR4/5 memory in 2D mode.
+                              template_value: lpddr_dmem_2d.bin
+                              format: file
+                            spl_ddr:
+                              type: string
+                              title: SPL
+                              description: SPL firmware
+                              template_value: spl.bin
+                              format: file
+
+                        - type: object
+                          template_title: OEI with DDR tunning images
+                          image_identifier: oei_ddr
+                          skip_in_template: True
+                          description: OEI with DDR PHY tunning images
+                          required: [oei_ddr, lpddr_imem, lpddr_dmem]
+                          properties:
+                            lpddr_imem:
+                              type: string
+                              title: LPDDR memory FW
+                              description: Firmware for LPDDR4/5 memory.
+                              template_value: lpddr_imem.bin
+                              format: file
+                            lpddr_imem_qb:
+                              type: string
+                              title: LPDDR memory FW for quick boot
+                              description: Firmware for LPDDR4/5 for quick boot.
+                              template_value: lpddr_imem_qb.bin
+                              format: file
+                            lpddr_dmem:
+                              type: string
+                              title: LPDDR memory data
+                              description: Data for LPDDR4/5 memory.
+                              template_value: lpddr_dmem.bin
+                              format: file
+                            lpddr_dmem_qb:
+                              type: string
+                              title: LPDDR memory data for quick boot
+                              description: Data for LPDDR4/5 memory in quick boot.
+                              template_value: lpddr_dmem_qb.bin
+                              format: file
+                            oei_ddr:
+                              type: string
+                              title: OEI
+                              description: OEI - Optional Executable Image firmware
+                              template_value: oei_ddr.bin
+                              format: file
+                            qb_data:
+                              type: string
+                              title: Quick Boot Data
+                              description: QB data - Optional Quick boot data, if defined a new empty record will be added just behing DDR FW entry
+                              template_value: qb_data.bin
+                              format: file
+
+                        - type: object
+                          template_title: OEI TCM Settings (ECC configuration etc.)
+                          image_identifier: oei_tcm
+                          skip_in_template: True
+                          description: OEI TCM settings (ECC etc.)
+                          required: [oei_tcm]
+                          properties:
+                            oei_tcm:
+                              type: string
+                              title: OEI TCM FW
+                              description: OEI(Optional Executable Image) TCM settings binary file.
+                              template_value: oei_tcm.bin
+                              format: file
+
+                        - type: object
+                          template_title: Double Authentication of NXP Firmwares
+                          image_identifier: double_authentication
+                          skip_in_template: True
+                          description: Double Authentication of NXP firmwares
+                          required: [double_authentication]
+                          properties:
+                            double_authentication:
+                              type: string
+                              title: NXP ELE FW
+                              description: NXP ELE firmware, that should be also signed by OEM keys binary file.
+                              template_value: nxp_ele.bin
+                              format: file
+
+                        - type: object
+                          template_title: Boot system manager
+                          image_identifier: system_manager
+                          skip_in_template: True
+                          description: System booting image
+                          required: [system_manager]
+                          properties:
+                            system_manager:
+                              type: string
+                              title: Boot system manager
+                              description: System manager booting image
+                              template_value: system_manager.bin
+                              format: file
+
+                        - type: object
+                          template_title: Cortex M7 additional application
+                          image_identifier: cortex_m7_app
+                          skip_in_template: True
+                          description: Cortex M7 additional application
+                          required: [cortex_m7_app]
+                          properties:
+                            cortex_m7_app:
+                              type: string
+                              title: Cortex M7 additional application
+                              description: Cortex M7 additional application
+                              template_value: cortex_m7_app.bin
+                              format: file
+
+                        - type: object
+                          template_title: Cortex M7 second core additional application
+                          image_identifier: cortex_m7_2_app
+                          skip_in_template: True
+                          description: Cortex M7 second core additional application
+                          required: [cortex_m7_2_app]
+                          properties:
+                            cortex_m7_2_app:
+                              type: string
+                              title: Cortex M7 second core additional application
+                              description: Cortex M7 second core additional application
+                              template_value: cortex_m7_2_app.bin
+                              format: file
+
+                        - type: object
+                          template_title: Cortex M33 second core additional application
+                          image_identifier: cortex_m33_2_app
+                          skip_in_template: True
+                          description: Cortex M33 second core additional application
+                          required: [cortex_m33_2_app]
+                          properties:
+                            cortex_m33_2_app:
+                              type: string
+                              title: Cortex M33 second core additional application
+                              description: Cortex M33 second core additional application
+                              template_value: cortex_m33_2_app.bin
+                              format: file
+
+                        - type: object
+                          template_title: TEE Trusted Execution Environment
+                          image_identifier: tee
+                          skip_in_template: True
+                          description:
+                            A TEE (Trusted Execution Environment) is a trusted OS running in some
+                            secure environment, for example, TrustZone on ARM CPUs, or a separate
+                            secure co-processor etc. A TEE driver handles the details needed to
+                            communicate with the TEE.
+                          required: [tee]
+                          properties:
+                            tee:
+                              type: string
+                              title: TEE
+                              description: TEE - Trusted Execution Environment binary
+                              template_value: tee.bin
+                              format: file
+
+                        - type: object
+                          template_title: uPower
+                          image_identifier: upower
+                          skip_in_template: True
+                          description: uPower firmware
+                          required: [upower]
+                          properties:
+                            upower:
+                              type: string
+                              title: uPower
+                              description: uPower firmware
+                              template_value: upower.bin
+                              format: file
+
+                        - type: object
+                          template_title: MCU Image
+                          image_identifier: mcu
+                          skip_in_template: True
+                          description: MCU Image
+                          required: [mcu]
+                          properties:
+                            mcu:
+                              type: string
+                              title: MCU Image
+                              description: MCU Image
+                              template_value: m33_image.bin
+                              format: file
+
+
+                        - type: object
+                          template_title: SPL
+                          image_identifier: spl
+                          skip_in_template: True
+                          description: U-Boot SPL (Secondary program loader)
+                          required: [spl]
+                          properties:
+                            spl:
+                              type: string
+                              title: SPL
+                              description: SPL firmware
+                              template_value: spl.bin
+                              format: file
+
+                        - type: object
+                          template_title: Uboot ATF
+                          image_identifier: atf
+                          skip_in_template: True
+                          description: U-Boot ATF container definition
+                          required: [atf]
+                          properties:
+                            atf:
+                              type: string
+                              title: ATF binary
+                              description: ARM Trusted Firmware binary file.
+                              template_value: bl31.bin
+                              format: file
+
+                        - type: object
+                          template_title: Uboot
+                          image_identifier: uboot
+                          skip_in_template: True
+                          description: U-Boot container definition
+                          required: [uboot]
+                          properties:
+                            uboot:
+                              type: string
+                              title: U-Boot binary
+                              description: U-Boot binary file.
+                              template_value: u-boot.bin
+                              format: file
+
+                        - type: object
+                          template_title: V2X Dummy
+                          image_identifier: v2x_dummy
+                          skip_in_template: True
+                          description: V2X dummy image container definition
+                          required: [v2x_dummy]
+                          properties:
+                            v2x_dummy:
+                              type: boolean
+                              title: V2X Dummy
+                              description: If Present, V2X dummy image will be added to Image Array Entry (no data record)
+                              template_value: True
+
+                        - type: object
+                          template_title: General Image Entry
+                          image_identifier: general_image
+                          description: General Image Entry
+                          required:
+                            - load_address
+                            - entry_point
+                            - image_type
+                            - core_id
+                            - is_encrypted
+                          properties:
+                            image_path:
+                              type: string
+                              title: Image path
+                              description:
+                                Path to image binary (absolute/relative). In case that only Image Array entry without any data image is needed, Just do not use the image path.
+                                In case that the image size in container should be aligned differently then SPSDK do (4 bytes for ELE images, 1 byte otherwise), there is hidden option
+                                'image_size_alignment' where could be override image size by any custom value.
+                              format: file
+                              template_value: my_image.bin
+                            image_size_alignment:
+                              type: number
+                              title: Image size alignment.
+                              description: As a standard is use 1 byte in general and for ELE image 4 bytes.
+                              template_value: 1
+                              skip_in_template: True
+                            image_offset:
+                              type: [number, string]
+                              title: Image offset in AHAB container
+                              description:
+                                Offset in bytes from start of container header to beginning of the image.
+                                Zero value means automatic placing the image with proper alignment after previous one, this is recommended
+                                for serial_downloader mode.
+                                In case of XiP type of AHAB image, the load_address and entry_point must correspond to this values.
+                                Example of setting of load_address - AHAB_IMAGE_ADDRESS+IMAGE_OFFSET=LOAD_ADDRESS.
+                                The Booting core images must be located after the other ones
+                              format: number
+                              template_value: 0
+                              default: 0
+                            load_address:
+                              type: [number, string]
+                              title: Image destination address
+                              description:
+                                Address the image is written to in memory (absolute address in
+                                system memory).
+                              format: number
+                              template_value: "0x1FFC_0000"
+                            entry_point:
+                              type: [number, string]
+                              title: Image entry point
+                              description:
+                                Image entry point (absolute address). Valid only for executable
+                                image types.
+                              format: number
+                              template_value: "0x1FFC_0000"
+                            image_type:
+                              type: string
+                              title: Image type
+                              description: Kind of image.
+                              template_value: executable
+                            core_id:
+                              type: string
+                              title: Core ID
+                              description: Defines the core the image is dedicated for. Not all cores are supported for all families.
+                              template_value: cortex-m33
+                            is_encrypted:
+                              type: boolean
+                              title: Image encryption
+                              description: Determines, whether image is encrypted or not.
+                              template_value: false
+                            boot_flags:
+                              type: [number, string]
+                              title: Boot flags
+                              description: Boot flags controlling SCFW boot.
+                              template_value: 0x00
+                            meta_data_start_cpu_id:
+                              type: [number, string]
+                              title: Start CPU ID
+                              description: Resource ID of CPU to be started
+                              format: number
+                              template_value: 0
+                            meta_data_mu_cpu_id:
+                              type: [number, string]
+                              title: CPU memory unit start ID
+                              description: Resource ID of the MU associated with the CPU
+                              format: number
+                              template_value: 0
+                            meta_data_start_partition_id:
+                              type: [number, string]
+                              title: Start partition ID
+                              description: Partition ID of the partition to start
+                              format: number
+                              template_value: 0
+                            hash_type:
+                              type: string
+                              title: Images HASH type
+                              description: HASH type of image.
+                              enum: []
+                              template_value: sha512
+                            gap_after_image:
+                              type: number
+                              title: Size of gap
+                              description: Size of empty gap just behind the image in AHAB container
+                              template_value: 0
+                              default: 0
+                              skip_in_template: True
+                  srk_table:
+                    type: object
+                    title: SRK Table
+                    template_title: Configuration of AHAB SRK table
+                    description: "SRK (Super Root key) table definition."
+                    required: [srk_array]
+                    properties:
+                      flag_ca:
+                        type: boolean
+                        title: CA Flag
+                        description: CA Flag is used by HAB to indicate if the SRK is allowed to sign other keys
+                        template_value: false
+                      srk_array:
+                        type: array
+                        title: Super Root Key (SRK) table
+                        description:
+                          "Table containing the used SRK records. All SRKs must be of the same
+                          type. Supported signing algorithms are: RSA-PSS, ECDSA, Dilithium or SM2. Supported hash algorithms:
+                          sha256, sha384, sha512, sha3_256, sha3_384, sha3_512, sm3. Supported key sizes/curves: prime256v1, sec384r1, sec512r1,
+                          rsa2048, rsa4096, dilithium3, sm2. Certificate may be of Certificate Authority. Dilithium algorithms are supported just
+                          in new type of AHAB container"
+                        minItems: 4
+                        maxItems: 4
+                        items:
+                          type: string
+                          title: SRK key
+                          description: Path to SRK Key file.
+                          format: file
+                          template_value:
+                            - my_srk_public_key0.pub
+                            - my_srk_public_key1.pub
+                            - my_srk_public_key2.pub
+                            - my_srk_public_key3.pub
+                      srk_table_#2:
+                        type: object
+                        title: Second SRK Table
+                        template_title: Configuration of AHAB SRK table in case that the double signing (ECC + PQC)
+                        required: [srk_array]
+                        skip_in_template: True
+                        properties:
+                          flag_ca:
+                            type: boolean
+                            title: CA Flag
+                            description: CA Flag is used by HAB to indicate if the SRK is allowed to sign other keys
+                            template_value: false
+                          srk_array:
+                            type: array
+                            title: Super Root Key (SRK) table
+                            description:
+                              "Table containing the used SRK Dilithium records. All SRKs must be of the same
+                              type. Supported signing algorithms are: Dilithium level 3. Supported hash algorithms:
+                              sha3_256, sha3_384, sha3_512. Certificate may be of Certificate Authority."
+                            minItems: 4
+                            maxItems: 4
+                            items:
+                              type: string
+                              title: SRK key
+                              description: Path to SRK Key file.
+                              format: file
+                              template_value:
+                                - my_srk_public_key0.pub
+                                - my_srk_public_key1.pub
+                                - my_srk_public_key2.pub
+                                - my_srk_public_key3.pub
+                  certificate:
+                    type: string
+                    title: The AHAB certificate
+                    template_title: Optional configuration of AHAB Container Certificate (if not used, erase the section)
+                    description:
+                      The file that contains AHAB certificate. It could be used already prepared binary form signed by SRK, or it is possible to
+                      use configuration YAML file of certificate and the AHAB export process it will export it itself.
+                    format: file
+                    template_value: my_ahab_certificate.bin
+
+                  blob:
+                    type: object
+                    title: Encryption blob
+                    description: Encryption blob container definition
+                    template_title: Optional configuration of AHAB Container Encryption blob (if not used, erase the section)
+                    required: [key_identifier, dek_key_size, dek_key]
+                    properties:
+                      key_identifier:
+                        type: [number, string]
+                        title: Key identifier
+                        description: The key identifier that has been used to generate DEK keyblob.
+                        format: number
+                        template_value: 0
+                      dek_key_size:
+                        type: [number, string]
+                        title: DEK key size
+                        description: Data Encryption key size. Used for AES CBC-MAC (128/192/256 size)
+                        enum: [128, 192, 256]
+                        format: number
+                        template_value: 128
+                      dek_key:
+                        type: string
+                        title: DEK key
+                        description: Data Encryption key. Used for AES CBC-MAC (128/192/256 size). The HEX format is accepted
+                        template_value: my_dek_key.txt
+                      dek_keyblob:
+                        type: string
+                        title: DEK keyblob
+                        description: Wrapped Data Encryption key. Used for AES CBC-MAC (128/192/256 size). The HEX format is accepted. If NOT used, the empty keyblob is inserted into container and need to be updated later.
+                        template_value: my_wrapped_key.txt
+
+ahab_certificate:
+  type: object
+  title: Configuration of AHAB Container Certificate
+  description: Certificate container definition."
+  required: [public_key_0, permissions]
+  oneOf:
+    - required: [signing_key_0]
+    - required: [signature_provider_0]
+  properties:
+    permissions:
+      type: array
+      title: Certificate permissions
+      description: Permissions used to indicate what a certificate can be used for
+      items:
+        type: string
+        enum:
+          - container
+          - debug
+          - secure_fuse
+          - return_life_cycle
+          - patch_fuses
+        template_value:
+          - container
+          - debug
+    permission_data:
+      type: [number, string]
+      title: Permission data
+      description: (Optional) Complementary information for debug auth feature 96-bits
+      format: number
+      template_value: "0x00001111aaaabbbb22223333"
+    uuid:
+      type: [number, string]
+      title: UUID
+      description: (Optional) 128-bit unique identifier
+      format: number
+      template_value: "0x00001111aaaabbbb22223333ccccdddd"
+    fuse_version:
+      type: [number, string]
+      title: Fuse version
+      description:
+        The value must be equal or greater than the version stored in fuses
+        to allow loading this container.
+      format: number
+      template_value: 0
+    public_key_0:
+      type: string
+      title: Certificate public key 0
+      description: Path to Public key 0 file.
+      format: file
+      template_value: my_cert_public_key0.pem
+    signing_key_0:
+      type: string
+      title: SRK container signing key 0
+      description: Private key 0 used for sign the certificate container.
+      format: file
+      template_value: my_srk_signing_key0.pem
+    signature_provider_0:
+      type: string
+      title: Signature Provider 0
+      description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'. The signature provider could be used instead of definition of 'signing_key'.
+      template_value: type=file;file_path=my_prv_key0.pem
+    public_key_1:
+      type: string
+      title: Certificate public key 1
+      description: Path to Public key 1 file.
+      format: file
+      template_value: my_cert_public_key1.pem
+    signing_key_1:
+      type: string
+      title: SRK container signing key 1
+      description: Private key 1 used for sign the certificate container.
+      format: file
+      template_value: my_srk_signing_key1.pem
+    signature_provider_1:
+      type: string
+      title: Signature Provider 1
+      description: Signature provider configuration in format 'type=<identifier>;<key1>=<value1>;<key2>=<value2>'. The signature provider could be used instead of definition of 'signing_key'.
+      template_value: type=file;file_path=my_prv_key1.pem

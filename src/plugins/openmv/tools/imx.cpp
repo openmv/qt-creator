@@ -67,8 +67,17 @@ static bool imxResolvePython(Utils::FilePath *python, Utils::FilePath *spsdk)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
-        *python = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/mac-aarch64"));
+            *python = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
+        else
+        {
+            *spsdk = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+            *python = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -546,8 +555,17 @@ bool imxGetDevice(QJsonObject &obj)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
-        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac-aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
+        else
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -762,8 +780,17 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
-        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac-aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
+        else
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -1737,8 +1764,17 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
-        binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac-aarch64"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac-aarch64/bin/python"));
+        }
+        else
+        {
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("spsdk/mac"));
+            binary = Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

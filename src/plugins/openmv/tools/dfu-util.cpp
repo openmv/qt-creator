@@ -106,7 +106,15 @@ QList<QString> getDevices()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx-aarch64/dfu-util"));
+        }
+        else
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+        }
         process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("-l")));
         process.runBlocking(timeout, Utils::EventLoopMode::On, QEventLoop::AllEvents);
     }
@@ -194,6 +202,11 @@ static Utils::FilePath dfuUtilBinary()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            return Core::ICore::resourcePath(QStringLiteral("dfu-util/osx-aarch64/dfu-util"));
+        }
         return Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
     }
     else if(Utils::HostOsInfo::isLinuxHost())
@@ -683,7 +696,15 @@ void downloadFirmware(const QString &details,
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx-aarch64/dfu-util"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("dfu-util/osx/dfu-util"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

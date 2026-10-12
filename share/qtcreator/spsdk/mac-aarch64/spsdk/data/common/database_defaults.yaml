@@ -1,0 +1,429 @@
+# Copyright 2023-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+revisions: {}
+latest: latest
+
+# General MCU information
+info:
+  use_in_doc: True # Include this MCU in generated documentation
+  purpose: General Purpose Processor
+  # Web page of MCU representative
+  web: https://www.nxp.com
+  memory_map: {} # Memory map basic info
+  isp:
+    rom:
+      protocol: mboot # Possible options:[mboot, sdps, sdp]
+      interfaces: ["uart", "usb", "spi", "i2c"]
+    flashloader: {}
+
+features:
+  # ======== Communication buffer section ========
+  comm_buffer:
+    address: 0x2000_8000
+    size: 0x1000
+    tool: blhost
+
+  # ======== Fuses description section ========
+  fuses:
+    tool: blhost
+    reg_spec: fuses.json
+    grouped_registers: []
+
+  # ======== Blhost section ========
+  blhost: {}
+  #   properties:
+  #     0: list-properties
+  #     1: current-version
+  #     2: available-peripherals
+  #     3: flash-start-address
+  #     4: flash-size-in-bytes
+  #     5: flash-sector-size
+  #     6: flash-block-count
+  #     7: available-commands
+  #     8: check-status
+  #     9: reserved
+  #     10: verify-writes
+  #     11: max-packet-size
+  #     12: reserved-regions
+  #     13: reserved_1
+  #     14: ram-start-address
+  #     15: ram-size-in-bytes
+  #     16: system-device-id
+  #     17: security-state
+  #     18: unique-device-id
+  #     19: flash-fac-support
+  #     20: flash-access-segment-size
+  #     21: flash-access-segment-count
+  #     22: flash-read-margin
+  #     23: qspi/otfad-init-status
+  #     24: target-version
+  #     25: external-memory-attributes
+  #     26: reliable-update-status
+  #     27: flash-page-size
+  #     28: irq-notify-pin
+  #     29: pfr-keystore_update-opt
+  #     30: byte-write-timeout-ms
+  #     31: fuse-locked-status
+
+  # ======== Certificate block section ========
+  cert_block:
+    sub_features: [based_on_cert1]
+    rot_type: "cert_block_1"
+    isk_data_alignment: 4
+    isk_data_limit: 96
+
+  # ======== DAT section ========
+  dat:
+    socc: 0 # SOCC identification
+    based_on_ele: False # Flag if the implementation of DAT is based on EdgeLock Enclave
+    # famode_cert: [] # List of Fault analysis Mode certificates (names of MBI classes)
+    # famode_cfg_defaults: {} # Dictionary of default values of standard MBI members for FAmode image
+
+    dmbox_ap_ix: -1 # Typical Index of debug mailbox access port is 2
+    mem_ap_ix: -1 # Typical Index of debug mailbox access port is 0
+    # non_standard_statuses: # dictionary of non standard return statuses from various commands
+    #   2:  # Command get_crp_level
+    #     0xFFFF_FFFF: ROP_LEVEL0
+    #     0xEEBA_04C3: ROP_LEVEL1
+    #     0x4939_8D8B: ROP_LEVEL2
+    #     0xB0AB_B703: ROP_LEVEL3
+
+  # ======== MBI section ========
+  mbi:
+    mbi_classes: {}
+    images: {}
+
+  # ======== HABv4 section ========
+  hab: {}
+
+  # ======== AHAB section ========
+  ahab:
+    containers_max_cnt: 2
+    oem_images_max_cnt: 8
+    valid_offset_minimal_alignment: 4
+    container_image_size_alignment: 512 # To satisfy SD card blocks
+    container_types: [1] # Supported container types
+    core_ids: {}
+    image_types: {}
+    image_types_mapping: {}
+    allow_empty_hash: False # Some chips allow empty image hash in OEM Open LC
+    # image_types: Keep it here as a template for new NPI
+    #     CSF: [0x01, csf, CSF Image]
+    #     SCD: [0x02, scd, SCD Image]
+    #     EXECUTABLE: [0x03, executable, Executable Image]
+    #     DATA: [0x04, data, Data Image]
+    #     DCD_IMAGE: [0x05, dcd_image, DCD Image]
+    #     ELE: [0x06, ele, EdgeLock Enclave Image]
+    #     PROVISIONING_IMAGE: [0x07, provisioning_image, Provisioning Image]
+    #     DEK_VALIDATION_FCB_CHK: [0x08, dek_validation_fcb_chk, DEK validation FCB check Image]
+    #     PROVISIONING_DATA: [0x09, provisioning_data, Provisioning data Image]
+    #     EXECUTABLE_FAST_BOOT_IMAGE: [0x0A, executable_fast_boot_image, Executable fast boot Image]
+    #     V2X_PRIMARY: [0x0B, v2x_primary, V2X primary Image]
+    #     V2X_SECONDARY: [0x0C, v2x_secondary, V2X secondary Image]
+    #     V2X_ROM_PATCH: [0x0D, v2x_rom_patch, V2X rom patch Image]
+    #     V2X_DUMMY: [0x0E, v2x_dummy, V2X dummy Image]
+
+    double_authentication_load_address: 0
+    double_authentication_core_id: 0
+    double_authentication_image_type: 0
+
+    extra_containers: []
+    fuses:
+      _name: "AHAB SRK"
+      srkh: "__srk_hash" # SRK hash fuse
+
+  # ======== PFR section ========
+  pfr:
+    sub_features: [cmpa, cfpa]
+    cmpa:
+      erase_method: write_memory
+
+  # ======== IFR section ========
+  ifr:
+    sub_features: [romcfg, cmactable]
+
+  # ======== Bootable image section ========
+  bootable_image:
+    mem_types: {}
+
+  # ======== FCB section ========
+  fcb:
+    mem_types: {}
+
+  # ======== XMCD section ========
+  xmcd:
+    header:
+      reg_spec: ../../common/xmcd/flexspi_ram_header.json
+    mem_types: {}
+    fuses: {}
+
+  # ======== BEE section ========
+  bee: {}
+
+  # ======== IEE section ========
+  iee:
+    key_blob_rec_size: 96
+    key_blob_max_cnt: 4
+    key_blob_min_cnt: 4
+    has_kek_fuses: False
+    additional_template: []
+    additional_template_text: ""
+    generate_keyblob: True
+
+  # ======== OTFAD section ========
+  otfad:
+    key_blob_rec_size: 64
+    key_blob_max_cnt: 4
+    key_blob_min_cnt: 4
+    byte_swap: false
+    keyblob_byte_swap_cnt: 0
+    sb_21_supported: True
+    has_kek_fuses: False
+    additional_template: []
+    additional_template_text: ""
+    supports_key_scrambling: False
+    reversed_scramble_key: False
+
+  # ======== Secure binary v2.1 section ========
+  sb21:
+    keyblobs: true
+    supported_commands: []
+
+  # ======== Secure binary v3.1 section ========
+  sb31:
+    supported_commands: []
+    key_wraps_version: 1
+
+  # ======== Secure binary vX section ========
+  sbx: {}
+
+  # ======== Shadow registers section ========
+  shadow_regs:
+    inverted_regs: {}
+    computed_fields: {}
+    reset_type: hw_reset # possible options: [hw_reset, nvic_reset]
+
+  # ======== Device Hardware Security Module (HSM) section ========
+  devhsm:
+    supported_commands:
+      - erase
+      - load
+      - programFuses
+      - programIFR
+      - copy
+      - loadKeyBlob
+      - configureMemory
+      - fillMemory
+      - checkFwVersion
+    flag: 0x1
+    key_blob_offset: 0x4
+    key_blob_command_position: -1
+    devhsm_class: DevHsm
+
+  # ======== Trust provisioning section ========
+  tp:
+    erase_memory: false
+    need_tp_fw: true
+    need_cfpa_update: true
+    need_revoke_update: true
+    version_offset: 0x4
+    revoke_offset: 0x18
+    max_oem_cert_size: 1000
+    use_prov_data: false
+    key_flags_version: 0
+    die_id_cert_version: 0
+
+  # ======== Trust Zone section ========
+  tz:
+    reg_spec: tz.yaml
+
+  # ======== EdgeLock Enclave section ========
+  ele:
+    ele_device: uboot_fastboot
+
+  # ======== Memory configuration ========
+  memcfg:
+    data_file: ../../common/memcfg/memcfg_data.yaml
+    peripherals:
+      flexspi_nor:
+        reg_spec: ../../common/memcfg/opt_word_flexspi_nor.json
+        region_number: 0x09
+        ow_counts_rule: OptionSize
+        runtime_instance: True
+        mem_type: nor
+        interfaces: [octal_spi, quad_spi, hyper_flash]
+        instances: []
+      xspi_nor:
+        reg_spec: ../../common/memcfg/opt_word_xspi_nor.json
+        region_number: 0x0b
+        ow_counts_rule: OptionSize
+        runtime_instance: True
+        mem_type: nor
+        interfaces: [octal_spi, quad_spi]
+        instances: []
+      flexspi_nand:
+        reg_spec: ../../common/memcfg/opt_word_flexspi_nand.json
+        region_number: 0x101
+        ow_counts_rule: OptionSize
+        runtime_instance: True
+        mem_type: nand
+        interfaces: [quad_spi]
+        instances: []
+      semc_nor:
+        reg_spec: ../../common/memcfg/opt_word_semc_nor.json
+        region_number: 0x08
+        ow_counts_rule: AcTimingMode
+        mem_type: nor
+        interfaces: [parallel]
+        instances: []
+      semc_nand:
+        reg_spec: ../../common/memcfg/opt_word_semc_nand.json
+        region_number: 0x100
+        ow_counts_rule: All
+        mem_type: nand
+        interfaces: [parallel]
+        instances: []
+      spi_nor:
+        reg_spec: ../../common/memcfg/opt_word_spi_nor.json
+        region_number: 0x110
+        ow_counts_rule: OptionSize
+        mem_type: nor
+        interfaces: [spi]
+        instances: []
+      # spi_nand:
+      #   region_number: 0x101
+      #   instances: []
+      mmc:
+        reg_spec: ../../common/memcfg/opt_word_mmc.json
+        region_number: 0x121
+        ow_counts_rule: All
+        mem_type: sd
+        interfaces: [instance_0, instance_1, instance_2, instance_3]
+        instances: []
+      sd:
+        reg_spec: ../../common/memcfg/opt_word_sd.json
+        region_number: 0x120
+        ow_counts_rule: All
+        mem_type: sd
+        interfaces: [instance_0, instance_1, instance_2, instance_3]
+        instances: []
+    # XIP Memories in internal memory address range
+    # mem_region_internal = 0x0  # Internal memory (include all on chip memory)
+    # mem_region_quad_spi0 = 0x1  # Quad SPI memory 0
+    # mem_region_ifr0_fuse = 0x4  # Nonvolatile information register 0. Only used by SB loader.
+    # mem_region_semc_nor = 0x8  # SEMC Nor memory
+    # mem_region_flexspi_nor = 0x9  # Flex SPI Nor memory
+    # mem_region_spifi_nor = 0xA  # SPIFI Nor memory
+    # mem_region_flash_execute_only = 0x10  # Execute-only region on internal Flash
+
+    # # NON-XIP Memories in external memory address range
+    # mem_region_semc_nand = 0x100 + 0x0  # SEMC NAND memory
+    # mem_region_spi_nand = 0x100 + 0x1  # SPI NAND memory
+    # mem_region_spi_nor_eeprom = 0x100 + 0x10  # SPI NOR/EEPROM memory
+    # mem_region_i2c_nor_eeprom = 0x100 + 0x11  # I2C NOR/EEPROM memory
+    # mem_region_sd = 0x100 + 0x20  # eSD, SD, SDHC, SDXC memory Card
+    # mem_region_mmc = 0x100 + 0x21  # MMC, eMMC memory Card
+
+  # ======== Wireless Power section ========
+  wpc:
+    insert_puc_only: false
+    need_reset: false
+    need_address_adjust: false
+    check_lifecycle: 0
+
+  # ======== Misc signing section ========
+  signing:
+    pss_padding: false
+
+  # ======== EL2GO TP section ========
+  el2go_tp:
+    el2go_interface: mboot
+    el2go_name: null
+    prov_method: null
+    use_additional_data: false
+    fw_load_address: -1
+    fw_read_address: -1
+    user_data_address: -1
+    ignored_otp: [] # format: index of a fuse (not uid, just the number)
+    ignored_otp_ranges: [] # format: [range1_start, range1_end, range2_start, range2_end,...]
+    clean_method: "none"
+    # format: "method1=value1[,value2];method2=value3;..." or "none" (default)
+    # methods are in secure_object.py:ValidationMethod
+    validation_method: "none"
+    uuid_fuse_index: "6 0 4"
+
+  # ======== LPCPROG section ========
+  lpcprog:
+    part_ids: {}
+    buffer_address: 0x1000_0800
+    buffer_size: 0x400
+    page_size: 0x40
+    sector_size: 0x400
+
+  # ======== DICE configuration ========
+  dice:
+    had_length: 48
+    had_members:
+      [
+        ELS_AS_CFG0,
+        ELS_AS_CFG1,
+        ELS_AS_CFG2,
+        ELS_AS_ST0,
+        ELS_AS_ST1,
+        ELS_AS_ST2,
+        ELS_AS_FLAG0,
+      ]
+    critical_had_members: [ELS_AS_CFG0, ELS_AS_CFG1, ELS_AS_CFG2]
+    rtf_length: 32
+    ca_puk_length: 64
+    rkth_length: 64
+    need_reset: false
+
+  # ======== Fastboot ========
+  fastboot:
+    address: 0x8280_0000
+    size: 0x2000_0000
+
+  # ======== nxpuuu ==========
+  nxpuuu:
+    boot_devices:
+      emmc:
+        script: ../../common/uuu/emmc_burn_loader.lst
+        arguments: [_flash.bin, _image]
+      emmc_all:
+        script: ../../common/uuu/emmc_burn_all.lst
+        arguments: [_flash.bin, _image]
+      fat_write:
+        script: ../../common/uuu/fat_write.lst
+        arguments: [_image, _device, _partition, _filename]
+      nand:
+        script: ../../common/uuu/nand_burn_loader.lst
+        arguments: [_flash.bin, _image]
+      nvme_all:
+        script: ../../common/uuu/nvme_burn_all.lst
+        arguments: [_flash.bin, _image]
+      qspi:
+        script: ../../common/uuu/qspi_burn_loader.lst
+        arguments: [_flash.bin, _image]
+      sd:
+        script: ../../common/uuu/sd_burn_loader.lst
+        arguments: [_flash.bin, _image]
+      sd_all:
+        script: ../../common/uuu/sd_burn_all.lst
+        arguments: [_flash.bin, _image]
+      spi_nand:
+        script: ../../common/uuu/fspinand_burn_loader.lst
+        arguments: [_flash.bin, _image]
+      spl:
+        script: ../../common/uuu/spl_boot.lst
+        arguments: [_flash.bin]
+
+  # ======== BCA section ========
+  bca:
+    reg_spec: bca.json
+
+  # ======== FCF section ========
+  fcf:
+    reg_spec: fcf.json

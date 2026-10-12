@@ -73,7 +73,15 @@ QList<QString> picotoolGetDevices()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        command = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/osx-aarch64/picotool"));
+        }
+        else
+        {
+            command = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        }
         process.setCommand(Utils::CommandLine(command, QStringList() << QStringLiteral("info")));
         process.runBlocking(timeout, Utils::EventLoopMode::On);
     }
@@ -152,7 +160,15 @@ void picotoolReset(QString &command, Utils::Process &process)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx-aarch64/picotool"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -305,7 +321,15 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::P
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx-aarch64/picotool"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("picotool/osx/picotool"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

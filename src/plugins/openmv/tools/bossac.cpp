@@ -62,7 +62,15 @@ void bossacRunBootloader(Utils::Process &process, const QString &device)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx-aarch64/bossac"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -106,7 +114,15 @@ void bossacReset(Utils::Process &process, const QString &device)
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx-aarch64/bossac"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {
@@ -263,7 +279,15 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Pro
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx-aarch64/bossac"));
+        }
+        else
+        {
+            binary = Core::ICore::resourcePath(QStringLiteral("bossac/osx/bossac"));
+        }
     }
     else if(Utils::HostOsInfo::isLinuxHost())
     {

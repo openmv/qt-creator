@@ -1,0 +1,23 @@
+# Copyright 2023-2024 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+sr_device_back_compatible:
+  type: object
+
+  properties:
+    device:
+      type: string
+      title: MCU family
+      description: MCU family name.
+      enum: []
+      template_value: rt5xx
+      skip_in_template: True
+
+sr_registers:
+  type: object
+  required: [registers]
+  properties:
+    registers:
+      type: object
+      title: Shadow registers Settings
