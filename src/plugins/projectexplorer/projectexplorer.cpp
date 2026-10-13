@@ -359,11 +359,17 @@ static std::optional<OpenTerminalParameters> runConfigTerminalParameters(
 
 static bool hideBuildMenu()
 {
+    // OPENMV-DIFF //
+    return true;
+    // OPENMV-DIFF //
     return ICore::settings()->value(Constants::SETTINGS_MENU_HIDE_BUILD, false).toBool();
 }
 
 static bool hideDebugMenu()
 {
+    // OPENMV-DIFF //
+    return true;
+    // OPENMV-DIFF //
     return ICore::settings()->value(Constants::SETTINGS_MENU_HIDE_DEBUG, false).toBool();
 }
 
@@ -734,8 +740,10 @@ public:
     CopyDirectoryStepFactory m_copyDirectoryFactory;
     ProcessStepFactory m_processStepFactory;
 
-    AllProjectsFind m_allProjectsFind;
-    FilesInAllProjectsFind m_filesInAllProjectsFind;
+    // OPENMV-DIFF //
+    // AllProjectsFind m_allProjectsFind;
+    // FilesInAllProjectsFind m_filesInAllProjectsFind;
+    // OPENMV-DIFF //
 
     CustomExecutableRunConfigurationFactory m_customExecutableRunConfigFactory;
     ProcessRunnerFactory m_customExecutableRunWorkerFactory{{Constants::CUSTOM_EXECUTABLE_RUNCONFIG_ID}};
@@ -921,10 +929,12 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     addTestCreator(createXcodebuildParserTest);
 #endif
 
-    setupGccToolchains();
-    setupMsvcToolchain();
-    setupClangClToolchain();
-    setupCustomToolchain();
+    // OPENMV-DIFF //
+    // setupGccToolchains();
+    // setupMsvcToolchain();
+    // setupClangClToolchain();
+    // setupCustomToolchain();
+    // OPENMV-DIFF //
     setupWindowsAppSdkSettings();
 
     setupProjectTreeWidgetFactory();
@@ -962,7 +972,11 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     qRegisterMetaType<ProjectExplorer::RunControl *>();
     qRegisterMetaType<ProjectExplorer::DeployableFile>("ProjectExplorer::DeployableFile");
 
-    handleCommandLineArguments(arguments);
+    // OPENMV-DIFF //
+    // handleCommandLineArguments(arguments);
+    // OPENMV-DIFF //
+    Q_UNUSED(arguments)
+    // OPENMV-DIFF //
 
     dd->m_toolChainManager = new ToolchainManager;
 
@@ -1242,21 +1256,27 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     // open action
     dd->m_loadAction = new QAction(Tr::tr("Open Project..."), this);
     cmd = ActionManager::registerAction(dd->m_loadAction, Core::Constants::OPEN_PROJECT);
-    if (!HostOsInfo::isMacHost())
-        cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+O")));
+    // OPENMV-DIFF //
+    // if (!HostOsInfo::isMacHost())
+    //     cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+O")));
+    // OPENMV-DIFF //
     msessionContextMenu->addAction(cmd, Constants::G_SESSION_FILES);
 
     // load workspace action
     dd->m_loadWorkspaceAction = new QAction(Tr::tr("Open Workspace..."), this);
     cmd = ActionManager::registerAction(dd->m_loadWorkspaceAction, Constants::LOADWORKSPACE);
-    mfile->addAction(cmd, Core::Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // mfile->addAction(cmd, Core::Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
     msessionContextMenu->addAction(cmd, Constants::G_SESSION_FILES);
 
     // Default open action
     dd->m_openFileAction = new QAction(Tr::tr("Open File"), this);
     cmd = ActionManager::registerAction(dd->m_openFileAction, Constants::OPENFILE,
                        projectTreeContext);
-    mfileContextMenu->addAction(cmd, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // mfileContextMenu->addAction(cmd, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
 
     dd->m_searchOnFileSystem = new QAction(Core::FileUtils::msgFindInDirectory(), this);
     cmd = ActionManager::registerAction(dd->m_searchOnFileSystem, Constants::SEARCHONFILESYSTEM, projectTreeContext);
@@ -1329,7 +1349,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
         ActionManager::createMenu(Constants::M_RECENTPROJECTS);
     mrecent->menu()->setTitle(Tr::tr("Recent P&rojects"));
     mrecent->setOnAllDisabledBehavior(ActionContainer::Show);
-    mfile->addMenu(mrecent, Core::Constants::G_FILE_RECENT);
+    // OPENMV-DIFF //
+    // mfile->addMenu(mrecent, Core::Constants::G_FILE_RECENT);
+    // OPENMV-DIFF //
     connect(
         m_instance,
         &ProjectExplorerPlugin::recentProjectsChanged,
@@ -1342,7 +1364,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     cmd = ActionManager::registerAction(dd->m_unloadAction, Constants::UNLOAD);
     cmd->setAttribute(Command::CA_UpdateText);
     cmd->setDescription(dd->m_unloadAction->text());
-    mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
+    // mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
 
     dd->m_closeProjectFilesActionFileMenu = new Action(
                 Tr::tr("Close All Files in Project"), Tr::tr("Close All Files in Project \"%1\""),
@@ -1351,20 +1375,26 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
                                         "ProjectExplorer.CloseProjectFilesFileMenu");
     cmd->setAttribute(Command::CA_UpdateText);
     cmd->setDescription(dd->m_closeProjectFilesActionFileMenu->text());
-    mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
+    // mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
 
     ActionContainer *munload =
         ActionManager::createMenu(Constants::M_UNLOADPROJECTS);
     munload->menu()->setTitle(Tr::tr("Close Pro&ject"));
     munload->setOnAllDisabledBehavior(ActionContainer::Show);
-    mfile->addMenu(munload, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
+    // mfile->addMenu(munload, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
     connect(mfile->menu(), &QMenu::aboutToShow,
             dd, &ProjectExplorerPluginPrivate::updateUnloadProjectMenu);
 
     // unload session action
     dd->m_closeAllProjects = new QAction(Tr::tr("Close All Projects and Editors"), this);
     cmd = ActionManager::registerAction(dd->m_closeAllProjects, Constants::CLEARSESSION);
-    mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
+    // mfile->addAction(cmd, Core::Constants::G_FILE_PROJECT);
+    // OPENMV-DIFF //
     msessionContextMenu->addAction(cmd, Constants::G_SESSION_FILES);
 
     // build session action
@@ -1372,7 +1402,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     const QIcon buildIcon = Icon::combinedIcon({Icons::BUILD_SMALL.icon(), sideBarIcon});
     dd->m_buildSessionAction = new QAction(buildIcon, Tr::tr("Build All Projects"), this);
     cmd = ActionManager::registerAction(dd->m_buildSessionAction, Constants::BUILDSESSION);
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+B")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+B")));
+    // OPENMV-DIFF //
     mbuild->addAction(cmd, Constants::G_BUILD_ALLPROJECTS);
     msessionContextMenu->addAction(cmd, Constants::G_SESSION_BUILD);
 
@@ -1437,7 +1469,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     cmd = ActionManager::registerAction(dd->m_buildAction, Constants::BUILD);
     cmd->setAttribute(Command::CA_UpdateText);
     cmd->setDescription(Tr::tr("Build Active Project"));
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+B")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+B")));
+    // OPENMV-DIFF //
     mbuild->addAction(cmd, Constants::G_BUILD_PROJECT);
 
     dd->m_buildProjectForAllConfigsAction
@@ -1538,7 +1572,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     // cancel build action
     dd->m_cancelBuildAction = new QAction(Utils::Icons::STOP_SMALL.icon(), Tr::tr("Cancel Build"), this);
     cmd = ActionManager::registerAction(dd->m_cancelBuildAction, Constants::CANCELBUILD);
-    cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? Tr::tr("Meta+Backspace") : Tr::tr("Alt+Backspace")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(useMacShortcuts ? Tr::tr("Meta+Backspace") : Tr::tr("Alt+Backspace")));
+    // OPENMV-DIFF //
     mbuild->addAction(cmd, Constants::G_BUILD_CANCEL);
 
     // run action
@@ -1547,7 +1583,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     cmd->setDescription(Tr::tr("Run Active Project"));
     cmd->setAttribute(Command::CA_UpdateText);
 
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+R")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+R")));
+    // OPENMV-DIFF //
     mbuild->addAction(cmd, Constants::G_BUILD_RUN);
 
     cmd->action()->setObjectName("Run"); // used for UI introduction
@@ -1805,7 +1843,9 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
     connect(dd->m_projectSelectorActionQuick, &QAction::triggered,
             dd->m_targetSelector, &MiniProjectTargetSelector::nextOrShow);
     cmd = ActionManager::registerAction(dd->m_projectSelectorActionQuick, Constants::SELECTTARGETQUICK);
-    cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+T")));
+    // OPENMV-DIFF //
+    // cmd->setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+T")));
+    // OPENMV-DIFF //
 
     ActionBuilder(this, "ProjectExplorer.EditActiveBuildConfig")
         .setText(Tr::tr("Edit Active Build Configuration"))
@@ -2247,11 +2287,15 @@ void ProjectExplorerPlugin::extensionsInitialized()
                           Tr::tr("Issues not covered by a more specialized category.")});
 
     const auto parseIssuesAction = new QAction(Tr::tr("Parse Build Output..."), this);
-    ActionContainer *mtools = ActionManager::actionContainer(Core::Constants::M_TOOLS);
-    Command * const cmd = ActionManager::registerAction(parseIssuesAction,
-                                                        "ProjectExplorer.ParseIssuesAction");
+    // OPENMV-DIFF //
+    // ActionContainer *mtools = ActionManager::actionContainer(Core::Constants::M_TOOLS);
+    // Command * const cmd = ActionManager::registerAction(parseIssuesAction,
+    //                                                     "ProjectExplorer.ParseIssuesAction");
+    // OPENMV-DIFF //
     connect(parseIssuesAction, &QAction::triggered, this, &executeParseIssuesDialog);
-    mtools->addAction(cmd);
+    // OPENMV-DIFF //
+    // mtools->addAction(cmd);
+    // OPENMV-DIFF //
 
     // Load devices immediately, as other plugins might want to use them
     DeviceManager::load();

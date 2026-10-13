@@ -108,6 +108,9 @@ Result<> ImageViewerFile::openImpl(const FilePath &filePath)
             return ResultError(Tr::tr("Failed to read image."));
         }
         m_type = TypeMovie;
+        // OPENMV-DIFF //
+        emit imageSizeChanged(m_movie->frameRect().size());
+        // OPENMV-DIFF //
         connect(m_movie, &QMovie::resized, this, &ImageViewerFile::imageSizeChanged);
         connect(m_movie, &QMovie::stateChanged, this, &ImageViewerFile::movieStateChanged);
     } else {

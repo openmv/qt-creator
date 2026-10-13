@@ -347,6 +347,9 @@ private:
 };
 
 LanguageClientSettingsPage::LanguageClientSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::LANGUAGECLIENT_SETTINGS_PAGE);
     setDisplayName(Tr::tr("General"));

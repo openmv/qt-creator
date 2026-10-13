@@ -56,7 +56,11 @@ DisplaySettings::DisplaySettings()
     visualizeIndent.setLabelText(Tr::tr("Visualize indent"));
 
     displayFoldingMarkers.setSettingsKey("DisplayFoldingMarkers");
-    displayFoldingMarkers.setDefaultValue(true);
+    // OPENMV-DIFF //
+    // displayFoldingMarkers.setDefaultValue(true);
+    // OPENMV-DIFF //
+    displayFoldingMarkers.setDefaultValue(false);
+    // OPENMV-DIFF //
     displayFoldingMarkers.setLabelText(Tr::tr("Display &folding markers"));
 
     highlightCurrentLine.setSettingsKey("HighlightCurrentLine2Key");
@@ -80,7 +84,11 @@ DisplaySettings::DisplaySettings()
     markTextChanges.setLabelText(Tr::tr("Mark &text changes"));
 
     autoFoldFirstComment.setSettingsKey("AutoFoldFirstComment");
-    autoFoldFirstComment.setDefaultValue(true);
+    // OPENMV-DIFF //
+    // autoFoldFirstComment.setDefaultValue(true);
+    // OPENMV-DIFF //
+    autoFoldFirstComment.setDefaultValue(false);
+    // OPENMV-DIFF //
     autoFoldFirstComment.setLabelText(Tr::tr("Auto-fold first &comment"));
 
     centerCursorOnScroll.setSettingsKey("CenterCursorOnScroll");
@@ -97,7 +105,11 @@ DisplaySettings::DisplaySettings()
     displayFileEncoding.setSettingsKey("DisplayFileEncoding");
     displayFileEncoding.setLabelText(Tr::tr("Display file encoding"));
 
-    displayFileLineEnding.setDefaultValue(true);
+    // OPENMV-DIFF //
+    // displayFileLineEnding.setDefaultValue(true);
+    // OPENMV-DIFF //
+    displayFileLineEnding.setDefaultValue(false);
+    // OPENMV-DIFF //
     displayFileLineEnding.setSettingsKey("DisplayFileLineEnding");
     displayFileLineEnding.setLabelText(Tr::tr("Display file line ending"));
 

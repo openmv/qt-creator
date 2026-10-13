@@ -91,7 +91,11 @@ if (WIN32)
   set(RC_APPLICATION_NAME "${IDE_DISPLAY_NAME}")
   set(RC_VERSION "${IDE_VERSION}.0")
   set(RC_VERSION_STRING "${IDE_VERSION_DISPLAY}")
-  set(RC_COPYRIGHT "${IDE_COPYRIGHT}")
+  # OPENMV-DIFF #
+  # set(RC_COPYRIGHT "${IDE_COPYRIGHT}")
+  # OPENMV-DIFF #
+  set(RC_COPYRIGHT "${IDE_COPYRIGHT_YEAR_FOUNDED}-${IDE_COPYRIGHT_YEAR} ${IDE_AUTHOR}")
+  # OPENMV-DIFF #
   set(RC_PUBLISHER "${IDE_PUBLISHER}")
 
   string(REPLACE " " "\\x20" RC_APPLICATION_NAME "${RC_APPLICATION_NAME}")
@@ -116,107 +120,124 @@ if (APPLE)
     set(MACOSX_DEPLOYMENT_TARGET ${CMAKE_OSX_DEPLOYMENT_TARGET})
   endif()
   set_target_properties(qtcreator PROPERTIES
-      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      # MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/app-Info.plist"
+      # OPENMV-DIFF #
+      MACOSX_BUNDLE_INFO_PLIST "${CMAKE_CURRENT_SOURCE_DIR}/openmvide-Info.plist"
+      # OPENMV-DIFF #
   )
-  # icon
-  ## Roughly check for Xcode 26 tools for the default icon generation method
-  if(${CMAKE_C_COMPILER_ID} STREQUAL "AppleClang"
-      AND ${CMAKE_C_COMPILER_VERSION} VERSION_GREATER_EQUAL 17.0.0.17000319)
-    set(QTC_USE_XCODE_26_FOR_APPICON_DEFAULT ON)
-  else()
-    set(QTC_USE_XCODE_26_FOR_APPICON_DEFAULT OFF)
-  endif()
-  option(QTC_USE_XCODE_26_FOR_APPICON
-    "Use Xcode 26 tools to generate the app icon from Icon Composer"
-    ${QTC_USE_XCODE_26_FOR_APPICON_DEFAULT}
-  ) # switch to ON to disable legacy mode
-  if(QTC_USE_XCODE_26_FOR_APPICON)
-    set(QTCREATOR_APP_ICON "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns")
-    set(QTCREATOR_ACTOOL_APP_ICON_OUTPUT "${QTCREATOR_APP_ICON}")
-    set(QTCREATOR_APP_ICON_ASSET "${IDE_ICON_PATH}/macos/qtcreator.icon")
-    set(QTCREATOR_APP_ICON_FILES
-      macos/qtcreator.icon/icon.json
-      macos/qtcreator.icon/Assets/icon.png
-    )
-  else()
-    set(QTCREATOR_APP_ICON "${IDE_ICON_PATH}/macos/legacy/qtcreator.icns")
-    set(QTCREATOR_ACTOOL_APP_ICON_OUTPUT)
-    set(QTCREATOR_APP_ICON_ASSET "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-appicon.xcassets")
-    set(QTCREATOR_APP_ICON_FILES
-      ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_16x16.png
-      ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_16x16@2x.png
-      ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_128x128.png
-      ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_128x128@2x.png
-    )
-    add_custom_command(
-      OUTPUT ${QTCREATOR_APP_ICON_FILES}
-      COMMAND
-        iconutil -c iconset
-        "${QTCREATOR_APP_ICON}"
-        -o "${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset"
-      DEPENDS
-        "${QTCREATOR_APP_ICON}"
-      VERBATIM
-    )
-  endif()
-  set(QTCREATOR_PROJECT_ICONSET_FILES
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_128x128.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_128x128@2x.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_16x16.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_16x16@2x.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_256x256.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_256x256@2x.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_32x32.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_32x32@2x.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_512x512.png
-    macos/qtcreator.xcassets/qtcreator-project.iconset/icon_512x512@2x.png
-  )
-  add_custom_command(
-    OUTPUT Assets.car ${QTCREATOR_ACTOOL_APP_ICON_OUTPUT}
-    COMMAND
-      xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
-      --platform macosx --target-device mac --minimum-deployment-target 11.0 --compile "${CMAKE_CURRENT_BINARY_DIR}"
-      --bundle-identifier "${IDE_BUNDLE_IDENTIFIER}"
-      "${IDE_ICON_PATH}/macos/qtcreator.xcassets" "${QTCREATOR_APP_ICON_ASSET}"
-      > /dev/null
-    BYPRODUCTS qtcreator.Info.plist
-    DEPENDS
-      ${QTCREATOR_PROJECT_ICONSET_FILES}
-      ${QTCREATOR_APP_ICON_FILES}
-    VERBATIM
-  )
-  add_custom_command(
-    OUTPUT qtcreator-project.icns
-    COMMAND
-      iconutil -c icns
-      "${IDE_ICON_PATH}/macos/qtcreator.xcassets/qtcreator-project.iconset"
-      -o "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
-    DEPENDS
-      ${QTCREATOR_PROJECT_ICONSET_FILES}
-    VERBATIM
-  )
-  target_sources(qtcreator
-    PRIVATE
-      "${CMAKE_CURRENT_BINARY_DIR}/Assets.car"
-      ${QTCREATOR_APP_ICON}
-      "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
-  )
+  # OPENMV-DIFF #
+  # # icon
+  # ## Roughly check for Xcode 26 tools for the default icon generation method
+  # if(${CMAKE_C_COMPILER_ID} STREQUAL "AppleClang"
+  #     AND ${CMAKE_C_COMPILER_VERSION} VERSION_GREATER_EQUAL 17.0.0.17000319)
+  #   set(QTC_USE_XCODE_26_FOR_APPICON_DEFAULT ON)
+  # else()
+  #   set(QTC_USE_XCODE_26_FOR_APPICON_DEFAULT OFF)
+  # endif()
+  # option(QTC_USE_XCODE_26_FOR_APPICON
+  #   "Use Xcode 26 tools to generate the app icon from Icon Composer"
+  #   ${QTC_USE_XCODE_26_FOR_APPICON_DEFAULT}
+  # ) # switch to ON to disable legacy mode
+  # if(QTC_USE_XCODE_26_FOR_APPICON)
+  #   set(QTCREATOR_APP_ICON "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.icns")
+  #   set(QTCREATOR_ACTOOL_APP_ICON_OUTPUT "${QTCREATOR_APP_ICON}")
+  #   set(QTCREATOR_APP_ICON_ASSET "${IDE_ICON_PATH}/macos/qtcreator.icon")
+  #   set(QTCREATOR_APP_ICON_FILES
+  #     macos/qtcreator.icon/icon.json
+  #     macos/qtcreator.icon/Assets/icon.png
+  #   )
+  # else()
+  #   set(QTCREATOR_APP_ICON "${IDE_ICON_PATH}/macos/legacy/qtcreator.icns")
+  #   set(QTCREATOR_ACTOOL_APP_ICON_OUTPUT)
+  #   set(QTCREATOR_APP_ICON_ASSET "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-appicon.xcassets")
+  #   set(QTCREATOR_APP_ICON_FILES
+  #     ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_16x16.png
+  #     ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_16x16@2x.png
+  #     ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_128x128.png
+  #     ${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset/icon_128x128@2x.png
+  #   )
+  #   add_custom_command(
+  #     OUTPUT ${QTCREATOR_APP_ICON_FILES}
+  #     COMMAND
+  #       iconutil -c iconset
+  #       "${QTCREATOR_APP_ICON}"
+  #       -o "${QTCREATOR_APP_ICON_ASSET}/qtcreator.iconset"
+  #     DEPENDS
+  #       "${QTCREATOR_APP_ICON}"
+  #     VERBATIM
+  #   )
+  # endif()
+  # set(QTCREATOR_PROJECT_ICONSET_FILES
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_128x128.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_128x128@2x.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_16x16.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_16x16@2x.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_256x256.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_256x256@2x.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_32x32.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_32x32@2x.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_512x512.png
+  #   macos/qtcreator.xcassets/qtcreator-project.iconset/icon_512x512@2x.png
+  # )
+  # add_custom_command(
+  #   OUTPUT Assets.car ${QTCREATOR_ACTOOL_APP_ICON_OUTPUT}
+  #   COMMAND
+  #     xcrun actool --app-icon qtcreator --output-partial-info-plist "${CMAKE_CURRENT_BINARY_DIR}/qtcreator.Info.plist"
+  #     --platform macosx --target-device mac --minimum-deployment-target 11.0 --compile "${CMAKE_CURRENT_BINARY_DIR}"
+  #     --bundle-identifier "${IDE_BUNDLE_IDENTIFIER}"
+  #     "${IDE_ICON_PATH}/macos/qtcreator.xcassets" "${QTCREATOR_APP_ICON_ASSET}"
+  #     > /dev/null
+  #   BYPRODUCTS qtcreator.Info.plist
+  #   DEPENDS
+  #     ${QTCREATOR_PROJECT_ICONSET_FILES}
+  #     ${QTCREATOR_APP_ICON_FILES}
+  #   VERBATIM
+  # )
+  # add_custom_command(
+  #   OUTPUT qtcreator-project.icns
+  #   COMMAND
+  #     iconutil -c icns
+  #     "${IDE_ICON_PATH}/macos/qtcreator.xcassets/qtcreator-project.iconset"
+  #     -o "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
+  #   DEPENDS
+  #     ${QTCREATOR_PROJECT_ICONSET_FILES}
+  #   VERBATIM
+  # )
+  # target_sources(qtcreator
+  #   PRIVATE
+  #     "${CMAKE_CURRENT_BINARY_DIR}/Assets.car"
+  #     ${QTCREATOR_APP_ICON}
+  #     "${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns"
+  # )
+  # qtc_copy_to_builddir(copy_icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/Assets.car
+  #     "${QTCREATOR_APP_ICON}"
+  #     ${IDE_ICON_PATH}/macos/qtcreator.icon/Assets/icon.png
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  # )
+  # install(
+  #   FILES
+  #     ${CMAKE_CURRENT_BINARY_DIR}/Assets.car
+  #     "${QTCREATOR_APP_ICON}"
+  #     ${IDE_ICON_PATH}/macos/qtcreator.icon/Assets/icon.png
+  #     ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+  #   DESTINATION ${IDE_DATA_PATH}
+  # )
+  # OPENMV-DIFF #
   qtc_copy_to_builddir(copy_icns
     DESTINATION ${IDE_DATA_PATH}
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/Assets.car
-      "${QTCREATOR_APP_ICON}"
-      ${IDE_ICON_PATH}/macos/qtcreator.icon/Assets/icon.png
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
   )
   install(
     FILES
-      ${CMAKE_CURRENT_BINARY_DIR}/Assets.car
-      "${QTCREATOR_APP_ICON}"
-      ${IDE_ICON_PATH}/macos/qtcreator.icon/Assets/icon.png
-      ${CMAKE_CURRENT_BINARY_DIR}/qtcreator-project.icns
+      ${CMAKE_BINARY_DIR}/../openmv-media/icons/openmv-icon/openmv.icns
     DESTINATION ${IDE_DATA_PATH}
   )
+  # OPENMV-DIFF #
 endif()
 
 option(QTC_FORCE_XCB "Enables that Qt Creator forces XCB on Linux if QT_QPA_PLATFORM is not set." OFF)
@@ -230,7 +251,11 @@ if ((NOT WIN32) AND (NOT APPLE))
   # install logo
   foreach(size 16 24 32 48 64 128 256 512)
     install(
-      FILES ${IDE_LOGO_PATH}/images/logo/${size}/QtProject-${IDE_ID}.png
+      # OPENMV-DIFF #
+      # FILES ${IDE_LOGO_PATH}/images/logo/${size}/QtProject-${IDE_ID}.png
+      # OPENMV-DIFF #
+      FILES ${IDE_LOGO_PATH}/images/logo/${size}/OpenMV-openmvide.png
+      # OPENMV-DIFF #
       DESTINATION share/icons/hicolor/${size}x${size}/apps
     )
   endforeach()

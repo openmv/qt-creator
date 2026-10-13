@@ -4,37 +4,55 @@ if(QTC_USE_INTERNAL_TASKTREE)
   add_subdirectory(QtTaskTree)
 endif()
 
-add_subdirectory(devcontainer)
-add_subdirectory(nanotrace)
-add_subdirectory(acp)
-add_subdirectory(advanceddockingsystem)
+# OPENMV-DIFF #
+# add_subdirectory(devcontainer)
+# add_subdirectory(nanotrace)
+# add_subdirectory(acp)
+# add_subdirectory(advanceddockingsystem)
+# OPENMV-DIFF #
 add_subdirectory(aggregation)
-add_subdirectory(cplusplus)
+# OPENMV-DIFF #
+# add_subdirectory(cplusplus)
+# OPENMV-DIFF #
 add_subdirectory(extensionsystem)
-add_subdirectory(glsl)
+# OPENMV-DIFF #
+# add_subdirectory(glsl)
+# OPENMV-DIFF #
 add_subdirectory(languageserverprotocol)
-add_subdirectory(languageutils)
-add_subdirectory(modelinglib)
-add_subdirectory(qmldebug)
-add_subdirectory(qmleditorwidgets)
-add_subdirectory(qmljs)
-add_subdirectory(qtcreatorcdbext)
+# OPENMV-DIFF #
+# add_subdirectory(languageutils)
+# add_subdirectory(modelinglib)
+# add_subdirectory(qmldebug)
+# add_subdirectory(qmleditorwidgets)
+# add_subdirectory(qmljs)
+# add_subdirectory(qtcreatorcdbext)
+# OPENMV-DIFF #
 add_subdirectory(solutions)
-add_subdirectory(tracing)
+# OPENMV-DIFF #
+# add_subdirectory(tracing)
+# OPENMV-DIFF #
 add_subdirectory(utils)
 
 if (WITH_QMLDESIGNER)
-  add_subdirectory(sqlite)
-  add_subdirectory(qmlpuppetcommunication)
+# OPENMV-DIFF #
+# add_subdirectory(sqlite)
+# add_subdirectory(qmlpuppetcommunication)
+# OPENMV-DIFF #
 endif()
 
 if (WITH_TESTS)
- add_subdirectory(googletest)
+# OPENMV-DIFF #
+# add_subdirectory(googletest)
+# OPENMV-DIFF #
 endif()
 
-add_subdirectory(gocmdbridge)
+# OPENMV-DIFF #
+# add_subdirectory(gocmdbridge)
+# OPENMV-DIFF #
 
+# OPENMV-DIFF #
 add_subdirectory(mcp)
+# OPENMV-DIFF #
 
 if(EXISTS ${CMAKE_CURRENT_SOURCE_DIR}/qlitehtml/src/CMakeLists.txt)
   option(BUILD_LIBRARY_QLITEHTML "Build library qlitehtml." ${BUILD_LIBRARIES_BY_DEFAULT})

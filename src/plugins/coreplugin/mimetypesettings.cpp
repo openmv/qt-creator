@@ -283,7 +283,12 @@ public:
         Core::Internal::setUserPreferredEditorTypes(d->m_model.m_userDefault);
         d->m_pendingModifiedMimeTypes.clear();
         d->m_model.load();
-        d->writeUserModifiedMimeTypes();
+        // OPENMV-DIFF //
+        // OpenMV does not persist user-modified MIME types (its 14.0.2 base commented
+        // out the saveSettingsRequested -> writeUserModifiedMimeTypes connect). Upstream
+        // 20.0.2 instead writes them here in apply(); keep that disabled to match.
+        // d->writeUserModifiedMimeTypes();
+        // OPENMV-DIFF //
     }
 
     void cancel() final
@@ -318,6 +323,15 @@ public:
     QPushButton *m_removeMagicButton;
 };
 
+// OPENMV-DIFF //
+// OBSOLETE: OpenMV's 14.0.2 base defined MimeTypeSettingsPrivate (with the
+// kSemiColon/m_userModifiedMimeTypes statics, a constructor/destructor, an inline
+// MimeTypeSettingsWidget, and configureUi()). Upstream 20.0.2 refactored all of
+// this into MimeTypeSettingsPage + a free MimeTypeSettingsWidget constructor, so
+// that structure is dropped. OpenMV's only behavioral change here -- not persisting
+// user-modified MIME types -- is re-applied where upstream now writes them (in
+// MimeTypeSettingsWidget::apply(), see the writeUserModifiedMimeTypes() call above).
+// OPENMV-DIFF //
 MimeTypeSettingsWidget::MimeTypeSettingsWidget(MimeTypeSettingsPage *settings)
     : d(settings)
 {
@@ -505,7 +519,13 @@ void MimeTypeSettingsWidget::editMagicHeaderRowData(const int row, const MagicDa
     item->setData(0, Qt::UserRole, QVariant::fromValue(data));
     m_magicHeadersTreeWidget->takeTopLevelItem(row);
     m_magicHeadersTreeWidget->insertTopLevelItem(row, item);
-    m_magicHeadersTreeWidget->setCurrentItem(item);
+    // OPENMV-DIFF //
+    // m_magicHeadersTreeWidget->setCurrentItem(item);
+    // syncData() can drive this while the options page is hidden; selecting
+    // on a hidden tree trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (m_magicHeadersTreeWidget->isVisible())
+        m_magicHeadersTreeWidget->setCurrentItem(item);
+    // OPENMV-DIFF //
 }
 
 void MimeTypeSettingsWidget::addMagicHeader()
@@ -743,6 +763,12 @@ void MimeTypeSettingsPage::applyUserModifiedMimeTypes(const UserMimeTypeHash &mi
 }
 
 MimeTypeSettingsPage::MimeTypeSettingsPage()
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 uses the default IOptionsPage() (registerGlobally = true) and
+    // no longer has a MimeTypeSettingsPrivate 'd'. OpenMV keeps the page from
+    // auto-registering globally; the obsolete 'd(new MimeTypeSettingsPrivate)' is dropped.
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
 {
     setId(Constants::SETTINGS_ID_MIMETYPES);
     setDisplayName(Tr::tr("MIME Types"));

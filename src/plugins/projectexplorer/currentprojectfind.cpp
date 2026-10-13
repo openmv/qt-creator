@@ -313,7 +313,9 @@ FindFlags CurrentProjectFind::supportedFindFlags() const
 
 void setupCurrentProjectFind()
 {
-    static GuardedObject<CurrentProjectFind> theCurrentProjectFind;
+    // OPENMV-DIFF //
+    // static GuardedObject<CurrentProjectFind> theCurrentProjectFind;
+    // OPENMV-DIFF //
 }
 
 } // ProjectExplorer::Internal

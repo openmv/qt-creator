@@ -563,6 +563,9 @@ void DeviceSettingsWidget::handleProcessListRequested()
 // DeviceSettingsPage
 
 DeviceSettingsPage::DeviceSettingsPage()
+// OPENMV-DIFF //
+: Core::IOptionsPage(false)
+// OPENMV-DIFF //
 {
     setId(Constants::DEVICE_SETTINGS_PAGE_ID);
     setDisplayName(Tr::tr("Devices"));

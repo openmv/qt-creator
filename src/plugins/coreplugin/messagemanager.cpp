@@ -16,6 +16,10 @@
 #include <QFont>
 #include <QPointer>
 
+// OPENMV-DIFF //
+#include "outputwindow.h"
+// OPENMV-DIFF //
+
 /*!
     \namespace Core::MessageManager
     \inheaderfile coreplugin/messagemanager.h
@@ -70,6 +74,10 @@ public:
     {
         m_widget->clearLinesPrefixedWith(prefix, deleteTrailingLineBreak);
     }
+
+    // OPENMV-DIFF //
+    OutputWindow *widget() const { return m_widget; }
+    // OPENMV-DIFF //
 
 private:
     QWidget *outputWidget(QWidget *parent) final
@@ -237,5 +245,34 @@ void popup()
 {
     messageOutputWindow()->popup(IOutputPane::NoModeSwitch);
 }
+
+// OPENMV-DIFF //
+// Adapted to upstream 20.0.2: the global s_messageOutputWindow pointer is gone;
+// the pane is now reached through the messageOutputWindow() accessor, and
+// m_widget via the widget() accessor added to the class above.
+OutputWindow *outputWindow()
+{
+    QTC_ASSERT(messageOutputWindow(), return nullptr);
+    return messageOutputWindow()->widget();
+}
+
+void printData(const QByteArray &data)
+{
+    QTC_ASSERT(messageOutputWindow(), return);
+    messageOutputWindow()->append(QString::fromUtf8(data));
+}
+
+void grayOutOldContent()
+{
+    QTC_ASSERT(messageOutputWindow(), return);
+    messageOutputWindow()->widget()->grayOutOldContent();
+}
+
+void flash()
+{
+    QTC_ASSERT(messageOutputWindow(), return);
+    messageOutputWindow()->flash();
+}
+// OPENMV-DIFF //
 
 } // namespace Core::MessageManager

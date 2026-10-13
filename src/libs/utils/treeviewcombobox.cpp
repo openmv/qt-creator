@@ -4,6 +4,9 @@
 #include "treeviewcombobox.h"
 
 #include <QWheelEvent>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 
 namespace Utils {
 
@@ -106,10 +109,32 @@ void TreeViewComboBox::setCurrentIndex(const QModelIndex &index)
 {
     if (!index.isValid())
         return;
-    setRootModelIndex(model()->parent(index));
+    // OPENMV-DIFF //
+    // setRootModelIndex(model()->parent(index));
+    // QComboBox::setCurrentIndex(index.row());
+    // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    const QModelIndex parent = model()->parent(index);
+    // QModelIndex::isValid() does not re-check row bounds against a model that
+    // mutated after the index was created (e.g. an async LSP symbol refresh
+    // clearing/repopulating the outline). A stale, out-of-range row reaches the
+    // macOS native combobox, which throws an unhandled NSRangeException
+    // (SIGABRT); other platforms silently clamp. Re-validate against the live
+    // model so every caller behaves like Windows/Linux instead of crashing.
+    if (index.row() < 0 || index.row() >= model()->rowCount(parent)
+        || index.column() < 0 || index.column() >= model()->columnCount(parent)) {
+        return;
+    }
+    setRootModelIndex(parent);
     QComboBox::setCurrentIndex(index.row());
+    // OPENMV-DIFF //
     setRootModelIndex(QModelIndex());
-    m_view->setCurrentIndex(index);
+    // OPENMV-DIFF //
+    // m_view->setCurrentIndex(index);
+    m_pendingCurrentIndex = QPersistentModelIndex(index);
+    if (m_view->isVisible())
+        m_view->setCurrentIndex(index);
+    // OPENMV-DIFF //
 }
 
 bool TreeViewComboBox::eventFilter(QObject *object, QEvent *event)
@@ -127,6 +152,15 @@ void TreeViewComboBox::showPopup()
 {
     m_view->adjustWidth(topLevelWidget()->geometry().width());
     QComboBox::showPopup();
+    // OPENMV-DIFF //
+    if (m_pendingCurrentIndex.isValid()) {
+        const QPersistentModelIndex idx = m_pendingCurrentIndex;
+        QTimer::singleShot(0, m_view, [this, idx] {
+            if (idx.isValid())
+                m_view->setCurrentIndex(idx);
+        });
+    }
+    // OPENMV-DIFF //
 }
 
 void TreeViewComboBox::hidePopup()

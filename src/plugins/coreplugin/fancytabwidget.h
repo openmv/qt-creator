@@ -10,6 +10,12 @@
 
 #include <QPropertyAnimation>
 
+// OPENMV-DIFF //
+#include "core_global.h"
+#include "minisplitter.h"
+#include <QToolButton>
+// OPENMV-DIFF //
+
 QT_BEGIN_NAMESPACE
 class QPainter;
 class QStackedLayout;
@@ -19,7 +25,11 @@ QT_END_NAMESPACE
 namespace Core {
 namespace Internal {
 
-class FancyTab : public QObject
+// OPENMV-DIFF //
+// class FancyTab : public QObject
+// OPENMV-DIFF //
+class CORE_EXPORT FancyTab : public QObject
+// OPENMV-DIFF //
 {
     Q_OBJECT
 
@@ -53,7 +63,11 @@ private:
     qreal m_fader = 0;
 };
 
-class FancyTabBar : public QWidget
+// OPENMV-DIFF //
+// class FancyTabBar : public QWidget
+// OPENMV-DIFF //
+class CORE_EXPORT FancyTabBar : public QWidget
+// OPENMV-DIFF //
 {
     Q_OBJECT
 
@@ -138,7 +152,11 @@ private:
     QSize tabSizeHint(bool minimum = false) const;
 };
 
-class FancyTabWidget : public QWidget
+// OPENMV-DIFF //
+// class FancyTabWidget : public QWidget
+// OPENMV-DIFF //
+class CORE_EXPORT FancyTabWidget : public QWidget
+// OPENMV-DIFF //
 {
     Q_OBJECT
 
@@ -189,6 +207,19 @@ private:
     QWidget *m_selectionWidget;
     QStatusBar *m_statusBar;
     Utils::InfoBarDisplay m_infoBarDisplay;
+
+// OPENMV-DIFF //
+public:
+    MiniSplitter *m_msplitter;
+    MiniSplitter *m_hsplitter;
+    MiniSplitter *m_vsplitter;
+    QToolButton *m_topDrawer;
+    QToolButton *m_bottomDrawer;
+    QToolButton *m_leftDrawer;
+    QToolButton *m_rightDrawer;
+    QString m_styleSheet, m_highDPIStyleSheet;
+    qreal m_devicePixelRatio;
+// OPENMV-DIFF //
 };
 
 } // namespace Internal

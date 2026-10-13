@@ -1,0 +1,380 @@
+# Copyright 2023-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+# ======== Flash memories configuration ========
+
+# ***********************************************************************
+#                            NOR
+# ***********************************************************************
+
+# Winbond
+W25QxxxJV:
+  manufacturer: Winbond
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+      tested: True
+W35T51NW:
+  manufacturer: Winbond
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0603005]
+# Macronix
+MX25Uxxx32F:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+      tested: True
+MX25Lxxx45G:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+      tested: True
+MX25UMxxx45G:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0403037]
+MX66UMxxx45G:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0403037]
+MX25LMxxx45G:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0403037]
+MX25UM51345G:
+  manufacturer: Macronix
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0403037]
+# GigaDevice
+GD25QxxxC:
+  manufacturer: GigaDevice
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000406]
+GD25LBxxxE:
+  manufacturer: GigaDevice
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+GD25LTxxxE:
+  manufacturer: GigaDevice
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000008]
+GD25LXxxxE:
+  manufacturer: GigaDevice
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0603008]
+# ISSI
+IS25LPxxxA:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+IS25WPxxxA:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+IS25LXxxx:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xC0603005]
+IS25WXxxx:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xC0603005]
+IS26KSxxxS:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    hyper_flash:
+      option_words: [0xc0233007]
+IS26KLxxxS:
+  manufacturer: ISSI
+  type: nor
+  interfaces:
+    hyper_flash:
+      option_words: [0xc0233007]
+# Micron
+MT25QLxxxA:
+  manufacturer: Micron
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+MT35XUxxxABA1G:
+  manufacturer: Micron
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xC0703005]
+MT35XUxxxABA2G:
+  manufacturer: Micron
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xC0633005]
+      tested: True
+MT28EW128ABA:
+  manufacturer: Micron
+  type: nor
+  interfaces:
+    parallel:
+      option_words: [0xD0000600]
+MT28UG128ABA:
+  manufacturer: Micron
+  type: nor
+  interfaces:
+    parallel:
+      option_words: [0xD0000601]
+# Adesto
+AT25SFxxxA:
+  manufacturer: Adesto
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+ATXPxxx:
+  manufacturer: Adesto
+  type: nor
+  interfaces:
+    octal_spi:
+      option_words: [0xc0803007]
+# Cypress
+S25FSxxxS:
+  manufacturer: Cypress
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+S25FLxxxS:
+  manufacturer: Cypress
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+S26KSxxxS:
+  manufacturer: Cypress
+  type: nor
+  interfaces:
+    hyper_flash:
+      option_words: [0xc0233007]
+S26KLxxxS:
+  manufacturer: Cypress
+  type: nor
+  interfaces:
+    hyper_flash:
+      option_words: [0xc0233007]
+# Microchip
+SST26VFxxxB:
+  manufacturer: Microchip
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000005]
+# FudanMicro
+FM25Qxxx:
+  manufacturer: FudanMicro
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000205]
+# BoyaMicro
+BY25QxxxBS:
+  manufacturer: BoyaMicro
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000405]
+# XMC
+XM25QHxxxB:
+  manufacturer: XMC
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+XM25QUxxxB:
+  manufacturer: XMC
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000007]
+# XTXtech
+X25FxxxB:
+  manufacturer: XTXtech
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000407]
+X25QxxxD:
+  manufacturer: XTXtech
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000407]
+# Puya
+P25QxxxLE:
+  manufacturer: Puya
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000405]
+P25QxxxH:
+  manufacturer: Puya
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000405]
+P25QxxxU:
+  manufacturer: Puya
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000405]
+# AMIC
+A25LQxxx:
+  manufacturer: AMIC
+  type: nor
+  interfaces:
+    quad_spi:
+      option_words: [0xc0000105]
+
+# ***********************************************************************
+#                            NAND
+# ***********************************************************************
+
+# Winbond
+W25N01G:
+  manufacturer: Winbond
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000ef]
+W25N02K:
+  manufacturer: Winbond
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000ef]
+# Macronix
+MX35UF1G:
+  manufacturer: Macronix
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000c2]
+MX35LF1G:
+  manufacturer: Macronix
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000c2]
+MX35UF2G:
+  manufacturer: Macronix
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000c2]
+MX35LF2G:
+  manufacturer: Macronix
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000c2]
+# GigaDevice
+GD5F1GQ5:
+  manufacturer: GigaDevice
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000c8]
+GD5F2GQ5:
+  manufacturer: GigaDevice
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000c8]
+# Micron
+MT29F1G01AA:
+  manufacturer: Micron
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1011022, 0x0000002c]
+MT29F2G01AA:
+  manufacturer: Micron
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1021022, 0x0000002c]
+# Paragon
+PN26Q01A:
+  manufacturer: Paragon
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000a1]
+PN26G01A:
+  manufacturer: Paragon
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1010026, 0x000000a1]
+PN26Q02A:
+  manufacturer: Paragon
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000a1]
+PN26G02A:
+  manufacturer: Paragon
+  type: nand
+  interfaces:
+    quad_spi:
+      option_words: [0xC1020026, 0x000000a1]
+
+# ***********************************************************************
+#                            SD
+# ***********************************************************************
+
+# General
+1bit_sdr12:
+  manufacturer: General
+  type: sd
+  interfaces:
+    instance_0:
+      option_words: [0xD0000000]
+    instance_1:
+      option_words: [0xD0000001]
+    instance_2:
+      option_words: [0xD0000002]
+    instance_3:
+      option_words: [0xD0000003]

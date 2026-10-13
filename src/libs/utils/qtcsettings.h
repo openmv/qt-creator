@@ -30,6 +30,9 @@ public:
     using QSettings::childGroups;
     using QSettings::status;
     using QSettings::clear;
+    // OPENMV-DIFF //
+    using QSettings::format;
+    // OPENMV-DIFF //
 
     void withGroup(const Key &prefix, const std::function<void(QtcSettings *)> &function);
 

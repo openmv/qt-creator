@@ -98,6 +98,43 @@ void LanguageClientCompletionItem::apply(TextEditorWidget *editorWidget,
         editorWidget->insertCodeSnippet(editorWidget->position(),
                                       m_triggeredCommitCharacter,
                                       &Snippet::parse);
+
+    // OPENMV-DIFF //
+    const int kind = m_item.kind().value_or(CompletionItemKind::Text);
+    switch (kind) {
+    case CompletionItemKind::Method:
+    case CompletionItemKind::Function:
+    case CompletionItemKind::Constructor: {
+        // Qt Creator 20.0.2 changed apply() to take a TextEditorWidget* instead of
+        // a TextDocumentManipulatorInterface&; port OpenMV's auto-"()" insertion.
+        int replaceLength = editorWidget->position();
+        QString toInsert;
+        int cursorOffset = 0;
+        const QChar characterAtCurrentPosition = editorWidget->characterAt(editorWidget->position());
+        bool skipPosition = false;
+
+        if (characterAtCurrentPosition == QLatin1Char('(')) {
+            cursorOffset = 1;
+        } else {
+            toInsert += QLatin1String("()");
+            cursorOffset = -1;
+            skipPosition = true;
+        }
+
+        editorWidget->replace(replaceLength, 0, toInsert);
+        if (cursorOffset)
+            editorWidget->setCursorPosition(editorWidget->position() + cursorOffset);
+        if (skipPosition) {
+            QTextCursor skipCursor = editorWidget->textCursor();
+            skipCursor.setPosition(editorWidget->position());
+            editorWidget->setAutoCompleteSkipPosition(skipCursor);
+        }
+        break;
+    }
+    default:
+        break;
+    }
+    // OPENMV-DIFF //
 }
 
 QIcon LanguageClientCompletionItem::icon() const

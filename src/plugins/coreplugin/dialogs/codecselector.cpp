@@ -17,6 +17,9 @@
 #include <QLabel>
 #include <QListWidget>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QScrollBar>
 #include <QVBoxLayout>
 
@@ -99,8 +102,18 @@ CodecSelector::CodecSelector(BaseTextDocument *doc)
         encodingNames << encoding.fullDisplayName();
     }
     m_listWidget->addItems(encodingNames);
-    if (currentIndex >= 0)
-        m_listWidget->setCurrentRow(currentIndex);
+    // OPENMV-DIFF //
+    // if (currentIndex >= 0)
+    //     m_listWidget->setCurrentRow(currentIndex);
+    // Deferred: selecting in the constructor, before exec() shows the
+    // dialog, trips the macOS Cocoa a11y bridge (NSRangeException).
+    if (currentIndex >= 0) {
+        QTimer::singleShot(0, this, [this, currentIndex] {
+            if (currentIndex < m_listWidget->count())
+                m_listWidget->setCurrentRow(currentIndex);
+        });
+    }
+    // OPENMV-DIFF //
 
     connect(m_listWidget, &QListWidget::itemSelectionChanged, this, &CodecSelector::updateButtons);
 

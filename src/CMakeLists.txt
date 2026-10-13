@@ -9,7 +9,9 @@ add_subdirectory(share)
 add_subdirectory(shared)
 add_subdirectory(plugins)
 add_subdirectory(app)
-add_subdirectory(tools)
+# OPENMV-DIFF #
+# add_subdirectory(tools)
+# OPENMV-DIFF #
 
 install(
   FILES

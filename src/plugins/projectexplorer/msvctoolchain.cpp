@@ -221,8 +221,10 @@ static std::optional<VisualStudioInstallation> installationFromPathAndVersion(
 
     const QString vcVarsAllPath = vcVarsPath + QStringLiteral("/vcvarsall.bat");
     if (!QFileInfo(vcVarsAllPath).isFile()) {
-        qWarning().noquote() << "Unable to find MSVC setup script "
-                             << QDir::toNativeSeparators(vcVarsPath) << " in version " << version;
+        // OPENMV-DIFF //
+        // qWarning().noquote() << "Unable to find MSVC setup script "
+        //                      << QDir::toNativeSeparators(vcVarsPath) << " in version " << version;
+        // OPENMV-DIFF //
         return std::nullopt;
     }
 
@@ -1737,8 +1739,10 @@ static Toolchains detectClangClToolChainInPath(const FilePath &clangClPath,
     const MsvcToolchain *toolChain = selectMsvcToolChain(displayedVarsBat, clangClPath);
 
     if (!toolChain) {
-        qWarning("Unable to find a suitable MSVC version for \"%s\".",
-                 qPrintable(clangClPath.toUserOutput()));
+        // OPENMV-DIFF //
+        // qWarning("Unable to find a suitable MSVC version for \"%s\".",
+        //          qPrintable(clangClPath.toUserOutput()));
+        // OPENMV-DIFF //
         return res;
     }
 

@@ -294,6 +294,10 @@ class SystemSettingsPage final : public IOptionsPage
 {
 public:
     SystemSettingsPage()
+        // OPENMV-DIFF //
+        // OpenMV keeps this page from auto-registering globally (registerGlobally = false).
+        : Core::IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId(Constants::SETTINGS_ID_SYSTEM);
         setDisplayName(Tr::tr("System"));
@@ -324,6 +328,13 @@ void SystemSettings::delayedInitialize()
         ICore::instance(), &ICore::systemEnvironmentChanged, this, appendVcsPathsToPatchCommandPath);
     appendVcsPathsToPatchCommandPath();
 }
+// OPENMV-DIFF //
+// OBSOLETE: OpenMV's 14.0.2 base defined SystemSettingsWidget::showHelpForFileBrowser()
+// and a second SystemSettingsPage class here (guarded by a now-orphan #endif). Upstream
+// 20.0.2 defines SystemSettingsPage once above (using setSettingsProvider) and dropped
+// showHelpForFileBrowser, so this duplicate is removed. OpenMV's IOptionsPage(false) is
+// re-applied on the upstream SystemSettingsPage constructor above.
+// OPENMV-DIFF //
 
 const SystemSettingsPage settingsPage;
 

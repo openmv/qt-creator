@@ -115,6 +115,10 @@
 #include <QToolBar>
 #include <QToolButton>
 
+// OPENMV-DIFF //
+#include <QInputDialog>
+// OPENMV-DIFF //
+
 /*!
     \namespace TextEditor
     \brief The TextEditor namespace contains the base text editor and several classes which
@@ -1451,8 +1455,10 @@ void TextEditorWidgetPrivate::showTextMarksToolTip(const QPoint &pos,
             mark->addToToolTipLayout(layout);
     }
 
-    layout->addWidget(createAnnotationSettingsLink(),
-                      layout->rowCount(), 0, 1, -1, Qt::AlignRight);
+    // OPENMV-DIFF //
+    // layout->addWidget(createAnnotationSettingsLink(),
+    //                   layout->rowCount(), 0, 1, -1, Qt::AlignRight);
+    // OPENMV-DIFF //
     ToolTip::show(pos, layout, q);
 }
 
@@ -1754,9 +1760,16 @@ static void printPage(int index, QPainter *painter, const QTextDocument *doc,
     QAbstractTextDocumentLayout::PaintContext ctx;
 
     painter->setFont(QFont(doc->defaultFont()));
-    const QRectF box = titleBox.translated(0, view.top());
+    // OPENMV-DIFF //
+    // const QRectF box = titleBox.translated(0, view.top());
+    // OPENMV-DIFF //
     const int dpix = painter->device()->logicalDpiX();
     const int dpiy = painter->device()->logicalDpiY();
+    // OPENMV-DIFF //
+    QRectF box = titleBox.translated(0, view.top() + int(30 * dpiy / 72.0));
+    box.setLeft(box.left() + int(20 * dpiy / 72.0));
+    box.setRight(box.right() - int(20 * dpiy / 72.0));
+    // OPENMV-DIFF //
     const int mx = int(5 * dpix / 72.0);
     const int my = int(2 * dpiy / 72.0);
     painter->fillRect(box.adjusted(-mx, -my, mx, my), QColor(210, 210, 210));
@@ -4029,7 +4042,9 @@ void TextEditorWidgetPrivate::updateSyntaxInfoBar(const HighlighterHelper::Defin
             InfoBarEntry::ButtonAction::Hide);
 
         infoBar->removeInfo(multiple);
-        infoBar->addInfo(info);
+        // OPENMV-DIFF //
+        // infoBar->addInfo(info);
+        // OPENMV-DIFF //
         return;
     }
 
@@ -4051,7 +4066,9 @@ void TextEditorWidgetPrivate::updateSyntaxInfoBar(const HighlighterHelper::Defin
             {},
             InfoBarEntry::ButtonAction::Hide);
 
-        infoBar->addInfo(info);
+        // OPENMV-DIFF //
+        // infoBar->addInfo(info);
+        // OPENMV-DIFF //
     }
 }
 
@@ -4353,9 +4370,33 @@ void TextEditorWidgetPrivate::registerActions()
         .setContext(m_editorContext)
         .setScriptable(true)
         .addOnTriggered([this] { q->selectAll(); });
+    // OPENMV-DIFF //
+    // ActionBuilder(this, GOTO).setContext(m_editorContext).addOnTriggered([] {
+    //     LocatorManager::showFilter(lineNumberFilter());
+    // });
+    // OPENMV-DIFF //
     ActionBuilder(this, GOTO).setContext(m_editorContext).addOnTriggered([] {
-        LocatorManager::showFilter(lineNumberFilter());
+        Core::IEditor *editor = Core::EditorManager::currentEditor();
+        if (editor) {
+            bool ok;
+            QString line = QInputDialog::getText(Core::ICore::dialogParent(), QString(), Tr::tr("Go to line number..."), QLineEdit::Normal, QString::number(editor->currentLine()), &ok
+#ifdef Q_OS_MAC
+            , Qt::WindowTitleHint | Qt::WindowSystemMenuHint,
+#else
+            , Qt::WindowTitleHint | Qt::WindowSystemMenuHint | Qt::WindowCloseButtonHint,
+#endif
+            Qt::ImhDigitsOnly);
+            if (ok) {
+                int lineNumber = line.toInt(&ok);
+                if (ok) {
+                    Core::EditorManager::addCurrentPositionToNavigationHistory();
+                    editor->gotoLine(lineNumber);
+                    Core::EditorManager::activateEditor(editor);
+                }
+            }
+        }
     });
+    // OPENMV-DIFF //
     ActionBuilder(this, PRINT)
         .setContext(m_editorContext)
         .addOnTriggered([this] { q->print(ICore::printer()); })
@@ -4500,26 +4541,30 @@ void TextEditorWidgetPrivate::registerActions()
                                     })
                                     .setScriptable(true)
                                     .contextAction();
-    ActionBuilder(this, VIEW_PAGE_UP)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->viewPageUp(); })
-        .setScriptable(true);
-    ActionBuilder(this, VIEW_PAGE_DOWN)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->viewPageDown(); })
-        .setScriptable(true);
-    ActionBuilder(this, VIEW_LINE_UP)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->viewLineUp(); })
-        .setScriptable(true);
-    ActionBuilder(this, VIEW_LINE_DOWN)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->viewLineDown(); })
-        .setScriptable(true);
+    // OPENMV-DIFF //
+    // ActionBuilder(this, VIEW_PAGE_UP)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->viewPageUp(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, VIEW_PAGE_DOWN)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->viewPageDown(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, VIEW_LINE_UP)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->viewLineUp(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, VIEW_LINE_DOWN)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->viewLineDown(); })
+    //     .setScriptable(true);
+    // OPENMV-DIFF //
 
-    ActionBuilder(this, SELECT_ENCODING).setContext(m_editorContext).addOnTriggered([this] {
-        q->selectEncoding();
-    });
+    // OPENMV-DIFF //
+    // ActionBuilder(this, SELECT_ENCODING).setContext(m_editorContext).addOnTriggered([this] {
+    //     q->selectEncoding();
+    // });
+    // OPENMV-DIFF //
     m_modifyingActions << ActionBuilder(this, CIRCULAR_PASTE)
                               .setContext(m_editorContext)
                               .addOnTriggered([this] { q->circularPaste(); })
@@ -4530,16 +4575,18 @@ void TextEditorWidgetPrivate::registerActions()
                               .setScriptable(true)
                               .contextAction();
 
-    m_autoIndentAction = ActionBuilder(this, AUTO_INDENT_SELECTION)
-                             .setContext(m_editorContext)
-                             .addOnTriggered([this] { q->autoIndent(); })
-                             .setScriptable(true)
-                             .contextAction();
-    m_autoFormatAction = ActionBuilder(this, AUTO_FORMAT_SELECTION)
-                             .setContext(m_editorContext)
-                             .addOnTriggered([this] { q->autoFormat(); })
-                             .setScriptable(true)
-                             .contextAction();
+    // OPENMV-DIFF //
+    // m_autoIndentAction = ActionBuilder(this, AUTO_INDENT_SELECTION)
+    //                          .setContext(m_editorContext)
+    //                          .addOnTriggered([this] { q->autoIndent(); })
+    //                          .setScriptable(true)
+    //                          .contextAction();
+    // m_autoFormatAction = ActionBuilder(this, AUTO_FORMAT_SELECTION)
+    //                          .setContext(m_editorContext)
+    //                          .addOnTriggered([this] { q->autoFormat(); })
+    //                          .setScriptable(true)
+    //                          .contextAction();
+    // OPENMV-DIFF //
     m_modifyingActions << ActionBuilder(this, REWRAP_PARAGRAPH)
                               .setContext(m_editorContext)
                               .addOnTriggered([this] { q->rewrapParagraph(); })
@@ -4599,16 +4646,18 @@ void TextEditorWidgetPrivate::registerActions()
         .setContext(m_editorContext)
         .addOnTriggered([this] { q->addSelectionNextFindMatch(); })
         .setScriptable(true);
-    m_modifyingActions << ActionBuilder(this, DUPLICATE_SELECTION)
-                              .setContext(m_editorContext)
-                              .addOnTriggered([this] { q->duplicateSelection(); })
-                              .setScriptable(true)
-                              .contextAction();
-    m_modifyingActions << ActionBuilder(this, DUPLICATE_SELECTION_AND_COMMENT)
-                              .setContext(m_editorContext)
-                              .addOnTriggered([this] { q->duplicateSelectionAndComment(); })
-                              .setScriptable(true)
-                              .contextAction();
+    // OPENMV-DIFF //
+    // m_modifyingActions << ActionBuilder(this, DUPLICATE_SELECTION)
+    //                           .setContext(m_editorContext)
+    //                           .addOnTriggered([this] { q->duplicateSelection(); })
+    //                           .setScriptable(true)
+    //                           .contextAction();
+    // m_modifyingActions << ActionBuilder(this, DUPLICATE_SELECTION_AND_COMMENT)
+    //                           .setContext(m_editorContext)
+    //                           .addOnTriggered([this] { q->duplicateSelectionAndComment(); })
+    //                           .setScriptable(true)
+    //                           .contextAction();
+    // OPENMV-DIFF //
     m_modifyingActions << ActionBuilder(this, UPPERCASE_SELECTION)
                               .setContext(m_editorContext)
                               .addOnTriggered([this] { q->uppercaseSelection(); })
@@ -4654,22 +4703,24 @@ void TextEditorWidgetPrivate::registerActions()
     ActionBuilder(this, Core::Constants::ZOOM_RESET)
         .setContext(m_editorContext)
         .addOnTriggered([this] { q->zoomReset(); });
-    ActionBuilder(this, GOTO_BLOCK_START)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->gotoBlockStart(); })
-        .setScriptable(true);
-    ActionBuilder(this, GOTO_BLOCK_END)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->gotoBlockEnd(); })
-        .setScriptable(true);
-    ActionBuilder(this, SELECT_BLOCK_UP)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->selectBlockUp(); })
-        .setScriptable(true);
-    ActionBuilder(this, SELECT_BLOCK_DOWN)
-        .setContext(m_editorContext)
-        .addOnTriggered([this] { q->selectBlockDown(); })
-        .setScriptable(true);
+    // OPENMV-DIFF //
+    // ActionBuilder(this, GOTO_BLOCK_START)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->gotoBlockStart(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, GOTO_BLOCK_END)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->gotoBlockEnd(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, SELECT_BLOCK_UP)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->selectBlockUp(); })
+    //     .setScriptable(true);
+    // ActionBuilder(this, SELECT_BLOCK_DOWN)
+    //     .setContext(m_editorContext)
+    //     .addOnTriggered([this] { q->selectBlockDown(); })
+    //     .setScriptable(true);
+    // OPENMV-DIFF //
     ActionBuilder(this, SELECT_WORD_UNDER_CURSOR)
         .setContext(m_editorContext)
         .addOnTriggered([this] { q->selectWordUnderCursor(); })
@@ -4814,8 +4865,10 @@ void TextEditorWidgetPrivate::registerActions()
 
     // Collect additional modifying actions so we can check for them inside a readonly file
     // and disable them
-    m_modifyingActions << m_autoIndentAction;
-    m_modifyingActions << m_autoFormatAction;
+    // OPENMV-DIFF //
+    // m_modifyingActions << m_autoIndentAction;
+    // m_modifyingActions << m_autoFormatAction;
+    // OPENMV-DIFF //
     m_modifyingActions << m_unCommentSelectionAction;
 
     updateOptionalActions();
@@ -4858,10 +4911,12 @@ void TextEditorWidgetPrivate::updateOptionalActions()
     m_openCallHierarchyAction->setEnabled(m_optionalActionMask & CallHierarchy);
     m_openTypeHierarchyAction->setEnabled(m_optionalActionMask & TypeHierarchy);
 
-    bool formatEnabled = (m_optionalActionMask & OptionalActions::Format)
-                         && !q->isReadOnly();
-    m_autoIndentAction->setEnabled(formatEnabled);
-    m_autoFormatAction->setEnabled(formatEnabled);
+    // OPENMV-DIFF //
+    // bool formatEnabled = (m_optionalActionMask & OptionalActions::Format)
+    //                      && !q->isReadOnly();
+    // m_autoIndentAction->setEnabled(formatEnabled);
+    // m_autoFormatAction->setEnabled(formatEnabled);
+    // OPENMV-DIFF //
 }
 
 void TextEditorWidgetPrivate::updateRedoAction()
@@ -5033,7 +5088,23 @@ void TextEditorWidgetPrivate::processTooltipRequest(const QTextCursor &c)
     if (handled)
         return;
 
-    const auto callback = [toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+    if (m_hoverHandlers.isEmpty()) {
+        emit q->tooltipRequested(toolTipPoint, c.position());
+        return;
+    }
+    // OPENMV-DIFF //
+
+    // OPENMV-DIFF //
+    // const auto callback = [toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+    const auto callback = [this, c, toolTipPoint](TextEditorWidget *widget, BaseHoverHandler *handler, int) {
+    // OPENMV-DIFF //
+        bool handled = false;
+        emit q->lateTooltipOverrideRequested(q, toolTipPoint, c.position(), &handled, handler->m_toolTip);
+        if (handled)
+            return;
+        // OPENMV-DIFF //
         handler->showToolTip(widget, toolTipPoint);
     };
     const auto fallback = [toolTipPoint, position = c.position()](TextEditorWidget *widget) {
@@ -7598,6 +7669,9 @@ void TextEditorWidget::showDefaultContextMenu(QContextMenuEvent *e, Id menuConte
     if (menuContextId.isValid())
         appendMenuActionsFromContext(&menu, menuContextId);
     appendStandardContextMenuActions(&menu);
+    // OPENMV-DIFF //
+    emit contextMenuEventCB(&menu, selectedText());
+    // OPENMV-DIFF //
     menu.exec(e->globalPos());
 }
 
@@ -7809,7 +7883,9 @@ void TextEditorWidget::extraAreaMouseEvent(QMouseEvent *e)
             QGuiApplication::changeOverrideCursor(inMarkArea ? d->m_markDragCursor
                                                              : QCursor(Qt::ForbiddenCursor));
         } else if (inMarkArea != (d->m_extraArea->cursor().shape() == Qt::PointingHandCursor)) {
-            d->m_extraArea->setCursor(inMarkArea ? Qt::PointingHandCursor : Qt::ArrowCursor);
+            // OPENMV-DIFF //
+            // d->m_extraArea->setCursor(inMarkArea ? Qt::PointingHandCursor : Qt::ArrowCursor);
+            // OPENMV-DIFF //
         }
     }
 
@@ -10016,16 +10092,18 @@ void TextEditorWidget::appendStandardContextMenuActions(QMenu *menu)
         if (!menu->actions().contains(action))
             menu->addAction(action);
     }
-    if (optionalActions() & OptionalActions::FindUsage) {
-        const auto action = ActionManager::command(Constants::FIND_USAGES)->action();
-        if (!menu->actions().contains(action))
-            menu->addAction(action);
-    }
-    if (optionalActions() & OptionalActions::RenameSymbol) {
-        const auto action = ActionManager::command(Constants::RENAME_SYMBOL)->action();
-        if (!menu->actions().contains(action))
-            menu->addAction(action);
-    }
+    // OPENMV-DIFF //
+    // if (optionalActions() & OptionalActions::FindUsage) {
+    //     const auto action = ActionManager::command(Constants::FIND_USAGES)->action();
+    //     if (!menu->actions().contains(action))
+    //         menu->addAction(action);
+    // }
+    // if (optionalActions() & OptionalActions::RenameSymbol) {
+    //     const auto action = ActionManager::command(Constants::RENAME_SYMBOL)->action();
+    //     if (!menu->actions().contains(action))
+    //         menu->addAction(action);
+    // }
+    // OPENMV-DIFF //
     if (optionalActions() & OptionalActions::CallHierarchy) {
         const auto action = ActionManager::command(Constants::OPEN_CALL_HIERARCHY)->action();
         if (!menu->actions().contains(action))
@@ -10047,6 +10125,9 @@ void TextEditorWidget::appendStandardContextMenuActions(QMenu *menu)
             a->setVisible(true);
             a->setText(doc->format().hasUtf8Bom ? Tr::tr("Delete UTF-8 BOM on Save")
                                                 : Tr::tr("Add UTF-8 BOM on Save"));
+            // OPENMV-DIFF //
+            a->setVisible(false);
+            // OPENMV-DIFF //
         } else {
             a->setVisible(false);
         }
@@ -10839,7 +10920,11 @@ public:
     bool m_duplicatedSupported = true;
     bool m_codeFoldingSupported = false;
     bool m_paranthesesMatchinEnabled = false;
-    bool m_marksVisible = true;
+    // OPENMV-DIFF //
+    // bool m_marksVisible = true;
+    // OPENMV-DIFF //
+    bool m_marksVisible = false;
+    // OPENMV-DIFF //
 };
 
 } /// namespace Internal

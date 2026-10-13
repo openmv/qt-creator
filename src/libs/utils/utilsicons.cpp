@@ -149,6 +149,10 @@ const Icon RELOAD({
         {":/utils/images/reload_gray.png", Theme::PanelTextColorMid}}, Icon::Tint);
 const Icon RELOAD_TOOLBAR({
         {":/utils/images/reload_gray.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF: debug-logging toggle icon for the Serial Terminal toolbar
+const Icon DEBUG_TOOLBAR({
+        {":/utils/images/debug.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF
 const Icon TOGGLE_LEFT_SIDEBAR({
         {":/utils/images/leftsidebaricon.png", Theme::PanelTextColorMid}}, Icon::MenuTintedStyle);
 const Icon TOGGLE_LEFT_SIDEBAR_TOOLBAR({
@@ -301,6 +305,12 @@ const Icon MACOS_TOUCHBAR_BOOKMARK(
         ":/utils/images/macos_touchbar_bookmark.png");
 const Icon MACOS_TOUCHBAR_CLEAR(
         ":/utils/images/macos_touchbar_clear.png");
+// OPENMV-DIFF //
+const Icon WRAP({
+        {":/utils/images/wrap.png", Theme::PanelTextColorMid}}, Icon::Tint);
+const Icon WRAP_TOOLBAR({
+        {":/utils/images/wrap.png", Theme::IconsBaseColor}});
+// OPENMV-DIFF //
 
 #define MAKE_ENTRY(ICON) {#ICON, ICON}
 static QHash<QString, Icon> s_nameToIcon = {

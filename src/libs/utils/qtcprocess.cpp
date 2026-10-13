@@ -548,6 +548,14 @@ private:
     // QProcessBlockingImpl *m_blockingImpl = nullptr;
 };
 
+// OPENMV-DIFF //
+// Upstream 20.0.2 removed the ProcessLauncher implementation (uniqueToken(),
+// ProcessLauncherBlockingImpl, ProcessLauncherImpl) and the ProcessImpl
+// selection helpers (defaultProcessImplHelper()/defaultProcessImpl()) from this
+// file; createProcessInterface() now unconditionally uses QProcessImpl. OpenMV's
+// change here forced defaultProcessImplHelper() to return ProcessImpl::QProcess,
+// which is now obsolete since upstream always uses QProcess. Dropped.
+// OPENMV-DIFF //
 class ProcessInterfaceSignal
 {
 public:
@@ -1846,26 +1854,111 @@ void Process::setWriteData(const QByteArray &writeData)
     d->m_setup.m_writeData = writeData;
 }
 
-void Process::runBlocking(seconds timeout)
+// OPENMV-DIFF //
+// void Process::runBlocking(seconds timeout)
+// OPENMV-DIFF //
+void Process::runBlocking(std::chrono::seconds timeout, EventLoopMode eventLoopMode, QEventLoop::ProcessEventsFlag flag)
+// OPENMV-DIFF //
 {
     QDateTime startTime;
     static const int blockingThresholdMs = qtcEnvironmentVariableIntValue("QTC_PROCESS_THRESHOLD");
 
-    // Attach a dynamic property with info about blocking type
-    d->storeEventLoopDebugInfo(true);
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 inlined runBlocking() and dropped EventLoopMode entirely.
+    // OpenMV reinstates the EventLoopMode/nested-event-loop behavior (used by
+    // ~150 call sites that pass EventLoopMode::On to keep the UI responsive
+    // during long blocking tool runs), adapting upstream's renames
+    // (QThread::isMainThread()) into the restored lambdas.
+    //
+    // Upstream 20.0.2 body was:
+    //     // Attach a dynamic property with info about blocking type
+    //     d->storeEventLoopDebugInfo(true);
+    //     if (blockingThresholdMs > 0 && QThread::isMainThread())
+    //         startTime = QDateTime::currentDateTime();
+    //     start();
+    //     // Remove the dynamic property so that it's not reused in subseqent start()
+    //     d->storeEventLoopDebugInfo({});
+    //     if (state() != QProcess::NotRunning && !waitForFinished(timeout)) {
+    //         stop();
+    //         QTC_CHECK(waitForFinished(2s));
+    //     }
+    // OPENMV-DIFF //
+    const auto handleStart = [this, eventLoopMode, &startTime] {
+        // Attach a dynamic property with info about blocking type
+        d->storeEventLoopDebugInfo(int(eventLoopMode));
 
-    if (blockingThresholdMs > 0 && QThread::isMainThread())
-        startTime = QDateTime::currentDateTime();
-    start();
+        if (blockingThresholdMs > 0 && QThread::isMainThread())
+            startTime = QDateTime::currentDateTime();
+        start();
 
-    // Remove the dynamic property so that it's not reused in subseqent start()
-    d->storeEventLoopDebugInfo({});
+        // Remove the dynamic property so that it's not reused in subseqent start()
+        d->storeEventLoopDebugInfo({});
+    };
 
-    if (state() != QProcess::NotRunning && !waitForFinished(timeout)) {
+    const auto handleTimeout = [this] {
+        if (state() == QProcess::NotRunning)
+            return;
         stop();
         // TODO: This arbitrary 2s causes flakiness of:
         //       tst_Process::runBlockingStdOut:"Short timeout without end of line".
         QTC_CHECK(waitForFinished(2s));
+    };
+
+    if (eventLoopMode == EventLoopMode::On) {
+#ifdef QT_GUI_LIB
+        // OPENMV-DIFF //
+        // if (isGuiEnabled())
+        //     QGuiApplication::setOverrideCursor(Qt::WaitCursor);
+        // OPENMV-DIFF //
+        if (isGuiEnabled() && (flag == QEventLoop::ExcludeUserInputEvents))
+            QApplication::setOverrideCursor(Qt::WaitCursor);
+        // OPENMV-DIFF //
+#endif
+        QEventLoop eventLoop(this);
+
+        // Queue the call to start() so that it's executed after the nested event loop is started,
+        // otherwise it fails on Windows with QProcessImpl. See QTCREATORBUG-30066.
+        QMetaObject::invokeMethod(this, handleStart, Qt::QueuedConnection);
+
+        std::function<void(void)> timeoutHandler = {};
+        if (timeout > seconds::zero()) {
+            // OPENMV-DIFF //
+            // OpenMV disables the timeout "ask to kill" prompt: m_timeOutMessageBoxEnabled
+            // defaulted false and was never enabled, so the process just timed out and was
+            // killed without prompting. Upstream 20.0.2 removed that member, so kill
+            // unconditionally here (no prompt, no re-arm).
+            // timeoutHandler = [this, &eventLoop, &timeoutHandler, &handleTimeout, timeout] {
+            //     if (!d->m_timeOutMessageBoxEnabled || askToKill(d->m_setup.m_commandLine)) {
+            //         handleTimeout();
+            //         return;
+            //     }
+            //     QTimer::singleShot(timeout, &eventLoop, timeoutHandler);
+            // };
+            timeoutHandler = [&handleTimeout] { handleTimeout(); };
+            // OPENMV-DIFF //
+            QTimer::singleShot(timeout, &eventLoop, timeoutHandler);
+        }
+
+        connect(this, &Process::done, &eventLoop, [&eventLoop] { eventLoop.quit(); });
+
+        // OPENMV-DIFF //
+        // eventLoop.exec(QEventLoop::ExcludeUserInputEvents);
+        // OPENMV-DIFF //
+        eventLoop.exec(flag);
+        // OPENMV-DIFF //
+#ifdef QT_GUI_LIB
+        // OPENMV-DIFF //
+        // if (isGuiEnabled())
+        //     QGuiApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
+        if (isGuiEnabled() && (flag == QEventLoop::ExcludeUserInputEvents))
+            QApplication::restoreOverrideCursor();
+        // OPENMV-DIFF //
+#endif
+    } else {
+        handleStart();
+        if (state() != QProcess::NotRunning && !waitForFinished(timeout))
+            handleTimeout();
     }
 
     if (blockingThresholdMs > 0) {
@@ -1915,6 +2008,9 @@ void Process::setTextChannelMode(Channel channel, TextChannelMode mode)
     };
     const TextChannelCallback callback = (channel == Channel::Output) ? outputCb : errorCb;
     ChannelBuffer *buffer = channel == Channel::Output ? &d->m_stdOut : &d->m_stdErr;
+    // OPENMV-DIFF //
+    if (buffer->m_textChannelMode == mode) return;
+    // OPENMV-DIFF //
     QTC_ASSERT(buffer->m_textChannelMode == TextChannelMode::Off, qWarning()
                << "Process::setTextChannelMode(): Changing text channel mode for"
                << (channel == Channel::Output ? "Output": "Error")

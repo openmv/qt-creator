@@ -15,6 +15,10 @@
 
 #include <QPointer>
 
+// OPENMV-DIFF //
+#include <QLabel>
+// OPENMV-DIFF //
+
 using namespace Utils;
 
 namespace TextEditor::Internal {
@@ -27,6 +31,9 @@ public:
 private:
     QString id() const final;
     QString displayName() const final;
+    // OPENMV-DIFF //
+    QWidget *createConfigWidget() override;
+    // OPENMV-DIFF //
     bool isEnabled() const final;
     Utils::Store save() const final;
     void restore(const Utils::Store &s) final;
@@ -38,6 +45,9 @@ private:
     void handleFileChange(Core::IEditor *editor);
 
     QPointer<Core::IDocument> m_currentDocument;
+    // OPENMV-DIFF //
+    QPointer<QWidget> m_configWidget = nullptr;
+    // OPENMV-DIFF //
 
     Utils::FindFlags supportedFindFlags() const override
     {
@@ -86,6 +96,18 @@ QString FindInCurrentFile::toolTip() const
     // %2 is filled by BaseFileFind::runNewSearch
     return Tr::tr("File path: %1\n%2").arg(m_currentDocument->filePath().toUserOutput());
 }
+
+// OPENMV-DIFF //
+QWidget *FindInCurrentFile::createConfigWidget()
+{
+    if (!m_configWidget) {
+        QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
+        label->setAlignment(Qt::AlignRight);
+        m_configWidget = label;
+    }
+    return m_configWidget;
+}
+// OPENMV-DIFF //
 
 bool FindInCurrentFile::isEnabled() const
 {

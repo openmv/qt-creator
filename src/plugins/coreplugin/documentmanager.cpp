@@ -45,6 +45,10 @@
 
 #include <optional>
 
+// OPENMV-DIFF //
+#include <app/app_version.h>
+// OPENMV-DIFF //
+
 static const bool kUseProjectsDirectoryDefault = true;
 static Q_LOGGING_CATEGORY(log, "qtc.core.documentmanager", QtWarningMsg)
 
@@ -105,6 +109,9 @@ static const char editorsKeyC[] = "EditorIds";
 static const char directoryGroupC[] = "Directories";
 static const char projectDirectoryKeyC[] = "Projects";
 static const char useProjectDirectoryKeyC[] = "UseProjectsDirectory";
+// OPENMV-DIFF //
+static const char lastVisitedDirectoryC[] = "lastVisitedDirectory";
+// OPENMV-DIFF //
 
 using namespace Utils;
 
@@ -201,7 +208,10 @@ public:
     bool m_useProjectsDirectory = kUseProjectsDirectoryDefault;
 
     FileWatchers m_fileWatcher; // Delayed creation.
-    FilePath m_lastVisitedDirectory = FilePath::fromString(QDir::currentPath());
+    // OPENMV-DIFF //
+    // FilePath m_lastVisitedDirectory = FilePath::fromString(QDir::currentPath());
+    FilePath m_lastVisitedDirectory = FilePath::fromString(QString());
+    // OPENMV-DIFF //
     FilePath m_defaultLocationForNewFiles;
     FilePath m_projectsDirectory;
     // When we are calling into an IDocument
@@ -270,8 +280,10 @@ DocumentManager::DocumentManager(QObject *parent)
 
     readSettings();
 
-    if (d->m_useProjectsDirectory)
-        setFileDialogLastVisitedDirectory(d->m_projectsDirectory);
+    // OPENMV-DIFF //
+    // if (d->m_useProjectsDirectory)
+    //     setFileDialogLastVisitedDirectory(d->m_projectsDirectory);
+    // OPENMV-DIFF //
 }
 
 DocumentManager::~DocumentManager()
@@ -629,10 +641,23 @@ static bool saveModifiedFilesHelper(const QList<IDocument *> &documents,
     QList<IDocument *> modifiedDocuments;
 
     for (IDocument *document : documents) {
-        if (document && document->isModified() && !document->isTemporary()) {
+        // OPENMV-DIFF //
+        // if (document && document->isModified() && !document->isTemporary()) {
+        if (document && document->isModified()) {
+        // OPENMV-DIFF //
             QString name = document->filePath().toUrlishString();
+            // OPENMV-DIFF //
+            if (document->isTemporary())
+                name = QString();
+            // OPENMV-DIFF //
             if (name.isEmpty())
                 name = document->fallbackSaveAsFileName();
+            // OPENMV-DIFF //
+            if (name.isEmpty())
+                name = document->displayName();
+            if (name.isEmpty())
+                name = document->property("diffFilePath").toString();
+            // OPENMV-DIFF //
 
             // There can be several IDocuments pointing to the same file
             // Prefer one that is not readonly
@@ -708,7 +733,11 @@ bool DocumentManager::saveDocument(
     bool *isReadOnly)
 {
     bool ret = true;
-    const Utils::FilePath &savePath = filePath.isEmpty() ? document->filePath() : filePath;
+    // OPENMV-DIFF //
+    // const Utils::FilePath &savePath = filePath.isEmpty() ? document->filePath() : filePath;
+    // OPENMV-DIFF //
+    const Utils::FilePath &savePath = filePath.isEmpty() ? (!document->isTemporary() ? document->filePath() : FilePath()) : filePath;
+    // OPENMV-DIFF //
     expectFileChange(savePath); // This only matters to other IDocuments which refer to this file
     bool addWatcher = removeDocument(document); // So that our own IDocument gets no notification at all
 
@@ -786,7 +815,11 @@ QString DocumentManager::allDocumentFactoryFiltersString(QString *allFilesFilter
     if (allFilesFilter)
         *allFilesFilter = allFiles;
     filters.prepend(allFiles);
-    return filters.join(QLatin1String(";;"));
+    // OPENMV-DIFF //
+    // return filters.join(QLatin1String(";;"));
+    // OPENMV-DIFF //
+    return allFiles;
+    // OPENMV-DIFF //
 }
 
 FilePath DocumentManager::getSaveFileName(const QString &title, const FilePath &pathIn,
@@ -853,7 +886,13 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
 {
     QTC_ASSERT(document, return {});
     QString filter = allDocumentFactoryFiltersString();
-    const FilePath filePath = document->filePath();
+    // OPENMV-DIFF //
+    // const FilePath filePath = document->filePath();
+    // OPENMV-DIFF //
+    const FilePath filePath = !document->isTemporary()
+        ? document->filePath()
+        : fileDialogInitialDirectory().pathAppended(document->filePath().fileName());
+    // OPENMV-DIFF //
     QString selectedFilter;
     FilePath fileDialogPath = filePath;
     if (!filePath.isEmpty()) {
@@ -873,8 +912,12 @@ FilePath DocumentManager::getSaveAsFileName(const IDocument *document)
         else if (!defaultPath.isEmpty())
             fileDialogPath = defaultPath;
     }
-    if (selectedFilter.isEmpty())
-        selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    // if (selectedFilter.isEmpty())
+    //     selectedFilter = Utils::mimeTypeForName(document->mimeType()).filterString();
+    // OPENMV-DIFF //
+    selectedFilter = QString();
+    // OPENMV-DIFF //
 
     if (!filter.contains(selectedFilter))
         filter.prepend(selectedFilter + QLatin1String(";;"));
@@ -1249,8 +1292,15 @@ void DocumentManager::checkForReload()
                         break;
                     }
                 }
-                if (previousReloadAnswer == ReloadNoneAndDiff)
-                    filesToDiff.append(document->filePath());
+                if (previousReloadAnswer == ReloadNoneAndDiff) {
+                    // OPENMV-DIFF //
+                    // filesToDiff.append(document->filePath());
+                    FilePath filePath = document->filePath();
+                    if (filePath.isEmpty())
+                        filePath = FilePath::fromString(document->property("diffFilePath").toString());
+                    filesToDiff.append(filePath);
+                    // OPENMV-DIFF //
+                }
 
             // IDocument wants us to ask, and it's the TypeRemoved case
             } else {
@@ -1326,6 +1376,13 @@ void DocumentManager::addToRecentFiles(const FilePath &filePath, Id editorId)
     if (filePath.isEmpty())
         return;
     const FilePath fileKey = filePathKey(filePath, KeepLinks);
+    // OPENMV-DIFF //
+    for (const RecentFile &file : d->m_recentFiles) {
+        if (fileKey == filePathKey(file.first, DocumentManager::KeepLinks)) {
+            return;
+        }
+    }
+    // OPENMV-DIFF //
     Utils::erase(d->m_recentFiles, [fileKey](const RecentFile &file) {
         return fileKey == filePathKey(file.first, DocumentManager::KeepLinks);
     });
@@ -1373,6 +1430,9 @@ void DocumentManager::saveSettings()
     s->setValueWithDefault(useProjectDirectoryKeyC,
                            d->m_useProjectsDirectory,
                            kUseProjectsDirectoryDefault);
+    // OPENMV-DIFF //
+    s->setValue(lastVisitedDirectoryC, d->m_lastVisitedDirectory.toSettings());
+    // OPENMV-DIFF //
     s->endGroup();
 }
 
@@ -1405,10 +1465,19 @@ void readSettings()
     s->beginGroup(directoryGroupC);
 
     d->m_projectsDirectory = FilePath::fromSettings(
-        s->value(projectDirectoryKeyC, PathChooser::homePath().toSettings()));
+        // OPENMV-DIFF //
+        // s->value(projectDirectoryKeyC, PathChooser::homePath().toSettings()));
+        // OPENMV-DIFF //
+        s->value(projectDirectoryKeyC, PathChooser::homePath().pathAppended(QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR)).toSettings()));
+        // OPENMV-DIFF //
 
     d->m_useProjectsDirectory
         = s->value(useProjectDirectoryKeyC, kUseProjectsDirectoryDefault).toBool();
+
+    // OPENMV-DIFF //
+    if (s->contains(lastVisitedDirectoryC)) d->m_lastVisitedDirectory = FilePath::fromSettings(s->value(lastVisitedDirectoryC));
+    else if (d->m_useProjectsDirectory) d->m_lastVisitedDirectory = d->m_projectsDirectory;
+    // OPENMV-DIFF //
 
     s->endGroup();
 }
@@ -1424,11 +1493,13 @@ void readSettings()
 
 FilePath DocumentManager::fileDialogInitialDirectory()
 {
-    IDocument *doc = EditorManager::currentDocument();
-    if (doc && !doc->isTemporary() && !doc->filePath().isEmpty())
-        return doc->filePath().absolutePath();
-    if (!d->m_defaultLocationForNewFiles.isEmpty())
-        return d->m_defaultLocationForNewFiles;
+    // OPENMV-DIFF //
+    // IDocument *doc = EditorManager::currentDocument();
+    // if (doc && !doc->isTemporary() && !doc->filePath().isEmpty())
+    //     return doc->filePath().absolutePath();
+    // if (!d->m_defaultLocationForNewFiles.isEmpty())
+    //     return d->m_defaultLocationForNewFiles;
+    // OPENMV-DIFF //
     return d->m_lastVisitedDirectory;
 }
 
@@ -1548,8 +1619,10 @@ void DocumentManager::registerSaveAllAction()
     ActionBuilder saveAll(d, Constants::SAVEALL);
     saveAll.setText(Tr::tr("Save A&ll"));
     saveAll.bindContextAction(&d->m_saveAllAction);
-    saveAll.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
-    saveAll.setDefaultKeySequence(QString(), Tr::tr("Ctrl+Shift+S"));
+    // OPENMV-DIFF //
+    // saveAll.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // saveAll.setDefaultKeySequence(QString(), Tr::tr("Ctrl+Shift+S"));
+    // OPENMV-DIFF //
     saveAll.setEnabled(false);
     saveAll.addOnTriggered([] { DocumentManager::saveAllModifiedDocumentsSilently(); });
 }

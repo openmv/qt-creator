@@ -396,21 +396,25 @@ void TextEditorPlugin::createEditorCommands()
     TextActionBuilder(this, FOLLOW_SYMBOL_UNDER_CURSOR)
         .setText(Tr::tr("Follow Symbol Under Cursor"))
         .setDefaultKeySequence(QKeySequence(Qt::Key_F2));
-    TextActionBuilder(this, FOLLOW_SYMBOL_UNDER_CURSOR_IN_NEXT_SPLIT)
-        .setText(Tr::tr("Follow Symbol Under Cursor in Next Split"))
-        .setDefaultKeySequence(Tr::tr("Meta+E, F2"), Tr::tr("Ctrl+E, F2"));
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, FOLLOW_SYMBOL_UNDER_CURSOR_IN_NEXT_SPLIT)
+    //     .setText(Tr::tr("Follow Symbol Under Cursor in Next Split"))
+    //     .setDefaultKeySequence(Tr::tr("Meta+E, F2"), Tr::tr("Ctrl+E, F2"));
+    // OPENMV-DIFF //
     TextActionBuilder(this, FOLLOW_SYMBOL_TO_TYPE)
         .setText(Tr::tr("Follow Type Under Cursor"))
         .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+F2")));
-    TextActionBuilder(this, FOLLOW_SYMBOL_TO_TYPE_IN_NEXT_SPLIT)
-        .setText(Tr::tr("Follow Type Under Cursor in Next Split"))
-        .setDefaultKeySequence(Tr::tr("Meta+E, Shift+F2"), Tr::tr("Ctrl+E, Ctrl+Shift+F2"));
-    TextActionBuilder(this, FIND_USAGES)
-        .setText(Tr::tr("Find References to Symbol Under Cursor"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+U")));
-    TextActionBuilder(this, RENAME_SYMBOL)
-        .setText(Tr::tr("Rename Symbol Under Cursor"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+R")));
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, FOLLOW_SYMBOL_TO_TYPE_IN_NEXT_SPLIT)
+    //     .setText(Tr::tr("Follow Type Under Cursor in Next Split"))
+    //     .setDefaultKeySequence(Tr::tr("Meta+E, Shift+F2"), Tr::tr("Ctrl+E, Ctrl+Shift+F2"));
+    // TextActionBuilder(this, FIND_USAGES)
+    //     .setText(Tr::tr("Find References to Symbol Under Cursor"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+U")));
+    // TextActionBuilder(this, RENAME_SYMBOL)
+    //     .setText(Tr::tr("Rename Symbol Under Cursor"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+R")));
+    // OPENMV-DIFF //
     TextActionBuilder(this, JUMP_TO_FILE_UNDER_CURSOR)
         .setText(Tr::tr("Jump to File Under Cursor"))
         .setDefaultKeySequence(QKeySequence(Qt::Key_F2));
@@ -421,23 +425,27 @@ void TextEditorPlugin::createEditorCommands()
     TextActionBuilder(this, OPEN_TYPE_HIERARCHY)
         .setText(Tr::tr("Open Type Hierarchy"))
         .setDefaultKeySequence(Tr::tr("Meta+Shift+T"), Tr::tr("Ctrl+Shift+T"));
-    TextActionBuilder(this, VIEW_PAGE_UP)
-        .setText(Tr::tr("Move the View a Page Up and Keep the Cursor Position"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+PgUp")));
-    TextActionBuilder(this, VIEW_PAGE_DOWN)
-        .setText(Tr::tr("Move the View a Page Down and Keep the Cursor Position"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+PgDown")));
-    TextActionBuilder(this, VIEW_LINE_UP)
-        .setText(Tr::tr("Move the View a Line Up and Keep the Cursor Position"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Up")));
-    TextActionBuilder(this, VIEW_LINE_DOWN)
-        .setText(Tr::tr("Move the View a Line Down and Keep the Cursor Position"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Down")));
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, VIEW_PAGE_UP)
+    //     .setText(Tr::tr("Move the View a Page Up and Keep the Cursor Position"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+PgUp")));
+    // TextActionBuilder(this, VIEW_PAGE_DOWN)
+    //     .setText(Tr::tr("Move the View a Page Down and Keep the Cursor Position"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+PgDown")));
+    // TextActionBuilder(this, VIEW_LINE_UP)
+    //     .setText(Tr::tr("Move the View a Line Up and Keep the Cursor Position"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Up")));
+    // TextActionBuilder(this, VIEW_LINE_DOWN)
+    //     .setText(Tr::tr("Move the View a Line Down and Keep the Cursor Position"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Down")));
+    // OPENMV-DIFF //
 
     ActionManager::actionContainer(M_EDIT);
-    TextActionBuilder(this, SELECT_ENCODING)
-        .setText(Tr::tr("Select Encoding..."))
-        .addToContainer(M_EDIT, G_EDIT_OTHER);
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, SELECT_ENCODING)
+    //     .setText(Tr::tr("Select Encoding..."))
+    //     .addToContainer(M_EDIT, G_EDIT_OTHER);
+    // OPENMV-DIFF //
     TextActionBuilder(this, CIRCULAR_PASTE)
         .setText(Tr::tr("Paste from Clipboard History"))
         .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+V")))
@@ -448,14 +456,16 @@ void TextEditorPlugin::createEditorCommands()
         .addToContainer(M_EDIT, G_EDIT_COPYPASTE);
 
     ActionManager::actionContainer(M_EDIT_ADVANCED);
-    TextActionBuilder(this, AUTO_INDENT_SELECTION)
-        .setText(Tr::tr("Auto-&indent Selection"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+I")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_FORMAT);
-    TextActionBuilder(this, AUTO_FORMAT_SELECTION)
-        .setText(Tr::tr("Auto-&format Selection"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+;")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_FORMAT);
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, AUTO_INDENT_SELECTION)
+    //     .setText(Tr::tr("Auto-&indent Selection"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+I")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_FORMAT);
+    // TextActionBuilder(this, AUTO_FORMAT_SELECTION)
+    //     .setText(Tr::tr("Auto-&format Selection"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+;")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_FORMAT);
+    // OPENMV-DIFF //
     TextActionBuilder(this, REWRAP_PARAGRAPH)
         .setText(Tr::tr("&Rewrap Paragraph"))
         .setDefaultKeySequence(Tr::tr("Meta+E, R"), Tr::tr("Ctrl+E, R"))
@@ -496,12 +506,14 @@ void TextEditorPlugin::createEditorCommands()
         .setText(Tr::tr("Add Next Occurrence to Selection"))
         .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+D")))
         .addToContainer(M_EDIT_ADVANCED, G_EDIT_TEXT);
-    TextActionBuilder(this, DUPLICATE_SELECTION)
-        .setText(Tr::tr("&Duplicate Selection"))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_TEXT);
-    TextActionBuilder(this, DUPLICATE_SELECTION_AND_COMMENT)
-        .setText(Tr::tr("&Duplicate Selection and Comment"))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_TEXT);
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, DUPLICATE_SELECTION)
+    //     .setText(Tr::tr("&Duplicate Selection"))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_TEXT);
+    // TextActionBuilder(this, DUPLICATE_SELECTION_AND_COMMENT)
+    //     .setText(Tr::tr("&Duplicate Selection and Comment"))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_TEXT);
+    // OPENMV-DIFF //
     TextActionBuilder(this, UPPERCASE_SELECTION)
         .setText(Tr::tr("Uppercase Selection"))
         .setDefaultKeySequence(Tr::tr("Meta+Shift+U"), Tr::tr("Alt+Shift+U"))
@@ -531,22 +543,24 @@ void TextEditorPlugin::createEditorCommands()
     TextActionBuilder(this, UNFOLD_ALL)
         .setText(Tr::tr("Toggle &Fold All"))
         .addToContainer(M_EDIT_ADVANCED, G_EDIT_COLLAPSING);
-    TextActionBuilder(this, GOTO_BLOCK_START)
-        .setText(Tr::tr("Go to Block Start"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+[")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
-    TextActionBuilder(this, GOTO_BLOCK_END)
-        .setText(Tr::tr("Go to Block End"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+]")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
-    TextActionBuilder(this, SELECT_BLOCK_UP)
-        .setText(Tr::tr("Select Block Up"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+U")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
-    TextActionBuilder(this, SELECT_BLOCK_DOWN)
-        .setText(Tr::tr("Select Block Down"))
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")))
-        .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
+    // OPENMV-DIFF //
+    // TextActionBuilder(this, GOTO_BLOCK_START)
+    //     .setText(Tr::tr("Go to Block Start"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+[")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
+    // TextActionBuilder(this, GOTO_BLOCK_END)
+    //     .setText(Tr::tr("Go to Block End"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+]")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
+    // TextActionBuilder(this, SELECT_BLOCK_UP)
+    //     .setText(Tr::tr("Select Block Up"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+U")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
+    // TextActionBuilder(this, SELECT_BLOCK_DOWN)
+    //     .setText(Tr::tr("Select Block Down"))
+    //     .setDefaultKeySequence(QKeySequence(Tr::tr("Ctrl+Shift+Alt+U")))
+    //     .addToContainer(M_EDIT_ADVANCED, G_EDIT_BLOCKS);
+    // OPENMV-DIFF //
     TextActionBuilder(this, SELECT_WORD_UNDER_CURSOR).setText(Tr::tr("Select Word Under Cursor"));
     TextActionBuilder(this, CLEAR_SELECTION)
         .setText(QCoreApplication::translate("QtC::Terminal", "Clear Selection"));

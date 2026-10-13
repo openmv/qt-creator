@@ -7,7 +7,10 @@ namespace Python::Internal {
 
 void setupPythonRunConfiguration();
 void setupPythonRunWorker();
-void setupPythonDebugWorker();
-void setupPythonOutputParser();
+// OPENMV-DIFF //
+// Debug worker (Debugger plugin) and the build-configuration-driven output parser removed.
+// void setupPythonDebugWorker();
+// void setupPythonOutputParser();
+// OPENMV-DIFF //
 
 } // Python::Internal

@@ -98,6 +98,9 @@ void ProxyAction::update(QAction *action, bool initialize)
         return;
     disconnect(this, &ProxyAction::changed, this, &ProxyAction::updateToolTipWithKeySequence);
     if (initialize) {
+        // OPENMV-DIFF //
+        m_realAction = action;
+        // OPENMV-DIFF //
         setSeparator(action->isSeparator());
         setMenuRole(action->menuRole());
     }
@@ -147,9 +150,17 @@ void ProxyAction::updateToolTipWithKeySequence()
         return;
     m_block = true;
     if (!m_showShortcut || shortcut().isEmpty())
-        setToolTip(m_toolTip);
+        // OPENMV-DIFF //
+        // setToolTip(m_toolTip);
+        // OPENMV-DIFF //
+        setToolTip(m_overrideToolTip.isEmpty() ? m_toolTip : m_overrideToolTip);
+        // OPENMV-DIFF //
     else
-        setToolTip(stringWithAppendedShortcut(m_toolTip, shortcut()));
+        // OPENMV-DIFF //
+        // setToolTip(stringWithAppendedShortcut(m_toolTip, shortcut()));
+        // OPENMV-DIFF //
+        setToolTip(m_overrideToolTip.isEmpty() ? stringWithAppendedShortcut(m_toolTip, shortcut()) : m_overrideToolTip);
+        // OPENMV-DIFF //
     m_block = false;
 }
 

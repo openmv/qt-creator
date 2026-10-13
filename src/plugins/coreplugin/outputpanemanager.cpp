@@ -321,14 +321,34 @@ public:
 static QVector<OutputPaneData> g_outputPanes;
 static bool g_managerConstructed = false; // For debugging reasons.
 
+// OPENMV-DIFF //
+// True when launched as the read-only telemetry viewer (-viewer_mode). Only
+// read at startup (manager construction / settings load), so not cached.
+// NOTE: upstream 20.0.2 already closed namespace Internal above (line ~114), so
+// unlike OpenMV's 14.0.2 base this helper lives in namespace Core and there is
+// no extra "} // Internal" close here.
+static bool isViewerMode()
+{
+    return QCoreApplication::arguments().contains(QLatin1String("-viewer_mode"));
+}
+// OPENMV-DIFF //
+
 // OutputPane
 
-IOutputPane::IOutputPane(QObject *parent)
+// OPENMV-DIFF //
+// IOutputPane::IOutputPane(QObject *parent)
+// OPENMV-DIFF //
+IOutputPane::IOutputPane(bool hidden, QObject *parent)
+// OPENMV-DIFF //
     : QObject(parent)
 {
     // We need all pages first. Ignore latecomers and shout.
     QTC_ASSERT(!g_managerConstructed, return);
-    g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
+    // g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
+    if (!hidden) g_outputPanes.append(OutputPaneData(this));
+    // OPENMV-DIFF //
 
     m_zoomInButton = Command::createToolButtonWithShortcutToolTip(Constants::ZOOM_IN);
     m_zoomInButton->setIcon(Utils::Icons::PLUS_TOOLBAR.icon());
@@ -346,9 +366,17 @@ IOutputPane::IOutputPane(QObject *parent)
 IOutputPane::~IOutputPane()
 {
     const int i = Utils::indexOf(g_outputPanes, Utils::equal(&OutputPaneData::pane, this));
-    QTC_ASSERT(i >= 0, return);
-    delete g_outputPanes.at(i).button;
-    g_outputPanes.removeAt(i);
+    // OPENMV-DIFF //
+    // QTC_ASSERT(i >= 0, return);
+    //
+    // g_outputPanes.removeAt(i);
+    // OPENMV-DIFF //
+    if (i >= 0)
+    {
+        delete g_outputPanes.at(i).button;
+        g_outputPanes.removeAt(i);
+    }
+    // OPENMV-DIFF //
 
     delete m_zoomInButton;
     delete m_zoomOutButton;
@@ -604,10 +632,12 @@ const char outputPaneIdKeyC[] = "id";
 const char outputPaneVisibleKeyC[] = "visible";
 const int buttonBorderWidth = 3;
 
-static int numberAreaWidth()
-{
-    return creatorTheme()->flag(Theme::FlatToolBars) ? 15 : 19;
-}
+// OPENMV-DIFF //
+// static int numberAreaWidth()
+// {
+//     return creatorTheme()->flag(Theme::FlatToolBars) ? 15 : 19;
+// }
+// OPENMV-DIFF //
 
 ////
 // OutputPaneManager
@@ -657,14 +687,16 @@ void OutputPaneManager::updateMaximizeButton(bool maximized)
 }
 
 // Return shortcut as Alt+<number> or Cmd+<number> if number is a non-zero digit
-static QKeySequence paneShortCut(int number)
-{
-    if (number < 1 || number > 9)
-        return QKeySequence();
-
-    const int modifier = HostOsInfo::isMacHost() ? Qt::CTRL : Qt::ALT;
-    return QKeySequence(modifier | (Qt::Key_0 + number));
-}
+// OPENMV-DIFF //
+// static QKeySequence paneShortCut(int number)
+// {
+//     if (number < 1 || number > 9)
+//         return QKeySequence();
+//
+//     const int modifier = HostOsInfo::isMacHost() ? Qt::CTRL : Qt::ALT;
+//     return QKeySequence(modifier | (Qt::Key_0 + number));
+// }
+// OPENMV-DIFF //
 
 OutputPaneManager::OutputPaneManager(QWidget *parent) :
     QWidget(parent),
@@ -677,6 +709,14 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
 
     m_titleLabel->setContentsMargins(5, 0, 5, 0);
 
+    // OPENMV-DIFF //
+    // OBSOLETE: OpenMV's 14.0.2 base created m_clearAction/m_nextAction/m_prevAction/
+    // m_minMaxAction here as plain QActions (and a second closeButton). Upstream 20.0.2
+    // creates them via ActionBuilder(...).bindContextAction(&m_...) below, so the manual
+    // creation is dropped (it would also re-declare the closeButton made further down).
+    // The OpenMV-only intent here -- disabling prev/next/minMax default shortcuts -- is
+    // re-applied on the ActionBuilder chains below.
+    // OPENMV-DIFF //
     connect(ICore::instance(), &ICore::saveSettingsRequested, this, &OutputPaneManager::saveSettings);
 
     auto toolBar = new StyledBar;
@@ -694,8 +734,10 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
         m_titleLabel,
         new StyledSeparator,
         clearButton,
-        prevToolButton,
-        nextToolButton,
+        // OPENMV-DIFF //
+        // prevToolButton,
+        // nextToolButton,
+        // OPENMV-DIFF //
         m_opToolBarWidgets,
         minMaxButton,
         closeButton,
@@ -710,36 +752,49 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     }.attachTo(this);
 
     Row {
-        spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(5, 0, 0, 0),
+        // OPENMV-DIFF //
+        // spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(5, 0, 0, 0),
+        // OPENMV-DIFF //
+        spacing(creatorTheme()->flag(Theme::FlatToolBars) ? 9 : 4), customMargins(1, 0, 0, 0),
+        // OPENMV-DIFF //
     }.attachTo(m_buttonsWidget);
 
     StatusBarManager::addStatusBarWidget(m_buttonsWidget, StatusBarManager::Second);
 
-    ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
+    // ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
 
     // Window->Output Panes
     ActionContainer *mpanes = ActionManager::createMenu(Constants::M_VIEW_PANES);
-    mview->addMenu(mpanes, Constants::G_VIEW_PANES);
+    // OPENMV-DIFF //
+    // mview->addMenu(mpanes, Constants::G_VIEW_PANES);
+    // OPENMV-DIFF //
     mpanes->menu()->setTitle(Tr::tr("Out&put"));
     mpanes->appendGroup("Coreplugin.OutputPane.ActionsGroup");
     mpanes->appendGroup("Coreplugin.OutputPane.PanesGroup");
 
     ActionBuilder clearAction(this, Constants::OUTPUTPANE_CLEAR);
-    clearAction.setIcon(Utils::Icons::CLEAN.icon())
+    clearAction.setIcon(Utils::Icons::CLEAN_TOOLBAR.icon())
         .setText(Tr::tr("Clear"))
         .addOnTriggered(this, &OutputPaneManager::clearPage)
         .addToContainer(Constants::M_VIEW_PANES, "Coreplugin.OutputPane.ActionsGroup")
         .bindContextAction(&m_clearAction);
-    clearButton->setDefaultAction(
-        ProxyAction::proxyActionWithIcon(
-            clearAction.contextAction(), Utils::Icons::CLEAN_TOOLBAR.icon()));
+    // OPENMV-DIFF //
+    // OpenMV puts the Clear action on the output-pane toolbar with the toolbar icon.
+    // Upstream 20.0.2's ActionBuilder sets the icon directly and the tool button uses
+    // contextAction() (same as prev/next), replacing the old proxyActionWithIcon wiring.
+    clearButton->setDefaultAction(clearAction.contextAction());
+    // OPENMV-DIFF //
 
     ActionBuilder prevAction(this, "Coreplugin.OutputPane.previtem");
     prevAction
         .setIcon(Utils::Icons::ARROW_UP_TOOLBAR.icon())
         .setText(Tr::tr("Previous Item"))
         .addOnTriggered(this, &OutputPaneManager::slotPrev)
-        .setDefaultKeySequence(QKeySequence(Tr::tr("Shift+F6")))
+        // OPENMV-DIFF //
+        // .setDefaultKeySequence(QKeySequence(Tr::tr("Shift+F6")))
+        // OPENMV-DIFF //
         .addToContainer(Constants::M_VIEW_PANES, "Coreplugin.OutputPane.ActionsGroup")
         .bindContextAction(&m_prevAction);
     prevToolButton->setDefaultAction(prevAction.contextAction());
@@ -749,14 +804,18 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
         .setIcon(Utils::Icons::ARROW_DOWN_TOOLBAR.icon())
         .setText(Tr::tr("Next Item"))
         .addOnTriggered(this, &OutputPaneManager::slotNext)
-        .setDefaultKeySequence(QKeySequence(Tr::tr("F6")))
+        // OPENMV-DIFF //
+        // .setDefaultKeySequence(QKeySequence(Tr::tr("F6")))
+        // OPENMV-DIFF //
         .addToContainer(Constants::M_VIEW_PANES, "Coreplugin.OutputPane.ActionsGroup")
         .bindContextAction(&m_nextAction);
     nextToolButton->setDefaultAction(nextAction.contextAction());
 
     ActionBuilder minMaxAction(this, "Coreplugin.OutputPane.minmax");
     minMaxAction
-        .setDefaultKeySequence(Tr::tr("Ctrl+Shift+9"), Tr::tr("Alt+Shift+9"))
+        // OPENMV-DIFF //
+        // .setDefaultKeySequence(Tr::tr("Ctrl+Shift+9"), Tr::tr("Alt+Shift+9"))
+        // OPENMV-DIFF //
         .setCommandAttribute(Command::CA_UpdateText)
         .setCommandAttribute(Command::CA_UpdateIcon)
         .addToContainer(Constants::M_VIEW_PANES, "Coreplugin.OutputPane.ActionsGroup")
@@ -774,6 +833,18 @@ OutputPaneManager::OutputPaneManager(QWidget *parent) :
     closeButton->setDefaultAction(closeAction.commandAction());
 
     mpanes->addSeparator("Coreplugin.OutputPane.ActionsGroup");
+
+    // OPENMV-DIFF //
+    // In viewer mode (read-only telemetry viewer) there's nothing to maximize
+    // or close in the output pane, so hide the maximize and close buttons. Both
+    // are local QToolButtons that nothing re-shows, so hiding the widgets is
+    // durable (a standalone QToolButton tracks its action's enabled state but
+    // not its visibility, so hiding via the action wouldn't hide the button).
+    if (isViewerMode()) {
+        minMaxButton->hide();
+        closeButton->hide();
+    }
+    // OPENMV-DIFF //
 }
 
 void OutputPaneManager::initialize()
@@ -783,7 +854,12 @@ void OutputPaneManager::initialize()
     const int currentIdx = m_instance->currentIndex();
     if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
         m_instance->m_titleLabel->setText(g_outputPanes[currentIdx].pane->displayName());
-    m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 relocated this init tail from setupButtons() into initialize();
+    // OpenMV's two customizations are re-applied here:
+    //  - the OutputPane "manage" button is not added to the buttons widget.
+    // m_instance->m_buttonsWidget->layout()->addWidget(m_instance->m_manageButton);
+    // OPENMV-DIFF //
     connect(m_instance->m_manageButton,
             &OutputPaneManageButton::menuRequested,
             m_instance,
@@ -797,6 +873,14 @@ void OutputPaneManager::initialize()
         const int index = m_instance->currentIndex();
         m_instance->updateActions(index >= 0 ? g_outputPanes.at(index).pane : nullptr);
     });
+
+    // OPENMV-DIFF //
+    //  - defer showing the output pane on startup when it was visible last session.
+    QTimer::singleShot(0, m_instance, [] () {
+        if (m_instance->m_outputPaneVisibleOnStartup)
+            m_instance->showPage(m_instance->m_outputWidgetPane->currentIndex(), IOutputPane::ModeSwitch);
+    });
+    // OPENMV-DIFF //
 
     m_instance->m_initialized = true;
 }
@@ -866,7 +950,9 @@ void OutputPaneManager::setupButtons()
         paneAction
             .setText(outPane->displayName())
             .addOnTriggered(m_instance, [i] { m_instance->shortcutTriggered(i); })
-            .setDefaultKeySequence(paneShortCut(shortcutNumber))
+            // OPENMV-DIFF //
+            // .setDefaultKeySequence(paneShortCut(shortcutNumber))
+            // OPENMV-DIFF //
             .addToContainer(Constants::M_VIEW_PANES, "Coreplugin.OutputPane.PanesGroup")
             .bindContextAction(&data.action);
         auto button = new OutputPaneToggleButton(shortcutNumber,
@@ -874,7 +960,9 @@ void OutputPaneManager::setupButtons()
                                                  paneAction.commandAction());
         data.button = button;
         connect(button, &OutputPaneToggleButton::contextMenuRequested, m_instance, [] {
-            m_instance->popupMenu();
+            // OPENMV-DIFF //
+            // m_instance->popupMenu();
+            // OPENMV-DIFF //
         });
 
         connect(outPane, &IOutputPane::flashButton, button, [button] { button->flash(); });
@@ -889,13 +977,27 @@ void OutputPaneManager::setupButtons()
             m_instance->buttonTriggered(i);
         });
 
-        const bool visible = outPane->priorityInStatusBar() >= 0;
+        // OPENMV-DIFF //
+        // const bool visible = outPane->priorityInStatusBar() >= 0;
+        // OPENMV-DIFF //
+        bool visible = outPane->priorityInStatusBar() >= 0;
+        // In viewer mode (read-only telemetry viewer) the output pane area only
+        // ever shows the Serial Terminal, which is forced visible on startup, so
+        // hide all of the status-bar pane toggle buttons.
+        if (isViewerMode())
+            visible = false;
+        // OPENMV-DIFF //
         data.button->setVisible(visible);
     }
 
     m_instance->m_titleLabel->setMinimumWidth(
         minTitleWidth + m_instance->m_titleLabel->contentsMargins().left()
         + m_instance->m_titleLabel->contentsMargins().right());
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 moved the init tail that used to live here into
+    // OutputPaneManager::initialize(); OpenMV's customizations (no manage button,
+    // deferred startup showPage) are re-applied there instead of duplicated here.
+    // OPENMV-DIFF //
 }
 
 OutputPaneManager::~OutputPaneManager() = default;
@@ -967,17 +1069,51 @@ void OutputPaneManager::readSettings()
         const int idx = Utils::indexOf(g_outputPanes, Utils::equal(&OutputPaneData::id, id));
         if (idx < 0) // happens for e.g. disabled plugins (with outputpanes) that were loaded before
             continue;
-        const bool visible = settings->value(outputPaneVisibleKeyC).toBool();
+        // OPENMV-DIFF //
+        // const bool visible = settings->value(outputPaneVisibleKeyC).toBool();
+        // OPENMV-DIFF //
+        // OpenMV removed every UI affordance for hiding the status-bar pane toggle
+        // buttons (the manage button and the per-button context menu are both
+        // OPENMV-DIFF'd out), so the persisted "visible" value is vestigial. Worse,
+        // viewer mode force-hides every button, which would otherwise be saved and
+        // bleed back into the normal IDE (hiding e.g. the Search Results toggle), and
+        // the IDE would then re-save the hidden state -- self-perpetuating. Derive
+        // visibility from the pane's status-bar priority (as initialize() does) rather
+        // than the stored value, and keep all buttons hidden in viewer mode.
+        bool visible = g_outputPanes[idx].pane->priorityInStatusBar() >= 0;
+        if (isViewerMode())
+            visible = false;
+        // OPENMV-DIFF //
         g_outputPanes[idx].button->setVisible(visible);
     }
     settings->endArray();
 
     m_outputPaneHeightSetting
         = settings->value("OutputPanePlaceHolder/Height", 0).toInt();
+    // OPENMV-DIFF //
+    // const int currentIdx
+    //     = settings->value("OutputPanePlaceHolder/CurrentIndex", 0).toInt();
+    // OPENMV-DIFF //
     const int currentIdx
-        = settings->value("OutputPanePlaceHolder/CurrentIndex", 0).toInt();
-    if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
-        setCurrentIndex(currentIdx);
+        = settings->value("OutputPanePlaceHolder/CurrentIndex", 1).toInt();
+    m_outputPaneVisibleOnStartup
+        = settings->value("OutputPanePlaceHolder/Visible", true).toBool();
+    // OPENMV-DIFF //
+    // if (QTC_GUARD(currentIdx >= 0 && currentIdx < g_outputPanes.size()))
+    //     setCurrentIndex(currentIdx);
+    // OPENMV-DIFF //    
+    int startupIdx = currentIdx;
+    // In viewer mode the pane toggle buttons are hidden, so always open on the
+    // Serial Terminal (GeneralMessages) and force the output pane visible.
+    if (isViewerMode()) {
+        const int gmIdx = Utils::indexOf(g_outputPanes,
+            [](const OutputPaneData &d) { return d.pane->id() == Id("GeneralMessages"); });
+        if (gmIdx >= 0)
+            startupIdx = gmIdx;
+        m_outputPaneVisibleOnStartup = true;
+    }
+    if (QTC_GUARD(startupIdx >= 0 && startupIdx < g_outputPanes.size()))
+        setCurrentIndex(startupIdx);
 }
 
 void OutputPaneManager::updateActions(IOutputPane *pane)
@@ -989,6 +1125,13 @@ void OutputPaneManager::updateActions(IOutputPane *pane)
     m_minMaxAction->setEnabled(enabledForMode);
     m_prevAction->setEnabled(enabledForMode && pane && pane->canNavigate() && pane->canPrevious());
     m_nextAction->setEnabled(enabledForMode && pane && pane->canNavigate() && pane->canNext());
+    // OPENMV-DIFF //
+    // Hide the prev/next actions entirely for panes that cannot navigate. Guarded
+    // against a null pane to match the upstream 20.0.2 enabled-checks just above
+    // (OpenMV's original dereferenced pane unconditionally).
+    m_prevAction->setVisible(pane && pane->canNavigate());
+    m_nextAction->setVisible(pane && pane->canNavigate());
+    // OPENMV-DIFF //
     for (const OutputPaneData &d : std::as_const(g_outputPanes))
         d.action->setEnabled(enabledForMode);
 }
@@ -1013,6 +1156,17 @@ void OutputPaneManager::slotPrev()
 
 void OutputPaneManager::slotHide()
 {
+    // OPENMV-DIFF //
+    // In viewer mode the serial terminal must never hide: the editor area above
+    // it is hidden and every affordance for re-showing the pane is removed (the
+    // status-bar toggle buttons, the close/minmax buttons, and the unattached
+    // Output menu), so a hide would be permanent until restart. This is the
+    // choke point for every hide path -- the global Esc shortcut (ReturnToEditor
+    // -> doEscapeKeyFocusMoveMagic()), the pane toggle actions, and IOutputPane
+    // hidePage/togglePage requests -- so guard it here rather than per-caller.
+    if (isViewerMode())
+        return;
+    // OPENMV-DIFF //
     OutputPanePlaceHolder *ph = OutputPanePlaceHolder::getCurrent();
     if (ph) {
         emit ph->visibilityChangeRequested(false);
@@ -1100,7 +1254,14 @@ void OutputPaneManager::setCurrentIndex(int idx)
 
         OutputPaneData &data = g_outputPanes[idx];
         IOutputPane *pane = data.pane;
-        data.button->show();
+        // OPENMV-DIFF //
+        // data.button->show();
+        // OPENMV-DIFF //
+        // In viewer mode the status-bar pane toggle buttons stay hidden, so
+        // don't re-show the current pane's button when it becomes active.
+        if (!isViewerMode())
+            data.button->show();
+        // OPENMV-DIFF //
         if (OutputPanePlaceHolder::isCurrentVisible())
             pane->visibilityChanged(true);
 
@@ -1171,6 +1332,9 @@ void OutputPaneManager::saveSettings() const
         heightSetting = curr->nonMaximizedSize();
     settings->setValue("OutputPanePlaceHolder/Height", heightSetting);
     settings->setValue("OutputPanePlaceHolder/CurrentIndex", currentIndex());
+    // OPENMV-DIFF //
+    settings->setValue("OutputPanePlaceHolder/Visible", OutputPanePlaceHolder::isCurrentVisible());
+    // OPENMV-DIFF //
 }
 
 void OutputPaneManager::clearPage()
@@ -1227,7 +1391,11 @@ QSize OutputPaneToggleButton::sizeHint() const
     QSize s = fontMetrics().size(Qt::TextSingleLine, m_text);
 
     // Expand to account for border image
-    s.rwidth() += numberAreaWidth() + 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
+    // s.rwidth() += numberAreaWidth() + 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
+    s.rwidth() += 1 + buttonBorderWidth + buttonBorderWidth;
+    // OPENMV-DIFF //
 
     if (!m_badgeNumberLabel.text().isNull())
         s.rwidth() += m_badgeNumberLabel.sizeHint().width() + 1;
@@ -1245,8 +1413,12 @@ static QRect bgRect(const QRect &widgetRect)
 void OutputPaneToggleButton::paintEvent(QPaintEvent*)
 {
     const QFontMetrics fm = fontMetrics();
-    const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
-    const int numberWidth = fm.horizontalAdvance(m_number);
+    // OPENMV-DIFF //
+    // const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // const int numberWidth = fm.horizontalAdvance(m_number);
+    // OPENMV-DIFF //
+    int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
 
     QPainter p(this);
 
@@ -1292,7 +1464,11 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
             }
         }
         if (image)
-            StyleHelper::drawCornerImage(*image, &p, rect(), numberAreaWidth(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
+            // StyleHelper::drawCornerImage(*image, &p, rect(), numberAreaWidth(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
+            StyleHelper::drawCornerImage(*image, &p, rect(), buttonBorderWidth, buttonBorderWidth, buttonBorderWidth, buttonBorderWidth);
+            // OPENMV-DIFF //
     }
 
     if (m_flashTimer->state() == QTimeLine::Running)
@@ -1302,21 +1478,36 @@ void OutputPaneToggleButton::paintEvent(QPaintEvent*)
         if (creatorTheme()->flag(Theme::FlatToolBars))
             StyleHelper::drawPanelBgRect(&p, bgRect(rect()), c);
         else
-            p.fillRect(rect().adjusted(numberAreaWidth(), 1, -1, -1), c);
+            // OPENMV-DIFF //
+            // p.fillRect(rect().adjusted(numberAreaWidth(), 1, -1, -1), c);
+            // OPENMV-DIFF //
+            p.fillRect(rect().adjusted(1, 1, -1, -1), c);
+            // OPENMV-DIFF //
     }
 
     p.setFont(font());
     p.setPen(creatorColor(Theme::OutputPaneToggleButtonTextColorChecked));
-    p.drawText((numberAreaWidth() - numberWidth) / 2, baseLine, m_number);
+    // OPENMV-DIFF //
+    // p.drawText((numberAreaWidth() - numberWidth) / 2, baseLine, m_number);
+    // OPENMV-DIFF //
     if (!isChecked())
         p.setPen(creatorColor(Theme::OutputPaneToggleButtonTextColorUnchecked));
-    int leftPart = numberAreaWidth() + buttonBorderWidth;
+    // OPENMV-DIFF //
+    // int leftPart = numberAreaWidth() + buttonBorderWidth;
+    // OPENMV-DIFF //
+    int leftPart = 1 + buttonBorderWidth;
+    // OPENMV-DIFF //
     int labelWidth = 0;
     if (!m_badgeNumberLabel.text().isEmpty()) {
         const QSize labelSize = m_badgeNumberLabel.sizeHint();
         labelWidth = labelSize.width() + 3;
         m_badgeNumberLabel.paint(&p, width() - labelWidth, (height() - labelSize.height()) / 2, isChecked());
     }
+    // OPENMV-DIFF //
+#ifndef Q_OS_LINUX
+    baseLine = baseLine - 1;
+#endif
+    // OPENMV-DIFF //
     p.drawText(leftPart, baseLine, fm.elidedText(m_text, Qt::ElideRight, width() - leftPart - 1 - labelWidth));
 }
 

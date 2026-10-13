@@ -89,7 +89,18 @@ private:
     QWidget *m_buttonsWidget = nullptr;
     int m_outputPaneHeightSetting = 0;
     bool m_initialized = false;
+    // OPENMV-DIFF //
+    bool m_outputPaneVisibleOnStartup = false;
+    // OPENMV-DIFF //
 };
+
+// OPENMV-DIFF //
+// Upstream 20.0.2 moved the BadgeLabel, OutputPaneToggleButton and
+// OutputPaneManageButton class declarations out of this header and into
+// outputpanemanager.cpp. OpenMV's fork still declared them here (with an
+// older 4-arg OutputPaneToggleButton constructor); those stale declarations
+// are dropped in favor of the upstream .cpp-local ones.
+// OPENMV-DIFF //
 
 } // namespace Internal
 } // namespace Core

@@ -68,9 +68,16 @@ public:
 
     bool m_autoDetect = true;
     TabPolicy m_tabPolicy = SpacesOnlyTabPolicy;
-    int m_tabSize = 8;
+    // OPENMV-DIFF //
+    // int m_tabSize = 8;
+    // OPENMV-DIFF //
+    int m_tabSize = 4;
+    // OPENMV-DIFF //
     int m_indentSize = 4;
     ContinuationAlignBehavior m_continuationAlignBehavior = ContinuationAlignWithSpaces;
+    // OPENMV-DIFF //
+    int m_serialTerminalTabSize = 8;
+    // OPENMV-DIFF //
 
     bool equals(const TabSettings &ts) const;
 

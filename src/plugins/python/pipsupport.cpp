@@ -49,7 +49,6 @@ Group pipInstallerTask(const PipInstallerData &data)
                 arguments << pipPackage;
             }
         }
-
         if (!data.targetPath.isEmpty()) {
             QTC_ASSERT(data.targetPath.isSameDevice(data.python), return SetupResult::StopWithError);
             arguments << "-t" << data.targetPath.path();
@@ -80,18 +79,26 @@ Group pipInstallerTask(const PipInstallerData &data)
         auto progress = new ProcessProgress(&process);
         progress->setDisplayName(operation);
 
-        MessageManager::writeSilently(Tr::tr("Running \"%1\" to install %2.")
-                .arg(process.commandLine().toUserOutput(), data.packagesDisplayName()));
+        // OPENMV-DIFF //
+        // MessageManager::writeSilently(Tr::tr("Running \"%1\" to install %2.")
+        //         .arg(process.commandLine().toUserOutput(), data.packagesDisplayName()));
+        // OPENMV-DIFF //
 
         QObject::connect(&process, &Process::readyReadStandardError, &process, [process = &process] {
             const QString &stdOut = QString::fromLocal8Bit(process->readAllRawStandardOutput().trimmed());
-            if (!stdOut.isEmpty())
-                MessageManager::writeSilently(stdOut);
+            // OPENMV-DIFF //
+            // if (!stdOut.isEmpty())
+            //     MessageManager::writeSilently(stdOut);
+            Q_UNUSED(stdOut)
+            // OPENMV-DIFF //
         });
         QObject::connect(&process, &Process::readyReadStandardOutput, &process, [process = &process] {
             const QString &stdErr = QString::fromLocal8Bit(process->readAllRawStandardError().trimmed());
-            if (!stdErr.isEmpty())
-                MessageManager::writeSilently(stdErr);
+            // OPENMV-DIFF //
+            // if (!stdErr.isEmpty())
+            //     MessageManager::writeSilently(stdErr);
+            Q_UNUSED(stdErr)
+            // OPENMV-DIFF //
         });
         return SetupResult::Continue;
     };

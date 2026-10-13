@@ -70,6 +70,9 @@ public:
 
     static Utils::FilePath resourcePath(const QString &rel = {});
     static Utils::FilePath userResourcePath(const QString &rel = {});
+    // OPENMV-DIFF //
+    static Utils::FilePath allUsersResourcePath(const QString &rel = {});
+    // OPENMV-DIFF //
     static Utils::FilePath cacheResourcePath(const QString &rel = {});
     static Utils::FilePath installerResourcePath(const QString &rel = {});
     static Utils::FilePath libexecPath(const QString &rel = {});
@@ -130,6 +133,13 @@ public:
     // If no settings are dirty, the callback is called immediately.
     static void askToApplySettings(const std::function<void()> &callback);
 
+    // OPENMV-DIFF //
+    static void disableShow(bool disable);
+    static bool isShowDisabled();
+    static int serialTerminalTabSize();
+    static void setSerialTerminalTabSize(int tabSize);
+    // OPENMV-DIFF //
+
 public slots:
     static void openFileWith();
     static void exit();
@@ -145,6 +155,11 @@ signals:
     void contextAboutToChange(const QList<Core::IContext *> &context);
     void contextChanged(const Core::Context &context);
     void systemEnvironmentChanged();
+    // OPENMV-DIFF //
+    void showEventSignal();
+    void hideEventSignal();
+    void serialTerminalTabSizeChanged(int tabSize);
+    // OPENMV-DIFF //
 
 public:
     /* internal use */

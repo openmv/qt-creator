@@ -3,8 +3,10 @@
 
 #include "pythoneditor.h"
 
-#include "pyside.h"
-#include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
+// #include "pyside.h"
+// #include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
 #include "pythonconstants.h"
 #include "pythonhighlighter.h"
 #include "pythonindenter.h"
@@ -104,7 +106,11 @@ PythonEditorWidget::PythonEditorWidget(QWidget *parent) : TextEditorWidget(paren
     menu->addAction(Core::ActionManager::command(Constants::PYTHON_OPEN_REPL_IMPORT)->action());
     menu->addAction(
         Core::ActionManager::command(Constants::PYTHON_OPEN_REPL_IMPORT_TOPLEVEL)->action());
-    insertExtraToolBarWidget(TextEditorWidget::Left, replButton);
+    // OPENMV-DIFF //
+    // insertExtraToolBarWidget(TextEditorWidget::Left, replButton);
+    // OPENMV-DIFF //
+    replButton->hide();
+    // OPENMV-DIFF //
 }
 
 void PythonEditorWidget::finalizeInitialization()
@@ -126,7 +132,11 @@ void PythonEditorWidget::updateInterpretersSelector()
 {
     if (!m_interpreters) {
         m_interpreters = new QToolButton(this);
-        insertExtraToolBarWidget(TextEditorWidget::Left, m_interpreters);
+        // OPENMV-DIFF //
+        // insertExtraToolBarWidget(TextEditorWidget::Left, m_interpreters);
+        // OPENMV-DIFF //
+        m_interpreters->hide();
+        // OPENMV-DIFF //
         m_interpreters->setMenu(new QMenu(m_interpreters));
         m_interpreters->setPopupMode(QToolButton::InstantPopup);
         m_interpreters->setToolButtonStyle(Qt::ToolButtonTextOnly);
@@ -165,8 +175,10 @@ void PythonEditorWidget::updateInterpretersSelector()
                 if (project->activeBuildConfiguration() == buildConfiguration) {
                     action->setChecked(true);
                     setButtonText(name);
-                    if (auto pbc = qobject_cast<PythonBuildConfiguration *>(buildConfiguration))
-                        m_interpreters->setToolTip(pbc->python().toUserOutput());
+                    // OPENMV-DIFF //
+                    // if (auto pbc = qobject_cast<PythonBuildConfiguration *>(buildConfiguration))
+                    //     m_interpreters->setToolTip(pbc->python().toUserOutput());
+                    // OPENMV-DIFF //
                 }
                 connect(action, &QAction::triggered, project, [buildConfiguration] {
                     buildConfiguration->project()
@@ -298,7 +310,9 @@ void PythonDocument::updatePython(const FilePath &python)
         return;
     m_python = python;
     openDocumentWithPython(python, this);
-    PySideInstaller::instance().checkPySideInstallation(python, this);
+    // OPENMV-DIFF //
+    // PySideInstaller::instance().checkPySideInstallation(python, this);
+    // OPENMV-DIFF //
     emit pythonUpdated(python);
 }
 
@@ -319,7 +333,11 @@ public:
         setDocumentCreator([]() { return new PythonDocument; });
         setEditorWidgetCreator([]() { return new PythonEditorWidget; });
         setIndenterCreator(&createPythonIndenter);
-        setSyntaxHighlighterCreator(&createPythonHighlighter);
+        // OPENMV-DIFF //
+        // setSyntaxHighlighterCreator(&createPythonHighlighter);
+        // OPENMV-DIFF //
+        setUseGenericHighlighter(true);
+        // OPENMV-DIFF //
         setCommentDefinition(CommentDefinition::HashStyle);
         setParenthesesMatchingEnabled(true);
         setCodeFoldingSupported(true);

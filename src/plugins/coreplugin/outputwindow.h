@@ -7,6 +7,10 @@
 #include "icontext.h"
 
 #include <utils/filesearch.h>
+// OPENMV-DIFF //
+#include <utils/ansiescapecodehandler.h>
+#include "openmvpluginescapecodeparser.h"
+// OPENMV-DIFF //
 #include <utils/outputformat.h>
 #include <utils/storekey.h>
 
@@ -73,6 +77,18 @@ public:
         int beforeContext,
         int afterContext);
 
+    // OPENMV-DIFF //
+    void appendText(const QString &text, bool ensureLineStart = false);
+    void save();
+    void setTabSettings(int tabWidth);
+    OpenMVPluginEscapeCodeParser *getParser() { return m_parser; }
+    // Serial-protocol debug verbosity for the Serial Terminal toolbar button:
+    // 0 = off, 1 = commands, 2 = + packets, 3 = + fragments. The openmv plugin
+    // connects to serialDebugLevelChanged() to drive the protocol's debug flags.
+    int serialDebugLevel() const { return m_serialDebugLevel; }
+    void setSerialDebugLevel(int level);
+    // OPENMV-DIFF //
+
     void setOutputFileNameHint(const QString &fileName);
 
     void filterNewContent();
@@ -81,6 +97,10 @@ signals:
     void wheelZoom();
     void outputDiscarded();
     void cleanOldOutput();
+    // OPENMV-DIFF //
+    void writeBytes(const QByteArray &data);
+    void serialDebugLevelChanged(int level);
+    // OPENMV-DIFF //
 
 public slots:
     void setWordWrapEnabled(bool wrap);
@@ -95,6 +115,10 @@ protected:
     void resetLastFilteredBlockNumber();
 
     virtual bool shouldFilterNewContentOnBlockCountChanged() const;
+
+    // OPENMV-DIFF //
+    bool isScrollbarAtBottom() const;
+    // OPENMV-DIFF //
 
 private:
     QMimeData *createMimeDataFromSelection() const override;
@@ -120,6 +144,14 @@ private:
     void updateAutoScroll();
     qsizetype totalQueuedSize() const;
     qsizetype totalQueuedLines() const;
+
+    // OPENMV-DIFF //
+    QString doNewlineEnforcement(const QString &out);
+
+    Utils::AnsiEscapeCodeHandler m_handler;
+    OpenMVPluginEscapeCodeParser *m_parser;
+    int m_serialDebugLevel = 0;
+    // OPENMV-DIFF //
 
     Internal::OutputWindowPrivate *d = nullptr;
 };

@@ -32,7 +32,11 @@ HighlighterSettings::HighlighterSettings()
     definitionFilesPath.setSettingsKey("UserDefinitionFilesPath");
     definitionFilesPath.setExpectedKind(PathChooser::ExistingDirectory);
     definitionFilesPath.setHistoryCompleter("TextEditor.Highlighter.History");
-    const FilePath path = Core::ICore::userResourcePath("generic-highlighter");
+    // OPENMV-DIFF //
+    // const FilePath path = Core::ICore::userResourcePath("generic-highlighter");
+    // OPENMV-DIFF //
+    const FilePath path = Core::ICore::resourcePath("generic-highlighter");
+    // OPENMV-DIFF //
     if (path.exists() || path.ensureWritableDir())
         definitionFilesPath.setDefaultPathValue(path);
 

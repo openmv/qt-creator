@@ -1,6 +1,8 @@
 set(resource_directories
   fonts
-  cmake-helper
+  # OPENMV-DIFF #
+  # cmake-helper
+  # OPENMV-DIFF #
 )
 
 # create install rule for resource directories

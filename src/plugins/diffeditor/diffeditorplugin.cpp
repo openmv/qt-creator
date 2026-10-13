@@ -25,6 +25,11 @@
 #include <QAction>
 #include <QMenu>
 
+// OPENMV-DIFF //
+#include <QStandardPaths>
+#include <coreplugin/icore.h>
+// OPENMV-DIFF //
+
 using namespace Core;
 using namespace TextEditor;
 using namespace Utils;
@@ -174,6 +179,16 @@ QList<ReloadInput> DiffCurrentFileController::reloadInputList() const
 
     auto textDocument = qobject_cast<TextDocument *>(
         DocumentModel::documentForFilePath(m_filePath));
+    // OPENMV-DIFF //
+    if (!textDocument) {
+        for (IDocument *d : DocumentModel::openedDocuments()) {
+            if (FilePath::fromVariant(d->property("diffFilePath")) == m_filePath) {
+                textDocument = qobject_cast<TextDocument *>(d);
+                break;
+            }
+        }
+    }
+    // OPENMV-DIFF //
 
     if (textDocument && textDocument->isModified()) {
         TextFileFormat format = textDocument->format();
@@ -223,7 +238,13 @@ QList<ReloadInput> DiffOpenFilesController::reloadInputList() const
         if (textDocument && textDocument->isModified()) {
             TextFileFormat format = textDocument->format();
 
-            const FilePath filePath = textDocument->filePath();
+            // OPENMV-DIFF //
+            // const FilePath filePath = textDocument->filePath();
+            // OPENMV-DIFF //
+            FilePath filePath = textDocument->filePath();
+            if (filePath.isEmpty())
+                filePath = FilePath::fromVariant(textDocument->property("diffFilePath"));
+            // OPENMV-DIFF //
             const TextFileFormat::ReadResult leftResult = format.readFile(filePath, format.encoding());
 
             const QString rightText = textDocument->plainText();
@@ -268,11 +289,29 @@ QList<ReloadInput> DiffModifiedFilesController::reloadInputList() const
     for (const FilePath &filePath : m_filePaths) {
         auto textDocument = qobject_cast<TextDocument *>(
             DocumentModel::documentForFilePath(filePath));
+        // OPENMV-DIFF //
+        if (!textDocument) {
+            for (IDocument *d : DocumentModel::openedDocuments()) {
+                if (FilePath::fromVariant(d->property("diffFilePath")) == filePath) {
+                    textDocument = qobject_cast<TextDocument *>(d);
+                    break;
+                }
+            }
+        }
+        // OPENMV-DIFF //
 
         if (textDocument && textDocument->isModified()) {
             TextFileFormat format = textDocument->format();
 
-            const FilePath filePath = textDocument->filePath();
+            // OPENMV-DIFF //
+            // const FilePath filePath = textDocument->filePath();
+            // OPENMV-DIFF //
+            FilePath filePath = textDocument->filePath();
+            if (filePath.isEmpty())
+                filePath = FilePath::fromVariant(textDocument->property("diffFilePath"));
+            if (textDocument->isTemporary())
+                filePath = FilePath::fromVariant(textDocument->property("diffFilePath"));
+            // OPENMV-DIFF //
             const TextFileFormat::ReadResult leftResult = format.readFile(filePath, format.encoding());
 
             const QString rightText = textDocument->plainText();
@@ -483,7 +522,13 @@ void DiffEditorPlugin::diffCurrentFile()
     if (!textDocument)
         return;
 
-    const FilePath filePath = textDocument->filePath();
+    // OPENMV-DIFF //
+    // const FilePath filePath = textDocument->filePath();
+    // OPENMV-DIFF //
+    FilePath filePath = textDocument->filePath();
+    if (filePath.isEmpty())
+        filePath = FilePath::fromVariant(textDocument->property("diffFilePath"));
+    // OPENMV-DIFF //
     if (filePath.isEmpty())
         return;
 
@@ -502,16 +547,31 @@ void DiffEditorPlugin::diffOpenFiles()
 
 void DiffEditorPlugin::diffExternalFiles()
 {
-    const FilePath filePath1 = FileUtils::getOpenFilePath(Tr::tr("Select First File for Diff"));
+    // OPENMV-DIFF //
+    // const FilePath filePath1 = FileUtils::getOpenFilePath(Tr::tr("Select First File for Diff"));
+    // OPENMV-DIFF //
+    QtcSettings *settings = ICore::settings();
+    const Utils::Key diffPathKey = Utils::Key(Constants::DIFF_EXTERNAL_FILES_PATH_GROUP) + '/'
+                                   + Utils::Key(Constants::DIFF_EXTERNAL_FILES_PATH);
+    const FilePath filePath1 = FileUtils::getOpenFilePath(Tr::tr("Select First File for Diff"),
+                                                          Utils::FilePath::fromVariant(settings->value(diffPathKey,
+                                                          QString(QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV")))));
+    // OPENMV-DIFF //
     if (filePath1.isEmpty())
         return;
     if (EditorManager::skipOpeningBigTextFile(filePath1))
         return;
-    const FilePath filePath2 = FileUtils::getOpenFilePath(Tr::tr("Select Second File for Diff"));
+    // OPENMV-DIFF //
+    // const FilePath filePath2 = FileUtils::getOpenFilePath(Tr::tr("Select Second File for Diff"));
+    // OPENMV-DIFF //
+    const FilePath filePath2 = FileUtils::getOpenFilePath(Tr::tr("Select Second File for Diff"), filePath1);
+    // OPENMV-DIFF //
     if (filePath2.isEmpty())
         return;
     if (EditorManager::skipOpeningBigTextFile(filePath2))
         return;
+    settings->setValue(diffPathKey, filePath1.toVariant());
+    // OPENMV-DIFF //
 
     const QString documentId = QLatin1String(Constants::DIFF_EDITOR_PLUGIN)
             + ".DiffExternalFiles." + filePath1.toUrlishString() + '.' + filePath2.toUrlishString();

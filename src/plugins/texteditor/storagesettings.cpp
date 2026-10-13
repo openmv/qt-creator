@@ -46,7 +46,11 @@ StorageSettings::StorageSettings()
     cleanWhitespace.setToolTip(Tr::tr("Removes trailing whitespace upon saving."));
 
     inEntireDocument.setSettingsKey("inEntireDocument");
-    inEntireDocument.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // inEntireDocument.setDefaultValue(false);
+    // OPENMV-DIFF //
+    inEntireDocument.setDefaultValue(true);
+    // OPENMV-DIFF //
     inEntireDocument.setEnabled(false);
     inEntireDocument.setLabelText(Tr::tr("In entire &document"));
     inEntireDocument.setToolTip(Tr::tr("Cleans whitespace in entire document instead of only for changed parts."));

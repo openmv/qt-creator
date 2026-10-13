@@ -1,0 +1,15 @@
+{
+    "Id" : "tabbededitor",
+    "DisplayName" : "Tabbed Editor",
+    "Name" : "TabbedEditor",
+    "Version" : "0.0.4",
+    "CompatVersion" : "0.0.4",
+    "VendorId" : "olegshparber",
+    "Vendor" : "Oleg Shparber",
+    "Copyright" : "(C) 2015 Oleg Shparber",
+    "License" : "LGPLv3",
+    "Category" : "Qt Creator",
+    "Description" : "Add tabs to Qt Creator.",
+    "Url" : "https://github.com/trollixx/qtcreator-tabbededitor-plugin",
+    ${IDE_PLUGIN_DEPENDENCIES}
+}

@@ -89,6 +89,9 @@
 #include <QMenuBar>
 #include <QMessageBox>
 #include <QPrinter>
+// OPENMV-DIFF //
+#include <QScreen>
+// OPENMV-DIFF //
 #include <QStandardPaths>
 #include <QStatusBar>
 #include <QStyleFactory>
@@ -232,6 +235,12 @@ const char settingsGroup[] = "MainWindow";
 const char colorKey[] = "Color";
 const char windowGeometryKey[] = "WindowGeometry";
 const char windowStateKey[] = "WindowState";
+// OPENMV-DIFF //
+const char windowScreenNameKey[] = "WindowScreenName";
+const char windowNormalGeometryKey[] = "WindowNormalGeometry";
+const char windowMaximizedKey[] = "WindowMaximized";
+const char windowFullScreenKey[] = "WindowFullScreen";
+// OPENMV-DIFF //
 const char modeSelectorLayoutKey[] = "ModeSelectorLayout";
 const char menubarVisibleKey[] = "MenubarVisible";
 const char colorDialogKey[] = "QColorDialog/CustomColor/";
@@ -241,6 +250,11 @@ namespace Internal {
 class MainWindow : public AppMainWindow
 {
     Q_OBJECT
+    // OPENMV-DIFF //
+signals:
+    void showEventSignal();
+    void hideEventSignal();
+    // OPENMV-DIFF //
 public:
     MainWindow()
     {
@@ -258,6 +272,63 @@ private:
     void keyPressEvent(QKeyEvent *event) override;
     void mousePressEvent(QMouseEvent *event) override;
     void showEvent(QShowEvent *event) override;
+
+    // OPENMV-DIFF //
+    void updateWindowIcon()
+    {
+    // This is all needed to work around a bug in QApplication::setWindowIcon() which will always create a 16x16 icon
+    // for the window title bar and a 32x32 icon for the task bar... for regular and high-dpi screens...
+#ifdef Q_OS_WIN
+        HWND hwnd = (HWND) winId();
+
+        if (hwnd)
+        {
+            qreal ratio = devicePixelRatioF();
+            if (!qFuzzyCompare(ratio, m_devicePixelRatio)) {
+                m_devicePixelRatio = ratio;
+
+                if (m_iconBig) {
+                    DestroyIcon(m_iconBig);
+                    m_iconBig = nullptr;
+                }
+
+                if (m_iconSmall) {
+                    DestroyIcon(m_iconSmall);
+                    m_iconSmall = nullptr;
+                }
+
+                // QIcon small(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16.png"));
+                // QPixmap smallP = small.pixmap(QSize(GetSystemMetrics(SM_CXSMICON), GetSystemMetrics(SM_CYSMICON)), ratio);
+                // m_iconSmall = smallP.toImage().toHICON();
+
+                // QIcon big(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32.png"));
+                // QPixmap bigP = big.pixmap(QSize(GetSystemMetrics(SM_CXICON), GetSystemMetrics(SM_CYICON)), ratio);
+                // m_iconBig = bigP.toImage().toHICON();
+
+                // It turns out that if you have a desktop with multiple screens with different dpi levels that it will look bad
+                // to display anything but the highest dpi icon. So, just display the highest dpi instead of dynamically updating.
+                m_iconSmall = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv16x16@2x.png")).toImage().toHICON();
+                m_iconBig = QPixmap(QStringLiteral(":/core/openmv-media/icons/openmv-icon/openmv32x32@2x.png")).toImage().toHICON();
+
+                SendMessage(hwnd, WM_SETICON, ICON_SMALL, LPARAM(m_iconSmall));
+                SendMessage(hwnd, WM_SETICON, ICON_BIG, LPARAM(m_iconBig));
+            }
+        }
+#endif
+    }
+
+    // showEvent is declared above and defined out-of-line (MainWindow::showEvent);
+    // it emits showEventSignal() and calls updateWindowIcon() there, matching these.
+    void hideEvent(QHideEvent *event) override { emit hideEventSignal(); AppMainWindow::hideEvent(event); updateWindowIcon(); }
+    void moveEvent(QMoveEvent *event) override { AppMainWindow::moveEvent(event); updateWindowIcon(); }
+    void resizeEvent(QResizeEvent *event) override { AppMainWindow::resizeEvent(event); updateWindowIcon(); }
+
+#ifdef Q_OS_WIN
+    qreal m_devicePixelRatio = 0;
+    HICON m_iconSmall = nullptr;
+    HICON m_iconBig = nullptr;
+#endif
+    // OPENMV-DIFF //
 };
 
 static QColor s_overrideColor;
@@ -334,6 +405,10 @@ public:
     std::function<Utils::FilePath(const Utils::FilePath &)> m_relativePathToProject = nullptr;
 
     SettingsMode *m_settingMode = nullptr;
+
+    // OPENMV-DIFF //
+    bool m_disableShow;
+    // OPENMV-DIFF //
 };
 
 static QMenuBar *globalMenuBar()
@@ -383,6 +458,10 @@ ICore::ICore()
 
     d = new ICorePrivate;
     d->init(); // Separation needed for now as the call triggers other MainWindow calls.
+    // OPENMV-DIFF //
+    connect(d->m_mainwindow, &MainWindow::showEventSignal, this, &ICore::showEventSignal);
+    connect(d->m_mainwindow, &MainWindow::hideEventSignal, this, &ICore::hideEventSignal);
+    // OPENMV-DIFF //
 
     connect(PluginManager::instance(), &PluginManager::testsFinished, this, [this](int failedTests) {
         const bool keepOpenAfterTest = qtcEnvironmentVariableIsSet("QTC_KEEP_OPEN_AFTER_TEST");
@@ -598,6 +677,51 @@ FilePath ICore::userResourcePath(const QString &rel)
 {
     return appInfo().userResources / rel;
 }
+
+// OPENMV-DIFF //
+FilePath ICore::allUsersResourcePath(const QString &rel)
+{
+    if (Utils::HostOsInfo::isWindowsHost()) {
+        QStringList list = QStandardPaths::standardLocations(QStandardPaths::AppDataLocation), list2 = list;
+
+        // Filter out paths that contain the current user name.
+        while (list.size()) {
+            QString path = list.takeFirst();
+
+            if (path.toLower().contains(Utils::Environment::systemEnvironment().toDictionary().userName().toLower())) {
+                continue;
+            }
+
+            path = QFileInfo(path).path() + '/' + appInfo().id;
+
+            if (!QFileInfo::exists(path + QLatin1Char('/'))) {
+                QDir dir;
+                if (!dir.mkpath(path))
+                    qWarning() << "could not create" << path;
+            }
+
+            return FilePath::fromString(path + pathHelper(rel));
+        }
+
+        // Fallback to guessing it's the second location if username filtering returns no results (username == openmv).
+        if (list2.size() > 1) {
+            QString path = list2.at(1);
+
+            path = QFileInfo(path).path() + '/' + appInfo().id;
+
+            if (!QFileInfo::exists(path + QLatin1Char('/'))) {
+                QDir dir;
+                if (!dir.mkpath(path))
+                    qWarning() << "could not create" << path;
+            }
+
+            return FilePath::fromString(path + pathHelper(rel));
+        }
+    }
+
+    return userResourcePath(rel);
+}
+// OPENMV-DIFF //
 
 /*!
     Returns a writable path for the relative path \a rel that can be used for persistent cache files.
@@ -1096,6 +1220,36 @@ void ICore::restart()
     exit();
 }
 
+void ICore::disableShow(bool disable)
+{
+    d->m_disableShow = disable;
+}
+
+bool ICore::isShowDisabled()
+{
+    return d->m_disableShow;
+}
+
+// OPENMV-DIFF //
+// The serial terminal tab width is a reader-side display setting (it applies to the
+// OpenMV Cam's serial output, not to code authoring). Normal mode edits it through the
+// Text Editor settings; viewer mode hides that page and edits this Core key instead,
+// from Environment > Interface. Stored here so both the terminals and the output pane
+// (in the OpenMV plugin) can read it and follow live changes via the signal below.
+int ICore::serialTerminalTabSize()
+{
+    return Core::ICore::settings()->value("General/SerialTerminalTabSize", 8).toInt();
+}
+
+void ICore::setSerialTerminalTabSize(int tabSize)
+{
+    if (serialTerminalTabSize() == tabSize)
+        return;
+    Core::ICore::settings()->setValueWithDefault("General/SerialTerminalTabSize", tabSize, 8);
+    emit instance()->serialTerminalTabSizeChanged(tabSize);
+}
+// OPENMV-DIFF //
+
 /*!
     Asks the user if they want to enable the \a plugins and their dependencies.
     If the user agrees, the plugins are enabled.
@@ -1181,8 +1335,10 @@ void ICore::saveSettings(SaveSettingsReason reason)
     DocumentManager::saveSettings();
     ActionManager::saveSettings();
     EditorManagerPrivate::saveSettings();
-    d->m_leftNavigationWidget->saveSettings(settings);
-    d->m_rightNavigationWidget->saveSettings(settings);
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->saveSettings(settings);
+    // d->m_rightNavigationWidget->saveSettings(settings);
+    // OPENMV-DIFF //
 
     ICore::settings(QSettings::SystemScope)->sync();
     ICore::settings(QSettings::UserScope)->sync();
@@ -1350,6 +1506,9 @@ void ICorePrivate::init()
 
     m_toggleLeftSideBarButton = new QToolButton;
     m_toggleRightSideBarButton = new QToolButton;
+    // OPENMV-DIFF //
+    m_disableShow = false;
+    // OPENMV-DIFF //
 
     (void) new DocumentManager(this);
 
@@ -1408,11 +1567,17 @@ void ICorePrivate::init()
 
     // Add small Toolbuttons for toggling the navigation widgets
     StatusBarManager::addStatusBarWidget(m_toggleLeftSideBarButton, StatusBarManager::First);
-    int childsCount = m_modeStack->statusBar()
-                          ->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly)
-                          .count();
-    m_modeStack->statusBar()->insertPermanentWidget(childsCount - 1,
-                                                    m_toggleRightSideBarButton); // before QSizeGrip
+    // OPENMV-DIFF //
+    // int childsCount = m_modeStack->statusBar()
+    //                       ->findChildren<QWidget *>(QString(), Qt::FindDirectChildrenOnly)
+    //                       .count();
+    // m_modeStack->statusBar()->insertPermanentWidget(childsCount - 1,
+    //                                                 m_toggleRightSideBarButton); // before QSizeGrip
+    // OPENMV-DIFF //
+    m_modeStack->statusBar()->addPermanentWidget(m_toggleRightSideBarButton);
+    m_toggleLeftSideBarButton->hide();
+    m_toggleRightSideBarButton->hide();
+    // OPENMV-DIFF //
 
     //    setUnifiedTitleAndToolBarOnMac(true);
     //if (HostOsInfo::isAnyUnixHost())
@@ -1452,7 +1617,12 @@ NavigationWidget *ICorePrivate::navigationWidget(Side side) const
 
 void ICorePrivate::setSidebarVisible(bool visible, Side side)
 {
-    navigationWidget(side)->setShown(visible);
+    // OPENMV-DIFF //
+    // navigationWidget(side)->setShown(visible);
+    // OPENMV-DIFF //
+    Q_UNUSED(visible)
+    Q_UNUSED(side)
+    // OPENMV-DIFF //
 }
 
 ICorePrivate::~ICorePrivate()
@@ -1505,8 +1675,10 @@ void ICore::extensionsInitialized()
     d->m_windowSupport->setCloseActionEnabled(false);
     OutputPaneManager::initialize();
     VcsManager::extensionsInitialized();
-    d->m_leftNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
-    d->m_rightNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // d->m_rightNavigationWidget->setFactories(INavigationWidgetFactory::allNavigationFactories());
+    // OPENMV-DIFF //
 
     ModeManager::extensionsInitialized();
 
@@ -1589,8 +1761,10 @@ void MainWindow::closeEvent(QCloseEvent *event)
 
     d->saveWindowSettings();
 
-    d->m_leftNavigationWidget->closeSubWidgets();
-    d->m_rightNavigationWidget->closeSubWidgets();
+    // OPENMV-DIFF //
+    // d->m_leftNavigationWidget->closeSubWidgets();
+    // d->m_rightNavigationWidget->closeSubWidgets();
+    // OPENMV-DIFF //
 
     event->accept();
     alreadyClosed = true;
@@ -1610,8 +1784,14 @@ void MainWindow::mousePressEvent(QMouseEvent *event)
 
 void MainWindow::showEvent(QShowEvent *event)
 {
+    // OPENMV-DIFF //
+    emit showEventSignal();
+    // OPENMV-DIFF //
     QMetaObject::invokeMethod(this, &MainWindow::isShown, Qt::QueuedConnection);
     AppMainWindow::showEvent(event);
+    // OPENMV-DIFF //
+    updateWindowIcon();
+    // OPENMV-DIFF //
 }
 
 void ICorePrivate::openDroppedFiles(const QList<DropSupport::FileSpec> &files)
@@ -1625,8 +1805,13 @@ void ICorePrivate::registerDefaultContainers()
 {
     ActionContainer *menubar = ActionManager::createMenuBar(Constants::MENU_BAR);
 
-    if (!HostOsInfo::isMacHost()) // System menu bar on Mac
-        m_mainwindow->setMenuBar(menubar->menuBar());
+    // OPENMV-DIFF //
+    // if (!HostOsInfo::isMacHost()) // System menu bar on Mac
+    //     m_mainwindow->setMenuBar(menubar->menuBar());
+    m_mainwindow->setMenuBar(menubar->menuBar());
+    if (HostOsInfo::isMacHost())
+        menubar->menuBar()->hide();
+    // OPENMV-DIFF //
     menubar->appendGroup(Constants::G_FILE);
     menubar->appendGroup(Constants::G_EDIT);
     menubar->appendGroup(Constants::G_VIEW);
@@ -1680,7 +1865,9 @@ void ICorePrivate::registerDefaultContainers()
 
     // View Menu
     ActionContainer *mview = ActionManager::createMenu(Constants::M_VIEW);
-    menubar->addMenu(mview, Constants::G_VIEW);
+    // OPENMV-DIFF //
+    // menubar->addMenu(mview, Constants::G_VIEW);
+    // OPENMV-DIFF //
     mview->menu()->setTitle(Tr::tr("&View"));
     mview->appendGroup(Constants::G_VIEW_SIDEBAR);
     mview->appendGroup(Constants::G_VIEW_MODES);
@@ -1730,12 +1917,17 @@ void ICorePrivate::registerDefaultActions()
 {
     ActionContainer *mfile = ActionManager::actionContainer(Constants::M_FILE);
     ActionContainer *medit = ActionManager::actionContainer(Constants::M_EDIT);
-    ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
+    // ActionContainer *mview = ActionManager::actionContainer(Constants::M_VIEW);
+    // OPENMV-DIFF //
     ActionContainer *mtools = ActionManager::actionContainer(Constants::M_TOOLS);
     ActionContainer *mwindow = ActionManager::actionContainer(Constants::M_WINDOW);
     ActionContainer *mhelp = ActionManager::actionContainer(Constants::M_HELP);
 
     // File menu separators
+    // OPENMV-DIFF //
+    mfile->addSeparator(Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
     mfile->addSeparator(Constants::G_FILE_SAVE);
     mfile->addSeparator(Constants::G_FILE_EXPORT);
     mfile->addSeparator(Constants::G_FILE_PRINT);
@@ -1758,8 +1950,10 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder newProjectAction(this, Constants::NEW);
     newProjectAction.setText(Tr::tr("&New Project..."));
     newProjectAction.setIcon(Icon::fromTheme("document-new"));
-    newProjectAction.setDefaultKeySequence(QKeySequence("Ctrl+Shift+N"));
-    newProjectAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    // OPENMV-DIFF //
+    // newProjectAction.setDefaultKeySequence(QKeySequence("Ctrl+Shift+N"));
+    // newProjectAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    // OPENMV-DIFF //
     newProjectAction.addOnTriggered(this, [] {
         if (!ICore::isNewItemDialogRunning()) {
             ICore::showNewItemDialog(
@@ -1775,28 +1969,46 @@ void ICorePrivate::registerDefaultActions()
 
     // New File Action
     ActionBuilder newFileAction(this, Constants::NEW_FILE);
-    newFileAction.setText(Tr::tr("New File..."));
+    // OPENMV-DIFF //
+    // newFileAction.setText(Tr::tr("New File..."));
+    // OPENMV-DIFF //
+    newFileAction.setText(Tr::tr("&New File..."));
+    // OPENMV-DIFF //
     newFileAction.setIcon(Icon::fromTheme("document-new"));
     newFileAction.setDefaultKeySequence(QKeySequence::New);
     newFileAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
-    newFileAction.addOnTriggered(this, [] {
-        if (!ICore::isNewItemDialogRunning()) {
-            ICore::showNewItemDialog(
-                Tr::tr("New File", "Title of dialog"),
-                Utils::filtered(Core::IWizardFactory::allWizardFactories(),
-                                Utils::equal(&Core::IWizardFactory::kind,
-                                             Core::IWizardFactory::FileWizard)),
-                FilePath());
-        } else {
-            ICore::raiseWindow(ICore::newItemDialog());
-        }
-    });
+    // OPENMV-DIFF //
+    // newFileAction.addOnTriggered(this, [] {
+    //     if (!ICore::isNewItemDialogRunning()) {
+    //         ICore::showNewItemDialog(
+    //             Tr::tr("New File", "Title of dialog"),
+    //             Utils::filtered(Core::IWizardFactory::allWizardFactories(),
+    //                             Utils::equal(&Core::IWizardFactory::kind,
+    //                                          Core::IWizardFactory::FileWizard)),
+    //             FilePath());
+    //     } else {
+    //         ICore::raiseWindow(ICore::newItemDialog());
+    //     }
+    // });
+    // OPENMV-DIFF //
 
     // Open Action
     ActionBuilder openAction(this, Constants::OPEN);
-    openAction.setText(Tr::tr("&Open File or Project..."));
+    // OPENMV-DIFF //
+    // openAction.setText(Tr::tr("&Open File or Project..."));
+    // OPENMV-DIFF //
+    openAction.setText(Tr::tr("&Open File..."));
+    // OPENMV-DIFF //
+    openAction.setIcon(Icon::fromTheme("document-open"));
     openAction.setDefaultKeySequence(QKeySequence::Open);
-    openAction.addOnTriggered(this, [] { openFileOrProject(); });
+    // OPENMV-DIFF //
+    // OpenMV has no project concept: the primary Open action opens a file (not
+    // openFileOrProject) and lives in the New group, not G_FILE_OPEN.
+    // openAction.addOnTriggered(this, [] { openFileOrProject(); });
+    // openAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    openAction.addToContainer(Constants::M_FILE, Constants::G_FILE_NEW);
+    openAction.addOnTriggered(this, [] { openFile(); });
 
     // Open Project (but just a dummy that is hidden if it is not actually registered anywhere)
     Command *openProjectCmd = ActionManager::createCommand(Constants::OPEN_PROJECT);
@@ -1804,6 +2016,12 @@ void ICorePrivate::registerDefaultActions()
     if (ActionContainer *container = ActionManager::actionContainer(Constants::M_FILE))
         container->addAction(openProjectCmd, Constants::G_FILE_OPEN);
 
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 adds a separate "Open File" action in the G_FILE_OPEN group.
+    // Kept as upstream; note OpenMV already repurposes the OPEN action above as the
+    // file opener (in G_FILE_NEW) and otherwise empties G_FILE_OPEN, so this may
+    // surface a second "Open File..." entry -- maintainer may wish to drop it.
+    // OPENMV-DIFF //
     // Open File
     ActionBuilder(this, Constants::OPEN_FILE)
         .setText(Tr::tr("Open File..."))
@@ -1813,14 +2031,18 @@ void ICorePrivate::registerDefaultActions()
     // Open With Action
     ActionBuilder openWithAction(this, Constants::OPEN_WITH);
     openWithAction.setText(Tr::tr("Open File &With..."));
-    openWithAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // openWithAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
     openWithAction.addOnTriggered(this, &ICore::openFileWith);
 
     if (FSEngine::isAvailable()) {
         // Open From Device Action
         ActionBuilder openFromDeviceAction(this, Constants::OPEN_FROM_DEVICE);
         openFromDeviceAction.setText(Tr::tr("Open From Device..."));
-        openFromDeviceAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+        // OPENMV-DIFF //
+        // openFromDeviceAction.addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN);
+        // OPENMV-DIFF //
         openFromDeviceAction.addOnTriggered(this, [this] { openFileFromDevice(); });
     }
 
@@ -1959,13 +2181,17 @@ void ICorePrivate::registerDefaultActions()
 
     // Debug Qt Creator menu
     mtools->appendGroup(Constants::G_TOOLS_DEBUG);
-    ActionContainer *mtoolsdebug = ActionManager::createMenu(Constants::M_TOOLS_DEBUG);
-    mtoolsdebug->menu()->setTitle(Tr::tr("Debug %1").arg(QGuiApplication::applicationDisplayName()));
-    mtools->addMenu(mtoolsdebug, Constants::G_TOOLS_DEBUG);
+    // OPENMV-DIFF //
+    // ActionContainer *mtoolsdebug = ActionManager::createMenu(Constants::M_TOOLS_DEBUG);
+    // mtoolsdebug->menu()->setTitle(Tr::tr("Debug %1").arg(QGuiApplication::applicationDisplayName()));
+    // mtools->addMenu(mtoolsdebug, Constants::G_TOOLS_DEBUG);
+    // OPENMV-DIFF //
 
     ActionBuilder loggerAction(this, Constants::LOGGER);
     loggerAction.setText(Tr::tr("Show Logs..."));
-    loggerAction.addToContainer(Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
+    // loggerAction.addToContainer(Constants::M_TOOLS_DEBUG);
+    // OPENMV-DIFF //
     loggerAction.addOnTriggered(this, &LoggingViewer::showLoggingView);
 
     // Options Action
@@ -2010,8 +2236,10 @@ void ICorePrivate::registerDefaultActions()
         ActionBuilder closeAction(this, Constants::CLOSE_WINDOW);
         closeAction.setText(Tr::tr("Close Window"));
         closeAction.setEnabled(false);
-        closeAction.setDefaultKeySequence(Tr::tr("Ctrl+Meta+W"));
-        closeAction.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SIZE);
+        // OPENMV-DIFF //
+        // closeAction.setDefaultKeySequence(Tr::tr("Ctrl+Meta+W"));
+        // closeAction.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_SIZE);
+        // OPENMV-DIFF //
 
         mwindow->addSeparator(Constants::G_WINDOW_SIZE);
     }
@@ -2022,8 +2250,10 @@ void ICorePrivate::registerDefaultActions()
     toggleLeftSideBarAction.setText(msgShowLeftSideBar());
     toggleLeftSideBarAction.setCheckable(true);
     toggleLeftSideBarAction.setCommandAttribute(Command::CA_UpdateText);
-    toggleLeftSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+0"), Tr::tr("Alt+0"));
-    toggleLeftSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_SIDEBAR);
+    // OPENMV-DIFF //
+    // toggleLeftSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+0"), Tr::tr("Alt+0"));
+    // toggleLeftSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_SIDEBAR);
+    // OPENMV-DIFF //
     toggleLeftSideBarAction.addOnTriggered(this,
         [this](bool visible) { setSidebarVisible(visible, Side::Left); });
 
@@ -2038,8 +2268,10 @@ void ICorePrivate::registerDefaultActions()
     toggleRightSideBarAction.setText(msgShowRightSideBar());
     toggleRightSideBarAction.setCheckable(true);
     toggleRightSideBarAction.setCommandAttribute(Command::CA_UpdateText);
-    toggleRightSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+Shift+0"), Tr::tr("Alt+Shift+0"));
-    toggleRightSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_SIDEBAR);
+    // OPENMV-DIFF //
+    // toggleRightSideBarAction.setDefaultKeySequence(Tr::tr("Ctrl+Shift+0"), Tr::tr("Alt+Shift+0"));
+    // toggleRightSideBarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_SIDEBAR);
+    // OPENMV-DIFF //
     toggleRightSideBarAction.setEnabled(false);
     toggleRightSideBarAction.addOnTriggered(this,
         [this](bool visible) { setSidebarVisible(visible, Side::Right); });
@@ -2054,7 +2286,9 @@ void ICorePrivate::registerDefaultActions()
         toggleMenubarAction.setText(Tr::tr("Show Menu Bar"));
         toggleMenubarAction.bindContextAction(&m_toggleMenubarAction);
         toggleMenubarAction.setCheckable(true);
-        toggleMenubarAction.setDefaultKeySequence(Tr::tr("Ctrl+Alt+M"));
+        // OPENMV-DIFF //
+        // toggleMenubarAction.setDefaultKeySequence(Tr::tr("Ctrl+Alt+M"));
+        // OPENMV-DIFF //
         toggleMenubarAction.addToContainer(Constants::M_VIEW, Constants::G_VIEW_SIDEBAR);
         toggleMenubarAction.addOnToggled(this, [](bool visible) {
             if (!visible) {
@@ -2090,7 +2324,9 @@ void ICorePrivate::registerDefaultActions()
 
     // Window->Views
     ActionContainer *mviews = ActionManager::createMenu(Constants::M_VIEW_VIEWS);
-    mview->addMenu(mviews, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
+    // mview->addMenu(mviews, Constants::G_VIEW_VIEWS);
+    // OPENMV-DIFF //
     mviews->menu()->setTitle(Tr::tr("&Views"));
 
     // "Help" separators
@@ -2105,7 +2341,9 @@ void ICorePrivate::registerDefaultActions()
       (HostOsInfo::isMacHost() ? Tr::tr("About &%1") : Tr::tr("About &%1..."))
           .arg(QGuiApplication::applicationDisplayName()));
     aboutIdeAction.setMenuRole(QAction::AboutRole);
-    aboutIdeAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // aboutIdeAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     aboutIdeAction.setEnabled(true);
     aboutIdeAction.addOnTriggered(this, &showAboutQtCreator);
 
@@ -2113,7 +2351,9 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder aboutPluginsAction(this, Constants::ABOUT_PLUGINS);
     aboutPluginsAction.setText(Tr::tr("About &Plugins..."));
     aboutPluginsAction.setMenuRole(QAction::ApplicationSpecificRole);
-    aboutPluginsAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // aboutPluginsAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     aboutPluginsAction.setEnabled(true);
     aboutPluginsAction.addOnTriggered(this, &showAboutPlugins);
 
@@ -2121,14 +2361,18 @@ void ICorePrivate::registerDefaultActions()
     ActionBuilder changeLogAction(this, Constants::CHANGE_LOG);
     changeLogAction.setText(Tr::tr("Change Log..."));
     changeLogAction.setMenuRole(QAction::ApplicationSpecificRole);
-    changeLogAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // changeLogAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     changeLogAction.setEnabled(true);
     changeLogAction.addOnTriggered(this, [this] { changeLog(); });
 
     // Contact
     ActionBuilder contactAction(this, "QtCreator.Contact");
     contactAction.setText(Tr::tr("Contact..."));
-    contactAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
+    // contactAction.addToContainer(Constants::M_HELP, Constants::G_HELP_ABOUT);
+    // OPENMV-DIFF //
     contactAction.setEnabled(true);
     contactAction.addOnTriggered(this, [this] { contact(); });
 
@@ -2142,6 +2386,12 @@ void ICorePrivate::registerDefaultActions()
 
 void ICorePrivate::openFileOrProject()
 {
+    // OPENMV-DIFF //
+    // OBSOLETE: upstream 20.0.2 removed the "Mode Selector Style" menu and the
+    // CYCLE_MODE_SELECTOR_STYLE action from icore (the members/method they used no
+    // longer exist here). OpenMV had already commented out adding that menu to the
+    // View menu, and OpenMV hides the mode selector anyway, so the block is dropped.
+    // OPENMV-DIFF //
     ICore::openFiles(EditorManager::getOpenFilePaths(), ICore::SwitchMode);
 }
 
@@ -2195,6 +2445,13 @@ IDocument *ICore::openFiles(
             workingDirectory.isEmpty() ? FilePath::currentWorkingPath() : workingDirectory;
     for (const FilePath &filePath : filePaths) {
         const FilePath absoluteFilePath = workingDirBase.resolvePath(filePath);
+        // OPENMV-DIFF //
+        // OpenMV opens every path directly as an editor and skips the document-factory /
+        // project-factory handling below (OpenMV IDE has no project concept). The upstream
+        // 20.0.2 logic is kept intact but unreachable after the continue.
+        Core::EditorManager::openEditor(absoluteFilePath);
+        continue;
+        // OPENMV-DIFF //
         const bool isShowingTabs = generalSettings().useTabsInEditorViews();
 
         IDocumentFactory *documentFactory = findDocumentFactory(documentFactories, filePath);
@@ -2435,8 +2692,10 @@ void ICorePrivate::readSettings()
     });
 
     EditorManagerPrivate::readSettings();
-    m_leftNavigationWidget->restoreSettings(settings);
-    m_rightNavigationWidget->restoreSettings(settings);
+    // OPENMV-DIFF //
+    // m_leftNavigationWidget->restoreSettings(settings);
+    // m_rightNavigationWidget->restoreSettings(settings);
+    // OPENMV-DIFF //
     m_rightPaneWidget->readSettings(settings);
 }
 
@@ -2452,6 +2711,20 @@ void ICorePrivate::saveWindowSettings()
     if (Utils::HostOsInfo::isMacHost() && m_mainwindow->isFullScreen())
         m_mainwindow->setWindowState(m_mainwindow->windowState() & ~Qt::WindowFullScreen);
     settings->setValue(windowGeometryKey, m_mainwindow->saveGeometry());
+    // OPENMV-DIFF //
+    // Qt's saveGeometry()/restoreGeometry() mangles the window position and size
+    // on multi-display systems where displays have different scale factors
+    // (QTBUG-77385). Save the screen name plus a screen-relative geometry instead;
+    // the blob above is only kept as a fallback for downgrades.
+    QScreen *screen = m_mainwindow->screen();
+    const QRect normalGeometry = (m_mainwindow->isMaximized() || m_mainwindow->isFullScreen())
+        ? m_mainwindow->normalGeometry() : m_mainwindow->geometry();
+    settings->setValue(windowScreenNameKey, screen->name());
+    settings->setValue(windowNormalGeometryKey,
+                       normalGeometry.translated(-screen->geometry().topLeft()));
+    settings->setValue(windowMaximizedKey, m_mainwindow->isMaximized());
+    settings->setValue(windowFullScreenKey, m_mainwindow->isFullScreen());
+    // OPENMV-DIFF //
     settings->setValue(windowStateKey, m_mainwindow->saveState());
     settings->setValue(modeSelectorLayoutKey, int(ModeManager::modeStyle()));
 
@@ -2504,7 +2777,11 @@ void ICorePrivate::aboutToShowRecentFiles()
         const QString actionText = ActionManager::withNumberAccelerator(filePath, i + 1);
         QAction *action = menu->addAction(actionText);
         connect(action, &QAction::triggered, this, [file] {
-            EditorManager::openEditor(file.first, file.second);
+            // OPENMV-DIFF //
+            // EditorManager::openEditor(file.first, file.second);
+            // OPENMV-DIFF //
+            EditorManager::openEditor(file.first);
+            // OPENMV-DIFF //
         });
     }
 
@@ -2667,13 +2944,83 @@ void ICorePrivate::restoreWindowState()
     NANOTRACE_SCOPE("Core", "MainWindow::restoreWindowState");
     QtcSettings *settings = &userSettings();
     settings->beginGroup(settingsGroup);
-    if (!m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray()))
+    // OPENMV-DIFF //
+    // if (!m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray()))
+    //     m_mainwindow->resize(1260, 700); // size without window decoration
+    // OPENMV-DIFF //
+    bool restored = false;
+    const QRect savedNormalGeometry = settings->value(windowNormalGeometryKey).toRect();
+    if (savedNormalGeometry.isValid()) {
+        const QString savedScreenName = settings->value(windowScreenNameKey).toString();
+        QScreen *screen = nullptr;
+        const QList<QScreen *> screens = QGuiApplication::screens();
+        for (QScreen *candidate : screens) {
+            if (candidate->name() == savedScreenName) {
+                screen = candidate;
+                break;
+            }
+        }
+        if (!screen)
+            screen = QGuiApplication::primaryScreen();
+        if (screen) {
+            // Pin the window to the saved screen before it is first shown so it is
+            // created with that screen's scale factor, then clamp the saved
+            // screen-relative geometry into the screen's available area in case the
+            // display's resolution or scaling changed since the geometry was saved.
+            const QRect available = screen->availableGeometry();
+            QRect geometry = savedNormalGeometry.translated(screen->geometry().topLeft());
+            geometry.setWidth(qMin(geometry.width(), available.width()));
+            geometry.setHeight(qMin(geometry.height(), available.height()));
+            if (geometry.right() > available.right())
+                geometry.moveRight(available.right());
+            if (geometry.bottom() > available.bottom())
+                geometry.moveBottom(available.bottom());
+            if (geometry.left() < available.left())
+                geometry.moveLeft(available.left());
+            if (geometry.top() < available.top())
+                geometry.moveTop(available.top());
+            m_mainwindow->setScreen(screen);
+            m_mainwindow->setGeometry(geometry);
+            Qt::WindowStates states = m_mainwindow->windowState();
+            if (settings->value(windowMaximizedKey, false).toBool())
+                states |= Qt::WindowMaximized;
+            if (settings->value(windowFullScreenKey, false).toBool())
+                states |= Qt::WindowFullScreen;
+            m_mainwindow->setWindowState(states);
+            restored = true;
+        }
+    }
+    if (!restored)
+        restored = m_mainwindow->restoreGeometry(settings->value(windowGeometryKey).toByteArray());
+    if (!restored)
         m_mainwindow->resize(1260, 700); // size without window decoration
+    // OPENMV-DIFF //
     m_mainwindow->restoreState(settings->value(windowStateKey).toByteArray());
     settings->endGroup();
 
-    m_mainwindow->show();
+    // OPENMV-DIFF //
+    // m_mainwindow->show();
+    // OPENMV-DIFF //
+    if (!m_disableShow) m_mainwindow->show();
+    // OPENMV-DIFF //
     StatusBarManager::restoreSettings();
+    // OPENMV-DIFF //
+    Core::IEditor *editor = Core::EditorManager::currentEditor();
+
+    if(!editor)
+    {
+        QList<Core::IEditor *> editors = Core::EditorManager::visibleEditors();
+
+        if(!editors.isEmpty())
+        {
+            editor = editors.first();
+        }
+    }
+
+    if (editor) {
+        EditorManager::activateEditor(editor);
+    }
+    // OPENMV-DIFF //
 }
 
 } // Internal

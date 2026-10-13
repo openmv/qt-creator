@@ -32,6 +32,11 @@
 #include <QLabel>
 #include <QStyledItemDelegate>
 
+// OPENMV-DIFF //
+#include <coreplugin/fancytabwidget.h>
+#include <coreplugin/icore.h>
+// OPENMV-DIFF //
+
 using namespace Utils;
 
 namespace TextEditor {
@@ -150,7 +155,19 @@ public:
     int rowSelected() const { return currentIndex().row(); }
     bool isFirstRowSelected() const { return rowSelected() == 0; }
     bool isLastRowSelected() const { return rowSelected() == model()->rowCount() - 1; }
-    void selectRow(int row) { setCurrentIndex(model()->index(row, 0)); }
+    // OPENMV-DIFF //
+    // void selectRow(int row) { setCurrentIndex(model()->index(row, 0)); }
+    void selectRow(int row) {
+        if (isVisible()) {
+            setCurrentIndex(model()->index(row, 0));
+        } else {
+            QTimer::singleShot(0, this, [this, row] {
+                if (model() && row >= 0 && row < model()->rowCount())
+                    setCurrentIndex(model()->index(row, 0));
+            });
+        }
+    }
+    // OPENMV-DIFF //
     void selectFirstRow() { selectRow(0); }
     void selectLastRow() { selectRow(model()->rowCount() - 1); }
 };
@@ -343,6 +360,14 @@ GenericProposalWidget::GenericProposalWidget()
 
     setObjectName(QLatin1String("m_popupFrame"));
     setMinimumSize(1, 1);
+
+    // OPENMV-DIFF //
+    QMainWindow *mainWindow = q_check_ptr(qobject_cast<QMainWindow *>(Core::ICore::mainWindow()));
+    Core::Internal::FancyTabWidget *widget = qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget());
+    if(!widget) widget = qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget()->layout()->itemAt(1)->widget()); // for tabbededitor
+    widget = q_check_ptr(widget);
+    setStyleSheet(widget->styleSheet());
+    // OPENMV-DIFF //
 }
 
 GenericProposalWidget::~GenericProposalWidget()

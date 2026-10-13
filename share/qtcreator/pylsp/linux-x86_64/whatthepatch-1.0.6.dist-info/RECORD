@@ -1,0 +1,16 @@
+whatthepatch-1.0.6.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+whatthepatch-1.0.6.dist-info/LICENSE,sha256=lP66gCCy-5ENgFrqOLDSYuYUe-FlDtQ1cqGI7q-FN4s,1096
+whatthepatch-1.0.6.dist-info/METADATA,sha256=nFypedA55akynrUQoVLDx87I0TqnNmMiOb7_eF92H38,7241
+whatthepatch-1.0.6.dist-info/RECORD,,
+whatthepatch-1.0.6.dist-info/WHEEL,sha256=Z4pYXqR_rTB7OWNDYFOm1qRk0RX6GFP2o8LgvP453Hk,91
+whatthepatch-1.0.6.dist-info/top_level.txt,sha256=vJjuzH1xEc7fi9xXt09pnT-L3AvOvUc3vIlHfzuh3CQ,13
+whatthepatch/__init__.py,sha256=Ey6Ee4AZK7YRZyOKXoQ-JYCjt1JfXO6v2KGWR1BErLk,127
+whatthepatch/__pycache__/__init__.cpython-313.pyc,,
+whatthepatch/__pycache__/apply.cpython-313.pyc,,
+whatthepatch/__pycache__/exceptions.cpython-313.pyc,,
+whatthepatch/__pycache__/patch.cpython-313.pyc,,
+whatthepatch/__pycache__/snippets.cpython-313.pyc,,
+whatthepatch/apply.py,sha256=NQ3XotsCLiEOm_9XrJ-_jFLswXq8bLcRZe1W7ZcaYiU,3798
+whatthepatch/exceptions.py,sha256=3g40g57CJCsqQT3I-kotgOq-j01gedSte4PDXP4CwYU,768
+whatthepatch/patch.py,sha256=kDaZ5IzYhnj57MrreqxJ2Shwy9brclM24y4GDPf2sos,29292
+whatthepatch/snippets.py,sha256=5gbwd18ZZDvd-mkvd9-wEveNtqIcfZz9m6Gn-SNfTq4,1402

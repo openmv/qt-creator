@@ -163,7 +163,10 @@ int SshSettings::connectionSharingTimeoutInMinutes() const
 class SshSettingsPage final : public Core::IOptionsPage
 {
 public:
-    SshSettingsPage()
+    // OPENMV-DIFF //
+    // SshSettingsPage()
+    SshSettingsPage() : Core::IOptionsPage(false) // OpenMV hides the SSH options page.
+    // OPENMV-DIFF //
     {
         setId(Constants::SSH_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("SSH"));

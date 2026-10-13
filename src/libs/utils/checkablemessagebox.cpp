@@ -49,7 +49,9 @@ static void prepare(QMessageBox::Icon icon,
     msgBox.setWindowTitle(title);
     msgBox.setIcon(icon);
     msgBox.setText(text);
-    msgBox.setTextFormat(Qt::RichText);
+    // OPENMV-DIFF //
+    // msgBox.setTextFormat(Qt::RichText);
+    // OPENMV-DIFF //
     msgBox.setTextInteractionFlags(Qt::LinksAccessibleByKeyboard | Qt::LinksAccessibleByMouse);
 
     if (HostOsInfo::isMacHost()) {
@@ -80,7 +82,12 @@ static QMessageBox::StandardButton exec(
     QMessageBox::StandardButton defaultButton,
     QMessageBox::StandardButton acceptButton,
     QMap<QMessageBox::StandardButton, QString> buttonTextOverrides,
-    const QString &msg)
+    // OPENMV-DIFF //
+    // const QString &msg)
+    // OPENMV-DIFF //
+    const QString &msg,
+    QMessageBox::StandardButton acceptButton2 = QMessageBox::NoButton)
+    // OPENMV-DIFF //
 {
     if (decider.shouldAskAgain) {
         if (!decider.shouldAskAgain())
@@ -94,7 +101,11 @@ static QMessageBox::StandardButton exec(
     QMessageBox::StandardButton clickedBtn = msgBox.standardButton(msgBox.clickedButton());
 
     if (decider.doNotAskAgain && msgBox.checkBox()->isChecked()
-        && (acceptButton == QMessageBox::NoButton || clickedBtn == acceptButton))
+        // OPENMV-DIFF //
+        // && (acceptButton == QMessageBox::NoButton || clickedBtn == acceptButton))
+        // OPENMV-DIFF //
+        && (acceptButton == QMessageBox::NoButton || clickedBtn == acceptButton || clickedBtn == acceptButton2))
+        // OPENMV-DIFF //
         decider.doNotAskAgain();
     return clickedBtn;
 }
@@ -180,7 +191,12 @@ QMessageBox::StandardButton CheckableMessageBox::question(
     QMessageBox::StandardButton defaultButton,
     QMessageBox::StandardButton acceptButton,
     QMap<QMessageBox::StandardButton, QString> buttonTextOverrides,
-    const QString &msg)
+    // OPENMV-DIFF //
+    // const QString &msg)
+    // OPENMV-DIFF //
+    const QString &msg,
+    QMessageBox::StandardButton acceptButton2)
+    // OPENMV-DIFF //
 {
     return exec(QMessageBox::Question,
                 title,
@@ -190,7 +206,8 @@ QMessageBox::StandardButton CheckableMessageBox::question(
                 defaultButton,
                 acceptButton,
                 buttonTextOverrides,
-                msg.isEmpty() ? msgDoNotAskAgain() : msg);
+                msg.isEmpty() ? msgDoNotAskAgain() : msg,
+                acceptButton2);
 }
 
 void CheckableMessageBox::question_async(

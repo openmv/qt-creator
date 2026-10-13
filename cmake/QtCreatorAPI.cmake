@@ -1222,7 +1222,11 @@ function(finalize_qtc_gtest test_name)
 endfunction()
 
 function(qtc_copy_to_builddir custom_target_name)
-  cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES" ${ARGN})
+  # OPENMV-DIFF #
+  # cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES" ${ARGN})
+  # OPENMV-DIFF #
+  cmake_parse_arguments(_arg "CREATE_SUBDIRS" "DESTINATION" "FILES;DIRECTORIES;URLS" ${ARGN})
+  # OPENMV-DIFF #
   set(timestampFiles)
 
   qtc_output_binary_dir(_output_binary_dir)
@@ -1271,6 +1275,62 @@ function(qtc_copy_to_builddir custom_target_name)
       VERBATIM
     )
   endforeach()
+
+  # OPENMV-DIFF #
+  foreach(url ${_arg_URLS})
+    get_filename_component(fileName "${url}" NAME)
+    string(REGEX MATCH "^[^-]+" folderName "${fileName}")
+    get_filename_component(wrapperFolder "${url}" NAME_WLE)
+    string(REGEX REPLACE "\\.tar$" "" wrapperFolder "${wrapperFolder}")
+
+    set(downloadPath "${CMAKE_CURRENT_BINARY_DIR}/${fileName}")
+
+    string(MAKE_C_IDENTIFIER "${folderName}" destinationTimestampFilePart)
+    set(destinationTimestampFileName "${CMAKE_CURRENT_BINARY_DIR}/.${destinationTimestampFilePart}_timestamp")
+    list(APPEND timestampFiles "${destinationTimestampFileName}")
+    set(destinationDirectory "${_output_binary_dir}/${_arg_DESTINATION}/${folderName}")
+
+    set(scriptFile "${CMAKE_CURRENT_BINARY_DIR}/${folderName}_download_and_extract.cmake")
+    set(scriptContent
+    "set(_ok 0)\n"
+    "foreach(_try RANGE 1 5)\n"
+    "  file(DOWNLOAD \"${url}\" \"${downloadPath}\" SHOW_PROGRESS STATUS _st)\n"
+    "  list(GET _st 0 _code)\n"
+    "  if(_code EQUAL 0)\n"
+    "    set(_ok 1)\n"
+    "    break()\n"
+    "  endif()\n"
+    "  file(REMOVE \"${downloadPath}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E sleep 10)\n"
+    "endforeach()\n"
+    "if(NOT _ok)\n"
+    "  message(FATAL_ERROR \"Failed to download ${url}\")\n"
+    "endif()\n"
+    "file(MAKE_DIRECTORY \"${destinationDirectory}\")\n"
+    "execute_process(COMMAND \"${CMAKE_COMMAND}\" -E tar xzf \"${downloadPath}\" WORKING_DIRECTORY \"${destinationDirectory}\" RESULT_VARIABLE _rv)\n"
+    "if(NOT _rv EQUAL 0)\n"
+    "  file(REMOVE \"${downloadPath}\")\n"
+    "  message(FATAL_ERROR \"Failed to extract ${downloadPath}\")\n"
+    "endif()\n"
+    "file(REMOVE \"${downloadPath}\")\n"
+    "if(EXISTS \"${destinationDirectory}/${wrapperFolder}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E copy_directory \"${destinationDirectory}/${wrapperFolder}\" \"${destinationDirectory}\")\n"
+    "  execute_process(COMMAND \"${CMAKE_COMMAND}\" -E remove_directory \"${destinationDirectory}/${wrapperFolder}\")\n"
+    "endif()\n"
+    )
+    string(JOIN "" scriptContent ${scriptContent})
+    file(WRITE "${scriptFile}" "${scriptContent}")
+
+    add_custom_command(OUTPUT "${destinationTimestampFileName}"
+      COMMAND "${CMAKE_COMMAND}" -E echo "Executing download script ${scriptFile}"
+      COMMAND "${CMAKE_COMMAND}" -P "${scriptFile}"
+      COMMAND "${CMAKE_COMMAND}" -E touch "${destinationTimestampFileName}"
+      WORKING_DIRECTORY "${CMAKE_CURRENT_BINARY_DIR}"
+      COMMENT "Download and extract ${fileName} into ${destinationDirectory}"
+      VERBATIM
+    )
+  endforeach()
+  # OPENMV-DIFF #
 
   add_custom_target("${custom_target_name}" ALL DEPENDS ${timestampFiles}
     SOURCES ${allFiles})

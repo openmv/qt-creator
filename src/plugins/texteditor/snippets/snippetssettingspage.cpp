@@ -486,6 +486,13 @@ void SnippetsSettingsWidget::resetAllSnippets()
 
 void SnippetsSettingsWidget::selectSnippet(const QModelIndex &parent, int row)
 {
+    // OPENMV-DIFF //
+    // rowsInserted fires on model loads/reloads while the options page is
+    // hidden; selecting on the hidden table trips the macOS Cocoa a11y
+    // bridge (NSRangeException).
+    if (!m_snippetsTable->isVisible())
+        return;
+    // OPENMV-DIFF //
     QModelIndex topLeft = m_model.index(row, 0, parent);
     QModelIndex bottomRight = m_model.index(row, 1, parent);
     QItemSelection selection(topLeft, bottomRight);
@@ -505,7 +512,11 @@ void SnippetsSettingsWidget::selectMovedSnippet(const QModelIndex &,
         modelIndex = m_model.index(destinationRow - 1, 0, destinationParent);
     else
         modelIndex = m_model.index(destinationRow, 0, destinationParent);
-    m_snippetsTable->scrollTo(modelIndex);
+    // OPENMV-DIFF //
+    // m_snippetsTable->scrollTo(modelIndex);
+    if (m_snippetsTable->isVisible())
+        m_snippetsTable->scrollTo(modelIndex);
+    // OPENMV-DIFF //
     currentEditor()->setPlainText(m_model.snippetAt(modelIndex).content());
 }
 
@@ -545,6 +556,9 @@ void SnippetsSettingsWidget::decorateEditors(const TextEditor::FontSettings &fon
 // SnippetsSettingsPage
 
 SnippetsSettingsPage::SnippetsSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
 {
     setId(Constants::TEXT_EDITOR_SNIPPETS_SETTINGS);
     setDisplayName(Tr::tr("Snippets"));

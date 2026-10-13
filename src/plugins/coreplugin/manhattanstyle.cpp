@@ -170,9 +170,31 @@ QSize ManhattanStyle::sizeFromContents(ContentsType type, const QStyleOption *op
             newSize = QSize(1, 1);
         break;
     case CT_ComboBox:
-        if (panelWidget(widget))
+        if (panelWidget(widget)) {
             newSize += QSize(14, 0);
+            // OPENMV-DIFF //
+            // Toolbar combos that must hug their text (the frame buffer
+            // source selector) opt out of the extra panel padding.
+            if (widget && widget->property("compactwidth").toBool())
+                newSize -= QSize(14, 0);
+            // OPENMV-DIFF //
+        }
         break;
+    // OPENMV-DIFF //
+    case CT_Slider:
+        // With tick marks the base (Fusion) style reserves space on the tick side and shoves
+        // the handle toward the opposite edge, clipping it when the slider gets exactly its
+        // size hint. Reserve a few extra pixels along the thickness so the handle isn't cut off.
+        if (const auto *slider = qstyleoption_cast<const QStyleOptionSlider *>(option)) {
+            if (slider->tickPosition != QSlider::NoTicks) {
+                if (slider->orientation == Qt::Horizontal)
+                    newSize.rheight() += 3;
+                else
+                    newSize.rwidth() += 3;
+            }
+        }
+        break;
+    // OPENMV-DIFF //
     default:
         break;
     }
@@ -610,7 +632,11 @@ static void drawPrimitiveTweakedForDarkTheme(QStyle::PrimitiveElement element,
         break;
     }
     case QStyle::PE_IndicatorTabClose: {
-        const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        // const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        const qreal devicePixelRatio = painter->device()->devicePixelRatioF();
+        // OPENMV-DIFF //
         QRect iconRect = QRect(0, 0, 16, 16);
         iconRect.moveCenter(option->rect.center());
         const QIcon::Mode mode = !isEnabled ? QIcon::Disabled : QIcon::Normal;
@@ -668,7 +694,9 @@ void ManhattanStyle::drawPrimitive(PrimitiveElement element, const QStyleOption 
     } else {
         const bool tweakDarkTheme =
                 (element == PE_Frame
-                 || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
+                 // || element == PE_FrameLineEdit
+                 // OPENMV-DIFF //
                  || element == PE_FrameGroupBox
                  || element == PE_IndicatorRadioButton
                  || element == PE_IndicatorCheckBox
@@ -852,7 +880,11 @@ void ManhattanStyle::drawPrimitiveForPanelWidget(PrimitiveElement element,
                 painter->setPen(StyleHelper::borderColor().darker(110)); //TODO: make themable
                 painter->drawLine(borderRect.topLeft(), borderRect.topRight());
             }
-            if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            // if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            if (creatorTheme()->flag(Theme::DrawToolBarBorders) && (!widget->property("NoDrawToolBarBorders").toBool())) {
+            // OPENMV-DIFF //
                 painter->setPen(StyleHelper::toolBarBorderColor());
                 painter->drawLine(borderRect.topLeft(), borderRect.topRight());
             }
@@ -1197,7 +1229,11 @@ void ManhattanStyle::drawControl(
                     painter->drawLine(borderRect.topRight(), borderRect.bottomRight());
                 }
             }
-            if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            // if (creatorTheme()->flag(Theme::DrawToolBarBorders)) {
+            // OPENMV-DIFF //
+            if (creatorTheme()->flag(Theme::DrawToolBarBorders) && (!widget->property("NoDrawToolBarBorders").toBool())) {
+            // OPENMV-DIFF //
                 painter->setPen(StyleHelper::toolBarBorderColor());
                 if (widget && widget->property(StyleHelper::C_TOP_BORDER).toBool())
                     painter->drawLine(borderRect.topLeft(), borderRect.topRight());

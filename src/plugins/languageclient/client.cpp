@@ -56,6 +56,9 @@
 #include <utils/stringutils.h>
 
 #include <QDebug>
+// OPENMV-DIFF //
+#include <QDirIterator>
+// OPENMV-DIFF //
 #include <QGuiApplication>
 #include <QJsonDocument>
 #include <QLoggingCategory>
@@ -68,6 +71,9 @@
 #include <QTextDocument>
 #include <QThread>
 #include <QTimer>
+// OPENMV-DIFF //
+#include <QStandardPaths>
+// OPENMV-DIFF //
 
 using namespace ProjectExplorer;
 using namespace LanguageServerProtocol;
@@ -568,8 +574,19 @@ void Client::initialize()
     params.setClientInfo(d->m_clientInfo);
     params.setCapabilities(d->m_clientCapabilities);
     params.setInitializationOptions(d->m_initializationOptions);
-    if (d->m_bc && d->m_bc->project())
-        params.setRootUri(hostPathToServerUri(d->m_bc->project()->projectDirectory()));
+    // OPENMV-DIFF //
+    // if (d->m_bc && d->m_bc->project())
+    //     params.setRootUri(hostPathToServerUri(d->m_bc->project()->projectDirectory()));
+    // OPENMV-DIFF //
+    // Newer documentation packages ship .pyi stubs in html/stubs; use them as
+    // the workspace root directly. Older packages fall back to the
+    // micropython-headers folder generated from the parsed html.
+    const Utils::FilePath stubsPath = Core::ICore::allUsersResourcePath(QStringLiteral("html/stubs"));
+    const bool stubsAvailable = QDirIterator(stubsPath.toString(), QStringList() << QStringLiteral("*.pyi"),
+                                             QDir::Files, QDirIterator::Subdirectories).hasNext();
+    params.setRootUri(hostPathToServerUri(stubsAvailable
+        ? stubsPath : Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"))));
+    // OPENMV-DIFF //
 
     auto projectFilter = [this](Project *project) { return canOpenProject(project); };
     auto toWorkSpaceFolder = [this](Project *pro) {
@@ -582,6 +599,13 @@ void Client::initialize()
         params.setWorkSpaceFolders(nullptr);
     else
         params.setWorkSpaceFolders(workspaces);
+    // OPENMV-DIFF //
+// BREAKS AUTO COMPLETION WHEN ENABLED
+//    QString documentsFolder = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV");
+//    Utils::FilePath documentsFolderFilePath = Utils::FilePath::fromString(documentsFolder);
+//    WorkSpaceFolder worspace(hostPathToServerUri(documentsFolderFilePath), documentsFolderFilePath.fileName());
+//    params.setWorkSpaceFolders(QList<WorkSpaceFolder>() << worspace);
+    // OPENMV-DIFF //
     InitializeRequest initRequest(params);
     initRequest.setResponseCallback([this](const InitializeRequest::Response &initResponse) {
         d->initializeCallback(initResponse);
@@ -1266,6 +1290,11 @@ void Client::documentContentsChanged(TextEditor::TextDocument *document,
                                      int charsRemoved,
                                      int charsAdded)
 {
+    // OPENMV-DIFF //
+    QTC_ASSERT(document, return);
+    QTC_ASSERT(document->document(), return);
+    QTC_ASSERT(d, return);
+    // OPENMV-DIFF //
     const auto it = d->m_openedDocument.find(document);
     if (it == d->m_openedDocument.end() || !reachable())
         return;
@@ -1285,6 +1314,10 @@ void Client::documentContentsChanged(TextEditor::TextDocument *document,
     }
 
     const QString &text = document->textAt(position, charsAdded);
+    // OPENMV-DIFF //
+    QTC_ASSERT(it->second, return);
+    QTC_ASSERT(it->second.get(), return);
+    // OPENMV-DIFF //
     QTextCursor cursor(it->second.get());
     // Workaround https://bugreports.qt.io/browse/QTBUG-80662
     // The contentsChanged gives a character count that can be wrong for QTextCursor
@@ -1307,6 +1340,9 @@ void Client::documentContentsChanged(TextEditor::TextDocument *document,
             bool append = true;
             if (!queue.isEmpty() && charsRemoved == 0) {
                 auto &prev = queue.last();
+                // OPENMV-DIFF //
+                QTC_ASSERT(prev.range(), return);
+                // OPENMV-DIFF //
                 const int prevStart = prev.range()->start()
                         .toPositionInDocument(document->document());
                 if (prevStart + prev.text().size() == position) {
@@ -1331,6 +1367,9 @@ void Client::documentContentsChanged(TextEditor::TextDocument *document,
     ++d->m_documentVersions[document->filePath()];
     using namespace TextEditor;
     for (BaseTextEditor *editor : BaseTextEditor::textEditorsForDocument(document)) {
+        // OPENMV-DIFF //
+        QTC_ASSERT(editor, continue);
+        // OPENMV-DIFF //
         TextEditorWidget *widget = editor->editorWidget();
         QTC_ASSERT(widget, continue);
         delete d->m_documentHighlightsTimer.take(widget);
@@ -1839,17 +1878,19 @@ void Client::log(QtMsgType msgType, const QString &message) const
 {
     switch (d->m_logTarget) {
     case LogTarget::Ui:
-        switch (msgType) {
-        case QtMsgType::QtDebugMsg:
-        case QtMsgType::QtInfoMsg:
-            qCDebug(LOGLSPCLIENT) << message;
-            break;
-        case QtMsgType::QtWarningMsg:
-        case QtMsgType::QtCriticalMsg:
-        case QtMsgType::QtFatalMsg:
-            Core::MessageManager::writeFlashing(
-                QString("LanguageClient %1: %2").arg(name(), message));
-        }
+        // OPENMV-DIFF //
+        // switch (msgType) {
+        // case QtMsgType::QtDebugMsg:
+        // case QtMsgType::QtInfoMsg:
+        //     qCDebug(LOGLSPCLIENT) << message;
+        //     break;
+        // case QtMsgType::QtWarningMsg:
+        // case QtMsgType::QtCriticalMsg:
+        // case QtMsgType::QtFatalMsg:
+        //     Core::MessageManager::writeFlashing(
+        //         QString("LanguageClient %1: %2").arg(name(), message));
+        // }
+        // OPENMV-DIFF //
         break;
     case LogTarget::Console:
         switch (msgType) {

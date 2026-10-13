@@ -29,6 +29,16 @@ mark_as_advanced(IDE_REVISION IDE_REVISION_STR IDE_REVISION_URL)
 
 project(QtCreator VERSION ${IDE_VERSION})
 
+# OPENMV-DIFF #
+# The viewer variant forces viewer mode at runtime. main.cpp picks up this
+# definition and injects "-viewer_mode" into the application arguments, so every
+# existing runtime viewer check (plugin, settings dialog, session, terminal) fires
+# without per-site changes. Branding for the variant lives in QtCreatorIDEBranding.
+if(OPENMV_VIEWER_IDE)
+    add_compile_definitions(OPENMV_VIEWER_IDE)
+endif()
+# OPENMV-DIFF #
+
 # Force C++ standard, do not fall back, do not use compiler extensions
 set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -136,7 +146,9 @@ if (MSVC AND QT_FEATURE_static_runtime)
 endif()
 
 find_package(Threads)
-find_package(Clang QUIET)
+# OPENMV-DIFF #
+# find_package(Clang QUIET)
+# OPENMV-DIFF #
 
 set(SENTRY_DSN "$ENV{QTC_SENTRY_DSN}" CACHE STRING "Data Source Name to use for sending Sentry events.")
 set(SENTRY_PROJECT "" CACHE STRING "Project ID to use for sending Sentry events.")
@@ -197,15 +209,19 @@ endif()
 
 add_subdirectory(src)
 add_subdirectory(share)
-if (NOT BUILD_DESIGNSTUDIO)
-    add_subdirectory(dist)
-endif()
+# OPENMV-DIFF #
+# if (NOT BUILD_DESIGNSTUDIO)
+#     add_subdirectory(dist)
+# endif()
+# OPENMV-DIFF #
 
 if (WITH_TESTS)
   add_subdirectory(tests)
 endif()
 
-add_subdirectory(doc)
+# OPENMV-DIFF #
+# add_subdirectory(doc)
+# OPENMV-DIFF #
 
 setup_dependencies_component()
 
@@ -214,10 +230,12 @@ feature_summary(INCLUDE_QUIET_PACKAGES WHAT
   ENABLED_FEATURES DISABLED_FEATURES
 )
 
-if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR
-    AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/LICENSES/LICENSE.GPL3-EXCEPT")
-  # Only for opensource, non-super-repo builds
-  add_subdirectory(packaging)
-endif()
+# OPENMV-DIFF #
+# if (CMAKE_SOURCE_DIR STREQUAL CMAKE_CURRENT_SOURCE_DIR
+#     AND EXISTS "${CMAKE_CURRENT_SOURCE_DIR}/LICENSES/LICENSE.GPL3-EXCEPT")
+#   # Only for opensource, non-super-repo builds
+#   add_subdirectory(packaging)
+# endif()
+# OPENMV-DIFF #
 
 qtc_sbom_end_project()

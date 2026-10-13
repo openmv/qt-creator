@@ -1880,6 +1880,11 @@ void ProjectWindow::showEvent(QShowEvent *event)
 {
     FancyMainWindow::showEvent(event);
     loadPersistentSettings();
+    // OPENMV-DIFF //
+    // The single expandable m_selectorTree (and its syncTreeSelection a11y-guard
+    // replay) was replaced upstream by embedded per-target SelectorTree views, so
+    // the old deferred sync is obsolete and has been dropped.
+    // OPENMV-DIFF //
 }
 
 ProjectWindow::~ProjectWindow() = default;

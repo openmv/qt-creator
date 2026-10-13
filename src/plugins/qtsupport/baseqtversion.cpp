@@ -1250,6 +1250,13 @@ QVersionNumber QtVersion::qtVersion() const
 Result<QtVersionData> dataForQMake(const FilePath m_qmakeCommand)
 {
     QtVersionData data;
+    // OPENMV-DIFF //
+    // OpenMV IDE registers no Qt versions and does not query qmake. Upstream 20.0.2
+    // refactored the old QtVersionPrivate::updateVersionInfo() (which OpenMV short-
+    // circuited with an early return) into this free function; return empty data so no
+    // qmake querying happens.
+    return data;
+    // OPENMV-DIFF //
 
     QString error;
     if (!QtVersionPrivate::queryQMakeVariables(m_qmakeCommand, &data.versionInfo, &error)) {
@@ -2097,6 +2104,11 @@ bool QtVersion::isQtQuickCompilerSupported(QString *reason) const
 
 FilePaths QtVersionPrivate::qtCorePaths()
 {
+    // OPENMV-DIFF //
+    // OpenMV IDE registers no Qt versions; skip scanning for Qt core libraries.
+    FilePaths empty;
+    return empty;
+    // OPENMV-DIFF //
     const QString versionString = data().qtVersionString;
 
     const QDir::Filters filters = QDir::Files | QDir::Dirs | QDir::NoDotAndDotDot;

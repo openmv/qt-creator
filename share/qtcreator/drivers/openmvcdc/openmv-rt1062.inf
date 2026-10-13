@@ -1,0 +1,54 @@
+; Copyright 2025 OpenMV, LLC.
+
+[Strings]
+DriverPackageDisplayName="OpenMV Cam RT1062 USB Driver"
+ManufacturerName="OpenMV, LLC (http://www.openmv.io)"
+ServiceName="USB RS-232 Emulation Driver"
+description="OpenMV Cam RT1062 USB COM Port"
+
+[DefaultInstall]
+CopyINF=openmv.inf
+
+[Version]
+Class=Ports
+ClassGuid={4D36E978-E325-11CE-BFC1-08002BE10318}
+Signature="$Windows NT$"
+Provider=%ManufacturerName%
+DriverPackageDisplayName=%DriverPackageDisplayName%
+CatalogFile=openmv-rt1062.cat
+DriverVer=07/05/2025,1.1.1.1
+
+[Manufacturer]
+%ManufacturerName%=DeviceList,NTamd64,NTia64
+
+[DestinationDirs]
+; No CopyFiles needed, so this can remain empty or be omitted
+
+[DeviceList]
+%description%=DriverInstall,USB\VID_37C5&PID_1060&MI_00
+
+[DeviceList.NTamd64]
+%description%=DriverInstall,USB\VID_37C5&PID_1060&MI_00
+
+[DeviceList.NTia64]
+%description%=DriverInstall,USB\VID_37C5&PID_1060&MI_00
+
+[DriverInstall]
+Include=usb.inf
+Needs=UsbSer_Install
+AddReg=DriverAddReg
+
+[DriverAddReg]
+HKR,,EnumPropPages32,,"MsPorts.dll,SerialPortPropPageProvider"
+HKR,,DeviceInterfaceGUIDs,0x10000,"{86E0D1E0-8089-11D0-9CE4-08003E301F73}" ; standard GUID for COM ports
+
+[DriverInstall.Services]
+AddService=usbser,0x00000002,DriverService
+
+[DriverService]
+DisplayName=%ServiceName%
+ServiceType=1
+StartType=3
+ErrorControl=1
+ServiceBinary=%12%\usbser.sys
+LoadOrderGroup=Base

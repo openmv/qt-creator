@@ -3,8 +3,11 @@
 
 #include "pythonrunconfiguration.h"
 
-#include "pyside.h"
-#include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
+// PySide installer + Python build configuration sources are not built in OpenMV.
+// #include "pyside.h"
+// #include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
 #include "pythonconstants.h"
 #include "pythonproject.h"
 #include "pythontr.h"
@@ -12,7 +15,10 @@
 #include <coreplugin/editormanager/editormanager.h>
 #include <coreplugin/icore.h>
 
-#include <debugger/debuggerruncontrol.h>
+// OPENMV-DIFF //
+// Debugger plugin is disabled in OpenMV; no DAP debug run control.
+// #include <debugger/debuggerruncontrol.h>
+// OPENMV-DIFF //
 
 #include <projectexplorer/buildsystem.h>
 #include <projectexplorer/runconfiguration.h>
@@ -83,11 +89,16 @@ private:
             } else {
                 // The actual exception. This ends the traceback.
                 Task exception{Task::Error, text, {}, -1, category};
+                // OPENMV-DIFF //
+                // The "pysideinstall:" link detail is retained (it references no removed
+                // symbol), but the PySideInstaller click handler below is dropped since
+                // OpenMV has no PySide support.
                 const QString detail = Tr::tr("👉 Click here to install %1 (requires pip)");
                 const QString pySide6Text = Tr::tr("PySide6");
                 const QString link = QString("pysideinstall:")
                                      + QUrl::toPercentEncoding(m_python.toFSPathString());
                 exception.addLinkDetail(link, detail.arg(pySide6Text));
+                // OPENMV-DIFF //
                 TaskHub::addTask(exception);
                 for (auto rit = m_tasks.crbegin(), rend = m_tasks.crend(); rit != rend; ++rit)
                     TaskHub::addTask(*rit);
@@ -124,8 +135,11 @@ private:
             Core::EditorManager::openEditorAt({FilePath::fromString(fileName), lineNumber});
             return true;
         }
-        if (href == "PySide6")
-            PySideInstaller::instance().installPySide(m_python, href);
+        // OPENMV-DIFF //
+        // No PySide auto-install in OpenMV.
+        // if (href == "PySide6")
+        //     PySideInstaller::instance().installPySide(m_python, href);
+        // OPENMV-DIFF //
         return false;
     }
 
@@ -216,30 +230,29 @@ void setupPythonRunWorker()
     );
 }
 
-void setupPythonDebugWorker()
-{
-    static Debugger::SimpleDebugRunnerFactory thePythonDebugRunWorkerFactory(
-        {Constants::C_PYTHONRUNCONFIGURATION_ID},
-        {ProjectExplorer::Constants::DAP_PY_DEBUG_RUN_MODE}
-    );
-}
-
-void setupPythonOutputParser()
-{
-    addOutputParserFactory([](BuildConfiguration *bc) -> OutputLineParser * {
-        auto *pythonBuildConfig = qobject_cast<PythonBuildConfiguration *>(bc);
-        if (!pythonBuildConfig)
-            return nullptr;
-
-        Target *t = pythonBuildConfig->target();
-        QTC_ASSERT(t, return nullptr);
-
-        if (t->project()->mimeType() == Constants::C_PY_PROJECT_MIME_TYPE
-            || t->project()->mimeType() == Constants::C_PY_PROJECT_MIME_TYPE_TOML) {
-            return new PythonOutputLineParser(pythonBuildConfig->python());
-        }
-        return nullptr;
-    });
-}
+// OPENMV-DIFF //
+// setupPythonDebugWorker() wired Debugger::SimpleDebugRunnerFactory (DAP Python debugging);
+// the Debugger plugin is disabled in OpenMV, so it is removed (decl dropped from the header).
+//
+// void setupPythonDebugWorker()
+// {
+//     static Debugger::SimpleDebugRunnerFactory thePythonDebugRunWorkerFactory(
+//         {Constants::C_PYTHONRUNCONFIGURATION_ID},
+//         {ProjectExplorer::Constants::DAP_PY_DEBUG_RUN_MODE}
+//     );
+// }
+//
+// setupPythonOutputParser() registered the traceback parser via the Python build
+// configuration (qobject_cast<PythonBuildConfiguration>). OpenMV has no build
+// configuration, so it is removed too (decl dropped from the header).
+//
+// void setupPythonOutputParser()
+// {
+//     addOutputParserFactory([](BuildConfiguration *bc) -> OutputLineParser * {
+//         auto *pythonBuildConfig = qobject_cast<PythonBuildConfiguration *>(bc);
+//         ...
+//     });
+// }
+// OPENMV-DIFF //
 
 } // namespace Python::Internal

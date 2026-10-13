@@ -1,66 +1,235 @@
 set(resource_directories
-  android
-  cplusplus
-  glsl
-  indexer_preincludes
-  jsonschemas
-  lua-plugins
-  lua-lupdate
-  modeleditor
-  qmldesigner
-  qmlicons
-  qml-type-descriptions
-  schemes
-  snippets
-  styles
-  templates
-  themes
+  # OPENMV-DIFF #
+  # android
+  # cplusplus
+  # glsl
+  # indexer_preincludes
+  # jsonschemas
+  # lua-plugins
+  # lua-lupdate
+  # modeleditor
+  # qmldesigner
+  # qmlicons
+  # qml-type-descriptions
+  # schemes
+  # snippets
+  # styles
+  # templates
+  # themes
+  # OPENMV-DIFF #
+  examples
+  copilot.vim
+  firmware
+  html
+  models
+  # OPENMV-DIFF #
 )
 
 set(resource_files
-  debugger/.pylintrc
-  debugger/boosttypes.py
-  debugger/cdbbridge.py
-  debugger/cdbext.pyi
-  debugger/creatortypes.py
-  debugger/dumper.py
-  debugger/gdbbridge.py
-  debugger/gdbtracepoint.py
-  debugger/LICENSE.GPL3-EXCEPT
-  debugger/lldbbridge.py
-  debugger/misctypes.py
-  debugger/opencvtypes.py
-  debugger/pdbbridge.py
-  debugger/personaltypes.py
-  debugger/qttypes.py
-  debugger/README.txt
-  debugger/setup.cfg
-  debugger/android_stdtypes.py
-  debugger/libcpp_stdtypes.py
-  debugger/stdtypes.py
-  debugger/utils.py
-  debugger/loadorder_gdbbridge.txt
-  debugger/loadorder_lldbbridge.txt
-  debugger/visualize.py
+  # OPENMV-DIFF #
+  # debugger/.pylintrc
+  # debugger/boosttypes.py
+  # debugger/cdbbridge.py
+  # debugger/cdbext.pyi
+  # debugger/creatortypes.py
+  # debugger/dumper.py
+  # debugger/gdbbridge.py
+  # debugger/gdbtracepoint.py
+  # debugger/LICENSE.GPL3-EXCEPT
+  # debugger/lldbbridge.py
+  # debugger/misctypes.py
+  # debugger/opencvtypes.py
+  # debugger/pdbbridge.py
+  # debugger/personaltypes.py
+  # debugger/qttypes.py
+  # debugger/README.txt
+  # debugger/setup.cfg
+  # debugger/android_stdtypes.py
+  # debugger/libcpp_stdtypes.py
+  # debugger/stdtypes.py
+  # debugger/utils.py
+  # debugger/loadorder_gdbbridge.txt
+  # debugger/loadorder_lldbbridge.txt
+  # debugger/visualize.py
+  # OPENMV-DIFF #
 
-  debugger-with-python2/qttypes.py
-  debugger-with-python2/personaltypes.py
-  debugger-with-python2/android_stdtypes.py
-  debugger-with-python2/README.txt
-  debugger-with-python2/gdbbridge.py
-  debugger-with-python2/cdbbridge.py
-  debugger-with-python2/lldbbridge.py
-  debugger-with-python2/misctypes.py
-  debugger-with-python2/opencvtypes.py
-  debugger-with-python2/libcpp_stdtypes.py
-  debugger-with-python2/creatortypes.py
-  debugger-with-python2/stdtypes.py
-  debugger-with-python2/gdbtracepoint.py
-  debugger-with-python2/utils.py
-  debugger-with-python2/boosttypes.py
-  debugger-with-python2/dumper.py
-  debugger-with-python2/pdbbridge.py
+  # OPENMV-DIFF #
+  # debugger-with-python2/qttypes.py
+  # debugger-with-python2/personaltypes.py
+  # debugger-with-python2/android_stdtypes.py
+  # debugger-with-python2/README.txt
+  # debugger-with-python2/gdbbridge.py
+  # debugger-with-python2/cdbbridge.py
+  # debugger-with-python2/lldbbridge.py
+  # debugger-with-python2/misctypes.py
+  # debugger-with-python2/opencvtypes.py
+  # debugger-with-python2/libcpp_stdtypes.py
+  # debugger-with-python2/creatortypes.py
+  # debugger-with-python2/stdtypes.py
+  # debugger-with-python2/gdbtracepoint.py
+  # debugger-with-python2/utils.py
+  # debugger-with-python2/boosttypes.py
+  # debugger-with-python2/dumper.py
+  # debugger-with-python2/pdbbridge.py
+  # OPENMV-DIFF #
+
+  # OPENMV-DIFF #
+  styles/flat-dark.xml
+  styles/flat-light.xml
+  themes/flat-dark.creatortheme
+  themes/flat-light.creatortheme
+  themes/dark.figmatokens
+  themes/light.figmatokens
+  themes/light-palette.inc
+  # OPENMV-DIFF #
 )
+
+# OPENMV-DIFF #
+if (WIN32)
+  set(resource_directories ${resource_directories}
+    alif/windows
+    drivers
+    dfuse
+    ffmpeg/windows
+    dfu-util/windows
+    bossac/windows
+    node/windows
+    picotool/windows
+    python/win
+    pylsp/windows
+    mpy-cross/windows
+    vela/windows
+    spsdk/windows
+    stcubeprogrammer/windows)
+  set(downloaded_resource_directories
+    https://download.openmv.io/stedgeai/stedgeai-win-4.0.0.tar.gz
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-mingw-w64-x86_64-arm-none-eabi.zip)
+endif()
+
+if (APPLE)
+  if (CMAKE_OSX_ARCHITECTURES)
+    set(_openmv_mac_arch "${CMAKE_OSX_ARCHITECTURES}")
+  else()
+    set(_openmv_mac_arch "${CMAKE_SYSTEM_PROCESSOR}")
+  endif()
+
+  # Universal tool (runs on both architectures).
+  set(resource_directories ${resource_directories}
+    mpy-cross/mac)
+
+  # Bundle only the matching architecture's tools so the shipped application
+  # does not carry both an Intel and an Apple Silicon copy. alif and vela are
+  # Apple Silicon only (no Intel build exists).
+  if (_openmv_mac_arch MATCHES "arm64")
+    set(resource_directories ${resource_directories}
+      alif/mac
+      ffmpeg/mac-aarch64
+      dfu-util/osx-aarch64
+      bossac/osx-aarch64
+      node/mac-aarch64
+      picotool/osx-aarch64
+      python/mac-aarch64
+      pylsp/mac-aarch64
+      vela/mac-aarch64
+      spsdk/mac-aarch64
+      stcubeprogrammer/mac-aarch64)
+  else()
+    set(resource_directories ${resource_directories}
+      ffmpeg/mac
+      dfu-util/osx
+      bossac/osx
+      node/mac
+      picotool/osx
+      python/mac
+      pylsp/mac
+      spsdk/mac
+      stcubeprogrammer/mac)
+  endif()
+  set(resource_files ${resource_files} pydfu/pydfu.py)
+  set(downloaded_resource_directories
+    https://download.openmv.io/stedgeai/stedgeai-macarm-4.0.0.tar.gz
+    https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-darwin-arm64-arm-none-eabi.tar.xz)
+endif()
+
+if(UNIX AND NOT APPLE)
+  if(CMAKE_SIZEOF_VOID_P EQUAL 8)
+    if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
+      set(resource_directories ${resource_directories}
+        ffmpeg/linux-arm64
+        dfu-util/aarch64
+        bossac/aarch64
+        node/linux-arm64
+        picotool/aarch64
+        python/linux-arm64
+        vela/aarch64
+        pydfu)
+      set(downloaded_resource_directories
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-aarch64-arm-none-eabi.tar.xz)
+    else()
+      set(resource_directories ${resource_directories}
+        alif/linux-x86_64
+        ffmpeg/linux-x86_64
+        dfu-util/linux64
+        bossac/linux64
+        node/linux-x64
+        picotool/linux64
+        python/linux-x86_64
+        pylsp/linux-x86_64
+        mpy-cross/linux-x86_64
+        vela/linux64
+        spsdk/linux-x86_64
+        stcubeprogrammer/linux64
+        pydfu)
+      set(downloaded_resource_directories
+        https://download.openmv.io/stedgeai/stedgeai-linux64-4.0.0.tar.gz
+        https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-x86_64-arm-none-eabi.tar.xz)
+    endif()
+  else()
+    if(${CMAKE_SYSTEM_PROCESSOR} MATCHES "arm*")
+      set(resource_directories ${resource_directories}
+        ffmpeg/linux-armhf
+        dfu-util/arm
+        bossac/arm
+        node/linux-armv7
+        picotool/arm
+        python/linux-arm
+        pydfu)
+    else()
+      set(resource_directories ${resource_directories}
+        ffmpeg/linux-x86
+        dfu-util/linux32
+        bossac/linux32
+        picotool/linux32
+        pydfu)
+    endif()
+  endif()
+endif()
+# OPENMV-DIFF #
+
+# OPENMV-DIFF #
+# The viewer is a lean, read-only telemetry app, so strip the resources it never
+# uses -- authoring (examples), the Copilot assistant (copilot.vim + its node
+# runtime), offline docs (html), the model zoo (models), and the developer
+# compilers / language server (pylsp, mpy-cross, vela). Everything needed for
+# firmware and ROMFS recovery is kept. Filtering happens here, after the per-OS
+# lists are built, so one rule covers every platform's variant of a dropped tool.
+# Matching is by top-level folder name (e.g. "pylsp/windows" -> "pylsp").
+if(OPENMV_VIEWER_IDE)
+  set(viewer_excluded_dirs
+    examples copilot.vim html models node pylsp mpy-cross vela)
+  set(_viewer_filtered "")
+  foreach(dir ${resource_directories})
+    string(REGEX REPLACE "/.*" "" _top "${dir}")
+    if(NOT _top IN_LIST viewer_excluded_dirs)
+      list(APPEND _viewer_filtered "${dir}")
+    endif()
+  endforeach()
+  set(resource_directories ${_viewer_filtered})
+
+  # The downloaded resources (ST Edge-AI + the ARM GCC toolchain) are dev-only.
+  set(downloaded_resource_directories "")
+endif()
+# OPENMV-DIFF #
 
 # copy resource directories during build
 qtc_copy_to_builddir(copy_share_to_builddir
@@ -75,12 +244,30 @@ qtc_copy_to_builddir(copy_share_files_to_builddir
   DESTINATION ${IDE_DATA_PATH}
 )
 
-# create install rule for resource directories
-install(
-  DIRECTORY ${resource_directories}
-  DESTINATION "${IDE_DATA_PATH}"
-  USE_SOURCE_PERMISSIONS
+# OPENMV-DIFF #
+qtc_copy_to_builddir(copy_donwloaded_share_to_builddir
+  URLS ${downloaded_resource_directories}
+  DESTINATION ${IDE_DATA_PATH}
 )
+# OPENMV-DIFF #
+
+# create install rule for resource directories
+# OPENMV-DIFF #
+# install(
+#   DIRECTORY ${resource_directories}
+#   DESTINATION "${IDE_DATA_PATH}"
+#   USE_SOURCE_PERMISSIONS
+# )
+# OPENMV-DIFF #
+foreach(folder ${resource_directories})
+  get_filename_component(path "${folder}" DIRECTORY)
+  install(
+    DIRECTORY "${folder}"
+    DESTINATION "${IDE_DATA_PATH}/${path}"
+    USE_SOURCE_PERMISSIONS
+  )
+endforeach()
+# OPENMV-DIFF #
 
 qtc_add_sbom(CreatorShareResources
   SBOM_ENTITY_TYPE RESOURCES

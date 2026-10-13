@@ -2196,6 +2196,9 @@ public:
 
         auto codecChooser = new CodecChooser;
         codecChooser->prependNone();
+        // OPENMV-DIFF //
+        codecChooser->hide();
+        // OPENMV-DIFF //
         connect(codecChooser, &CodecChooser::encodingChanged,
                 m_widget, &BinEditorWidget::setEncoding);
         m_widget->setEncoding(codecChooser->currentEncoding());
@@ -2204,9 +2207,16 @@ public:
         if (!setting.isNull())
             codecChooser->setAssignedEncoding(setting.toByteArray());
 
+        // OPENMV-DIFF //
+        m_widget->addressEdit()->setToolTip(Tr::tr("Byte Address"));
+        // OPENMV-DIFF //
+
         using namespace Layouting;
         auto w = Row {
-            customMargins(0, 0, 5, 0),
+            // OPENMV-DIFF //
+            // customMargins(0, 0, 5, 0),
+            // OPENMV-DIFF //
+            customMargins(0, 0, 0, 0),
             st,
             codecChooser,
             m_widget->addressEdit()

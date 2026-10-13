@@ -23,6 +23,9 @@
 #include <QLibraryInfo>
 #include <QPushButton>
 #include <QStandardItem>
+// OPENMV-DIFF //
+#include <QSpinBox>
+// OPENMV-DIFF //
 #include <QStyleHints>
 
 using namespace Utils;
@@ -144,7 +147,10 @@ class ResetWarningsButton : public QPushButton
 public:
     ResetWarningsButton()
     {
-        setText(Tr::tr("Reset Warnings", "Button text"));
+        // OPENMV-DIFF //
+        // setText(Tr::tr("Reset Warnings", "Button text"));
+        setText(Tr::tr("Reset Do Not Ask/Show Again Dialogs"));
+        // OPENMV-DIFF //
         setToolTip(
             Tr::tr("Re-enable warnings that were suppressed by selecting \"Do Not "
                    "Show Again\" (for example, missing highlighter)."));
@@ -321,23 +327,48 @@ GeneralSettings::GeneralSettings()
 
         auto envVarInfo = createEnvVarInfoLabel();
 
+        // OPENMV-DIFF //
+        // Viewer mode hides the Text Editor settings page, where the serial terminal tab size
+        // normally lives; surface that reader-side setting on this page instead.
+        const bool viewerMode = QCoreApplication::arguments().contains("-viewer_mode");
+        QSpinBox *serialTerminalTabSize = nullptr;
+        if (viewerMode) {
+            serialTerminalTabSize = new QSpinBox;
+            serialTerminalTabSize->setRange(1, 20);
+            serialTerminalTabSize->setValue(ICore::serialTerminalTabSize());
+            QObject::connect(serialTerminalTabSize, &QSpinBox::valueChanged,
+                             qApp, [](int value) { ICore::setSerialTerminalTabSize(value); });
+        }
+        // OPENMV-DIFF //
+
         // clang-format off
         return Column {
             Form {
-                color, st, br,
+                // OPENMV-DIFF //
+                // The OpenMV IDE hides the Color, Toolbar style, Text codec, "Show keyboard
+                // shortcuts in context menus" and "Override cursors for views" rows.
+                // color, st, br,
                 theme, st, br,
-                toolbarStyle, st, br,
+                // toolbarStyle, st, br,
                 language, st, br,
                 If (showDpiPolicy) >> Then {
                     highDpiScaleFactorRoundingPolicy, st, br,
                     If (envVarInfo) >> Then { envVarInfo, br } >> Else { st, br },
                 },
-                codecForLocale, st, br,
-                showShortcutsInContextMenus, st, br,
-                provideSplitterCursors, st, br,
+                // codecForLocale, st, br,
+                // showShortcutsInContextMenus, st, br,
+                // provideSplitterCursors, st, br,
+                // OPENMV-DIFF //
                 preferInfoBarOverPopup, st, br,
                 useTabsInEditorViews, st, br,
                 showOkAndCancelInSettingsMode, st, br,
+                // OPENMV-DIFF //
+                // Serial Terminal Tab size (viewer mode only). Applied immediately on change
+                // because there is no GeneralSettings aspect/member to apply it on OK.
+                If (viewerMode) >> Then {
+                    Tr::tr("Serial Terminal Tab size:"), serialTerminalTabSize, st, br
+                },
+                // OPENMV-DIFF //
                 Row { new ResetWarningsButton, st },
             }
         };

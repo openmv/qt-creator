@@ -11,6 +11,10 @@
 #include "../coreplugintr.h"
 #include "../documentmanager.h"
 #include "../icore.h"
+// OPENMV-DIFF //
+#include "../actionmanager/actioncontainer.h"
+#include "../fancyactionbar.h"
+// OPENMV-DIFF //
 
 #include <utils/algorithm.h>
 #include <utils/fancylineedit.h>
@@ -31,8 +35,16 @@
 #include <QKeySequence>
 #include <QLabel>
 #include <QLineEdit>
+// OPENMV-DIFF //
+#include <QMenu>
+#include <QMenuBar>
+// OPENMV-DIFF //
 #include <QPointer>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QSet>
+#include <QToolButton>
+// OPENMV-DIFF //
 #include <QTimer>
 #include <QTreeWidgetItem>
 #include <QXmlStreamAttributes>
@@ -617,6 +629,25 @@ ShortcutSettingsWidget::ShortcutSettingsWidget()
             this, &ShortcutSettingsWidget::exportAction);
     connect(&m_mappings, &CommandMappings::defaultRequested,
             this, &ShortcutSettingsWidget::defaultAction);
+
+    // OPENMV-DIFF //
+    // Reserve exactly the height of a one-shortcut box up front. Selecting a command rebuilds this
+    // box; without the reservation it grew from empty, shrinking the command list that shares the
+    // column above and scrolling the list on every selection. Measure that height from a throwaway
+    // box laid out like a populated one (a key-sequence row plus the Add-button row) so the reserved
+    // space is snug -- only commands with several shortcuts exceed it and grow the box further.
+    {
+        QGroupBox probe(Tr::tr("Shortcut"));
+        auto *probeLayout = new QGridLayout(&probe);
+        probeLayout->addWidget(new QLabel(Tr::tr("Key sequence:")), 0, 0);
+        probeLayout->addWidget(new FancyLineEdit, 0, 1);
+        probeLayout->addWidget(new QPushButton(Tr::tr("Record")), 0, 2);
+        probeLayout->addWidget(new QLabel, 1, 0, 1, 2);
+        probeLayout->addWidget(new QPushButton(Tr::tr("Add")), 1, 2);
+        probeLayout->activate();
+        m_shortcutBox.setMinimumHeight(probe.sizeHint().height());
+    }
+    // OPENMV-DIFF //
 }
 
 ShortcutSettingsWidget::~ShortcutSettingsWidget()
@@ -831,10 +862,91 @@ void ShortcutSettingsWidget::clear()
     m_scitems.clear();
 }
 
+// OPENMV-DIFF //
+// Recursively collect the leaf QActions reachable from a menu/menu-bar action, gathering only the
+// ones the user can actually see. aboutToShow() is emitted on each submenu first so any dynamic
+// hiding (e.g. OpenMV strips the File/Edit menus to a single item on aboutToShow) is applied before
+// visibility is read -- otherwise the snapshot would be stale. Mirrors ActionsFilter's menu walk.
+static void collectVisibleActions(QAction *action, QSet<QAction *> &out)
+{
+    if (!action || action->isSeparator() || !action->isVisible())
+        return;
+    if (QMenu *menu = action->menu()) {
+        emit menu->aboutToShow();
+        const QList<QAction *> actions = menu->actions();
+        for (QAction *child : actions)
+            collectVisibleActions(child, out);
+    } else {
+        out.insert(action);
+    }
+}
+
+// Build the set of actions the user can actually reach in the GUI: everything under the visible
+// menu bar and the editor's right-click context menu, plus keyboard-first commands that have no menu
+// entry -- the corner action-bar buttons (the connect/disconnect/run/stop bar and the file/edit
+// bars), the tab bar's switch/move-tab commands (the whole TabbedEditor.* group), and the
+// image-viewer view actions. Filtering the shortcut list to this set keeps it from exposing the
+// hundreds of actions OpenMV hides/disables; the menu part stays in sync with the live menus
+// automatically (viewer mode handled for free). The few ids named directly are string literals to
+// avoid a coreplugin -> plugin dependency.
+static QSet<QAction *> visibleCommandActions()
+{
+    QSet<QAction *> out;
+
+    const auto walkContainer = [&out](const Id &containerId, bool isMenuBar) {
+        ActionContainer *container = ActionManager::actionContainer(containerId);
+        if (!container)
+            return;
+        const QList<QAction *> actions = isMenuBar
+            ? (container->menuBar() ? container->menuBar()->actions() : QList<QAction *>())
+            : (container->menu() ? container->menu()->actions() : QList<QAction *>());
+        for (QAction *action : actions)
+            collectVisibleActions(action, out);
+    };
+
+    walkContainer(Constants::MENU_BAR, true);
+    walkContainer(Id("TextEditor.StandardContextMenu"), false);
+
+    // Corner action bars (file/edit buttons and the OpenMV connect/disconnect/run/stop bar): grab
+    // every action they host so those keyboard-first commands appear without hardcoding ids. Each
+    // entry is a FancyToolButton whose defaultAction() is the command's action.
+    const QList<FancyActionBar *> actionBars = ICore::mainWindow()->findChildren<FancyActionBar *>();
+    for (const FancyActionBar *bar : actionBars) {
+        QLayout *layout = bar->actionsLayout();
+        for (int i = 0, count = layout ? layout->count() : 0; i < count; ++i) {
+            if (auto *button = qobject_cast<QToolButton *>(layout->itemAt(i)->widget()))
+                if (QAction *action = button->defaultAction())
+                    out.insert(action);
+        }
+    }
+
+    // The tab bar's switch/move-tab commands live on the tab bar with no menu entry; take the whole
+    // TabbedEditor.* group by id prefix so any future tab commands are picked up automatically.
+    const QList<Command *> commands = ActionManager::commands();
+    for (Command *c : commands) {
+        if (c->action() && c->id().toString().startsWith(QLatin1String("TabbedEditor.")))
+            out.insert(c->action());
+    }
+
+    // The image viewer's view actions live on its editor toolbar (no menu entry).
+    for (const char *id : {"ImageViewer.FitToScreen", "ImageViewer.Background", "ImageViewer.Outline"}) {
+        if (Command *c = ActionManager::command(Id::fromName(id)))
+            if (c->action())
+                out.insert(c->action());
+    }
+
+    return out;
+}
+// OPENMV-DIFF //
+
 void ShortcutSettingsWidget::initialize()
 {
     clear();
     QMap<QString, QTreeWidgetItem *> sections;
+
+    // OPENMV-DIFF //
+    const QSet<QAction *> visibleActions = visibleCommandActions();
+    // OPENMV-DIFF //
 
     const QList<Command *> commands = ActionManager::commands();
     for (Command *c : commands) {
@@ -842,6 +954,14 @@ void ShortcutSettingsWidget::initialize()
             continue;
         if (c->action() && c->action()->isSeparator())
             continue;
+        // OPENMV-DIFF //
+        if (!visibleActions.contains(c->action()))
+            continue;
+        // ProjectExplorer's run/build actions leak in via the mode-selector action bar, but the
+        // project system is hidden in this product -- drop that whole section.
+        if (c->id().toString().startsWith(QLatin1String("ProjectExplorer.")))
+            continue;
+        // OPENMV-DIFF //
 
         QTreeWidgetItem *item = nullptr;
         auto s = new ShortcutItem;
@@ -855,7 +975,13 @@ void ShortcutSettingsWidget::initialize()
         const QString section = identifier.left(pos);
         const QString subId = identifier.mid(pos + 1);
         if (!sections.contains(section)) {
-            QTreeWidgetItem *categoryItem = new QTreeWidgetItem(m_mappings.commandList(), {section});
+            // OPENMV-DIFF //
+            // QTreeWidgetItem *categoryItem = new QTreeWidgetItem(m_mappings.commandList(), {section});
+            // Show the "QtCreator" command group under the friendlier "Core" heading.
+            const QString sectionTitle = (section == QLatin1String("QtCreator"))
+                                             ? QStringLiteral("Core") : section;
+            QTreeWidgetItem *categoryItem = new QTreeWidgetItem(m_mappings.commandList(), {sectionTitle});
+            // OPENMV-DIFF //
             QFont f = categoryItem->font(0);
             f.setBold(true);
             categoryItem->setFont(0, f);
@@ -929,6 +1055,12 @@ class ShortcutSettings final : public IOptionsPage
 {
 public:
     ShortcutSettings()
+        // OPENMV-DIFF //
+        // This page used to be hidden from the preferences dialog (IOptionsPage(false)); it is now
+        // shown (upstream's default), but the widget filters the list down to the actions that are
+        // actually reachable in the GUI (see visibleCommandActions()).
+        : IOptionsPage(true)
+        // OPENMV-DIFF //
     {
         setId(Constants::SETTINGS_ID_SHORTCUTS);
         setDisplayName(Tr::tr("Keyboard"));

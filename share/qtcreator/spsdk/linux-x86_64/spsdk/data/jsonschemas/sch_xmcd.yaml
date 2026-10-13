@@ -1,0 +1,35 @@
+# Copyright 2022-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+memory_type:
+  type: object
+  required: [mem_type]
+  properties:
+    mem_type:
+      type: string
+      title: Memory type
+      description: Specify type of memory used by XMCD description.
+      enum: [flexspi_ram, semc_sdram, xspi_ram]
+      template_value: flexspi_ram
+
+config_type:
+  type: object
+  required: [config_type]
+  properties:
+    config_type:
+      type: string
+      title: Configuration type
+      description: Specify type of configuration used by XMCD description.
+      enum: [full, simplified]
+      template_value: simplified
+
+xmcd:
+  type: object
+  properties:
+    xmcd_settings:
+      type: object
+      title: Settings of XMCD
+      description: External memory configuration settings for selected MCU.
+
+  required: [xmcd_settings]

@@ -13,6 +13,9 @@
 #include <QDebug>
 #include <QHeaderView>
 #include <QGroupBox>
+// OPENMV-DIFF //
+#include <QHeaderView>
+// OPENMV-DIFF //
 #include <QLabel>
 #include <QPointer>
 #include <QPushButton>
@@ -79,7 +82,19 @@ public:
         connect(&commandList, &QTreeWidget::currentItemChanged,
                 q, &CommandMappings::currentCommandChanged);
 
-        new HeaderViewStretcher(commandList.header(), 2);
+        // OPENMV-DIFF //
+        // new HeaderViewStretcher(commandList.header(), 2);
+        // The stretcher resized the Shortcut column to its (short) contents on every open, leaving it
+        // a sliver pinned to the right edge. Instead stretch the Label column and give the Command and
+        // Shortcut columns stable, resizable widths so the page opens sensibly each time.
+        QHeaderView *header = commandList.header();
+        header->setStretchLastSection(false);
+        header->setSectionResizeMode(0, QHeaderView::Interactive);
+        header->setSectionResizeMode(1, QHeaderView::Stretch);
+        header->setSectionResizeMode(2, QHeaderView::Interactive);
+        commandList.setColumnWidth(0, 260);
+        commandList.setColumnWidth(2, 220);
+        // OPENMV-DIFF //
 
         m_columnFilter = [](const QString &filterString, QTreeWidgetItem *item, int column) {
                 return !item->text(column).contains(filterString, Qt::CaseInsensitive);

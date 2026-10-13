@@ -3,8 +3,10 @@
 
 #include "pythonproject.h"
 
-#include "pythonbuildconfiguration.h"
-#include "pythonbuildsystem.h"
+// OPENMV-DIFF //
+// #include "pythonbuildconfiguration.h"
+// #include "pythonbuildsystem.h"
+// OPENMV-DIFF //
 #include "pythonconstants.h"
 #include "pythonlanguageclient.h"
 
@@ -25,15 +27,22 @@ PythonProject::PythonProject(const FilePath &fileName)
     setType(PythonProjectId);
     setProjectLanguages(Context(ProjectExplorer::Constants::PYTHON_LANGUAGE_ID));
     setDisplayName(fileName.completeBaseName());
-    setBuildSystemCreator<PythonBuildSystem>();
-    connect(this, &Project::activeBuildConfigurationChanged, this, [this]() {
-        for (auto bc : allBuildConfigurations()) {
-            if (auto pythonBc = qobject_cast<PythonBuildConfiguration *>(bc)) {
-                if (auto client = PyLSClient::clientForPython(pythonBc->python()))
-                    client->updateExtraCompilers(this);
-            }
-        }
-    });
+    // OPENMV-DIFF //
+    // OpenMV does not use the Python build system / build configuration, so no build
+    // system creator is registered and PySide extra-compilers are not wired up. The
+    // "No Python interpreter set" diagnostic that the old PythonProject::projectIssues()
+    // produced is now provided by the issuesGenerator passed to registerProjectType()
+    // in pythonplugin.cpp, so that method is dropped here.
+    // setBuildSystemCreator<PythonBuildSystem>();
+    // connect(this, &Project::activeBuildConfigurationChanged, this, [this]() {
+    //     for (auto bc : allBuildConfigurations()) {
+    //         if (auto pythonBc = qobject_cast<PythonBuildConfiguration *>(bc)) {
+    //             if (auto client = PyLSClient::clientForPython(pythonBc->python()))
+    //                 client->updateExtraCompilers(this);
+    //         }
+    //     }
+    // });
+    // OPENMV-DIFF //
 }
 
 PythonProjectNode::PythonProjectNode(const FilePath &path)

@@ -9,6 +9,17 @@
 
 namespace Utils {
 
+// OPENMV-DIFF //
+// Qt Creator 20.0.2 removed this enum (it inlined Process::runBlocking and
+// dropped the nested-event-loop variant). OpenMV's fork keeps the event-loop
+// runBlocking overload, which ~150 call sites in plugins/openmv/tools/* rely
+// on, so the enum is re-added here.
+enum class EventLoopMode {
+    Off,
+    On // Avoid
+};
+// OPENMV-DIFF //
+
 enum class ProcessMode {
     Reader, // This opens in ReadOnly mode if no write data or in ReadWrite mode otherwise,
             // closes the write channel afterwards.

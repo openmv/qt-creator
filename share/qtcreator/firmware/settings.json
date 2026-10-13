@@ -1,0 +1,2086 @@
+{
+    "firmware_version": "5.0.1",
+    "boards" : [
+        {
+            "hidden" : true,
+            "boardType" : "M4",
+            "boardArchString" : "OMV2 F4 256 JPEG",
+            "boardDisplayName" : "OpenMV Cam M4 (STM32F427)",
+            "boardFirmwareFolder" : "OPENMV2",
+            "highSpeed" : false,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 11,
+                "eraseSectorStart" : 4,
+                "eraseSectorEnd" : 11,
+                "fallbackBootloader" : {
+                    "vidpid" : "37C5:9202",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "M4",
+            "boardArchString" : "OMV2 F4 256 JPEG",
+            "boardDisplayName" : "OpenMV Cam M4",
+            "boardFirmwareFolder" : "OPENMV2",
+            "highSpeed" : false,
+            "boardVidPid" : "37C5:1202",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9202",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
+                "eraseCommands" : ["-a 1"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMV2/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV2/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV2/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware.bin",
+                        "size" : 851968
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 131072
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 131072
+                    }
+                ],
+                "fallbackBootloader" : {
+                    "vidpid" : "0483:df11",
+                    "type" : "internal",
+                    "settings" : {
+                        "eraseAllSectorStart" : 1,
+                        "eraseAllSectorEnd" : 11,
+                        "eraseSectorStart" : 4,
+                        "eraseSectorEnd" : 11
+                    }
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "M7",
+            "boardArchString" : "OMV3 F7 512",
+            "boardDisplayName" : "OpenMV Cam M7 (STM32F765/67)",
+            "boardFirmwareFolder" : "OPENMV3",
+            "highSpeed" : false,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 11,
+                "eraseSectorStart" : 4,
+                "eraseSectorEnd" : 11,
+                "fallbackBootloader" : {
+                    "vidpid" : "37C5:9203",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 262144,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "M7",
+            "boardArchString" : "OMV3 F7 512",
+            "boardDisplayName" : "OpenMV Cam M7",
+            "boardFirmwareFolder" : "OPENMV3",
+            "highSpeed" : false,
+            "boardVidPid" : "37C5:1203",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9203",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
+                "eraseCommands" : ["-a 1"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMV3/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV3/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV3/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware.bin",
+                        "size" : 1703936
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 262144
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 262144
+                    }
+                ],
+                "fallbackBootloader" : {
+                    "vidpid" : "0483:df11",
+                    "type" : "internal",
+                    "settings" : {
+                        "eraseAllSectorStart" : 1,
+                        "eraseAllSectorEnd" : 11,
+                        "eraseSectorStart" : 4,
+                        "eraseSectorEnd" : 11
+                    }
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 262144,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "H7",
+            "boardArchString" : "OMV4 H7 1024",
+            "boardDisplayName" : "OpenMV Cam H7 (STM32H743)",
+            "boardFirmwareFolder" : "OPENMV4",
+            "highSpeed" : false,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15,
+                "fallbackBootloader" : {
+                    "vidpid" : "37C5:9204",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "H7",
+            "boardArchString" : "OMV4 H7 1024",
+            "boardDisplayName" : "OpenMV Cam H7",
+            "boardFirmwareFolder" : "OPENMV4",
+            "highSpeed" : false,
+            "boardVidPid" : "37C5:1204",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9204",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
+                "eraseCommands" : ["-a 1"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMV4/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV4/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path": "OPENMV4/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware.bin",
+                        "size" : 1703936
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 131072
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 131072
+                    }
+                ],
+                "fallbackBootloader" : {
+                    "vidpid" : "0483:df11",
+                    "type" : "internal",
+                    "settings" : {
+                        "eraseAllSectorStart" : 1,
+                        "eraseAllSectorEnd" : 15,
+                        "eraseSectorStart" : 2,
+                        "eraseSectorEnd" : 15
+                    }
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 131072,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "H7",
+            "boardArchString" : "OMV4P H7 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam H7 Plus (STM32H743 w/ SDRAM)",
+            "boardFirmwareFolder" : "OPENMV4P",
+            "highSpeed" : false,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15,
+                "fallbackBootloader" : {
+                    "vidpid" : "37C5:924A",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "H7",
+            "boardArchString" : "OMV4P H7 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam H7 Plus",
+            "boardFirmwareFolder" : "OPENMV4P",
+            "highSpeed" : false,
+            "boardVidPid" : "37C5:124A",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:924A",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
+                "eraseCommands" : ["-a 3"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMV4P/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMV4P/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMV4P/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware.bin",
+                        "size" : 1835008
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "name": "romfs.img",
+                        "size" : 8388608
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "name": "romfs0.img",
+                        "size" : 8388608
+                    }
+                ],
+                "fallbackBootloader" : {
+                    "vidpid" : "0483:df11",
+                    "type" : "internal",
+                    "settings" : {
+                        "eraseAllSectorStart" : 1,
+                        "eraseAllSectorEnd" : 15,
+                        "eraseSectorStart" : 2,
+                        "eraseSectorEnd" : 15
+                    }
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "H7",
+            "boardArchString" : "OPENMVPT 65536 SDRAM",
+            "boardDisplayName" : "OpenMV Pure Thermal (STM32H743 w/ SDRAM)",
+            "boardFirmwareFolder" : "OPENMVPT",
+            "highSpeed" : false,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "eraseAllSectorStart" : 1,
+                "eraseAllSectorEnd" : 15,
+                "eraseSectorStart" : 2,
+                "eraseSectorEnd" : 15,
+                "fallbackBootloader" : {
+                    "vidpid" : "37C5:9205",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "H7",
+            "boardArchString" : "OPENMVPT 65536 SDRAM",
+            "boardDisplayName" : "OpenMV Pure Thermal",
+            "boardFirmwareFolder" : "OPENMVPT",
+            "highSpeed" : false,
+            "boardVidPid" : "37C5:1205",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9205",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : false,
+                "eraseCommands" : ["-a 3"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMVPT/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMVPT/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 4",
+                        "path": "OPENMVPT/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware.bin",
+                        "size" : 1835008
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "name": "romfs.img",
+                        "size" : 8388608
+                    },
+                    {
+                        "cmd": "-a 4",
+                        "name": "romfs0.img",
+                        "size" : 8388608
+                    }
+                ],
+                "fallbackBootloader" : {
+                    "vidpid" : "0483:df11",
+                    "type" : "internal",
+                    "settings" : {
+                        "eraseAllSectorStart" : 1,
+                        "eraseAllSectorEnd" : 15,
+                        "eraseSectorStart" : 2,
+                        "eraseSectorEnd" : 15
+                    }
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "IMXRT1060",
+            "boardArchString" : "OMVRT1060 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam RT1062 (MIMXRT1062)",
+            "boardFirmwareFolder" : "OPENMV_RT1060",
+            "highSpeed" : true,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "15a2:0073",
+            "bootloaderType" : "imx",
+            "bootloaderSettings" : {
+                "sdphost_pidvid" : "0x1FC9,0x0135",
+                "sdphost_flash_loader_address" : "0x20001C00",
+                "sdphost_flash_loader_path" : "sdphost_flash_loader.bin",
+                "blhost_pidvid" : "0x15A2,0x0073",
+                "blhost_memory_configuration_address" : "0x2000",
+                "blhost_memory_configuration_spi" : "0xC0000008",
+                "blhost_memory_configuration_fcb" : "0xF000000F",
+                "blhost_memory_configuration_type" : "9",
+                "blhost_secure_bootloader_fcb_address" : "0x60000000",
+                "blhost_secure_bootloader_fcb_length" : "0x1000",
+                "blhost_secure_bootloader_address" : "0x60001000",
+                "blhost_secure_bootloader_path" : "blhost_flash_loader.bin",
+                "blhost_firmware_address" : "0x60040000",
+                "blhost_disk_address" : "0x60400000",
+                "blhost_disk_size" : "0x00400000",
+                "blhost_disk_size_mbr" : "0x1000",
+                "blhost_efuse_burn_address" : "0x06",
+                "blhost_efuse_burn_data" : "00000010",
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "IMXRT1060",
+            "boardArchString" : "OMVRT1060 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam RT1062",
+            "boardFirmwareFolder" : "OPENMV_RT1060",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1060",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "15a2:0073",
+            "bootloaderType" : "imx",
+            "bootloaderSettings" : {
+                "sdphost_pidvid" : "0x1FC9,0x0135",
+                "sdphost_flash_loader_address" : "0x20001C00",
+                "sdphost_flash_loader_path" : "sdphost_flash_loader.bin",
+                "blhost_pidvid" : "0x15A2,0x0073",
+                "blhost_memory_configuration_address" : "0x2000",
+                "blhost_memory_configuration_spi" : "0xC0000008",
+                "blhost_memory_configuration_fcb" : "0xF000000F",
+                "blhost_memory_configuration_type" : "9",
+                "blhost_secure_bootloader_fcb_address" : "0x60000000",
+                "blhost_secure_bootloader_fcb_length" : "0x1000",
+                "blhost_secure_bootloader_address" : "0x60001000",
+                "blhost_secure_bootloader_path" : "blhost_flash_loader.bin",
+                "blhost_firmware_address" : "0x60040000",
+                "blhost_disk_address" : "0x60400000",
+                "blhost_disk_size" : "0x00400000",
+                "blhost_disk_size_mbr" : "0x1000",
+                "blhost_efuse_burn_address" : "0x06",
+                "blhost_efuse_burn_data" : "00000010",
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "IMXRT1060",
+            "boardArchString" : "OMVRT1060 32768 SDRAM",
+            "boardDisplayName" : "OpenMV Cam RT1062 SBL",
+            "boardFirmwareFolder" : "OPENMV_RT1060",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1060",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "1fc9:0135",
+            "bootloaderType" : "imx",
+            "bootloaderSettings" : {
+                "sdphost_pidvid" : "0x1FC9,0x0135",
+                "sdphost_flash_loader_address" : "0x20001C00",
+                "sdphost_flash_loader_path" : "sdphost_flash_loader.bin",
+                "blhost_pidvid" : "0x15A2,0x0073",
+                "blhost_memory_configuration_address" : "0x2000",
+                "blhost_memory_configuration_spi" : "0xC0000008",
+                "blhost_memory_configuration_fcb" : "0xF000000F",
+                "blhost_memory_configuration_type" : "9",
+                "blhost_secure_bootloader_fcb_address" : "0x60000000",
+                "blhost_secure_bootloader_fcb_length" : "0x1000",
+                "blhost_secure_bootloader_address" : "0x60001000",
+                "blhost_secure_bootloader_path" : "blhost_flash_loader.bin",
+                "blhost_firmware_address" : "0x60040000",
+                "blhost_disk_address" : "0x60400000",
+                "blhost_disk_size" : "0x00400000",
+                "blhost_disk_size_mbr" : "0x1000",
+                "blhost_efuse_burn_address" : "0x06",
+                "blhost_efuse_burn_data" : "00000010",
+                "blhost_romfs_address" : "0x60800000",
+                "blhost_romfs_size" : "0x00800000",
+                "blhost_romfs_path" : "romfs0.img"
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 8388608,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "AE3",
+            "boardArchString" : "OPENMV AE3",
+            "boardDisplayName" : "OpenMV AE3",
+            "boardFirmwareFolder" : "OPENMV_AE3",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:16E3",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.lst",
+            "bootloaderVidPid" : "37C5:96E3",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
+                "eraseCommands" : ["-a 5"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 1",
+                        "path" : "OPENMV_AE3/firmware_M55_HP.bin"
+                    },
+                    {
+                        "cmd" : "-a 2",
+                        "path" : "OPENMV_AE3/firmware_M55_HE.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_AE3/romfs1.img"
+                    },
+                    {
+                        "cmd": "-a 6",
+                        "path" : "OPENMV_AE3/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_AE3/romfs1.img"
+                    },
+                    {
+                        "cmd": "-a 6",
+                        "path" : "OPENMV_AE3/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 1",
+                        "name": "firmware_M55_HP.bin",
+                        "size" : 3145728
+                    },
+                    {
+                        "cmd": "-a 2",
+                        "name": "firmware_M55_HE.bin",
+                        "size" : 1433600
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs1.img",
+                        "size" : 1048576
+                    },
+                    {
+                        "cmd": "-a 6",
+                        "name": "romfs0.img",
+                        "size" : 25165824
+                    }
+                ]
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "High Performance Core",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 4194304,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                },
+                {
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 2097152,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "AE3",
+            "boardArchString" : "OPENMV AE3 SBL",
+            "boardDisplayName" : "OpenMV AE3 SBL",
+            "boardFirmwareFolder" : "OPENMV_AE3",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:16E3",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.lst",
+            "bootloaderVidPid" : "0403:6015",
+            "bootloaderType" : "alif_tools",
+            "bootloaderSettings" : {
+                "global-cfg.db" : {
+                    "DEVICE": {
+                        "Revision": "B4",
+                        "Part#": "E3 (AE302F80F55D5AE) - 5.5 MRAM / 13.5 SRAM"
+                    },
+                    "MRAM-BURNER": {
+                        "Interface": "isp",
+                        "Jtag-adapter": "J-Link"
+                    }
+                },
+                "dfuBootloaderProgramCommand" : {
+                    "images": "../build/bootloader.bin 0x80000000 ../build/firmware_pad.toc 0x8057E000",
+                    "bootloaderVidPid": "37C5:96E3"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "High Performance Core",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 4194304,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                },
+                {
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 2097152,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "AE3",
+            "boardArchString" : "OPENMV AE3 SBL2",
+            "boardDisplayName" : "OpenMV AE3 SBL2",
+            "boardFirmwareFolder" : "OPENMV_AE3",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:16E3",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.lst",
+            "bootloaderVidPid" : "1A86:55D3",
+            "bootloaderType" : "alif_tools",
+            "bootloaderSettings" : {
+                "global-cfg.db" : {
+                    "DEVICE": {
+                        "Revision": "B4",
+                        "Part#": "E3 (AE302F80F55D5LE) - 5.5 MRAM / 13.5 SRAM"
+                    },
+                    "MRAM-BURNER": {
+                        "Interface": "isp",
+                        "Jtag-adapter": "J-Link"
+                    }
+                },
+                "dfuBootloaderProgramCommand" : {
+                    "images": "../build/bootloader.bin 0x80000000 ../build/firmware_pad.toc 0x8057E000",
+                    "bootloaderVidPid": "37C5:96E3"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "High Performance Core",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HP_SRAM_OSPI",
+                            "--accelerator-config ethos-u55-256",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 4194304,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                },
+                {
+                    "name" : "High Efficiency Core",
+                    "size" : 1048576,
+                    "index" : 1,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "vela",
+                        "args" : [
+                            "--system-config RTSS_HE_SRAM_MRAM",
+                            "--accelerator-config ethos-u55-128",
+                            "--memory-mode Shared_Sram"
+                        ],
+                        "heapSize" : 2097152,
+                        "iniFilePath" : "OPENMV_AE3/vela.ini"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6",
+            "boardDisplayName" : "OpenMV N6 (STM32N657)",
+            "boardFirmwareFolder" : "OPENMV_N6",
+            "highSpeed" : true,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "fallbackBootloader" : {
+                    "useSTCubeProgrammer" : true,
+                    "vidpid" : "37C5:9206",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6 Classic",
+            "boardDisplayName" : "OpenMV N6 Classic (STM32N657)",
+            "boardFirmwareFolder" : "OPENMV_N6_CLASSIC",
+            "highSpeed" : true,
+            "boardVidPid" : "1209:ABD1",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : ["000000000010", "000000000011"],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0483:df11",
+            "bootloaderType" : "internal",
+            "bootloaderSettings" : {
+                "fallbackBootloader" : {
+                    "useSTCubeProgrammer" : true,
+                    "vidpid" : "37C5:9208",
+                    "type" : "openmv_dfu"
+                }
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6_CLASSIC/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6_CLASSIC/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6",
+            "boardDisplayName" : "OpenMV N6",
+            "boardFirmwareFolder" : "OPENMV_N6",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1206",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9206",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
+                "eraseCommands" : ["-a 2"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 1",
+                        "path" : "OPENMV_N6/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 1",
+                        "name": "firmware.bin",
+                        "size" : 3670016
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 25165824
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 25165824
+                    }
+                ]
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "MP2",
+            "boardArchString" : "OpenMV MP2",
+            "boardDisplayName" : "OpenMV MP2",
+            "boardFirmwareFolder" : "OPENMV_MP2",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1207",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "",
+            "bootloaderVidPid" : "",
+            "bootloaderType" : "",
+            "bootloaderSettings" : {
+            },
+            "mpyConfig" : {
+                "args" : [
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "N6",
+            "boardArchString" : "OpenMV N6 Classic",
+            "boardDisplayName" : "OpenMV N6 Classic",
+            "boardFirmwareFolder" : "OPENMV_N6_CLASSIC",
+            "highSpeed" : true,
+            "boardVidPid" : "37C5:1208",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "37C5:9208",
+            "bootloaderType" : "openmv_dfu",
+            "bootloaderSettings" : {
+                "forceBootloaderDefaultSafe" : true,
+                "eraseCommands" : ["-a 2"],
+                "programCommands" : [
+                    {
+                        "cmd" : "-a 1",
+                        "path" : "OPENMV_N6_CLASSIC/firmware.bin"
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6_CLASSIC/romfs0.img"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "cmd": "-a 3",
+                        "path" : "OPENMV_N6_CLASSIC/romfs0.img"
+                    }
+                ],
+                "binProgamCommands" : [
+                    {
+                        "cmd": "-a 1",
+                        "name": "firmware.bin",
+                        "size" : 3670016
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs.img",
+                        "size" : 25165824
+                    },
+                    {
+                        "cmd": "-a 3",
+                        "name": "romfs0.img",
+                        "size" : 25165824
+                    }
+                ]
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 25165824,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "onnx",
+                            "alignment" : 32
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 32
+                        }
+                    ],
+                    "npuAcceleratorConfig": {
+                        "type" : "stedgeai",
+                        "args" : [
+                            "--target stm32n6",
+                            "--st-neural-art default@neuralart.json"
+                        ],
+                        "jsonFilePath" : "OPENMV_N6_CLASSIC/neuralart.json",
+                        "mpoolFilePath" : "OPENMV_N6_CLASSIC/stm32n6.mpool"
+                    }
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "H7",
+            "boardArchString" : "PORTENTA H7 8192 SDRAM",
+            "boardDisplayName" : "Arduino Portenta",
+            "boardFirmwareFolder" : "ARDUINO_PORTENTA_H7",
+            "highSpeed" : true,
+            "boardVidPid" : "2341:005b",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "2341:035b",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "touchToResetPids" : ["025b", "805b"],
+                "appvidpid" : ["2341:005b", "2341:045b", "2341:035b"],
+                "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_PORTENTA_H7/romfs0.img"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "H7",
+            "boardArchString" : "GIGA H7 8192 SDRAM",
+            "boardDisplayName" : "Arduino Giga",
+            "boardFirmwareFolder" : "ARDUINO_GIGA",
+            "highSpeed" : false,
+            "boardVidPid" : "2341:0066",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "2341:0366",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "touchToResetPids" : ["0266", "8066"],
+                "appvidpid" : ["2341:0466", "2341:0366"],
+                "eraseCommands" : ["-a 0 -s 0x08020000", "-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_GIGA/romfs0.img"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "NICLAV",
+            "boardArchString" : "NICLAV H7 1024",
+            "boardDisplayName" : "Arduino Nicla Vision",
+            "boardFirmwareFolder" : "ARDUINO_NICLA_VISION",
+            "highSpeed" : true,
+            "boardVidPid" : "2341:005f",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "2341:035f",
+            "bootloaderType" : "arduino_dfu",
+            "bootloaderSettings" : {
+                "touchToResetPids" : ["025f", "805f"],
+                "appvidpid" : ["2341:045f", "2341:055f", "2341:035f"],
+                "eraseCommands" : ["-a 1 -s 0x90000000"],
+                "extraProgramCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90F00000",
+                        "path" : "CYW4343/cyw4343_7_45_98_102.bin"
+                    },
+                    {
+                        "addr" : "-a 1 -s 0x90FC0000",
+                        "path" : "CYW4343/cyw4343_btfw.bin"
+                    }
+                ],
+                "resetROMFSCommands" : [
+                    {
+                        "addr" : "-a 1 -s 0x90B00000",
+                        "path" : "ARDUINO_NICLA_VISION/romfs0.img"
+                    }
+                ],
+                "binProgramCommand" : "-a 0 -s 0x08040000:leave",
+                "binProgramSize" : 1835008,
+                "dfuProgramCommand" : "-a 0 -s :leave",
+                "dfuProgramSize" : 1835008,
+                "romfsProgramCommand" : "-a 1 -s 0x90B00000:leave",
+                "romfsProgramSize" : 4194304
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 4194304,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emdp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "NANO33",
+            "boardArchString" : "NANO33 M4",
+            "firmware_version" : "4.7.0",
+            "boardDisplayName" : "Arduino Nano33 BLE",
+            "boardFirmwareFolder" : "ARDUINO_NANO_33_BLE_SENSE",
+            "highSpeed" : false,
+            "boardVidPid" : "2341:005a",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "2341:005a",
+            "bootloaderType" : "bossac",
+            "bootloaderSettings" : {
+                "altvidpidDisplayName" : "Arduino Nano33 BLE (nRF52840)",
+                "altvidpid" : "2341:805a",
+                "binProgramCommand" : "--offset=0x16000",
+                "binProgramSize" : 696320
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv7emsp"
+                ]
+            }
+        },
+        {
+            "hidden" : false,
+            "boardType" : "PICO",
+            "boardArchString" : "PICO M0",
+            "firmware_version" : "4.7.0",
+            "boardDisplayName" : "Arduino Nano RP2040 Connect",
+            "boardFirmwareFolder" : "ARDUINO_NANO_RP2040_CONNECT",
+            "highSpeed" : false,
+            "boardVidPid" : "2341:005e",
+            "boardPidMask" : "0x00FF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "28ea:0003",
+            "bootloaderType" : "picotool",
+            "bootloaderSettings" : {
+                "altvidpidDisplayName" : "Arduino Nano RP2040 Connect (RP2040)",
+                "altvidpid" : "2341:805e",
+                "eraseCommands" : ["-o 0x10200000 -t bin"],
+                "binProgramCommand" : "-x",
+                "binProgramSize" : 2097152
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv6m"
+                ]
+            }
+        },
+        {
+            "hidden" : true,
+            "boardType" : "PICO",
+            "boardArchString" : "PICO M0",
+            "boardDisplayName" : "Arduino Nano RP2040 Connect UF2",
+            "boardFirmwareFolder" : "ARDUINO_NANO_RP2040_CONNECT",
+            "highSpeed" : false,
+            "boardVidPid" : "28ea:0003",
+            "boardPidMask" : "0xFFFF",
+            "boardSerialNumberInverseFilters" : [],
+            "defaultFirmwareName" : "firmware.bin",
+            "bootloaderVidPid" : "0000:0000",
+            "bootloaderType" : "picotool",
+            "bootloaderSettings" : {
+                "altvidpidDisplayName" : "Arduino Nano RP2040 Connect (RP2040)",
+                "altvidpid" : "2341:805e",
+                "eraseCommands" : ["-o 0x10200000 -t bin"],
+                "binProgramCommand" : "-x",
+                "binProgramSize" : 2097152
+            },
+            "romfsConfig" : [
+                {
+                    "name" : "ROMFS",
+                    "size" : 0,
+                    "index" : 0,
+                    "alignmentRules" : [
+                        {
+                            "extension" : "tflite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "lite",
+                            "alignment" : 16
+                        },
+                        {
+                            "extension" : "bin",
+                            "alignment" : 16
+                        }
+                    ]
+                }
+            ],
+            "mpyConfig" : {
+                "args" : [
+                    "-march=armv6m"
+                ]
+            }
+        }
+    ],
+    "sensors" : [
+        {
+            "name" : "OV2640",
+            "id" : "0x26",
+            "main" : true
+        },
+        {
+            "name" : "OV5640",
+            "id" : "0x56",
+            "main" : true
+        },
+        {
+            "name" : "OV7690",
+            "id" : "0x76",
+            "main" : true
+        },
+        {
+            "name" : "OV7725",
+            "id" : "0x77",
+            "main" : true
+        },
+        {
+            "name" : "OV9650",
+            "id" : "0x96",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X2",
+            "id" : "0x1311",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X2",
+            "id" : "0x1312",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X2",
+            "id" : "0x1313",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X2-C",
+            "id" : "0x1413",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X4",
+            "id" : "0x1324",
+            "main" : true
+        },
+        {
+            "name" : "MT9V0X4-C",
+            "id" : "0x1424",
+            "main" : true
+        },
+        {
+            "name" : "MT9M114",
+            "id" : "0x2481",
+            "main" : true
+        },
+        {
+            "name" : "BOSON",
+            "id" : "0xAE",
+            "main" : false
+        },
+        {
+            "name" : "BOSON-320",
+            "id" : "0xAE32",
+            "main" : false
+        },
+        {
+            "name" : "BOSON-640",
+            "id" : "0xAE64",
+            "main" : false
+        },
+        {
+            "name" : "BOSON-320+",
+            "id" : "0xAE321",
+            "main" : false
+        },
+        {
+            "name" : "BOSON-640+",
+            "id" : "0xAE641",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON",
+            "id" : "0x54",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-1.5",
+            "id" : "0x5415",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-1.6",
+            "id" : "0x5416",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-2.0",
+            "id" : "0x5420",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-2.5",
+            "id" : "0x5425",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-3.1R",
+            "id" : "0x5431",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-UW",
+            "id" : "0x5432",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-3.0",
+            "id" : "0x5430",
+            "main" : false
+        },
+        {
+            "name" : "LEPTON-3.5",
+            "id" : "0x5435",
+            "main" : false
+        },
+        {
+            "name" : "HM01B0",
+            "id" : "0xB0",
+            "main" : true
+        },
+        {
+            "name" : "HM0360",
+            "id" : "0x60",
+            "main" : true
+        },
+        {
+            "name" : "GC2145",
+            "id" : "0x21",
+            "main" : true
+        },
+        {
+            "name" : "PAG7920",
+            "id" : "0x7920",
+            "main" : true
+        },
+        {
+            "name" : "PAG7936",
+            "id" : "0x7936",
+            "main" : true
+        },
+        {
+            "name" : "PAJ6100",
+            "id" : "0x6100",
+            "main" : true
+        },
+        {
+            "name" : "PS5520",
+            "id" : "0x5520",
+            "main" : true
+        },
+        {
+            "name" : "FROGEYE2020",
+            "id" : "0x2020",
+            "main" : false
+        },
+        {
+            "name" : "GENX320-S",
+            "id" : "0x30501C01",
+            "main" : false
+        },
+        {
+            "name" : "GENX320",
+            "id" : "0xB0602003",
+            "main" : false
+        },
+        {
+            "name" : "VB1943",
+            "id" : "0x1943",
+            "main" : false
+        },
+        {
+            "name" : "VB5943",
+            "id" : "0x5943",
+            "main" : false
+        },
+        {
+            "name" : "SoftCSI",
+            "id" : "0x50F7",
+            "main" : false,
+            "hidden" : true
+        }
+    ],
+    "protocol" : {
+        "v1" : {
+            "overrideBootloaderWriteTimeout" : -1,
+            "overrideBootloaderReadTimeout" : -1,
+            "overrideBootloaderReadStallTimeout" : -1,
+            "overrideWriteTimeout" : -1,
+            "overrideReadTimeout" : -1,
+            "overrideReadStallTimeout" : -1,
+            "overridePerCommandWait" : -1,
+            "overrideFlushTimeout": -1,
+            "overrideFlushMaxTimeout" : -1
+        },
+        "v2" : {
+            "overrideCRC" : -1,
+            "overrideSEQ" : -1,
+            "overrideACK" : -1,
+            "overrideEvents" : -1,
+            "overrideTimeout" : -1.0,
+            "overrideMaxRetry" : -1,
+            "overrideMaxPayload" : -1,
+            "overrideDropRate" : -1.0
+        }
+    }
+}

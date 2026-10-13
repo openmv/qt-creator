@@ -1,0 +1,24 @@
+2025-02-19 19:12:29,886 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:29,887 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:29,889 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,165 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,177 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,177 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,178 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2025-02-19 19:12:30,178 - Parsing config file: cfg/OEMSBContent_lvs_2.cfg
+2025-02-19 19:12:30,179 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,179 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,436 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,436 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,471 - Content Certificate Generation Utility started (Logging to ../build/logs/SBContent.log)
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,473 - Parsing config file: cfg/OEMSBContent_lvs_1.cfg
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,474 - **** Creating Content Certificate ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****
+2025-02-19 19:12:30,739 - **** Certificate file creation has been completed successfully ****

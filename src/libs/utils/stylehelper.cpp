@@ -364,7 +364,14 @@ void StyleHelper::drawArrow(QStyle::PrimitiveElement element, QPainter *painter,
     if (option->rect.width() <= 1 || option->rect.height() <= 1)
         return;
 
-    const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    // const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    // QPaintDevice::devicePixelRatio() returns int, which truncates fractional
+    // scale factors (e.g. 1.5 -> 1) and renders blurry on fractionally scaled
+    // displays.
+    const qreal devicePixelRatio = painter->device()->devicePixelRatioF();
+    // OPENMV-DIFF //
     const bool enabled = option->state & QStyle::State_Enabled;
     QRect r = option->rect;
     int size = qMin(r.height(), r.width());
@@ -372,7 +379,11 @@ void StyleHelper::drawArrow(QStyle::PrimitiveElement element, QPainter *painter,
     const QString pixmapName = QString::asprintf("StyleHelper::drawArrow-%d-%d-%d-%f",
                        element, size, enabled, devicePixelRatio);
     if (!QPixmapCache::find(pixmapName, &pixmap)) {
-        QImage image(size * devicePixelRatio, size * devicePixelRatio, QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
+        // QImage image(size * devicePixelRatio, size * devicePixelRatio, QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
+        QImage image(qRound(size * devicePixelRatio), qRound(size * devicePixelRatio), QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
         image.fill(Qt::transparent);
         QPainter painter(&image);
 
@@ -403,7 +414,11 @@ void StyleHelper::drawArrow(QStyle::PrimitiveElement element, QPainter *painter,
             drawCommonStyleArrow(image.rect(), creatorColor(Theme::IconsDisabledColor));
         } else {
             if (creatorTheme()->flag(Theme::ToolBarIconShadow))
-                drawCommonStyleArrow(image.rect().translated(0, devicePixelRatio), toolBarDropShadowColor());
+                // OPENMV-DIFF //
+                // drawCommonStyleArrow(image.rect().translated(0, devicePixelRatio), toolBarDropShadowColor());
+                // OPENMV-DIFF //
+                drawCommonStyleArrow(image.rect().translated(0, qRound(devicePixelRatio)), toolBarDropShadowColor());
+                // OPENMV-DIFF //
             drawCommonStyleArrow(image.rect(), creatorColor(Theme::IconsBaseColor));
         }
         painter.end();
@@ -421,7 +436,11 @@ void StyleHelper::drawMinimalArrow(QStyle::PrimitiveElement element, QPainter *p
     if (option->rect.width() <= 1 || option->rect.height() <= 1)
         return;
 
-    const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    // const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+    // OPENMV-DIFF //
+    const qreal devicePixelRatio = painter->device()->devicePixelRatioF();
+    // OPENMV-DIFF //
     const bool enabled = option->state & QStyle::State_Enabled;
     QRect r = option->rect;
     int size = qMin(r.height(), r.width());
@@ -429,7 +448,11 @@ void StyleHelper::drawMinimalArrow(QStyle::PrimitiveElement element, QPainter *p
     const QString pixmapName = QString::asprintf("StyleHelper::drawMinimalArrow-%d-%d-%d-%f",
                                                  element, size, enabled, devicePixelRatio);
     if (!QPixmapCache::find(pixmapName, &pixmap)) {
-        QImage image(size * devicePixelRatio, size * devicePixelRatio, QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
+        // QImage image(size * devicePixelRatio, size * devicePixelRatio, QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
+        QImage image(qRound(size * devicePixelRatio), qRound(size * devicePixelRatio), QImage::Format_ARGB32_Premultiplied);
+        // OPENMV-DIFF //
         image.fill(Qt::transparent);
         QPainter painter(&image);
         QStyleOption tweakedOption(*option);
@@ -599,9 +622,43 @@ void StyleHelper::drawIconWithShadow(const QIcon &icon, const QRect &rect,
         // return a high-dpi pixmap, which will in that case have a devicePixelRatio
         // different than 1. The shadow drawing caluculations are done in device
         // pixels.
-        QPixmap px = icon.pixmap(rect.size(), devicePixelRatio, iconMode, iconState);
-        int radius = int(dipRadius * devicePixelRatio);
-        QPoint offset = dipOffset * devicePixelRatio;
+        // OPENMV-DIFF //
+        // QPixmap px = icon.pixmap(rect.size(), devicePixelRatio, iconMode, iconState);
+        // OPENMV-DIFF //
+        // Fractional scale factors need special care here:
+        // - For a factor like 1.5, Qt's icon engine scores 1x and 2x sources as
+        //   equally good matches and the tie keeps the 1x image, which is then
+        //   upscaled and blurry on screen. Request the icon at the next integer
+        //   scale instead so the 2x art is used.
+        // - The painter's own pixmap transform is a fast scale that produces
+        //   jagged edges, so when the source has more pixels than the display
+        //   needs, scale it smoothly to the exact physical size up front; the
+        //   cached pixmap is then blitted 1:1 with no paint-time transform.
+        // - When the icon has no source image large enough for this display,
+        //   QIcon::pixmap() returns a pixmap with a smaller effective device
+        //   pixel ratio; stamping the cache with the display ratio would shrink
+        //   the icon on screen, so the device-pixel math below uses the
+        //   pixmap's actual ratio.
+        const qreal iconDevicePixelRatio = qCeil(devicePixelRatio);
+        const QSize displaySize = (QSizeF(rect.size()) * devicePixelRatio).toSize();
+        const auto iconPixmap = [&icon, &rect, iconDevicePixelRatio, displaySize,
+                                 devicePixelRatio, iconState](QIcon::Mode mode) {
+            QPixmap p = icon.pixmap(rect.size(), iconDevicePixelRatio, mode, iconState);
+            if (p.width() > displaySize.width() || p.height() > displaySize.height()) {
+                p = p.scaled(displaySize, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+                p.setDevicePixelRatio(devicePixelRatio);
+            }
+            return p;
+        };
+        QPixmap px = iconPixmap(iconMode);
+        // OPENMV-DIFF //
+        // int radius = int(dipRadius * devicePixelRatio);
+        // QPoint offset = dipOffset * devicePixelRatio;
+        // OPENMV-DIFF //
+        const qreal pixmapDevicePixelRatio = px.devicePixelRatio();
+        int radius = int(dipRadius * pixmapDevicePixelRatio);
+        QPoint offset = dipOffset * pixmapDevicePixelRatio;
+        // OPENMV-DIFF //
         cache = QPixmap(px.size() + QSize(radius * 2, radius * 2));
         cache.fill(Qt::transparent);
 
@@ -610,7 +667,11 @@ void StyleHelper::drawIconWithShadow(const QIcon &icon, const QRect &rect,
             const bool hasDisabledState =
                     icon.availableSizes().count() == icon.availableSizes(QIcon::Disabled).count();
             if (!hasDisabledState)
-                px = disabledSideBarIcon(icon.pixmap(rect.size(), devicePixelRatio));
+                // OPENMV-DIFF //
+                // px = disabledSideBarIcon(icon.pixmap(rect.size(), devicePixelRatio));
+                // OPENMV-DIFF //
+                px = disabledSideBarIcon(iconPixmap(QIcon::Normal));
+                // OPENMV-DIFF //
         } else if (creatorTheme()->flag(Theme::ToolBarIconShadow)) {
             // Draw shadow
             QImage tmp(px.size() + QSize(radius * 2, radius * 2 + 1), QImage::Format_ARGB32_Premultiplied);
@@ -648,7 +709,11 @@ void StyleHelper::drawIconWithShadow(const QIcon &icon, const QRect &rect,
         // Draw the actual pixmap...
         cachePainter.drawPixmap(QRect(QPoint(radius, radius) + offset, QSize(px.width(), px.height())), px);
         cachePainter.end();
-        cache.setDevicePixelRatio(devicePixelRatio);
+        // OPENMV-DIFF //
+        // cache.setDevicePixelRatio(devicePixelRatio);
+        // OPENMV-DIFF //
+        cache.setDevicePixelRatio(pixmapDevicePixelRatio);
+        // OPENMV-DIFF //
         QPixmapCache::insert(pixmapName, cache);
     }
 
@@ -752,8 +817,15 @@ void StyleHelper::setPanelWidgetSingleRow(QWidget *widget, bool value)
 
 Qt::HighDpiScaleFactorRoundingPolicy StyleHelper::defaultHighDpiScaleFactorRoundingPolicy()
 {
+    // OPENMV-DIFF //
+    // return HostOsInfo::isMacHost() ? Qt::HighDpiScaleFactorRoundingPolicy::Unset
+    //                                : Qt::HighDpiScaleFactorRoundingPolicy::Round;
+    // OPENMV-DIFF //
+    // Round turns a 1.5x display into 2x. PassThrough uses each display's true
+    // scale factor and rescales when the window moves between displays.
     return HostOsInfo::isMacHost() ? Qt::HighDpiScaleFactorRoundingPolicy::Unset
-                                   : Qt::HighDpiScaleFactorRoundingPolicy::Round;
+                                   : Qt::HighDpiScaleFactorRoundingPolicy::PassThrough;
+    // OPENMV-DIFF //
 }
 
 QIcon StyleHelper::getIconFromIconFont(const QString &fontName, const QList<IconFontHelper> &parameters)

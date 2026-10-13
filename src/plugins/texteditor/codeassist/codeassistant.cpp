@@ -391,6 +391,52 @@ QList<CompletionAssistProvider *> CodeAssistantPrivate::identifyActivationSequen
         return provider->isActivationCharSequence(sequence);
     };
 
+    // OPENMV-DIFF //
+    if (m_editorWidget->textDocument()->filePath().toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+    {
+        enum
+        {
+            IN_NONE,
+            IN_COMMENT,
+            IN_STRING_0,
+            IN_STRING_1
+        }
+        in_state = IN_NONE;
+
+        QString text = m_editorWidget->textAt(0, m_editorWidget->position());
+
+        for(int i = 0, ii = text.length(); i < ii; i++)
+        {
+            switch(in_state)
+            {
+                case IN_NONE:
+                {
+                    if((text.at(i) == QLatin1Char('#')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_COMMENT;
+                    if((text.at(i) == QLatin1Char('\'')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_0;
+                    if((text.at(i) == QLatin1Char('\"')) && ((!i) || (text.at(i-1) != QLatin1Char('\\')))) in_state = IN_STRING_1;
+                    break;
+                }
+                case IN_COMMENT:
+                {
+                    if((text.at(i) == QLatin1Char('\n')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+                case IN_STRING_0:
+                {
+                    if((text.at(i) == QLatin1Char('\'')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+                case IN_STRING_1:
+                {
+                    if((text.at(i) == QLatin1Char('\"')) && (text.at(i-1) != QLatin1Char('\\'))) in_state = IN_NONE;
+                    break;
+                }
+            }
+        }
+
+        if(in_state != IN_NONE) return QList<CompletionAssistProvider *>();
+    }
+    // OPENMV-DIFF //
     QList<CompletionAssistProvider *> provider = {
         m_editorWidget->textDocument()->completionAssistProvider(),
         m_editorWidget->textDocument()->functionHintAssistProvider()

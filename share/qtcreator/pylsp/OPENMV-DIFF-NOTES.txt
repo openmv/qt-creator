@@ -1,0 +1,47 @@
+OpenMV modifications to the embedded pylsp bundle
+==================================================
+
+If you regenerate or upgrade the pylsp/jedi packages in this directory, the
+patches below are LOST and must be re-applied. To check whether a bundle
+still carries them, grep it for "OPENMV-DIFF":
+
+    grep -rn "OPENMV-DIFF" share/qtcreator/pylsp
+
+Patch 1: disable Jedi's private-name-mangling completion filter
+---------------------------------------------------------------
+Date:  2026-07-09
+Files: windows/jedi/inference/value/klass.py
+       mac/jedi/inference/value/klass.py
+       linux-x86_64/jedi/inference/value/klass.py
+Where: ClassFilter._access_possible (around line 122 in jedi 0.19.1)
+
+Change: the method now unconditionally returns True. The original body is
+kept commented out between "# OPENMV-DIFF #" markers.
+
+Rationale: Jedi emulates CPython private name mangling — a class member
+named __foo (two leading underscores, not a dunder) is mangled to
+_ClassName__foo, so CPython code outside the class cannot access it as
+obj.__foo. Jedi therefore drops such members from completions unless the
+completion happens inside the class body itself.
+
+MicroPython does NOT implement name mangling, so on OpenMV cameras these
+members are plain, accessible attributes. Without this patch, completion
+on a csi.CSI object silently omitted __read_reg and __write_reg even
+though html/stubs/csi.pyi declares them correctly (the stub is parsed
+fine; the names are removed later, at Jedi's access-filter stage). The
+patch also un-hides __name members of user-defined classes in scripts,
+which likewise matches MicroPython behavior.
+
+How to verify a bundle (any platform copy, run with desktop Python):
+
+    import sys
+    sys.path.insert(0, "<this dir>/windows")
+    import jedi
+    proj = jedi.Project(path=".", sys_path=["<share/qtcreator>/html/stubs"],
+                        smart_sys_path=False)
+    src = "import csi\nc = csi.CSI()\nc."
+    names = [c.name for c in jedi.Script(src, project=proj).complete(3, 2)]
+    assert "__read_reg" in names and "__write_reg" in names
+
+Note: pylsp holds jedi in memory once started — restart OpenMV IDE after
+patching for the change to take effect.

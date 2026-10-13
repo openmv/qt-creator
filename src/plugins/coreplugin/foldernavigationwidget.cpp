@@ -620,6 +620,10 @@ void FolderNavigationWidget::selectBestRootForFile(const FilePath &filePath)
 
 void FolderNavigationWidget::selectFile(const FilePath &filePath)
 {
+    // OPENMV-DIFF //
+    if (!m_listView->isVisible())
+        return;
+    // OPENMV-DIFF //
     const QModelIndex fileIndex = m_sortProxyModel->mapFromSource(
         m_fileSystemModel->index(filePath.toFSPathString()));
     if (fileIndex.isValid() || filePath.isEmpty() /* Computer root */) {

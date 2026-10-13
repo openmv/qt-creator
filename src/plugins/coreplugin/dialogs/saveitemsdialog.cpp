@@ -15,6 +15,9 @@
 #include <QDialogButtonBox>
 #include <QLabel>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QTreeWidget>
 
 using namespace Utils;
@@ -49,7 +52,9 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
     }
     m_buttonBox->setStandardButtons(QDialogButtonBox::Cancel | QDialogButtonBox::Save);
     QPushButton *discardButton = m_buttonBox->addButton(Tr::tr("Do &Not Save"), discardButtonRole);
-    m_treeWidget->setFocus();
+    // OPENMV-DIFF //
+    // m_treeWidget->setFocus();
+    // OPENMV-DIFF //
 
     m_saveBeforeBuildCheckBox->setVisible(false);
 
@@ -71,9 +76,17 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
         FilePath filePath = document->filePath();
         if (filePath.isEmpty()) {
             visibleName = document->fallbackSaveAsFileName();
+            // OPENMV-DIFF //
+            if (visibleName.isEmpty())
+                visibleName = document->displayName();
+            // OPENMV-DIFF //
         } else {
             directory = filePath.absolutePath();
             visibleName = filePath.fileName();
+            // OPENMV-DIFF //
+            if (document->isTemporary())
+                directory = FilePath();
+            // OPENMV-DIFF //
         }
         QTreeWidgetItem *item = new QTreeWidgetItem(m_treeWidget,
                 QStringList{visibleName, directory.toUserOutput()});
@@ -83,7 +96,13 @@ SaveItemsDialog::SaveItemsDialog(QWidget *parent, const QList<IDocument *> &item
     }
 
     m_treeWidget->resizeColumnToContents(0);
-    m_treeWidget->selectAll();
+    // OPENMV-DIFF //
+    // m_treeWidget->selectAll();
+    QTimer::singleShot(0, m_treeWidget, [this] {
+        m_treeWidget->setFocus();
+        m_treeWidget->selectAll();
+    });
+    // OPENMV-DIFF //
     if (HostOsInfo::isMacHost())
         m_treeWidget->setAlternatingRowColors(true);
     adjustButtonWidths();
@@ -175,8 +194,15 @@ void SaveItemsDialog::collectFilesToDiff()
     for (const QTreeWidgetItem *item : items) {
         auto *doc = item->data(0, Qt::UserRole).value<IDocument*>();
         // document might have been closed (and deleted) elsewhere while this modal dialog was open
-        if (doc && m_documents.contains(doc))
-            m_filesToDiff.append(doc->filePath());
+        if (doc && m_documents.contains(doc)) {
+            // OPENMV-DIFF //
+            // m_filesToDiff.append(doc->filePath());
+            FilePath filePath = doc->filePath();
+            if (filePath.isEmpty())
+                filePath = FilePath::fromString(doc->property("diffFilePath").toString());
+            m_filesToDiff.append(filePath);
+            // OPENMV-DIFF //
+        }
     }
     reject();
 }

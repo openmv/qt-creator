@@ -1,6 +1,9 @@
 # This file is used to ignore files which are generated
 # ----------------------------------------------------------------------------
 
+# OpenMV: local build-support symlink to the sibling openmv-media tree
+/openmv-media
+
 !core/
 *.*#
 *.a
@@ -18,8 +21,10 @@
 *.rc
 *.rej
 *.res
-*.so
-*.so.*
+# OPENMV-DIFF #
+# *.so
+# *.so.*
+# OPENMV-DIFF #
 *_pch.h.cpp
 *_resource.rc
 *_wrapper.bat
@@ -30,6 +35,7 @@
 .qmake.cache
 .qmake.stash
 .qmlls.ini
+.claude/
 .vscode
 .axivion
 Makefile*
@@ -51,7 +57,9 @@ CMakeUserPresets.json
 *.qbs.user*
 *.qmlproject.user*
 CMakeLists.txt.user*
-/share/qtcreator/examples/
+# OPENMV-DIFF #
+# /share/qtcreator/examples/
+# OPENMV-DIFF #
 /share/qtcreator/externaltools/
 /share/qtcreator/fonts/
 /share/qtcreator/generic-highlighter/
@@ -151,8 +159,10 @@ tmp/
 
 # Binaries
 # --------
-*.dll
-*.exe
+# OPENMV-DIFF #
+# *.dll
+# *.exe
+# OPENMV-DIFF #
 /bin/buildoutputparser
 /bin/clangbackend
 /bin/cpaster

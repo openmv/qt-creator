@@ -42,6 +42,14 @@ QTCREATOR_UTILS_EXPORT OsArch hostArchitecture();
 //! Returns the architecture the running binary was compiled for.
 QTCREATOR_UTILS_EXPORT OsArch binaryArchitecture();
 
+// OPENMV-DIFF //
+//! Returns true if an x86_64 binary is running under Rosetta on Apple silicon.
+//! Upstream removed this in Qt Creator 20; OpenMV re-adds it because
+//! hostArchitecture() reports the binary's arch (x86_64) under Rosetta, so it
+//! cannot alone distinguish Apple-silicon hardware when the IDE runs translated.
+QTCREATOR_UTILS_EXPORT bool isRunningUnderRosetta();
+// OPENMV-DIFF //
+
 QTCREATOR_UTILS_EXPORT constexpr bool isWindowsHost() { return hostOs() == OsTypeWindows; }
 QTCREATOR_UTILS_EXPORT constexpr bool isLinuxHost() { return hostOs() == OsTypeLinux; }
 QTCREATOR_UTILS_EXPORT constexpr bool isMacHost() { return hostOs() == OsTypeMac; }
@@ -53,6 +61,18 @@ QTCREATOR_UTILS_EXPORT constexpr bool isAnyUnixHost()
     return false;
 #endif
 }
+
+// OPENMV-DIFF //
+//! Returns the case sensitivity of file names on the host file system.
+//! Upstream removed this in Qt Creator 20; OpenMV re-adds it for host-global
+//! path prefix comparisons (Windows and macOS are case-insensitive).
+constexpr Qt::CaseSensitivity fileNameCaseSensitivity()
+{
+    return (hostOs() == OsTypeWindows || hostOs() == OsTypeMac)
+               ? Qt::CaseInsensitive
+               : Qt::CaseSensitive;
+}
+// OPENMV-DIFF //
 
 QTCREATOR_UTILS_EXPORT QString withExecutableSuffix(const QString &executable);
 

@@ -29,7 +29,11 @@ public:
     struct Settings
     {
         bool showBackground = false;
-        bool showOutline = true;
+        // OPENMV-DIFF //
+        // bool showOutline = true;
+        // OPENMV-DIFF //
+        bool showOutline = false;
+        // OPENMV-DIFF //
         bool fitToScreen = false;
     };
 

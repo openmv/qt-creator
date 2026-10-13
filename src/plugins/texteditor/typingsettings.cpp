@@ -54,7 +54,11 @@ TypingSettings::TypingSettings()
         ));
 
     preferSingleLineComments.setSettingsKey("PreferSingleLineComments");
-    preferSingleLineComments.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // preferSingleLineComments.setDefaultValue(false);
+    // OPENMV-DIFF //
+    preferSingleLineComments.setDefaultValue(true);
+    // OPENMV-DIFF //
     preferSingleLineComments.setLabelPlacement(BoolAspect::LabelPlacement::Compact);
     preferSingleLineComments.setLabelText(Tr::tr("Prefer single line comments"));
 

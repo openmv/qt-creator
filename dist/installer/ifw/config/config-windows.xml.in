@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<Installer>
+    <Name>{app_name}</Name>
+    <Version>{version}</Version>
+    <Title>{app_name} {display_version}</Title>
+    <Publisher>OpenMV, LLC</Publisher>
+    <ProductUrl>https://openmv.io</ProductUrl>
+
+    <MaintenanceToolName>{app_cased_id}Uninst</MaintenanceToolName>
+    <TargetDir>@ApplicationsDir@/{app_name}</TargetDir>
+    <StartMenuDir>{app_name}</StartMenuDir>
+    <WizardStyle>Classic</WizardStyle>
+    <ControlScript>controlscript.qs</ControlScript>
+</Installer>

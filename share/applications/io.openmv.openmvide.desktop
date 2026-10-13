@@ -1,0 +1,12 @@
+[Desktop Entry]
+Type=Application
+Name=OpenMV IDE
+GenericName=OpenMV IDE
+Comment=The IDE of choice for OpenMV Cam Development.
+Exec=openmvide %F
+Icon=OpenMV-openmvide
+Terminal=false
+Categories=Development;IDE;Electronics;OpenMV;
+MimeType=text/x-python;
+Keywords=embedded electronics;electronics;microcontroller;micropython;computer vision;machine vision;
+StartupWMClass=openmvide

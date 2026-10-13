@@ -9,6 +9,9 @@
 
 #include <coreplugin/coreconstants.h>
 #include <coreplugin/dialogs/ioptionspage.h>
+// OPENMV-DIFF //
+#include <coreplugin/icore.h>
+// OPENMV-DIFF //
 
 #include <projectexplorer/project.h>
 
@@ -28,7 +31,11 @@ static void initEnableAspect(BoolAspect &enableCopilot)
     enableCopilot.setDisplayName(Tr::tr("Enable Copilot"));
     enableCopilot.setLabelText(Tr::tr("Enable Copilot"));
     enableCopilot.setToolTip(Tr::tr("Enables the Copilot integration."));
-    enableCopilot.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // enableCopilot.setDefaultValue(false);
+    // OPENMV-DIFF //
+    enableCopilot.setDefaultValue(true);
+    // OPENMV-DIFF //
 }
 
 CopilotSettings &settings()
@@ -43,7 +50,43 @@ CopilotSettings::CopilotSettings()
 {
     setAutoApply(false);
 
-    const FilePath nodeFromPath = FilePath("node").searchInPath();
+    // OPENMV-DIFF //
+    // const FilePath nodeFromPath = FilePath("node").searchInPath();
+    // OPENMV-DIFF //
+    FilePath nodeFromPath;
+
+    if(Utils::HostOsInfo::isWindowsHost())
+    {
+        nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/windows/node.exe"));
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        if ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+            || Utils::HostOsInfo::isRunningUnderRosetta())
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac-aarch64/bin/node"));
+        }
+        else
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/mac/bin/node"));
+        }
+    }
+    else if(Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-x64/bin/node"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-armv7/bin/node"));
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            nodeFromPath = Core::ICore::resourcePath(QStringLiteral("node/linux-arm64/bin/node"));
+        }
+    }
+    // OPENMV-DIFF //
 
     // From: https://github.com/github/copilot.vim/blob/release/README.md#getting-started
     const QStringList subLocations
@@ -69,6 +112,10 @@ CopilotSettings::CopilotSettings()
     };
 
     FilePaths searchDirs;
+    // OPENMV-DIFF //
+    // Prefer the copilot language-server bundled with OpenMV IDE.
+    searchDirs.append(Core::ICore::resourcePath(QStringLiteral("copilot.vim/dist/language-server.js")));
+    // OPENMV-DIFF //
     for (const auto &loc : locations) {
         for (const auto &subLocation : subLocations)
             searchDirs.append(loc / subLocation);
@@ -186,15 +233,21 @@ CopilotSettings::CopilotSettings()
                 title(Tr::tr("Note")),
                 Column {
                     warningLabel, br,
-                    helpLabel, br,
+                    // OPENMV-DIFF //
+                    // helpLabel, br,
+                    // OPENMV-DIFF //
                 }
             },
             Form {
                 new AuthWidget, br,
                 enableCopilot, br,
-                nodeJsPath, br,
-                distPath, br,
-                autoComplete, br,
+                // OPENMV-DIFF //
+                // OpenMV auto-configures the bundled node binary and language-server, so
+                // these are not shown in the UI.
+                // nodeJsPath, br,
+                // distPath, br,
+                // autoComplete, br,
+                // OPENMV-DIFF //
                 githubEnterpriseUrl, br,
                 hr, br,
                 proxy, br,

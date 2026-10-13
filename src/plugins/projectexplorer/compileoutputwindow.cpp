@@ -50,6 +50,9 @@ const char C_COMPILE_OUTPUT[] = "ProjectExplorer.CompileOutput";
 const char OPTIONS_PAGE_ID[] = "C.ProjectExplorer.CompileOutputOptions";
 
 CompileOutputWindow::CompileOutputWindow(QAction *cancelBuildAction) :
+    // OPENMV-DIFF //
+    IOutputPane(true),
+    // OPENMV-DIFF //
     m_cancelBuildButton(new QToolButton),
     m_settingsButton(new QToolButton)
 {
@@ -341,6 +344,9 @@ class CompileOutputSettingsPage final : public Core::IOptionsPage
 {
 public:
     CompileOutputSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(OPTIONS_PAGE_ID);
         setDisplayName(Tr::tr("Compile Output"));

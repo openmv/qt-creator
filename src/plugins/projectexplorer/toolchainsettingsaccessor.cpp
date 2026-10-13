@@ -269,7 +269,9 @@ void ToolchainSettingsAccessor::saveToolchains(const Toolchains &toolchains)
 
     // Do not save default debuggers! Those are set by the SDK!
 
-    saveSettings(data);
+    // OPENMV-DIFF //
+    // saveSettings(data);
+    // OPENMV-DIFF //
 }
 
 Toolchains ToolchainSettingsAccessor::toolChains(const Store &data) const

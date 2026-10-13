@@ -15,7 +15,14 @@ from glob import glob
 import common
 
 debug_build = False
-encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+# encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
+try:
+  encoding = locale.getencoding()
+except:
+  encoding = locale.getdefaultlocale()[1]
+# OPENMV-DIFF #
 
 def get_args():
     parser = argparse.ArgumentParser(description='Deploy Qt Creator dependencies for packaging')
@@ -92,6 +99,9 @@ def is_debug(fpath):
 
 def is_ignored_windows_file(use_debug, basepath, filename):
     ignore_patterns = ['.lib', '.pdb', '.exp', '.ilk']
+    # OPENMV-DIFF #
+    ignore_patterns.append(".debug")
+    # OPENMV-DIFF #
     if use_debug:
         ignore_patterns.extend(['libEGL.dll', 'libGLESv2.dll'])
     else:
@@ -121,8 +131,22 @@ def copy_qt_libs(target_qt_prefix_path, qt_bin_dir, qt_libs_dir):
 
     if common.is_windows_platform():
         libraries = glob(os.path.join(qt_libs_dir, '*.dll'))
+        # OPENMV-DIFF #
+        libs = ["libgcc_s_seh-1", "libstdc++-6", "libwinpthread-1", "opengl32sw", "Qt6Concurrent", "Qt6Core",
+                "Qt6Core5Compat", "Qt6DBus", "Qt6Gui", "Qt6Network", "Qt6OpenGL", "Qt6PrintSupport",
+                "Qt6Qml", "Qt6SerialPort", "Qt6Sql", "Qt6Svg", "Qt6SvgWidgets", "Qt6Test",
+                "Qt6Widgets", "Qt6Xml"]
+        libraries = list(filter(lambda x: os.path.basename(x).split('.')[0] in libs, libraries))
+        # OPENMV-DIFF #
     else:
         libraries = glob(os.path.join(qt_libs_dir, '*.so.*'))
+        # OPENMV-DIFF #
+        libs = ["libicudata", "libicui18n", "libicuuc", "libQt6Concurrent", "libQt6Core", "libQt6Core5Compat",
+                "libQt6DBus", "libQt6EglFSDeviceIntegration", "libQt6Gui", "libQt6Network", "libQt6OpenGL", "libQt6PrintSupport",
+                "libQt6Qml", "libQt6SerialPort", "libQt6Sql", "libQt6Svg", "libQt6SvgWidgets", "libQt6Test",
+                "libQt6WaylandClient", "libQt6WaylandEglClientHwIntegration", "libQt6Widgets", "libQt6WlShellIntegration", "libQt6XcbQpa", "libQt6Xml"]
+        libraries = list(filter(lambda x: os.path.basename(x).split('.')[0] in libs, libraries))
+        # OPENMV-DIFF #
 
     if common.is_windows_platform():
         lib_dest = os.path.join(target_qt_prefix_path)
@@ -235,7 +259,11 @@ def add_qt_conf(target_path, qt_prefix_path):
 def deploy_qt_conf_files(qtc_binary_path):
     if common.is_linux_platform():
         qt_prefix_path = os.path.join(qtc_binary_path, '..', 'lib', 'Qt')
-        add_qt_conf(os.path.join(qtc_binary_path, '..', 'libexec', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
+        # add_qt_conf(os.path.join(qtc_binary_path, '..', 'libexec', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
+        add_qt_conf(os.path.join(qtc_binary_path, '..', 'lib', 'qtcreator'), qt_prefix_path)
+        # OPENMV-DIFF #
         add_qt_conf(os.path.join(qtc_binary_path, '..', 'lib', 'Qt', 'bin'), qt_prefix_path) # qtdiag etc
         add_qt_conf(qtc_binary_path, qt_prefix_path) # QtC itself
     if common.is_windows_platform():
@@ -243,8 +271,10 @@ def deploy_qt_conf_files(qtc_binary_path):
     if common.is_mac_platform():
         qt_prefix_path = os.path.join(qtc_binary_path, 'Contents')
         qtc_resources_path = os.path.join(qtc_binary_path, 'Contents', 'Resources')
-        add_qt_conf(os.path.join(qtc_resources_path, 'libexec'), qt_prefix_path)
-        add_qt_conf(os.path.join(qtc_resources_path, 'libexec', 'ios'), qt_prefix_path)
+        # OPENMV-DIFF #
+        # add_qt_conf(os.path.join(qtc_resources_path, 'libexec'), qt_prefix_path)
+        # add_qt_conf(os.path.join(qtc_resources_path, 'libexec', 'ios'), qt_prefix_path)
+        # OPENMV-DIFF #
         # The Prefix path for a qt.conf in Contents/Resources/ is handled specially/funny by Qt,
         # relative paths are resolved relative to Contents/, so we must enforces Prefix=.
         add_qt_conf(qtc_resources_path, qtc_resources_path) # QtC itself
@@ -408,18 +438,22 @@ def deploy_qt_mac(qtc_binary_path, qt_install):
         additional_paths.append(os.path.join(bin_path, app))
     additional_paths.append(os.path.join(libexec_path, 'qbs_processlauncher'))
     # QML Puppet
-    puppets = glob(os.path.join(libexec_path, 'qmlpuppet*'))
-    for puppet in puppets:
-        additional_paths.append(puppet)
+    # OPENMV-DIFF #
+    # puppets = glob(os.path.join(libexec_path, 'qmlpuppet*'))
+    # for puppet in puppets:
+    #     additional_paths.append(puppet)
+    # OPENMV-DIFF #
     # qtdiag, qtplugininfo
     additional_paths.append(os.path.join(bin_path, 'qtdiag'))
     additional_paths.append(os.path.join(bin_path, 'qtplugininfo'))
     # other libexec
-    additional_paths.append(os.path.join(libexec_path, 'sdktool'))
-    additional_paths.append(os.path.join(libexec_path, 'qtpromaker'))
-    additional_paths.append(os.path.join(libexec_path, 'buildoutputparser'))
-    additional_paths.append(os.path.join(libexec_path, 'cpaster'))
-    additional_paths.append(os.path.join(libexec_path, 'ios', 'iostool'))
+    # OPENMV-DIFF #
+    # additional_paths.append(os.path.join(libexec_path, 'sdktool'))
+    # additional_paths.append(os.path.join(libexec_path, 'qtpromaker'))
+    # additional_paths.append(os.path.join(libexec_path, 'buildoutputparser'))
+    # additional_paths.append(os.path.join(libexec_path, 'cpaster'))
+    # additional_paths.append(os.path.join(libexec_path, 'ios', 'iostool'))
+    # OPENMV-DIFF #
 
     existing_additional_paths = [p for p in additional_paths if os.path.exists(p)]
     macdeployqt = os.path.join(qt_install.bin, 'macdeployqt')
@@ -445,6 +479,14 @@ def deploy_qt_mac(qtc_binary_path, qt_install):
 
 def get_qt_install_info(qmake_binary):
     qt_install_info = common.get_qt_install_info(qmake_binary)
+    # OPENMV-DIFF #
+    if ("qt-host" in qmake_binary):
+        for key in qt_install_info:
+            value = qt_install_info[key]
+            if isinstance(value, str) and "qt-host" in value:
+                new_value = value.replace("qt-host", "qt-raspi")
+                qt_install_info[key] = new_value
+    # OPENMV-DIFF #
     QtInstallInfo = collections.namedtuple('QtInstallInfo', ['bin', 'lib', 'plugins',
                                                              'qml', 'translations'])
     return (qt_install_info,
@@ -517,7 +559,9 @@ def main():
 
     deploy_binary('qtdiag', qtcreator_binary_path, qt_install)
     deploy_binary('qtplugininfo', qtcreator_binary_path, qt_install)
-    deploy_binary('qsb', qtcreator_binary_path, qt_install)
+    # OPENMV-DIFF #
+    # deploy_binary('qsb', qtcreator_binary_path, qt_install)
+    # OPENMV-DIFF #
     deploy_plugins(qtcreator_binary_path, qt_install)
     deploy_imports(qtcreator_binary_path, qt_install)
     deploy_translations(qtcreator_binary_path, qt_install)

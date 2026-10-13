@@ -41,6 +41,9 @@ private:
     Utils::IntegerAspect tabSize{this};
     Utils::IntegerAspect indentSize{this};
     Utils::SelectionAspect continuationAlignBehavior{this};
+    // OPENMV-DIFF //
+    Utils::IntegerAspect serialTerminalTabSize{this};
+    // OPENMV-DIFF //
 
     QLabel *m_codingStyleWarning;
 };

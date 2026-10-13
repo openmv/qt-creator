@@ -771,6 +771,9 @@ class KitsSettingsPage : public Core::IOptionsPage
 {
 public:
     KitsSettingsPage()
+    // OPENMV-DIFF //
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::KITS_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("Kits"));

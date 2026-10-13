@@ -121,6 +121,11 @@ void ThemeData::loadComplete()
     }
     m_completelyLoaded = true;
 
+    // OPENMV-DIFF //
+    if (m_filePath.isEmpty()) {
+        return;
+    }
+    // OPENMV-DIFF //
     QFile loadFile(m_filePath);
     if (!loadFile.open(QIODevice::ReadOnly)) {
         return;

@@ -238,6 +238,8 @@ add_qtc_plugin(Core
     navigationwidget.h
     opendocumentstreeview.cpp
     opendocumentstreeview.h
+    openmvpluginescapecodeparser.cpp
+    openmvpluginescapecodeparser.h
     outputpane.h
     outputpanemanager.cpp
     outputpanemanager.h

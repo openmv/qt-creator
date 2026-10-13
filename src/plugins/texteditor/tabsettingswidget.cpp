@@ -81,6 +81,12 @@ TabSettingsWidget::TabSettingsWidget()
     continuationAlignBehavior.addOption(Tr::tr("With Spaces"));
     continuationAlignBehavior.addOption(Tr::tr("With Regular Indent"));
     continuationAlignBehavior.setToolTip(continuationTooltip());
+    // OPENMV-DIFF //
+    continuationAlignBehavior.setVisible(false);
+
+    serialTerminalTabSize.setLabel(Tr::tr("Serial Terminal Tab size:"));
+    serialTerminalTabSize.setRange(1, 20);
+    // OPENMV-DIFF //
 
     connect(m_codingStyleWarning, &QLabel::linkActivated,
             this, &TabSettingsWidget::codingStyleLinkActivated);
@@ -101,6 +107,9 @@ TabSettingsWidget::TabSettingsWidget()
                         indentSize, br,
                         tabSize, br,
                         continuationAlignBehavior, br
+                        // OPENMV-DIFF //
+                        , serialTerminalTabSize, br
+                        // OPENMV-DIFF //
                     }
                 }
             }
@@ -118,6 +127,9 @@ void TabSettingsWidget::setTabSettings(const TabSettings &s)
     tabSize.setValue(s.m_tabSize);
     indentSize.setValue(s.m_indentSize);
     continuationAlignBehavior.setValue(s.m_continuationAlignBehavior);
+    // OPENMV-DIFF //
+    serialTerminalTabSize.setValue(s.m_serialTerminalTabSize);
+    // OPENMV-DIFF //
 }
 
 TabSettings TabSettingsWidget::tabSettings() const
@@ -130,6 +142,9 @@ TabSettings TabSettingsWidget::tabSettings() const
     set.m_indentSize = indentSize();
     set.m_continuationAlignBehavior =
         TabSettings::ContinuationAlignBehavior(continuationAlignBehavior());
+    // OPENMV-DIFF //
+    set.m_serialTerminalTabSize = serialTerminalTabSize();
+    // OPENMV-DIFF //
 
     return set;
 }

@@ -1,0 +1,24 @@
+[console_scripts]
+blhost = spsdk.apps.blhost:safe_main
+dk6prog = spsdk.apps.dk6prog:safe_main
+el2go-host = spsdk.apps.el2go:safe_main
+ifr = spsdk.apps.ifr:safe_main
+lpcprog = spsdk.apps.lpcprog:safe_main
+nxpcrypto = spsdk.apps.nxpcrypto:safe_main
+nxpdebugmbox = spsdk.apps.nxpdebugmbox:safe_main
+nxpdevhsm = spsdk.apps.nxpdevhsm:safe_main
+nxpdevscan = spsdk.apps.nxpdevscan:safe_main
+nxpdice = spsdk.apps.nxpdice:safe_main
+nxpele = spsdk.apps.nxpele:safe_main
+nxpfuses = spsdk.apps.nxpfuses:safe_main
+nxpimage = spsdk.apps.nxpimage:safe_main
+nxpmemcfg = spsdk.apps.nxpmemcfg:safe_main
+nxpuuu = spsdk.apps.nxpuuu:safe_main
+nxpwpc = spsdk.apps.nxpwpc:safe_main
+pfr = spsdk.apps.pfr:safe_main
+sdphost = spsdk.apps.sdphost:safe_main
+sdpshost = spsdk.apps.sdpshost:safe_main
+shadowregs = spsdk.apps.shadowregs:safe_main
+spsdk = spsdk.apps.spsdk_apps:safe_main
+tpconfig = spsdk.apps.tpconfig:safe_main
+tphost = spsdk.apps.tphost:safe_main

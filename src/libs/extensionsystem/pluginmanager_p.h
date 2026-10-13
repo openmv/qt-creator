@@ -135,7 +135,11 @@ public:
     mutable QReadWriteLock m_lock;
 
     bool m_isInitializationDone = false;
-    bool enableCrashCheck = true;
+    // OPENMV-DIFF //
+    // bool enableCrashCheck = true;
+    // OPENMV-DIFF //
+    bool enableCrashCheck = false;
+    // OPENMV-DIFF //
     bool m_isShuttingDown = false;
 
 private:

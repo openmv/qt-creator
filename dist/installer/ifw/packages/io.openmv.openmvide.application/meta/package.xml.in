@@ -1,0 +1,17 @@
+<?xml version="1.0"?>
+<Package>
+    <DisplayName>{app_name} Application</DisplayName>
+    <Description>The IDE of choice for OpenMV Cam Development.</Description>
+    <Version>{version}</Version>
+    <ReleaseDate>{date}</ReleaseDate>
+    <Name>io.openmv.openmvide.application</Name>
+    <Script>installscript.qs</Script>
+    <ForcedInstallation>true</ForcedInstallation>
+    <Default>true</Default>
+    <AutoDependOn>io.openmv.openmvide</AutoDependOn>
+    <UserInterfaces>
+        <UserInterface>launchopenmvidecheckboxform.ui</UserInterface>
+        <UserInterface>linuxwidget.ui</UserInterface>
+        <UserInterface>targetwidget.ui</UserInterface>
+    </UserInterfaces>
+</Package>

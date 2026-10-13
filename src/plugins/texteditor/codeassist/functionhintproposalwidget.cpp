@@ -249,6 +249,16 @@ bool FunctionHintProposalWidget::eventFilter(QObject *obj, QEvent *e)
         }
         break;
     case QEvent::KeyPress:
+        // OPENMV-DIFF //
+        if (static_cast<QKeyEvent*>(e)->key() == Qt::Key_Return) {
+            d->m_escapePressed = true;
+            e->accept();
+        }
+        if (static_cast<QKeyEvent*>(e)->key() == Qt::Key_Enter) {
+            d->m_escapePressed = true;
+            e->accept();
+        }
+        // OPENMV-DIFF //
         if (static_cast<QKeyEvent*>(e)->key() == Qt::Key_Escape) {
             d->m_escapePressed = true;
             e->accept();
@@ -268,6 +278,18 @@ bool FunctionHintProposalWidget::eventFilter(QObject *obj, QEvent *e)
         break;
     case QEvent::KeyRelease: {
             auto ke = static_cast<QKeyEvent*>(e);
+            // OPENMV-DIFF //
+            if (ke->key() == Qt::Key_Return && d->m_escapePressed) {
+                abort();
+                emit explicitlyAborted();
+                return false;
+            }
+            if (ke->key() == Qt::Key_Enter && d->m_escapePressed) {
+                abort();
+                emit explicitlyAborted();
+                return false;
+            }
+            // OPENMV-DIFF //
             if (ke->key() == Qt::Key_Escape && d->m_escapePressed) {
                 abort();
                 emit explicitlyAborted();
@@ -334,6 +356,9 @@ bool FunctionHintProposalWidget::updateAndCheck(const QString &prefix)
         return false;
     } else if (activeArgument != d->m_currentArgument) {
         d->m_currentArgument = activeArgument;
+        // OPENMV-DIFF //
+        d->m_currentHint = d->m_currentArgument;
+        // OPENMV-DIFF //
         updateContent();
     }
 

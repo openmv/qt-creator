@@ -22,6 +22,9 @@
 
 #include <QLayout>
 #include <QMenu>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QToolButton>
 
 using namespace Core;
@@ -385,8 +388,25 @@ protected:
     void addItem(TreeItem *item)
     {
         m_model.rootItem()->appendChild(item);
-        m_view->expand(item->index());
-        item->forChildrenAtLevel(1, [&](const TreeItem *child) { m_view->expand(child->index()); });
+        // OPENMV-DIFF //
+        // m_view->expand(item->index());
+        // item->forChildrenAtLevel(1, [&](const TreeItem *child) { m_view->expand(child->index()); });
+        const QPersistentModelIndex itemIndex(item->index());
+        QTimer::singleShot(0, m_view, [this, itemIndex] {
+            // OPENMV-DIFF //
+            // The pane can be hidden/collapsed when the async LSP response
+            // lands; expanding a hidden tree trips the macOS Cocoa a11y
+            // bridge (NSRangeException).
+            if (!m_view->isVisible())
+                return;
+            // OPENMV-DIFF //
+            if (!itemIndex.isValid())
+                return;
+            m_view->expand(itemIndex);
+            if (TreeItem *it = m_model.itemForIndex(itemIndex))
+                it->forChildrenAtLevel(1, [this](TreeItem *child) { m_view->expand(child->index()); });
+        });
+        // OPENMV-DIFF //
     }
 
     void send(Client *client, const JsonRpcMessage &request, const MessageId &requestId)

@@ -2,7 +2,9 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
 #include "pipsupport.h"
-#include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
+// #include "pythonbuildconfiguration.h"
+// OPENMV-DIFF //
 #include "pythonconstants.h"
 #include "pythoneditor.h"
 #include "pythonhighlighter.h"
@@ -12,6 +14,9 @@
 #include "pythonsettings.h"
 #include "pythontr.h"
 #include "pythonwizardpage.h"
+// OPENMV-DIFF //
+#include "pythonlanguageclient.h"
+// OPENMV-DIFF //
 
 #ifdef WITH_TESTS
 #include "tests/pyprojecttoml_test.h"
@@ -88,20 +93,37 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
 
         setupPythonEditorFactory(this);
 
-        setupPySideBuildStep();
-        setupPythonBuildConfiguration();
+        // OPENMV-DIFF //
+        // setupPySideBuildStep();
+        // setupPythonBuildConfiguration();
+        // OPENMV-DIFF //
 
-        setupPythonRunConfiguration();
-        setupPythonRunWorker();
-        setupPythonDebugWorker();
-        setupPythonOutputParser();
+        // OPENMV-DIFF //
+        // setupPythonRunConfiguration();
+        // setupPythonRunWorker();
+        // setupPythonDebugWorker();
+        // setupPythonOutputParser();
+        // OPENMV-DIFF //
 
+        // OPENMV-DIFF //
+        // setupPythonSettings() lost its argument in 20.0.2 (was setupPythonSettings(this)).
+        // setupPipSupport(this) is obsolete in 20.0.2 (pip is driven by pipInstallerTask()), dropped.
+        // OPENMV-DIFF //
         setupPythonSettings();
-        setupPythonWizard();
 
-        KitManager::setIrrelevantAspects(
-            KitManager::irrelevantAspects() + QSet<Id>{PythonKitAspect::id()});
+        // OPENMV-DIFF //
+        // setupPythonWizard();
+        // OPENMV-DIFF //
 
+        // OPENMV-DIFF //
+        // KitManager::setIrrelevantAspects(
+        //     KitManager::irrelevantAspects() + QSet<Id>{PythonKitAspect::id()});
+        // OPENMV-DIFF //
+
+        // OPENMV-DIFF //
+        // The issuesGenerator below replaces OpenMV's old PythonProject::projectIssues()
+        // (same "No Python interpreter set" diagnostic), so it is kept.
+        // OPENMV-DIFF //
         const auto issuesGenerator = [](const Kit *k) -> Tasks {
             if (!PythonKitAspect::python(k))
                 return {BuildSystemTask(
@@ -141,6 +163,21 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
                               Tr::tr("Issues parsed from Python runtime output."),
                               true});
     }
+
+    // OPENMV-DIFF //
+    ExtensionSystem::IPlugin::ShutdownFlag aboutToShutdown()
+    {
+        if (runningChecksDone())
+        {
+            return ExtensionSystem::IPlugin::SynchronousShutdown;
+        }
+        else
+        {
+            connect(pyLSConfigureAssistant(), &PyLSConfigureAssistant::runningChecksDone, this, &PythonPlugin::asynchronousShutdownFinished);
+            return ExtensionSystem::IPlugin::AsynchronousShutdown;
+        }
+    }
+    // OPENMV-DIFF //
 };
 
 } // namespace Python::Internal

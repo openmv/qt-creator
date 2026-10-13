@@ -24,7 +24,11 @@ MarginSettings::MarginSettings(const Key &keyPrefix)
     setSettingsGroup("textMarginSettings");
 
     showMargin.setSettingsKey(keyPrefix + "ShowMargin");
-    showMargin.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // showMargin.setDefaultValue(false);
+    // OPENMV-DIFF //
+    showMargin.setDefaultValue(true);
+    // OPENMV-DIFF //
     showMargin.setLabelText(Tr::tr("Display right &margin after column:"));
 
     tintMarginArea.setSettingsKey(keyPrefix + "tintMarginArea");
@@ -38,7 +42,11 @@ MarginSettings::MarginSettings(const Key &keyPrefix)
                                   "For example, the ColumnLimit from the ClangFormat plugin."));
 
     marginColumn.setSettingsKey(keyPrefix + "MarginColumn");
-    marginColumn.setDefaultValue(80);
+    // OPENMV-DIFF //
+    // marginColumn.setDefaultValue(80);
+    // OPENMV-DIFF //
+    marginColumn.setDefaultValue(100);
+    // OPENMV-DIFF //
     marginColumn.setRange(0, 999);
 
     centerEditorContentWidthPercent.setSettingsKey(keyPrefix + "centeredEditorContentWidthPercent");

@@ -38,5 +38,13 @@ protected:
     void resizeEvent(QResizeEvent *ev) override;
 };
 
+// OPENMV-DIFF //
+// Couple two MiniSplitters' dividers: holding Ctrl (Cmd on macOS) while dragging either one then
+// moves both to the same on-screen position along their (shared) axis -- used to line up e.g. the
+// editor/serial-terminal and frame-buffer/histogram dividers. Wires each splitter's first handle as
+// the other's sibling (both directions). Safe to call repeatedly; a no-op unless both splitters use
+// MiniSplitterHandle (i.e. are MiniSplitters).
+CORE_EXPORT void coupleSplitterDividers(QSplitter *first, QSplitter *second);
+// OPENMV-DIFF //
 
 } // namespace Core

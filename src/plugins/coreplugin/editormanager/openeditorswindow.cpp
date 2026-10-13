@@ -22,6 +22,9 @@
 #include <QHeaderView>
 #include <QLoggingCategory>
 #include <QScrollBar>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QVBoxLayout>
 
 using namespace Utils;
@@ -95,15 +98,52 @@ public:
 
     OpenEditorsItem *currentItem() const
     {
+        // OPENMV-DIFF //
+        // Selection writes are deferred while the popup is hidden (macOS
+        // Cocoa a11y crash class); honor the pending index so the quick
+        // Ctrl+Tab path (select-and-hide without ever showing) still works.
+        if (m_pendingCurrent.isValid())
+            return m_model.itemForIndexAtLevel<1>(QModelIndex(m_pendingCurrent));
+        // OPENMV-DIFF //
         QModelIndexList indexes = selectedIndexes();
         return indexes.size() == 1 ? m_model.itemForIndexAtLevel<1>(indexes.front()) : nullptr;
     }
 
     int currentRow() const
     {
+        // OPENMV-DIFF //
+        if (m_pendingCurrent.isValid())
+            return m_pendingCurrent.row();
+        // OPENMV-DIFF //
         QModelIndexList indexes = selectedIndexes();
         return indexes.size() == 1 ? indexes.front().row() : -1;
     }
+
+    // OPENMV-DIFF //
+    // Selecting on the hidden popup view trips the macOS Cocoa a11y bridge
+    // (NSRangeException); stash the index while hidden and replay it after
+    // the popup is shown (see OpenEditorsWindow::setVisible).
+    void setCurrentIndexGuarded(const QModelIndex &idx)
+    {
+        if (isVisible()) {
+            m_pendingCurrent = QPersistentModelIndex();
+            setCurrentIndex(idx);
+            scrollTo(idx, QAbstractItemView::PositionAtCenter);
+        } else {
+            m_pendingCurrent = QPersistentModelIndex(idx);
+        }
+    }
+
+    void applyPendingSelection()
+    {
+        if (m_pendingCurrent.isValid()) {
+            const QModelIndex idx = m_pendingCurrent;
+            m_pendingCurrent = QPersistentModelIndex();
+            setCurrentIndex(idx);
+            scrollTo(idx, QAbstractItemView::PositionAtCenter);
+        }
+    }
+    // OPENMV-DIFF //
 
     void mouseReleaseEvent(QMouseEvent *ev) override
     {
@@ -126,6 +166,9 @@ public:
     void selectUpDown(bool up);
 
     TreeModel<TreeItem, OpenEditorsItem> m_model;
+    // OPENMV-DIFF //
+    QPersistentModelIndex m_pendingCurrent;
+    // OPENMV-DIFF //
 };
 
 OpenEditorsWindow::OpenEditorsWindow(QWidget *parent)
@@ -161,8 +204,21 @@ void OpenEditorsWindow::selectAndHide()
 void OpenEditorsWindow::setVisible(bool visible)
 {
     QWidget::setVisible(visible);
-    if (visible)
-        setFocus();
+    // OPENMV-DIFF //
+    // if (visible)
+    //     setFocus();
+    // Deferred: focusing the view mid-popup-activation auto-assigns a
+    // current index and trips the macOS Cocoa a11y bridge. Replay the
+    // deferred selection first so the focus-in finds a valid current index.
+    if (visible) {
+        QTimer::singleShot(0, this, [this] {
+            if (!isVisible())
+                return;
+            m_openEditorsView->applyPendingSelection();
+            setFocus();
+        });
+    }
+    // OPENMV-DIFF //
     else
         m_openEditorsView->m_model.clear();
 }
@@ -249,8 +305,11 @@ void OpenEditorsView::selectUpDown(bool up)
         count++;
     }
     if (editor) {
-        setCurrentIndex(m_model.index(index, 0));
-        scrollTo(currentIndex(), QAbstractItemView::PositionAtCenter);
+        // OPENMV-DIFF //
+        // setCurrentIndex(m_model.index(index, 0));
+        // scrollTo(currentIndex(), QAbstractItemView::PositionAtCenter);
+        setCurrentIndexGuarded(m_model.index(index, 0));
+        // OPENMV-DIFF //
     }
 }
 
@@ -319,8 +378,12 @@ void OpenEditorsView::addItem(DocumentModel::Entry *entry,
     item->view = view;
     m_model.rootItem()->appendChild(item);
 
-    if (m_model.rootItem()->childCount() == 1)
-        setCurrentIndex(m_model.index(0, 0));
+    if (m_model.rootItem()->childCount() == 1) {
+        // OPENMV-DIFF //
+        // setCurrentIndex(m_model.index(0, 0));
+        setCurrentIndexGuarded(m_model.index(0, 0));
+        // OPENMV-DIFF //
+    }
 }
 
 } // Core::Internal

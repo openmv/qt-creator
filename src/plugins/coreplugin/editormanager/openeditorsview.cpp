@@ -113,6 +113,10 @@ OpenEditorsWidget::~OpenEditorsWidget() = default;
 
 void OpenEditorsWidget::updateCurrentItem(IEditor *editor)
 {
+    // OPENMV-DIFF //
+    if (!isVisible())
+        return;
+    // OPENMV-DIFF //
     if (!editor) {
         clearSelection();
         return;

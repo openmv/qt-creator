@@ -50,6 +50,19 @@ OsArch hostArchitecture()
     return arch;
 }
 
+// OPENMV-DIFF //
+bool isRunningUnderRosetta()
+{
+#ifdef Q_OS_MACOS
+    int translated = 0;
+    auto size = sizeof(translated);
+    if (sysctlbyname("sysctl.proc_translated", &translated, &size, nullptr, 0) == 0)
+        return translated;
+#endif
+    return false;
+}
+// OPENMV-DIFF //
+
 std::optional<quint64> totalMemoryInstalledInBytes()
 {
 #ifdef Q_OS_LINUX

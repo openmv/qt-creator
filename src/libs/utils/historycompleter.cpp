@@ -54,7 +54,11 @@ public:
             optCopy.state |= QStyle::State_HasFocus;
         QItemDelegate::paint(painter,option,index);
         // add remove button
-        const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        // const qreal devicePixelRatio = painter->device()->devicePixelRatio();
+        // OPENMV-DIFF //
+        const qreal devicePixelRatio = painter->device()->devicePixelRatioF();
+        // OPENMV-DIFF //
         const QPixmap iconPixmap = icon.pixmap(option.rect.size(), devicePixelRatio);
         QRect pixmapRect = QStyle::alignedRect(option.direction,
                                                Qt::AlignRight | Qt::AlignVCenter,

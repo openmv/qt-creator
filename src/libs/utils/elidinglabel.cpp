@@ -7,6 +7,12 @@
 #include <QPainter>
 #include <QStyle>
 
+// OPENMV-DIFF //
+#include <QStyleOption>
+#include <utils/hostosinfo.h>
+#include <utils/theme/theme.h>
+// OPENMV-DIFF //
+
 /*!
     \class Utils::ElidingLabel
     \inmodule QtCreator
@@ -39,10 +45,12 @@ void ElidingLabel::setElideMode(const Qt::TextElideMode &elideMode)
     if (elideMode == Qt::ElideNone)
         updateToolTip({});
 
-    setSizePolicy(QSizePolicy(
-                      m_elideMode == Qt::ElideNone ? QSizePolicy::Preferred : QSizePolicy::Ignored,
-                      QSizePolicy::Preferred,
-                      QSizePolicy::Label));
+    // OPENMV-DIFF //
+    // setSizePolicy(QSizePolicy(
+    //                   m_elideMode == Qt::ElideNone ? QSizePolicy::Preferred : QSizePolicy::Ignored,
+    //                   QSizePolicy::Preferred,
+    //                   QSizePolicy::Label));
+    // OPENMV-DIFF //
     update();
 }
 
@@ -69,10 +77,20 @@ void ElidingLabel::paintEvent(QPaintEvent *)
     QFontMetrics fm = fontMetrics();
     QString txt = text();
     if (txt.size() > 4 && fm.horizontalAdvance(txt) > contents.width()) {
-        updateToolTip(txt);
+        // OPENMV-DIFF //
+        // updateToolTip(txt);
+        // OPENMV-DIFF //
         txt = fm.elidedText(txt, m_elideMode, contents.width());
     } else {
-        updateToolTip(QString());
+        // OPENMV-DIFF //
+        // updateToolTip(QString());
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // The text fits, so let QLabel paint it natively -- textInteractionFlags
+        // selection highlights only render through QLabel's own painting.
+        QLabel::paintEvent(nullptr);
+        return;
+        // OPENMV-DIFF //
     }
     int flags = QStyle::visualAlignment(layoutDirection(), alignment()) | Qt::TextSingleLine;
 
@@ -121,5 +139,57 @@ QSize ElidingLabel::minimumSizeHint() const
     const int h = fontMetrics().height() + 2 * margin();
     return QSize(QLabel::minimumSizeHint().width(), h);
 }
+
+// OPENMV-DIFF //
+void ElidingToolButton::paintEvent(QPaintEvent *event)
+{
+    Q_UNUSED(event)
+
+    const QFontMetrics fm = fontMetrics();
+    // OPENMV-DIFF //
+    // const int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
+    int baseLine = (height() - fm.height() + 1) / 2 + fm.ascent();
+    // OPENMV-DIFF //
+
+    QPainter p(this);
+
+    QStyleOption styleOption;
+    styleOption.initFrom(this);
+    const bool hovered = !Utils::HostOsInfo::isMacHost() && (styleOption.state & QStyle::State_MouseOver);
+
+    if(isEnabled())
+    {
+        Utils::Theme::Color c = Utils::Theme::BackgroundColorDark;
+
+        if (hovered)
+            c = Utils::Theme::BackgroundColorHover;
+        else if (isDown() || isChecked())
+            c = Utils::Theme::BackgroundColorSelected;
+
+        if (c != Utils::Theme::BackgroundColorDark)
+            p.fillRect(rect(), Utils::creatorTheme()->color(c));
+
+        p.setFont(font());
+        p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorChecked));
+
+        if (!isChecked())
+            p.setPen(Utils::creatorTheme()->color(Utils::Theme::OutputPaneToggleButtonTextColorUnchecked));
+        // OPENMV-DIFF //
+        const QVariant v = property("statusColor");
+        if (v.isValid() && v.value<QColor>().isValid()) p.setPen(v.value<QColor>());
+        // OPENMV-DIFF //
+    }
+    else
+    {
+        p.setPen(Utils::creatorTheme()->color(Utils::Theme::IconsDisabledColor));
+    }
+
+#ifndef Q_OS_LINUX
+    baseLine = baseLine - 1;
+#endif
+    p.drawText(4, baseLine, fm.elidedText(text(), Qt::ElideRight, width() - 5));
+}
+// OPENMV-DIFF //
 
 } // namespace Utils

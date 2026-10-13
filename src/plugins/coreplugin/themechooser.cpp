@@ -24,6 +24,11 @@ using namespace Utils;
 namespace Core::Internal {
 
 const char themeNameKey[] = "ThemeName";
+// OPENMV-DIFF //
+// Synthetic theme id that follows the host's system color scheme at startup,
+// resolving to flat-light or flat-dark. It is OpenMV's default.
+const char themeAutoId[] = "auto";
+// OPENMV-DIFF //
 
 ThemeEntry::ThemeEntry(Id id, const QString &filePath)
     : m_id(id)
@@ -37,6 +42,10 @@ Id ThemeEntry::id() const
 
 QString ThemeEntry::displayName() const
 {
+    // OPENMV-DIFF //
+    if (m_id == Id(themeAutoId))
+        return Tr::tr("Auto");
+    // OPENMV-DIFF //
     if (m_displayName.isEmpty() && !m_filePath.isEmpty()) {
         QSettings settings(m_filePath, QSettings::IniFormat);
         m_displayName = settings.value(QLatin1String(themeNameKey),
@@ -130,14 +139,15 @@ QComboBox *ThemeChooser::themeComboBox() const
 
 Id ThemeEntry::defaultThemeId()
 {
-    switch (Theme::systemColorScheme()) {
-    case Qt::ColorScheme::Light:
-        return "light-2024";
-    case Qt::ColorScheme::Dark:
-        return "dark-2024";
-    default:
-        return "flat";
-    }
+    // OPENMV-DIFF //
+    // OpenMV ships only flat-light / flat-dark, so the upstream
+    // light-2024 / dark-2024 / flat defaults do not exist here. Default to the
+    // synthetic "Auto" entry, which tracks the system color scheme at startup.
+    // return Theme::systemColorScheme() == Qt::ColorScheme::Light ? "light-2024"
+    //      : Theme::systemColorScheme() == Qt::ColorScheme::Dark  ? "dark-2024"
+    //                                                             : "flat";
+    return themeAutoId;
+    // OPENMV-DIFF //
 }
 
 void ThemeChooser::apply()
@@ -175,6 +185,12 @@ static void addThemesFromPath(const QString &path, QList<ThemeEntry> *themes)
     const QStringList themeList = themeDir.entryList();
     for (const QString &fileName : std::as_const(themeList)) {
         QString id = QFileInfo(fileName).completeBaseName();
+        // OPENMV-DIFF //
+        // OpenMV ships only the flat-light / flat-dark themes; skip any others.
+        // (The isQtDesignStudio() design-theme branch from the 14.0.2 base is
+        // obsolete -- upstream 20.0.2 removed it.)
+        if ((id != QStringLiteral("flat-light")) && (id != QStringLiteral("flat-dark"))) continue;
+        // OPENMV-DIFF //
         themes->append(ThemeEntry(Id::fromString(id), themeDir.absoluteFilePath(fileName)));
     }
 }
@@ -184,18 +200,27 @@ QList<ThemeEntry> ThemeEntry::availableThemes()
     QList<ThemeEntry> themes;
 
     static const FilePath installThemeDir = ICore::resourcePath("themes");
-    static const FilePath userThemeDir = ICore::userResourcePath("themes");
+    // OPENMV-DIFF //
+    // OpenMV loads only install themes, never user themes.
+    // static const FilePath userThemeDir = ICore::userResourcePath("themes");
+    // OPENMV-DIFF //
     addThemesFromPath(installThemeDir.toUrlishString(), &themes);
     if (themes.isEmpty())
         qWarning() << "Warning: No themes found in installation: "
                    << installThemeDir.toUserOutput();
-    // move default theme to front
-    const int defaultIndex = Utils::indexOf(themes, Utils::equal(&ThemeEntry::id, defaultThemeId()));
-    if (defaultIndex > 0) { // == exists and not at front
-        ThemeEntry defaultEntry = themes.takeAt(defaultIndex);
-        themes.prepend(defaultEntry);
-    }
-    addThemesFromPath(userThemeDir.toUrlishString(), &themes);
+    // OPENMV-DIFF //
+    // Prepend the synthetic "Auto" entry (the default) so it leads the selector;
+    // it follows the system color scheme instead of a fixed theme. This replaces
+    // the upstream "move default theme to front" reorder below.
+    // const int defaultIndex = Utils::indexOf(themes, Utils::equal(&ThemeEntry::id, defaultThemeId()));
+    // if (defaultIndex > 0) { // == exists and not at front
+    //     ThemeEntry defaultEntry = themes.takeAt(defaultIndex);
+    //     themes.prepend(defaultEntry);
+    // }
+    if (!themes.isEmpty())
+        themes.prepend(ThemeEntry(Id(themeAutoId), QString()));
+    // addThemesFromPath(userThemeDir.toUrlishString(), &themes);
+    // OPENMV-DIFF //
     return themes;
 }
 
@@ -216,6 +241,14 @@ Theme *ThemeEntry::createTheme(Id id)
 {
     if (!id.isValid())
         return nullptr;
+    // OPENMV-DIFF //
+    // Resolve the synthetic "Auto" id to the flat theme matching the system
+    // color scheme at startup (dark otherwise defaults to light).
+    if (id == Id(themeAutoId)) {
+        id = (Theme::systemColorScheme() == Qt::ColorScheme::Dark) ? Id("flat-dark")
+                                                                   : Id("flat-light");
+    }
+    // OPENMV-DIFF //
     const ThemeEntry entry = Utils::findOrDefault(availableThemes(),
                                                   Utils::equal(&ThemeEntry::id, id));
     if (!entry.id().isValid())

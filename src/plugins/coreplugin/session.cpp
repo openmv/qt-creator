@@ -94,7 +94,11 @@ public:
     static QString sessionTitle(const FilePath &filePath);
 
     QString m_sessionName = "default";
-    bool m_isAutoRestoreLastSession = false;
+    // OPENMV-DIFF //
+    // bool m_isAutoRestoreLastSession = false;
+    // OPENMV-DIFF //
+    bool m_isAutoRestoreLastSession = true;
+    // OPENMV-DIFF //
     bool m_virginSession = true;
     Guard m_loadingSession;
 
@@ -154,7 +158,9 @@ SessionManager::SessionManager()
 
     msession->menu()->setTitle(PE::Tr::tr("S&essions"));
     msession->setOnAllDisabledBehavior(ActionContainer::Show);
-    mfile->addMenu(msession, Core::Constants::G_FILE_SESSION);
+    // OPENMV-DIFF //
+    // mfile->addMenu(msession, Core::Constants::G_FILE_SESSION);
+    // OPENMV-DIFF //
     d->m_sessionMenu = msession->menu();
     connect(mfile->menu(), &QMenu::aboutToShow, this, [] { d->updateSessionMenu(); });
 
@@ -565,6 +571,13 @@ void SessionManagerPrivate::restoreSessionValues(const PersistentSettingsReader 
 
 void SessionManagerPrivate::restoreEditors()
 {
+    // OPENMV-DIFF //
+    // Viewer mode starts with a clean, hidden editor -- don't reopen the previous
+    // session's documents, or a leftover script would be silently picked up by the
+    // Run button / auto-run instead of prompting for one.
+    if (QCoreApplication::arguments().contains("-viewer_mode"))
+        return;
+    // OPENMV-DIFF //
     const QVariant editorsettings = m_sessionValues.value("EditorSettings");
     if (editorsettings.isValid()) {
         EditorManager::restoreState(QByteArray::fromBase64(editorsettings.toByteArray()));
@@ -766,7 +779,14 @@ bool SessionManager::saveSession()
                               .arg(c.blue(), 2, 16, QLatin1Char('0'));
             setSessionValue("Color", tmp);
         }
-        setSessionValue("EditorSettings", EditorManager::saveState().toBase64());
+        // OPENMV-DIFF //
+        // setSessionValue("EditorSettings", EditorManager::saveState().toBase64());
+        // OPENMV-DIFF //
+        // Viewer mode is a read-only kiosk -- don't persist its editor state, so it
+        // can't clobber the normal IDE's remembered open documents.
+        if (!QCoreApplication::arguments().contains("-viewer_mode"))
+            setSessionValue("EditorSettings", EditorManager::saveState().toBase64());
+        // OPENMV-DIFF //
 
         const auto end = d->m_sessionValues.constEnd();
         for (auto it = d->m_sessionValues.constBegin(); it != end; ++it)

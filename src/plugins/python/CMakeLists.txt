@@ -1,13 +1,13 @@
 add_qtc_plugin(Python
-  PLUGIN_DEPENDS Core LanguageClient ProjectExplorer TextEditor QtSupport Debugger
+  PLUGIN_DEPENDS Core LanguageClient ProjectExplorer TextEditor
   SOURCES
     ../../libs/3rdparty/toml11/toml.hpp
     pipsupport.cpp pipsupport.h
     pyprojecttoml.cpp pyprojecttoml.h
-    pyside.cpp pyside.h
-    pythonbuildconfiguration.cpp pythonbuildconfiguration.h
-    pysideuicextracompiler.cpp pysideuicextracompiler.h
-    pythonbuildsystem.cpp pythonbuildsystem.h
+    # OPENMV-DIFF # pyside.cpp pyside.h
+    # OPENMV-DIFF # pythonbuildconfiguration.cpp pythonbuildconfiguration.h
+    # OPENMV-DIFF # pysideuicextracompiler.cpp pysideuicextracompiler.h
+    # OPENMV-DIFF # pythonbuildsystem.cpp pythonbuildsystem.h
     pythonconstants.h
     pythoneditor.cpp pythoneditor.h
     pythonformattoken.h

@@ -13,7 +13,10 @@
 #include <coreplugin/messagemanager.h>
 #include <coreplugin/progressmanager/processprogress.h>
 
-#include <debugger/debuggerkitaspect.h>
+// OPENMV-DIFF //
+// Debugger plugin is disabled in OpenMV; kits carry no debugger aspect.
+// #include <debugger/debuggerkitaspect.h>
+// OPENMV-DIFF //
 
 #include <projectexplorer/kitaspect.h>
 #include <projectexplorer/environmentkitaspect.h>
@@ -436,11 +439,19 @@ public:
         advanced->setChecked(false);
         mainGroupLayout->addWidget(advanced);
 
-        m_mainGroup->setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
+        // m_mainGroup->setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
+        m_mainGroup->hide();
+        // OPENMV-DIFF //
 
-        QVBoxLayout *mainLayout = new QVBoxLayout;
-        mainLayout->addWidget(m_mainGroup);
-        setLayout(mainLayout);
+        // OPENMV-DIFF //
+        // QVBoxLayout *mainLayout = new QVBoxLayout;
+        // mainLayout->addWidget(m_mainGroup);
+        // setLayout(mainLayout);
+        // OPENMV-DIFF //
+        setLayout(mainGroupLayout);
+        // OPENMV-DIFF //
 
         m_editor->textDocument()->setPlainText(PythonSettings::pylsConfiguration());
         m_mainGroup->setChecked(PythonSettings::pylsEnabled());
@@ -529,6 +540,12 @@ public:
         setDisplayName(Tr::tr("Language Server Configuration"));
         setCategory(Constants::C_PYTHON_SETTINGS_CATEGORY);
         setWidgetCreator([] {return new PyLSConfigureWidget();});
+        // OPENMV-DIFF //
+        IOptionsPage::registerCategory(
+            Constants::C_PYTHON_SETTINGS_CATEGORY,
+            Tr::tr("Python"),
+            ":/python/images/settingscategory_python.png");
+        // OPENMV-DIFF //
     }
 };
 
@@ -585,8 +602,15 @@ static QString defaultPylsConfiguration()
         enabled.insert("enabled", true);
         QJsonObject disabled;
         disabled.insert("enabled", false);
+        // OPENMV-DIFF //
+        QJsonObject maxLineLength;
+        maxLineLength.insert("maxLineLength", 120);
+        // OPENMV-DIFF //
         QJsonObject plugins;
         plugins.insert("flake8", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("flake8", maxLineLength);
+        // OPENMV-DIFF //
         plugins.insert("jedi_completion", enabled);
         plugins.insert("jedi_definition", enabled);
         plugins.insert("jedi_hover", enabled);
@@ -595,6 +619,9 @@ static QString defaultPylsConfiguration()
         plugins.insert("jedi_symbols", enabled);
         plugins.insert("mccabe", disabled);
         plugins.insert("pycodestyle", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("pycodestyle", maxLineLength);
+        // OPENMV-DIFF //
         plugins.insert("pydocstyle", disabled);
         plugins.insert("pyflakes", enabled);
         plugins.insert("pylint", disabled);
@@ -695,11 +722,36 @@ static void pythonsFromPath(QPromise<QList<Interpreter>> &promise)
                 const FilePath executable = FilePath::fromUserInput(fi.canonicalFilePath());
                 if (!used.contains(executable) && executable.exists()) {
                     used.insert(executable);
-                    pythons << PythonSettings::createInterpreter(executable, "Python from Path");
+                    // OPENMV-DIFF //
+                    // pythons << PythonSettings::createInterpreter(executable, "Python from Path");
+                    // OPENMV-DIFF //
+                    Interpreter i = PythonSettings::createInterpreter(executable, "Python from Path");
+                    if (i.name.contains(QRegularExpression("Python 3"))) {
+                        if (pythons.isEmpty()) pythons << i;
+                        else {
+                            // Insertion sort.
+                            bool inserted = false;
+                            for (int j = 0; j < pythons.size(); ++j) {
+                                if (i.name > pythons[j].name) {
+                                    pythons.insert(j, i);
+                                    inserted = true;
+                                    break;
+                                }
+                            }
+                            if (!inserted) {
+                                pythons.append(i);
+                            }
+                        }
+                    }
+                    // OPENMV-DIFF //
                 }
             }
         }
     }
+    // OPENMV-DIFF //
+    if (pythons.size() > 1)
+        pythons = QList<Interpreter>() << pythons.takeFirst();
+    // OPENMV-DIFF //
     promise.addResult(pythons);
 }
 
@@ -752,7 +804,11 @@ PythonSettings::PythonSettings()
         const auto interpreters = task.result();
         for (const Interpreter &interpreter : interpreters) {
             if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter);
+                // OPENMV-DIFF //
+                // settingsInstance->addInterpreter(interpreter);
+                // OPENMV-DIFF //
+                settingsInstance->addInterpreter(interpreter, true);
+                // OPENMV-DIFF //
         }
     };
 
@@ -762,7 +818,66 @@ PythonSettings::PythonSettings()
             ? AsyncTask<QList<Interpreter>>(onRegistrySetup, onTaskDone) : nullItem,
         AsyncTask<QList<Interpreter>>(onPathSetup, onTaskDone)
     };
-    m_taskTreeRunner.start(recipe);
+    // OPENMV-DIFF //
+    // m_taskTreeRunner.start(recipe);
+    // OPENMV-DIFF //
+    QString bundledInterpreterId;
+    if (Utils::HostOsInfo::isWindowsHost())
+    {
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/win/python.exe")), {});
+        if (!alreadyRegistered(interpreter))
+            settingsInstance->addInterpreter(interpreter, true);
+        bundledInterpreterId = interpreter.id;
+    }
+    else if(Utils::HostOsInfo::isMacHost())
+    {
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python")), {});
+        if (!alreadyRegistered(interpreter))
+            settingsInstance->addInterpreter(interpreter, true);
+        bundledInterpreterId = interpreter.id;
+    }
+    else if (Utils::HostOsInfo::isLinuxHost())
+    {
+        if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
+        {
+            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86/bin/python")), {});
+            if (!alreadyRegistered(interpreter))
+                settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
+        {
+            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python")), {});
+            if (!alreadyRegistered(interpreter))
+                settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
+        {
+            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm/bin/python")), {});
+            if (!alreadyRegistered(interpreter))
+                settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
+        }
+        else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
+        {
+            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python")), {});
+            if (!alreadyRegistered(interpreter))
+                settingsInstance->addInterpreter(interpreter, true);
+            bundledInterpreterId = interpreter.id;
+        }
+    }
+    else
+    {
+        m_taskTreeRunner.start(recipe);
+    }
+    // Force the IDE's bundled interpreter as the default on every launch. A
+    // stale persisted default (e.g. one pinned to a previous build tree, or a
+    // system python removed by an OS/Xcode update) otherwise silently disables
+    // the Python language server while in-process Kate highlighting still works.
+    if (!bundledInterpreterId.isEmpty())
+        m_defaultInterpreterId = bundledInterpreterId;
+    // OPENMV-DIFF //
 
     if (m_defaultInterpreterId.isEmpty())
         m_defaultInterpreterId = idForPythonFromPath(m_interpreters);
@@ -784,8 +899,11 @@ static void setRelevantAspectsToKit(Kit *k)
 {
     QTC_ASSERT(k, return);
     QSet<Utils::Id> relevantAspects = k->relevantAspects();
+    // OPENMV-DIFF //
+    // Dropped Debugger::DebuggerKitAspect::id() (Debugger plugin disabled).
     relevantAspects.unite(
-        {PythonKitAspect::id(), EnvironmentKitAspect::id(), Debugger::DebuggerKitAspect::id()});
+        {PythonKitAspect::id(), EnvironmentKitAspect::id()});
+    // OPENMV-DIFF //
     k->setRelevantAspects(relevantAspects);
 }
 
@@ -1119,7 +1237,11 @@ void PythonSettings::initFromSettings(QtcSettings *settings)
 
     m_defaultInterpreterId = settings->value(defaultKey).toString();
 
-    QVariant pylsEnabled = settings->value(pylsEnabledKey);
+    // OPENMV-DIFF //
+    // QVariant pylsEnabled = settings->value(pylsEnabledKey);
+    // OPENMV-DIFF //
+    QVariant pylsEnabled = true;
+    // OPENMV-DIFF //
     if (pylsEnabled.isNull())
         disableOutdatedPyls();
     else
@@ -1283,6 +1405,12 @@ class InterpreterOptionsPage : public Core::IOptionsPage
 {
 public:
     InterpreterOptionsPage()
+    // OPENMV-DIFF //
+    // OpenMV hides the Interpreters page (bundled interpreter is forced), so the page
+    // is constructed with IOptionsPage(false). Upstream moved this class to the bottom
+    // of the file and switched keywords() -> setFixedKeywords(); both are kept.
+    : Core::IOptionsPage(false)
+    // OPENMV-DIFF //
     {
         setId(Constants::C_PYTHONOPTIONS_PAGE_ID);
         setDisplayName(Tr::tr("Interpreters"));

@@ -30,6 +30,9 @@
 #include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QMimeData>
 #include <QPlainTextEdit>
 #include <QPushButton>
@@ -666,7 +669,16 @@ void ExternalToolConfig::setTools(const QMap<QString, QList<ExternalTool *> > &t
     if (!toolsCopy.contains(QString()))
         toolsCopy.insert(QString(), QList<ExternalTool *>());
     m_model.setTools(toolsCopy);
-    m_toolTree->expandAll();
+    // OPENMV-DIFF //
+    // m_toolTree->expandAll();
+    // Deferred: setTools() runs from the options-page constructor while the
+    // page is hidden; expanding a hidden tree trips the macOS Cocoa a11y
+    // bridge (NSRangeException).
+    QTimer::singleShot(0, m_toolTree, [this] {
+        if (m_toolTree->isVisible())
+            m_toolTree->expandAll();
+    });
+    // OPENMV-DIFF //
 }
 
 void ExternalToolConfig::handleCurrentChanged(const QModelIndex &now, const QModelIndex &previous)
@@ -973,6 +985,10 @@ class ExternalToolSettings final : public IOptionsPage
 {
 public:
     ExternalToolSettings()
+        // OPENMV-DIFF //
+        // (upstream registers this options page globally)
+        : IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId(Constants::SETTINGS_ID_TOOLS);
         setDisplayName(Tr::tr("External Tools"));

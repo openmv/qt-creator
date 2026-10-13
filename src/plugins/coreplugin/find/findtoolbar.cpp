@@ -64,6 +64,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     m_findEdit->setObjectName("findEdit");
     m_findEdit->setMinimumWidth(100);
     m_findEdit->setAttribute(Qt::WA_MacShowFocusRect, false);
+    // OPENMV-DIFF //
+    m_findEdit->setButtonToolTip(FancyLineEdit::Left, Tr::tr("Find Flags"));
+    // OPENMV-DIFF //
 
     m_findPreviousButton = new QToolButton;
 
@@ -262,7 +265,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     if (QApplication::clipboard()->supportsFindBuffer()) {
         ActionBuilder enterFindStringAction(this, "Find.EnterFindString");
         enterFindStringAction.setText(Tr::tr("Enter Find String"));
-        enterFindStringAction.setDefaultKeySequence(Tr::tr("Ctrl+E"));
+        // OPENMV-DIFF //
+        // enterFindStringAction.setDefaultKeySequence(Tr::tr("Ctrl+E"));
+        // OPENMV-DIFF //
         enterFindStringAction.addToContainer(Constants::M_FIND, Constants::G_FIND_ACTIONS);
         enterFindStringAction.bindContextAction(&m_enterFindStringAction);
         enterFindStringAction.addOnTriggered(this, [this] { putSelectionToFindClipboard(); });
@@ -437,6 +442,9 @@ FindToolBar::FindToolBar(CurrentDocumentFind *currentDocumentFind)
     connect(&m_findStepTimer, &QTimer::timeout, this, &FindToolBar::invokeFindStep);
 
     setLightColoredIcon(isLightColored());
+    // OPENMV-DIFF //
+    m_close->setToolTip(Tr::tr("Close"));
+    // OPENMV-DIFF //
 
     QWidget::setTabOrder(m_findEdit->button(FancyLineEdit::Left), m_findEdit);
     QWidget::setTabOrder(m_findEdit, m_replaceEdit);

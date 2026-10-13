@@ -32,6 +32,13 @@ public:
     static void setTextInDocument(QTextDocument *doc, const QString &text);
     static QString ansiFromColor(const QColor &color);
     static QString noColor();
+    // OPENMV-DIFF //
+    QStringList getEscapeCodes()
+    {
+        if(m_escapeCodes.isEmpty()) return QStringList();
+        return m_escapeCodes.takeFirst();
+    }
+    // OPENMV-DIFF //
 
 private:
     void setFormatScope(const QTextCharFormat &charFormat);
@@ -41,6 +48,9 @@ private:
     QString         m_alternateTerminator;
     QTextCharFormat m_previousFormat;
     QString         m_pendingText;
+    // OPENMV-DIFF //
+    QList<QStringList> m_escapeCodes;
+    // OPENMV-DIFF //
 };
 
 } // namespace Utils

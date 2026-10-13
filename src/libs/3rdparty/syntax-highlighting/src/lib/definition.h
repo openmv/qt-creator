@@ -421,6 +421,9 @@ public:
 private:
     friend class DefinitionData;
     KSYNTAXHIGHLIGHTING_NO_EXPORT explicit Definition(const DefinitionData &defData);
+// OPENMV-DIFF //
+public:
+// OPENMV-DIFF //
     std::shared_ptr<DefinitionData> d;
 };
 

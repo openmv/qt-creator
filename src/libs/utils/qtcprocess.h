@@ -142,7 +142,13 @@ public:
                               qint64 *pid = nullptr);
 
     // Starts the command and waits for finish.
-    void runBlocking(std::chrono::seconds timeout = std::chrono::seconds(10));
+    // User input processing is enabled when EventLoopMode::On was passed.
+    // OPENMV-DIFF //
+    // void runBlocking(std::chrono::seconds timeout = std::chrono::seconds(10));
+    // OPENMV-DIFF //
+    void runBlocking(std::chrono::seconds timeout = std::chrono::seconds(10),
+                     EventLoopMode eventLoopMode = EventLoopMode::Off, QEventLoop::ProcessEventsFlag flag = QEventLoop::ExcludeUserInputEvents);
+                     // OPENMV-DIFF //
 
     void setEncoding(const TextEncoding &encoding); // for stdOut and stdErr
     void setUtf8Codec(); // for stdOut and stdErr

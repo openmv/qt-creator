@@ -35,9 +35,11 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(TypingSettings *typingSettings,
             Form {
                 typingSettings->autoIndent, br,
                 typingSettings->smartBackspaceBehavior, br,
-                typingSettings->tabKeyBehavior, br,
-                typingSettings->preferSingleLineComments, br,
-                typingSettings->commentPosition, br
+                // OPENMV-DIFF //
+                // typingSettings->tabKeyBehavior, br,
+                // typingSettings->preferSingleLineComments, br,
+                // typingSettings->commentPosition, br
+                // OPENMV-DIFF //
             }, st
         }
     };
@@ -50,44 +52,55 @@ BehaviorSettingsWidget::BehaviorSettingsWidget(TypingSettings *typingSettings,
             storageSettings->cleanWhitespace,
                 Row { Space(30), storageSettings->inEntireDocument },
                 Row { Space(30), storageSettings->cleanIndentation },
-                Row { Space(30), storageSettings->skipTrailingWhitespace,
-                                 storageSettings->ignoreFileTypes },
+                // OPENMV-DIFF //
+                // Row { Space(30), storageSettings->skipTrailingWhitespace,
+                //                  storageSettings->ignoreFileTypes },
+                // OPENMV-DIFF //
             storageSettings->addFinalNewLine,
         }
     };
 
-    Group encoding {
-        title(Tr::tr("File Encodings")),
-        Row {
-            Form {
-                encodingSettings->defaultEncoding, br,
-                encodingSettings->utf8BomSetting, br,
-                encodingSettings->lineEndingSetting, br,
-            }, st
-        }
-    };
+    // OPENMV-DIFF //
+    // Group encoding {
+    //     title(Tr::tr("File Encodings")),
+    //     Row {
+    //         Form {
+    //             encodingSettings->defaultEncoding, br,
+    //             encodingSettings->utf8BomSetting, br,
+    //             encodingSettings->lineEndingSetting, br,
+    //         }, st
+    //     }
+    // };
+    //
+    // Group mouse {
+    //     title(Tr::tr("Mouse and Keyboard")),
+    //     Row {
+    //         Form {
+    //             behaviorSettings->mouseHiding, br,
+    //             behaviorSettings->mouseNavigation, br,
+    //             behaviorSettings->scrollWheelZooming, br,
+    //             behaviorSettings->camelCaseNavigation, br,
+    //             behaviorSettings->smartSelectionChanging, br,
+    //             behaviorSettings->keyboardTooltips, br,
+    //             behaviorSettings->constrainHoverTooltips, br
+    //         }, st
+    //     }
+    // };
+    // OPENMV-DIFF //
 
-    Group mouse {
-        title(Tr::tr("Mouse and Keyboard")),
-        Row {
-            Form {
-                behaviorSettings->mouseHiding, br,
-                behaviorSettings->mouseNavigation, br,
-                behaviorSettings->scrollWheelZooming, br,
-                behaviorSettings->camelCaseNavigation, br,
-                behaviorSettings->smartSelectionChanging, br,
-                behaviorSettings->keyboardTooltips, br,
-                behaviorSettings->constrainHoverTooltips, br
-            }, st
-        }
-    };
+    // OPENMV-DIFF // encoding and mouse groups hidden; silence unused parameters
+    Q_UNUSED(behaviorSettings)
+    Q_UNUSED(encodingSettings)
+    // OPENMV-DIFF //
 
     Column {
         tabPreferencesWidget,
         typing,
         storage,
-        encoding,
-        mouse,
+        // OPENMV-DIFF //
+        // encoding,
+        // mouse,
+        // OPENMV-DIFF //
         st,
         noMargin,
     }.attachTo(this);

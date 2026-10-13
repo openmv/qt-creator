@@ -58,6 +58,17 @@
 #include <string>
 #include <vector>
 
+// OPENMV-DIFF //
+#include <QtGlobal>
+// OPENMV-DIFF //
+
+#ifdef ENABLE_CRASHPAD
+#define NOMINMAX
+#include "client/crashpad_client.h"
+#include "client/crash_report_database.h"
+#include "client/settings.h"
+#endif
+
 using namespace ExtensionSystem;
 using namespace Utils;
 using namespace Utils::Internal;
@@ -68,20 +79,25 @@ const char corePluginIdC[] = "core";
 const char fixedOptionsC[]
     = " [OPTION]... [FILE]...\n"
       "Options:\n"
+      // OPENMV-DIFF //
+      "    Each option accepts a single dash (-option) or a double dash (--option).\n"
+      // OPENMV-DIFF //
       "    -help                         Display this help\n"
       "    -version                      Display program version\n"
-      "    -client                       Attempt to connect to already running first instance\n"
-      "    -clientid                     A postfix for the ID used by -client\n"
-      "    -settingspath <path>          Override the default path where user settings are stored\n"
-      "    -installsettingspath <path>   Override the default path from where user-independent "
-      "settings are read\n"
-      "    -temporarycleansettings, -tcs Use clean settings for debug or testing reasons\n"
-      "    -pid <pid>                    Attempt to connect to instance given by pid\n"
-      "    -block                        Block until editor is closed\n"
-      "    -pluginpath <path>            Add a custom search path for plugins\n"
-      "    -language <locale>            Set the UI language\n"
-      "    -list-themes                  List available UI themes\n"
-      "    -trace-on-warning <pattern>   Print a stack trace for each message containing pattern\n";
+      // OPENMV-DIFF //
+      // "    -client                       Attempt to connect to already running first instance\n"
+      // "    -clientid                     A postfix for the ID used by -client\n"
+      // "    -settingspath <path>          Override the default path where user settings are stored\n"
+      // "    -installsettingspath <path>   Override the default path from where user-independent "
+      // "settings are read\n"
+      // "    -temporarycleansettings, -tcs Use clean settings for debug or testing reasons\n"
+      // "    -pid <pid>                    Attempt to connect to instance given by pid\n"
+      // "    -block                        Block until editor is closed\n"
+      // "    -pluginpath <path>            Add a custom search path for plugins\n"
+      // "    -list-themes                  List available UI themes\n"
+      // "    -trace-on-warning <pattern>   Print a stack trace for each message containing pattern\n"
+      // OPENMV-DIFF //
+      "    -language <locale>            Set the UI language\n";
 
 const char HELP_OPTION1[] = "-h";
 const char HELP_OPTION2[] = "-help";
@@ -93,6 +109,12 @@ const char CLIENT_OPTION[] = "-client";
 const char CLIENTID_OPTION[] = "-clientid";
 const char SETTINGS_OPTION[] = "-settingspath";
 const char INSTALL_SETTINGS_OPTION[] = "-installsettingspath";
+// OPENMV-DIFF //
+// OpenMV strips command-line option handling down to -language (see parseCommandLine
+// below). The constants below are kept defined because upstream 20.0.2 code (help/
+// theme/single-instance paths) still references several of them; leaving them defined
+// is harmless since the stripped parser never acts on the disabled ones.
+// OPENMV-DIFF //
 const char TEST_OPTION[] = "-test";
 const char STYLE_OPTION[] = "-style";
 const char QML_LITE_DESIGNER_OPTION[] = "-qml-lite-designer";
@@ -152,17 +174,23 @@ static void printVersion(const AppInfo &appInfo, const PluginSpec *coreplugin)
 {
     QString version;
     QTextStream str(&version);
-    str << '\n';
-    str << QGuiApplication::applicationDisplayName() << '\n';
-    str << "Version: " << QCoreApplication::applicationVersion() << '\n';
-    str << "Qt Version: " << qVersion() << '\n';
-    if (!appInfo.revision.isEmpty())
-        str << "Revision: " << appInfo.revision << '\n';
-    if (appInfo.buildTime.isValid())
-        str << "Date: " << appInfo.buildTime.toString(Qt::RFC2822Date) << '\n';
-    str << '\n';
-    PluginManager::formatPluginVersions(str);
-    str << '\n' << coreplugin->copyright() << '\n';
+    // OPENMV-DIFF //
+    // str << '\n';
+    // str << QGuiApplication::applicationDisplayName() << '\n';
+    // str << "Version: " << QCoreApplication::applicationVersion() << '\n';
+    // str << "Qt Version: " << qVersion() << '\n';
+    // if (!appInfo.revision.isEmpty())
+    //     str << "Revision: " << appInfo.revision << '\n';
+    // if (appInfo.buildTime.isValid())
+    //     str << "Date: " << appInfo.buildTime.toString(Qt::RFC2822Date) << '\n';
+    // str << '\n';
+    // PluginManager::formatPluginVersions(str);
+    // str << '\n' << coreplugin->copyright() << '\n';
+    // OPENMV-DIFF //
+    Q_UNUSED(appInfo)
+    Q_UNUSED(coreplugin)
+    str << '\n' << Core::Constants::IDE_DISPLAY_NAME << ' ' << QLatin1String(Core::Constants::IDE_VERSION_LONG) << " based on Qt " << qVersion();
+    // OPENMV-DIFF //
     displayHelpText(version);
 }
 
@@ -171,7 +199,9 @@ static void printHelp(const QString &a0)
     QString help;
     QTextStream str(&help);
     str << "Usage: " << a0 << fixedOptionsC;
-    PluginManager::formatOptions(str, OptionIndent, DescriptionIndent);
+    // OPENMV-DIFF //
+    // PluginManager::formatOptions(str, OptionIndent, DescriptionIndent);
+    // OPENMV-DIFF //
     PluginManager::formatPluginOptions(str, OptionIndent, DescriptionIndent);
     displayHelpText(help);
 }
@@ -221,7 +251,7 @@ static inline int askMsgSendFailed()
                 QCoreApplication::translate("Application", "Unable to send command line arguments "
                                             "to the already running instance. It does not appear to "
                                             "be responding. Do you want to start a new instance of "
-                                            "%1?").arg(Core::Constants::IDE_DISPLAY_NAME),
+                                            "%1?").arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Retry,
                 QMessageBox::Retry);
 }
@@ -395,45 +425,45 @@ Options parseCommandLine(int argc, char *argv[])
         const bool hasNext = it + 1 != end;
         const auto nextArg = hasNext ? QString::fromLocal8Bit(*(it + 1)) : QString();
 
-        if (arg == SETTINGS_OPTION && hasNext) {
-            ++it;
-            options.settingsPath = QDir::fromNativeSeparators(nextArg);
-            options.preAppArguments << arg << nextArg;
-        } else if (arg == INSTALL_SETTINGS_OPTION && hasNext) {
-            ++it;
-            options.installSettingsPath = QDir::fromNativeSeparators(nextArg);
-            options.preAppArguments << arg << nextArg;
-        } else if (arg == PLUGINPATH_OPTION && hasNext) {
-            ++it;
-            options.customPluginPaths += QDir::fromNativeSeparators(nextArg);
-            options.preAppArguments << arg << nextArg;
-        } else if (arg == LANGUAGE_OPTION && hasNext) {
+        // OPENMV-DIFF //
+        // Upstream Qt Creator 20.0.2 parseCommandLine handles many options; OpenMV
+        // strips this down to -language only and passes everything else through.
+        // if (arg == LANGUAGE_OPTION && hasNext) {
+        //     ++it;
+        //     options.uiLanguage = nextArg;
+        //     options.preAppArguments << arg << nextArg;
+        // } else if (arg == USER_LIBRARY_PATH_OPTION && hasNext) {
+        //     ++it;
+        //     options.userLibraryPath = nextArg;
+        //     options.preAppArguments << arg << nextArg;
+        // } else if (arg == TRACE_ON_WARNING_OPTION && hasNext) {
+        //     ++it;
+        //     options.traceOnWarningPatterns << nextArg;
+        // } else if (arg == TEMPORARY_CLEAN_SETTINGS1 || arg == TEMPORARY_CLEAN_SETTINGS2) {
+        //     options.wantsCleanSettings = true;
+        //     options.preAppArguments << arg;
+        // } else if (arg == CLIENTID_OPTION && hasNext) {
+        //     ++it;
+        //     options.singleAppIdPostfix = nextArg;
+        //     options.preAppArguments << arg << nextArg;
+        // } else { // arguments that are still passed on to the application
+        //     if (arg == STYLE_OPTION)
+        //         options.hasStyleOption = true;
+        //     if (arg == TEST_OPTION)
+        //         options.hasTestOption = true;
+        //     if (arg == QML_LITE_DESIGNER_OPTION)
+        //         options.singleAppIdPostfix = QML_LITE_DESIGNER_OPTION;
+        //     options.appArguments.push_back(*it);
+        // }
+        // OPENMV-DIFF //
+        if (arg == LANGUAGE_OPTION && hasNext) {
             ++it;
             options.uiLanguage = nextArg;
             options.preAppArguments << arg << nextArg;
-        } else if (arg == USER_LIBRARY_PATH_OPTION && hasNext) {
-            ++it;
-            options.userLibraryPath = nextArg;
-            options.preAppArguments << arg << nextArg;
-        } else if (arg == TRACE_ON_WARNING_OPTION && hasNext) {
-            ++it;
-            options.traceOnWarningPatterns << nextArg;
-        } else if (arg == TEMPORARY_CLEAN_SETTINGS1 || arg == TEMPORARY_CLEAN_SETTINGS2) {
-            options.wantsCleanSettings = true;
-            options.preAppArguments << arg;
-        } else if (arg == CLIENTID_OPTION && hasNext) {
-            ++it;
-            options.singleAppIdPostfix = nextArg;
-            options.preAppArguments << arg << nextArg;
         } else { // arguments that are still passed on to the application
-            if (arg == STYLE_OPTION)
-                options.hasStyleOption = true;
-            if (arg == TEST_OPTION)
-                options.hasTestOption = true;
-            if (arg == QML_LITE_DESIGNER_OPTION)
-                options.singleAppIdPostfix = QML_LITE_DESIGNER_OPTION;
             options.appArguments.push_back(*it);
         }
+        // OPENMV-DIFF //
         ++it;
     }
 
@@ -564,8 +594,48 @@ FilePath userResourcePath(const QString &settingsPath, const QString &appId)
     return urp;
 }
 
+// OPENMV-DIFF //
+void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QString &msg)
+{
+    Q_UNUSED(context)
+    QByteArray localMsg = msg.toLocal8Bit();
+    switch (type) {
+    case QtDebugMsg:
+        if(msg.contains(QLatin1String("QML Debugger: Waiting for connection on port"))) break;
+        fprintf(stdout, "%s\n", localMsg.constData()); fflush(stdout);
+        break;
+    case QtInfoMsg:
+        fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
+        break;
+    case QtWarningMsg:
+        if(msg.compare(QLatin1String("QML Debugger: Another client is already connected.")) == 0) break;
+        if(msg.compare(QLatin1String("QWaitCondition: Destroyed while threads are still waiting")) == 0) break;
+        if(msg.compare(QLatin1String("QMutex: destroying locked mutex")) == 0) break;
+        if(msg.compare(QLatin1String("JIT is disabled for QML. Property bindings and animations will be "
+                                     "very slow. Visit https://wiki.qt.io/V4 to learn about possible "
+                                     "solutions for your platform.")) == 0) break;
+        if(msg.startsWith(QLatin1String("DirectWrite: CreateFontFaceFromHDC() failed (Indicates an error "
+                                        "in an input file such as a font file.)"))) break;
+        if(msg.startsWith(QLatin1String("requestActivate() called for  QWidgetWindow"))) break;
+        if(msg.startsWith(QLatin1String("Corrupt JPEG data:"))) break;
+        fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
+        break;
+    case QtCriticalMsg:
+        fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
+        break;
+    case QtFatalMsg:
+        fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
+        abort();
+    }
+}
+// OPENMV-DIFF //
+
 int main(int argc, char **argv)
 {
+    // OPENMV-DIFF //
+    qInstallMessageHandler(myMessageOutput);
+    // OPENMV-DIFF //
+
     Restarter restarter(argc, argv);
     Environment::systemEnvironment(); // cache system environment before we do any changes
 
@@ -575,6 +645,17 @@ int main(int argc, char **argv)
     // We can't use the regular way of the plugin manager,
     // because settings can change the way plugin manager behaves
     Options options = parseCommandLine(argc, argv);
+
+    // OPENMV-DIFF //
+    // The viewer variant is a forced-viewer-mode build. Inject "-viewer_mode" into
+    // the application arguments so every existing runtime check (the OpenMV plugin's
+    // m_viewerMode, the settings-dialog category hiding, session restore, the serial
+    // terminal tab size) sees it -- exactly as if the user had passed the flag.
+#ifdef OPENMV_VIEWER_IDE
+    static char viewerModeArg[] = "-viewer_mode";
+    options.appArguments.push_back(viewerModeArg);
+#endif
+    // OPENMV-DIFF //
     applicationDirPath(argv[0]);
 
     if (!options.traceOnWarningPatterns.isEmpty()) {
@@ -739,7 +820,25 @@ int main(int argc, char **argv)
     QCoreApplication::setApplicationName(Core::Constants::IDE_CASED_ID);
     QCoreApplication::setApplicationVersion(QLatin1String(Core::Constants::IDE_VERSION_LONG));
     QCoreApplication::setOrganizationName(QLatin1String(Core::Constants::IDE_SETTINGSVARIANT_STR));
-    QGuiApplication::setApplicationDisplayName(Core::Constants::IDE_DISPLAY_NAME);
+    // OPENMV-DIFF //
+    // QGuiApplication::setApplicationDisplayName(Core::Constants::IDE_DISPLAY_NAME);
+    // OPENMV-DIFF //
+    // Viewer mode is a read-only telemetry viewer, not the IDE -- present it as
+    // "OpenMV Viewer" everywhere the app name is shown. This is the single runtime
+    // source of the name; user-facing strings read QGuiApplication::applicationDisplayName().
+    // Scan the (possibly viewer-injected) application arguments, not raw argv, so
+    // the forced-viewer build is detected here too.
+    bool viewerMode = false;
+    for (char *appArg : options.appArguments) {
+        if (QLatin1String(appArg) == QLatin1String("-viewer_mode")) {
+            viewerMode = true;
+            break;
+        }
+    }
+    QGuiApplication::setApplicationDisplayName(viewerMode
+                                                  ? QLatin1String("OpenMV Viewer")
+                                                  : QLatin1String(Core::Constants::IDE_DISPLAY_NAME));
+    // OPENMV-DIFF //
 
     const QScopeGuard cleanup([] { ProcessReaper::deleteAll(); });
 
@@ -752,6 +851,39 @@ int main(int argc, char **argv)
     // Re-setup install settings for real
     setupInstallSettings(options.installSettingsPath);
     QtcSettings *userSettings = createUserSettings();
+    // OPENMV-DIFF //
+
+    // This is the minimum version that OpenMV IDE must be.
+    // If not, it will delete the user settings for the application to ensure there's no incompatible settings.
+    int eraseSettingsMajor = 4;
+    int eraseSettingsMinor = 4;
+    int eraseSettingsPatch = 0;
+
+    userSettings->beginGroup("OpenMV");
+    int major = userSettings->value("ResourcesMajor", eraseSettingsMajor).toInt();
+    int minor = userSettings->value("ResourcesMinor", eraseSettingsMinor).toInt();
+    int patch = userSettings->value("ResourcesPatch", eraseSettingsPatch).toInt();
+    userSettings->endGroup();
+
+    // Wipe out earlier settings if they are too old.
+    if ((major < eraseSettingsMajor)
+    || ((major == eraseSettingsMajor) && (minor < eraseSettingsMinor))
+    || ((major == eraseSettingsMajor) && (minor == eraseSettingsMinor) && (patch < eraseSettingsPatch)))
+    {
+        Utils::FilePath path = Utils::FilePath::fromString(QFileInfo(userSettings->fileName()).path());
+        delete userSettings;
+
+        if (!path.removeRecursively())
+        {
+            QMessageBox::critical(Q_NULLPTR, QString(),
+                QString(QLatin1String("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!")).arg(QGuiApplication::applicationDisplayName()));
+            exit(-1);
+        }
+
+        userSettings = createUserSettings();
+    }
+
+    // OPENMV-DIFF //
     QtcSettings *installSettings
         = new QtcSettings(QSettings::IniFormat,
                           QSettings::SystemScope,
@@ -903,10 +1035,12 @@ int main(int argc, char **argv)
         appOptions.insert(QLatin1String(HELP_OPTION4), false);
         appOptions.insert(QLatin1String(VERSION_OPTION), false);
         appOptions.insert(QLatin1String(VERSION_OPTION2), false);
-        appOptions.insert(QLatin1String(CLIENT_OPTION), false);
+        // OPENMV-DIFF //
+        // appOptions.insert(QLatin1String(CLIENT_OPTION), false);
+        // appOptions.insert(QLatin1String(PID_OPTION), true);
+        // appOptions.insert(QLatin1String(BLOCK_OPTION), false);
+        // OPENMV-DIFF //
         appOptions.insert(QLatin1String(LIST_THEMES_OPTION), false);
-        appOptions.insert(QLatin1String(PID_OPTION), true);
-        appOptions.insert(QLatin1String(BLOCK_OPTION), false);
         if (Result<> res = PluginManager::parseOptions(pluginArguments, appOptions, &foundAppOptions); !res) {
             displayError(res.error());
             printHelp(QFileInfo(app.applicationFilePath()).baseName());
@@ -917,21 +1051,80 @@ int main(int argc, char **argv)
                            + lastSessionArgument());
 
     PluginSpec *coreplugin = PluginManager::specById(QLatin1String(corePluginIdC));
+    // OPENMV-DIFF //
+    // Upstream 20.0.2 only looks up the core plugin here (the old setCreatorProcessData /
+    // ProcessData plumbing was removed upstream). OpenMV additionally requires the
+    // TextEditor, OpenMV and TabbedEditor plugins, so look them up via specById too.
+    PluginSpec *texteditorplugin = PluginManager::specById(QLatin1String("texteditor"));
+    PluginSpec *openmvplugin = PluginManager::specById(QLatin1String("openmv"));
+    PluginSpec *tabbededitor = PluginManager::specById(QLatin1String("tabbededitor"));
+    // OPENMV-DIFF //
     if (!coreplugin) {
         QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
         const QString reason = QCoreApplication::translate("Application", "Could not find Core plugin in %1").arg(nativePaths);
         displayError(msgCoreLoadFailure(reason));
         return 1;
     }
+    // OPENMV-DIFF //
+    if (!texteditorplugin) {
+        QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
+        const QString reason = QCoreApplication::translate("Application", "Could not find TextEditor plugin in %1").arg(nativePaths);
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    if (!openmvplugin) {
+        QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
+        const QString reason = QCoreApplication::translate("Application", "Could not find OpenMV plugin in %1").arg(nativePaths);
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    if (!tabbededitor) {
+        QString nativePaths = QDir::toNativeSeparators(pluginPaths.join(QLatin1Char(',')));
+        const QString reason = QCoreApplication::translate("Application", "Could not find TabbedEditor plugin in %1").arg(nativePaths);
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    // OPENMV-DIFF //
     if (!coreplugin->isEffectivelyEnabled()) {
         const QString reason = QCoreApplication::translate("Application", "Core plugin is disabled.");
         displayError(msgCoreLoadFailure(reason));
         return 1;
     }
+    // OPENMV-DIFF //
+    if (!texteditorplugin->isEffectivelyEnabled()) {
+        const QString reason = QCoreApplication::translate("Application", "TextEditor plugin is disabled.");
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    if (!openmvplugin->isEffectivelyEnabled()) {
+        const QString reason = QCoreApplication::translate("Application", "OpenMV plugin is disabled.");
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    if (!tabbededitor->isEffectivelyEnabled()) {
+        const QString reason = QCoreApplication::translate("Application", "TabbedEditor plugin is disabled.");
+        displayError(msgCoreLoadFailure(reason));
+        return 1;
+    }
+    // OPENMV-DIFF //
     if (coreplugin->hasError()) {
         displayError(msgCoreLoadFailure(coreplugin->errorString()));
         return 1;
     }
+    // OPENMV-DIFF //
+    if (texteditorplugin->hasError()) {
+        displayError(msgCoreLoadFailure(texteditorplugin->errorString()));
+        return 1;
+    }
+    if (openmvplugin->hasError()) {
+        displayError(msgCoreLoadFailure(openmvplugin->errorString()));
+        return 1;
+    }
+    if (tabbededitor->hasError()) {
+        displayError(msgCoreLoadFailure(tabbededitor->errorString()));
+        return 1;
+    }
+    // OPENMV-DIFF //
     if (foundAppOptions.contains(QLatin1String(VERSION_OPTION))
             || foundAppOptions.contains(QLatin1String(VERSION_OPTION2))) {
         printVersion(info, coreplugin);
@@ -951,16 +1144,25 @@ int main(int argc, char **argv)
 
 
     qint64 pid = -1;
-    if (foundAppOptions.contains(QLatin1String(PID_OPTION))) {
-        QString pidString = foundAppOptions.value(QLatin1String(PID_OPTION));
-        bool pidOk;
-        qint64 tmpPid = pidString.toLongLong(&pidOk);
-        if (pidOk)
-            pid = tmpPid;
-    }
+    // OPENMV-DIFF //
+    // if (foundAppOptions.contains(QLatin1String(PID_OPTION))) {
+    //     QString pidString = foundAppOptions.value(QLatin1String(PID_OPTION));
+    //     bool pidOk;
+    //     qint64 tmpPid = pidString.toLongLong(&pidOk);
+    //     if (pidOk)
+    //         pid = tmpPid;
+    // }
+    // OPENMV-DIFF //
 
-    bool isBlock = foundAppOptions.contains(QLatin1String(BLOCK_OPTION));
+    // OPENMV-DIFF //
+    // bool isBlock = foundAppOptions.contains(QLatin1String(BLOCK_OPTION));
+    // OPENMV-DIFF //
+    bool isBlock = false;
+    // OPENMV-DIFF //
     if (app.isRunning() && (pid != -1 || isBlock
+                            // OPENMV-DIFF //
+                            || true
+                            // OPENMV-DIFF //
                             || foundAppOptions.contains(QLatin1String(CLIENT_OPTION)))) {
         app.setBlock(isBlock);
         if (app.sendMessage(PluginManager::serializedArguments(), 5000 /*timeout*/, pid))
@@ -1004,6 +1206,10 @@ int main(int argc, char **argv)
         // Disable menu animation which just looks bad
         QApplication::setEffectEnabled(Qt::UI_AnimateMenu, false);
     }
+
+    // OPENMV-DIFF //
+    pluginManager.remoteArguments(PluginManager::serializedArguments(), Q_NULLPTR);
+    // OPENMV-DIFF //
 
     const int exitCode = restarter.restartOrExit(app.exec());
     Utils::setCrashReportingEnabled(false);

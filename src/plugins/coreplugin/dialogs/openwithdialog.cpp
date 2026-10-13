@@ -11,6 +11,9 @@
 #include <QDialogButtonBox>
 #include <QListWidget>
 #include <QPushButton>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 
 namespace Core::Internal {
 
@@ -64,7 +67,15 @@ int OpenWithDialog::editor() const
 
 void OpenWithDialog::setCurrentEditor(int index)
 {
-    editorListWidget->setCurrentRow(index);
+    // OPENMV-DIFF //
+    // editorListWidget->setCurrentRow(index);
+    // Deferred: called before exec(); selecting on the not-yet-shown list
+    // trips the macOS Cocoa a11y bridge (NSRangeException).
+    QTimer::singleShot(0, this, [this, index] {
+        if (index >= 0 && index < editorListWidget->count())
+            editorListWidget->setCurrentRow(index);
+    });
+    // OPENMV-DIFF //
 }
 
 void OpenWithDialog::currentItemChanged(QListWidgetItem *current, QListWidgetItem *)

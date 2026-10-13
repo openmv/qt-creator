@@ -191,6 +191,14 @@ public:
         Alert,
         Error,
         Others
+        // OPENMV-DIFF //
+        , OpenMVModules
+        , OpenMVClasses
+        , OpenMVDatas
+        , OpenMVFunctions
+        , OpenMVMethods
+        , OpenMVArguments
+        // OPENMV-DIFF //
     };
     Q_ENUM(TextStyle)
 
