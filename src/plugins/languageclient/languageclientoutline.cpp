@@ -241,7 +241,14 @@ void LanguageClientOutlineWidget::handleResponse(const DocumentUri &uri,
         m_model.setInfo(*s, false);
     else
         m_model.clear();
-    m_view.expandAll();
+    // OPENMV-DIFF //
+    // Guard expandAll on the outline tree view: operating on the item view while
+    // it is hidden trips the macOS Cocoa accessibility bridge (crash class),
+    // matching the deferral the rest of this file already applies.
+    // m_view.expandAll();
+    if (m_view.isVisible())
+        m_view.expandAll();
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     // // The list has changed, update the current items
