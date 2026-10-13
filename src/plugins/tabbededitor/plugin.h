@@ -15,7 +15,7 @@ class TabbedEditorPlugin : public ExtensionSystem::IPlugin
 public:
     TabbedEditorPlugin();
 
-    bool initialize(const QStringList &arguments, QString *errorString);
+    Utils::Result<> initialize(const QStringList &arguments) final;
     void extensionsInitialized() {}
 
 private slots:

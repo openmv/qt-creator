@@ -253,10 +253,8 @@ void OpenMVPlugin::openUrlOrWarn(const QUrl &url)
     }
 }
 
-bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessage)
+Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
 {
-    Q_UNUSED(errorMessage)
-
     m_viewerMode = arguments.contains(QStringLiteral("-viewer_mode"));
 
     // The viewer build ships none of these resource folders (stripped from its
@@ -797,7 +795,7 @@ bool OpenMVPlugin::initialize(const QStringList &arguments, QString *errorMessag
         }
     }
 
-    return true;
+    return Utils::ResultOk;
 }
 
 void OpenMVPlugin::extensionsInitialized()

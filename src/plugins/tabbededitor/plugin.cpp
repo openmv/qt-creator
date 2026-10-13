@@ -24,10 +24,9 @@ TabbedEditorPlugin::TabbedEditorPlugin() :
 {
 }
 
-bool TabbedEditorPlugin::initialize(const QStringList &arguments, QString *errorString)
+Utils::Result<> TabbedEditorPlugin::initialize(const QStringList &arguments)
 {
     Q_UNUSED(arguments)
-    Q_UNUSED(errorString)
 
     // OPENMV-DIFF //
     // connect(Core::ICore::instance(), SIGNAL(themeChanged()), this, SLOT(updateStyleToBaseColor()));
@@ -58,7 +57,7 @@ bool TabbedEditorPlugin::initialize(const QStringList &arguments, QString *error
 
     mainWindow->setCentralWidget(wrapper);
 
-    return true;
+    return Utils::ResultOk;
 }
 
 QString TabbedEditorPlugin::getStylesheetPatternFromFile(const QString &filepath)

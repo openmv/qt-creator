@@ -491,7 +491,7 @@ class OpenMVPlugin : public ExtensionSystem::IPlugin
 public:
 
     explicit OpenMVPlugin();
-    bool initialize(const QStringList &arguments, QString *errorMessage);
+    Utils::Result<> initialize(const QStringList &arguments) final;
     void extensionsInitialized();
     bool delayedInitialize();
     ExtensionSystem::IPlugin::ShutdownFlag aboutToShutdown();
