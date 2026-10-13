@@ -12,6 +12,7 @@ Patch 1: disable Jedi's private-name-mangling completion filter
 Date:  2026-07-09
 Files: windows/jedi/inference/value/klass.py
        mac/jedi/inference/value/klass.py
+       mac-aarch64/jedi/inference/value/klass.py
        linux-x86_64/jedi/inference/value/klass.py
 Where: ClassFilter._access_possible (around line 122 in jedi 0.19.1)
 
