@@ -149,6 +149,10 @@ class HighlighterSettingsPage final : public Core::IOptionsPage
 {
 public:
     HighlighterSettingsPage()
+        // OPENMV-DIFF //
+        // OpenMV hides the Generic Highlighter settings page from Preferences.
+        : Core::IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId(Constants::TEXT_EDITOR_HIGHLIGHTER_SETTINGS);
         setDisplayName(Tr::tr("Generic Highlighter"));

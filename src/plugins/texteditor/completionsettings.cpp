@@ -184,6 +184,10 @@ class CompletionSettingsPage final : public Core::IOptionsPage
 {
 public:
     CompletionSettingsPage()
+        // OPENMV-DIFF //
+        // OpenMV hides the Completion settings page from Preferences.
+        : Core::IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId("P.Completion");
         setDisplayName(Tr::tr("Completion"));
