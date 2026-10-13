@@ -821,13 +821,28 @@ PythonSettings::PythonSettings()
     // OPENMV-DIFF //
     // m_taskTreeRunner.start(recipe);
     // OPENMV-DIFF //
+    // Register the IDE's bundled interpreter at <resources>/<relPath> and return
+    // the id of the resulting list entry. createInterpreter() mints a fresh uuid
+    // on every launch, so if this path was already persisted (from a prior run)
+    // its stored id differs; we must resolve the registered entry's id by command
+    // path, otherwise forcing the default to the fresh id leaves it dangling and
+    // detectPython() silently falls back to some other (e.g. stale) interpreter.
+    const auto registerBundled = [](const QString &relPath) -> QString {
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(relPath), {});
+        if (!alreadyRegistered(interpreter))
+            settingsInstance->addInterpreter(interpreter, true);
+        return Utils::findOrDefault(settingsInstance->interpreters(),
+                                    [&interpreter](const Interpreter &i) {
+                                        return i.command.resolveSymlinks()
+                                               == interpreter.command.resolveSymlinks();
+                                    })
+            .id;
+    };
+
     QString bundledInterpreterId;
     if (Utils::HostOsInfo::isWindowsHost())
     {
-        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/win/python.exe")), {});
-        if (!alreadyRegistered(interpreter))
-            settingsInstance->addInterpreter(interpreter, true);
-        bundledInterpreterId = interpreter.id;
+        bundledInterpreterId = registerBundled(QStringLiteral("python/win/python.exe"));
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
@@ -836,45 +851,22 @@ PythonSettings::PythonSettings()
         // The old unconditional "python/mac/bin/python" path does not exist on
         // arm64 builds, so the forced default below pointed at a missing
         // interpreter and silently disabled the Python language server.
-        const QString pythonPath = ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
-                                    || Utils::HostOsInfo::isRunningUnderRosetta())
-            ? QStringLiteral("python/mac-aarch64/bin/python3.13")
-            : QStringLiteral("python/mac/bin/python");
-        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(pythonPath), {});
-        if (!alreadyRegistered(interpreter))
-            settingsInstance->addInterpreter(interpreter, true);
-        bundledInterpreterId = interpreter.id;
+        bundledInterpreterId = registerBundled(
+            ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+             || Utils::HostOsInfo::isRunningUnderRosetta())
+                ? QStringLiteral("python/mac-aarch64/bin/python3.13")
+                : QStringLiteral("python/mac/bin/python"));
     }
     else if (Utils::HostOsInfo::isLinuxHost())
     {
         if(QSysInfo::buildCpuArchitecture() == QStringLiteral("i386"))
-        {
-            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86/bin/python")), {});
-            if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter, true);
-            bundledInterpreterId = interpreter.id;
-        }
+            bundledInterpreterId = registerBundled(QStringLiteral("python/linux-x86/bin/python"));
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("x86_64"))
-        {
-            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-x86_64/bin/python")), {});
-            if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter, true);
-            bundledInterpreterId = interpreter.id;
-        }
+            bundledInterpreterId = registerBundled(QStringLiteral("python/linux-x86_64/bin/python"));
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
-        {
-            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm/bin/python")), {});
-            if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter, true);
-            bundledInterpreterId = interpreter.id;
-        }
+            bundledInterpreterId = registerBundled(QStringLiteral("python/linux-arm/bin/python"));
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
-        {
-            const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python")), {});
-            if (!alreadyRegistered(interpreter))
-                settingsInstance->addInterpreter(interpreter, true);
-            bundledInterpreterId = interpreter.id;
-        }
+            bundledInterpreterId = registerBundled(QStringLiteral("python/linux-arm64/bin/python"));
     }
     else
     {
