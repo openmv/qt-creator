@@ -3239,7 +3239,15 @@ QAction *EditorManager::createDiffAgainstCurrentFileAction(
     const auto diffAgainstCurrentFile = [filePath]() {
         QTC_ASSERT(EditorManager::currentDocument(), return);
         const FilePath leftFilePath = filePath();
-        const FilePath rightFilePath = EditorManager::currentDocument()->filePath();
+        FilePath rightFilePath = EditorManager::currentDocument()->filePath();
+        // OPENMV-DIFF //
+        // OpenMV virtual/camera documents carry a real on-disk path in the
+        // "diffFilePath" property; fall back to it so "Diff Against Current File"
+        // is not a silent no-op on them.
+        if (rightFilePath.isEmpty())
+            rightFilePath = FilePath::fromString(
+                EditorManager::currentDocument()->property("diffFilePath").toString());
+        // OPENMV-DIFF //
         if (leftFilePath.isEmpty() || rightFilePath.isEmpty())
             return;
         if (auto diffService = DiffService::instance())

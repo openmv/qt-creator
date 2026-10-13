@@ -41,6 +41,9 @@
 #include <QRegularExpressionValidator>
 #include <QSet>
 #include <QSizePolicy>
+// OPENMV-DIFF //
+#include <QTimer>
+// OPENMV-DIFF //
 #include <QToolButton>
 
 const char WORKING_COPY_KIT_ID[] = "modified kit";
@@ -524,6 +527,17 @@ KitOptionsPageWidget::~KitOptionsPageWidget()
 
 void KitOptionsPageWidget::scrollToSelectedKit()
 {
+    // OPENMV-DIFF //
+    // Defer selecting/scrolling the kit tree view until it is actually visible.
+    // scrollToSelectedKit() runs from the widget constructor, before the options
+    // page is shown; selecting/scrolling an item view while hidden trips the
+    // macOS Cocoa accessibility bridge (NSRangeException). See the macOS Qt a11y
+    // crash class.
+    if (!m_groupedView.view().isVisible()) {
+        QTimer::singleShot(0, &m_groupedView.view(), [this] { scrollToSelectedKit(); });
+        return;
+    }
+    // OPENMV-DIFF //
     const int row = m_model.rowForId(
         Core::preselectedOptionsPageItem(Constants::KITS_SETTINGS_PAGE_ID));
     m_groupedView.selectRow(row);
@@ -541,7 +555,11 @@ void KitOptionsPageWidget::kitSelectionChanged(int newRow)
     if (newRow >= 0) {
         load(m_model.item(newRow), newRow);
         m_detailWidget.setVisible(true);
-        m_groupedView.scrollToRow(newRow);
+        // OPENMV-DIFF //
+        // Only scroll when the view is already visible (macOS a11y crash class).
+        if (m_groupedView.view().isVisible())
+            m_groupedView.scrollToRow(newRow);
+        // OPENMV-DIFF //
     } else {
         m_detailWidget.setVisible(false);
     }
