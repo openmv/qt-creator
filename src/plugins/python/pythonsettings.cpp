@@ -831,7 +831,16 @@ PythonSettings::PythonSettings()
     }
     else if(Utils::HostOsInfo::isMacHost())
     {
-        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(QStringLiteral("python/mac/bin/python")), {});
+        // Apple Silicon (and an x86_64 binary under Rosetta) ships the native
+        // arm64 interpreter under python/mac-aarch64; Intel ships python/mac.
+        // The old unconditional "python/mac/bin/python" path does not exist on
+        // arm64 builds, so the forced default below pointed at a missing
+        // interpreter and silently disabled the Python language server.
+        const QString pythonPath = ((Utils::HostOsInfo::hostArchitecture() == Utils::OsArchArm64)
+                                    || Utils::HostOsInfo::isRunningUnderRosetta())
+            ? QStringLiteral("python/mac-aarch64/bin/python3.13")
+            : QStringLiteral("python/mac/bin/python");
+        const Interpreter interpreter = createInterpreter(Core::ICore::resourcePath(pythonPath), {});
         if (!alreadyRegistered(interpreter))
             settingsInstance->addInterpreter(interpreter, true);
         bundledInterpreterId = interpreter.id;
