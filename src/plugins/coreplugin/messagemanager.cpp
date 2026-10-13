@@ -17,7 +17,15 @@
 #include <QPointer>
 
 // OPENMV-DIFF //
-#include "outputwindow.h"
+#include "icore.h"
+#include "coreicons.h"
+#include "actionmanager/actionmanager.h"
+#include "actionmanager/command.h"
+
+#include <QAction>
+#include <QActionGroup>
+#include <QMenu>
+#include <QToolButton>
 // OPENMV-DIFF //
 
 /*!
@@ -35,16 +43,30 @@ using namespace Core::Internal;
 namespace Core::MessageManager {
 
 const char zoomSettingsKey[] = "Core/MessageOutput/Zoom";
+// OPENMV-DIFF //
+const char wrapSettingsKey[] = "Core/MessageOutput/WrapText";
+const char serialDebugLevelKey[] = "Core/MessageOutput/SerialDebugLevel";
+// OPENMV-DIFF //
 
 class MessageOutputWindow final : public IOutputPane
 {
 public:
     explicit MessageOutputWindow(QObject *parent)
-        : IOutputPane(parent)
+        // OPENMV-DIFF //
+        // OpenMV's IOutputPane takes (bool hidden, QObject *parent); passing the
+        // parent pointer alone binds it to `hidden` (pointer->bool == true), which
+        // silently hides the Serial Terminal pane. Pass hidden=false explicitly.
+        // : IOutputPane(parent)
+        : IOutputPane(false, parent)
+        // OPENMV-DIFF //
     {
         setId("GeneralMessages");
-        setDisplayName(Tr::tr("General Messages"));
-        setPriorityInStatusBar(-100);
+        // OPENMV-DIFF //
+        // setDisplayName(Tr::tr("General Messages"));
+        // setPriorityInStatusBar(-100);
+        setDisplayName(Tr::tr("Serial Terminal"));
+        setPriorityInStatusBar(1);
+        // OPENMV-DIFF //
 
         m_widget = new OutputWindow(Context(Constants::C_GENERAL_OUTPUT_PANE), zoomSettingsKey);
         m_widget->setReadOnly(true);
@@ -58,6 +80,77 @@ public:
         setupFilterUi("MessageOutputPane.Filter", "Core::Internal::MessageOutputWindow");
         setFilteringEnabled(true);
         setupContext(Constants::C_GENERAL_OUTPUT_PANE, m_widget);
+
+        // OPENMV-DIFF //
+        m_widget->setMaximumBlockCount(100000);
+        m_widget->setWordWrapEnabled(false);
+
+        m_saveButton = new QToolButton(m_widget);
+        m_saveButton->setAutoRaise(true);
+        m_saveAction = new QAction(Tr::tr("Save"), this);
+        m_saveAction->setIcon(Utils::Icons::SAVEFILE_TOOLBAR.icon());
+        Command *cmd = ActionManager::registerAction(m_saveAction, "Core.MessageOutputWindow.Save");
+        cmd->setAttribute(Command::CA_UpdateText);
+        m_saveButton->setDefaultAction(cmd->action());
+        connect(m_saveAction, &QAction::triggered, m_widget, &OutputWindow::save);
+
+        m_wrapButton = new QToolButton(m_widget);
+        m_wrapButton->setAutoRaise(true);
+        m_wrapAction = new QAction(Tr::tr("Wrap Text"), this);
+        m_wrapAction->setCheckable(true);
+        m_wrapAction->setIcon(Utils::Icons::WRAP_TOOLBAR.icon());
+        cmd = ActionManager::registerAction(m_wrapAction, "Core.MessageOutputWindow.Wrap");
+        cmd->setAttribute(Command::CA_UpdateText);
+        m_wrapButton->setDefaultAction(cmd->action());
+        connect(m_wrapAction, &QAction::toggled, this, [this] (bool checked) {
+            m_widget->setWordWrapEnabled(checked);
+            ICore::settings()->setValue(wrapSettingsKey, checked);
+        });
+        m_wrapAction->setChecked(ICore::settings()->value(wrapSettingsKey).toBool());
+
+        // Serial-protocol debug logging. Off by default; the popup menu picks the
+        // verbosity. The openmv plugin connects to OutputWindow::serialDebugLevelChanged
+        // (and reads serialDebugLevel() at startup) to drive the protocol's debug flags --
+        // coreplugin stays agnostic of the protocol.
+        m_debugButton = new QToolButton(m_widget);
+        m_debugButton->setAutoRaise(true);
+        m_debugButton->setCheckable(true);
+        m_debugButton->setIcon(Utils::Icons::DEBUG_TOOLBAR.icon());
+        m_debugButton->setToolTip(Tr::tr("Serial Protocol Debug Logging"));
+        m_debugButton->setPopupMode(QToolButton::InstantPopup);
+        // Hide the menu-indicator arrow Qt draws in the corner for menu buttons; it
+        // clutters the small toolbar glyph (the menu still opens on click).
+        m_debugButton->setStyleSheet(QStringLiteral("QToolButton::menu-indicator { image: none; }"));
+
+        QMenu *debugMenu = new QMenu(m_debugButton);
+        QActionGroup *debugGroup = new QActionGroup(debugMenu);
+        const QStringList debugLevelNames = {
+            Tr::tr("Off"),
+            Tr::tr("Commands"),
+            Tr::tr("Commands + Packets"),
+            Tr::tr("Commands + Packets + Fragments"),
+        };
+        for (int i = 0; i < debugLevelNames.size(); ++i) {
+            QAction *levelAction = debugMenu->addAction(debugLevelNames.at(i));
+            levelAction->setCheckable(true);
+            levelAction->setData(i);
+            debugGroup->addAction(levelAction);
+        }
+        m_debugButton->setMenu(debugMenu);
+
+        int savedLevel = qBound(0, ICore::settings()->value(serialDebugLevelKey, 0).toInt(),
+                                debugLevelNames.size() - 1);
+        debugGroup->actions().at(savedLevel)->setChecked(true);
+        m_debugButton->setChecked(savedLevel > 0);
+        m_widget->setSerialDebugLevel(savedLevel);
+
+        connect(debugGroup, &QActionGroup::triggered, this, [this] (QAction *levelAction) {
+            const int level = levelAction->data().toInt();
+            ICore::settings()->setValue(serialDebugLevelKey, level);
+            m_debugButton->setChecked(level > 0);
+            m_widget->setSerialDebugLevel(level);
+        });
+        // OPENMV-DIFF //
     }
 
     ~MessageOutputWindow() final
@@ -67,7 +160,10 @@ public:
 
     void append(const QString &text)
     {
-        m_widget->appendMessage(text, Utils::GeneralMessageFormat);
+        // OPENMV-DIFF //
+        // m_widget->appendMessage(text, Utils::GeneralMessageFormat);
+        m_widget->appendText(text);
+        // OPENMV-DIFF //
     }
 
     void clearLinesPrefixedWith(const QString &prefix, bool deleteTrailingLineBreak)
@@ -77,6 +173,11 @@ public:
 
     // OPENMV-DIFF //
     OutputWindow *widget() const { return m_widget; }
+
+    QList<QWidget *> toolBarWidgets() const final
+    {
+        return QList<QWidget *>() << m_saveButton << m_wrapButton << m_debugButton;
+    }
     // OPENMV-DIFF //
 
 private:
@@ -107,6 +208,13 @@ private:
     }
 
     OutputWindow *m_widget = nullptr;
+    // OPENMV-DIFF //
+    QToolButton *m_saveButton = nullptr;
+    QToolButton *m_wrapButton = nullptr;
+    QToolButton *m_debugButton = nullptr;
+    QAction *m_saveAction = nullptr;
+    QAction *m_wrapAction = nullptr;
+    // OPENMV-DIFF //
 };
 
 static MessageOutputWindow *messageOutputWindow()
