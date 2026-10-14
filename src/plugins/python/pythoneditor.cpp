@@ -300,8 +300,15 @@ PythonDocument::PythonDocument()
 
 void PythonDocument::updateCurrentPython()
 {
-    if (!isTemporary())
-        updatePython(detectPython(filePath()));
+    // OPENMV-DIFF //
+    // OpenMV's main editor documents (the welcome script, camera scripts opened
+    // via openEditorWithContents) are temporary/unsaved, and must still get the
+    // Python language server. Upstream 20.0.2 added an `if (!isTemporary())`
+    // guard here that disables the LSP for them; drop it.
+    // if (!isTemporary())
+    //     updatePython(detectPython(filePath()));
+    updatePython(detectPython(filePath()));
+    // OPENMV-DIFF //
 }
 
 void PythonDocument::updatePython(const FilePath &python)

@@ -566,8 +566,15 @@ void PyLSConfigureAssistant::startCheckPythonLanguageServer(
 void PyLSConfigureAssistant::openDocument(const FilePath &python, TextDocument *document)
 {
     resetEditorInfoBar(document);
-    if (!PythonSettings::pylsEnabled() || !python.exists() || document->isTemporary())
+    // OPENMV-DIFF //
+    // OpenMV's editor documents are frequently temporary/unsaved (welcome script,
+    // camera scripts); they must still get the language server. Upstream 20.0.2
+    // added `|| document->isTemporary()` here to skip them; drop it. pylsp
+    // analyses the in-memory contents, so a real file path is not required.
+    // if (!PythonSettings::pylsEnabled() || !python.exists() || document->isTemporary())
+    if (!PythonSettings::pylsEnabled() || !python.exists())
         return;
+    // OPENMV-DIFF //
 
     if (auto client = pythonClients().value(python)) {
         LanguageClientManager::openDocumentWithClient(document, client);
