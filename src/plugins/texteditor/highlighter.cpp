@@ -48,7 +48,14 @@ TextStyle categoryForTextStyle(int style)
     case KSyntaxHighlighting::Theme::String: return C_STRING;
     case KSyntaxHighlighting::Theme::VerbatimString: return C_STRING;
     case KSyntaxHighlighting::Theme::SpecialString: return C_STRING;
-    case KSyntaxHighlighting::Theme::Import: return C_MACRO;
+    // OPENMV-DIFF //
+    // Qt Creator 20 remapped the generic-highlighter Import style (used by
+    // Python's import/from keywords) from C_PREPROCESSOR to C_MACRO. OpenMV's
+    // themes color C_PREPROCESSOR but leave C_MACRO at the default text color,
+    // so imports lost their highlight. Keep the 14.0.2 mapping.
+    // case KSyntaxHighlighting::Theme::Import: return C_MACRO;
+    case KSyntaxHighlighting::Theme::Import: return C_PREPROCESSOR;
+    // OPENMV-DIFF //
     case KSyntaxHighlighting::Theme::DataType: return C_TYPE;
     case KSyntaxHighlighting::Theme::DecVal: return C_NUMBER;
     case KSyntaxHighlighting::Theme::BaseN: return C_NUMBER;
