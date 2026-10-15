@@ -382,7 +382,7 @@ void OpenMVPlugin::setPortPath(bool silent)
         {
             if(!silent)
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                                       Tr::tr("Select Drive"),
                                       Tr::tr("No valid drives were found to associate with your OpenMV Cam!"));
             }
@@ -419,7 +419,7 @@ void OpenMVPlugin::setPortPath(bool silent)
             int index = drives.indexOf(settings->value(portKey).toString());
 
             bool ok = silent;
-            QString temp = silent ? drives.first() : OmvUi::getItem(Core::ICore::dialogParent(),
+            QString temp = silent ? drives.first() : OMVUI::getItem(Core::ICore::dialogParent(),
                                                                            Tr::tr("Select Drive"), Tr::tr("Please associate a drive with your OpenMV Cam"),
                                                                            drives, (index != -1) ? index : 0, false, &ok,
                                                                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -615,7 +615,7 @@ void OpenMVPlugin::setSpacing()
         frameDumpSpacingBox->setDisabled(m_iodevice->v2ProtocolEnabled() && checked);
     });
 
-    if(OmvUi::exec(dialog) == QDialog::Accepted)
+    if(OMVUI::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(SETTINGS_GROUP "/" LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
         settings->setValue(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING,
@@ -738,7 +738,7 @@ void OpenMVPlugin::saveScript()
 {
     if(!m_working)
     {
-        int answer = OmvUi::question(Core::ICore::dialogParent(),
+        int answer = OMVUI::question(Core::ICore::dialogParent(),
                                            Tr::tr("Save Script"),
                                            Tr::tr("Strip comments and convert spaces to tabs?"),
                                            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes,
@@ -759,7 +759,7 @@ void OpenMVPlugin::saveScript()
 
                 if(!writeFileDirectAndFlush(m_portPath + QDir::separator() + QStringLiteral("main.py"), contents, &err))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                                           Tr::tr("Save Script"),
                                           Tr::tr("Error: %L1!").arg(err));
                 }
@@ -789,14 +789,14 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
         forever
         {
             path =
-                OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Template"),
+                OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Template"),
                                              settings->value(SETTINGS_GROUP "/" LAST_SAVE_TEMPLATE_PATH,
                                                              drivePath).toString(),
                                              Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.pgm *.ppm)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
-                OmvUi::warning(Core::ICore::dialogParent(),
+                OMVUI::warning(Core::ICore::dialogParent(),
                                      Tr::tr("Save Template"),
                                      Tr::tr("Please add a file extension!"));
 
@@ -813,7 +813,7 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
             if((!path.startsWith(drivePath))
                 || (!QDir(QFileInfo(path).path()).exists()))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                                       Tr::tr("Save Template"),
                                       Tr::tr("Please select a valid path on the OpenMV Cam!"));
             }
@@ -828,7 +828,7 @@ void OpenMVPlugin::saveTemplate(const QRect &rect)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                                           Tr::tr("Save Template"),
                                           Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
                 }
@@ -854,14 +854,14 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
         forever
         {
             path =
-                OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Descriptor"),
+                OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Descriptor"),
                                              settings->value(SETTINGS_GROUP "/" LAST_SAVE_DESCRIPTOR_PATH,
                                                              drivePath).toString(),
                                              Tr::tr("Keypoints Files (*.lbp *.orb)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
-                OmvUi::warning(Core::ICore::dialogParent(),
+                OMVUI::warning(Core::ICore::dialogParent(),
                                      Tr::tr("Save Descriptor"),
                                      Tr::tr("Please add a file extension!"));
 
@@ -878,7 +878,7 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
             if((!path.startsWith(drivePath))
                 || (!QDir(QFileInfo(path).path()).exists()))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                                       Tr::tr("Save Descriptor"),
                                       Tr::tr("Please select a valid path on the OpenMV Cam!"));
             }
@@ -893,7 +893,7 @@ void OpenMVPlugin::saveDescriptor(const QRect &rect)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                                           Tr::tr("Save Descriptor"),
                                           Tr::tr("\"%L1\" is longer than a max length of %L2 characters!").arg(QString::fromUtf8(sendPath)).arg(DESCRIPTOR_SAVE_PATH_MAX_LEN));
                 }
@@ -1041,7 +1041,7 @@ void OpenMVPlugin::flushPortPath()
 #if defined(Q_OS_WIN)
         if (!flushVolume(static_cast<wchar_t>(m_portPath.at(0).unicode())))
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                                   Tr::tr("Disconnect"),
                                   Tr::tr("Failed to flush \"%L1\"!").arg(m_portPath));
         }
@@ -1067,14 +1067,14 @@ void OpenMVPlugin::flushPortPath()
         }
 
         if (!ok) {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                                   Tr::tr("Disconnect"),
                                   Tr::tr("Failed to flush \"%L1\"!").arg(m_portPath));
         }
 #elif defined(Q_OS_MAC)
         if(sync_volume_np(m_portPath.toUtf8().constData(), SYNC_VOLUME_FULLSYNC | SYNC_VOLUME_WAIT) < 0)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                                   Tr::tr("Disconnect"),
                                   Tr::tr("Failed to flush \"%L1\"!").arg(m_portPath));
         }

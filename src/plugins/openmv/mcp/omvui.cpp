@@ -39,17 +39,17 @@
 
 namespace OpenMV {
 namespace Internal {
-namespace OmvUi {
+namespace OMVUI {
 
-using McpUi::Call;
-using McpUi::Error;
-using McpUi::Policy;
+using OMVMCP::Call;
+using OMVMCP::Error;
+using OMVMCP::Policy;
 
 // --- helpers ---------------------------------------------------------------
 
 static QString siteOr(const QString &site, const QString &title, const QString &text)
 {
-    return site.isEmpty() ? McpUi::synthesizeSite(title, text) : site;
+    return site.isEmpty() ? OMVMCP::synthesizeSite(title, text) : site;
 }
 
 static QString buttonName(QMessageBox::StandardButton button)
@@ -268,7 +268,7 @@ static QMessageBox::StandardButton messageBox(QMessageBox::Icon icon, int level,
                                               QMessageBox::StandardButtons buttons, QMessageBox::StandardButton defaultButton,
                                               const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
 
     if(!call)
     {
@@ -322,7 +322,7 @@ QMessageBox::StandardButton question(QWidget *parent, const QString &title, cons
                                      QMessageBox::StandardButtons buttons, QMessageBox::StandardButton defaultButton,
                                      const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QMessageBox::question(parent, title, text, buttons, defaultButton);
     return resolveChoice(call, siteOr(site, title, text), title, text, buttons, defaultButton);
 }
@@ -332,7 +332,7 @@ QMessageBox::StandardButton detailedBox(QMessageBox::Icon icon, QWidget *parent,
                                         QMessageBox::StandardButtons buttons, QMessageBox::StandardButton defaultButton,
                                         const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
 
     if(!call)
     {
@@ -360,7 +360,7 @@ QMessageBox::StandardButton detailedBox(QMessageBox::Icon icon, QWidget *parent,
 int choiceBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text,
               const QStringList &choices, int defaultIndex, bool richText, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
 
     if(!call)
     {
@@ -433,7 +433,7 @@ int choiceBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, con
 
 void asyncBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
 
     if(!call)
     {
@@ -465,7 +465,7 @@ QMessageBox::StandardButton questionCheckable(const QString &title, const QStrin
                                               QMessageBox::StandardButton acceptButton2,
                                               const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
 
     if(!call)
     {
@@ -484,7 +484,7 @@ QMessageBox::StandardButton informationCheckable(const QString &title, const QSt
                                                  QMessageBox::StandardButton defaultButton,
                                                  const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return Utils::CheckableMessageBox::information(title, text, decider, buttons, defaultButton);
 
     record(call, 0, QStringLiteral("information"), siteOr(site, title, text), title, text);
@@ -497,7 +497,7 @@ QString getText(QWidget *parent, const QString &title, const QString &label,
                 QLineEdit::EchoMode echo, const QString &text, bool *ok, Qt::WindowFlags flags,
                 Qt::InputMethodHints inputMethodHints, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QInputDialog::getText(parent, title, label, echo, text, ok, flags, inputMethodHints);
 
     const QString s = siteOr(site, title, label);
@@ -518,7 +518,7 @@ QString getItem(QWidget *parent, const QString &title, const QString &label, con
                 int current, bool editable, bool *ok, Qt::WindowFlags flags, Qt::InputMethodHints inputMethodHints,
                 const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QInputDialog::getItem(parent, title, label, items, current, editable, ok, flags, inputMethodHints);
 
     const QString s = siteOr(site, title, label);
@@ -569,7 +569,7 @@ QString getItem(QWidget *parent, const QString &title, const QString &label, con
 int getInt(QWidget *parent, const QString &title, const QString &label, int value,
            int minValue, int maxValue, int step, bool *ok, Qt::WindowFlags flags, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QInputDialog::getInt(parent, title, label, value, minValue, maxValue, step, ok, flags);
 
     const QString s = siteOr(site, title, label);
@@ -618,7 +618,7 @@ static QString answeredPath(Call *call, const QString &s, const QString &caption
 QString getOpenFileName(QWidget *parent, const QString &caption, const QString &dir, const QString &filter,
                         QString *selectedFilter, QFileDialog::Options options, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QFileDialog::getOpenFileName(parent, caption, dir, filter, selectedFilter, options);
     return answeredPath(call, siteOr(site, caption, filter), caption, QStringLiteral("open-file"), false);
 }
@@ -626,7 +626,7 @@ QString getOpenFileName(QWidget *parent, const QString &caption, const QString &
 QStringList getOpenFileNames(QWidget *parent, const QString &caption, const QString &dir, const QString &filter,
                              QString *selectedFilter, QFileDialog::Options options, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QFileDialog::getOpenFileNames(parent, caption, dir, filter, selectedFilter, options);
 
     const QString s = siteOr(site, caption, filter);
@@ -655,7 +655,7 @@ QStringList getOpenFileNames(QWidget *parent, const QString &caption, const QStr
 QString getSaveFileName(QWidget *parent, const QString &caption, const QString &dir, const QString &filter,
                         QString *selectedFilter, QFileDialog::Options options, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QFileDialog::getSaveFileName(parent, caption, dir, filter, selectedFilter, options);
     return answeredPath(call, siteOr(site, caption, filter), caption, QStringLiteral("save-file"), true);
 }
@@ -663,7 +663,7 @@ QString getSaveFileName(QWidget *parent, const QString &caption, const QString &
 QString getExistingDirectory(QWidget *parent, const QString &caption, const QString &dir,
                              QFileDialog::Options options, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QFileDialog::getExistingDirectory(parent, caption, dir, options);
     return answeredPath(call, siteOr(site, caption, QStringLiteral("dir")), caption, QStringLiteral("directory"), false);
 }
@@ -672,7 +672,7 @@ QString getExistingDirectory(QWidget *parent, const QString &caption, const QStr
 
 QAction *popupMenu(QMenu &menu, const QPoint &pos)
 {
-    if(McpUi::currentCall()) return Q_NULLPTR;
+    if(OMVMCP::currentCall()) return Q_NULLPTR;
     return menu.exec(pos);
 }
 
@@ -892,7 +892,7 @@ bool applyField(const Field &f, const QJsonValue &v)
 
 int exec(QDialog &dialog, const QString &site)
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return dialog.exec();
 
     const QString title = dialog.windowTitle();
@@ -959,28 +959,28 @@ int exec(Progress &dialog, const QString &site)
 // --- Progress ---------------------------------------------------------------
 
 Progress::Progress(QWidget *parent, Qt::WindowFlags flags) : QProgressDialog(parent, flags),
-    m_site(McpUi::synthesizeSite(QStringLiteral("progress"), QString()))
+    m_site(OMVMCP::synthesizeSite(QStringLiteral("progress"), QString()))
 {
 }
 
 Progress::Progress(const QString &labelText, const QString &cancelButtonText, int minimum, int maximum,
                    QWidget *parent, Qt::WindowFlags flags) : QProgressDialog(labelText, cancelButtonText, minimum, maximum, parent, flags),
-    m_site(McpUi::synthesizeSite(QStringLiteral("progress"), labelText))
+    m_site(OMVMCP::synthesizeSite(QStringLiteral("progress"), labelText))
 {
-    if(Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_site, labelText));
+    if(Call *call = OMVMCP::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_site, labelText));
 }
 
 void Progress::setVisible(bool visible)
 {
     // Never show a window while an agent drives the IDE; everything the window
     // would have said is in the call's log.
-    if(McpUi::currentCall()) visible = false;
+    if(OMVMCP::currentCall()) visible = false;
     QProgressDialog::setVisible(visible);
 }
 
 int Progress::exec()
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     if(!call) return QProgressDialog::exec();
 
     // Sites wire `finished -> accept` / `canceled -> reject` themselves; wait for
@@ -992,7 +992,7 @@ int Progress::exec()
     deadline.setSingleShot(true);
     connect(&deadline, &QTimer::timeout, this, [this, call] {
         call->cancelled = true;
-        McpUi::Error e;
+        OMVMCP::Error e;
         e.code = QStringLiteral("timeout");
         e.site = m_site;
         e.title = windowTitle();
@@ -1009,16 +1009,16 @@ int Progress::exec()
 
 bool Progress::wasCanceled() const
 {
-    Call *call = McpUi::currentCall();
+    Call *call = OMVMCP::currentCall();
     return QProgressDialog::wasCanceled() || (call && call->cancelled);
 }
 
 void Progress::setLabelText(const QString &text)
 {
     QProgressDialog::setLabelText(text);
-    if(Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_site, text));
+    if(Call *call = OMVMCP::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_site, text));
 }
 
-} // namespace OmvUi
+} // namespace OMVUI
 } // namespace Internal
 } // namespace OpenMV

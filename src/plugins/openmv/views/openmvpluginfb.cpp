@@ -106,14 +106,14 @@ bool OpenMVPluginFB::beginImageWriter()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Video Record"),
                 Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
         }
     }
     else
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Video Record"),
             Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
     }
@@ -312,7 +312,7 @@ void OpenMVPluginFB::private_timerCallBack()
         m_elaspedTimer = QElapsedTimer();
         m_previousElaspedTimers = QQueue<qint64>();
 
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Video Recorder"),
             Tr::tr("Failed to write frame!"));
 

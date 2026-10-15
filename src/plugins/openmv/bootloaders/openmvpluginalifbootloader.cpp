@@ -72,7 +72,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
         {
             int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_ALIF).toString());
             bool ok = mappings.size() == 1;
-            QString temp = (mappings.size() == 1) ? mappings.firstKey() : OmvUi::getItem(Core::ICore::dialogParent(),
+            QString temp = (mappings.size() == 1) ? mappings.firstKey() : OMVUI::getItem(Core::ICore::dialogParent(),
                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                 mappings.keys(), (index != -1) ? index : 0, false, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -126,7 +126,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
 
         if(!foundMatch)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No settings for the selected board type %L1!").arg(originalFirmwareFolder));
 
@@ -135,7 +135,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
     }
     else
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("No settings found!"));
 
@@ -144,7 +144,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
 
     if((!forceFirmwarePath.isEmpty()) || (forceFlashFSErase && justEraseFlashFs))
     {
-        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("Only firmware recovery is supported using the Alif Semiconductor's SE Tools."));
 
@@ -169,7 +169,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
             }
             else
             {
-                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     viewerModeFirmwareText(Tr::tr("Firmware update complete!\n\n") +
                     Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +

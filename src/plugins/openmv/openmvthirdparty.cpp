@@ -926,7 +926,7 @@ static void whenNoModal(QObject *context, std::function<void()> fn)
 
 static void offerRestart(QWidget *parent)
 {
-    if (OmvUi::question(parent,
+    if (OMVUI::question(parent,
         Tr::tr("Third Party Repositories"),
         Tr::tr("Changes take effect after restarting.\n\nRestart %L1 now?").arg(QGuiApplication::applicationDisplayName()),
         QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes)
@@ -1049,7 +1049,7 @@ bool OpenMVThirdParty::installParts(const UpdateCheck &check, QString *error, QW
             continue;
         }
 
-        OmvUi::Progress progress(Tr::tr("Downloading \"%L1\" %L2...").arg(check.remote.displayName).arg(part.name),
+        OMVUI::Progress progress(Tr::tr("Downloading \"%L1\" %L2...").arg(check.remote.displayName).arg(part.name),
                                  Tr::tr("Cancel"), 0, 0, parent,
                                  Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                                  (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
@@ -1103,7 +1103,7 @@ void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interact
         {
             if (interactive)
             {
-                OmvUi::information(Core::ICore::dialogParent(),
+                OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Third Party Repositories"),
                     Tr::tr("All third party repositories are up to date."));
             }
@@ -1145,7 +1145,7 @@ void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interact
                 lines.append(QStringLiteral("%1 - %2").arg(check.remote.displayName).arg(what.join(QStringLiteral(", "))));
             }
 
-            if (OmvUi::question(Core::ICore::dialogParent(),
+            if (OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Third Party Repositories"),
                 Tr::tr("Updates are available:\n\n%L1\n\nInstall now?").arg(lines.join(QStringLiteral("\n"))),
                 QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) != QMessageBox::Yes)
@@ -1172,7 +1172,7 @@ void OpenMVThirdParty::checkAndPrompt(QObject *context, int parts, bool interact
 
             if (!errors.isEmpty())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Third Party Repositories"),
                     Tr::tr("Some updates failed:\n\n%L1").arg(errors.join(QStringLiteral("\n"))));
             }
@@ -1350,7 +1350,7 @@ Utils::FilePath OpenMVThirdParty::syncDevChannelBlocking(const Repo &repo, QStri
         return devDir;
     }
 
-    OmvUi::Progress progress(Tr::tr("Downloading \"%L1\" development firmware...").arg(repo.displayName),
+    OMVUI::Progress progress(Tr::tr("Downloading \"%L1\" development firmware...").arg(repo.displayName),
                              Tr::tr("Cancel"), 0, 0, parent,
                              Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                              (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));

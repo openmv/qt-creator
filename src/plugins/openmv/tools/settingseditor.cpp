@@ -509,7 +509,7 @@ void SettingsEditorDialog::verifyAndAccept()
     }
 
     if (!invalid.isEmpty()) {
-        OmvUi::warning(this, windowTitle(),
+        OMVUI::warning(this, windowTitle(),
             Tr::tr("These fields have invalid or incomplete input:\n\n%L1\n\nFix or clear them before saving.")
                 .arg(invalid.join(QLatin1Char('\n'))));
         return;
@@ -533,7 +533,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     QFile file(path);
 
     if (!file.open(QIODevice::ReadOnly)) {
-        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Unable to open:\n\n%L1\n\n%L2").arg(path, file.errorString()));
         return;
     }
@@ -545,7 +545,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     const QJsonDocument doc = QJsonDocument::fromJson(data, &error);
 
     if ((error.error != QJsonParseError::NoError) || (!doc.isObject())) {
-        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Not a valid JSON config file:\n\n%L1").arg((error.error != QJsonParseError::NoError)
                 ? error.errorString() : Tr::tr("the top level must be a JSON object.")));
         return;
@@ -554,19 +554,19 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     const QJsonObject root = doc.object();
 
     if (!root.value(QStringLiteral("controls")).isArray()) {
-        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("This JSON file has no \"controls\" array to build a GUI from."));
         return;
     }
 
     SettingsEditorDialog dialog(root, Core::ICore::dialogParent());
 
-    if (OmvUi::exec(dialog) == QDialog::Accepted) {
+    if (OMVUI::exec(dialog) == QDialog::Accepted) {
         const QByteArray out = QJsonDocument(dialog.updatedRoot()).toJson(QJsonDocument::Indented);
 
         QString err;
         if (!writer(path, out, &err)) {
-            OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+            OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
                 Tr::tr("Unable to save:\n\n%L1\n\n%L2").arg(path, err));
         }
     }
@@ -581,7 +581,7 @@ void settingsEditorAction(const QString &drivePath, const ConfigFileWriter &writ
     const QString start = settings->value(SETTINGS_EDITOR_GROUP "/" LAST_SETTINGS_PATH,
         fallbackDir(drivePath)).toString();
 
-    const QString path = OmvUi::getOpenFileName(Core::ICore::dialogParent(),
+    const QString path = OMVUI::getOpenFileName(Core::ICore::dialogParent(),
         Tr::tr("Open Config File"), start, Tr::tr("JSON Files (*.json)"));
 
     if (path.isEmpty()) {
@@ -602,7 +602,7 @@ void createDefaultConfigAction(const QString &drivePath, const ConfigFileWriter 
     const QString dir = lastInfo.isDir() ? last : lastInfo.absolutePath();
     const QString suggested = QDir::cleanPath(dir + QStringLiteral("/config.json"));
 
-    QString path = OmvUi::getSaveFileName(Core::ICore::dialogParent(),
+    QString path = OMVUI::getSaveFileName(Core::ICore::dialogParent(),
         Tr::tr("Create Default Config"), suggested, Tr::tr("JSON Files (*.json)"));
 
     if (path.isEmpty()) {
@@ -617,7 +617,7 @@ void createDefaultConfigAction(const QString &drivePath, const ConfigFileWriter 
 
     QString err;
     if (!writer(path, scaffold, &err)) {
-        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Unable to create:\n\n%L1\n\n%L2").arg(path, err));
         return;
     }

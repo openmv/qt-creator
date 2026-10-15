@@ -108,7 +108,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         *done2Ptr2 = true;
                     });
 
-                    OmvUi::Progress dialog(((!tryFastMode) || forceBootloaderBricked)
+                    OMVUI::Progress dialog(((!tryFastMode) || forceBootloaderBricked)
                             ? QString(QStringLiteral("%1%2")).arg(previousMappingSet
                                 ? Tr::tr("Reconnect your OpenMV Cam...")
                                 : Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg((previousMappingSet || justEraseFlashFs || (!forceFirmwarePath.isEmpty()))
@@ -206,7 +206,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         loop2.exec();
                         QApplication::restoreOverrideCursor();
 
-                        if(OmvUi::question(Core::ICore::dialogParent(),
+                        if(OMVUI::question(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("%1 needs to update your bootloader to support ROMFS.\n\n"
                                    "The internal FAT filesystem will be erased!\n\n"
@@ -243,7 +243,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                     if(!done2)
                     {
-                        if((!previousMappingSet) && (!justEraseFlashFs) && forceFirmwarePath.isEmpty() && OmvUi::question(Core::ICore::dialogParent(),
+                        if((!previousMappingSet) && (!justEraseFlashFs) && forceFirmwarePath.isEmpty() && OMVUI::question(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("%1 can still try to repair your OpenMV Cam using your OpenMV Cam's DFU Bootloader.\n\n"
                                "Continue?").arg(QGuiApplication::applicationDisplayName()),
@@ -353,7 +353,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         flash_end = originalEraseFlashSectorStart - 1;
                     }
 
-                    OmvUi::Progress dialog(Tr::tr("Erasing..."), Tr::tr("Cancel"), flash_start, flash_end, Core::ICore::dialogParent(),
+                    OMVUI::Progress dialog(Tr::tr("Erasing..."), Tr::tr("Cancel"), flash_start, flash_end, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                     dialog.setWindowModality(Qt::ApplicationModal);
@@ -407,7 +407,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                             }
                             else
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"),
                                     Tr::tr("Timeout Error!"));
 
@@ -472,7 +472,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                             }
                             else
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"),
                                     Tr::tr("Timeout Error!"));
 
@@ -494,7 +494,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         *ok2Ptr = *ok2Ptr && ok;
                     });
 
-                    OmvUi::Progress dialog(Tr::tr("Programming..."), Tr::tr("Cancel"), 0, dataChunks.size() - 1, Core::ICore::dialogParent(),
+                    OMVUI::Progress dialog(Tr::tr("Programming..."), Tr::tr("Cancel"), 0, dataChunks.size() - 1, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                     dialog.setWindowModality(Qt::ApplicationModal);
@@ -550,7 +550,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("Timeout Error!"));
 
@@ -561,7 +561,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                 // Reset Bootloader ///////////////////////////////////
                 {
-                    OmvUi::Progress dialog(Tr::tr("Programming..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                    OMVUI::Progress dialog(Tr::tr("Programming..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                         (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
                     dialog.setWindowModality(Qt::ApplicationModal);
@@ -583,7 +583,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
 
                     if ((flash_start > 0) && (flash_end > 0))
                     {
-                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                             .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -593,7 +593,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                     }
                     else
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("Invalid flash sector configuration settings!"));
                     }
@@ -603,7 +603,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
             }
             else if(file.error() != QFile::NoError)
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -618,7 +618,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("The firmware file is empty!"));
 
@@ -634,7 +634,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -658,14 +658,14 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
                                              bool repairingBootloader,
                                              bool useSTCubeProgrammer)
 {
-    if(dfuNoDialogs || forceFlashFSErase || repairingBootloader || (OmvUi::warning(Core::ICore::dialogParent(),
+    if(dfuNoDialogs || forceFlashFSErase || repairingBootloader || (OMVUI::warning(Core::ICore::dialogParent(),
         Tr::tr("Connect"),
         Tr::tr("DFU update erases your OpenMV Cam's internal flash file system.\n\n"
            "Backup your data before continuing!"),
         QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
     == QMessageBox::Ok))
     {
-        if(dfuNoDialogs || OmvUi::information(Core::ICore::dialogParent(),
+        if(dfuNoDialogs || OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("Disconnect your OpenMV Cam from your computer, add a jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.\n\n"
                "Click the Ok button after your OpenMV Cam's DFU Bootloader has enumerated."),
@@ -701,7 +701,7 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
             {
                 if(repairingBootloader)
                 {
-                    if (OmvUi::information(Core::ICore::dialogParent(),
+                    if (OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("DFU bootloader reset complete!\n\n") +
                         Tr::tr("Disconnect your OpenMV Cam from your computer and remove the jumper wire between the BOOT and RST pins.\n\n") +
@@ -727,7 +727,7 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
                 }
                 else
                 {
-                    if (OmvUi::information(Core::ICore::dialogParent(),
+                    if (OMVUI::information(Core::ICore::dialogParent(),
                                              Tr::tr("Connect"),
                                              viewerModeFirmwareText(Tr::tr("DFU firmware update complete!\n\n") +
                                              (Utils::HostOsInfo::isWindowsHost() ? Tr::tr("Disconnect your OpenMV Cam from your computer, remove the jumper wire between the BOOT and RST pins, and then reconnect your OpenMV Cam to your computer.\n\n") : QString()) +
@@ -745,7 +745,7 @@ void OpenMVPlugin::openmvRepairingBootloader(bool forceFlashFSErase,
             }
             else
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), repairingBootloader ? Tr::tr("DFU bootloader reset failed!") : Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), repairingBootloader ? Tr::tr("DFU bootloader reset failed!") : Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
             }
         }
     }

@@ -79,7 +79,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
     QObject::connect(box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
     layout->addWidget(box);
 
-    bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
+    bool ok = OMVUI::exec(dialog) == QDialog::Accepted;
 
     if(ok)
     {
@@ -128,7 +128,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
 
         if(!list.isEmpty())
         {
-            OmvUi::Progress *progress = new OmvUi::Progress(Tr::tr("Uploading..."), Tr::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
+            OMVUI::Progress *progress = new OMVUI::Progress(Tr::tr("Uploading..."), Tr::tr("Cancel"), 0, list.size() - 1, Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
 
@@ -157,7 +157,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                         {
                             progress->cancel();
 
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Uploading Dataset"),
                                 reply->errorString());
                         }
@@ -264,7 +264,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                         progress->cancel();
                         delete parts;
 
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Uploading Dataset"),
                             Tr::tr("Error posting!"));
                     }
@@ -273,7 +273,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
                 {
                     progress->cancel();
 
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Uploading Dataset"),
                         Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
@@ -292,7 +292,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
             delete manager;
             delete progress;
 
-            OmvUi::information(Core::ICore::dialogParent(),
+            OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Uploading Dataset"),
                 Tr::tr("Upload Statistics:\n\n"
                             "%L1 Files Uploaded\n"
@@ -302,7 +302,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
         }
         else
         {
-            OmvUi::information(Core::ICore::dialogParent(),
+            OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Uploading Dataset"),
                 Tr::tr("Nothing to upload\n\n"
                             "Only jpg/png/bmp images with a numeric name (e.g. \"00001.jpg\")\nin class folders (\"*.class\") can be uploaded."));
@@ -346,14 +346,14 @@ static void uploadProject(const QString &apiKey, OpenMVDatasetEditor *editor)
                             }
                             else
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Edge Impulse Projects"),
                                     error2);
                             }
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Edge Impulse Projects"),
                                 (reply2->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply2->errorString());
                         }
@@ -374,21 +374,21 @@ static void uploadProject(const QString &apiKey, OpenMVDatasetEditor *editor)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Edge Impulse Projects"),
                         Tr::tr("An unkown error occured"));
                 }
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edge Impulse Projects"),
                     error);
             }
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edge Impulse Projects"),
                 (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
@@ -437,7 +437,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
 
                 if(editor->rootPath().isEmpty())
                 {
-                    OmvUi::information(Core::ICore::dialogParent(),
+                    OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Edge Impulse Login"),
                         Tr::tr("Sucessfully logged into your Edge Impulse account.\n\nOpen a data set to upload it."));
                 }
@@ -448,14 +448,14 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edge Impulse Login"),
                     error);
             }
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edge Impulse Login"),
                 (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
@@ -485,7 +485,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
     QObject::connect(box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
     layout->addWidget(box);
 
-    if(OmvUi::exec(dialog) == QDialog::Accepted)
+    if(OMVUI::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN_EMAIL, usernameBox->text());
 
@@ -543,7 +543,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                     int index = map.contains(id) ? map.values().indexOf(map.value(id)) : -1;
 
                     bool ok;
-                    id = map.key(OmvUi::getItem(Core::ICore::dialogParent(),
+                    id = map.key(OMVUI::getItem(Core::ICore::dialogParent(),
                         Tr::tr("Edge Impulse Projects"), Tr::tr("Please select a project"),
                         map.values(), (index != -1) ? index : 0, false, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -570,7 +570,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                                 }
                                 else
                                 {
-                                    OmvUi::critical(Core::ICore::dialogParent(),
+                                    OMVUI::critical(Core::ICore::dialogParent(),
                                         Tr::tr("Edge Impulse Projects"),
                                         error2);
                                 }
@@ -579,7 +579,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                             {
                                 logoutFromEdgeImpulse();
 
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Edge Impulse Projects"),
                                     (reply2->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply2->errorString());
                             }
@@ -602,7 +602,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Edge Impulse Projects"),
                         Tr::tr("No projects found"));
                 }
@@ -611,7 +611,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
             {
                 logoutFromEdgeImpulse();
 
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edge Impulse Projects"),
                     error);
             }
@@ -620,7 +620,7 @@ void uploadToSelectedProject(OpenMVDatasetEditor *editor)
         {
             logoutFromEdgeImpulse();
 
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edge Impulse Projects"),
                 (reply->error() == QNetworkReply::NoError) ? Tr::tr("No request data received") : reply->errorString());
         }
@@ -648,7 +648,7 @@ void uploadProjectByAPIKey(OpenMVDatasetEditor *editor)
     Utils::QtcSettings *settings = Core::ICore::settings();
 
     bool ok;
-    QString apiKey = OmvUi::getText(Core::ICore::dialogParent(),
+    QString apiKey = OMVUI::getText(Core::ICore::dialogParent(),
         Tr::tr("Upload Project"), Tr::tr("Please enter an Edge Impluse Project API Key"),
         QLineEdit::Normal, settings->value(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_API_KEY).toString(), &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |

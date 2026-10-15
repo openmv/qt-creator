@@ -34,7 +34,7 @@
 
 namespace OpenMV {
 namespace Internal {
-namespace McpUi {
+namespace OMVMCP {
 
 // GUI-thread only, so a plain static is the whole "thread local".
 static Call *s_currentCall = Q_NULLPTR;
@@ -125,6 +125,6 @@ QString synthesizeSite(const QString &title, const QString &text)
     return QStringLiteral("auto.") + QString::fromLatin1(h);
 }
 
-} // namespace McpUi
+} // namespace OMVMCP
 } // namespace Internal
 } // namespace OpenMV

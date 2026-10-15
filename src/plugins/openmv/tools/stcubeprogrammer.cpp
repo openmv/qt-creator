@@ -215,7 +215,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
     if(binary.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("STM32 Programmer"),
             Tr::tr("STM32 Programmer is not supported on this platform."));
 

@@ -87,7 +87,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         {
             int index = mappings.keys().indexOf(settings->value(LAST_BOARD_TYPE_STATE_IMX).toString());
             bool ok = mappings.size() == 1;
-            QString temp = (mappings.size() == 1) ? mappings.firstKey() : OmvUi::getItem(Core::ICore::dialogParent(),
+            QString temp = (mappings.size() == 1) ? mappings.firstKey() : OMVUI::getItem(Core::ICore::dialogParent(),
                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                 mappings.keys(), (index != -1) ? index : 0, false, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -188,7 +188,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
         if(!foundMatch)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No IMX settings for the selected board type %L1!").arg(originalFirmwareFolder));
 
@@ -197,7 +197,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
     }
     else
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("No IMX settings found!"));
 
@@ -218,7 +218,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             ? QString(QStringLiteral("%1%2")).arg(Tr::tr("Disconnect your OpenMV Cam and then reconnect it...")).arg(justEraseFlashFs ? QString() : Tr::tr("\n\nHit cancel to skip to SBL reprogramming."))
             : Tr::tr("Connecting to the bootloader...");
 
-        OmvUi::Progress dialog(Tr::tr("Preparing the bootloader tools... (this can take a few seconds)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+        OMVUI::Progress dialog(Tr::tr("Preparing the bootloader tools... (this can take a few seconds)"), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
             (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
         dialog.setWindowModality(Qt::ApplicationModal);
@@ -299,18 +299,18 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
         if(userCanceled)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Unable to connect to your OpenMV Cam's normal bootloader!"));
 
-            if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && OmvUi::question(Core::ICore::dialogParent(),
+            if((!justEraseFlashFs) && forceFirmwarePath.isEmpty() && OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("%1 can still try to repair your OpenMV Cam using your OpenMV Cam's SBL Bootloader.\n\n"
                    "Continue?").arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
             == QMessageBox::Ok)
             {
-                if(OmvUi::information(Core::ICore::dialogParent(),
+                if(OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Disconnect your OpenMV Cam from your computer, add a jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.\n\n"
                        "Click the Ok button after your OpenMV Cam's SBL Bootloader has enumerated."),
@@ -319,7 +319,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
                 {
                     if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
                     {
-                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                        if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             viewerModeFirmwareText(Tr::tr("Firmware update complete!\n\n") +
                             Tr::tr("Disconnect your OpenMV Cam from your computer, remove the jumper wire between the SBL and 3.3V pins, and then reconnect your OpenMV Cam to your computer.\n\n") +
@@ -351,7 +351,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             }
             else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
-                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                     .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -377,7 +377,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
         {
             if(imxDownloadBootloaderAndFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
-                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     viewerModeFirmwareText(Tr::tr("Firmware update complete!\n\n") +
                     Tr::tr("If you are forcing SBL mode, disconnect your OpenMV Cam from your computer and remove the SBL wire jumper. "
@@ -411,7 +411,7 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
             }
             else if(imxDownloadFirmware(outObj, forceFlashFSErase, justEraseFlashFs, romfsAccess))
             {
-                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg((justEraseFlashFs ? Tr::tr("Onboard Data Flash Erased!\n\n") : Tr::tr("Firmware Upgrade complete!\n\n")))
                     .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))

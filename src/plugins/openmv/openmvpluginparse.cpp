@@ -442,7 +442,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
         if(map.contains(targetModule.moduleName) && (targetModule.moduleHash != map.value(targetModule.moduleName).first.moduleHash))
         {
-            int answer = OmvUi::question(Core::ICore::dialogParent(),
+            int answer = OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Import Helper"),
                 Tr::tr("Module \"%L1\" on your OpenMV Cam is different than the copy on your computer.\n\nWould you like %2 to update the module on your OpenMV Cam?").arg(targetModule.moduleName).arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
@@ -457,7 +457,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!myClearFolder(targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to remove \"%L1\"!").arg(targetPath));
 
@@ -466,7 +466,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!myCopyFolder(sourcePath, targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -491,7 +491,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!QFile::remove(targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to remove \"%L1\"!").arg(targetPath));
 
@@ -500,7 +500,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!myCopy(sourcePath, targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -517,7 +517,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
             }
             else if(answer == QMessageBox::No)
             {
-                int answer = OmvUi::question(Core::ICore::dialogParent(),
+                int answer = OMVUI::question(Core::ICore::dialogParent(),
                     Tr::tr("Import Helper"),
                     Tr::tr("Would you like %1 to update the module on your computer?").arg(QGuiApplication::applicationDisplayName()),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
@@ -539,7 +539,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         {
                             if(!myClearFolder(targetPath))
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Import Helper"),
                                     Tr::tr("Failed to remove \"%L1\"!").arg(targetPath));
 
@@ -548,7 +548,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         }
                         else if(!QDir().mkpath(QFileInfo(targetPath).path()))
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Import Helper"),
                                 Tr::tr("Failed to create \"%L1\"!").arg(QFileInfo(targetPath).path()));
 
@@ -557,7 +557,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                         if(!myCopyFolderBasic(sourcePath, targetPath)) // Don't use myCopyFolder() here...
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Import Helper"),
                                 Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -572,7 +572,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
                         {
                             if(!QFile::remove(targetPath))
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Import Helper"),
                                     Tr::tr("Failed to remove \"%L1\"!").arg(targetPath));
 
@@ -582,7 +582,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                         if(!QFile::copy(sourcePath, targetPath)) // Don't use myCopy() here...
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Import Helper"),
                                 Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -608,7 +608,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
         if(map.contains(errorModule))
         {
-            int answer = OmvUi::question(Core::ICore::dialogParent(),
+            int answer = OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Import Helper"),
                 Tr::tr("Module \"%L1\" may be required to run your script.\n\nWould you like %2 to copy it to your OpenMV Cam?").arg(errorModule).arg(QGuiApplication::applicationDisplayName()),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
@@ -623,7 +623,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!QDir().mkpath(QDir::toNativeSeparators(QDir::cleanPath(targetPath))))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -632,7 +632,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!myCopyFolder(sourcePath, targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 
@@ -657,7 +657,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!QDir().mkpath(QDir::toNativeSeparators(QDir::cleanPath(QFileInfo(targetPath).path()))))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(QFileInfo(targetPath).path()));
 
@@ -666,7 +666,7 @@ bool OpenMVPlugin::importHelper(const QByteArray &text)
 
                     if(!myCopy(sourcePath, targetPath))
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Import Helper"),
                             Tr::tr("Failed to create \"%L1\"!").arg(targetPath));
 

@@ -60,7 +60,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(!tempDir.isValid())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             tempDir.errorString());
 
@@ -127,7 +127,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = OmvUi::exec(dialog2, OMV_UI_SITE("vela.options")) == QDialog::Accepted;
+    bool ok = OMVUI::exec(dialog2, OMV_UI_SITE("vela.options")) == QDialog::Accepted;
 
     if (!ok)
     {
@@ -319,7 +319,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             Tr::tr("The Vela Compilier is not supported on this platform."));
 

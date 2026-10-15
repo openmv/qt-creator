@@ -503,7 +503,7 @@ bool OpenMVPlugin::syncDevFirmwareBlocking()
 
     // Installing dev firmware needs it present now, so show the worker's progress in a
     // modal dialog and wait.
-    OmvUi::Progress dialog(Tr::tr("Downloading the latest development firmware..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+    OMVUI::Progress dialog(Tr::tr("Downloading the latest development firmware..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint);
     dialog.setWindowModality(Qt::ApplicationModal);
     dialog.setAttribute(Qt::WA_ShowWithoutActivating);
@@ -747,12 +747,12 @@ void OpenMVPlugin::packageUpdate()
                         Tr::tr("New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the <a href=\"%L1\">release notes</a>.")
                             .arg(webChangelogUrl(QStringLiteral("ide"), new_major, new_minor, new_patch).toString())
                             .arg(QGuiApplication::applicationDisplayName());
-                    int boxChoice = OmvUi::choiceBox(QMessageBox::Information, Core::ICore::dialogParent(), Tr::tr("Update Available"), updateMessage,
+                    int boxChoice = OMVUI::choiceBox(QMessageBox::Information, Core::ICore::dialogParent(), Tr::tr("Update Available"), updateMessage,
                         QStringList() << Tr::tr("Install"), 0, true, OMV_UI_SITE("connect.install_dev_release"));
 
                     if(boxChoice == 0)
                     {
-                        OmvUi::Progress *dialog = new OmvUi::Progress(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+                        OMVUI::Progress *dialog = new OMVUI::Progress(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                             (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
                         dialog->setWindowModality(Qt::ApplicationModal);
@@ -767,7 +767,7 @@ void OpenMVPlugin::packageUpdate()
                             if((reply2->error() == QNetworkReply::NoError) && (!data2.isEmpty())
                             && (!new_sha256.isEmpty()) && (sha256Hex(data2) != new_sha256))
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Package Update"),
                                     Tr::tr("The downloaded resources file \"%L1\" failed its checksum. Please try again later.").arg(reply2->request().url().toString()));
                             }
@@ -799,7 +799,7 @@ void OpenMVPlugin::packageUpdate()
 
                                     if (resourcesSettingsFile.write(data) != data.size())
                                     {
-                                        OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                                        OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                         QApplication::quit();
                                         ok = false;
                                     }
@@ -808,7 +808,7 @@ void OpenMVPlugin::packageUpdate()
                                 }
                                 else
                                 {
-                                    OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                                    OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                     QApplication::quit();
                                     ok = false;
                                 }
@@ -819,7 +819,7 @@ void OpenMVPlugin::packageUpdate()
 
                                     if(!removeRecursivelyWrapper(Core::ICore::allUsersResourcePath(), m_resourceFoldersToDelete, &error))
                                     {
-                                        OmvUi::critical(Core::ICore::dialogParent(),
+                                        OMVUI::critical(Core::ICore::dialogParent(),
                                             QString(),
                                             error + Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
@@ -832,7 +832,7 @@ void OpenMVPlugin::packageUpdate()
                                             ? extractFolderWrapper(&data2, Core::ICore::allUsersResourcePath().toString(), QStringLiteral("firmware"))
                                             : extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toString())))
                                         {
-                                            OmvUi::critical(Core::ICore::dialogParent(),
+                                            OMVUI::critical(Core::ICore::dialogParent(),
                                                 QString(),
                                                 Tr::tr("Please close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
@@ -871,7 +871,7 @@ void OpenMVPlugin::packageUpdate()
 
                                                 if (loadDocs(true, false))
                                                 {
-                                                    OmvUi::information(Core::ICore::dialogParent(),
+                                                    OMVUI::information(Core::ICore::dialogParent(),
                                                         QString(),
                                                         Tr::tr("Installation Sucessful! Please restart %1.").arg(QGuiApplication::applicationDisplayName()));
 
@@ -886,13 +886,13 @@ void OpenMVPlugin::packageUpdate()
                                             {
                                                 resourcesSettingsFile.close();
 
-                                                OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                                                OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                                 QApplication::quit();
                                             }
                                         }
                                         else
                                         {
-                                            OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                                            OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                                             QApplication::quit();
                                         }
                                     }
@@ -900,13 +900,13 @@ void OpenMVPlugin::packageUpdate()
                             }
                             else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Package Update"),
                                     Tr::tr("Error: %L1!").arg(reply2->errorString()));
                             }
                             else if(reply2->error() != QNetworkReply::OperationCanceledError)
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Package Update"),
                                     Tr::tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
                             }
@@ -918,7 +918,7 @@ void OpenMVPlugin::packageUpdate()
 
                         QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv-ide/releases/download/v%1.%2.%3/openmv-ide-resources-%1.%2.%3.zip").arg(new_major).arg(new_minor).arg(new_patch)));
                         QNetworkReply *reply2 = manager2->get(request2);
-                        QPointer<OmvUi::Progress> dlg = dialog;
+                        QPointer<OMVUI::Progress> dlg = dialog;
 
                         if(reply2)
                         {
@@ -934,7 +934,7 @@ void OpenMVPlugin::packageUpdate()
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Package Update"),
                                 Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
                         }
@@ -1017,7 +1017,7 @@ void OpenMVPlugin::bootloaderClicked()
         QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
     });
 
-    if(OmvUi::exec(dialog) == QDialog::Accepted)
+    if(OMVUI::exec(dialog) == QDialog::Accepted)
     {
         QString forceFirmwarePath = pathChooser->filePath().toString();
         bool flashFSErase = checkBox->isChecked();
@@ -1110,14 +1110,14 @@ void OpenMVPlugin::loadCustomFirmware(const QString &forceFirmwarePath, bool fla
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Bootloader"),
                                 listing.errorString());
                         }
                     }
                     else if(!zipHasFirmware)
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Bootloader"),
                             Tr::tr("The zip \"%L1\" does not contain a firmware image!").arg(forceFirmwarePath));
                     }
@@ -1133,7 +1133,7 @@ void OpenMVPlugin::loadCustomFirmware(const QString &forceFirmwarePath, bool fla
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Bootloader"),
                         Tr::tr("Unable to unpack the firmware zip \"%L1\"!").arg(forceFirmwarePath));
                 }
@@ -1146,7 +1146,7 @@ void OpenMVPlugin::loadCustomFirmware(const QString &forceFirmwarePath, bool fla
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Bootloader"),
                 Tr::tr("\"%L1\" is not a file!").arg(forceFirmwarePath));
         }
@@ -1163,7 +1163,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         return;
     }
 
-    OmvUi::Progress *dialog = new OmvUi::Progress(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+    OMVUI::Progress *dialog = new OMVUI::Progress(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowType(0)));
     dialog->setWindowModality(Qt::ApplicationModal);
@@ -1201,13 +1201,13 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
         }
         else if((reply2->error() != QNetworkReply::NoError) && (reply2->error() != QNetworkReply::OperationCanceledError))
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Error: %L1!").arg(reply2->errorString()));
         }
         else if(reply2->error() != QNetworkReply::OperationCanceledError)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Cannot open the resources file \"%L1\"!").arg(reply2->request().url().toString()));
         }
@@ -1218,7 +1218,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
 
     QNetworkRequest request2 = QNetworkRequest(QUrl(QStringLiteral("https://github.com/openmv/openmv/releases/tag/development")));
     QNetworkReply *reply2 = manager2->get(request2);
-    QPointer<OmvUi::Progress> dlg = dialog;
+    QPointer<OMVUI::Progress> dlg = dialog;
 
     if(reply2)
     {
@@ -1230,11 +1230,11 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             dlg->setValue(bytesReceived);
         });
 
-        OmvUi::exec(dialog);
+        OMVUI::exec(dialog);
     }
     else
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("Network request failed \"%L1\"!").arg(request2.url().toString()));
     }
@@ -1324,7 +1324,7 @@ void OpenMVPlugin::showDevelopmentReleaseDialog(const QByteArray &changelogHtml)
             connect(box, &QDialogButtonBox::accepted, newDialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, newDialog, &QDialog::reject);
 
-            if(OmvUi::exec(newDialog) == QDialog::Accepted)
+            if(OMVUI::exec(newDialog) == QDialog::Accepted)
             {
                 bool flashFSErase = checkBox->isChecked();
                 bool updateROMFS = checkBox2->isChecked();
@@ -1387,7 +1387,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
         if(thirdPartyDevDir.isEmpty())
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 error.isEmpty() ? Tr::tr("Unable to download the latest development firmware!") : error);
 
@@ -1396,7 +1396,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     }
     else if((!useCustom) && (!syncDevFirmwareBlocking()))
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("Unable to download the latest development firmware!"));
 
@@ -1492,7 +1492,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
             if(!missing.isEmpty())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("The firmware zip is missing file(s) this board's flash listing requires: %L1").arg(missing.join(QStringLiteral(", "))));
 
@@ -1532,7 +1532,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
     if(!cached.exists())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             useCustom
                 ? Tr::tr("The firmware zip does not contain \"%L1\", which this board's firmware update requires!").arg(firmwareFileName)
@@ -1819,7 +1819,7 @@ void OpenMVPlugin::setPortAlias()
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
-    if(OmvUi::exec(dialog) != QDialog::Accepted)
+    if(OMVUI::exec(dialog) != QDialog::Accepted)
     {
         return;
     }
@@ -2011,7 +2011,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
         if (!problems.isEmpty())
         {
-            OmvUi::warning(Core::ICore::dialogParent(),
+            OMVUI::warning(Core::ICore::dialogParent(),
                                  Tr::tr("Connect"),
                                  Tr::tr("USB problems were detected by your OS with the devices below on this system. "
                                         "Please fix or remove these devices as they will cause connection issues.\n\n%1").
@@ -2159,7 +2159,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE).toString());
 
                         bool ok = mappings.size() == 1;
-                        QString temp = (mappings.size() == 1) ? mappings.firstKey() : OmvUi::getItem(Core::ICore::dialogParent(),
+                        QString temp = (mappings.size() == 1) ? mappings.firstKey() : OMVUI::getItem(Core::ICore::dialogParent(),
                             Tr::tr("Connect"), Tr::tr("Please select the board type"),
                             mappings.keys(), (index != -1) ? index : 0, false, &ok,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -2255,7 +2255,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if((m_autoUpdate == QStringLiteral("release"))
                     || (m_autoUpdate == QStringLiteral("development"))
-                    || (OmvUi::exec(dialog) == QDialog::Accepted))
+                    || (OMVUI::exec(dialog) == QDialog::Accepted))
                     {
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_ACTION, combo->currentIndex());
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
@@ -2294,7 +2294,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     }
                 }
 
-                if((!forceBootloader) && (!dfuDeviceResetToRelease)) OmvUi::critical(Core::ICore::dialogParent(),
+                if((!forceBootloader) && (!dfuDeviceResetToRelease)) OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("No OpenMV Cams found!"));
 
@@ -2352,7 +2352,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                 if(!mappings.isEmpty())
                 {
-                    if(forceBootloader || dfuDeviceResetToRelease || (OmvUi::question(Core::ICore::dialogParent(),
+                    if(forceBootloader || dfuDeviceResetToRelease || (OMVUI::question(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Do you have an OpenMV Cam connected and is it bricked?"),
                         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes, OMV_UI_SITE("connect.bricked"))
@@ -2422,7 +2422,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             bool previousMappingAvailable = previousMappingSet && mappings.contains(previousMapping);
                             bool ok = previousMappingAvailable || (mappings.size() == 1);
                             QString temp = previousMappingAvailable ? previousMapping :
-                                ((mappings.size() == 1) ? mappings.firstKey() : OmvUi::getItem(Core::ICore::dialogParent(),
+                                ((mappings.size() == 1) ? mappings.firstKey() : OMVUI::getItem(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                 mappings.keys(), (index != -1) ? index : 0, false, &ok,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -2472,7 +2472,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
                                 bool ok = (!forceFirmwarePath.isEmpty()) || justEraseFlashFs ||
-                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (OmvUi::exec(dialog) == QDialog::Accepted);
+                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (OMVUI::exec(dialog) == QDialog::Accepted);
                                 bool forceFlashFSEraseTemp = justEraseFlashFs ||
                                     ((forceBootloader && previousMappingSet) ? forceFlashFSErase : (dfuDeviceResetToRelease ? dfuDeviceEraseFlash : checkBox->isChecked()));
                                 OpenMVROMFSAccess romfsAccessTemp = justEraseFlashFs ? OPENMV_ROMFS_NONE :
@@ -2520,7 +2520,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 {
                                     if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID))
                                     {
-                                        OmvUi::critical(Core::ICore::dialogParent(),
+                                        OMVUI::critical(Core::ICore::dialogParent(),
                                             Tr::tr("Connect"),
                                             Tr::tr("Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2530,7 +2530,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                                     if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID))
                                     {
-                                        OmvUi::critical(Core::ICore::dialogParent(),
+                                        OMVUI::critical(Core::ICore::dialogParent(),
                                             Tr::tr("Connect"),
                                             Tr::tr("Please short REC to GND and reset your board. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2542,7 +2542,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                             if (!end)
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                                       Tr::tr("Connect"),
                                                       Tr::tr("No released firmware available for the attached board!"));
                             }
@@ -2572,7 +2572,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             // An MCP caller names the raw port (openmv_list_ports); map it onto
             // the pretty entry's index so the picker below accepts it.
-            if(McpUi::Call *call = McpUi::currentCall())
+            if(OMVMCP::Call *call = OMVMCP::currentCall())
             {
                 if(std::optional<QJsonValue> a = call->answer(OMV_UI_SITE("connect.port")))
                 {
@@ -2582,7 +2582,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             }
 
             bool ok;
-            QString temp = OmvUi::getItem(Core::ICore::dialogParent(),
+            QString temp = OMVUI::getItem(Core::ICore::dialogParent(),
                 Tr::tr("Connect"), Tr::tr("Please select a serial port"),
                 stringList2, (index != -1) ? index : 0, false, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -2621,7 +2621,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 int index = dfuDevices.indexOf(settings->value(SETTINGS_GROUP "/" LAST_DFU_PORT_STATE).toString());
 
                 bool ok;
-                QString temp = OmvUi::getItem(Core::ICore::dialogParent(),
+                QString temp = OMVUI::getItem(Core::ICore::dialogParent(),
                     Tr::tr("Connect"), Tr::tr("Please select a DFU Device"),
                     dfuDevices, (index != -1) ? index : 0, false, &ok,
                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -2708,7 +2708,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2717,7 +2717,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Please short REC to GND and reset your board. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2752,7 +2752,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == NRF_OLD_PID))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2761,7 +2761,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if((vidpid.at(0).toInt(nullptr, 16) == ARDUINOCAM_VID) && (vidpid.at(1).toInt(nullptr, 16) == RPI_OLD_PID))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Please short REC to GND and reset your board. More information can be found on <a href=\"https://docs.arduino.cc\">https://docs.arduino.cc</a>"));
 
@@ -2788,7 +2788,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 *errorMessage2Ptr = errorMessage;
             });
 
-            OmvUi::Progress dialog(Tr::tr("Connecting...\n\n(Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+            OMVUI::Progress dialog(Tr::tr("Connecting...\n\n(Hit cancel if this takes more than 5 seconds)."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
             dialog.setWindowModality(Qt::ApplicationModal);
@@ -2826,13 +2826,13 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(!errorMessage2.isEmpty())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Error: %L1!").arg(errorMessage2));
 
                 if(Utils::HostOsInfo::isLinuxHost() && errorMessage2.contains(QStringLiteral("Permission Denied"), Qt::CaseInsensitive))
                 {
-                    OmvUi::information(Core::ICore::dialogParent(),
+                    OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Try doing:\n\n") + QString(QStringLiteral("sudo adduser %L1 dialout\n\n")).arg(Utils::Environment::systemEnvironment().toDictionary().userName()) + Tr::tr("...in a terminal and then restart your computer."));
                 }
@@ -2940,18 +2940,18 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                 m_reconnects = 0;
 
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Timeout error while getting firmware version!"));
 
                 if(!isNetworkPort(selectedPort)) // the green light is a USB-boot thing, not a network link
                 {
-                    OmvUi::warning(Core::ICore::dialogParent(),
+                    OMVUI::warning(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Do not try to connect while the green light on your OpenMV Cam is on!"));
                 }
 
-                if(OmvUi::question(Core::ICore::dialogParent(),
+                if(OMVUI::question(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Try to connect again?"),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes, OMV_UI_SITE("connect.retry"))
@@ -3023,7 +3023,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Timeout error while getting board architecture!"));
 
@@ -3141,7 +3141,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_2).toString());
 
                             bool ok = mappingsHumanReadable.size() == 1;
-                            temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : OmvUi::getItem(Core::ICore::dialogParent(),
+                            temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : OMVUI::getItem(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                 mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -3232,7 +3232,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     }
                     else
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Connect"),
                             Tr::tr("Timeout error while getting board architecture!"));
 
@@ -3314,7 +3314,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                     }
                                     else
                                     {
-                                        OmvUi::critical(Core::ICore::dialogParent(),
+                                        OMVUI::critical(Core::ICore::dialogParent(),
                                             Tr::tr("Connect"),
                                             Tr::tr("Failed to copy firmware files to temporary directory!"));
 
@@ -3323,7 +3323,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 }
                                 else
                                 {
-                                    OmvUi::critical(Core::ICore::dialogParent(),
+                                    OMVUI::critical(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         Tr::tr("Original firmware folder does not exist!"));
 
@@ -3332,7 +3332,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             }
                             else
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Connect"),
                                     Tr::tr("Failed to create temporary directory!"));
 
@@ -3341,7 +3341,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Connect"),
                                 Tr::tr("Only loading bootloader.bin files is supported with the ST Cube Programmer!"));
 
@@ -3387,7 +3387,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 && (!firmwarePath.endsWith(QStringLiteral(".lst"), Qt::CaseInsensitive))
                 && (!firmwarePath.isEmpty()))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin and *.img files are supported for the internal bootloader!"));
 
@@ -3442,7 +3442,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
                 && (!firmwarePath.isEmpty()))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin and *.img files are supported for the IMX bootloader!"));
 
@@ -3494,7 +3494,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                                         tempPath,
                                                         originalFallbackBootloaderSettings))
                                 {
-                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                                         Tr::tr("Connect"),
                                         Tr::tr("Bootloader update complete!\n\n") +
                                         Tr::tr("Connect your OpenMV Cam now."));
@@ -3508,7 +3508,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             }
                             else
                             {
-                                OmvUi::critical(Core::ICore::dialogParent(),
+                                OMVUI::critical(Core::ICore::dialogParent(),
                                                       Tr::tr("Connect"),
                                                       Tr::tr("Failed to copy firmware files to temporary directory!"));
 
@@ -3517,7 +3517,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                         else
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                                   Tr::tr("Connect"),
                                                   Tr::tr("Original firmware folder does not exist!"));
 
@@ -3526,7 +3526,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     }
                     else
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                                               Tr::tr("Connect"),
                                               Tr::tr("Failed to create temporary directory!"));
 
@@ -3539,7 +3539,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 // otherwise flash the release build and report success.
                 if(installTheLatestDevelopmentFirmware)
                 {
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only firmware recovery is supported using the Alif Semiconductor's SE Tools."));
 
@@ -3562,7 +3562,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 && (!firmwarePath.endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
                 && (!firmwarePath.isEmpty()))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin, *.dfu, and *.img files are supported for the Arduino bootloader!"));
 
@@ -3583,7 +3583,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)
                 && (!firmwarePath.isEmpty()))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin files is supported for the Bossac bootloader!"));
 
@@ -3603,7 +3603,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 if (!firmwarePath.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive)
                 && (!firmwarePath.isEmpty()))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Only loading *.bin files is supported for the Picotool bootloader!"));
 
@@ -3627,7 +3627,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 {
                     if (QFileInfo(firmwarePath).baseName() != QStringLiteral("bootloader"))
                     {
-                        if (OmvUi::warning(Core::ICore::dialogParent(),
+                        if (OMVUI::warning(Core::ICore::dialogParent(),
                                                  Tr::tr("Connect"),
                                                  Tr::tr("Note that loading the firmware.dfu or openmv.dfu (bootloader + firmware) "
                                                         "may not work on STM32H7 boards due to a bug in the chip's ROM bootloader!\n\n"
@@ -3781,7 +3781,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Timeout error while getting sensor type!"));
 
@@ -3959,7 +3959,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 }
                                 else if((!m_formKey.isEmpty()) && (!QString::fromUtf8(data).contains(QStringLiteral("<p>Yes</p>"))))
                                 {
-                                    OmvUi::critical(Core::ICore::dialogParent(),
+                                    OMVUI::critical(Core::ICore::dialogParent(),
                                         Tr::tr("Register OpenMV Cam"),
                                         Tr::tr("Database Error!"));
 
@@ -3969,7 +3969,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                         else if((!m_formKey.isEmpty()) && (reply->error() != QNetworkReply::NoError))
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Register OpenMV Cam"),
                                 Tr::tr("Error: %L1!").arg(reply->error()));
 
@@ -3977,7 +3977,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         }
                         else if(!m_formKey.isEmpty())
                         {
-                            OmvUi::critical(Core::ICore::dialogParent(),
+                            OMVUI::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Register OpenMV Cam"),
                                 Tr::tr("GET Network error!"));
 
@@ -4000,7 +4000,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     }
                     else if(!m_formKey.isEmpty())
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Register OpenMV Cam"),
                             Tr::tr("GET network error!"));
 
@@ -4010,7 +4010,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Timeout error while getting board architecture!"));
 
@@ -4043,7 +4043,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if(!ok2)
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Timeout error while learning MTU!"));
 
@@ -4441,7 +4441,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         deferNormal([this, promptFirmwareUpgrade] {
             if ((!m_autoConnect) && (m_boardType == QStringLiteral("IMXRT1060")) && isMacHidAccessDeniedForOpenMVIDE())
             {
-                OmvUi::warning(Core::ICore::dialogParent(),
+                OMVUI::warning(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring "
                            "permission on this Mac. Without it, firmware updates for the RT1062 will fail with a "
@@ -4458,7 +4458,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
             if ((!m_autoConnect) && isMacAccessorySecurityLikelyToInterfere())
             {
-                OmvUi::informationCheckable(
+                OMVUI::informationCheckable(
                     Tr::tr("Connect"),
                     Tr::tr("Your Apple Silicon Mac has an \"Allow accessories to connect\" security setting "
                            "that can interrupt connections to your OpenMV Cam. When your OpenMV Cam is in bootloader "
@@ -4472,7 +4472,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     QMessageBox::Ok);
             }
 
-            if (promptFirmwareUpgrade && (!m_autoConnect) && OmvUi::questionCheckable(
+            if (promptFirmwareUpgrade && (!m_autoConnect) && OMVUI::questionCheckable(
                     Tr::tr("Connect"),
                     Tr::tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
                     Utils::CheckableDecider(DONT_SHOW_UPGRADE_FW_AGAIN),
@@ -5028,7 +5028,7 @@ void OpenMVPlugin::startClicked()
             if(contents.isEmpty())
             {
                 Utils::QtcSettings *settings = Core::ICore::settings();
-                QString path = OmvUi::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                QString path = OMVUI::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
                     settings->value(SETTINGS_GROUP "/" LAST_VIEWER_RUN_SCRIPT_PATH, m_portPath.isEmpty() ? QDir::homePath() : m_portPath).toString(),
                     Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
 
@@ -5038,7 +5038,7 @@ void OpenMVPlugin::startClicked()
                 {
                     if(!path.isEmpty())
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
                             Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
                     }
 
@@ -5266,7 +5266,7 @@ void OpenMVPlugin::stopClicked()
 void OpenMVPlugin::showExamplesDialog()
 {
     if (!QApplication::activeModalWidget()) {
-        OmvUi::informationCheckable(
+        OMVUI::informationCheckable(
                 Tr::tr("More Examples"),
                 Tr::tr("You can find more examples under the File -> Examples menu.\n\n"
                    "In particular, checkout the Image Processing -> Color-Tracking and Machine Learning -> TensorFlow examples."),
@@ -5368,7 +5368,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
-            bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
+            bool ok = OMVUI::exec(dialog) == QDialog::Accepted;
 
             if(ok)
             {
@@ -5394,7 +5394,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
         }
         else
         {
-            OmvUi::information(Core::ICore::dialogParent(),
+            OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Firmware Update"),
                 Tr::tr("Your OpenMV Cam's firmware is up to date."));
 
@@ -5434,7 +5434,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
-            bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
+            bool ok = OMVUI::exec(dialog) == QDialog::Accepted;
 
             if(ok)
             {
@@ -5494,7 +5494,7 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
             }
         }
 
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             title,
             Tr::tr("No board settings for the connected board found!"));
 
@@ -5516,7 +5516,7 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
             settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_GET).toString());
 
         bool ok = mappingsHumanReadable.size() == 1;
-        QString temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : OmvUi::getItem(Core::ICore::dialogParent(),
+        QString temp = (mappingsHumanReadable.size() == 1) ? mappingsHumanReadable.keys().first() : OMVUI::getItem(Core::ICore::dialogParent(),
             title, Tr::tr("Please select the board type"),
             mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |

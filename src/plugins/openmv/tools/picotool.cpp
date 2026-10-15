@@ -132,7 +132,7 @@ QList<QString> picotoolGetDevices()
     }
     else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
-        OmvUi::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toString() + QStringLiteral("\n\n") + process.stdOut());
+        OMVUI::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toString() + QStringLiteral("\n\n") + process.stdOut());
 
         return QList<QString>();
     }

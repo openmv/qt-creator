@@ -1005,7 +1005,7 @@ void OpenMVChannelDepth::saveImage()
                 + QStringLiteral(".png"));
     }
 
-    QString path = OmvUi::getSaveFileName(this, Tr::tr("Save Depth Image"),
+    QString path = OMVUI::getSaveFileName(this, Tr::tr("Save Depth Image"),
         suggestion, Tr::tr("PNG Image (*.png)"));
 
     if(path.isEmpty())
@@ -1024,7 +1024,7 @@ void OpenMVChannelDepth::saveImage()
 
     if(size.isEmpty() || (!render(size).save(path, "PNG")))
     {
-        OmvUi::critical(this, Tr::tr("Save Depth Image"),
+        OMVUI::critical(this, Tr::tr("Save Depth Image"),
                               Tr::tr("Failed to write \"%1\"!").arg(path));
     }
 }
@@ -2020,7 +2020,7 @@ void OpenMVChannelWaveform::saveImage()
                 + QStringLiteral(".png"));
     }
 
-    QString path = OmvUi::getSaveFileName(this, Tr::tr("Save Plot Image"),
+    QString path = OMVUI::getSaveFileName(this, Tr::tr("Save Plot Image"),
         suggestion, Tr::tr("PNG Image (*.png);;PDF Document (*.pdf)"));
 
     if(path.isEmpty())
@@ -2043,7 +2043,7 @@ void OpenMVChannelWaveform::saveImage()
 
     if(!ok)
     {
-        OmvUi::critical(this, Tr::tr("Save Plot Image"),
+        OMVUI::critical(this, Tr::tr("Save Plot Image"),
                               Tr::tr("Failed to write \"%1\"!").arg(path));
     }
 }
@@ -3640,7 +3640,7 @@ void OpenMVChannelsView::patchContent(QList<Record> &records)
                     updateRecordButtonStates();
 
                     QMetaObject::invokeMethod(this, [this, error] {
-                        OmvUi::critical(this, Tr::tr("Record Channel"), error);
+                        OMVUI::critical(this, Tr::tr("Record Channel"), error);
                     }, Qt::QueuedConnection);
                 }
             }
@@ -4025,7 +4025,7 @@ bool OpenMVChannelsView::startRecorder(Record &record, const QString &path,
         // under it.
         record.recordStatus->setText(reason);
         QMetaObject::invokeMethod(this, [this, reason] {
-            OmvUi::critical(this, Tr::tr("Record Channel"), reason);
+            OMVUI::critical(this, Tr::tr("Record Channel"), reason);
         }, Qt::QueuedConnection);
         return false;
     }
@@ -4038,7 +4038,7 @@ bool OpenMVChannelsView::startRecorder(Record &record, const QString &path,
         delete recorder;
         record.recordStatus->setText(error);
         QMetaObject::invokeMethod(this, [this, error] {
-            OmvUi::critical(this, Tr::tr("Record Channel"), error);
+            OMVUI::critical(this, Tr::tr("Record Channel"), error);
         }, Qt::QueuedConnection);
         return false;
     }
@@ -4096,7 +4096,7 @@ void OpenMVChannelsView::toggleRecording(int index)
 
     if(formats.isEmpty())
     {
-        OmvUi::critical(this, Tr::tr("Record Channel"),
+        OMVUI::critical(this, Tr::tr("Record Channel"),
             OpenMVChannelRecorder::unsupportedReason(OpenMVChannelRecorder::Csv, info));
         return;
     }
@@ -4135,7 +4135,7 @@ void OpenMVChannelsView::toggleRecording(int index)
                                             OpenMVChannelRecorder::suffixFor(suggested));
 
     QString filter = OpenMVChannelRecorder::filterString(QList<OpenMVChannelRecorder::Format>() << suggested);
-    QString path = OmvUi::getSaveFileName(this, Tr::tr("Record \"%1\" To").arg(recordName),
+    QString path = OMVUI::getSaveFileName(this, Tr::tr("Record \"%1\" To").arg(recordName),
         suggestion, OpenMVChannelRecorder::filterString(formats), &filter);
 
     if(path.isEmpty())
@@ -4213,7 +4213,7 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
         suggestion = QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation);
     }
 
-    QString folder = OmvUi::getExistingDirectory(this,
+    QString folder = OMVUI::getExistingDirectory(this,
         Tr::tr("Record \"%1\" To Folder").arg(channelName), suggestion);
 
     if(folder.isEmpty())
@@ -4256,7 +4256,7 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
 
     if(formats.isEmpty())
     {
-        OmvUi::critical(this, Tr::tr("Record Channel"),
+        OMVUI::critical(this, Tr::tr("Record Channel"),
             Tr::tr("No format can hold every graph in \"%1\". "
                    "Record them one at a time.").arg(channelName));
         return;
@@ -4287,7 +4287,7 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
     form->addRow(Tr::tr("Label:"), labelEdit);
     form->addRow(buttons);
 
-    if(OmvUi::exec(dialog) != QDialog::Accepted)
+    if(OMVUI::exec(dialog) != QDialog::Accepted)
     {
         return;
     }

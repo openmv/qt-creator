@@ -536,13 +536,13 @@ void MyPlainTextEdit::save()
     forever
     {
         path =
-        OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
+        OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Log"),
             settings->value(TERMINAL_SETTINGS_GROUP "/" LAST_SAVE_LOG_PATH, QDir::homePath()).toString(),
             Tr::tr("Text Files (*.txt);;All files (*)"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
         {
-            OmvUi::warning(Core::ICore::dialogParent(),
+            OMVUI::warning(Core::ICore::dialogParent(),
                 Tr::tr("Save Log"),
                 Tr::tr("Please add a file extension!"));
 
@@ -560,7 +560,7 @@ void MyPlainTextEdit::save()
         {
             if((!file.write(toPlainText().toUtf8())) || (!file.finalize()))
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Save Log"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
             }
@@ -571,7 +571,7 @@ void MyPlainTextEdit::save()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Save Log"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
         }
@@ -910,13 +910,13 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
         forever
         {
             path =
-            OmvUi::getSaveFileName(this, Tr::tr("Save Image"),
+            OMVUI::getSaveFileName(this, Tr::tr("Save Image"),
                 m_settings->value(LAST_SAVE_IMAGE_PATH, QDir::homePath()).toString(),
                 Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {
-                OmvUi::warning(Core::ICore::dialogParent(),
+                OMVUI::warning(Core::ICore::dialogParent(),
                     Tr::tr("Save Image"),
                     Tr::tr("Please add a file extension!"));
 
@@ -934,7 +934,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
             }
             else
             {
-                OmvUi::critical(this,
+                OMVUI::critical(this,
                     Tr::tr("Save Image"),
                     Tr::tr("Failed to save the image file for an unknown reason!"));
             }
@@ -1103,7 +1103,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
     connect(executeButton, &QToolButton::clicked, this, [this, runFromDisk] {
         if(runFromDisk)
         {
-            QString path = OmvUi::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+            QString path = OMVUI::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Run Script"),
                 m_settings->value(LAST_RUN_SCRIPT_PATH, QDir::homePath()).toString(),
                 Tr::tr("Python Files (*.py);;Text Files (*.txt);;All Files (*)"));
 
@@ -1119,7 +1119,7 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
+                    OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("Run Script"),
                         Tr::tr("Error: Cannot open \"%L1\"!").arg(path));
                 }
             }

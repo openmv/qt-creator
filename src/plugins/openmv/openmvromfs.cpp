@@ -102,7 +102,7 @@ QJsonObject getROMFSConfig(const QString &title,
     int index = names.indexOf(settings->value(SETTINGS_GROUP "/" LAST_BOARD_TYPE_STATE_ROMFS).toString());
 
     bool ok = names.size() == 1;
-    QString temp = (names.size() == 1) ? names.first() : OmvUi::getItem(Core::ICore::dialogParent(),
+    QString temp = (names.size() == 1) ? names.first() : OMVUI::getItem(Core::ICore::dialogParent(),
         title, Tr::tr("Please select the target"),
         names, (index != -1) ? index : 0, false, &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -161,7 +161,7 @@ QString convertModel(const QJsonObject &boardSettings,
                         }
                         else
                         {
-                            OmvUi::information(Core::ICore::dialogParent(),
+                            OMVUI::information(Core::ICore::dialogParent(),
                                 Tr::tr("Convert Model"),
                                 Tr::tr("The model has already been converted for the Ethos-U NPU."
                                        "\n\n%1 will just copy the model as is.").arg(QGuiApplication::applicationDisplayName()));
@@ -188,7 +188,7 @@ QString convertModel(const QJsonObject &boardSettings,
                         }
                         else
                         {
-                            OmvUi::information(Core::ICore::dialogParent(),
+                            OMVUI::information(Core::ICore::dialogParent(),
                                 Tr::tr("Convert Model"),
                                 Tr::tr("The model has already been converted for the Neural-ART NPU."
                                        "\n\n%1 will just copy the model as is.").arg(QGuiApplication::applicationDisplayName()));
@@ -347,7 +347,7 @@ void OpenMVROMFSEditor::viewEdit()
 
     if(!QDesktopServices::openUrl(url))
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
                               Tr::tr("Edit ROMFS"),
                               Tr::tr("Failed to open: \"%L1\"").arg(url.toString()));
     }
@@ -365,7 +365,7 @@ void OpenMVROMFSEditor::addModel()
 
     OpenMVModelZooBrowser dialog(m_boardSettings, settings, this);
 
-    if (OmvUi::exec(dialog) == QDialog::Accepted)
+    if (OMVUI::exec(dialog) == QDialog::Accepted)
     {
         QString src = dialog.selectedModel();
         QString convertedSrc = convertModel(m_boardSettings, src, settings);
@@ -382,13 +382,13 @@ void OpenMVROMFSEditor::addModel()
         {
             if (QFileInfo(newFilePath).isDir())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edit ROMFS"),
                     Tr::tr("A folder with the same name already exists!"));
                 return;
             }
 
-            if (OmvUi::question(Core::ICore::dialogParent(),
+            if (OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("File already exists! Overwrite?"),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
@@ -396,7 +396,7 @@ void OpenMVROMFSEditor::addModel()
             {
                 if (!QFile::remove(newFilePath))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Edit ROMFS"),
                         Tr::tr("Failed to remove file!"));
                     return;
@@ -441,7 +441,7 @@ void OpenMVROMFSEditor::addModel()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("Failed to copy file!"));
         }
@@ -458,7 +458,7 @@ void OpenMVROMFSEditor::addFile()
 
     Utils::QtcSettings *settings = Core::ICore::settings();
 
-    QString file = OmvUi::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Edit ROMFS"),
+    QString file = OMVUI::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("Edit ROMFS"),
                                                 settings->value(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_OPEN_FILE_PATH,
                                                                 QDir::homePath()).toString());
 
@@ -493,13 +493,13 @@ void OpenMVROMFSEditor::addFileAt(const QString &file, QModelIndex index)
         {
             if (QFileInfo(newFilePath).isDir())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edit ROMFS"),
                     Tr::tr("A folder with the same name already exists!"));
                 return;
             }
 
-            if (OmvUi::question(Core::ICore::dialogParent(),
+            if (OMVUI::question(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("File already exists! Overwrite?"),
                 QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
@@ -507,7 +507,7 @@ void OpenMVROMFSEditor::addFileAt(const QString &file, QModelIndex index)
             {
                 if (!QFile::remove(newFilePath))
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Edit ROMFS"),
                         Tr::tr("Failed to remove file!"));
                     return;
@@ -533,7 +533,7 @@ void OpenMVROMFSEditor::addFileAt(const QString &file, QModelIndex index)
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("Failed to copy file!"));
         }
@@ -585,7 +585,7 @@ void OpenMVROMFSEditor::dropEvent(QDropEvent *event)
 
         if (info.isDir())
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("Dropping folders is not supported - drop the files inside them instead."));
             continue;
@@ -611,7 +611,7 @@ void OpenMVROMFSEditor::newFolder()
     Utils::QtcSettings *settings = Core::ICore::settings();
 
     bool ok;
-    QString name = QString::fromLatin1(toAscii(OmvUi::getText(Core::ICore::dialogParent(),
+    QString name = QString::fromLatin1(toAscii(OMVUI::getText(Core::ICore::dialogParent(),
         Tr::tr("Edit ROMFS"), Tr::tr("Folder Name"),
         QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_NEW_FOLDER_NAME).toString(), &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -633,7 +633,7 @@ void OpenMVROMFSEditor::newFolder()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("Failed to create folder!"));
         }
@@ -645,13 +645,13 @@ void OpenMVROMFSEditor::remove()
     QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
-        OmvUi::information(Core::ICore::dialogParent(),
+        OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             Tr::tr("No file or folder selected."));
         return;
     }
 
-    if (OmvUi::question(Core::ICore::dialogParent(),
+    if (OMVUI::question(Core::ICore::dialogParent(),
         Tr::tr("Edit ROMFS"),
         Tr::tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
@@ -659,7 +659,7 @@ void OpenMVROMFSEditor::remove()
     {
         if (!m_model->remove(index))
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("Failed to remove file or folder!"));
             return;
@@ -674,7 +674,7 @@ void OpenMVROMFSEditor::extractFile()
     QModelIndex index = m_filter->mapToSource(currentIndex());
 
     if (!index.isValid()) {
-        OmvUi::information(Core::ICore::dialogParent(),
+        OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             Tr::tr("No file or folder selected."));
         return;
@@ -682,7 +682,7 @@ void OpenMVROMFSEditor::extractFile()
 
     if (m_model->isDir(index))
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             Tr::tr("Cannot save a folder!"));
         return;
@@ -690,7 +690,7 @@ void OpenMVROMFSEditor::extractFile()
 
     Utils::QtcSettings *settings = Core::ICore::settings();
 
-    QString path = OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Extract File"),
+    QString path = OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Extract File"),
         settings->value(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_SAVE_AS_PATH, QDir::homePath()).toString()
             + QDir::separator() + m_model->fileName(index));
 
@@ -704,7 +704,7 @@ void OpenMVROMFSEditor::extractFile()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Extract File"),
                 file.errorString());
         }
@@ -809,7 +809,7 @@ void OpenMVPlugin::romfsOperationIncomplete(const QString &title, bool write)
 {
     if (write)
     {
-        OmvUi::warning(Core::ICore::dialogParent(), title,
+        OMVUI::warning(Core::ICore::dialogParent(), title,
             Tr::tr("The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.\n\n") +
             (m_romfsBootloaderLeft
              ? Tr::tr("Reset the ROM file system, or edit and commit it again, before relying on it.")
@@ -818,7 +818,7 @@ void OpenMVPlugin::romfsOperationIncomplete(const QString &title, bool write)
     }
     else
     {
-        OmvUi::information(Core::ICore::dialogParent(), title,
+        OMVUI::information(Core::ICore::dialogParent(), title,
             Tr::tr("The ROMFS read did not complete.\n\n"
                    "Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloader options "
                    "to edit the ROM file system again."));
@@ -837,7 +837,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
     if(!tempDir.isValid())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             tempDir.errorString());
 
@@ -870,7 +870,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
         if (!romfsConfigSettings.value(QStringLiteral("size")).toInt())
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Edit ROMFS"),
                 Tr::tr("ROMFS is not supported on this board!"));
 
@@ -883,7 +883,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
     }
     else
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Edit ROMFS"),
             Tr::tr("ROMFS is not supported on this board!"));
 
@@ -947,7 +947,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                     if (!ok)
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
 
                         if (wasConnected) connectClicked(false, QString(), false, false, false, true);
@@ -962,7 +962,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Edit ROMFS"),
                     romfsFile.errorString());
 
@@ -971,7 +971,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         }
         else
         {
-            QString path = OmvUi::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("OpenMV ROMFS"),
+            QString path = OMVUI::getOpenFileName(Core::ICore::dialogParent(), Tr::tr("OpenMV ROMFS"),
                 settings->value(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_OPEN_PATH, QDir::homePath()).toString(),
                 Tr::tr("ROMFS Images (*.img)"));
 
@@ -989,7 +989,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 
                     if (!ok)
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Edit ROMFS"), Tr::tr("Failed to unpack ROMFS!"));
 
                         return;
@@ -997,7 +997,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("OpenMV ROMFS"),
                         romfsFile.errorString());
 
@@ -1040,7 +1040,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Load ROMFS onto OpenMV Cam"),
                 romfsFile.errorString());
         }
@@ -1103,7 +1103,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         dialog->resize(640, 480);
     }
 
-    while (OmvUi::exec(dialog) == QDialog::Accepted)
+    while (OMVUI::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
         QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
@@ -1143,7 +1143,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         // the output means "back to the editor", not "discard the edits".
         bool done = false;
 
-        if (OmvUi::exec(dialog2) == QDialog::Accepted)
+        if (OMVUI::exec(dialog2) == QDialog::Accepted)
         {
             settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_ACTION, combo2->currentIndex());
 
@@ -1176,14 +1176,14 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                 }
                 else
                 {
-                    OmvUi::critical(Core::ICore::dialogParent(),
+                    OMVUI::critical(Core::ICore::dialogParent(),
                         Tr::tr("Edit ROMFS"),
                         romfsFile.errorString());
                 }
             }
             else if(combo2->currentIndex() == 1)
             {
-                QString path = OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Edit ROMFS"),
+                QString path = OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Edit ROMFS"),
                     settings->value(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_SAVE_PATH, QDir::homePath()).toString(),
                     Tr::tr("ROMFS Images (*.img)"));
 
@@ -1204,7 +1204,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
                     }
                     else
                     {
-                        OmvUi::critical(Core::ICore::dialogParent(),
+                        OMVUI::critical(Core::ICore::dialogParent(),
                             Tr::tr("Edit ROMFS"),
                             romfsFile.errorString());
                     }
@@ -1242,7 +1242,7 @@ void OpenMVPlugin::resetRomfsClicked()
         return;
     }
 
-    if(OmvUi::warning(Core::ICore::dialogParent(),
+    if(OMVUI::warning(Core::ICore::dialogParent(),
         Tr::tr("Reset ROMFS"),
         Tr::tr("Are you sure you want to reset your OpenMV Cam's ROM file system?"),
         QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
@@ -1272,7 +1272,7 @@ void OpenMVPlugin::resetRomfsClicked()
 
             if (!romfsConfigSettings.value(QStringLiteral("size")).toInt())
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Reset ROMFS"),
                     Tr::tr("ROMFS is not supported on this board!"));
 
@@ -1283,7 +1283,7 @@ void OpenMVPlugin::resetRomfsClicked()
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Reset ROMFS"),
                 Tr::tr("ROMFS is not supported on this board!"));
 

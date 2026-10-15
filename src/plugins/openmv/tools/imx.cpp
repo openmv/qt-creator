@@ -806,7 +806,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
             Tr::tr("This feature is not supported on this machine!"));
 
@@ -843,7 +843,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -886,7 +886,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -933,7 +933,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if(!claimed)
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), Tr::tr("The i.MX flashloader did not enumerate."));
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), Tr::tr("The i.MX flashloader did not enumerate."));
 
             result = false;
             goto cleanup;
@@ -962,7 +962,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1000,7 +1000,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1036,7 +1036,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1074,7 +1074,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1112,7 +1112,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1148,7 +1148,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1186,7 +1186,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1222,7 +1222,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1266,7 +1266,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1311,7 +1311,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1347,7 +1347,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1390,7 +1390,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1426,7 +1426,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1463,7 +1463,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1497,7 +1497,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1681,7 +1681,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
             Tr::tr("This feature is not supported on this machine!"));
 
@@ -1727,7 +1727,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1771,7 +1771,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1816,7 +1816,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1852,7 +1852,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1898,7 +1898,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1934,7 +1934,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1978,7 +1978,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2014,7 +2014,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2049,7 +2049,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;

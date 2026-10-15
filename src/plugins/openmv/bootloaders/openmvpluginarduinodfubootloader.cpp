@@ -73,7 +73,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
     && ((QSysInfo::buildCpuArchitecture() == QStringLiteral("arm"))
     || (QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))))
     {
-        if(OmvUi::warning(Core::ICore::dialogParent(),
+        if(OMVUI::warning(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             Tr::tr("DFU Util may not be stable on this platform. If loading fails please use a regular computer."),
             QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Cancel) == QMessageBox::Cancel)
@@ -160,7 +160,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
         if(!foundMatch)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No DFU settings for the selected board type!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(m_boardVID).arg(m_boardPID));
 
@@ -217,7 +217,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
         {
             QStringList dfuDeviceVidPidList = selectedDfuDeviceVidPid.split(QLatin1Char(':'));
 
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No DFU settings for the selected device!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(dfuDeviceVidPidList.first().toInt(nullptr, 16)).arg(dfuDeviceVidPidList.last().toInt(nullptr, 16)));
 
@@ -255,7 +255,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
                     if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
-                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                        OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                         CONNECT_END();
                     }
@@ -267,7 +267,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
                 if(justEraseFlashFs)
                 {
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -280,7 +280,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -289,7 +289,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -352,7 +352,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
-                    OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                    OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                     CONNECT_END();
                 }
@@ -375,7 +375,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
-                    OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                    OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                     CONNECT_END();
                 }
@@ -395,7 +395,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {
-            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 viewerModeFirmwareText(Tr::tr("DFU firmware update complete!\n\n") +
                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -410,7 +410,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
         }
         else
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
             CONNECT_END();
         }
     }

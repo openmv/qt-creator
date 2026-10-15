@@ -67,7 +67,7 @@ LoaderDialog::LoaderDialog(const QString &title,
 {
     ++s_loaderDialogActiveCount;
 
-    if(McpUi::Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(title, details));
+    if(OMVMCP::Call *call = OMVMCP::currentCall()) call->note(QStringLiteral("[%1] %2").arg(title, details));
 
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
@@ -181,7 +181,7 @@ LoaderDialog::~LoaderDialog()
 {
     if (s_loaderDialogActiveCount > 0) --s_loaderDialogActiveCount;
 
-    if(McpUi::Call *call = McpUi::currentCall())
+    if(OMVMCP::Call *call = OMVMCP::currentCall())
     {
         // Hand the agent the tool's console, elided in the middle if long. The
         // window geometry is a human preference and is not saved from here.
@@ -212,14 +212,14 @@ LoaderDialog::~LoaderDialog()
 void LoaderDialog::setProgressBarLabel(const QString &text)
 {
     m_progressBarLabel->setText(text);
-    if(McpUi::Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_title, text));
+    if(OMVMCP::Call *call = OMVMCP::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_title, text));
 }
 
 void LoaderDialog::setProgressBarValue(int val)
 {
     m_progressBar->setValue(val);
 
-    if(McpUi::Call *call = McpUi::currentCall())
+    if(OMVMCP::Call *call = OMVMCP::currentCall())
     {
         // Log the percentage in steps of ten so a slow flash is visible but
         // a fast one does not flood the call's log.
@@ -237,14 +237,14 @@ void LoaderDialog::setProgressBarValue(int val)
 void LoaderDialog::appendPlainText(const QString &text)
 {
     m_plainTextEdit->appendPlainText(text);
-    if(McpUi::currentCall()) m_console.append(text);
+    if(OMVMCP::currentCall()) m_console.append(text);
 }
 
 void LoaderDialog::waitForClose()
 {
     if(m_wasRejected) return;
 
-    if(McpUi::currentCall())
+    if(OMVMCP::currentCall())
     {
         if(m_okayButton->isEnabled()) accept(); else reject();
         return;
@@ -257,13 +257,13 @@ void LoaderDialog::waitForClose()
 
 void LoaderDialog::setVisible(bool visible)
 {
-    if(McpUi::currentCall()) visible = false;
+    if(OMVMCP::currentCall()) visible = false;
     QDialog::setVisible(visible);
 }
 
 void LoaderDialog::appendColoredText(const QString &text, bool warning)
 {
-    if(McpUi::currentCall()) m_console.append(text);
+    if(OMVMCP::currentCall()) m_console.append(text);
 
     m_plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
                            arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)

@@ -103,7 +103,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
 
         if(!foundMatch)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No PicoTool settings for the selected board type!"));
 
@@ -138,7 +138,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
 
         if(!foundMatch)
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No PicoTool settings for the selected device!"));
 
@@ -152,7 +152,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
         Utils::Process process;
         picotoolReset(command, process);
 
-        if(m_autoUpdate.isEmpty()) OmvUi::information(Core::ICore::dialogParent(),
+        if(m_autoUpdate.isEmpty()) OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Connect"),
             QString(QStringLiteral("%1"))
             .arg(Tr::tr("Your %1 doesn't have an ROM file system.").arg(boardDisplayName)));
@@ -188,7 +188,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
 
                     if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
-                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                        OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                         CONNECT_END();
                     }
@@ -204,7 +204,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
 
                     if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
-                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                        OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                         CONNECT_END();
                     }
@@ -213,7 +213,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
                         CONNECT_END();
                     }
 
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -226,7 +226,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
             }
             else
             {
-                OmvUi::critical(Core::ICore::dialogParent(),
+                OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -235,7 +235,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
         }
         else
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -251,7 +251,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
 
         if(process.result() == Utils::ProcessResult::FinishedWithSuccess)
         {
-            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
+            if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 viewerModeFirmwareText(Tr::tr("PicoTool firmware update complete!\n\n") +
                 Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -266,7 +266,7 @@ void OpenMVPlugin::openmvPictotoolBootloader(bool forceFlashFSErase,
         }
         else
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("PicoTool firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("PicoTool firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
             CONNECT_END();
         }
     }

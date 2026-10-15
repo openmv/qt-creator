@@ -29,7 +29,7 @@
  */
 
 // The OpenMV MCP tools. Each tool runs on the GUI thread inside the server's
-// callback, enters a McpUi::Scope, invokes the existing plugin slot, and waits
+// callback, enters a OMVMCP::Scope, invokes the existing plugin slot, and waits
 // (nested event loop, wall-clock bounded) for the flow to finish. The result is
 // the call's structured error ledger plus whatever the tool reads back.
 
@@ -107,15 +107,15 @@ bool awaitPoll(OpenMVPluginIO *io, Signal signal, Callable onReply, const std::f
     return got;
 }
 
-McpUi::Call makeCall(const QJsonObject &args)
+OMVMCP::Call makeCall(const QJsonObject &args)
 {
-    McpUi::Call call;
+    OMVMCP::Call call;
     call.wall.start();
 
     const QString policy = args.value(QStringLiteral("policy")).toString();
-    if(policy == QStringLiteral("auto")) call.policy = McpUi::Policy::AutoAnswer;
-    else if(policy == QStringLiteral("fail")) call.policy = McpUi::Policy::Fail;
-    else call.policy = McpUi::Policy::Elicit;
+    if(policy == QStringLiteral("auto")) call.policy = OMVMCP::Policy::AutoAnswer;
+    else if(policy == QStringLiteral("fail")) call.policy = OMVMCP::Policy::Fail;
+    else call.policy = OMVMCP::Policy::Elicit;
 
     call.answers = args.value(QStringLiteral("answers")).toObject();
     call.deadlineMs = qBound(1000, args.value(QStringLiteral("deadlineMs")).toInt(300000), 3600000);
@@ -161,7 +161,7 @@ Mcp::Schema::Tool::InputSchema &addConfirm(Mcp::Schema::Tool::InputSchema &schem
     return schema;
 }
 
-QJsonObject outcome(const McpUi::Call &call)
+QJsonObject outcome(const OMVMCP::Call &call)
 {
     return call.toJson();
 }
@@ -343,7 +343,7 @@ void OpenMVPlugin::registerMcpTools()
                 if(m_connected) return okResult(QJsonObject{{QStringLiteral("connected"), true}, {QStringLiteral("port"), m_portName}, {QStringLiteral("alreadyConnected"), true}});
 
                 const QJsonObject args = params.argumentsAsObject();
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
 
                 if(args.contains(QStringLiteral("port")))
@@ -352,7 +352,7 @@ void OpenMVPlugin::registerMcpTools()
                 }
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     connectClicked();
 
                     // Every exit path schedules workingDone via a 0 ms timer, and the
@@ -400,11 +400,11 @@ void OpenMVPlugin::registerMcpTools()
                 if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
                 if(!m_connected) return okResult(QJsonObject{{QStringLiteral("connected"), false}, {QStringLiteral("alreadyDisconnected"), true}});
 
-                McpUi::Call call = makeCall(params.argumentsAsObject());
+                OMVMCP::Call call = makeCall(params.argumentsAsObject());
                 call.tool = toolInterface;
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     disconnectClicked();
 
                     while((m_working || m_connected) && !call.expired())
@@ -451,13 +451,13 @@ void OpenMVPlugin::registerMcpTools()
                 if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
                 if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
                 m_lastScriptError = QString();
 
                 if(args.contains(QStringLiteral("text")))
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     m_iodevice->scriptExec(args.value(QStringLiteral("text")).toString().toUtf8());
                     bool done = awaitSignal(m_iodevice, &OpenMVPluginIO::scriptExecDone, call.remainingMs());
                     bool timedOut = m_iodevice->getTimeout();
@@ -469,7 +469,7 @@ void OpenMVPlugin::registerMcpTools()
                 }
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     startClicked();
 
                     while(m_working && !call.expired())
@@ -511,11 +511,11 @@ void OpenMVPlugin::registerMcpTools()
                 if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
                 if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
 
-                McpUi::Call call = makeCall(params.argumentsAsObject());
+                OMVMCP::Call call = makeCall(params.argumentsAsObject());
                 call.tool = toolInterface;
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     stopClicked();
 
                     while(m_working && !call.expired())
@@ -583,8 +583,8 @@ void OpenMVPlugin::registerMcpTools()
     // Runs a plugin flow inside the call's scope and waits until the plugin is
     // idle again or the deadline passes. Firmware flows tear m_working down and
     // back up between their stages, so the sticky flag is waited on as well.
-    auto runFlow = [this](McpUi::Call &call, const std::function<void()> &invoke) {
-        McpUi::Scope scope(call);
+    auto runFlow = [this](OMVMCP::Call &call, const std::function<void()> &invoke) {
+        OMVMCP::Scope scope(call);
         invoke();
 
         while((m_working || m_firmwareUpdateInProgress) && !call.expired())
@@ -593,14 +593,14 @@ void OpenMVPlugin::registerMcpTools()
         }
     };
 
-    auto flowBusy = [this](const McpUi::Call &call) {
+    auto flowBusy = [this](const OMVMCP::Call &call) {
         return call.expired() && (m_working || m_firmwareUpdateInProgress);
     };
 
     // G2 gate: the agent must pass confirm:true and, when the client can put a
     // question to the user, the user confirms too (whatever the call's policy
     // and whatever `answers` say).
-    auto gateDestructive = [](McpUi::Call &call, const QJsonObject &args, const QString &title, const QString &text) -> std::optional<CallToolResult> {
+    auto gateDestructive = [](OMVMCP::Call &call, const QJsonObject &args, const QString &title, const QString &text) -> std::optional<CallToolResult> {
         if(!args.value(QStringLiteral("confirm")).toBool())
         {
             return errResult(QStringLiteral("confirm_required"), QStringLiteral("This operation is destructive; pass confirm:true to run it. %1").arg(text));
@@ -612,14 +612,14 @@ void OpenMVPlugin::registerMcpTools()
             return std::nullopt;
         }
 
-        const McpUi::Policy policy = call.policy;
-        call.policy = McpUi::Policy::Elicit;
+        const OMVMCP::Policy policy = call.policy;
+        call.policy = OMVMCP::Policy::Elicit;
         call.answers.remove(OMV_UI_SITE("mcp.confirm"));
 
         QMessageBox::StandardButton answer;
         {
-            McpUi::Scope scope(call);
-            answer = OmvUi::question(Core::ICore::dialogParent(), title, text, QMessageBox::Yes | QMessageBox::No, QMessageBox::No, OMV_UI_SITE("mcp.confirm"));
+            OMVMCP::Scope scope(call);
+            answer = OMVUI::question(Core::ICore::dialogParent(), title, text, QMessageBox::Yes | QMessageBox::No, QMessageBox::No, OMV_UI_SITE("mcp.confirm"));
         }
 
         call.policy = policy;
@@ -684,7 +684,7 @@ void OpenMVPlugin::registerMcpTools()
                     return errResult(QStringLiteral("not_available"), QStringLiteral("The camera is reachable over the network only; plug it in over USB to install firmware."));
                 }
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
 
                 const QString what = (source == QStringLiteral("file")) ? QFileInfo(path).fileName()
@@ -747,7 +747,7 @@ void OpenMVPlugin::registerMcpTools()
                 const QJsonObject args = params.argumentsAsObject();
                 if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
 
                 if(auto refused = gateDestructive(call, args, QStringLiteral("Erase Internal FAT File System"),
@@ -789,7 +789,7 @@ void OpenMVPlugin::registerMcpTools()
                 if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
                 if(!m_connected || !m_resetAction->isEnabled()) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
 
-                McpUi::Call call = makeCall(params.argumentsAsObject());
+                OMVMCP::Call call = makeCall(params.argumentsAsObject());
                 call.tool = toolInterface;
 
                 runFlow(call, [this] { disconnectClicked(true); });
@@ -819,7 +819,7 @@ void OpenMVPlugin::registerMcpTools()
                 if(!m_connected) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
                 if(!m_enterBootloaderAction->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("The camera is reachable over the network only; plug it in over USB to enter the bootloader."));
 
-                McpUi::Call call = makeCall(params.argumentsAsObject());
+                OMVMCP::Call call = makeCall(params.argumentsAsObject());
                 call.tool = toolInterface;
 
                 runFlow(call, [this] { disconnectClicked(true, true); });
@@ -860,7 +860,7 @@ void OpenMVPlugin::registerMcpTools()
                 if(!m_connected) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
                 if(!m_saveAction->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("Saving needs the camera's drive mounted and a non-empty script in the current editor."));
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
                 call.answers.insert(OMV_UI_SITE("script.save_strip"), args.value(QStringLiteral("strip")).toBool() ? QStringLiteral("Yes") : QStringLiteral("No"));
 
@@ -1097,7 +1097,7 @@ void OpenMVPlugin::registerMcpTools()
                 const int mode = qMax(0, modes.indexOf(args.value(QStringLiteral("mode")).toString(QStringLiteral("bytecode"))));
                 const QString options = args.value(QStringLiteral("options")).toString();
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
                 if(args.contains(QStringLiteral("board"))) call.answers.insert(OMV_UI_SITE("connect.board_type"), args.value(QStringLiteral("board")).toString());
                 call.answers.insert(OMV_UI_SITE("mpy.options"), QJsonObject{
@@ -1109,7 +1109,7 @@ void OpenMVPlugin::registerMcpTools()
                 bool noBoard = false;
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     Utils::QtcSettings *settings = Core::ICore::settings();
 
                     // The board settings carry the mpy-cross architecture flags.
@@ -1177,7 +1177,7 @@ void OpenMVPlugin::registerMcpTools()
                 const QString options = args.value(QStringLiteral("options")).toString();
                 const QString neuralArtOptions = args.value(QStringLiteral("neuralArtOptions")).toString();
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
                 if(args.contains(QStringLiteral("board"))) call.answers.insert(OMV_UI_SITE("connect.board_type"), args.value(QStringLiteral("board")).toString());
                 if(args.contains(QStringLiteral("target"))) call.answers.insert(OMV_UI_SITE("romfs.target"), args.value(QStringLiteral("target")).toString());
@@ -1192,7 +1192,7 @@ void OpenMVPlugin::registerMcpTools()
                 QString stage;
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     Utils::QtcSettings *settings = Core::ICore::settings();
                     const QString title = QStringLiteral("Compile Model");
 
@@ -1253,12 +1253,12 @@ void OpenMVPlugin::registerMcpTools()
                 const QString path = args.value(QStringLiteral("path")).toString();
                 if(path.isEmpty()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` is required."));
 
-                McpUi::Call call = makeCall(args);
+                OMVMCP::Call call = makeCall(args);
                 call.tool = toolInterface;
                 call.answers.insert(OMV_UI_SITE("fb.save_image_path"), path);
 
                 {
-                    McpUi::Scope scope(call);
+                    OMVMCP::Scope scope(call);
                     saveImage(m_frameBuffer->pixmap());
                 }
 

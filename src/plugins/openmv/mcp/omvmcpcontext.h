@@ -39,9 +39,9 @@
 
 // The ambient "MCP call" context.
 //
-// An MCP tool call creates a McpUi::Call, enters a McpUi::Scope, and then invokes
+// An MCP tool call creates a OMVMCP::Call, enters a OMVMCP::Scope, and then invokes
 // the *existing* IDE slot (connectClicked(), bootloaderClicked(), ...). Every
-// OmvUi::* dialog primitive consults McpUi::currentCall(): when it is null the
+// OMVUI::* dialog primitive consults OMVMCP::currentCall(): when it is null the
 // primitive forwards to Qt byte-for-byte (interactive mode); when it is set the
 // primitive records what a human would have seen into the call and returns a
 // policy-chosen answer instead of blocking on a modal. When the slot returns (or
@@ -53,7 +53,7 @@
 
 namespace OpenMV {
 namespace Internal {
-namespace McpUi {
+namespace OMVMCP {
 
 // What a primitive does when the agent supplied no answer for a question.
 enum class Policy {
@@ -117,7 +117,7 @@ private:
 
 QString synthesizeSite(const QString &title, const QString &text);
 
-} // namespace McpUi
+} // namespace OMVMCP
 } // namespace Internal
 } // namespace OpenMV
 

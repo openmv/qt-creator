@@ -98,7 +98,7 @@ bool alifSyncTools()
 
         if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), copyOperator))
         {
-            OmvUi::critical(Q_NULLPTR, QString(),
+            OMVUI::critical(Q_NULLPTR, QString(),
                                   Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
             return false;
         }
@@ -135,13 +135,13 @@ bool alifSyncTools()
 
                     if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively())
                     {
-                        OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                        OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                         return false;
                     }
 
                     if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), copyOperator))
                     {
-                        OmvUi::critical(Q_NULLPTR, QString(),
+                        OMVUI::critical(Q_NULLPTR, QString(),
                                               Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                         return false;
                     }
@@ -149,7 +149,7 @@ bool alifSyncTools()
             }
             else
             {
-                OmvUi::critical(Q_NULLPTR, QString(),
+                OMVUI::critical(Q_NULLPTR, QString(),
                                       Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
@@ -160,13 +160,13 @@ bool alifSyncTools()
 
             if(!Core::ICore::allUsersResourcePath(QStringLiteral("alif")).removeRecursively())
             {
-                OmvUi::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
+                OMVUI::critical(Q_NULLPTR, QString(), Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
 
             if(!Utils::FileUtils::copyRecursively(tools, Core::ICore::allUsersResourcePath(QStringLiteral("alif")), copyOperator))
             {
-                OmvUi::critical(Q_NULLPTR, QString(),
+                OMVUI::critical(Q_NULLPTR, QString(),
                                       Tr::tr("\n\nPlease close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
                 return false;
             }
@@ -518,7 +518,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
                 processPtr->write(QStringLiteral("1\n"));
                 // A physical action only a human can take: relay it instead of
                 // showing a window nobody can see.
-                if(McpUi::Call *call = McpUi::currentCall()) call->note(QStringLiteral("[Alif Tools] ACTION REQUIRED: ") + userButtonMessageBox->text());
+                if(OMVMCP::Call *call = OMVMCP::currentCall()) call->note(QStringLiteral("[Alif Tools] ACTION REQUIRED: ") + userButtonMessageBox->text());
                 else userButtonMessageBox->show();
                 *enterHardMaintenanceModePtr = false;
                 *exitHardMaintenanceModePtr = true;
@@ -655,7 +655,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
     if(maintenanceBinary.isEmpty() || updateSystemPackageBinary.isEmpty() || appWriteMramBinary.isEmpty() || appGenToc.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Alif Tools"),
             Tr::tr("This feature is not supported on this machine!"));
 
@@ -665,7 +665,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
     if ((!alifSelectPort(port)) || (!alifWriteGlobalCFG(obj)) || (!alifUpdateBuild(originalFirmwareFolder)))
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Alif Tools"),
             Tr::tr("Please close any programs that are viewing/editing %1's application data and then restart %1!").arg(QGuiApplication::applicationDisplayName()));
 
@@ -714,7 +714,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
-                    OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                    OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                     result = false;
                     goto cleanup;
@@ -764,7 +764,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+            OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -812,7 +812,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     //         goto cleanup;
     //     }
 
-    //     if (OmvUi::information(Core::ICore::dialogParent(),
+    //     if (OMVUI::information(Core::ICore::dialogParent(),
     //         Tr::tr("Alif Tools"),
     //         Tr::tr("Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled, reconnect your OpenMV Cam to your computer, and then press Ok."),
     //         QMessageBox::Ok | QMessageBox::Cancel, QMessageBox::Ok)
@@ -825,7 +825,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
     if (enterRecoverymode)
     {
-        OmvUi::information(Core::ICore::dialogParent(),
+        OMVUI::information(Core::ICore::dialogParent(),
                                  Tr::tr("Connect"),
                                  Tr::tr("Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.\n\n"
                                         "The camera must be power cycled after after recovery."));
@@ -855,7 +855,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -867,7 +867,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
             }
         }
 
-        OmvUi::information(Core::ICore::dialogParent(),
+        OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.\n\n"
                            "The camera must be power cycled after a system package update."));
@@ -893,7 +893,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -924,7 +924,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -953,7 +953,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
+                OMVUI::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Alif Tools"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -967,7 +967,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     }
 
     if ((appLoaded || hardMaintenanceRequired) &&
-        OmvUi::information(Core::ICore::dialogParent(),
+        OMVUI::information(Core::ICore::dialogParent(),
                                  Tr::tr("Alif Tools"),
                                  Tr::tr("Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. "\
                                         "Leave your OpenMV Cam unconnected until instructed to reconnect it."),

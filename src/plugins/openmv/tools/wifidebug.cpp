@@ -724,7 +724,7 @@ public:
 
         if(m_wifiRadio->isChecked() && m_config.ssid.isEmpty())
         {
-            OmvUi::warning(this, windowTitle(), Tr::tr("Please enter or select a WiFi network name (SSID)."));
+            OMVUI::warning(this, windowTitle(), Tr::tr("Please enter or select a WiFi network name (SSID)."));
             return;
         }
 
@@ -920,7 +920,7 @@ private:
 
         if(networks.isEmpty())
         {
-            OmvUi::information(this, windowTitle(),
+            OMVUI::information(this, windowTitle(),
                 Tr::tr("No WiFi networks were found (this PC may have no WiFi adapter). "
                        "You can type the network name in by hand."));
         }
@@ -985,7 +985,7 @@ void editWifiDebugBootPy(const QString &drivePath, const QString &serialNumber, 
     }
 
     WifiDebugDialog dialog(config, existed, Core::ICore::dialogParent());
-    if(OmvUi::exec(dialog) != QDialog::Accepted)
+    if(OMVUI::exec(dialog) != QDialog::Accepted)
     {
         return;
     }
@@ -993,7 +993,7 @@ void editWifiDebugBootPy(const QString &drivePath, const QString &serialNumber, 
     QString err;
     if(!writer(path, generateBootPy(dialog.config(), userCode).toUtf8(), &err))
     {
-        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("Edit boot.py"),
+        OMVUI::critical(Core::ICore::dialogParent(), Tr::tr("Edit boot.py"),
             Tr::tr("Failed to write boot.py to the camera:\n\n%1").arg(err));
     }
 }

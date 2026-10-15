@@ -62,7 +62,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if(!tempDir.isValid())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("Copy/Convert Python File"),
             tempDir.errorString());
 
@@ -135,7 +135,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = OmvUi::exec(dialog2, OMV_UI_SITE("mpy.options")) == QDialog::Accepted;
+    bool ok = OMVUI::exec(dialog2, OMV_UI_SITE("mpy.options")) == QDialog::Accepted;
 
     if (!ok)
     {
@@ -160,7 +160,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
         if (!file.open(QIODevice::ReadOnly))
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Copy/Convert Python File"),
                 file.errorString());
 
@@ -175,7 +175,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
         if((!outFile.open(QIODevice::WriteOnly)) || (outFile.write(scriptData) != scriptData.size()))
         {
-            OmvUi::critical(Core::ICore::dialogParent(),
+            OMVUI::critical(Core::ICore::dialogParent(),
                 Tr::tr("Copy/Convert Python File"),
                 outFile.errorString());
 
@@ -319,7 +319,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        OmvUi::critical(Core::ICore::dialogParent(),
+        OMVUI::critical(Core::ICore::dialogParent(),
             Tr::tr("MPY Cross Compilier"),
             Tr::tr("The MPY Cross Compilier is not supported on this platform."));
 

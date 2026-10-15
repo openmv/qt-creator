@@ -42,16 +42,16 @@
 // return type) plus one trailing, defaulted `site` id, so a call site migrates by
 // changing only the namespace:
 //
-//     QMessageBox::critical(parent, title, text);   ->   OmvUi::critical(parent, title, text);
+//     QMessageBox::critical(parent, title, text);   ->   OMVUI::critical(parent, title, text);
 //
-// With no MCP call in progress (McpUi::currentCall() == nullptr) each function
+// With no MCP call in progress (OMVMCP::currentCall() == nullptr) each function
 // forwards to Qt unchanged. Inside an MCP tool call it never blocks: it records
 // what a human would have seen into the call's log/errors and returns the
 // answer the agent pre-supplied for `site`, or the policy's safe default.
 
 namespace OpenMV {
 namespace Internal {
-namespace OmvUi {
+namespace OMVUI {
 
 // --- QMessageBox statics ---------------------------------------------------
 
@@ -207,7 +207,7 @@ private:
     QString m_site;
 };
 
-} // namespace OmvUi
+} // namespace OMVUI
 } // namespace Internal
 } // namespace OpenMV
 
