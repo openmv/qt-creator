@@ -165,7 +165,10 @@ if(UNIX AND NOT APPLE)
         node/linux-arm64
         picotool/aarch64
         python/linux-arm64
+        pylsp/linux-arm64
+        mpy-cross/linux-arm64
         vela/aarch64
+        spsdk/aarch64
         pydfu)
       set(downloaded_resource_directories
         https://developer.arm.com/-/media/Files/downloads/gnu/14.3.rel1/binrel/arm-gnu-toolchain-14.3.rel1-aarch64-arm-none-eabi.tar.xz)
