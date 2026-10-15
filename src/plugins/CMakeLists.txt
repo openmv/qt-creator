@@ -51,7 +51,7 @@ add_subdirectory(projectexplorer)
 # OPENMV-DIFF #
 add_subdirectory(languageclient)
 # OPENMV-DIFF #
-# add_subdirectory(acpclient)
+add_subdirectory(acpclient)
 # OPENMV-DIFF #
 
 # Level 4: (only depends on Level 3 and below)
@@ -163,7 +163,7 @@ endif()
 # add_subdirectory(qnx)
 # add_subdirectory(mcusupport)
 # add_subdirectory(qtapplicationmanager)
-# add_subdirectory(mcpserver)
+add_subdirectory(mcpserver)
 # OPENMV-DIFF #
 
 # OPENMV-DIFF #

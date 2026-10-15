@@ -7,7 +7,7 @@ endif()
 # OPENMV-DIFF #
 # add_subdirectory(devcontainer)
 # add_subdirectory(nanotrace)
-# add_subdirectory(acp)
+add_subdirectory(acp)
 # add_subdirectory(advanceddockingsystem)
 # OPENMV-DIFF #
 add_subdirectory(aggregation)
