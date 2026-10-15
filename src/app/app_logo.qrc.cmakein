@@ -1,8 +1,12 @@
 <RCC>
     <qresource prefix="/core">
     <!-- OPENMV-DIFF -->
-    <!-- <file alias="images/qtcreatorlogo-big.png">${IDE_LOGO_PATH}/images/logo/128/QtProject-${IDE_ID}.png</file>
-         <file alias="images/qtcreatorlogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/QtProject-${IDE_ID}.png</file> -->
+    <!-- Upstream pulls the big logo from QtProject-${IDE_ID}.png (128 and 256).
+         OpenMV ships its own OpenMV-openmvide.png below instead. The original
+         upstream <file> entries are deliberately described here in prose rather
+         than kept as a commented-out XML block: CMake 4.x AutoRcc scans <file>
+         tags even inside XML comments and would demand the nonexistent
+         QtProject-openmvide.png. -->
     <!-- OPENMV-DIFF -->
     <file alias="images/qtcreatorlogo-big.png">${IDE_LOGO_PATH}/images/logo/128/OpenMV-openmvide.png</file>
     <file alias="images/qtcreatorlogo-big@2x.png">${IDE_LOGO_PATH}/images/logo/256/OpenMV-openmvide.png</file>
