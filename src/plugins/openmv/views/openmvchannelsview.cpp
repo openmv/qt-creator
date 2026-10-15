@@ -4287,7 +4287,7 @@ void OpenMVChannelsView::toggleGroupRecording(int index)
     form->addRow(Tr::tr("Label:"), labelEdit);
     form->addRow(buttons);
 
-    if(dialog.exec() != QDialog::Accepted)
+    if(OmvUi::exec(dialog) != QDialog::Accepted)
     {
         return;
     }

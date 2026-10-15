@@ -1016,7 +1016,7 @@ void OpenMVPlugin::bootloaderClicked()
         QTimer::singleShot(0, this, [dialog] { dialog->adjustSize(); });
     });
 
-    if(dialog->exec() == QDialog::Accepted)
+    if(OmvUi::exec(dialog) == QDialog::Accepted)
     {
         QString forceFirmwarePath = pathChooser->filePath().toString();
         bool flashFSErase = checkBox->isChecked();
@@ -1218,7 +1218,7 @@ void OpenMVPlugin::installTheLatestDevelopmentRelease()
             dlg->setValue(bytesReceived);
         });
 
-        dialog->exec();
+        OmvUi::exec(dialog);
     }
     else
     {
@@ -1312,7 +1312,7 @@ void OpenMVPlugin::showDevelopmentReleaseDialog(const QByteArray &changelogHtml)
             connect(box, &QDialogButtonBox::accepted, newDialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, newDialog, &QDialog::reject);
 
-            if(newDialog->exec() == QDialog::Accepted)
+            if(OmvUi::exec(newDialog) == QDialog::Accepted)
             {
                 bool flashFSErase = checkBox->isChecked();
                 bool updateROMFS = checkBox2->isChecked();
@@ -1807,7 +1807,7 @@ void OpenMVPlugin::setPortAlias()
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
-    if(dialog.exec() != QDialog::Accepted)
+    if(OmvUi::exec(dialog) != QDialog::Accepted)
     {
         return;
     }
@@ -2242,7 +2242,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if((m_autoUpdate == QStringLiteral("release"))
                     || (m_autoUpdate == QStringLiteral("development"))
-                    || (dialog->exec() == QDialog::Accepted))
+                    || (OmvUi::exec(dialog) == QDialog::Accepted))
                     {
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_ACTION, combo->currentIndex());
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
@@ -2458,7 +2458,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
                                 bool ok = (!forceFirmwarePath.isEmpty()) || justEraseFlashFs ||
-                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (dialog->exec() == QDialog::Accepted);
+                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (OmvUi::exec(dialog) == QDialog::Accepted);
                                 bool forceFlashFSEraseTemp = justEraseFlashFs ||
                                     ((forceBootloader && previousMappingSet) ? forceFlashFSErase : (dfuDeviceResetToRelease ? dfuDeviceEraseFlash : checkBox->isChecked()));
                                 OpenMVROMFSAccess romfsAccessTemp = justEraseFlashFs ? OPENMV_ROMFS_NONE :
@@ -5340,7 +5340,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
-            bool ok = dialog->exec() == QDialog::Accepted;
+            bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
 
             if(ok)
             {
@@ -5406,7 +5406,7 @@ void OpenMVPlugin::updateCam(bool forceYes)
             connect(box, &QDialogButtonBox::accepted, dialog, &QDialog::accept);
             connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
-            bool ok = dialog->exec() == QDialog::Accepted;
+            bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
 
             if(ok)
             {

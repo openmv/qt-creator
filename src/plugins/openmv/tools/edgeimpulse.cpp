@@ -79,7 +79,7 @@ static void uploadProject(const QString &apiKey, const QString &hmacKey, OpenMVD
     QObject::connect(box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
     layout->addWidget(box);
 
-    bool ok = dialog.exec() == QDialog::Accepted;
+    bool ok = OmvUi::exec(dialog) == QDialog::Accepted;
 
     if(ok)
     {
@@ -485,7 +485,7 @@ void loginToEdgeImpulse(OpenMVDatasetEditor *editor)
     QObject::connect(box, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
     layout->addWidget(box);
 
-    if(dialog.exec() == QDialog::Accepted)
+    if(OmvUi::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(EDGE_IMPULSE_SETTINGS_GROUP "/" LAST_JWT_TOKEN_EMAIL, usernameBox->text());
 

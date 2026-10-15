@@ -672,6 +672,25 @@ QAction *popupMenu(QMenu &menu, const QPoint &pos)
     return menu.exec(pos);
 }
 
+// --- Hand-built modal dialogs -----------------------------------------------
+
+int exec(QDialog &dialog, const QString &site)
+{
+    Call *call = McpUi::currentCall();
+    if(!call) return dialog.exec();
+
+    const QString title = dialog.windowTitle();
+    record(call, 1, QStringLiteral("needs_input"), siteOr(site, title, QStringLiteral("dialog")), title,
+           QStringLiteral("This step needs a form filled in by a person; it was cancelled."), QStringLiteral("type: dialog"));
+    return QDialog::Rejected;
+}
+
+int exec(Progress &dialog, const QString &site)
+{
+    Q_UNUSED(site)
+    return dialog.exec();
+}
+
 // --- Progress ---------------------------------------------------------------
 
 Progress::Progress(QWidget *parent, Qt::WindowFlags flags) : QProgressDialog(parent, flags),

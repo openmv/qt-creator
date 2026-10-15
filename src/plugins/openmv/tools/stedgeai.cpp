@@ -166,7 +166,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = dialog2->exec() == QDialog::Accepted;
+    bool ok = OmvUi::exec(dialog2) == QDialog::Accepted;
 
     if (!ok)
     {

@@ -561,7 +561,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
 
     SettingsEditorDialog dialog(root, Core::ICore::dialogParent());
 
-    if (dialog.exec() == QDialog::Accepted) {
+    if (OmvUi::exec(dialog) == QDialog::Accepted) {
         const QByteArray out = QJsonDocument(dialog.updatedRoot()).toJson(QJsonDocument::Indented);
 
         QString err;

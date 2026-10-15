@@ -1471,7 +1471,7 @@ void OpenMVPlugin::extensionsInitialized()
 
             OpenMVModelZooBrowser *dialog = new OpenMVModelZooBrowser(boardSettings, settings, Core::ICore::dialogParent(), true);
 
-            if (dialog->exec() == QDialog::Accepted)
+            if (OmvUi::exec(dialog) == QDialog::Accepted)
             {
                 QString src = dialog->selectedModel();
                 QString convertedSrc = convertModel(boardSettings, src, settings);
@@ -2666,6 +2666,7 @@ void OpenMVPlugin::extensionsInitialized()
 
     connect(m_iodevice, &OpenMVPluginIO::printData, this, [] (const QByteArray &data) { Core::MessageManager::printData(data); });
     connect(m_iodevice, &OpenMVPluginIO::printData, this, &OpenMVPlugin::errorFilter);
+    connect(m_iodevice, &OpenMVPluginIO::printData, this, &OpenMVPlugin::mcpTerminalData);
 
     connect(m_iodevice, &OpenMVPluginIO::frameBufferData, this, [this] {
         m_queue.push_back(m_timer.restart());
@@ -4606,7 +4607,7 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
         connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
         layout->addWidget(box);
 
-        bool boardKeyOk = dialog->exec() == QDialog::Accepted;
+        bool boardKeyOk = OmvUi::exec(dialog) == QDialog::Accepted;
         QString boardKey = edit->text().replace(QRegularExpression(QStringLiteral("\\s+")), QStringLiteral(""));
 
         delete dialog;
@@ -4651,7 +4652,7 @@ bool OpenMVPlugin::registerOpenMVCamDialog(const QString board, const QString id
                 {
                     connect(reply, &QNetworkReply::sslErrors, reply, static_cast<void (QNetworkReply::*)(void)>(&QNetworkReply::ignoreSslErrors));
 
-                    bool wasCanceled = dialog.exec() != QDialog::Accepted;
+                    bool wasCanceled = OmvUi::exec(dialog) != QDialog::Accepted;
 
                     QByteArray data = reply->readAll();
 
@@ -4840,6 +4841,8 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
         }
 
         OmvUi::asyncBox(QMessageBox::Critical, Core::ICore::dialogParent(), QString(), errorMessage);
+
+        m_lastScriptError = QStringLiteral("%1:%2: %3").arg(fileName).arg(lineNumber).arg(errorMessage);
 
         m_errorFilterString = m_errorFilterString.mid(index + match.capturedLength(0));
     }
@@ -6049,7 +6052,7 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
             }
 
             // In normal mode exec always return rejected... the second statement below lets the if pass in this case.
-            if((editor.exec() == QDialog::Accepted) || parameters.toList().isEmpty())
+            if((OmvUi::exec(editor) == QDialog::Accepted) || parameters.toList().isEmpty())
             {
                 settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
                 settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
@@ -6120,7 +6123,7 @@ QList<int> OpenMVPlugin::openThresholdEditor(const QVariant parameters)
             }
 
             // In normal mode exec always return rejected... the second statement below lets the if pass in this case.
-            if((editor.exec() == QDialog::Accepted) || parameters.toList().isEmpty())
+            if((OmvUi::exec(editor) == QDialog::Accepted) || parameters.toList().isEmpty())
             {
                 settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE, editor.saveGeometry());
                 settings->setValue(SETTINGS_GROUP "/" LAST_THRESHOLD_EDITOR_STATE "_2", editor.getState());
@@ -6184,7 +6187,7 @@ void OpenMVPlugin::openKeypointsEditor()
                         Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
 
-                    if(editor.exec() == QDialog::Accepted)
+                    if(OmvUi::exec(editor) == QDialog::Accepted)
                     {
                         if(QFile::exists(path + QStringLiteral(".bak")))
                         {
@@ -6346,7 +6349,7 @@ void OpenMVPlugin::openAprilTagGenerator(apriltag_family_t *family)
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     layout->addWidget(box);
 
-    if(dialog->exec() == QDialog::Accepted)
+    if(OmvUi::exec(dialog) == QDialog::Accepted)
     {
         int min = qMin(minRange->value(), maxRange->value());
         int max = qMax(minRange->value(), maxRange->value());

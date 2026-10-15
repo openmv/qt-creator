@@ -614,7 +614,7 @@ void OpenMVPlugin::setSpacing()
         frameDumpSpacingBox->setDisabled(m_iodevice->v2ProtocolEnabled() && checked);
     });
 
-    if(dialog->exec() == QDialog::Accepted)
+    if(OmvUi::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(SETTINGS_GROUP "/" LAST_USE_GET_STATE, m_useGetState = getStateGroup->isChecked());
         settings->setValue(SETTINGS_GROUP "/" LAST_FRAME_DUMP_SPACING,

@@ -1904,7 +1904,7 @@ void playRTSPStreamAction()
         run->setEnabled(u.isValid());
     });
 
-    if(dialog->exec() == QDialog::Accepted)
+    if(OmvUi::exec(dialog) == QDialog::Accepted)
     {
         QString url = urlChooser->text();
         QString port = portChooser->text();

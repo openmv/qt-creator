@@ -119,7 +119,24 @@ QJsonObject outcome(const McpUi::Call &call)
     return call.toJson();
 }
 
+// The terminal ring: enough for a chatty script's recent history without
+// letting a runaway print loop grow the process.
+const int TERMINAL_RING_BYTES = 1 << 20;
+const int TERMINAL_READ_DEFAULT = 64 << 10;
+
 } // namespace
+
+void OpenMVPlugin::mcpTerminalData(const QByteArray &data)
+{
+    m_mcpTerminalLog.append(data);
+
+    if(m_mcpTerminalLog.size() > TERMINAL_RING_BYTES)
+    {
+        const int drop = m_mcpTerminalLog.size() - TERMINAL_RING_BYTES;
+        m_mcpTerminalLog.remove(0, drop);
+        m_mcpTerminalDropped += drop;
+    }
+}
 
 void OpenMVPlugin::registerMcpTools()
 {
@@ -132,21 +149,95 @@ void OpenMVPlugin::registerMcpTools()
         Tool{}
             .name(QStringLiteral("openmv_camera_status"))
             .title(QStringLiteral("OpenMV camera status"))
-            .description(QStringLiteral("Whether an OpenMV camera is connected, on which port, whether the IDE is busy with a camera operation, and which protocol is in use."))
+            .description(QStringLiteral("Whether an OpenMV camera is connected and on which port, what board/firmware/sensor it reports, whether a script is running, whether the IDE is busy with a camera operation, and the last traceback the camera printed."))
             .annotations(ToolAnnotations{}.readOnlyHint(true))
             .outputSchema(Tool::OutputSchema{}
                 .addProperty(QStringLiteral("connected"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
                 .addProperty(QStringLiteral("working"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
+                .addProperty(QStringLiteral("running"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
                 .addProperty(QStringLiteral("port"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("drivePath"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("board"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("boardId"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("sensor"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("firmware"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
                 .addProperty(QStringLiteral("protocolV2"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
+                .addProperty(QStringLiteral("lastError"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                .addProperty(QStringLiteral("terminalCursor"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
                 .addRequired(QStringLiteral("connected")).addRequired(QStringLiteral("working"))),
         [this](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
-            return okResult(QJsonObject{
+            QJsonObject out{
                 {QStringLiteral("connected"), m_connected},
                 {QStringLiteral("working"), m_working},
+                {QStringLiteral("running"), m_connected && m_running},
                 {QStringLiteral("port"), m_portName},
-                {QStringLiteral("protocolV2"), m_iodevice ? m_iodevice->v2ProtocolEnabled() : false}});
+                {QStringLiteral("protocolV2"), m_iodevice ? m_iodevice->v2ProtocolEnabled() : false},
+                {QStringLiteral("lastError"), m_lastScriptError},
+                {QStringLiteral("terminalCursor"), m_mcpTerminalDropped + m_mcpTerminalLog.size()}};
+
+            if(m_connected)
+            {
+                out.insert(QStringLiteral("drivePath"), m_portPath);
+                out.insert(QStringLiteral("board"), m_boardType);
+                out.insert(QStringLiteral("boardId"), m_boardId);
+                out.insert(QStringLiteral("sensor"), m_sensorType);
+                out.insert(QStringLiteral("firmware"), QStringLiteral("%1.%2.%3").arg(m_major).arg(m_minor).arg(m_patch));
+            }
+
+            return okResult(out);
         });
+
+    // ---- openmv_terminal_read -----------------------------------------------
+    // Absolute byte cursors: a reader passes back the `cursor` it last got and
+    // receives only what the camera printed since. The ring is bounded, so a
+    // stale cursor is clamped and `truncated` is set.
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("cursor"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Byte cursor from a previous read (or `terminalCursor` from openmv_camera_status). Omitted: the most recent `maxBytes`.")}});
+        in.addProperty(QStringLiteral("maxBytes"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("At most this many bytes, from the cursor forward (default 65536).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_terminal_read"))
+                .title(QStringLiteral("Read the camera's serial terminal"))
+                .description(QStringLiteral("Returns text the camera printed (print() output, tracebacks, REPL) since `cursor`, plus the cursor to pass next time. Nothing is consumed: the IDE's own terminal still shows everything."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in)
+                .outputSchema(Tool::OutputSchema{}
+                    .addProperty(QStringLiteral("text"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                    .addProperty(QStringLiteral("start"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
+                    .addProperty(QStringLiteral("cursor"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
+                    .addProperty(QStringLiteral("truncated"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
+                    .addProperty(QStringLiteral("more"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})
+                    .addRequired(QStringLiteral("text")).addRequired(QStringLiteral("cursor"))),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                const qint64 end = m_mcpTerminalDropped + m_mcpTerminalLog.size();
+                const int maxBytes = qBound(1, args.value(QStringLiteral("maxBytes")).toInt(TERMINAL_READ_DEFAULT), TERMINAL_RING_BYTES);
+
+                qint64 start = args.contains(QStringLiteral("cursor"))
+                             ? qint64(args.value(QStringLiteral("cursor")).toDouble())
+                             : qMax(m_mcpTerminalDropped, end - maxBytes);
+
+                const bool truncated = start < m_mcpTerminalDropped;
+                start = qBound(m_mcpTerminalDropped, start, end);
+
+                const qint64 stop = qMin(end, start + maxBytes);
+                const QByteArray slice = m_mcpTerminalLog.mid(int(start - m_mcpTerminalDropped), int(stop - start));
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("text"), QString::fromUtf8(slice)},
+                    {QStringLiteral("start"), start},
+                    {QStringLiteral("cursor"), stop},
+                    {QStringLiteral("truncated"), truncated},
+                    {QStringLiteral("more"), stop < end}});
+            });
+    }
 
     // ---- openmv_list_ports --------------------------------------------------
     // Enumerates without probing: querySerialPorts() transiently opens every
@@ -306,6 +397,7 @@ void OpenMVPlugin::registerMcpTools()
 
                 McpUi::Call call = makeCall(args);
                 call.tool = toolInterface;
+                m_lastScriptError = QString();
 
                 if(args.contains(QStringLiteral("text")))
                 {

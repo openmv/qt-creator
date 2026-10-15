@@ -363,7 +363,7 @@ void OpenMVROMFSEditor::addModel()
 
     OpenMVModelZooBrowser dialog(m_boardSettings, settings, this);
 
-    if (dialog.exec() == QDialog::Accepted)
+    if (OmvUi::exec(dialog) == QDialog::Accepted)
     {
         QString src = dialog.selectedModel();
         QString convertedSrc = convertModel(m_boardSettings, src, settings);
@@ -1101,7 +1101,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         dialog->resize(640, 480);
     }
 
-    while (dialog->exec() == QDialog::Accepted)
+    while (OmvUi::exec(dialog) == QDialog::Accepted)
     {
         settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_GEOMETRY, dialog->saveGeometry());
         QDialog *dialog2 = new QDialog(Core::ICore::dialogParent(),
@@ -1141,7 +1141,7 @@ void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
         // the output means "back to the editor", not "discard the edits".
         bool done = false;
 
-        if (dialog2->exec() == QDialog::Accepted)
+        if (OmvUi::exec(dialog2) == QDialog::Accepted)
         {
             settings->setValue(SETTINGS_GROUP "/" LAST_ROMFS_DIALOG_ACTION, combo2->currentIndex());
 

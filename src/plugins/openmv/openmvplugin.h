@@ -530,6 +530,7 @@ public slots: // private
     void processEvents();
     void refreshFpsButton(); // renders m_fpsButton from m_fpsIde / m_fpsCamera / m_fpsCameraValid
     void errorFilter(const QByteArray &data);
+    void mcpTerminalData(const QByteArray &data); // keeps the ring log openmv_terminal_read serves
     void saveScript();
     void saveImage(const QPixmap &data);
     void saveTemplate(const QRect &rect);
@@ -811,6 +812,12 @@ private:
     QString m_errorFilterString;
     TextEditor::TextMark *m_errorMark = Q_NULLPTR; // red mark + inline error text on the traceback line; cleared on edit/run/disconnect
     void clearErrorMark();
+    // MCP: everything the camera printed, as a bounded ring the agent reads
+    // with absolute byte cursors (m_mcpTerminalDropped is the cursor of the
+    // ring's first byte), and the last traceback errorFilter() parsed.
+    QByteArray m_mcpTerminalLog;
+    qint64 m_mcpTerminalDropped = 0;
+    QString m_lastScriptError;
     bool m_useGetState;
     int m_frameSizeDumpSpacing;
     int m_getScriptRunningSpacing;

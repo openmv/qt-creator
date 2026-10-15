@@ -167,6 +167,18 @@ QString getExistingDirectory(QWidget *parent = Q_NULLPTR, const QString &caption
 
 QAction *popupMenu(QMenu &menu, const QPoint &pos);
 
+// --- Hand-built modal dialogs (`dialog.exec()`) -----------------------------
+// Interactive: runs the dialog. MCP mode: nobody can fill the form in, so it
+// is rejected at once and a needs_input error names it by window title. A
+// Progress dialog keeps its own MCP-aware exec (declared below).
+
+class Progress;
+
+int exec(QDialog &dialog, const QString &site = QString());
+inline int exec(QDialog *dialog, const QString &site = QString()) { return exec(*dialog, site); }
+int exec(Progress &dialog, const QString &site = QString());
+inline int exec(Progress *dialog, const QString &site = QString()) { return exec(*dialog, site); }
+
 // --- QProgressDialog --------------------------------------------------------
 // A QProgressDialog that never shows while an MCP call is in progress. Sites keep
 // their `connect(&dialog, &QProgressDialog::canceled, ...)` wiring and their

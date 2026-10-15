@@ -985,7 +985,7 @@ void editWifiDebugBootPy(const QString &drivePath, const QString &serialNumber, 
     }
 
     WifiDebugDialog dialog(config, existed, Core::ICore::dialogParent());
-    if(dialog.exec() != QDialog::Accepted)
+    if(OmvUi::exec(dialog) != QDialog::Accepted)
     {
         return;
     }
