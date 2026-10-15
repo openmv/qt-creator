@@ -1,0 +1,60 @@
+Metadata-Version: 2.4
+Name: spsdk-pyocd
+Version: 0.3.4
+Summary: PyOCD SW Debugger. A debugger probe plugin for SPSDK.
+Author: NXP
+Maintainer-email: NXP <spsdk@nxp.com>
+License: BSD-3-Clause
+Project-URL: Homepage, https://github.com/nxp-mcuxpresso/spsdk_plugins/tree/master/pemicro
+Project-URL: Issues, https://github.com/nxp-mcuxpresso/spsdk_plugins/issues
+Keywords: NXP,SPSDK,pyocd
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: pyocd<0.50,>=0.35.1
+Provides-Extra: pemicro
+Requires-Dist: pyocd-pemicro<1.2,>=1.1.5; extra == "pemicro"
+Dynamic: license-file
+
+
+PyOCD SW Debugger
+=================
+
+
+* Free software: BSD-3-Clause
+
+
+Features
+--------
+
+* Allow SPSDK to use PyOCD as an interface for debugger probes.
+
+
+Installation
+------------
+
+* Activate virtual env, where you have SPSDK
+    - to install spsdk run: `pip install spsdk`
+* Install the package
+    - `pip install spsdk-pyocd`
+* If you want to use P&E Micro debugger probes install the `pemicro` extra
+    - `pip install spsdk-pyocd[pemicro]`
+
+* Verify installation by running `nxpdebugmbox --help`
+    - you should see `pyocd` amongst available interfaces (--interface)
+
+
+Credits
+-------
+
+This package was created with [Cookiecutter](https://github.com/audreyr/cookiecutter) and the [SPSDK Debug Probe project template](https://github.com/nxp-mcuxpresso/spsdk/blob/master/examples/plugins/templates/cookiecutter-spsdk-debug-probe-plugin.zip).

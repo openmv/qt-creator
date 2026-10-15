@@ -1,0 +1,24 @@
+Metadata-Version: 2.4
+Name: pyelftools
+Version: 0.33
+Summary: Library for analyzing ELF files and DWARF debugging information
+Author-email: Eli Bendersky <eliben@gmail.com>
+Maintainer-email: Eli Bendersky <eliben@gmail.com>
+License: Public domain
+Project-URL: Homepage, https://github.com/eliben/pyelftools
+Project-URL: Repository, https://github.com/eliben/pyelftools.git
+Project-URL: Issues, https://github.com/eliben/pyelftools/issues
+Platform: Cross Platform
+Classifier: Development Status :: 5 - Production/Stable
+Classifier: Intended Audience :: Developers
+Classifier: License :: Public Domain
+Classifier: Operating System :: OS Independent
+Classifier: Programming Language :: Python :: 3
+Classifier: Topic :: File Formats
+Classifier: Topic :: Software Development :: Compilers
+Classifier: Topic :: Software Development :: Debuggers
+Classifier: Topic :: Software Development :: Disassemblers
+Requires-Python: >=3.10
+Description-Content-Type: text/x-rst
+License-File: LICENSE
+Dynamic: license-file

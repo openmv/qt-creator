@@ -1,0 +1,16 @@
+../../bin/pack-manager,sha256=zLXZ4jsLTDu-2s88oSpXG4MeMXnpNVX4SdL5fR043h8,279
+cmsis_pack_manager-0.6.0.dist-info/INSTALLER,sha256=zuuue4knoyJ-UwPPXg8fezS7VCrXJQrAP7zeNuwvFQg,4
+cmsis_pack_manager-0.6.0.dist-info/METADATA,sha256=2zdjiGhxeviByb4nmtFLNYizW43PSnNbDH3H04ZCDRY,3576
+cmsis_pack_manager-0.6.0.dist-info/RECORD,,
+cmsis_pack_manager-0.6.0.dist-info/WHEEL,sha256=BqU7fUWxrsHkAgI0J4n63fC5sQUMRILJc4C2oK9WxLI,128
+cmsis_pack_manager-0.6.0.dist-info/entry_points.txt,sha256=ErWuFfCJ_4UGzVSBz8IwAnpux58K6FxZi4vRhv6NWeg,68
+cmsis_pack_manager-0.6.0.dist-info/licenses/LICENSE,sha256=psuoW8kuDP96RQsdhzwOqi6fyWv0ct8CR6Jr7He_P_k,10173
+cmsis_pack_manager/__init__.py,sha256=nV7TvG63fo4ug1ef7RdB4Ozu96qYTwZSSfNi6JP_-Nk,13517
+cmsis_pack_manager/__pycache__/__init__.cpython-313.pyc,,
+cmsis_pack_manager/__pycache__/pack_manager.cpython-313.pyc,,
+cmsis_pack_manager/cmsis_pack_manager/__init__.py,sha256=tUj7K93vrZf5XfUcvAcbRu1k4RaMWjFRL34Gm4E8RBo,151
+cmsis_pack_manager/cmsis_pack_manager/__pycache__/__init__.cpython-313.pyc,,
+cmsis_pack_manager/cmsis_pack_manager/__pycache__/ffi.cpython-313.pyc,,
+cmsis_pack_manager/cmsis_pack_manager/ffi.py,sha256=5bX7rwSZE-AwLjZkk8KUsPNzNGdQZRPHnNraqyJ6L8w,2267
+cmsis_pack_manager/cmsis_pack_manager/libcmsis_pack_manager.so,sha256=kLQFnLGrtIiWsHmEqbLws_U5F13fXZ8ShOYGfAMKe-0,10896856
+cmsis_pack_manager/pack_manager.py,sha256=1_1ettFQa23mkPkBErBDfGLkEs7Xlgd9R3smtmBlxb8,8725

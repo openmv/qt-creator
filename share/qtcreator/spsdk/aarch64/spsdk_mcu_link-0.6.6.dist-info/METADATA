@@ -1,0 +1,110 @@
+Metadata-Version: 2.4
+Name: spsdk_mcu_link
+Version: 0.6.6
+Summary: SPSDK MCU-Link. A debugger probe plugin for SPSDK supporting LPC-Link/MCU-Link from NXP.
+Author: NXP
+Maintainer-email: Kelnar Michal <michal.kelnar@nxp.com>
+License: BSD-3-Clause
+Project-URL: Homepage, https://github.com/nxp-mcuxpresso/spsdk_plugins/tree/master/mcu_link
+Project-URL: Issues, https://github.com/nxp-mcuxpresso/spsdk_plugins/issues
+Keywords: NXP,SPSDK,mcu-link,mculink,CMSIS-DAP
+Classifier: Development Status :: 2 - Pre-Alpha
+Classifier: Intended Audience :: Developers
+Classifier: License :: OSI Approved :: BSD License
+Classifier: Natural Language :: English
+Classifier: Programming Language :: Python :: 3
+Classifier: Programming Language :: Python :: 3.9
+Classifier: Programming Language :: Python :: 3.10
+Classifier: Programming Language :: Python :: 3.11
+Classifier: Programming Language :: Python :: 3.12
+Classifier: Programming Language :: Python :: 3.13
+Requires-Python: >=3.9
+Description-Content-Type: text/markdown
+License-File: LICENSE
+Requires-Dist: wasmtime~=24.0.0
+Requires-Dist: pyusb~=1.3.1
+Requires-Dist: hidapi~=0.14.0.post2
+Requires-Dist: libusb_package
+Dynamic: license-file
+
+    SPSDK MCU-Link
+    ==============
+
+    NXP SPSDK MCU-Link debug probe support plugin for NXP LPC-Link/MCU-Link hardware debug probes. This plugin enables seamless integration with NXP's debug hardware.
+
+    * Free software: BSD-3-Clause
+    * Documentation: https://github.com/nxp-mcuxpresso/spsdk_plugins?tab=readme-ov-file#readme
+
+    Features
+    --------
+
+    * Support for NXP MCU-Link debug probes
+    * CMSIS-DAP protocol implementation
+    * Firmware update capabilities
+    * Debug session management
+    * SWD/JTAG interface support
+    * Integration with SPSDK tools
+
+    Installation
+    ------------
+
+    1. Activate your virtual environment with SPSDK (to install spsdk run: `pip install spsdk`):
+
+        python -m venv venv
+        source venv/bin/activate  # On Windows: venv\Scripts\activate
+
+
+    2. Install the package:
+
+        pip install spsdk_mcu_link
+
+
+    3. Verify installation:
+
+        nxpdebugmbox --help
+
+        You should see `mcu-link` listed among available interfaces (--interface)
+
+    Usage
+    -----
+
+    1. Connect your MCU-Link debug probe to your computer
+    2. Basic debug session:
+
+        nxpdebugmbox --interface mcu-link --port auto
+
+    3. For firmware updates:
+
+        nxpdebugmbox update-firmware --interface mcu-link
+
+
+    Advanced Usage
+    -------------
+
+    * Configuration options
+    * Debugging commands
+    * Firmware management
+    * Troubleshooting tips
+
+    Requirements
+    -----------
+
+    * Python 3.7 or newer
+    * SPSDK package
+    * USB drivers for MCU-Link hardware
+
+    Contributing
+    -----------
+
+    Contributions are welcome! Please feel free to submit a Pull Request.
+
+    Credits
+    -------
+
+    Michal Kelnar
+    <michal.kelnar@nxp.com>
+
+    License
+    -------
+
+    BSD-3-Clause

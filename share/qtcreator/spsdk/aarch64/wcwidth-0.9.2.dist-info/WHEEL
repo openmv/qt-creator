@@ -1,0 +1,6 @@
+Wheel-Version: 1.0
+Generator: setuptools (84.0.0)
+Root-Is-Purelib: false
+Tag: cp310-abi3-manylinux_2_17_aarch64
+Tag: cp310-abi3-manylinux2014_aarch64
+

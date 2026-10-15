@@ -1,0 +1,174 @@
+# Copyright 2024-2025 NXP
+#
+# SPDX-License-Identifier: BSD-3-Clause
+
+el2go_tp:
+  type: object
+  properties:
+    family:
+      type: string
+      title: MCU family
+      description:
+        Family identifier including the chip revision. If revision is not
+        present, latest revision is used as default.
+      template_value: rw6xx
+    revision:
+      type: string
+      title: MCU revision
+      description: Revision of silicon
+      template_value: latest
+    url:
+      type: string
+      title: EdgeLock 2GO API URL
+      description: Base URL of the EdgeLock 2GO backend API without an / at the end
+      template_value: https://api.edgelock2go.com
+    api_key:
+      type: string
+      title: EdgeLock 2GO API Key
+      description: "REST API key used for user authentication in EdgeLock 2GO.
+        You may use:
+        1) path to a file with the key on the first line: ~/.el2go/wpc_token.txt (~ is interpreted as your HOME)
+        2) environment variable with the key: $MY_EL2GO_KEY
+        3) environment variable containing a path to the key file: $MY_KEY_FILE
+        4) directly your API key in plain text (not recommended)"
+      template_value: abcxyz123
+    device_group_id:
+      type: number
+      title: Device Group ID
+      description: Device Group ID in which the connected secure element needs to be assigned
+      template_value: 49
+    nc12:
+      type: number
+      title: Product 12NC
+      description: Product 12NC registered in EdgeLock 2GO
+      template_value: 123456789012
+    domains:
+      type: array
+      title: Secure Objects Domains
+      description: List of the EdgeLock 2GO Secure Objects Domains to download.
+      items:
+        type: string
+        enum: [RTP, MATTER]
+        template_value: [RTP, MATTER]
+      enum_template: [RTP, MATTER]
+    delay:
+      type: number
+      title: Delay between EdgeLock 2GO's API calls
+      description: Delay in seconds between EdgeLock 2GO API requests regarding Secure Objects generation status. Default value is 5 seconds
+      template_value: 5
+    timeout:
+      type: number
+      title: Timeout for EdgeLock 2GO API
+      description: Timeout in seconds of downloading Secure Objects through EdgeLock 2GO API operation. Default is 60 seconds
+      template_value: 60
+    download_timeout:
+      type: number
+      title: Download Timeout
+      description: Timeout for overall download process including waiting for Secure Objects creation
+      template_value: 300
+
+  required: [api_key, device_group_id, nc12, family]
+
+prov_fw_path:
+  properties:
+    prov_fw_path:
+      type: string
+      format: file
+      title: NXP EL2GO Provisioning FW path
+      description: Path to NXP EL2GO Provisioning Firmware SB file. If you don't want to use the Provisioning FW, please comment out the line below
+      template_value: oem_tp_fw.sb
+  required: ["prov_fw_path"]
+
+uboot_path:
+  properties:
+    uboot_path:
+      type: string
+      format: optional_file
+      title: Path to U-Boot binary
+      description: Path to U-Boot binary that will be used for writing assets to EMMC/SD
+      template_value: u-boot.bin
+
+fw_load_address:
+  properties:
+    fw_load_address:
+      type: number
+      title: Address for loading the Provisioning Firmware
+      description: Address where to store the Provisioning Firmware.
+        Please note, that if you're using external memory, you have to configure the memory first.
+      template_value: 1234
+  required: ["fw_load_address"]
+
+additional_data_address:
+  properties:
+    secure_objects_address:
+      type: number
+      title: Address for External (user-defined) Secure Objects
+      description:
+        Address where to store External (user-defined) Secure Objects obtained from EL2GO.
+        External Secure Objects refers to Secure Objects other than OEM FW Authentication Key Hash, and OEM FW Decryption Key.
+        Please note that the FW will always erase 8K memory block (flash page size) in the destination address,
+        so any data previously stored at that flash location will be gone.
+        If you don't use any External Secure Objects, this setting has no effect
+      template_value: 123456
+  required: ["secure_objects_address"]
+
+secure_objects_address:
+  properties:
+    secure_objects_address:
+      type: number
+      title: Secure Objects address
+      description: Address where to store Secure Objects obtained from EL2GO.
+        Please note, that if you're using external memory, you have to configure the memory first.
+      template_value: 123456
+  required: ["secure_objects_address"]
+
+fatwrite:
+  properties:
+    fatwrite_filename:
+      type: string
+      title: Filename of the secure objects stored in partition
+      description: Filename of the secure objects stored in partition. Passed to U-Boot fatwrite command.
+      template_value: secure_objects.bin
+      default: secure_objects.bin
+    fatwrite_interface:
+      type: string
+      title: Interface for storing the secure objects
+      description: Interface for storing the secure objects, passed to U-Boot fatwrite command.
+      template_value: mmc
+      default: mmc
+    fatwrite_device_partition:
+      type: string
+      title: Device and partition for writing the secure objects.
+      description: Device and partition for writing the secure objects, separated by colon. Passed to U-Boot fatwrite command. Enclose in quotes.
+      template_value: "0:1"
+      default: "0:1"
+    oem_provisioning_config_filename:
+      type: string
+      title: Filename of the configuration file for OEM Provisioning App
+      description: Filename of the configuration file for OEM Provisioning App that will be stored in partition together with the secure objects.
+      template_value: config.yaml
+      default: config.yaml
+
+linux_boot:
+  properties:
+    boot_linux:
+      type: boolean
+      title: Boot Linux
+      description: Boot Linux after provisioning
+      template_value: true
+      default: true
+    linux_boot_sequence:
+      type: array
+      title: Linux boot sequence
+      description: List of UUU commands to execute to boot Linux
+      items:
+        type: string
+        template_value:
+          [
+            "setenv mmcdev 0",
+            "setenv mmcpart 1",
+            "setenv mmcroot /dev/mmcblk0p2 rootwait rw",
+            "run loadimage",
+            "run loadfdt",
+            "run bsp_bootcmd",
+          ]
