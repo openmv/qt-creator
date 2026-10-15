@@ -31,6 +31,8 @@
 #include "omvui.h"
 #include "omvmcpcontext.h"
 
+#include <utils/hostosinfo.h>
+
 namespace OpenMV {
 namespace Internal {
 namespace OmvUi {
@@ -101,18 +103,17 @@ static void record(Call *call, int level, const QString &code, const QString &si
     call->fail(e);
 }
 
-// Ask the agent's client to put the question to the user (MCP elicitation, form
-// mode, one single-select enum of the box's buttons). Blocks on a nested event
-// loop until the client answers or the call's deadline passes. Returns the
-// chosen button, or NoButton when the user declined/cancelled, the client
-// errored, or we timed out. The callback may fire after a timeout returned,
+// Ask the agent's client to put a question to the user (MCP elicitation, form
+// mode, one single-select enum of `names`). Blocks on a nested event loop
+// until the client answers or the call's deadline passes. On Accepted,
+// `*chosen` is one of `names`. The callback may fire after a timeout returned,
 // so its state is shared and marked abandoned rather than stack-owned.
-static QMessageBox::StandardButton elicitChoice(Call *call, const QString &site, const QString &title, const QString &text,
-                                                QMessageBox::StandardButtons buttons)
+enum class Elicited { Accepted, Cancelled, Declined, Failed, Timeout };
+
+static Elicited elicitName(Call *call, const QString &site, const QString &title, const QString &text,
+                           const QStringList &names, QString *chosen)
 {
     using namespace Mcp::Schema;
-
-    const QStringList names = buttonNames(buttons);
 
     ElicitRequestFormParams form;
     form.message(title.isEmpty() ? text : (title + QStringLiteral("\n\n") + text));
@@ -126,19 +127,21 @@ static QMessageBox::StandardButton elicitChoice(Call *call, const QString &site,
     struct State {
         bool done = false;
         bool abandoned = false;
-        QMessageBox::StandardButton chosen = QMessageBox::NoButton;
+        Elicited result = Elicited::Failed;
+        QString chosen;
         QString outcome;
         QEventLoop loop;
     };
 
     auto state = std::make_shared<State>();
 
-    call->tool->elicit(ElicitRequestParams(form), [state, buttons](const Utils::Result<ElicitResult> &r) {
+    call->tool->elicit(ElicitRequestParams(form), [state, names](const Utils::Result<ElicitResult> &r) {
         if(state->abandoned) return;
         state->done = true;
 
         if(!r.has_value())
         {
+            state->result = Elicited::Failed;
             state->outcome = QStringLiteral("elicitation failed: %1").arg(r.error());
         }
         else if(r->action() == ElicitResult::Action::accept)
@@ -149,21 +152,24 @@ static QMessageBox::StandardButton elicitChoice(Call *call, const QString &site,
 
                 if(it != r->content()->constEnd())
                 {
-                    if(const QString *s = std::get_if<QString>(&it.value())) state->chosen = buttonFromName(*s);
+                    if(const QString *s = std::get_if<QString>(&it.value()))
+                    {
+                        if(names.contains(s->trimmed())) state->chosen = s->trimmed();
+                    }
                 }
             }
 
-            state->outcome = (state->chosen != QMessageBox::NoButton) ? QStringLiteral("accepted") : QStringLiteral("accepted without a valid choice");
+            state->result = state->chosen.isEmpty() ? Elicited::Failed : Elicited::Accepted;
+            state->outcome = state->chosen.isEmpty() ? QStringLiteral("accepted without a valid choice") : QStringLiteral("accepted");
         }
         else if(r->action() == ElicitResult::Action::cancel)
         {
-            state->chosen = (buttons & QMessageBox::Cancel) ? QMessageBox::Cancel : QMessageBox::NoButton;
+            state->result = Elicited::Cancelled;
             state->outcome = QStringLiteral("cancelled by user");
         }
         else
         {
-            state->chosen = (buttons & QMessageBox::No) ? QMessageBox::No
-                          : ((buttons & QMessageBox::Cancel) ? QMessageBox::Cancel : QMessageBox::NoButton);
+            state->result = Elicited::Declined;
             state->outcome = QStringLiteral("declined by user");
         }
 
@@ -183,11 +189,29 @@ static QMessageBox::StandardButton elicitChoice(Call *call, const QString &site,
     {
         state->abandoned = true;
         record(call, 1, QStringLiteral("elicitation_timeout"), site, title, text);
-        return QMessageBox::NoButton;
+        return Elicited::Timeout;
     }
 
-    call->note(QStringLiteral("[%1] %2 -> %3 (elicited: %4)").arg(site, title, buttonName(state->chosen), state->outcome));
-    return state->chosen;
+    call->note(QStringLiteral("[%1] %2 -> %3 (elicited: %4)").arg(site, title, state->chosen, state->outcome));
+    *chosen = state->chosen;
+    return state->result;
+}
+
+// elicitName() over a box's standard buttons; cancel/decline map onto the
+// button a human would have used for them when it exists.
+static QMessageBox::StandardButton elicitChoice(Call *call, const QString &site, const QString &title, const QString &text,
+                                                QMessageBox::StandardButtons buttons)
+{
+    QString chosen;
+
+    switch(elicitName(call, site, title, text, buttonNames(buttons), &chosen))
+    {
+        case Elicited::Accepted: return buttonFromName(chosen);
+        case Elicited::Cancelled: return (buttons & QMessageBox::Cancel) ? QMessageBox::Cancel : QMessageBox::NoButton;
+        case Elicited::Declined: return (buttons & QMessageBox::No) ? QMessageBox::No
+                                      : ((buttons & QMessageBox::Cancel) ? QMessageBox::Cancel : QMessageBox::NoButton);
+        default: return QMessageBox::NoButton;
+    }
 }
 
 // Resolve a multi-choice box inside an MCP call: a pre-supplied answer wins;
@@ -308,7 +332,7 @@ QMessageBox::StandardButton detailedBox(QMessageBox::Icon icon, QWidget *parent,
 
     if(!call)
     {
-        QMessageBox box(icon, title, text, buttons, parent);
+        QMessageBox box(icon, title, text, buttons, parent, boxFlags());
         box.setDetailedText(detailedText);
         if(defaultButton != QMessageBox::NoButton) box.setDefaultButton(defaultButton);
         return QMessageBox::StandardButton(box.exec());
@@ -329,20 +353,100 @@ QMessageBox::StandardButton detailedBox(QMessageBox::Icon icon, QWidget *parent,
     return resolveChoice(call, s, title, text, buttons, defaultButton, detailedText);
 }
 
-void asyncBox(QMessageBox::Icon icon, const QString &title, const QString &text, const QString &site)
+int choiceBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text,
+              const QStringList &choices, int defaultIndex, bool richText, const QString &site)
 {
     Call *call = McpUi::currentCall();
 
     if(!call)
     {
-        QMessageBox *box = new QMessageBox(icon, title, text, QMessageBox::Ok);
-        box->setAttribute(Qt::WA_DeleteOnClose);
-        QTimer::singleShot(0, box, qOverload<>(&QMessageBox::exec));
+        QMessageBox box(icon, title, text, QMessageBox::Cancel, parent, boxFlags());
+        if(richText) box.setTextFormat(Qt::RichText);
+
+        QList<QPushButton *> buttons;
+        for(const QString &choice : choices) buttons.append(box.addButton(choice, QMessageBox::AcceptRole));
+
+        if((defaultIndex >= 0) && (defaultIndex < buttons.size())) box.setDefaultButton(buttons.at(defaultIndex));
+        box.setEscapeButton(QMessageBox::Cancel);
+        box.exec();
+
+        return buttons.indexOf(qobject_cast<QPushButton *>(box.clickedButton()));
+    }
+
+    const QString s = siteOr(site, title, text);
+    const int level = (icon == QMessageBox::Critical) ? 2 : ((icon == QMessageBox::Warning) ? 1 : 0);
+    if(level >= 1) record(call, level, QStringLiteral("choice"), s, title, text);
+
+    // Labels are shown trimmed: the sites pad them with spaces for width.
+    QStringList names;
+    for(const QString &choice : choices) names.append(choice.trimmed());
+
+    if(std::optional<QJsonValue> a = call->answer(s))
+    {
+        int i = a->isDouble() ? a->toInt(-1) : names.indexOf(a->toString().trimmed());
+
+        if((i >= 0) && (i < names.size()))
+        {
+            call->note(QStringLiteral("[%1] %2 -> %3 (answered)").arg(s, title, names.at(i)));
+            return i;
+        }
+
+        if(a->toString().trimmed().compare(QStringLiteral("Cancel"), Qt::CaseInsensitive) == 0)
+        {
+            call->note(QStringLiteral("[%1] %2 -> Cancel (answered)").arg(s, title));
+            return -1;
+        }
+
+        record(call, 1, QStringLiteral("bad_answer"), s, title,
+               QStringLiteral("Answer \"%1\" is not one of: %2, Cancel").arg(a->toString(), names.join(QStringLiteral(", "))));
+    }
+
+    if((call->policy == Policy::Elicit) && call->supportsElicitation() && !call->expired())
+    {
+        QString chosen;
+
+        switch(elicitName(call, s, title, text, QStringList(names) << QStringLiteral("Cancel"), &chosen))
+        {
+            case Elicited::Accepted: return names.indexOf(chosen); // -1 for "Cancel"
+            case Elicited::Cancelled:
+            case Elicited::Declined: return -1;
+            default: break;
+        }
+    }
+
+    if(call->policy == Policy::AutoAnswer)
+    {
+        call->note(QStringLiteral("[%1] %2 -> Cancel (auto)").arg(s, title));
+    }
+    else
+    {
+        record(call, 1, QStringLiteral("needs_input"), s, title, text,
+               QStringLiteral("choices: %1, Cancel; chose: Cancel").arg(names.join(QStringLiteral(", "))));
+    }
+
+    return -1;
+}
+
+void asyncBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text, const QString &site)
+{
+    Call *call = McpUi::currentCall();
+
+    if(!call)
+    {
+        QMessageBox *box = new QMessageBox(icon, title, text, QMessageBox::Ok, parent);
+        QObject::connect(box, &QMessageBox::finished, box, &QMessageBox::deleteLater);
+        QTimer::singleShot(0, box, &QMessageBox::exec);
         return;
     }
 
     const int level = (icon == QMessageBox::Critical) ? 2 : ((icon == QMessageBox::Warning) ? 1 : 0);
     record(call, level, QStringLiteral("async_box"), siteOr(site, title, text), title, text);
+}
+
+Qt::WindowFlags boxFlags()
+{
+    return Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
+           (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint);
 }
 
 // --- Utils::CheckableMessageBox --------------------------------------------

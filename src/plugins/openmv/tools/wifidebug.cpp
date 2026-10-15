@@ -40,6 +40,8 @@
 #include <utils/hostosinfo.h>
 #include <utils/utilsicons.h>
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -722,7 +724,7 @@ public:
 
         if(m_wifiRadio->isChecked() && m_config.ssid.isEmpty())
         {
-            QMessageBox::warning(this, windowTitle(), Tr::tr("Please enter or select a WiFi network name (SSID)."));
+            OmvUi::warning(this, windowTitle(), Tr::tr("Please enter or select a WiFi network name (SSID)."));
             return;
         }
 
@@ -918,7 +920,7 @@ private:
 
         if(networks.isEmpty())
         {
-            QMessageBox::information(this, windowTitle(),
+            OmvUi::information(this, windowTitle(),
                 Tr::tr("No WiFi networks were found (this PC may have no WiFi adapter). "
                        "You can type the network name in by hand."));
         }
@@ -991,7 +993,7 @@ void editWifiDebugBootPy(const QString &drivePath, const QString &serialNumber, 
     QString err;
     if(!writer(path, generateBootPy(dialog.config(), userCode).toUtf8(), &err))
     {
-        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("Edit boot.py"),
+        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("Edit boot.py"),
             Tr::tr("Failed to write boot.py to the camera:\n\n%1").arg(err));
     }
 }

@@ -49,6 +49,8 @@
 #include "openmvtr.h"
 #include "openmvromfs.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -804,7 +806,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
             Tr::tr("This feature is not supported on this machine!"));
 
@@ -841,13 +843,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -890,13 +886,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -943,13 +933,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if(!claimed)
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(Tr::tr("The i.MX flashloader did not enumerate."));
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), Tr::tr("The i.MX flashloader did not enumerate."));
 
             result = false;
             goto cleanup;
@@ -978,13 +962,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1022,13 +1000,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1064,13 +1036,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1108,13 +1074,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1152,13 +1112,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1194,13 +1148,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1238,13 +1186,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1280,13 +1222,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1330,13 +1266,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1381,13 +1311,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1423,13 +1347,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1472,13 +1390,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1514,13 +1426,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1557,13 +1463,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1597,13 +1497,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;
@@ -1787,7 +1681,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("NXP IMX"),
             Tr::tr("This feature is not supported on this machine!"));
 
@@ -1833,13 +1727,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1883,13 +1771,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1934,13 +1816,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -1976,13 +1852,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2028,13 +1898,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2070,13 +1934,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2120,13 +1978,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2162,13 +2014,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
             if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 result = false;
                 goto cleanup;
@@ -2203,13 +2049,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
         if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
         {
-            QMessageBox box(QMessageBox::Critical, Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-            box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-            box.setDefaultButton(QMessageBox::Ok);
-            box.setEscapeButton(QMessageBox::Cancel);
-            box.exec();
+            OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("NXP IMX"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
             result = false;
             goto cleanup;

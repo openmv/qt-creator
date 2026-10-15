@@ -746,16 +746,10 @@ void OpenMVPlugin::packageUpdate()
                         Tr::tr("New %2 resources are available (e.g. examples, firmware, documentation, etc.). See the <a href=\"%L1\">release notes</a>.")
                             .arg(webChangelogUrl(QStringLiteral("ide"), new_major, new_minor, new_patch).toString())
                             .arg(QGuiApplication::applicationDisplayName());
-                    QMessageBox box(QMessageBox::Information, Tr::tr("Update Available"), updateMessage, QMessageBox::Cancel, Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    box.setTextFormat(Qt::RichText);
-                    QPushButton *button = box.addButton(Tr::tr("Install"), QMessageBox::AcceptRole);
-                    box.setDefaultButton(button);
-                    box.setEscapeButton(QMessageBox::Cancel);
-                    box.exec();
+                    int boxChoice = OmvUi::choiceBox(QMessageBox::Information, Core::ICore::dialogParent(), Tr::tr("Update Available"), updateMessage,
+                        QStringList() << Tr::tr("Install"), 0, true);
 
-                    if(box.clickedButton() == button)
+                    if(boxChoice == 0)
                     {
                         OmvUi::Progress *dialog = new OmvUi::Progress(Tr::tr("Downloading..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |

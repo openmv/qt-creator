@@ -57,10 +57,10 @@ public:
                           QWidget *parent = Q_NULLPTR);
     ~LoaderDialog();
 
-    void setProgressBarLabel(const QString &text) { m_progressBarLabel->setText(text); }
+    void setProgressBarLabel(const QString &text);
     void setProgressBarRange(int min, int max) { m_progressBar->setRange(min, max); }
-    void setProgressBarValue(int val) { m_progressBar->setValue(val); }
-    void appendPlainText(const QString &text) { m_plainTextEdit->appendPlainText(text); }
+    void setProgressBarValue(int val);
+    void appendPlainText(const QString &text);
     void appendColoredText(const QString &text, bool warning = false);
     void enableTextWrapping() { m_plainTextEdit->setLineWrapMode(QPlainTextEdit::WidgetWidth); }
     void disableTextWrapping() { m_plainTextEdit->setLineWrapMode(QPlainTextEdit::NoWrap); }
@@ -72,10 +72,22 @@ public:
     void enableOkayButton(bool enable) { m_okayButton->setEnabled(enable); }
     bool wasRejected() const { return m_wasRejected; }
 
+    // The post-run gate ("Success - Press Ok" / "Failure - Press Cancel"):
+    // waits for the user to close the dialog. Inside an MCP call nobody can
+    // press anything, so the run's outcome (Ok enabled or not) closes it.
+    void waitForClose();
+
+    // Never shows a window while an MCP call is in progress; the console
+    // text is recorded into the call instead.
+    void setVisible(bool visible) override;
+
 private:
 
     Utils::QtcSettings *m_settings;
     Utils::Key m_settingsName;
+    QString m_title;
+    QStringList m_console;
+    int m_lastPercent;
     QLabel *m_progressBarLabel;
     QProgressBar *m_progressBar;
     QPushButton *m_detailsButton;

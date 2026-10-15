@@ -39,10 +39,17 @@
 
 #include "openmvtr.h"
 
+#include "mcp/omvmcpcontext.h"
+
 namespace OpenMV {
 namespace Internal {
 
 static int s_loaderDialogActiveCount = 0;
+
+// How much of a tool's console an MCP call keeps: a flash log can run to
+// thousands of lines, and the failure paths already attach stdout/stderr.
+static const int CONSOLE_HEAD_LINES = 50;
+static const int CONSOLE_TAIL_LINES = 150;
 
 bool loaderDialogActive()
 {
@@ -55,9 +62,12 @@ LoaderDialog::LoaderDialog(const QString &title,
                            Utils::QtcSettings *settings,
                            const QString &settingsName,
                            QWidget *parent) : QDialog(parent), m_settings(settings),
-    m_settingsName(Utils::keyFromString(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP "/") + settingsName))
+    m_settingsName(Utils::keyFromString(QStringLiteral(LOADERDIALOG_SETTINGS_GROUP "/") + settingsName)),
+    m_title(title), m_lastPercent(-1)
 {
     ++s_loaderDialogActiveCount;
+
+    if(McpUi::Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(title, details));
 
     setWindowFlags(windowFlags() | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
                    (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)) |
@@ -171,6 +181,25 @@ LoaderDialog::~LoaderDialog()
 {
     if (s_loaderDialogActiveCount > 0) --s_loaderDialogActiveCount;
 
+    if(McpUi::Call *call = McpUi::currentCall())
+    {
+        // Hand the agent the tool's console, elided in the middle if long. The
+        // window geometry is a human preference and is not saved from here.
+        QStringList lines = m_console;
+
+        if(lines.size() > (CONSOLE_HEAD_LINES + CONSOLE_TAIL_LINES))
+        {
+            const int dropped = lines.size() - CONSOLE_HEAD_LINES - CONSOLE_TAIL_LINES;
+            lines = lines.mid(0, CONSOLE_HEAD_LINES)
+                  << QStringLiteral("... (%1 lines elided) ...").arg(dropped)
+                  << lines.mid(lines.size() - CONSOLE_TAIL_LINES);
+        }
+
+        call->note(QStringLiteral("[%1] console (%2 lines):").arg(m_title).arg(m_console.size()));
+        for(const QString &line : std::as_const(lines)) call->note(QStringLiteral("  ") + line);
+        return;
+    }
+
     QByteArray out;
     QDataStream s(&out, QIODeviceBase::WriteOnly);
     s << saveGeometry();
@@ -180,8 +209,62 @@ LoaderDialog::~LoaderDialog()
     m_settings->setValue(m_settingsName, out);
 }
 
+void LoaderDialog::setProgressBarLabel(const QString &text)
+{
+    m_progressBarLabel->setText(text);
+    if(McpUi::Call *call = McpUi::currentCall()) call->note(QStringLiteral("[%1] %2").arg(m_title, text));
+}
+
+void LoaderDialog::setProgressBarValue(int val)
+{
+    m_progressBar->setValue(val);
+
+    if(McpUi::Call *call = McpUi::currentCall())
+    {
+        // Log the percentage in steps of ten so a slow flash is visible but
+        // a fast one does not flood the call's log.
+        const int range = m_progressBar->maximum() - m_progressBar->minimum();
+        const int percent = (range > 0) ? (((val - m_progressBar->minimum()) * 100) / range) : -1;
+
+        if((percent >= 0) && ((percent / 10) != (m_lastPercent / 10)))
+        {
+            m_lastPercent = percent;
+            call->note(QStringLiteral("[%1] %2%").arg(m_title).arg(percent));
+        }
+    }
+}
+
+void LoaderDialog::appendPlainText(const QString &text)
+{
+    m_plainTextEdit->appendPlainText(text);
+    if(McpUi::currentCall()) m_console.append(text);
+}
+
+void LoaderDialog::waitForClose()
+{
+    if(m_wasRejected) return;
+
+    if(McpUi::currentCall())
+    {
+        if(m_okayButton->isEnabled()) accept(); else reject();
+        return;
+    }
+
+    QEventLoop loop;
+    connect(this, &QDialog::finished, &loop, &QEventLoop::quit);
+    loop.exec();
+}
+
+void LoaderDialog::setVisible(bool visible)
+{
+    if(McpUi::currentCall()) visible = false;
+    QDialog::setVisible(visible);
+}
+
 void LoaderDialog::appendColoredText(const QString &text, bool warning)
 {
+    if(McpUi::currentCall()) m_console.append(text);
+
     m_plainTextEdit->appendHtml(QString(QStringLiteral("<p style=\"color:%1\">%2</p>")).
                            arg(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
                                ? (warning ? QStringLiteral("lightseagreen") : QStringLiteral("lightblue"))

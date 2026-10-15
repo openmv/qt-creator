@@ -48,6 +48,8 @@
 #define LAST_VELA_COMPILIER_ADVANCED_STATE "LastVelaCompilierAdvancedState"
 #define LAST_VELA_COMPILIER_OPTIONS_STRING "LastVelaCompilierOptionsString"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -57,7 +59,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(!tempDir.isValid())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             tempDir.errorString());
 
@@ -313,7 +315,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Vela Compilier"),
             Tr::tr("The Vela Compilier is not supported on this platform."));
 
@@ -360,16 +362,9 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
 
+    dialog->waitForClose();
+
     bool rejected = dialog->wasRejected();
-
-    if (!rejected)
-    {
-        QEventLoop loop;
-        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
-        loop.exec();
-
-        rejected = dialog->wasRejected();
-    }
 
     delete dialog;
     return rejected ? QString() : result;

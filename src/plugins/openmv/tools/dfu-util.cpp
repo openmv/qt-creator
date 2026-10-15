@@ -42,6 +42,8 @@
 #include "loaderdialog.h"
 #include "openmvtr.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -178,13 +180,7 @@ QList<QString> getDevices()
     }
     else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
-        QMessageBox box(QMessageBox::Warning, Tr::tr("Get Devices"), Tr::tr("Query failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-        box.setDetailedText(command.toString() + QStringLiteral("\n\n") + process.stdOut());
-        box.setDefaultButton(QMessageBox::Ok);
-        box.setEscapeButton(QMessageBox::Cancel);
-        box.exec();
+        OmvUi::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toString() + QStringLiteral("\n\n") + process.stdOut());
 
         return QList<QString>();
     }

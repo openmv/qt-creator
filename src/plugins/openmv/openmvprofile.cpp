@@ -63,6 +63,8 @@
 #include <cstdlib>
 #endif
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -909,7 +911,7 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
 
             if (!loadElfFunctionMap(m_pathChooser->filePath().toString(), m_funcNames, m_funcSizes, &err, true, true))
             {
-                QMessageBox::critical(Core::ICore::dialogParent(),
+                OmvUi::critical(Core::ICore::dialogParent(),
                     Tr::tr("Code Profiler"), err);
             }
         } else {

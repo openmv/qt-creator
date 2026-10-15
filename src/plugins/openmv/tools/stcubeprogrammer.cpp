@@ -45,6 +45,8 @@
 #include "loaderdialog.h"
 #include "openmvtr.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -213,7 +215,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
 
     if(binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STM32 Programmer"),
             Tr::tr("STM32 Programmer is not supported on this platform."));
 

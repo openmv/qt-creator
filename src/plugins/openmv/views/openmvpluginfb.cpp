@@ -40,6 +40,8 @@
 
 #include <QGuiApplication>
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -104,14 +106,14 @@ bool OpenMVPluginFB::beginImageWriter()
         }
         else
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Video Record"),
                 Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
         }
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Video Record"),
             Tr::tr("Error: %L1!").arg(m_tempFile->errorString()));
     }
@@ -310,7 +312,7 @@ void OpenMVPluginFB::private_timerCallBack()
         m_elaspedTimer = QElapsedTimer();
         m_previousElaspedTimers = QQueue<qint64>();
 
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Video Recorder"),
             Tr::tr("Failed to write frame!"));
 

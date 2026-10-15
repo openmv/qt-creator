@@ -42,6 +42,8 @@
 #include "loaderdialog.h"
 #include "openmvtr.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 

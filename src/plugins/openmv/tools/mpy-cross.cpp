@@ -48,6 +48,8 @@
 #define LAST_MPY_COMPILIER_ADVANCED_STATE "LastMPYCompilierAdvancedState"
 #define LAST_MPY_COMPILIER_OPTIONS_STRING "LastMPYCompilierOptionsString"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -59,7 +61,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if(!tempDir.isValid())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Copy/Convert Python File"),
             tempDir.errorString());
 
@@ -154,7 +156,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
         if (!file.open(QIODevice::ReadOnly))
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Copy/Convert Python File"),
                 file.errorString());
 
@@ -169,7 +171,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
         if((!outFile.open(QIODevice::WriteOnly)) || (outFile.write(scriptData) != scriptData.size()))
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Copy/Convert Python File"),
                 outFile.errorString());
 
@@ -313,7 +315,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
 
     if(pythonPath.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("MPY Cross Compilier"),
             Tr::tr("The MPY Cross Compilier is not supported on this platform."));
 
@@ -352,16 +354,9 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
 
+    dialog->waitForClose();
+
     bool rejected = dialog->wasRejected();
-
-    if (!rejected)
-    {
-        QEventLoop loop;
-        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
-        loop.exec();
-
-        rejected = dialog->wasRejected();
-    }
 
     delete dialog;
     return rejected ? QString() : result;

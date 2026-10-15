@@ -50,6 +50,8 @@
 #define LAST_STEDGEAI_COMPILIER_OPTIONS_STRING "LastStedgeaiCompilierOptionsString"
 #define LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN "LastStedgeaiCompilierOptionsStringAtonn"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -59,7 +61,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if(!tempDir.isValid())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             tempDir.errorString());
 
@@ -72,7 +74,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if (!jsonFile.copy(tempDir.path() + QDir::separator() + QFileInfo(jsonFile).fileName()))
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("Failed to copy JSON file!"));
 
@@ -85,7 +87,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if (!mpoolFile.copy(tempDir.path() + QDir::separator() + QFileInfo(mpoolFile).fileName()))
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("Failed to copy MPOOL file!"));
 
@@ -205,7 +207,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if (!jsonFile2.open(QIODevice::ReadOnly | QIODevice::Text))
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("Failed to open JSON file!"));
 
@@ -219,7 +221,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if (!jsonFile2.open(QIODevice::WriteOnly | QIODevice::Text))
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("Failed to open JSON file!"));
 
@@ -373,7 +375,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     if(stedgeai_core_dir.isEmpty() || binary.isEmpty())
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("STEdgeAI Compilier"),
             Tr::tr("The STEdgeAI Compilier is not supported on this platform."));
 
@@ -436,16 +438,9 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     dialog->moveScrollToLeft();
     dialog->moveScrollToBottom();
 
+    dialog->waitForClose();
+
     bool rejected = dialog->wasRejected();
-
-    if (!rejected)
-    {
-        QEventLoop loop;
-        QObject::connect(dialog, &QDialog::finished, &loop, &QEventLoop::quit);
-        loop.exec();
-
-        rejected = dialog->wasRejected();
-    }
 
     delete dialog;
     return rejected ? QString() : result;

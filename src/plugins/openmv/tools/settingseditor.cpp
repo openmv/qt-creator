@@ -47,6 +47,8 @@
 #define SETTINGS_EDITOR_GROUP "OpenMVSettingsEditor"
 #define LAST_SETTINGS_PATH "LastSettingsPath"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -507,7 +509,7 @@ void SettingsEditorDialog::verifyAndAccept()
     }
 
     if (!invalid.isEmpty()) {
-        QMessageBox::warning(this, windowTitle(),
+        OmvUi::warning(this, windowTitle(),
             Tr::tr("These fields have invalid or incomplete input:\n\n%L1\n\nFix or clear them before saving.")
                 .arg(invalid.join(QLatin1Char('\n'))));
         return;
@@ -531,7 +533,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     QFile file(path);
 
     if (!file.open(QIODevice::ReadOnly)) {
-        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Unable to open:\n\n%L1\n\n%L2").arg(path, file.errorString()));
         return;
     }
@@ -543,7 +545,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     const QJsonDocument doc = QJsonDocument::fromJson(data, &error);
 
     if ((error.error != QJsonParseError::NoError) || (!doc.isObject())) {
-        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Not a valid JSON config file:\n\n%L1").arg((error.error != QJsonParseError::NoError)
                 ? error.errorString() : Tr::tr("the top level must be a JSON object.")));
         return;
@@ -552,7 +554,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
     const QJsonObject root = doc.object();
 
     if (!root.value(QStringLiteral("controls")).isArray()) {
-        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("This JSON file has no \"controls\" array to build a GUI from."));
         return;
     }
@@ -564,7 +566,7 @@ static void openConfigFile(const QString &path, const ConfigFileWriter &writer)
 
         QString err;
         if (!writer(path, out, &err)) {
-            QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+            OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
                 Tr::tr("Unable to save:\n\n%L1\n\n%L2").arg(path, err));
         }
     }
@@ -579,7 +581,7 @@ void settingsEditorAction(const QString &drivePath, const ConfigFileWriter &writ
     const QString start = settings->value(SETTINGS_EDITOR_GROUP "/" LAST_SETTINGS_PATH,
         fallbackDir(drivePath)).toString();
 
-    const QString path = QFileDialog::getOpenFileName(Core::ICore::dialogParent(),
+    const QString path = OmvUi::getOpenFileName(Core::ICore::dialogParent(),
         Tr::tr("Open Config File"), start, Tr::tr("JSON Files (*.json)"));
 
     if (path.isEmpty()) {
@@ -600,7 +602,7 @@ void createDefaultConfigAction(const QString &drivePath, const ConfigFileWriter 
     const QString dir = lastInfo.isDir() ? last : lastInfo.absolutePath();
     const QString suggested = QDir::cleanPath(dir + QStringLiteral("/config.json"));
 
-    QString path = QFileDialog::getSaveFileName(Core::ICore::dialogParent(),
+    QString path = OmvUi::getSaveFileName(Core::ICore::dialogParent(),
         Tr::tr("Create Default Config"), suggested, Tr::tr("JSON Files (*.json)"));
 
     if (path.isEmpty()) {
@@ -615,7 +617,7 @@ void createDefaultConfigAction(const QString &drivePath, const ConfigFileWriter 
 
     QString err;
     if (!writer(path, scaffold, &err)) {
-        QMessageBox::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
+        OmvUi::critical(Core::ICore::dialogParent(), Tr::tr("OpenMV Cam Settings Editor"),
             Tr::tr("Unable to create:\n\n%L1\n\n%L2").arg(path, err));
         return;
     }

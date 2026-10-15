@@ -34,6 +34,8 @@
 
 #include <utils/theme/theme.h>
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -141,7 +143,7 @@ void OpenMVDatasetEditor::frameBufferData(const QPixmap &data)
 void OpenMVDatasetEditor::newClassFolder()
 {
     bool ok;
-    QString name = QInputDialog::getText(Core::ICore::dialogParent(),
+    QString name = OmvUi::getText(Core::ICore::dialogParent(),
                                          Tr::tr("Dataset Editor"), Tr::tr("Please enter a class name"),
                                          QLineEdit::Normal, QString(), &ok,
                                          Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -184,21 +186,21 @@ void OpenMVDatasetEditor::newClassFolder()
 
                 if((!write_ok) || (!file.finalize()))
                 {
-                    QMessageBox::critical(Core::ICore::dialogParent(),
+                    OmvUi::critical(Core::ICore::dialogParent(),
                         Tr::tr("Dataset Editor"),
                         Tr::tr("Error: %L1!").arg(file.errorString()));
                 }
             }
             else
             {
-                QMessageBox::critical(Core::ICore::dialogParent(),
+                OmvUi::critical(Core::ICore::dialogParent(),
                     Tr::tr("Dataset Editor"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
             }
         }
         else
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Dataset Editor"),
                 Tr::tr("Failed to create \"%L1\"!").arg(name));
         }
@@ -234,7 +236,7 @@ void OpenMVDatasetEditor::snapshot()
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Dataset Editor"),
             Tr::tr("Failed to save the image file for an unknown reason!"));
     }
@@ -255,7 +257,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
             connect(menu.addAction(Tr::tr("Delete")), &QAction::triggered, this, [this] {
                 for(const QModelIndex &index : selectedIndexes())
                 {
-                    if(QMessageBox::question(Core::ICore::dialogParent(),
+                    if(OmvUi::question(Core::ICore::dialogParent(),
                                              Tr::tr("Dataset Editor"),
                                              Tr::tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
                                              QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
@@ -266,7 +268,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
 
                         if(!Utils::FilePath::fromString(m_model->fileInfo(index).canonicalFilePath()).removeRecursively())
                         {
-                            QMessageBox::critical(Core::ICore::dialogParent(),
+                            OmvUi::critical(Core::ICore::dialogParent(),
                                 Tr::tr("Dataset Editor"),
                                 Tr::tr("Error: %L1!").arg(error));
                         }
@@ -286,7 +288,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                     if(Q_LIKELY(match.hasMatch()))
                     {
                         bool ok;
-                        QString name = QInputDialog::getText(Core::ICore::dialogParent(),
+                        QString name = OmvUi::getText(Core::ICore::dialogParent(),
                                                              Tr::tr("Dataset Editor"), Tr::tr("Please enter a new name"),
                                                              QLineEdit::Normal, match.captured(1), &ok,
                                                              Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -296,7 +298,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                         {
                             if(!QDir().rename(m_model->fileInfo(index).filePath(), QString(QStringLiteral("%1/%2.class")).arg(m_model->fileInfo(index).path()).arg(name)))
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                OmvUi::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Dataset Editor"),
                                     Tr::tr("Failed to rename the folder for an unknown reason!"));
                             }
@@ -310,7 +312,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                 else
                 {
                     bool ok;
-                    QString name = QInputDialog::getText(Core::ICore::dialogParent(),
+                    QString name = OmvUi::getText(Core::ICore::dialogParent(),
                                                          Tr::tr("Dataset Editor"), Tr::tr("Please enter a new name"),
                                                          QLineEdit::Normal, m_model->fileName(index), &ok,
                                                          Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
@@ -322,7 +324,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                         {
                             if(!QDir().rename(m_model->fileInfo(index).filePath(), m_model->fileInfo(index).path() + QDir::separator() + name))
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                OmvUi::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Dataset Editor"),
                                     Tr::tr("Failed to rename the folder for an unknown reason!"));
                             }
@@ -331,7 +333,7 @@ void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)
                         {
                             if(!QFile(m_model->fileInfo(index).filePath()).rename(m_model->fileInfo(index).path() + QDir::separator() + name))
                             {
-                                QMessageBox::critical(Core::ICore::dialogParent(),
+                                OmvUi::critical(Core::ICore::dialogParent(),
                                     Tr::tr("Dataset Editor"),
                                     Tr::tr("Failed to rename the file for an unknown reason!"));
                             }
@@ -362,7 +364,7 @@ void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
                     continue;
                 }
 
-                if(QMessageBox::question(Core::ICore::dialogParent(),
+                if(OmvUi::question(Core::ICore::dialogParent(),
                                          Tr::tr("Dataset Editor"),
                                          Tr::tr("Are you sure you want to permanetly delete \"%L1\"?").arg(m_model->fileName(index)),
                                          QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
@@ -373,7 +375,7 @@ void OpenMVDatasetEditor::keyPressEvent(QKeyEvent *event)
 
                     if(!Utils::FilePath::fromString(m_model->fileInfo(index).canonicalFilePath()).removeRecursively())
                     {
-                        QMessageBox::critical(Core::ICore::dialogParent(),
+                        OmvUi::critical(Core::ICore::dialogParent(),
                             Tr::tr("Dataset Editor"),
                             Tr::tr("Error: %L1!").arg(error));
                     }
@@ -503,14 +505,14 @@ void OpenMVDatasetEditor::updateLabels()
 
         if((!write_ok) || (!file.finalize()))
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Dataset Editor"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
         }
     }
     else
     {
-        QMessageBox::critical(Core::ICore::dialogParent(),
+        OmvUi::critical(Core::ICore::dialogParent(),
             Tr::tr("Dataset Editor"),
             Tr::tr("Error: %L1!").arg(file.errorString()));
     }

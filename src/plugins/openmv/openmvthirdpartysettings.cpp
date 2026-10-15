@@ -38,6 +38,8 @@
 #include "openmvthirdpartysettings.h"
 #include "openmvtr.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -53,7 +55,7 @@ static int updateParts()
 
 static void offerRestart(QWidget *parent)
 {
-    if (QMessageBox::question(parent,
+    if (OmvUi::question(parent,
         Tr::tr("Third Party Repositories"),
         Tr::tr("Changes take effect after restarting.\n\nRestart %L1 now?").arg(QGuiApplication::applicationDisplayName()),
         QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) == QMessageBox::Yes)
@@ -252,7 +254,7 @@ private:
         Utils::QtcSettings *settings = Core::ICore::settings();
 
         bool ok;
-        QString text = QInputDialog::getText(this,
+        QString text = OmvUi::getText(this,
             Tr::tr("Install from URL"),
             Tr::tr("URL of the repository's config.json file:"),
             QLineEdit::Normal,
@@ -278,7 +280,7 @@ private:
             && OpenMVThirdParty::writableRoot().pathAppended(repoId).exists()
             && (!OpenMVThirdParty::installRoot().pathAppended(repoId).exists()))
             {
-                if (QMessageBox::question(this,
+                if (OmvUi::question(this,
                     Tr::tr("Install from URL"),
                     Tr::tr("A repository named \"%L1\" is already installed. Reinstall it?").arg(repoId),
                     QMessageBox::Yes | QMessageBox::No, QMessageBox::Yes) != QMessageBox::Yes)
@@ -290,14 +292,14 @@ private:
 
                 if (!OpenMVThirdParty::installFromUrl(QUrl(text), true, &repoId, &error, this))
                 {
-                    QMessageBox::critical(this, Tr::tr("Install from URL"), error);
+                    OmvUi::critical(this, Tr::tr("Install from URL"), error);
                     refresh();
                     return;
                 }
             }
             else
             {
-                QMessageBox::critical(this, Tr::tr("Install from URL"), error);
+                OmvUi::critical(this, Tr::tr("Install from URL"), error);
                 refresh();
                 return;
             }
@@ -316,7 +318,7 @@ private:
             return;
         }
 
-        if (QMessageBox::question(this,
+        if (OmvUi::question(this,
             Tr::tr("Remove Repository"),
             Tr::tr("Remove \"%L1\"?\n\nThis deletes its boards, firmware, and examples.").arg(repo->displayName),
             QMessageBox::Yes | QMessageBox::No, QMessageBox::No) != QMessageBox::Yes)
@@ -328,7 +330,7 @@ private:
 
         if (!OpenMVThirdParty::removeRepo(repo->id, &error))
         {
-            QMessageBox::critical(this, Tr::tr("Remove Repository"), error);
+            OmvUi::critical(this, Tr::tr("Remove Repository"), error);
             refresh();
             return;
         }

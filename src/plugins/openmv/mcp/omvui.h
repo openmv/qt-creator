@@ -84,11 +84,22 @@ QMessageBox::StandardButton detailedBox(QMessageBox::Icon icon, QWidget *parent,
                                         QMessageBox::StandardButton defaultButton = QMessageBox::NoButton,
                                         const QString &site = QString());
 
+// The `box.addButton(Tr::tr("..."), QMessageBox::AcceptRole)` shape: a box whose
+// buttons are custom labels plus Cancel. Returns the index into `choices` of
+// the button clicked, or -1 for Cancel/escape. MCP mode accepts the answer as
+// an index or as the label text.
+int choiceBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text,
+              const QStringList &choices, int defaultIndex = 0, bool richText = false,
+              const QString &site = QString());
+
 // Deferred heap box (`QTimer::singleShot(0, box, &QMessageBox::exec)` sites,
 // e.g. the serial traceback box): interactive shows it on the next loop
 // iteration; MCP mode records it and never schedules it.
-void asyncBox(QMessageBox::Icon icon, const QString &title, const QString &text,
+void asyncBox(QMessageBox::Icon icon, QWidget *parent, const QString &title, const QString &text,
               const QString &site = QString());
+
+// The window flags every hand-built box in the plugin passes.
+Qt::WindowFlags boxFlags();
 
 // --- Utils::CheckableMessageBox ("don't ask again") ------------------------
 
