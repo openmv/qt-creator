@@ -75,6 +75,38 @@ bool awaitSignal(Sender *sender, Signal signal, int timeoutMs)
     return fired;
 }
 
+// Issue one IO poll and wait for its reply, which `onReply` receives. Replies
+// are absent on failure, so the outcome is read from the completion queue:
+// queueEmpty with `queued()` false means the camera did not answer.
+template <typename Signal, typename Callable>
+bool awaitPoll(OpenMVPluginIO *io, Signal signal, Callable onReply, const std::function<bool()> &queued,
+               const std::function<void()> &invoke, int timeoutMs)
+{
+    QEventLoop loop;
+    bool got = false;
+
+    QMetaObject::Connection c1 = QObject::connect(io, signal, &loop, onReply);
+    QMetaObject::Connection c2 = QObject::connect(io, signal, &loop, [&got, &loop] {
+        got = true;
+        loop.quit();
+    });
+    QMetaObject::Connection c3 = QObject::connect(io, &OpenMVPluginIO::queueEmpty, &loop, [&queued, &loop] {
+        if(!queued()) loop.quit();
+    });
+
+    QTimer timer;
+    timer.setSingleShot(true);
+    QObject::connect(&timer, &QTimer::timeout, &loop, &QEventLoop::quit);
+    timer.start(qMax(1, timeoutMs));
+
+    invoke();
+    loop.exec(); // the V1 fallbacks reply through a 0 ms timer, so never before this
+    QObject::disconnect(c1);
+    QObject::disconnect(c2);
+    QObject::disconnect(c3);
+    return got;
+}
+
 McpUi::Call makeCall(const QJsonObject &args)
 {
     McpUi::Call call;
@@ -924,6 +956,151 @@ void OpenMVPlugin::registerMcpTools()
                 {QStringLiteral("currentFile"), document ? document->filePath().toUserOutput() : QString()},
                 {QStringLiteral("currentFileModified"), document ? document->isModified() : false}});
         });
+
+    // ---- camera-side polls: openmv_camera_info / memory_stats / protocol_stats
+
+    auto pollTimeout = [](const QJsonObject &args) {
+        return qBound(500, args.value(QStringLiteral("timeoutMs")).toInt(5000), 60000);
+    };
+
+    auto addPollTimeout = [](Tool::InputSchema &in) -> Tool::InputSchema & {
+        in.addProperty(QStringLiteral("timeoutMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("How long to wait for the camera's reply in milliseconds (default 5000).")}});
+        return in;
+    };
+
+    {
+        Tool::InputSchema in;
+        addPollTimeout(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_camera_info"))
+                .title(QStringLiteral("Query the camera's system information"))
+                .description(QStringLiteral("Asks the connected camera for its system information (firmware and protocol versions, board, CPU, memory sizes, sensor and so on; the Board Info view) and returns the raw key/value map the camera reports, plus what the IDE knows about the board."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this, pollTimeout](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                QVariantMap info;
+                OpenMVPluginIO *io = m_iodevice;
+                const bool got = awaitPoll(io, &OpenMVPluginIO::systemInfo, [&info](const QVariantMap &m) { info = m; },
+                                           [io] { return io->getSystemInfoQueued(); }, [io] { io->getSystemInfo(); },
+                                           pollTimeout(params.argumentsAsObject()));
+
+                if(!got) return errResult(QStringLiteral("camera_timeout"), QStringLiteral("The camera did not answer the system information request."));
+
+                QJsonObject out = QJsonObject::fromVariantMap(info);
+                out.insert(QStringLiteral("ide"), QJsonObject{
+                    {QStringLiteral("board"), m_boardType},
+                    {QStringLiteral("fullBoard"), m_fullBoardType},
+                    {QStringLiteral("boardId"), m_boardId},
+                    {QStringLiteral("sensor"), m_sensorType},
+                    {QStringLiteral("port"), m_portName},
+                    {QStringLiteral("protocolV2"), io->v2ProtocolEnabled()}});
+                return okResult(out);
+            });
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_memory_stats"))
+                .title(QStringLiteral("Query the camera's memory statistics"))
+                .description(QStringLiteral("Asks the connected camera for its memory statistics (the Memory view): one entry per region with its size and usage. Empty on cameras whose firmware does not report them (protocol V1)."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this, pollTimeout](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                QVariantList entries;
+                OpenMVPluginIO *io = m_iodevice;
+                const bool got = awaitPoll(io, &OpenMVPluginIO::memoryStats, [&entries](const QVariantList &l) { entries = l; },
+                                           [io] { return io->getMemoryStatsQueued(); }, [io] { io->getMemoryStats(); },
+                                           pollTimeout(params.argumentsAsObject()));
+
+                if(!got) return errResult(QStringLiteral("camera_timeout"), QStringLiteral("The camera did not answer the memory statistics request."));
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("supported"), io->v2ProtocolEnabled()},
+                    {QStringLiteral("regions"), QJsonArray::fromVariantList(entries)}});
+            });
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_protocol_stats"))
+                .title(QStringLiteral("Query the debug-protocol statistics"))
+                .description(QStringLiteral("Returns the host-side and camera-side debug protocol counters (the Statistics view): bytes and packets moved, errors, retries, per-channel traffic. Protocol V2 cameras only."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this, pollTimeout](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+                if(!m_iodevice->v2ProtocolEnabled()) return errResult(QStringLiteral("unsupported_on_v1"), QStringLiteral("This camera's firmware uses the V1 debug protocol, which has no statistics."));
+
+                QVariantMap host, device;
+                QVariantList channels;
+                OpenMVPluginIO *io = m_iodevice;
+                const bool got = awaitPoll(io, &OpenMVPluginIO::protocolStats,
+                                           [&](const QVariantMap &h, const QVariantMap &d, const QVariantList &c) { host = h; device = d; channels = c; },
+                                           [io] { return io->getProtocolStatsQueued(); }, [io] { io->getProtocolStats(); },
+                                           pollTimeout(params.argumentsAsObject()));
+
+                if(!got) return errResult(QStringLiteral("camera_timeout"), QStringLiteral("The camera did not answer the protocol statistics request."));
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("host"), QJsonObject::fromVariantMap(host)},
+                    {QStringLiteral("device"), QJsonObject::fromVariantMap(device)},
+                    {QStringLiteral("channels"), QJsonArray::fromVariantList(channels)}});
+            });
+    }
+
+    // ---- openmv_framebuffer_save --------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Where to write the image; the extension picks the format (.bmp .jpg .jpeg .png .ppm).")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_framebuffer_save"))
+                .title(QStringLiteral("Save the camera frame buffer to a file"))
+                .description(QStringLiteral("Writes the most recent frame the IDE received from the camera to `path`, exactly like right-click > Save Image on the frame buffer."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_frameBuffer || !m_frameBuffer->pixmapValid()) return errResult(QStringLiteral("not_available"), QStringLiteral("No frame has been received from the camera."));
+
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(path.isEmpty()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` is required."));
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("fb.save_image_path"), path);
+
+                {
+                    McpUi::Scope scope(call);
+                    saveImage(m_frameBuffer->pixmap());
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("path"), path);
+                if(call.hasErrors(1)) return errResult(QStringLiteral("failed"), QStringLiteral("Saving reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
 }
 
 } // namespace Internal

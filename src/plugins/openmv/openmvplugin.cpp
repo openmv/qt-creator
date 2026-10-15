@@ -42,6 +42,7 @@
 #include <QGuiApplication>
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -4861,7 +4862,8 @@ void OpenMVPlugin::saveImage(const QPixmap &data)
         path =
         OmvUi::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Image"),
             settings->value(SETTINGS_GROUP "/" LAST_SAVE_IMAGE_PATH, QDir::homePath()).toString(),
-            Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"));
+            Tr::tr("Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)"),
+            Q_NULLPTR, QFileDialog::Options(), OMV_UI_SITE("fb.save_image_path"));
 
         if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
         {
