@@ -504,6 +504,7 @@ public slots: // private
     bool registerOpenMVCamDialog(const QString board, const QString id, const QString vendor = QString());
     void packageUpdate();
     void bootloaderClicked();
+    void loadCustomFirmware(const QString &forceFirmwarePath, bool flashFSErase, bool resetROMFS);
     void editRomfsClicked(bool fromConnect = false, bool newRomfs = false);
     void resetRomfsClicked();
     void installTheLatestDevelopmentRelease();

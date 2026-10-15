@@ -35,9 +35,14 @@
 
 #include "openmvplugin.h"
 #include "openmvpluginio.h"
+#include "openmvromfs.h"
 #include "views/openmvpluginfb.h"
 #include "mcp/omvmcpcontext.h"
+#include "mcp/omvui.h"
 
+#include <coreplugin/editormanager/editormanager.h>
+#include <coreplugin/icore.h>
+#include <coreplugin/idocument.h>
 #include <mcp/server/toolregistry.h>
 #include <utils/qtcassert.h>
 
@@ -111,6 +116,16 @@ Mcp::Schema::Tool::InputSchema &addCallControls(Mcp::Schema::Tool::InputSchema &
     schema.addProperty(QStringLiteral("deadlineMs"), QJsonObject{
         {QStringLiteral("type"), QStringLiteral("integer")},
         {QStringLiteral("description"), QStringLiteral("Wall-clock limit for the whole operation in milliseconds (default 300000).")}});
+    return schema;
+}
+
+// Destructive (G2) tools must be told `confirm:true` explicitly.
+Mcp::Schema::Tool::InputSchema &addConfirm(Mcp::Schema::Tool::InputSchema &schema)
+{
+    schema.addProperty(QStringLiteral("confirm"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("boolean")},
+        {QStringLiteral("description"), QStringLiteral("Must be true: this operation is destructive. When the client supports elicitation the user is asked to confirm as well.")}});
+    schema.addRequired(QStringLiteral("confirm"));
     return schema;
 }
 
@@ -274,13 +289,16 @@ void OpenMVPlugin::registerMcpTools()
 
     {
         Tool::InputSchema in;
+        in.addProperty(QStringLiteral("port"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Serial port to use when more than one camera is attached (a `port` from openmv_list_ports). Omitted: the IDE's own choice, or a needs_input error at site connect.port.")}});
         addCallControls(in);
 
         ToolRegistry::registerTool(
             Tool{}
                 .name(QStringLiteral("openmv_camera_connect"))
                 .title(QStringLiteral("Connect to the OpenMV camera"))
-                .description(QStringLiteral("Runs the IDE's Connect action and waits for it to finish. Any dialog the IDE would have shown (port picker, firmware prompts, errors) is returned in `errors` with its site id instead of blocking; supply `answers` keyed by site id to pre-answer them."))
+                .description(QStringLiteral("Runs the IDE's Connect action and waits for it to finish. Any dialog the IDE would have shown (port picker, firmware prompts, errors) is returned in `errors` with its site id instead of blocking; supply `answers` keyed by site id to pre-answer them. Known sites: connect.port, connect.board_type, connect.dfu_device, connect.bricked, connect.retry, connect.upgrade_firmware, connect.install_dev_release."))
                 .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
                 .inputSchema(in),
             // ToolInterfaceCallback: the call holds the ToolInterface so dialogs
@@ -292,8 +310,14 @@ void OpenMVPlugin::registerMcpTools()
                 if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
                 if(m_connected) return okResult(QJsonObject{{QStringLiteral("connected"), true}, {QStringLiteral("port"), m_portName}, {QStringLiteral("alreadyConnected"), true}});
 
-                McpUi::Call call = makeCall(params.argumentsAsObject());
+                const QJsonObject args = params.argumentsAsObject();
+                McpUi::Call call = makeCall(args);
                 call.tool = toolInterface;
+
+                if(args.contains(QStringLiteral("port")))
+                {
+                    call.answers.insert(OMV_UI_SITE("connect.port"), args.value(QStringLiteral("port")).toString());
+                }
 
                 {
                     McpUi::Scope scope(call);
@@ -523,6 +547,383 @@ void OpenMVPlugin::registerMcpTools()
                     {QStringLiteral("base64"), QString::fromLatin1(bytes.toBase64())}});
             });
     }
+
+    // Runs a plugin flow inside the call's scope and waits until the plugin is
+    // idle again or the deadline passes. Firmware flows tear m_working down and
+    // back up between their stages, so the sticky flag is waited on as well.
+    auto runFlow = [this](McpUi::Call &call, const std::function<void()> &invoke) {
+        McpUi::Scope scope(call);
+        invoke();
+
+        while((m_working || m_firmwareUpdateInProgress) && !call.expired())
+        {
+            awaitSignal(this, &OpenMVPlugin::workingDone, qMin(call.remainingMs(), 250));
+        }
+    };
+
+    auto flowBusy = [this](const McpUi::Call &call) {
+        return call.expired() && (m_working || m_firmwareUpdateInProgress);
+    };
+
+    // G2 gate: the agent must pass confirm:true and, when the client can put a
+    // question to the user, the user confirms too (whatever the call's policy
+    // and whatever `answers` say).
+    auto gateDestructive = [](McpUi::Call &call, const QJsonObject &args, const QString &title, const QString &text) -> std::optional<CallToolResult> {
+        if(!args.value(QStringLiteral("confirm")).toBool())
+        {
+            return errResult(QStringLiteral("confirm_required"), QStringLiteral("This operation is destructive; pass confirm:true to run it. %1").arg(text));
+        }
+
+        if(!call.supportsElicitation())
+        {
+            call.note(QStringLiteral("[mcp.confirm] %1 -> Yes (confirm:true; the client cannot ask the user)").arg(title));
+            return std::nullopt;
+        }
+
+        const McpUi::Policy policy = call.policy;
+        call.policy = McpUi::Policy::Elicit;
+        call.answers.remove(OMV_UI_SITE("mcp.confirm"));
+
+        QMessageBox::StandardButton answer;
+        {
+            McpUi::Scope scope(call);
+            answer = OmvUi::question(Core::ICore::dialogParent(), title, text, QMessageBox::Yes | QMessageBox::No, QMessageBox::No, OMV_UI_SITE("mcp.confirm"));
+        }
+
+        call.policy = policy;
+        if(answer != QMessageBox::Yes) return errResult(QStringLiteral("declined"), QStringLiteral("The user did not confirm the operation."), outcome(call));
+        return std::nullopt;
+    };
+
+    auto firmwareString = [this] {
+        return QStringLiteral("%1.%2.%3").arg(m_major).arg(m_minor).arg(m_patch);
+    };
+
+    // ---- openmv_firmware_install (G2) ---------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("source"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("enum"), QJsonArray{QStringLiteral("release"), QStringLiteral("development"), QStringLiteral("file")}},
+            {QStringLiteral("description"), QStringLiteral("release: the firmware bundled with this IDE for the attached board. development: the latest development build (downloaded). file: a local .bin/.dfu/.img/.zip named by `path`.")}});
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Local firmware file when source is file.")}});
+        in.addProperty(QStringLiteral("eraseFilesystem"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Also erase the camera's internal FAT file system (default false).")}});
+        in.addProperty(QStringLiteral("resetRomfs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Also reset the ROM file system to its default (default false).")}});
+        addConfirm(in);
+        addCallControls(in);
+        in.addRequired(QStringLiteral("source"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_firmware_install"))
+                .title(QStringLiteral("Install firmware on the OpenMV camera"))
+                .description(QStringLiteral("Flashes firmware exactly like the IDE's firmware update and Load Custom Firmware actions: disconnects, enters the bootloader, writes the image(s) and reconnects. Destructive: requires confirm:true and, when the client supports it, the user's confirmation. Dialogs the flow would show (board type, DFU device, physical-action prompts) come back in `errors` with site ids to pre-answer via `answers`. Takes minutes: raise deadlineMs if needed."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true).idempotentHint(false))
+                .inputSchema(in),
+            [this, runFlow, flowBusy, gateDestructive, firmwareString](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                const QString source = args.value(QStringLiteral("source")).toString();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                const bool erase = args.value(QStringLiteral("eraseFilesystem")).toBool();
+                const bool resetRomfs = args.value(QStringLiteral("resetRomfs")).toBool();
+
+                if((source != QStringLiteral("release")) && (source != QStringLiteral("development")) && (source != QStringLiteral("file")))
+                {
+                    return errResult(QStringLiteral("invalid_argument"), QStringLiteral("`source` must be release, development or file."));
+                }
+
+                if((source == QStringLiteral("file")) && (path.isEmpty() || !QFileInfo(path).isFile()))
+                {
+                    return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` must name an existing firmware file (.bin, .dfu, .img or .zip)."));
+                }
+
+                if(m_connected && (source == QStringLiteral("development")) && !m_developmentReleaseAction->isEnabled())
+                {
+                    return errResult(QStringLiteral("not_available"), QStringLiteral("The camera is reachable over the network only; plug it in over USB to install firmware."));
+                }
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+
+                const QString what = (source == QStringLiteral("file")) ? QFileInfo(path).fileName()
+                                   : QStringLiteral("the latest %1 firmware").arg(source);
+                const QString extras = QStringList{erase ? QStringLiteral("erase the internal file system") : QString(),
+                                                   resetRomfs ? QStringLiteral("reset the ROM file system") : QString()}
+                                       .filter(QRegularExpression(QStringLiteral("."))).join(QStringLiteral(" and "));
+
+                if(auto refused = gateDestructive(call, args, QStringLiteral("Install Firmware"),
+                                                  QStringLiteral("Install %1 on the OpenMV Cam%2?").arg(what, extras.isEmpty() ? QString() : (QStringLiteral(" and ") + extras))))
+                {
+                    return *refused;
+                }
+
+                const QString before = m_connected ? firmwareString() : QString();
+
+                runFlow(call, [&] {
+                    if(source == QStringLiteral("file"))
+                    {
+                        loadCustomFirmware(path, erase, resetRomfs);
+                    }
+                    else
+                    {
+                        connectClicked(true, QString(), erase, false, source == QStringLiteral("development"), false, QString(),
+                                       resetRomfs ? OPENMV_ROMFS_RESET : OPENMV_ROMFS_NONE);
+                    }
+                });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("connected"), m_connected);
+                if(!before.isEmpty()) out.insert(QStringLiteral("firmwareBefore"), before);
+                if(m_connected) out.insert(QStringLiteral("firmware"), firmwareString());
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("The firmware flow did not finish within the deadline; the IDE is still working on it."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The firmware flow reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
+    // ---- openmv_camera_erase_filesystem (G2) --------------------------------
+
+    {
+        Tool::InputSchema in;
+        addConfirm(in);
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_camera_erase_filesystem"))
+                .title(QStringLiteral("Erase the camera's internal file system"))
+                .description(QStringLiteral("Erases the camera's internal FAT file system (not an SD card), exactly like Tools > Erase Internal FAT File System: every file on it, including main.py, is deleted. Destructive: requires confirm:true and, when the client supports it, the user's confirmation."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true).idempotentHint(true))
+                .inputSchema(in),
+            [this, runFlow, flowBusy, gateDestructive](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+
+                if(auto refused = gateDestructive(call, args, QStringLiteral("Erase Internal FAT File System"),
+                                                  QStringLiteral("Are you sure you want to erase your OpenMV Cam's internal FAT file system?")))
+                {
+                    return *refused;
+                }
+
+                runFlow(call, [this] { connectClicked(true, QString(), true, true); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("connected"), m_connected);
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("The erase did not finish within the deadline; the IDE is still working on it."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The erase reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
+    // ---- openmv_camera_reset / openmv_camera_enter_bootloader (G1) ----------
+
+    {
+        Tool::InputSchema in;
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_camera_reset"))
+                .title(QStringLiteral("Reset the OpenMV camera"))
+                .description(QStringLiteral("Soft-resets the connected camera (the running script stops, the camera reboots and disconnects), exactly like Tools > Reset OpenMV Cam. Reconnect afterwards with openmv_camera_connect."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true).idempotentHint(true))
+                .inputSchema(in),
+            [this, runFlow, flowBusy](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+                if(!m_connected || !m_resetAction->isEnabled()) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
+                McpUi::Call call = makeCall(params.argumentsAsObject());
+                call.tool = toolInterface;
+
+                runFlow(call, [this] { disconnectClicked(true); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("connected"), m_connected);
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("The reset did not finish within the deadline."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The reset reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_camera_enter_bootloader"))
+                .title(QStringLiteral("Put the OpenMV camera in its bootloader"))
+                .description(QStringLiteral("Resets the connected camera into its bootloader (DFU) mode and disconnects, exactly like Tools > Enter Bootloader. Only available over USB."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true).idempotentHint(true))
+                .inputSchema(in),
+            [this, runFlow, flowBusy](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+                if(!m_connected) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(!m_enterBootloaderAction->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("The camera is reachable over the network only; plug it in over USB to enter the bootloader."));
+
+                McpUi::Call call = makeCall(params.argumentsAsObject());
+                call.tool = toolInterface;
+
+                runFlow(call, [this] { disconnectClicked(true, true); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("connected"), m_connected);
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("Entering the bootloader did not finish within the deadline."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("Entering the bootloader reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
+    // ---- openmv_script_save_to_camera (G1) ----------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("strip"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Strip comments and convert spaces to tabs before saving (default false).")}});
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_script_save_to_camera"))
+                .title(QStringLiteral("Save the current script to the camera"))
+                .description(QStringLiteral("Writes the current editor's script to main.py on the connected camera's drive (so it runs at boot), exactly like Tools > Save open script to OpenMV Cam. Overwrites the existing main.py. Needs a connected camera with a mounted drive and a non-empty editor."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true).idempotentHint(true))
+                .inputSchema(in),
+            [this, runFlow, flowBusy](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+                if(!m_connected) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(!m_saveAction->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("Saving needs the camera's drive mounted and a non-empty script in the current editor."));
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("script.save_strip"), args.value(QStringLiteral("strip")).toBool() ? QStringLiteral("Yes") : QStringLiteral("No"));
+
+                runFlow(call, [this] { saveScript(); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("path"), QString(m_portPath + QDir::separator() + QStringLiteral("main.py")));
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("Saving did not finish within the deadline."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("Saving reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
+    // ---- openmv_terminal_clear ----------------------------------------------
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_terminal_clear"))
+            .title(QStringLiteral("Forget the camera terminal history"))
+            .description(QStringLiteral("Drops the text openmv_terminal_read would return and advances its cursor, so later reads only show new output. The IDE's own terminal window is untouched."))
+            .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+            .outputSchema(Tool::OutputSchema{}
+                .addProperty(QStringLiteral("cursor"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
+                .addRequired(QStringLiteral("cursor"))),
+        [this](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            m_mcpTerminalDropped += m_mcpTerminalLog.size();
+            m_mcpTerminalLog.clear();
+            return okResult(QJsonObject{{QStringLiteral("cursor"), m_mcpTerminalDropped}});
+        });
+
+    // ---- openmv_examples_list -----------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("filter"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Case-insensitive substring to match against the relative paths (e.g. \"blob\", \"02-Image-Processing\").")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_examples_list"))
+                .title(QStringLiteral("List the bundled example scripts"))
+                .description(QStringLiteral("Lists the MicroPython example scripts shipped with this IDE (the File > Examples menu) as paths relative to `root`; read a script with the file tools. When a development-firmware camera is attached the matching development examples are listed instead."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in)
+                .outputSchema(Tool::OutputSchema{}
+                    .addProperty(QStringLiteral("root"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                    .addProperty(QStringLiteral("examples"), QJsonObject{{QStringLiteral("type"), QStringLiteral("array")}})
+                    .addRequired(QStringLiteral("root")).addRequired(QStringLiteral("examples"))),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QString filter = params.argumentsAsObject().value(QStringLiteral("filter")).toString();
+                const Utils::FilePath root = Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples")));
+                const QDir rootDir(root.toString());
+
+                QJsonArray examples;
+                QDirIterator it(root.toString(), QStringList() << QStringLiteral("*.py"), QDir::Files, QDirIterator::Subdirectories);
+
+                while(it.hasNext())
+                {
+                    const QString relative = rootDir.relativeFilePath(it.next());
+                    if(filter.isEmpty() || relative.contains(filter, Qt::CaseInsensitive)) examples.append(relative);
+                }
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("root"), root.toUserOutput()},
+                    {QStringLiteral("development"), root.fileName() != QStringLiteral("examples")},
+                    {QStringLiteral("examples"), examples}});
+            });
+    }
+
+    // ---- openmv_ide_status --------------------------------------------------
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_ide_status"))
+            .title(QStringLiteral("OpenMV IDE status"))
+            .description(QStringLiteral("The IDE's version, its resource directories (examples, firmware, tools) and the file open in the current editor."))
+            .annotations(ToolAnnotations{}.readOnlyHint(true)),
+        [](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            Core::IDocument *document = Core::EditorManager::currentDocument();
+
+            return okResult(QJsonObject{
+                {QStringLiteral("name"), QGuiApplication::applicationDisplayName()},
+                {QStringLiteral("version"), QCoreApplication::applicationVersion()},
+                {QStringLiteral("resourcePath"), Core::ICore::resourcePath().toUserOutput()},
+                {QStringLiteral("userResourcePath"), Core::ICore::userResourcePath().toUserOutput()},
+                {QStringLiteral("allUsersResourcePath"), Core::ICore::allUsersResourcePath(QString()).toUserOutput()},
+                {QStringLiteral("currentFile"), document ? document->filePath().toUserOutput() : QString()},
+                {QStringLiteral("currentFileModified"), document ? document->isModified() : false}});
+        });
 }
 
 } // namespace Internal

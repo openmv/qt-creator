@@ -49,6 +49,7 @@
 #include <limits>
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -747,7 +748,7 @@ void OpenMVPlugin::packageUpdate()
                             .arg(webChangelogUrl(QStringLiteral("ide"), new_major, new_minor, new_patch).toString())
                             .arg(QGuiApplication::applicationDisplayName());
                     int boxChoice = OmvUi::choiceBox(QMessageBox::Information, Core::ICore::dialogParent(), Tr::tr("Update Available"), updateMessage,
-                        QStringList() << Tr::tr("Install"), 0, true);
+                        QStringList() << Tr::tr("Install"), 0, true, OMV_UI_SITE("connect.install_dev_release"));
 
                     if(boxChoice == 0)
                     {
@@ -1027,8 +1028,25 @@ void OpenMVPlugin::bootloaderClicked()
             settings->setValue(SETTINGS_GROUP "/" LAST_FIRMWARE_PATH, forceFirmwarePath);
             settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, flashFSErase);
             settings->setValue(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, resetROMFS);
-            delete dialog;
+        }
 
+        delete dialog;
+        loadCustomFirmware(forceFirmwarePath, flashFSErase, resetROMFS);
+    }
+    else
+    {
+        delete dialog;
+    }
+}
+
+// The "Load Custom Firmware" flow once the path and options are known (also
+// the MCP firmware tool's entry point): a .zip is unpacked and installed via
+// the dev-firmware path, anything else is flashed directly.
+void OpenMVPlugin::loadCustomFirmware(const QString &forceFirmwarePath, bool flashFSErase, bool resetROMFS)
+{
+    {
+        if(QFileInfo::exists(forceFirmwarePath) && QFileInfo(forceFirmwarePath).isFile())
+        {
             if(forceFirmwarePath.endsWith(QStringLiteral(".zip"), Qt::CaseInsensitive))
             {
                 // A firmware .zip is the build output for one board -- the firmware image(s) sit flat
@@ -1131,13 +1149,7 @@ void OpenMVPlugin::bootloaderClicked()
             OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Bootloader"),
                 Tr::tr("\"%L1\" is not a file!").arg(forceFirmwarePath));
-
-            delete dialog;
         }
-    }
-    else
-    {
-        delete dialog;
     }
 }
 
@@ -2151,7 +2163,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                             Tr::tr("Connect"), Tr::tr("Please select the board type"),
                             mappings.keys(), (index != -1) ? index : 0, false, &ok,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                            Qt::ImhNone, OMV_UI_SITE("connect.board_type"));
 
                         if(ok)
                         {
@@ -2342,7 +2355,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     if(forceBootloader || dfuDeviceResetToRelease || (OmvUi::question(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         Tr::tr("Do you have an OpenMV Cam connected and is it bricked?"),
-                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes, OMV_UI_SITE("connect.bricked"))
                     == QMessageBox::Yes))
                     {
                         if(dfuDeviceResetToRelease)
@@ -2413,7 +2426,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                 mappings.keys(), (index != -1) ? index : 0, false, &ok,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint)));
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                                Qt::ImhNone, OMV_UI_SITE("connect.board_type")));
 
                             if(ok)
                             {
@@ -2556,12 +2570,24 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 stringList2.append(QStringLiteral("%1: %2").arg(portDisplayName(pair.first), pair.second));
             }
 
+            // An MCP caller names the raw port (openmv_list_ports); map it onto
+            // the pretty entry's index so the picker below accepts it.
+            if(McpUi::Call *call = McpUi::currentCall())
+            {
+                if(std::optional<QJsonValue> a = call->answer(OMV_UI_SITE("connect.port")))
+                {
+                    int i = a->isString() ? stringList.indexOf(a->toString()) : -1;
+                    if(i != -1) call->answers.insert(OMV_UI_SITE("connect.port"), i);
+                }
+            }
+
             bool ok;
             QString temp = OmvUi::getItem(Core::ICore::dialogParent(),
                 Tr::tr("Connect"), Tr::tr("Please select a serial port"),
                 stringList2, (index != -1) ? index : 0, false, &ok,
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                Qt::ImhNone, OMV_UI_SITE("connect.port"));
 
             if(ok)
             {
@@ -2599,7 +2625,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     Tr::tr("Connect"), Tr::tr("Please select a DFU Device"),
                     dfuDevices, (index != -1) ? index : 0, false, &ok,
                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                    Qt::ImhNone, OMV_UI_SITE("connect.dfu_device"));
 
                 if(ok)
                 {
@@ -2927,7 +2954,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 if(OmvUi::question(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Try to connect again?"),
-                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes)
+                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes, OMV_UI_SITE("connect.retry"))
                 == QMessageBox::Yes)
                 {
                     CLOSE_RECONNECT_END();
@@ -3118,7 +3145,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 Tr::tr("Connect"), Tr::tr("Please select the board type"),
                                 mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                                Qt::ImhNone, OMV_UI_SITE("connect.board_type"));
 
                             if(ok)
                             {
@@ -4449,7 +4477,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     Tr::tr("Your OpenMV Cam's firmware is out of date. Would you like to upgrade?"),
                     Utils::CheckableDecider(DONT_SHOW_UPGRADE_FW_AGAIN),
                     QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
-                    QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes) == QMessageBox::Yes)
+                    QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes, OMV_UI_SITE("connect.upgrade_firmware")) == QMessageBox::Yes)
             {
                 OpenMVPlugin::updateCam(true);
             }
@@ -5492,7 +5520,8 @@ QJsonObject OpenMVPlugin::getBoardSettings(const QString &title, Utils::QtcSetti
             title, Tr::tr("Please select the board type"),
             mappingsHumanReadable.keys(), (index != -1) ? index : 0, false, &ok,
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+            Qt::ImhNone, OMV_UI_SITE("connect.board_type"));
 
         if(ok)
         {

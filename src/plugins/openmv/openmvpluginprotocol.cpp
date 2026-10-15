@@ -47,6 +47,7 @@
 #endif
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -740,7 +741,8 @@ void OpenMVPlugin::saveScript()
         int answer = OmvUi::question(Core::ICore::dialogParent(),
                                            Tr::tr("Save Script"),
                                            Tr::tr("Strip comments and convert spaces to tabs?"),
-                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes);
+                                           QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::Yes,
+                                           OMV_UI_SITE("script.save_strip"));
 
         if((answer == QMessageBox::Yes) || (answer == QMessageBox::No))
         {
