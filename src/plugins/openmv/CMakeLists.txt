@@ -97,38 +97,41 @@ target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
     target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32 user32)
-    target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::ZlibPrivate)
-else()
-    extend_qtc_plugin(OpenMV
-      SOURCES
-        zlib/zconf.h
-        zlib/zlib.h
-        zlib/crc32.h
-        zlib/deflate.h
-        zlib/gzguts.h
-        zlib/inffast.h
-        zlib/inffixed.h
-        zlib/inflate.h
-        zlib/inftrees.h
-        zlib/trees.h
-        zlib/zutil.h
-        zlib/adler32.c
-        zlib/compress.c
-        zlib/crc32.c
-        zlib/deflate.c
-        zlib/gzclose.c
-        zlib/gzlib.c
-        zlib/gzread.c
-        zlib/gzwrite.c
-        zlib/inflate.c
-        zlib/infback.c
-        zlib/inftrees.c
-        zlib/inffast.c
-        zlib/trees.c
-        zlib/uncompr.c
-        zlib/zutil.c
-    )
 endif()
+
+# Qt 6.12 no longer provides a zlib target to link against. Qt 6.5 exported
+# Qt::ZlibPrivate on Windows (other platforms already built the bundled copy
+# below), but 6.12 ships no zlib target on any platform, so build the bundled
+# zlib from source everywhere.
+extend_qtc_plugin(OpenMV
+  SOURCES
+    zlib/zconf.h
+    zlib/zlib.h
+    zlib/crc32.h
+    zlib/deflate.h
+    zlib/gzguts.h
+    zlib/inffast.h
+    zlib/inffixed.h
+    zlib/inflate.h
+    zlib/inftrees.h
+    zlib/trees.h
+    zlib/zutil.h
+    zlib/adler32.c
+    zlib/compress.c
+    zlib/crc32.c
+    zlib/deflate.c
+    zlib/gzclose.c
+    zlib/gzlib.c
+    zlib/gzread.c
+    zlib/gzwrite.c
+    zlib/inflate.c
+    zlib/infback.c
+    zlib/inftrees.c
+    zlib/inffast.c
+    zlib/trees.c
+    zlib/uncompr.c
+    zlib/zutil.c
+)
 
 if (APPLE)
     target_link_libraries(OpenMV PRIVATE
