@@ -49,6 +49,7 @@
 #define LAST_MPY_COMPILIER_OPTIONS_STRING "LastMPYCompilierOptionsString"
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -79,6 +80,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     layout2->addItem(new QSpacerItem(0, 6));
 
     QComboBox *combo2 = new QComboBox();
+    combo2->setObjectName(QStringLiteral("mode")); // MCP form field names
     combo2->addItem(Tr::tr("Just copy the script"));
     combo2->addItem(Tr::tr("Copy and clean whitespace"));
     combo2->addItem(Tr::tr("Copy and clean whitespace/comments"));
@@ -94,6 +96,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     widget->setVisible(settings->value("OpenMV/" LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
 
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
+    lineEdit->setObjectName(QStringLiteral("options"));
     lineEdit->setHistoryCompleter(LAST_MPY_COMPILIER_OPTIONS_STRING, true);
     QLabel *label = new QLabel(Tr::tr("<a href=\"https://pypi.org/project/mpy-cross/\">MPY Cross Compilier CLI Options</a>"));
     label->setTextFormat(Qt::RichText);
@@ -111,6 +114,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
     widget2->setLayout(layout3);
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
+    checkBox2->setObjectName(QStringLiteral("advanced"));
     checkBox2->setChecked(settings->value("OpenMV/" LAST_MPY_COMPILIER_ADVANCED_STATE, false).toBool());
     checkBox2->setVisible(settings->value("OpenMV/" LAST_MPY_COMPILIER_OPTIMIZE_STATE, 0).toInt() == 3);
     layout3->addWidget(checkBox2);
@@ -131,7 +135,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = OmvUi::exec(dialog2) == QDialog::Accepted;
+    bool ok = OmvUi::exec(dialog2, OMV_UI_SITE("mpy.options")) == QDialog::Accepted;
 
     if (!ok)
     {
@@ -297,7 +301,7 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         }
         else if(QSysInfo::buildCpuArchitecture() == QStringLiteral("arm64"))
         {
-            pythonPath = Core::ICore::resourcePath(QStringLiteral("mpy-cross/linux-aarch64"));
+            pythonPath = Core::ICore::resourcePath(QStringLiteral("mpy-cross/linux-arm64"));
             binary = Core::ICore::resourcePath(QStringLiteral("python/linux-arm64/bin/python"));
         }
     }

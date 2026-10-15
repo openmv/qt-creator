@@ -43,6 +43,7 @@
 #include "openmvmodelzoo.h"
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -105,7 +106,8 @@ QJsonObject getROMFSConfig(const QString &title,
         title, Tr::tr("Please select the target"),
         names, (index != -1) ? index : 0, false, &ok,
         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+        Qt::ImhNone, OMV_UI_SITE("romfs.target"));
 
     if(ok)
     {

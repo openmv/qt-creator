@@ -31,7 +31,11 @@
 #include "omvui.h"
 #include "omvmcpcontext.h"
 
+#include <utils/filepath.h>
 #include <utils/hostosinfo.h>
+#include <utils/pathchooser.h>
+
+#include <algorithm>
 
 namespace OpenMV {
 namespace Internal {
@@ -673,6 +677,218 @@ QAction *popupMenu(QMenu &menu, const QPoint &pos)
 }
 
 // --- Hand-built modal dialogs -----------------------------------------------
+// A dialog's inputs are discovered by walking its widgets, so an agent can be
+// told what a form asks for and fill it in without the dialog being rewritten.
+// A field is named by its objectName, else the QFormLayout label beside it,
+// else (check/radio/group boxes) its own text.
+
+namespace {
+
+struct Field {
+    QString name;
+    QString type;
+    QJsonValue value;
+    QStringList choices;
+    QWidget *widget = Q_NULLPTR;
+};
+
+QString cleanLabel(QString text)
+{
+    text.remove(QLatin1Char('&'));
+    text = text.trimmed();
+    if(text.endsWith(QLatin1Char(':'))) text.chop(1);
+    return text.trimmed();
+}
+
+QString labelFor(QWidget *widget, const QList<QFormLayout *> &forms)
+{
+    // The label may sit beside the widget itself or beside a container row
+    // the widget lives in; failing that, the plugin's forms put a spanning
+    // QLabel on the row above ("What do you want to do?").
+    for(QWidget *w = widget; w; w = w->parentWidget())
+    {
+        for(QFormLayout *form : forms)
+        {
+            if(QLabel *label = qobject_cast<QLabel *>(form->labelForField(w)))
+            {
+                return cleanLabel(label->text());
+            }
+
+            int row = -1;
+            QFormLayout::ItemRole role;
+            form->getWidgetPosition(w, &row, &role);
+
+            for(int r = row - 1; r >= 0; r--)
+            {
+                QLayoutItem *item = form->itemAt(r, QFormLayout::SpanningRole);
+                QLabel *label = item ? qobject_cast<QLabel *>(item->widget()) : Q_NULLPTR;
+                if(label && !label->text().isEmpty()) return cleanLabel(label->text().remove(QRegularExpression(QStringLiteral("<[^>]*>"))));
+                if(item && item->widget()) break; // another input's row: stop
+            }
+        }
+
+        if(qobject_cast<QDialog *>(w)) break;
+    }
+
+    return QString();
+}
+
+bool insidePathChooser(QWidget *widget)
+{
+    for(QWidget *w = widget->parentWidget(); w; w = w->parentWidget())
+    {
+        if(qobject_cast<Utils::PathChooser *>(w)) return true;
+    }
+
+    return false;
+}
+
+QList<Field> formFields(QDialog &dialog)
+{
+    const QList<QFormLayout *> forms = dialog.findChildren<QFormLayout *>();
+    QList<Field> fields;
+
+    const QList<QWidget *> widgets = dialog.findChildren<QWidget *>();
+
+    for(QWidget *w : widgets)
+    {
+        if(insidePathChooser(w)) continue;
+
+        Field f;
+        f.widget = w;
+
+        if(Utils::PathChooser *p = qobject_cast<Utils::PathChooser *>(w))
+        {
+            f.type = QStringLiteral("path");
+            f.value = p->filePath().toUserOutput();
+        }
+        else if(QCheckBox *c = qobject_cast<QCheckBox *>(w))
+        {
+            f.type = QStringLiteral("boolean");
+            f.value = c->isChecked();
+            f.name = cleanLabel(c->text());
+        }
+        else if(QRadioButton *r = qobject_cast<QRadioButton *>(w))
+        {
+            f.type = QStringLiteral("boolean");
+            f.value = r->isChecked();
+            f.name = cleanLabel(r->text());
+        }
+        else if(QGroupBox *g = qobject_cast<QGroupBox *>(w))
+        {
+            if(!g->isCheckable()) continue;
+            f.type = QStringLiteral("boolean");
+            f.value = g->isChecked();
+            f.name = cleanLabel(g->title());
+        }
+        else if(QComboBox *c = qobject_cast<QComboBox *>(w))
+        {
+            f.type = QStringLiteral("choice");
+            f.value = c->currentText();
+            for(int i = 0; i < c->count(); i++) f.choices.append(c->itemText(i));
+        }
+        else if(QSpinBox *s = qobject_cast<QSpinBox *>(w))
+        {
+            f.type = QStringLiteral("integer");
+            f.value = s->value();
+            f.choices = QStringList{QString::number(s->minimum()), QString::number(s->maximum())};
+        }
+        else if(QSlider *s = qobject_cast<QSlider *>(w))
+        {
+            f.type = QStringLiteral("integer");
+            f.value = s->value();
+            f.choices = QStringList{QString::number(s->minimum()), QString::number(s->maximum())};
+        }
+        else if(QDoubleSpinBox *s = qobject_cast<QDoubleSpinBox *>(w))
+        {
+            f.type = QStringLiteral("number");
+            f.value = s->value();
+            f.choices = QStringList{QString::number(s->minimum()), QString::number(s->maximum())};
+        }
+        else if(QLineEdit *e = qobject_cast<QLineEdit *>(w))
+        {
+            if(e->isReadOnly() || (e->parentWidget() && (qobject_cast<QComboBox *>(e->parentWidget()) || qobject_cast<QAbstractSpinBox *>(e->parentWidget())))) continue;
+            f.type = (e->echoMode() == QLineEdit::Normal) ? QStringLiteral("string") : QStringLiteral("secret");
+            f.value = e->text();
+        }
+        else if(QPlainTextEdit *e = qobject_cast<QPlainTextEdit *>(w))
+        {
+            if(e->isReadOnly()) continue;
+            f.type = QStringLiteral("text");
+            f.value = e->toPlainText();
+        }
+        else if(QTextEdit *e = qobject_cast<QTextEdit *>(w))
+        {
+            if(e->isReadOnly()) continue;
+            f.type = QStringLiteral("text");
+            f.value = e->toPlainText();
+        }
+        else
+        {
+            continue;
+        }
+
+        if(!w->objectName().isEmpty() && !w->objectName().startsWith(QStringLiteral("qt_"))) f.name = w->objectName();
+        if(f.name.isEmpty()) f.name = labelFor(w, forms);
+        if(f.name.isEmpty()) f.name = cleanLabel(w->toolTip());
+        if(f.name.isEmpty()) f.name = QStringLiteral("%1 %2").arg(f.type).arg(fields.size() + 1);
+
+        // Two fields may share a label (e.g. twin check boxes): number the later ones.
+        const QString base = f.name;
+        for(int n = 2; std::any_of(fields.cbegin(), fields.cend(), [&f](const Field &o) { return o.name.compare(f.name, Qt::CaseInsensitive) == 0; }); n++)
+        {
+            f.name = QStringLiteral("%1 #%2").arg(base).arg(n);
+        }
+
+        fields.append(f);
+    }
+
+    return fields;
+}
+
+QJsonArray describeFields(const QList<Field> &fields)
+{
+    QJsonArray a;
+
+    for(const Field &f : fields)
+    {
+        QJsonObject o{{QStringLiteral("name"), f.name}, {QStringLiteral("type"), f.type}, {QStringLiteral("value"), f.value}};
+        if(f.type == QStringLiteral("choice")) o.insert(QStringLiteral("choices"), QJsonArray::fromStringList(f.choices));
+        else if(f.choices.size() == 2) { o.insert(QStringLiteral("min"), f.choices.at(0).toDouble()); o.insert(QStringLiteral("max"), f.choices.at(1).toDouble()); }
+        if(!f.widget->isEnabled()) o.insert(QStringLiteral("enabled"), false);
+        a.append(o);
+    }
+
+    return a;
+}
+
+bool applyField(const Field &f, const QJsonValue &v)
+{
+    QWidget *w = f.widget;
+
+    if(Utils::PathChooser *p = qobject_cast<Utils::PathChooser *>(w)) { p->setFilePath(Utils::FilePath::fromUserInput(v.toString())); return true; }
+    if(QCheckBox *c = qobject_cast<QCheckBox *>(w)) { c->setChecked(v.toBool(c->isChecked())); return true; }
+    if(QRadioButton *r = qobject_cast<QRadioButton *>(w)) { r->setChecked(v.toBool(r->isChecked())); return true; }
+    if(QGroupBox *g = qobject_cast<QGroupBox *>(w)) { g->setChecked(v.toBool(g->isChecked())); return true; }
+
+    if(QComboBox *c = qobject_cast<QComboBox *>(w))
+    {
+        int i = v.isDouble() ? v.toInt(-1) : c->findText(v.toString(), Qt::MatchFixedString);
+        if((i < 0) || (i >= c->count())) return false;
+        c->setCurrentIndex(i);
+        return true;
+    }
+
+    if(QSpinBox *s = qobject_cast<QSpinBox *>(w)) { if(!v.isDouble()) return false; s->setValue(v.toInt()); return true; }
+    if(QSlider *s = qobject_cast<QSlider *>(w)) { if(!v.isDouble()) return false; s->setValue(v.toInt()); return true; }
+    if(QDoubleSpinBox *s = qobject_cast<QDoubleSpinBox *>(w)) { if(!v.isDouble()) return false; s->setValue(v.toDouble()); return true; }
+    if(QLineEdit *e = qobject_cast<QLineEdit *>(w)) { e->setText(v.toString()); return true; }
+    if(QPlainTextEdit *e = qobject_cast<QPlainTextEdit *>(w)) { e->setPlainText(v.toString()); return true; }
+    if(QTextEdit *e = qobject_cast<QTextEdit *>(w)) { e->setPlainText(v.toString()); return true; }
+    return false;
+}
+
+} // namespace
 
 int exec(QDialog &dialog, const QString &site)
 {
@@ -680,8 +896,57 @@ int exec(QDialog &dialog, const QString &site)
     if(!call) return dialog.exec();
 
     const QString title = dialog.windowTitle();
-    record(call, 1, QStringLiteral("needs_input"), siteOr(site, title, QStringLiteral("dialog")), title,
-           QStringLiteral("This step needs a form filled in by a person; it was cancelled."), QStringLiteral("type: dialog"));
+    const QString s = siteOr(site, title, QStringLiteral("dialog"));
+    const QList<Field> fields = formFields(dialog);
+    const QString described = QString::fromUtf8(QJsonDocument(describeFields(fields)).toJson(QJsonDocument::Compact));
+
+    if(std::optional<QJsonValue> a = call->answer(s))
+    {
+        // `false` rejects, `true` accepts the form as it is, an object fills
+        // fields in by name and accepts.
+        if(a->isBool())
+        {
+            call->note(QStringLiteral("[%1] %2 -> %3 (answered)").arg(s, title, a->toBool() ? QStringLiteral("accept") : QStringLiteral("reject")));
+            if(a->toBool()) dialog.accept(); else dialog.reject();
+            return a->toBool() ? QDialog::Accepted : QDialog::Rejected;
+        }
+
+        if(a->isObject())
+        {
+            const QJsonObject answers = a->toObject();
+            QStringList unknown, invalid;
+
+            for(auto it = answers.constBegin(); it != answers.constEnd(); ++it)
+            {
+                auto field = std::find_if(fields.cbegin(), fields.cend(), [&it](const Field &f) { return f.name.compare(it.key().trimmed(), Qt::CaseInsensitive) == 0; });
+                if(field == fields.cend()) { unknown.append(it.key()); continue; }
+                if(!applyField(*field, it.value())) invalid.append(it.key());
+            }
+
+            if(unknown.isEmpty() && invalid.isEmpty())
+            {
+                call->note(QStringLiteral("[%1] %2 -> accept (answered: %3)").arg(s, title, answers.keys().join(QStringLiteral(", "))));
+                dialog.accept();
+                return QDialog::Accepted;
+            }
+
+            record(call, 1, QStringLiteral("bad_answer"), s, title,
+                   QStringLiteral("%1%2").arg(unknown.isEmpty() ? QString() : QStringLiteral("Unknown fields: %1. ").arg(unknown.join(QStringLiteral(", "))),
+                                             invalid.isEmpty() ? QString() : QStringLiteral("Invalid values for: %1. ").arg(invalid.join(QStringLiteral(", ")))).trimmed(),
+                   QStringLiteral("fields: ") + described);
+            dialog.reject();
+            return QDialog::Rejected;
+        }
+
+        record(call, 1, QStringLiteral("bad_answer"), s, title, QStringLiteral("A dialog answer must be true, false or an object of field values."), QStringLiteral("fields: ") + described);
+        dialog.reject();
+        return QDialog::Rejected;
+    }
+
+    record(call, 1, QStringLiteral("needs_input"), s, title,
+           QStringLiteral("This step shows a form; answer the site with true (accept as is), false (cancel) or an object of field values."),
+           QStringLiteral("fields: ") + described);
+    dialog.reject();
     return QDialog::Rejected;
 }
 

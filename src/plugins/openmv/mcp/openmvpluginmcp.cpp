@@ -1057,6 +1057,81 @@ void OpenMVPlugin::registerMcpTools()
             });
     }
 
+    // ---- openmv_script_compile ----------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The .py script to convert.")}});
+        in.addProperty(QStringLiteral("mode"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("enum"), QJsonArray{QStringLiteral("copy"), QStringLiteral("clean"), QStringLiteral("clean_comments"), QStringLiteral("bytecode")}},
+            {QStringLiteral("description"), QStringLiteral("copy: leave the script as is; clean: normalise whitespace; clean_comments: also strip comments; bytecode: compile to a .mpy with mpy-cross for the target board (default).")}});
+        in.addProperty(QStringLiteral("options"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Extra mpy-cross command-line options (bytecode mode only).")}});
+        in.addProperty(QStringLiteral("board"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Board type to compile for when no camera is connected (answers site connect.board_type; the error lists the choices).")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_script_compile"))
+                .title(QStringLiteral("Compile or clean a script with mpy-cross"))
+                .description(QStringLiteral("Runs the IDE's Copy/Convert Python File step on a script: cleans it or compiles it to MicroPython bytecode (.mpy) with the bundled mpy-cross using the target board's architecture flags. Returns the path of the converted file (in a temporary directory) and the compiler's console."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in)
+                .outputSchema(Tool::OutputSchema{}
+                    .addProperty(QStringLiteral("outputPath"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})),
+            [this](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(!QFileInfo(path).isFile() || !path.endsWith(QStringLiteral(".py"), Qt::CaseInsensitive)) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` must name an existing .py file."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                const QStringList modes{QStringLiteral("copy"), QStringLiteral("clean"), QStringLiteral("clean_comments"), QStringLiteral("bytecode")};
+                const int mode = qMax(0, modes.indexOf(args.value(QStringLiteral("mode")).toString(QStringLiteral("bytecode"))));
+                const QString options = args.value(QStringLiteral("options")).toString();
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+                if(args.contains(QStringLiteral("board"))) call.answers.insert(OMV_UI_SITE("connect.board_type"), args.value(QStringLiteral("board")).toString());
+                call.answers.insert(OMV_UI_SITE("mpy.options"), QJsonObject{
+                    {QStringLiteral("mode"), mode},
+                    {QStringLiteral("advanced"), !options.isEmpty()},
+                    {QStringLiteral("options"), options}});
+
+                QString outputPath;
+                bool noBoard = false;
+
+                {
+                    McpUi::Scope scope(call);
+                    Utils::QtcSettings *settings = Core::ICore::settings();
+
+                    // The board settings carry the mpy-cross architecture flags.
+                    const QJsonObject boardSettings = getBoardSettings(QStringLiteral("Compile Script"), settings, true);
+                    if(boardSettings.isEmpty()) noBoard = true;
+                    else outputPath = convertScript(boardSettings, path, settings);
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("mode"), modes.at(mode));
+                if(!outputPath.isEmpty()) out.insert(QStringLiteral("outputPath"), outputPath);
+
+                if(noBoard) return errResult(QStringLiteral("needs_input"), QStringLiteral("No board type was chosen; pass `board` (see errors for the choices)."), out);
+                if(outputPath.isEmpty() || call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The conversion did not produce a file; see errors and log."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
     // ---- openmv_framebuffer_save --------------------------------------------
 
     {
