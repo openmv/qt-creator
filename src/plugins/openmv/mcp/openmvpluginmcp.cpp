@@ -1132,6 +1132,102 @@ void OpenMVPlugin::registerMcpTools()
             });
     }
 
+    // ---- openmv_model_compile -----------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The model file (.tflite/.lite for Vela boards, .tflite/.onnx for STEdgeAI boards).")}});
+        in.addProperty(QStringLiteral("optimize"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Optimisation preset by label or index: Vela boards offer \"Optimize for Performance\" / \"Optimize for Size\"; STEdgeAI boards \"Maximum\", \"Medium\", \"Low\" or \"No Optimization\". Default: the IDE's last choice.")}});
+        in.addProperty(QStringLiteral("options"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Extra compiler command-line options (Vela, or STEdgeAI Core).")}});
+        in.addProperty(QStringLiteral("neuralArtOptions"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Extra STEdgeAI Neural-ART compiler options (STEdgeAI boards only).")}});
+        in.addProperty(QStringLiteral("board"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Board type to compile for when no camera is connected (answers site connect.board_type; the error lists the choices).")}});
+        in.addProperty(QStringLiteral("target"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("ROMFS target on boards that offer more than one (answers site romfs.target).")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_model_compile"))
+                .title(QStringLiteral("Compile a model for the board's NPU"))
+                .description(QStringLiteral("Converts a neural-network model for the target board the way the IDE does before adding it to a ROMFS image: Vela for Ethos-U boards (e.g. OpenMV AE3), STEdgeAI for Neural-ART boards (e.g. OpenMV N6). Boards without an accelerator, and models already converted, pass through unchanged. Returns the path of the converted file (in a temporary directory) and the compiler's console."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in)
+                .outputSchema(Tool::OutputSchema{}
+                    .addProperty(QStringLiteral("outputPath"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
+                    .addProperty(QStringLiteral("converted"), QJsonObject{{QStringLiteral("type"), QStringLiteral("boolean")}})),
+            [this](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(!QFileInfo(path).isFile()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` must name an existing model file."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                const QString options = args.value(QStringLiteral("options")).toString();
+                const QString neuralArtOptions = args.value(QStringLiteral("neuralArtOptions")).toString();
+
+                McpUi::Call call = makeCall(args);
+                call.tool = toolInterface;
+                if(args.contains(QStringLiteral("board"))) call.answers.insert(OMV_UI_SITE("connect.board_type"), args.value(QStringLiteral("board")).toString());
+                if(args.contains(QStringLiteral("target"))) call.answers.insert(OMV_UI_SITE("romfs.target"), args.value(QStringLiteral("target")).toString());
+
+                QJsonObject form{{QStringLiteral("advanced"), !(options.isEmpty() && neuralArtOptions.isEmpty())}, {QStringLiteral("options"), options}};
+                if(args.contains(QStringLiteral("optimize"))) form.insert(QStringLiteral("optimize"), args.value(QStringLiteral("optimize")));
+                call.answers.insert(OMV_UI_SITE("vela.options"), form);
+                form.insert(QStringLiteral("neuralArtOptions"), neuralArtOptions);
+                call.answers.insert(OMV_UI_SITE("stedgeai.options"), form);
+
+                QString outputPath;
+                QString stage;
+
+                {
+                    McpUi::Scope scope(call);
+                    Utils::QtcSettings *settings = Core::ICore::settings();
+                    const QString title = QStringLiteral("Compile Model");
+
+                    QJsonObject boardSettings = getBoardSettings(title, settings, true);
+                    if(boardSettings.isEmpty()) stage = QStringLiteral("board");
+                    else
+                    {
+                        // Same shape the Model Zoo and ROMFS editor build: the
+                        // chosen ROMFS target (with its NPU config) replaces the list.
+                        if(boardSettings.contains(QStringLiteral("romfsConfig")))
+                        {
+                            const QJsonObject romfs = getROMFSConfig(title, boardSettings, settings);
+                            if(romfs.isEmpty()) stage = QStringLiteral("target");
+                            else boardSettings[QStringLiteral("romfsConfig")] = romfs;
+                        }
+
+                        if(stage.isEmpty()) outputPath = convertModel(boardSettings, path, settings);
+                    }
+                }
+
+                QJsonObject out = outcome(call);
+                if(!outputPath.isEmpty()) out.insert(QStringLiteral("outputPath"), outputPath);
+                out.insert(QStringLiteral("converted"), !outputPath.isEmpty() && (outputPath != path));
+
+                if(stage == QStringLiteral("board")) return errResult(QStringLiteral("needs_input"), QStringLiteral("No board type was chosen; pass `board` (see errors for the choices)."), out);
+                if(stage == QStringLiteral("target")) return errResult(QStringLiteral("needs_input"), QStringLiteral("No ROMFS target was chosen; pass `target` (see errors for the choices)."), out);
+                if(outputPath.isEmpty() || call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The conversion did not produce a file; see errors and log."), out);
+                return okResult(out);
+                };
+
+                toolInterface.finish(body());
+                return Utils::ResultOk;
+            });
+    }
+
     // ---- openmv_framebuffer_save --------------------------------------------
 
     {

@@ -51,6 +51,7 @@
 #define LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN "LastStedgeaiCompilierOptionsStringAtonn"
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -105,6 +106,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     layout2->addItem(new QSpacerItem(0, 6));
 
     QComboBox *combo2 = new QComboBox();
+    combo2->setObjectName(QStringLiteral("optimize")); // MCP form field names
     combo2->addItem(Tr::tr("Maximum Optimization"));
     combo2->addItem(Tr::tr("Medium Optimization"));
     combo2->addItem(Tr::tr("Low Optimization"));
@@ -120,6 +122,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     widget->setVisible(settings->value("OpenMV/" LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
 
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
+    lineEdit->setObjectName(QStringLiteral("options"));
     lineEdit->setPlaceholderText(Tr::tr("--verbosity 2"));
     lineEdit->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING, true);
     QLabel *label = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Core CLI Options</a>").
@@ -132,6 +135,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     layout->addWidget(lineEdit);
     layout->addItem(new QSpacerItem(0, 6));
     Utils::FancyLineEdit *lineEdit2 = new Utils::FancyLineEdit();
+    lineEdit2->setObjectName(QStringLiteral("neuralArtOptions"));
     lineEdit2->setPlaceholderText(Tr::tr("--mapping-recap"));
     lineEdit2->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN, true);
     QLabel *label2 = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Neural-ART CLI Options</a>").
@@ -151,6 +155,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     widget2->setLayout(layout3);
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
+    checkBox2->setObjectName(QStringLiteral("advanced"));
     checkBox2->setChecked(settings->value("OpenMV/" LAST_STEDGEAI_COMPILIER_ADVANCED_STATE, false).toBool());
     layout3->addWidget(checkBox2);
 
@@ -166,7 +171,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = OmvUi::exec(dialog2) == QDialog::Accepted;
+    bool ok = OmvUi::exec(dialog2, OMV_UI_SITE("stedgeai.options")) == QDialog::Accepted;
 
     if (!ok)
     {

@@ -49,6 +49,7 @@
 #define LAST_VELA_COMPILIER_OPTIONS_STRING "LastVelaCompilierOptionsString"
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -77,6 +78,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     layout2->addItem(new QSpacerItem(0, 6));
 
     QComboBox *combo2 = new QComboBox();
+    combo2->setObjectName(QStringLiteral("optimize")); // MCP form field names
     combo2->addItem(Tr::tr("Optimize for Performance"));
     combo2->addItem(Tr::tr("Optimize for Size"));
     combo2->setCurrentIndex(settings->value("OpenMV/" LAST_VELA_COMPILIER_OPTIMIZE_STATE, 0).toInt());
@@ -90,6 +92,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     widget->setVisible(settings->value("OpenMV/" LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
 
     Utils::FancyLineEdit *lineEdit = new Utils::FancyLineEdit();
+    lineEdit->setObjectName(QStringLiteral("options"));
     lineEdit->setPlaceholderText(Tr::tr("--verbose-progress"));
     lineEdit->setHistoryCompleter(LAST_VELA_COMPILIER_OPTIONS_STRING, true);
     QLabel *label = new QLabel(Tr::tr("<a href=\"https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md\">Vela Compilier CLI Options</a>"));
@@ -108,6 +111,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
     widget2->setLayout(layout3);
 
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Advanced"));
+    checkBox2->setObjectName(QStringLiteral("advanced"));
     checkBox2->setChecked(settings->value("OpenMV/" LAST_VELA_COMPILIER_ADVANCED_STATE, false).toBool());
     layout3->addWidget(checkBox2);
 
@@ -123,7 +127,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         QTimer::singleShot(0, dialog2, [dialog2] { dialog2->adjustSize(); });
     });
 
-    bool ok = OmvUi::exec(dialog2) == QDialog::Accepted;
+    bool ok = OmvUi::exec(dialog2, OMV_UI_SITE("vela.options")) == QDialog::Accepted;
 
     if (!ok)
     {
