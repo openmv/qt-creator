@@ -800,6 +800,10 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
 
 void OpenMVPlugin::extensionsInitialized()
 {
+    // MCP tools first: the registry buffers them, so this works whether or not
+    // the mcpserver plugin (which replays the registry) has initialized yet.
+    registerMcpTools();
+
     if(!m_viewerMode)
     {
         connect(Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), &QAction::triggered, this, [this] {
@@ -2166,7 +2170,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(m_connectAction, &QAction::triggered, this, [this] {
         if((m_autoUpdate.isEmpty()) && (!m_autoErase)) connectClicked();
         else if(m_autoUpdate == QStringLiteral("release")) connectClicked(true, QString(), m_autoErase);
-        else if(m_autoUpdate == QStringLiteral("developement")) connectClicked(true, QString(), m_autoErase, false, true);
+        else if(m_autoUpdate == QStringLiteral("development")) connectClicked(true, QString(), m_autoErase, false, true);
         else if(QFileInfo(m_autoUpdate).isFile()) connectClicked(true, m_autoUpdate, m_autoErase);
         else if(m_autoErase) connectClicked(true, QString(), true, true);
     });

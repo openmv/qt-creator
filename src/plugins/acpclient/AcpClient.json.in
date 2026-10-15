@@ -4,7 +4,7 @@
     "Name" : "AcpClient",
     "Version" : "${IDE_VERSION}",
     "CompatVersion" : "${IDE_VERSION_COMPAT}",
-    "DisabledByDefault" : true,
+    "DisabledByDefault" : false,
     "SoftLoadable" : true,
     "VendorId" : "theqtcompany",
     "Vendor" : "The Qt Company Ltd",

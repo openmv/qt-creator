@@ -507,6 +507,10 @@ public slots: // private
     void editRomfsClicked(bool fromConnect = false, bool newRomfs = false);
     void resetRomfsClicked();
     void installTheLatestDevelopmentRelease();
+    // Registers the OpenMV MCP tools (mcp/openmvpluginmcp.cpp). Called once from
+    // extensionsInitialized(); the registry buffers them until the MCP server plugin
+    // (if loaded) picks them up, so load order does not matter.
+    void registerMcpTools();
     void connectClicked(bool forceBootloader = false,
                         QString forceFirmwarePath = QString(),
                         bool forceFlashFSErase = false,

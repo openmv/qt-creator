@@ -32,6 +32,8 @@
 #include "openmvtr.h"
 #include "openmvpluginconnect.h"
 
+#include "mcp/omvui.h"
+
 namespace OpenMV {
 namespace Internal {
 
@@ -152,7 +154,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
         if(!dfuDevicePresent())
         {
-            QProgressDialog dialog(Tr::tr("Reconnect your OpenMV Cam..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
+            OmvUi::Progress dialog(Tr::tr("Reconnect your OpenMV Cam..."), Tr::tr("Cancel"), 0, 0, Core::ICore::dialogParent(),
                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::CustomizeWindowHint |
                 (Utils::HostOsInfo::isLinuxHost() ? Qt::WindowDoesNotAcceptFocus : Qt::WindowType(0)));
             dialog.setWindowModality(Qt::ApplicationModal);
@@ -282,7 +284,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
         if(!foundMatch)
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No DFU settings for the selected board type!") + QString(QStringLiteral("\n\nVID: %1, PID: %2")).arg(m_boardVID).arg(m_boardPID));
 
@@ -291,7 +293,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
         if (binProgramCommands.isEmpty() && QFileInfo(firmwarePath).exists())
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 dfuInterfaceErrorText(matchedBoard, firmwarePathFileName));
 
@@ -413,7 +415,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         {
             QStringList dfuDeviceVidPidList = selectedDfuDeviceVidPid.split(QLatin1Char(':'));
 
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("No DFU settings for the selected device!") + QString(QStringLiteral("\n\nVID: %1, PID: %2"))
                                   .arg(dfuDeviceVidPidList.first().toInt(nullptr, 16))
@@ -424,7 +426,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
         if (binProgramCommands.isEmpty() && QFileInfo(firmwarePath).exists())
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 dfuInterfaceErrorText(matchedBoard, firmwarePathFileName));
 
@@ -486,13 +488,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
                         // than leave it sitting in DFU.
                         detachAndReset(dfuDeviceVidPid);
 
-                        QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("Timeout Error!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                        box.setDefaultButton(QMessageBox::Ok);
-                        box.setEscapeButton(QMessageBox::Cancel);
-                        box.exec();
+                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("Timeout Error!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                         CONNECT_END();
                     }
@@ -504,7 +500,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                 if(justEraseFlashFs)
                 {
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         viewerModeFirmwareText(QString(QStringLiteral("%1%2%3%4")).arg(Tr::tr("Onboard Data Flash Erased!\n\n"))
                         .arg(Tr::tr("Your OpenMV Cam will start running its built-in self-test if no sd card is attached... this may take a while.\n\n"))
@@ -517,7 +513,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             }
             else
             {
-                QMessageBox::critical(Core::ICore::dialogParent(),
+                OmvUi::critical(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -526,7 +522,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         }
         else
         {
-            QMessageBox::critical(Core::ICore::dialogParent(),
+            OmvUi::critical(Core::ICore::dialogParent(),
                 Tr::tr("Connect"),
                 Tr::tr("Error: %L1!").arg(file.errorString()));
 
@@ -569,13 +565,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                 if((!downloadFirmwareWasCanceled()) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
-                    QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS read failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                    box.setDefaultButton(QMessageBox::Ok);
-                    box.setEscapeButton(QMessageBox::Cancel);
-                    box.exec();
+                    OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU ROMFS read failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
                 }
             }
 
@@ -609,13 +599,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                     if((!downloadFirmwareWasCanceled()) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
-                        QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU ROMFS write failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                        box.setDefaultButton(QMessageBox::Ok);
-                        box.setEscapeButton(QMessageBox::Cancel);
-                        box.exec();
+                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU ROMFS write failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
                     }
 
                     CONNECT_END();
@@ -650,13 +634,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                     if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                     {
-                        QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                        box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                        box.setDefaultButton(QMessageBox::Ok);
-                        box.setEscapeButton(QMessageBox::Cancel);
-                        box.exec();
+                        OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                         CONNECT_END();
                     }
@@ -676,13 +654,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                 if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {
-                    QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                        Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                    box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                    box.setDefaultButton(QMessageBox::Ok);
-                    box.setEscapeButton(QMessageBox::Cancel);
-                    box.exec();
+                    OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                     CONNECT_END();
                 }
@@ -693,7 +665,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
                 if((i + 1) == j)
                 {
-                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                    if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
                         Tr::tr("Connect"),
                         viewerModeFirmwareText(Tr::tr("DFU firmware update complete!\n\n") +
                         Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +
@@ -717,13 +689,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
             if(((i + 1) != j) && (process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
             {
-                QMessageBox box(QMessageBox::Critical, Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), QMessageBox::Ok, Core::ICore::dialogParent(),
-                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
-                box.setDetailedText(command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
-                box.setDefaultButton(QMessageBox::Ok);
-                box.setEscapeButton(QMessageBox::Cancel);
-                box.exec();
+                OmvUi::detailedBox(QMessageBox::Critical, Core::ICore::dialogParent(), Tr::tr("Connect"), Tr::tr("DFU firmware update failed!"), command + QStringLiteral("\n\n") + process.stdOut() + QStringLiteral("\n") + process.stdErr());
 
                 CONNECT_END();
             }
@@ -734,7 +700,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
 
             if((i + 1) == j)
             {
-                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) QMessageBox::information(Core::ICore::dialogParent(),
+                if((m_autoUpdate.isEmpty()) && (!m_autoErase)) OmvUi::information(Core::ICore::dialogParent(),
                     Tr::tr("Connect"),
                     viewerModeFirmwareText(Tr::tr("DFU firmware update complete!\n\n") +
                     Tr::tr("Click the Ok button after your OpenMV Cam has enumerated and finished running its built-in self test (blue led blinking - this takes a while).") +

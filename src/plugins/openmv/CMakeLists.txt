@@ -133,6 +133,20 @@ extend_qtc_plugin(OpenMV
     zlib/zutil.c
 )
 
+# MCP tool surface. OmvUi is the drop-in replacement for the QMessageBox /
+# QInputDialog / QFileDialog / QProgressDialog call sites: identical signatures,
+# interactive behaviour unchanged, but inside an MCP tool call (McpUi::Scope) it
+# returns structured results to the agent instead of blocking on a modal.
+# McpServerLib always builds (src/libs/mcp), so no CONDITION is needed; the
+# tools sit unused if the mcpserver plugin is not loaded.
+extend_qtc_plugin(OpenMV
+  SOURCES
+    mcp/omvmcpcontext.cpp mcp/omvmcpcontext.h
+    mcp/omvui.cpp mcp/omvui.h
+    mcp/openmvpluginmcp.cpp
+  DEPENDS McpServerLib
+)
+
 if (APPLE)
     target_link_libraries(OpenMV PRIVATE
         "-framework IOKit"
