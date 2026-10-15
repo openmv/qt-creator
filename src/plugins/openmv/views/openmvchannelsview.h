@@ -108,6 +108,7 @@ public:
     // The clipped, eased range the adaptive curves work from.
     double rangeLow() const { return m_rangeLow; }
     double rangeHigh() const { return m_rangeHigh; }
+    QJsonObject describe(bool includeData) const; // size, ranges and (optionally) the values, for MCP
 
 protected:
 
@@ -215,6 +216,7 @@ signals:
 
 public:
     bool spectrum() const { return m_spectrum; }
+    QJsonObject describe(bool includeData, int maxSamples) const; // series, ranges and (optionally) the newest samples, for MCP
 
 protected:
 
@@ -276,6 +278,7 @@ private:
     bool m_following = true; // auto-scroll until the user pans or zooms
     double m_lastT = qQNaN();
     QByteArray m_lastData;
+    QString m_typecode;
     QStringList m_seriesNames;
     QString m_title;
     QString m_settingsKey;
@@ -375,6 +378,17 @@ public slots:
     // The connected board, named in the files a recording writes: Edge
     // Impulse groups samples by the device they came off.
     void setDevice(const QString &type, const QString &id);
+
+public:
+
+    // Everything the pane shows, as JSON: one entry per record with its
+    // channel, name, widget type, current value / control state and, for
+    // waveform and depth rows, the newest data. For MCP.
+    QJsonArray snapshot(bool includeData, int maxSamples) const;
+
+    // Stage a control write as if the user had changed it. False when the
+    // pane is frozen (no script running) or no such control exists.
+    bool write(const QString &channelName, const QString &recordName, const QJsonValue &value);
 
 signals:
 

@@ -2526,6 +2526,7 @@ void OpenMVChannelWaveform::setData(const QByteArray &data, const QString &typec
                                     int samples, int series, double min, double max,
                                     double period, double t, const QStringList &names)
 {
+    m_typecode = typecode;
     if(m_paused)
     {
         return;
@@ -4367,6 +4368,133 @@ void OpenMVChannelsView::stageWrite(const QString &channelName, const QString &r
     m_pendingWrites[controlId] = qMakePair(value, QDateTime::currentMSecsSinceEpoch() + 3000);
 
     emit writeChannel(channelName, encodeWrite(recordName, value));
+}
+
+// --- MCP accessors -----------------------------------------------------------
+
+QJsonObject OpenMVChannelDepth::describe(bool includeData) const
+{
+    QJsonObject o{
+        {QStringLiteral("width"), m_width},
+        {QStringLiteral("height"), m_height},
+        {QStringLiteral("min"), m_min},
+        {QStringLiteral("max"), m_max},
+        {QStringLiteral("frameMin"), m_frameMin},
+        {QStringLiteral("frameMax"), m_frameMax},
+        {QStringLiteral("frameMean"), m_frameMean},
+        {QStringLiteral("paused"), m_paused}};
+
+    if(includeData)
+    {
+        QJsonArray values;
+        for(float v : m_values) values.append(double(v));
+        o.insert(QStringLiteral("values"), values); // row-major, width x height
+    }
+
+    return o;
+}
+
+QJsonObject OpenMVChannelWaveform::describe(bool includeData, int maxSamples) const
+{
+    QJsonObject o{
+        {QStringLiteral("series"), QJsonArray::fromStringList(m_seriesNames)},
+        {QStringLiteral("seriesCount"), m_seriesCount},
+        {QStringLiteral("samplesPerChunk"), m_samplesPerChunk},
+        {QStringLiteral("min"), m_min},
+        {QStringLiteral("max"), m_max},
+        {QStringLiteral("period"), m_period},
+        {QStringLiteral("typecode"), m_typecode},
+        {QStringLiteral("end"), m_end},
+        {QStringLiteral("spectrum"), m_spectrum},
+        {QStringLiteral("paused"), m_paused}};
+
+    if(includeData && !m_lastData.isEmpty())
+    {
+        // The newest chunk, interleaved by series as the camera sent it; cut
+        // down to the last `maxSamples` samples per series when asked.
+        const int count = qMax(1, m_seriesCount);
+        QVector<float> decoded = decodeSamples(m_lastData, m_typecode, m_samplesPerChunk * count);
+        const int per = count ? (decoded.size() / count) : 0;
+        const int keep = (maxSamples > 0) ? qMin(per, maxSamples) : per;
+
+        QJsonArray chunk;
+        for(int s = 0; s < count; s++)
+        {
+            QJsonArray samples;
+            for(int i = per - keep; i < per; i++) samples.append(double(decoded.at((i * count) + s)));
+            chunk.append(samples);
+        }
+
+        o.insert(QStringLiteral("samples"), chunk); // one array per series
+        o.insert(QStringLiteral("samplesReturned"), keep);
+    }
+
+    return o;
+}
+
+QJsonArray OpenMVChannelsView::snapshot(bool includeData, int maxSamples) const
+{
+    QJsonArray a;
+
+    for(const Record &r : m_records)
+    {
+        QJsonObject o{
+            {QStringLiteral("channel"), r.channelName},
+            {QStringLiteral("channelId"), r.channelId},
+            {QStringLiteral("name"), r.name},
+            {QStringLiteral("widget"), r.wtype},
+            {QStringLiteral("unit"), r.rec.value(qint64(CBOR_KEY_U)).toString()},
+            {QStringLiteral("writable"), bool(r.toggle || r.slider || r.spinbox || r.radio || r.lineedit || r.select || r.pushbutton)}};
+
+        const QCborValue value = recordValue(r.rec);
+        if(!value.isUndefined() && !value.isByteArray()) o.insert(QStringLiteral("value"), value.toJsonValue());
+        if(r.value) o.insert(QStringLiteral("display"), r.value->text());
+
+        if(r.toggle) o.insert(QStringLiteral("control"), r.toggle->isChecked());
+        else if(r.slider) o.insert(QStringLiteral("control"), r.sliderMin + (r.slider->value() * r.sliderStep));
+        else if(r.spinbox) o.insert(QStringLiteral("control"), r.spinbox->value());
+        else if(r.radio && r.radio->checkedButton()) o.insert(QStringLiteral("control"), r.radio->checkedButton()->text());
+        else if(r.lineedit) o.insert(QStringLiteral("control"), r.lineedit->text());
+        else if(r.select) o.insert(QStringLiteral("control"), r.select->currentText());
+
+        if(r.select)
+        {
+            QJsonArray options;
+            for(int i = 0; i < r.select->count(); i++) options.append(r.select->itemText(i));
+            o.insert(QStringLiteral("options"), options);
+        }
+
+        if(r.slider)
+        {
+            o.insert(QStringLiteral("min"), r.sliderMin);
+            o.insert(QStringLiteral("max"), r.sliderMin + ((r.slider->maximum() - r.slider->minimum()) * r.sliderStep));
+            o.insert(QStringLiteral("step"), r.sliderStep);
+        }
+
+        if(r.waveform) o.insert(QStringLiteral("waveform"), r.waveform->describe(includeData, maxSamples));
+        if(r.depth) o.insert(QStringLiteral("depth"), r.depth->describe(includeData));
+        if(r.recorder) o.insert(QStringLiteral("recording"), true);
+
+        a.append(o);
+    }
+
+    return a;
+}
+
+bool OpenMVChannelsView::write(const QString &channelName, const QString &recordName, const QJsonValue &value)
+{
+    if(m_frozen) return false;
+
+    for(const Record &r : m_records)
+    {
+        if((r.channelName == channelName) && (r.name == recordName))
+        {
+            stageWrite(channelName, recordName, QCborValue::fromJsonValue(value));
+            return true;
+        }
+    }
+
+    return false;
 }
 
 } // namespace Internal

@@ -819,6 +819,10 @@ private:
     QByteArray m_mcpTerminalLog;
     qint64 m_mcpTerminalDropped = 0;
     QString m_lastScriptError;
+    // MCP: what the Frame Buffer title shows, kept for openmv_framebuffer_get.
+    QSize m_mcpFbResolution;
+    QRect m_mcpFbRoi;
+    int m_mcpFbFocus = 0;
     bool m_useGetState;
     int m_frameSizeDumpSpacing;
     int m_getScriptRunningSpacing;

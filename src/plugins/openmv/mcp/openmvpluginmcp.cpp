@@ -534,6 +534,9 @@ void OpenMVPlugin::registerMcpTools()
         in.addProperty(QStringLiteral("text"), QJsonObject{
             {QStringLiteral("type"), QStringLiteral("string")},
             {QStringLiteral("description"), QStringLiteral("MicroPython source to run on the camera. Omitted: runs the script in the current editor, exactly like the Start button.")}});
+        in.addProperty(QStringLiteral("waitMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("After the camera accepts the script, keep collecting its output for this long and return it (`output`, `lastError`, `running`). Default 0: return at once and use openmv_terminal_read.")}});
         addCallControls(in);
 
         ToolRegistry::registerTool(
@@ -557,6 +560,29 @@ void OpenMVPlugin::registerMcpTools()
                 call.tool = toolInterface;
                 m_lastScriptError = QString();
 
+                // With `waitMs`, give the script that long to print, then
+                // return everything it wrote since the run started.
+                const qint64 cursor0 = m_mcpTerminalDropped + m_mcpTerminalLog.size();
+                const int waitMs = qBound(0, args.value(QStringLiteral("waitMs")).toInt(0), 600000);
+
+                auto runOutcome = [this, cursor0, waitMs](QJsonObject out) -> QJsonObject {
+                    if(waitMs > 0)
+                    {
+                        QEventLoop loop;
+                        QTimer::singleShot(waitMs, &loop, &QEventLoop::quit);
+                        loop.exec();
+
+                        const qint64 start = qMax(cursor0, m_mcpTerminalDropped);
+                        out.insert(QStringLiteral("output"), QString::fromUtf8(m_mcpTerminalLog.mid(int(start - m_mcpTerminalDropped))));
+                        out.insert(QStringLiteral("outputTruncated"), start != cursor0);
+                        out.insert(QStringLiteral("lastError"), m_lastScriptError);
+                        out.insert(QStringLiteral("running"), m_connected && m_running);
+                    }
+
+                    out.insert(QStringLiteral("terminalCursor"), m_mcpTerminalDropped + m_mcpTerminalLog.size());
+                    return out;
+                };
+
                 if(args.contains(QStringLiteral("text")))
                 {
                     OMVMCP::Scope scope(call);
@@ -567,7 +593,7 @@ void OpenMVPlugin::registerMcpTools()
                     QJsonObject out = outcome(call);
                     if(!done) return errResult(QStringLiteral("timeout"), QStringLiteral("The camera did not acknowledge the script."), out);
                     if(timedOut) return errResult(QStringLiteral("camera_timeout"), QStringLiteral("The camera timed out while receiving the script."), out);
-                    return okResult(out);
+                    return okResult(runOutcome(out));
                 }
 
                 {
@@ -583,7 +609,7 @@ void OpenMVPlugin::registerMcpTools()
                 QJsonObject out = outcome(call);
                 if(call.expired() && m_working) return errResult(QStringLiteral("timeout"), QStringLiteral("Start did not finish within the deadline."), out);
                 if(call.hasErrors()) return errResult(QStringLiteral("failed"), QStringLiteral("Start reported an error; see errors."), out);
-                return okResult(out);
+                return okResult(runOutcome(out));
                 };
 
                 toolInterface.finish(body());
@@ -659,7 +685,138 @@ void OpenMVPlugin::registerMcpTools()
 
                 QJsonObject out;
                 const ImageContent image = imageContent(m_frameBuffer->pixmap(), imageArgs(params.argumentsAsObject()), &out);
+
+                // What the Frame Buffer title shows: the camera's resolution,
+                // the user's selection rectangle, the focus metric and frame rates.
+                out.insert(QStringLiteral("resolution"), QJsonObject{{QStringLiteral("width"), m_mcpFbResolution.width()}, {QStringLiteral("height"), m_mcpFbResolution.height()}});
+                if(m_mcpFbRoi.isValid()) out.insert(QStringLiteral("roi"), QJsonObject{{QStringLiteral("x"), m_mcpFbRoi.x()}, {QStringLiteral("y"), m_mcpFbRoi.y()}, {QStringLiteral("width"), m_mcpFbRoi.width()}, {QStringLiteral("height"), m_mcpFbRoi.height()}});
+                out.insert(QStringLiteral("focus"), m_mcpFbFocus);
+                if(!m_frameFormatName.isEmpty()) out.insert(QStringLiteral("format"), m_frameFormatName);
+                out.insert(QStringLiteral("fpsIde"), m_fpsIde);
+                if(m_fpsCameraValid) out.insert(QStringLiteral("fpsCamera"), m_fpsCamera);
+
                 return okResult(out).addContent(image);
+            });
+    }
+
+    // ---- openmv_histogram_get -----------------------------------------------
+    // The numbers behind the Histogram pane, computed on demand from the
+    // current frame (the pane itself only computes while visible).
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("colorSpace"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("enum"), QJsonArray{QStringLiteral("rgb"), QStringLiteral("grayscale"), QStringLiteral("lab"), QStringLiteral("yuv")}},
+            {QStringLiteral("description"), QStringLiteral("Colour space to analyse (default: the one the Histogram pane is set to).")}});
+        in.addProperty(QStringLiteral("bins"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Also return each channel's bins as [value, count] pairs (default false: statistics only).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_histogram_get"))
+                .title(QStringLiteral("Get the frame buffer histogram"))
+                .description(QStringLiteral("Per-channel statistics (mean, median, mode, standard deviation, min, max, quartiles) of the current frame in the chosen colour space, as the Histogram pane computes them, with the bins on request. Useful for picking colour-tracking thresholds."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_frameBuffer || !m_frameBuffer->pixmapValid()) return errResult(QStringLiteral("not_available"), QStringLiteral("No frame has been received from the camera."));
+
+                const QJsonObject args = params.argumentsAsObject();
+                const QStringList spaces{QStringLiteral("rgb"), QStringLiteral("grayscale"), QStringLiteral("lab"), QStringLiteral("yuv")};
+                int colorSpace = m_histogram ? m_histogram->colorSpace() : 0;
+                if(args.contains(QStringLiteral("colorSpace"))) colorSpace = qMax(0, spaces.indexOf(args.value(QStringLiteral("colorSpace")).toString()));
+                const bool bins = args.value(QStringLiteral("bins")).toBool();
+
+                const QImage image = m_frameBuffer->pixmap().scaledToWidth(160, Qt::SmoothTransformation).toImage();
+                QJsonArray channels;
+
+                for(int channel : OpenMVPluginHistogram::channels(colorSpace))
+                {
+                    OpenMVPluginHistogram::Stats s;
+                    const QVector<long long> counts = OpenMVPluginHistogram::histogram(image, channel, &s);
+
+                    QJsonObject o{
+                        {QStringLiteral("name"), OpenMVPluginHistogram::channelName(channel)},
+                        {QStringLiteral("mean"), s.mean}, {QStringLiteral("median"), s.median}, {QStringLiteral("mode"), s.mode},
+                        {QStringLiteral("standardDeviation"), s.standardDeviation}, {QStringLiteral("min"), s.min}, {QStringLiteral("max"), s.max},
+                        {QStringLiteral("lowerQuartile"), s.lowerQuartile}, {QStringLiteral("upperQuartile"), s.upperQuartile}};
+
+                    if(bins)
+                    {
+                        QJsonArray pairs;
+                        for(int i = 0; i < counts.size(); i++) pairs.append(QJsonArray{OpenMVPluginHistogram::binValue(i, channel), double(counts.at(i))});
+                        o.insert(QStringLiteral("bins"), pairs);
+                    }
+
+                    channels.append(o);
+                }
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("colorSpace"), spaces.at(colorSpace)},
+                    {QStringLiteral("sampledWidth"), image.width()},
+                    {QStringLiteral("sampledHeight"), image.height()},
+                    {QStringLiteral("channels"), channels}});
+            });
+    }
+
+    // ---- openmv_channels_get / openmv_channel_write -------------------------
+    // The script's published channels (the Channels pane): values, controls,
+    // waveform chunks and depth maps, and writing a control back.
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("includeData"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Include waveform samples and depth-map values (default false: metadata, values and control states only).")}});
+        in.addProperty(QStringLiteral("maxSamples"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("At most this many newest samples per waveform series (default 256; 0 = the whole newest chunk).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_channels_get"))
+                .title(QStringLiteral("Read the script's channels"))
+                .description(QStringLiteral("Everything the Channels pane shows for the running script: each published record's channel, name, unit, current value, widget type and control state (sliders, toggles, selects...), plus waveform series and depth maps with their data on request."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_channelsView) return errResult(QStringLiteral("not_available"), QStringLiteral("The Channels pane does not exist yet."));
+
+                const QJsonObject args = params.argumentsAsObject();
+                const QJsonArray records = m_channelsView->snapshot(args.value(QStringLiteral("includeData")).toBool(),
+                                                                    qBound(0, args.value(QStringLiteral("maxSamples")).toInt(256), 1 << 20));
+
+                return okResult(QJsonObject{{QStringLiteral("connected"), m_connected}, {QStringLiteral("running"), m_connected && m_running}, {QStringLiteral("records"), records}});
+            });
+
+        Tool::InputSchema wr;
+        wr.addProperty(QStringLiteral("channel"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("The channel name (as in openmv_channels_get).")}});
+        wr.addProperty(QStringLiteral("record"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("The record (control) name within the channel.")}});
+        wr.addProperty(QStringLiteral("value"), QJsonObject{{QStringLiteral("description"), QStringLiteral("The new value: boolean for toggles, number for sliders/spin boxes, string for selects/radios/line edits, true for push buttons.")}});
+        wr.addRequired(QStringLiteral("channel")).addRequired(QStringLiteral("record")).addRequired(QStringLiteral("value"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_channel_write"))
+                .title(QStringLiteral("Write a script channel control"))
+                .description(QStringLiteral("Changes a control the running script published (exactly like moving the slider or toggling the switch in the Channels pane); the script sees the new value on its next read."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(wr),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_channelsView) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
+                const QJsonObject args = params.argumentsAsObject();
+                const QString channel = args.value(QStringLiteral("channel")).toString();
+                const QString record = args.value(QStringLiteral("record")).toString();
+
+                if(!m_channelsView->write(channel, record, args.value(QStringLiteral("value"))))
+                {
+                    return errResult(QStringLiteral("not_available"), QStringLiteral("No writable control \"%1/%2\" is published by a running script.").arg(channel, record));
+                }
+
+                return okResult(QJsonObject{{QStringLiteral("channel"), channel}, {QStringLiteral("record"), record}, {QStringLiteral("value"), args.value(QStringLiteral("value"))}});
             });
     }
 

@@ -2584,6 +2584,9 @@ void OpenMVPlugin::extensionsInitialized()
     });
 
     connect(m_frameBuffer, &OpenMVPluginFB::resolutionAndROIUpdate, this, [this, frameBufferLabel] (const QSize &res, const QRect &roi, int focus) {
+        m_mcpFbResolution = res;
+        m_mcpFbRoi = roi;
+        m_mcpFbFocus = focus;
         // The actual format of the arriving frames (from the V2 protocol)
         // rides in the title next to the resolution.
         QString name = m_frameFormatName.isEmpty()

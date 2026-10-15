@@ -303,9 +303,8 @@ static void addSmoothedData(QCPGraph *graph, const QVector<double> &xs, const QV
     }
 }
 
-void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
+QVector<long long> OpenMVPluginHistogram::histogram(const QImage &image, int channel, Stats *stats)
 {
-    QImage image = m_pixmap.toImage();
     QVector<long long> vector;
 
     switch(channel)
@@ -464,14 +463,7 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
 
     ///////////////////////////////////////////////////////////////////////////
 
-    m_mean = 0;
-    m_median = 0;
-    m_mode = 0;
-    m_standardDeviation = 0;
-    m_min = 0;
-    m_max = 0;
-    m_lowerQuartile = 0;
-    m_upperQuartile = 0;
+    Stats s;
 
     long long sum = 0;
     long long avg = 0;
@@ -488,22 +480,23 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
         if(vector[i] > mode_count)
         {
             mode_count = vector[i];
-            m_mode = value;
+            s.mode = value;
         }
 
         if(vector[i] && (!min_flag))
         {
             min_flag = true;
-            m_min = value;
+            s.min = value;
         }
 
         if(vector[i])
         {
-            m_max = value;
+            s.max = value;
         }
     }
 
-    m_mean = sum ? round(avg / double(sum)) : 0;
+    s.mean = sum ? round(avg / double(sum)) : 0;
+    s.modeCount = mode_count;
 
     long long lower_q = ((sum * 1) + 3) / 4; // 1/4th
     long long median = (sum + 1) / 2; // 1/2th
@@ -516,27 +509,81 @@ void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
     {
         int value = getValue(i, channel);
 
-        st_dev_count += vector[i] * (value - m_mean) * (value - m_mean);
+        st_dev_count += vector[i] * (value - s.mean) * (value - s.mean);
 
         if((median_count < lower_q) && (lower_q <= (median_count + vector[i])))
         {
-            m_lowerQuartile = value;
+            s.lowerQuartile = value;
         }
 
         if((median_count < median) && (median <= (median_count + vector[i])))
         {
-            m_median = value;
+            s.median = value;
         }
 
         if((median_count < upper_q) && (upper_q <= (median_count + vector[i])))
         {
-            m_upperQuartile = value;
+            s.upperQuartile = value;
         }
 
         median_count += vector[i];
     }
 
-    m_standardDeviation = sum ? round(sqrt(st_dev_count / double(sum))) : 0;
+    s.standardDeviation = sum ? round(sqrt(st_dev_count / double(sum))) : 0;
+
+    if(stats) *stats = s;
+    return vector;
+}
+
+int OpenMVPluginHistogram::binValue(int bin, int channel)
+{
+    return getValue(bin, channel);
+}
+
+QList<int> OpenMVPluginHistogram::channels(int colorSpace)
+{
+    switch(colorSpace)
+    {
+        case GRAYSCALE_COLOR_SPACE: return {GRAYSCALE_COLOR_SPACE_Y};
+        case LAB_COLOR_SPACE: return {LAB_COLOR_SPACE_L, LAB_COLOR_SPACE_A, LAB_COLOR_SPACE_B};
+        case YUV_COLOR_SPACE: return {YUV_COLOR_SPACE_Y, YUV_COLOR_SPACE_U, YUV_COLOR_SPACE_V};
+        default: return {RGB_COLOR_SPACE_R, RGB_COLOR_SPACE_G, RGB_COLOR_SPACE_B};
+    }
+}
+
+QString OpenMVPluginHistogram::channelName(int channel)
+{
+    switch(channel)
+    {
+        case RGB_COLOR_SPACE_R: return QStringLiteral("R");
+        case RGB_COLOR_SPACE_G: return QStringLiteral("G");
+        case RGB_COLOR_SPACE_B: return QStringLiteral("B");
+        case GRAYSCALE_COLOR_SPACE_Y: return QStringLiteral("Y");
+        case LAB_COLOR_SPACE_L: return QStringLiteral("L");
+        case LAB_COLOR_SPACE_A: return QStringLiteral("A");
+        case LAB_COLOR_SPACE_B: return QStringLiteral("B");
+        case YUV_COLOR_SPACE_Y: return QStringLiteral("Y");
+        case YUV_COLOR_SPACE_U: return QStringLiteral("U");
+        case YUV_COLOR_SPACE_V: return QStringLiteral("V");
+        default: return QString();
+    }
+}
+
+void OpenMVPluginHistogram::updatePlot(QCPGraph *graph, int channel)
+{
+    Stats stats;
+    QVector<long long> vector = histogram(m_pixmap.toImage(), channel, &stats);
+
+    m_mean = stats.mean;
+    m_median = stats.median;
+    m_mode = stats.mode;
+    m_standardDeviation = stats.standardDeviation;
+    m_min = stats.min;
+    m_max = stats.max;
+    m_lowerQuartile = stats.lowerQuartile;
+    m_upperQuartile = stats.upperQuartile;
+
+    const long long mode_count = stats.modeCount;
 
     ///////////////////////////////////////////////////////////////////////////
 

@@ -59,6 +59,20 @@ public:
     explicit OpenMVPluginHistogram(QWidget *parent = Q_NULLPTR);
     ~OpenMVPluginHistogram();
 
+    struct Stats {
+        int mean = 0, median = 0, mode = 0, standardDeviation = 0, min = 0, max = 0, lowerQuartile = 0, upperQuartile = 0;
+        long long modeCount = 0;
+    };
+
+    // The bins and statistics the pane shows for one channel of `image`
+    // (scale the frame to 160 wide first, as pixmapUpdate() does); the
+    // numbers behind the plot for anything that cannot look at it.
+    static QVector<long long> histogram(const QImage &image, int channel, Stats *stats = Q_NULLPTR);
+    static int binValue(int bin, int channel); // the x of a bin (0-255; L 0-100; a/b/u/v -128..127)
+    static QList<int> channels(int colorSpace);
+    static QString channelName(int channel);
+    int colorSpace() const { return m_colorSpace; }
+
 public slots:
 
     void colorSpaceChanged(int colorSpace);
