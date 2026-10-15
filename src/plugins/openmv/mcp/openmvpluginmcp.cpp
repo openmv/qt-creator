@@ -43,6 +43,8 @@
 #include <coreplugin/editormanager/editormanager.h>
 #include <coreplugin/icore.h>
 #include <coreplugin/idocument.h>
+#include <coreplugin/messagemanager.h>
+#include <coreplugin/outputwindow.h>
 #include <mcp/server/toolregistry.h>
 #include <utils/qtcassert.h>
 
@@ -133,6 +135,106 @@ Mcp::Schema::CallToolResult errResult(const QString &code, const QString &messag
     extra.insert(QStringLiteral("ok"), false);
     extra.insert(QStringLiteral("error"), QJsonObject{{QStringLiteral("code"), code}, {QStringLiteral("message"), message}});
     return Mcp::Schema::CallToolResult{}.isError(true).structuredContent(extra);
+}
+
+// --- rich content ------------------------------------------------------------
+// Images go back as MCP image blocks, which the client shows to the model as a
+// picture rather than a base64 string; files as embedded resources.
+
+struct ImageArgs {
+    bool jpeg = false;
+    int quality = 90;
+    int maxWidth = 0;
+};
+
+ImageArgs imageArgs(const QJsonObject &args)
+{
+    ImageArgs a;
+    a.jpeg = args.value(QStringLiteral("format")).toString() == QStringLiteral("jpeg");
+    a.quality = qBound(1, args.value(QStringLiteral("quality")).toInt(90), 100);
+    a.maxWidth = qBound(0, args.value(QStringLiteral("maxWidth")).toInt(0), 8192);
+    return a;
+}
+
+Mcp::Schema::Tool::InputSchema &addImageArgs(Mcp::Schema::Tool::InputSchema &schema)
+{
+    schema.addProperty(QStringLiteral("format"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("string")},
+        {QStringLiteral("enum"), QJsonArray{QStringLiteral("png"), QStringLiteral("jpeg")}},
+        {QStringLiteral("description"), QStringLiteral("Encoding of the returned image (default png; jpeg is much smaller for camera frames).")}});
+    schema.addProperty(QStringLiteral("quality"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("integer")},
+        {QStringLiteral("description"), QStringLiteral("JPEG quality 1-100 (default 90).")}});
+    schema.addProperty(QStringLiteral("maxWidth"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("integer")},
+        {QStringLiteral("description"), QStringLiteral("Downscale so the width is at most this many pixels (default 0: native size). A smaller image costs far fewer tokens.")}});
+    return schema;
+}
+
+// Encodes a pixmap as an image block; `meta` (if given) receives its
+// dimensions, mime type and encoded size.
+Mcp::Schema::ImageContent imageContent(QPixmap pixmap, const ImageArgs &a, QJsonObject *meta = Q_NULLPTR)
+{
+    if((a.maxWidth > 0) && (pixmap.width() > a.maxWidth)) pixmap = pixmap.scaledToWidth(a.maxWidth, Qt::SmoothTransformation);
+
+    QByteArray bytes;
+    QBuffer buffer(&bytes);
+    buffer.open(QIODevice::WriteOnly);
+    pixmap.save(&buffer, a.jpeg ? "JPEG" : "PNG", a.jpeg ? a.quality : -1);
+
+    const QString mime = a.jpeg ? QStringLiteral("image/jpeg") : QStringLiteral("image/png");
+
+    if(meta)
+    {
+        meta->insert(QStringLiteral("width"), pixmap.width());
+        meta->insert(QStringLiteral("height"), pixmap.height());
+        meta->insert(QStringLiteral("mimeType"), mime);
+        meta->insert(QStringLiteral("bytes"), bytes.size());
+    }
+
+    return Mcp::Schema::ImageContent().data(QString::fromLatin1(bytes.toBase64())).mimeType(mime);
+}
+
+// A produced file as an embedded resource (base64 blob) when it is small
+// enough to be worth inlining; `meta` says whether it was.
+const qint64 EMBED_MAX_BYTES = 8 << 20;
+
+std::optional<Mcp::Schema::EmbeddedResource> fileResource(const QString &path, QJsonObject *meta)
+{
+    QFile file(path);
+
+    if(!file.open(QIODevice::ReadOnly) || (file.size() > EMBED_MAX_BYTES))
+    {
+        meta->insert(QStringLiteral("embedded"), false);
+        return std::nullopt;
+    }
+
+    const QByteArray bytes = file.readAll();
+    const QString mime = QMimeDatabase().mimeTypeForFileNameAndData(path, bytes).name();
+    meta->insert(QStringLiteral("embedded"), true);
+    meta->insert(QStringLiteral("bytes"), bytes.size());
+
+    return Mcp::Schema::EmbeddedResource().resource(
+        Mcp::Schema::BlobResourceContents().uri(QUrl::fromLocalFile(path).toString()).mimeType(mime).blob(QString::fromLatin1(bytes.toBase64())));
+}
+
+// okResult() for a tool that produced a file, embedding it on request.
+Mcp::Schema::CallToolResult fileResult(QJsonObject out, const QString &path, bool embed)
+{
+    std::optional<Mcp::Schema::EmbeddedResource> resource;
+    if(embed) resource = fileResource(path, &out);
+
+    Mcp::Schema::CallToolResult result = okResult(out);
+    if(resource) result.addContent(*resource);
+    return result;
+}
+
+Mcp::Schema::Tool::InputSchema &addEmbed(Mcp::Schema::Tool::InputSchema &schema)
+{
+    schema.addProperty(QStringLiteral("embed"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("boolean")},
+        {QStringLiteral("description"), QStringLiteral("Also return the produced file's contents as an embedded resource (files up to 8 MiB). Default false: only the path.")}});
+    return schema;
 }
 
 // Every tool shares these optional controls.
@@ -539,44 +641,146 @@ void OpenMVPlugin::registerMcpTools()
 
     {
         Tool::InputSchema in;
-        in.addProperty(QStringLiteral("format"), QJsonObject{
-            {QStringLiteral("type"), QStringLiteral("string")},
-            {QStringLiteral("enum"), QJsonArray{QStringLiteral("png"), QStringLiteral("jpeg")}},
-            {QStringLiteral("description"), QStringLiteral("Encoding of the returned image (default png).")}});
-        in.addProperty(QStringLiteral("quality"), QJsonObject{
-            {QStringLiteral("type"), QStringLiteral("integer")},
-            {QStringLiteral("description"), QStringLiteral("JPEG quality 1-100 (default 90).")}});
+        addImageArgs(in);
 
         ToolRegistry::registerTool(
             Tool{}
                 .name(QStringLiteral("openmv_framebuffer_get"))
                 .title(QStringLiteral("Get the camera frame buffer"))
-                .description(QStringLiteral("Returns the most recent frame the IDE received from the camera, base64-encoded, with its dimensions. Fails if no frame has been received."))
+                .description(QStringLiteral("Returns the most recent frame the IDE received from the camera as an image, with its dimensions. Fails if no frame has been received."))
                 .annotations(ToolAnnotations{}.readOnlyHint(true))
                 .inputSchema(in)
                 .outputSchema(Tool::OutputSchema{}
                     .addProperty(QStringLiteral("width"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
                     .addProperty(QStringLiteral("height"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}})
-                    .addProperty(QStringLiteral("mimeType"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})
-                    .addProperty(QStringLiteral("base64"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})),
+                    .addProperty(QStringLiteral("mimeType"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}})),
             [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
                 if(!m_frameBuffer || !m_frameBuffer->pixmapValid()) return errResult(QStringLiteral("not_available"), QStringLiteral("No frame has been received from the camera."));
 
+                QJsonObject out;
+                const ImageContent image = imageContent(m_frameBuffer->pixmap(), imageArgs(params.argumentsAsObject()), &out);
+                return okResult(out).addContent(image);
+            });
+    }
+
+    // ---- openmv_framebuffer_capture -----------------------------------------
+    // Several successive frames so the model can see motion / a change over time.
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("frames"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("How many new frames to collect, 1-16 (default 4).")}});
+        in.addProperty(QStringLiteral("intervalMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Minimum time between captured frames in milliseconds (default 0: consecutive frames).")}});
+        addImageArgs(in);
+        in.addProperty(QStringLiteral("deadlineMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Give up after this long if frames stop arriving (default 10000).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_framebuffer_capture"))
+                .title(QStringLiteral("Capture a sequence of camera frames"))
+                .description(QStringLiteral("Waits for new frames from the running script and returns them as a sequence of images with their capture times. Needs a connected camera streaming its frame buffer. Use maxWidth/jpeg to keep the sequence small."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in)
+                .outputSchema(Tool::OutputSchema{}
+                    .addProperty(QStringLiteral("frames"), QJsonObject{{QStringLiteral("type"), QStringLiteral("array")}})
+                    .addRequired(QStringLiteral("frames"))),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_frameBuffer) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
                 const QJsonObject args = params.argumentsAsObject();
-                const bool jpeg = args.value(QStringLiteral("format")).toString() == QStringLiteral("jpeg");
-                const int quality = qBound(1, args.value(QStringLiteral("quality")).toInt(90), 100);
+                const int count = qBound(1, args.value(QStringLiteral("frames")).toInt(4), 16);
+                const int intervalMs = qBound(0, args.value(QStringLiteral("intervalMs")).toInt(0), 60000);
+                const int deadlineMs = qBound(1000, args.value(QStringLiteral("deadlineMs")).toInt(10000), 600000);
+                const ImageArgs a = imageArgs(args);
 
-                const QPixmap pixmap = m_frameBuffer->pixmap();
-                QByteArray bytes;
-                QBuffer buffer(&bytes);
-                buffer.open(QIODevice::WriteOnly);
-                pixmap.save(&buffer, jpeg ? "JPEG" : "PNG", jpeg ? quality : -1);
+                QElapsedTimer wall;
+                wall.start();
 
-                return okResult(QJsonObject{
-                    {QStringLiteral("width"), pixmap.width()},
-                    {QStringLiteral("height"), pixmap.height()},
-                    {QStringLiteral("mimeType"), jpeg ? QStringLiteral("image/jpeg") : QStringLiteral("image/png")},
-                    {QStringLiteral("base64"), QString::fromLatin1(bytes.toBase64())}});
+                QList<ImageContent> images;
+                QJsonArray frames;
+                qint64 last = -1;
+
+                while((images.size() < count) && (wall.elapsed() < deadlineMs))
+                {
+                    if((last >= 0) && (intervalMs > 0))
+                    {
+                        // Space the captures out; frames arriving meanwhile are skipped.
+                        QEventLoop loop;
+                        QTimer::singleShot(qMax<qint64>(0, last + intervalMs - wall.elapsed()), &loop, &QEventLoop::quit);
+                        loop.exec();
+                    }
+
+                    if(!awaitSignal(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, int(deadlineMs - wall.elapsed()))) break;
+
+                    QJsonObject meta;
+                    images.append(imageContent(m_frameBuffer->pixmap(), a, &meta));
+                    last = wall.elapsed();
+                    meta.insert(QStringLiteral("index"), images.size() - 1);
+                    meta.insert(QStringLiteral("timeMs"), last);
+                    frames.append(meta);
+                }
+
+                if(images.isEmpty()) return errResult(QStringLiteral("timeout"), QStringLiteral("No frame arrived from the camera; is a script streaming the frame buffer?"));
+
+                CallToolResult result = okResult(QJsonObject{{QStringLiteral("frames"), frames}, {QStringLiteral("complete"), images.size() == count}});
+                for(const ImageContent &image : std::as_const(images)) result.addContent(image);
+                return result;
+            });
+    }
+
+    // ---- openmv_view_capture ------------------------------------------------
+    // What the user sees: any pane, the terminal or the whole window as an image.
+
+    {
+        const QStringList views{QStringLiteral("frame_buffer"), QStringLiteral("histogram"), QStringLiteral("board_info"), QStringLiteral("memory"),
+                                QStringLiteral("channels"), QStringLiteral("statistics"), QStringLiteral("terminal"), QStringLiteral("main_window")};
+
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("view"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("enum"), QJsonArray::fromStringList(views)},
+            {QStringLiteral("description"), QStringLiteral("Which part of the IDE to capture: a pane as it is currently drawn (hidden panes show their last state), the serial terminal, or the whole main window.")}});
+        in.addRequired(QStringLiteral("view"));
+        addImageArgs(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_view_capture"))
+                .title(QStringLiteral("Capture an IDE view as an image"))
+                .description(QStringLiteral("Renders a pane (frame buffer, histogram, board info, memory, channels, statistics), the serial terminal or the whole main window to an image, exactly as the user sees it."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [this, views](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString view = args.value(QStringLiteral("view")).toString();
+
+                QWidget *widget = Q_NULLPTR;
+                switch(views.indexOf(view))
+                {
+                    case 0: widget = m_frameBuffer; break;
+                    case 1: widget = m_histogram; break;
+                    case 2: widget = m_boardInfoView; break;
+                    case 3: widget = m_memoryView; break;
+                    case 4: widget = m_channelsView; break;
+                    case 5: widget = m_statisticsView; break;
+                    case 6: widget = Core::MessageManager::outputWindow(); break;
+                    case 7: widget = Core::ICore::mainWindow(); break;
+                    default: return errResult(QStringLiteral("invalid_argument"), QStringLiteral("`view` must be one of: %1.").arg(views.join(QStringLiteral(", "))));
+                }
+
+                if(!widget) return errResult(QStringLiteral("not_available"), QStringLiteral("That view does not exist yet."));
+
+                // A pane that was never shown has no useful size; give it one to render at.
+                if((widget->width() < 64) || (widget->height() < 64)) widget->resize(800, 600);
+
+                QJsonObject out{{QStringLiteral("view"), view}, {QStringLiteral("visible"), widget->isVisible()}};
+                const ImageContent image = imageContent(widget->grab(), imageArgs(args), &out);
+                return okResult(out).addContent(image);
             });
     }
 
@@ -1075,6 +1279,7 @@ void OpenMVPlugin::registerMcpTools()
             {QStringLiteral("type"), QStringLiteral("string")},
             {QStringLiteral("description"), QStringLiteral("Board type to compile for when no camera is connected (answers site connect.board_type; the error lists the choices).")}});
         in.addRequired(QStringLiteral("path"));
+        addEmbed(in);
         addCallControls(in);
 
         ToolRegistry::registerTool(
@@ -1124,7 +1329,7 @@ void OpenMVPlugin::registerMcpTools()
 
                 if(noBoard) return errResult(QStringLiteral("needs_input"), QStringLiteral("No board type was chosen; pass `board` (see errors for the choices)."), out);
                 if(outputPath.isEmpty() || call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The conversion did not produce a file; see errors and log."), out);
-                return okResult(out);
+                return fileResult(out, outputPath, args.value(QStringLiteral("embed")).toBool());
                 };
 
                 toolInterface.finish(body());
@@ -1155,6 +1360,7 @@ void OpenMVPlugin::registerMcpTools()
             {QStringLiteral("type"), QStringLiteral("string")},
             {QStringLiteral("description"), QStringLiteral("ROMFS target on boards that offer more than one (answers site romfs.target).")}});
         in.addRequired(QStringLiteral("path"));
+        addEmbed(in);
         addCallControls(in);
 
         ToolRegistry::registerTool(
@@ -1220,7 +1426,7 @@ void OpenMVPlugin::registerMcpTools()
                 if(stage == QStringLiteral("board")) return errResult(QStringLiteral("needs_input"), QStringLiteral("No board type was chosen; pass `board` (see errors for the choices)."), out);
                 if(stage == QStringLiteral("target")) return errResult(QStringLiteral("needs_input"), QStringLiteral("No ROMFS target was chosen; pass `target` (see errors for the choices)."), out);
                 if(outputPath.isEmpty() || call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The conversion did not produce a file; see errors and log."), out);
-                return okResult(out);
+                return fileResult(out, outputPath, args.value(QStringLiteral("embed")).toBool());
                 };
 
                 toolInterface.finish(body());
