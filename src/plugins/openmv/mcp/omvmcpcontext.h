@@ -82,6 +82,7 @@ struct Call {
     QElapsedTimer wall;
     int deadlineMs = 300000;                // wall-clock guard for the whole call
     bool cancelled = false;                 // set by the task-cancel path
+    std::function<void(const QString &)> progress; // every log line, for streaming progress to the client
 
     bool expired() const { return wall.isValid() && (wall.elapsed() > deadlineMs); }
     int remainingMs() const { return wall.isValid() ? qMax(0, deadlineMs - int(wall.elapsed())) : deadlineMs; }
@@ -108,6 +109,21 @@ public:
 
 private:
     Call *m_previous;
+};
+
+// RAII: unless `persist` is set, every OpenMV setting a flow changed while the
+// guard lived is rolled back when it dies. Flows remember "last used" paths,
+// options and "don't ask again" choices as they go; those are a person's
+// preferences, not an agent's, so a tool call leaves them as it found them.
+class SettingsGuard
+{
+public:
+    explicit SettingsGuard(bool persist);
+    ~SettingsGuard();
+
+private:
+    bool m_persist;
+    QMap<QString, QVariant> m_before;
 };
 
 // A stable id for a dialog site. The site id is the key the agent uses to

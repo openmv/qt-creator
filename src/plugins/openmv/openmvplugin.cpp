@@ -798,14 +798,15 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
         }
     }
 
+    // MCP tools before the server can be reached: the registry buffers them, so
+    // this works whether or not the mcpserver plugin has initialized yet.
+    registerMcpTools();
+
     return Utils::ResultOk;
 }
 
 void OpenMVPlugin::extensionsInitialized()
 {
-    // MCP tools first: the registry buffers them, so this works whether or not
-    // the mcpserver plugin (which replays the registry) has initialized yet.
-    registerMcpTools();
 
     if(!m_viewerMode)
     {

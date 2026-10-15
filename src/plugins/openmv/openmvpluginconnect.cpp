@@ -2203,6 +2203,8 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                     layout->addItem(new QSpacerItem(0, 6));
 
                     QComboBox *combo = new QComboBox();
+
+                    combo->setObjectName(QStringLiteral("action")); // MCP form field name
                     combo->addItem(Tr::tr("Install the latest release firmware (v%L1.%L2.%L3)").arg(match.captured(1).toInt()).arg(match.captured(2).toInt()).arg(match.captured(3).toInt()));
                     combo->addItem(Tr::tr("Load a specific firmware"));
                     combo->addItem(Tr::tr("Just erase the internal FAT file system"));
@@ -2255,7 +2257,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                     if((m_autoUpdate == QStringLiteral("release"))
                     || (m_autoUpdate == QStringLiteral("development"))
-                    || (OMVUI::exec(dialog) == QDialog::Accepted))
+                    || (OMVUI::exec(dialog, OMV_UI_SITE("connect.bootloader_action")) == QDialog::Accepted))
                     {
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_ACTION, combo->currentIndex());
                         settings->setValue(SETTINGS_GROUP "/" LAST_DFU_FLASH_FS_ERASE_STATE, checkBox->isChecked());
@@ -2472,7 +2474,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
 
                                 bool ok = (!forceFirmwarePath.isEmpty()) || justEraseFlashFs ||
-                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (OMVUI::exec(dialog) == QDialog::Accepted);
+                                    (forceBootloader && previousMappingSet) || dfuDeviceResetToRelease || (OMVUI::exec(dialog, OMV_UI_SITE("connect.bootloader_action")) == QDialog::Accepted);
                                 bool forceFlashFSEraseTemp = justEraseFlashFs ||
                                     ((forceBootloader && previousMappingSet) ? forceFlashFSErase : (dfuDeviceResetToRelease ? dfuDeviceEraseFlash : checkBox->isChecked()));
                                 OpenMVROMFSAccess romfsAccessTemp = justEraseFlashFs ? OPENMV_ROMFS_NONE :

@@ -30,7 +30,9 @@
 
 #include "omvmcpcontext.h"
 
+#include <coreplugin/icore.h>
 #include <utils/qtcassert.h>
+#include <utils/qtcsettings.h>
 
 namespace OpenMV {
 namespace Internal {
@@ -74,12 +76,13 @@ bool Call::hasErrors(int minLevel) const
 void Call::note(const QString &line)
 {
     log.append(line);
+    if(progress) progress(line);
 }
 
 void Call::fail(const Error &e)
 {
     errors.append(e);
-    log.append(QStringLiteral("[%1] %2%3").arg(e.code, e.title.isEmpty() ? QString() : e.title + QStringLiteral(": "), e.text));
+    note(QStringLiteral("[%1] %2%3").arg(e.code, e.title.isEmpty() ? QString() : e.title + QStringLiteral(": "), e.text));
 }
 
 std::optional<QJsonValue> Call::answer(const QString &site) const
@@ -115,6 +118,44 @@ Scope::Scope(Call &call) : m_previous(s_currentCall)
 Scope::~Scope()
 {
     s_currentCall = m_previous;
+}
+
+// Only the plugin's own groups ("OpenMV", "OpenMVLoaderDialog", ...): the rest
+// of the IDE's settings are not touched by its flows.
+static bool isOpenMVKey(const QString &key)
+{
+    return key.startsWith(QStringLiteral("OpenMV"));
+}
+
+SettingsGuard::SettingsGuard(bool persist) : m_persist(persist)
+{
+    if(m_persist) return;
+
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    const QStringList keys = settings->allKeys();
+
+    for(const QString &key : keys)
+    {
+        if(isOpenMVKey(key)) m_before.insert(key, settings->value(Utils::keyFromString(key)));
+    }
+}
+
+SettingsGuard::~SettingsGuard()
+{
+    if(m_persist) return;
+
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    const QStringList keys = settings->allKeys();
+
+    for(const QString &key : keys)
+    {
+        if(isOpenMVKey(key) && !m_before.contains(key)) settings->remove(Utils::keyFromString(key));
+    }
+
+    for(auto it = m_before.constBegin(); it != m_before.constEnd(); ++it)
+    {
+        if(settings->value(Utils::keyFromString(it.key())) != it.value()) settings->setValue(Utils::keyFromString(it.key()), it.value());
+    }
 }
 
 QString synthesizeSite(const QString &title, const QString &text)

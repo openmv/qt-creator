@@ -109,10 +109,15 @@ bool awaitPoll(OpenMVPluginIO *io, Signal signal, Callable onReply, const std::f
     return got;
 }
 
+// Installed by runTool() for the duration of a body so the call it creates
+// streams its log to the client (GUI thread only, one tool body at a time).
+std::function<void(const QString &)> s_progressHook;
+
 OMVMCP::Call makeCall(const QJsonObject &args)
 {
     OMVMCP::Call call;
     call.wall.start();
+    call.progress = s_progressHook;
 
     const QString policy = args.value(QStringLiteral("policy")).toString();
     if(policy == QStringLiteral("auto")) call.policy = OMVMCP::Policy::AutoAnswer;
@@ -250,7 +255,91 @@ Mcp::Schema::Tool::InputSchema &addCallControls(Mcp::Schema::Tool::InputSchema &
     schema.addProperty(QStringLiteral("deadlineMs"), QJsonObject{
         {QStringLiteral("type"), QStringLiteral("integer")},
         {QStringLiteral("description"), QStringLiteral("Wall-clock limit for the whole operation in milliseconds (default 300000).")}});
+    schema.addProperty(QStringLiteral("persist"), QJsonObject{
+        {QStringLiteral("type"), QStringLiteral("boolean")},
+        {QStringLiteral("description"), QStringLiteral("Keep the IDE settings this operation changes (last used paths/options, \"don't ask again\" choices). Default false: they are rolled back when the call ends, so the user's preferences are untouched.")}});
     return schema;
+}
+
+// Runs a tool body. When the client supports MCP tasks the call is upgraded to
+// one first, so the client sees the call's log lines as progress instead of
+// waiting blind; otherwise the body simply runs and the result is sent. The
+// body runs synchronously either way (nested event loops keep the server
+// answering tasks/get meanwhile).
+struct TaskState {
+    bool finished = false;
+    bool failed = false;
+    QString message;
+    std::optional<Mcp::Schema::CallToolResult> result;
+    QElapsedTimer timer;
+    qint64 lastNotifyMs = -1000;
+};
+
+Utils::Result<> runTool(const Mcp::ToolInterface &toolInterface, const Mcp::Schema::CallToolRequestParams &params,
+                        const std::function<Mcp::Schema::CallToolResult()> &body)
+{
+    using namespace std::chrono_literals;
+    using Mcp::Schema::TaskStatus;
+
+    const OMVMCP::SettingsGuard guard(params.argumentsAsObject().value(QStringLiteral("persist")).toBool());
+
+    auto state = std::make_shared<TaskState>();
+    state->timer.start();
+
+    std::optional<Mcp::Schema::ProgressToken> token;
+    if(params._meta()) token = params._meta()->progressToken();
+
+    Utils::Result<Mcp::ToolInterface::TaskProgressNotify> notify = toolInterface.startTask(
+        1s,
+        [state](Mcp::Schema::Task task) -> Mcp::Schema::Task {
+            if(state->finished)
+            {
+                task.status(state->failed ? TaskStatus::failed : TaskStatus::completed);
+                task.statusMessage(state->message);
+                Mcp::letTaskDieIn(task, 1min);
+                return task;
+            }
+
+            task.status(TaskStatus::working);
+            if(!state->message.isEmpty()) task.statusMessage(state->message);
+            return task;
+        },
+        [state]() -> Utils::Result<Mcp::Schema::CallToolResult> {
+            if(state->result) return *state->result;
+            return Utils::ResultError(QStringLiteral("The operation has not finished."));
+        },
+        std::nullopt, // cancelling a flash half-way can brick a camera: not offered
+        token);
+
+    if(!notify)
+    {
+        // Could not become a task at all: plain synchronous call.
+        s_progressHook = {};
+        toolInterface.finish(body());
+        return Utils::ResultOk;
+    }
+
+    // For a client that did not ask for a task the server keeps the request
+    // open and polls onUpdateTask itself (sending notifications/progress and,
+    // once finished, the result); the notify functor is then empty.
+    const Mcp::ToolInterface::TaskProgressNotify push = *notify;
+
+    s_progressHook = [state, push](const QString &line) {
+        state->message = line;
+        if(!push) return;
+        if((state->timer.elapsed() - state->lastNotifyMs) < 250) return; // a flash log is chatty
+        state->lastNotifyMs = state->timer.elapsed();
+        push(TaskStatus::working, line, std::nullopt);
+    };
+
+    Mcp::Schema::CallToolResult result = body();
+    s_progressHook = {};
+
+    state->result = result;
+    state->failed = result.isError().value_or(false);
+    state->finished = true;
+    if(push) push(state->failed ? TaskStatus::failed : TaskStatus::completed, state->message, std::nullopt);
+    return Utils::ResultOk;
 }
 
 // Destructive (G2) tools must be told `confirm:true` explicitly.
@@ -291,6 +380,49 @@ void OpenMVPlugin::registerMcpTools()
 {
     using namespace Mcp::Schema;
     using Mcp::ToolRegistry;
+
+    // ---- openmv_guide -------------------------------------------------------
+    // The conventions an agent needs and nothing else; read once per session.
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_guide"))
+            .title(QStringLiteral("How to drive OpenMV IDE through these tools"))
+            .description(QStringLiteral("Read this first: how the openmv_* tools report dialogs, how to answer them, how destructive operations are gated, and the usual workflow for working with a camera."))
+            .annotations(ToolAnnotations{}.readOnlyHint(true)),
+        [](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            const QString guide = QStringLiteral(
+                "OpenMV IDE MCP tools\n"
+                "\n"
+                "Workflow: openmv_list_ports -> openmv_camera_connect {port?} -> openmv_script_run {text, waitMs} -> "
+                "openmv_terminal_read {cursor} / openmv_framebuffer_get {maxWidth, format:jpeg} / openmv_histogram_get / openmv_channels_get -> "
+                "openmv_script_stop. openmv_camera_status tells you what is connected, whether a script is running and the last traceback. "
+                "openmv_script_save_to_camera writes the editor's script to main.py so it runs at boot.\n"
+                "\n"
+                "Dialogs: the tools run the IDE's real flows. Anything the IDE would have shown a person comes back in `errors` "
+                "(code, level 0-2, title, text, detailedText = tool output) and `log`; nothing blocks. A question or form that needed a person "
+                "is reported as code needs_input with a `site` id and the choices/fields; call again with `answers: {\"<site>\": value}` "
+                "(a button name such as Yes/No/Ok/Cancel, an item text or index, a text, an integer, a file path, or for forms true/false/{field: value}). "
+                "Stable sites: connect.port, connect.board_type, connect.dfu_device, connect.bricked, connect.retry, connect.upgrade_firmware, "
+                "connect.install_dev_release, script.save_strip, romfs.target, mpy.options, vela.options, stedgeai.options, fb.save_image_path. "
+                "`policy`: elicit (default: ask the user through your client when it supports elicitation, else the safe default), auto (safe default, "
+                "Cancel/No), fail (safe default and report). `deadlineMs` bounds the whole call; firmware work can take minutes.\n"
+                "\n"
+                "Destructive tools (openmv_firmware_install, openmv_camera_erase_filesystem) need confirm:true and, when your client supports "
+                "elicitation, the user's confirmation. openmv_camera_reset / enter_bootloader / script_save_to_camera are marked destructive but need no confirm.\n"
+                "\n"
+                "Settings: a call leaves the user's IDE settings as it found them unless persist:true.\n"
+                "\n"
+                "Rich data: frames and view captures come back as image content blocks (use maxWidth/jpeg to keep them small); compile tools can embed "
+                "their output file (embed:true). Long operations stream progress as task status messages when your client supports MCP tasks.\n"
+                "\n"
+                "Terminal: openmv_terminal_read uses absolute byte cursors; pass back the `cursor` you got to read only what is new. "
+                "openmv_terminal_clear forgets the history without touching the IDE's terminal.\n"
+                "\n"
+                "The server listens on localhost only; there is no authentication beyond that.");
+
+            return CallToolResult{}.isError(false).addContent(TextContent().text(guide));
+        });
 
     // ---- openmv_camera_status ---------------------------------------------
 
@@ -450,7 +582,32 @@ void OpenMVPlugin::registerMcpTools()
 
                 if(args.contains(QStringLiteral("port")))
                 {
-                    call.answers.insert(OMV_UI_SITE("connect.port"), args.value(QStringLiteral("port")).toString());
+                    const QString port = args.value(QStringLiteral("port")).toString();
+                    call.answers.insert(OMV_UI_SITE("connect.port"), port);
+
+                    // A camera that was just reset (or plugged in) takes a moment
+                    // to enumerate again; wait for the named port before scanning,
+                    // or the scan finds a bootloader device / nothing instead.
+                    auto present = [&port] {
+                        for(const QSerialPortInfo &info : QSerialPortInfo::availablePorts())
+                        {
+                            if(info.portName() == port) return true;
+                        }
+
+                        return false;
+                    };
+
+                    const int waitMs = qMin(call.remainingMs(), 20000);
+
+                    while(!present() && (call.wall.elapsed() < waitMs))
+                    {
+                        QEventLoop loop;
+                        QTimer::singleShot(250, &loop, &QEventLoop::quit);
+                        loop.exec();
+                    }
+
+                    if(!present()) return errResult(QStringLiteral("no_such_port"), QStringLiteral("Serial port \"%1\" did not appear within %2 ms; see openmv_list_ports.").arg(port).arg(waitMs));
+                    if(call.wall.elapsed() > 250) call.note(QStringLiteral("[connect.port] waited %1 ms for %2 to enumerate").arg(call.wall.elapsed()).arg(port));
                 }
 
                 {
@@ -475,8 +632,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -522,8 +678,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -612,8 +767,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(runOutcome(out));
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -658,8 +812,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1084,8 +1237,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1127,8 +1279,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1163,8 +1314,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
 
         ToolRegistry::registerTool(
@@ -1193,8 +1343,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1235,8 +1384,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1489,8 +1637,7 @@ void OpenMVPlugin::registerMcpTools()
                 return fileResult(out, outputPath, args.value(QStringLiteral("embed")).toBool());
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1586,8 +1733,7 @@ void OpenMVPlugin::registerMcpTools()
                 return fileResult(out, outputPath, args.value(QStringLiteral("embed")).toBool());
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 
@@ -1631,8 +1777,7 @@ void OpenMVPlugin::registerMcpTools()
                 return okResult(out);
                 };
 
-                toolInterface.finish(body());
-                return Utils::ResultOk;
+                return runTool(toolInterface, params, body);
             });
     }
 }
