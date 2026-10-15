@@ -81,6 +81,10 @@ set(resource_files
   themes/dark.figmatokens
   themes/light.figmatokens
   themes/light-palette.inc
+  themes/primitive-colors.inc
+  themes/qmldesigner-light.inc
+  themes/qmldesigner-dark.inc
+  themes/ds.tokenmapping
   # OPENMV-DIFF #
 )
 
