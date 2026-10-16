@@ -22,8 +22,19 @@ public:
 
     static const ToolRegistry &instance();
 
+    // OPENMV-DIFF //
+    // Resources registered the same append-only way as tools, replayed by
+    // AutoRegisteringServer whether it exists yet or not.
+    static void registerResource(
+        const Generated::Schema::_2025_11_25::Resource &resource,
+        const Server::ResourceCallback &callback);
+    // OPENMV-DIFF //
+
 signals:
     void toolRegistered();
+    // OPENMV-DIFF //
+    void resourceRegistered();
+    // OPENMV-DIFF //
 };
 
 class MCPSERVER_EXPORT AutoRegisteringServer : public Server, public QObject
@@ -33,6 +44,9 @@ public:
 
 private:
     std::size_t m_nTools = 0;
+    // OPENMV-DIFF //
+    std::size_t m_nResources = 0;
+    // OPENMV-DIFF //
 };
 
 } // namespace Mcp

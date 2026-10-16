@@ -46,11 +46,13 @@
 #include <coreplugin/editormanager/editormanager.h>
 #include <coreplugin/icore.h>
 #include <coreplugin/idocument.h>
+#include <coreplugin/mcp/mcpmanager.h>
 #include <coreplugin/messagemanager.h>
 #include <coreplugin/outputwindow.h>
 #include <mcp/server/toolregistry.h>
 #include <utils/qtcassert.h>
 
+#include <QHostAddress>
 #include <QSerialPortInfo>
 
 #include <algorithm>
@@ -367,6 +369,40 @@ QJsonObject outcome(const OMVMCP::Call &call)
 const int TERMINAL_RING_BYTES = 1 << 20;
 const int TERMINAL_READ_DEFAULT = 64 << 10;
 
+// The conventions an agent needs and nothing else (openmv_guide and openmv://guide).
+QString guideText()
+{
+    return QStringLiteral(
+        "OpenMV IDE MCP tools\n"
+        "\n"
+        "Workflow: openmv_list_ports -> openmv_camera_connect {port?} -> openmv_script_run {text, waitMs} -> "
+        "openmv_terminal_read {cursor} / openmv_framebuffer_get {maxWidth, format:jpeg} / openmv_histogram_get / openmv_channels_get -> "
+        "openmv_script_stop. openmv_camera_status tells you what is connected, whether a script is running and the last traceback. "
+        "openmv_script_save_to_camera writes the editor's script to main.py so it runs at boot.\n"
+        "\n"
+        "Dialogs: the tools run the IDE's real flows. Anything the IDE would have shown a person comes back in `errors` "
+        "(code, level 0-2, title, text, detailedText = tool output) and `log`; nothing blocks. A question or form that needed a person "
+        "is reported as code needs_input with a `site` id and the choices/fields; call again with `answers: {\"<site>\": value}` "
+        "(a button name such as Yes/No/Ok/Cancel, an item text or index, a text, an integer, a file path, or for forms true/false/{field: value}). "
+        "Stable sites: connect.port, connect.board_type, connect.dfu_device, connect.bricked, connect.retry, connect.upgrade_firmware, "
+        "connect.install_dev_release, script.save_strip, romfs.target, mpy.options, vela.options, stedgeai.options, fb.save_image_path. "
+        "`policy`: elicit (default: ask the user through your client when it supports elicitation, else the safe default), auto (safe default, "
+        "Cancel/No), fail (safe default and report). `deadlineMs` bounds the whole call; firmware work can take minutes.\n"
+        "\n"
+        "Destructive tools (openmv_firmware_install, openmv_camera_erase_filesystem) need confirm:true and, when your client supports "
+        "elicitation, the user's confirmation. openmv_camera_reset / enter_bootloader / script_save_to_camera are marked destructive but need no confirm.\n"
+        "\n"
+        "Settings: a call leaves the user's IDE settings as it found them unless persist:true.\n"
+        "\n"
+        "Rich data: frames and view captures come back as image content blocks (use maxWidth/jpeg to keep them small); compile tools can embed "
+        "their output file (embed:true). Long operations stream progress as task status messages when your client supports MCP tasks.\n"
+        "\n"
+        "Terminal: openmv_terminal_read uses absolute byte cursors; pass back the `cursor` you got to read only what is new. "
+        "openmv_terminal_clear forgets the history without touching the IDE's terminal.\n"
+        "\n"
+        "The server listens on localhost only; there is no authentication beyond that.");
+}
+
 } // namespace
 
 void OpenMVPlugin::mcpTerminalData(const QByteArray &data)
@@ -396,38 +432,60 @@ void OpenMVPlugin::registerMcpTools()
             .description(QStringLiteral("Read this first: how the openmv_* tools report dialogs, how to answer them, how destructive operations are gated, and the usual workflow for working with a camera."))
             .annotations(ToolAnnotations{}.readOnlyHint(true)),
         [](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
-            const QString guide = QStringLiteral(
-                "OpenMV IDE MCP tools\n"
-                "\n"
-                "Workflow: openmv_list_ports -> openmv_camera_connect {port?} -> openmv_script_run {text, waitMs} -> "
-                "openmv_terminal_read {cursor} / openmv_framebuffer_get {maxWidth, format:jpeg} / openmv_histogram_get / openmv_channels_get -> "
-                "openmv_script_stop. openmv_camera_status tells you what is connected, whether a script is running and the last traceback. "
-                "openmv_script_save_to_camera writes the editor's script to main.py so it runs at boot.\n"
-                "\n"
-                "Dialogs: the tools run the IDE's real flows. Anything the IDE would have shown a person comes back in `errors` "
-                "(code, level 0-2, title, text, detailedText = tool output) and `log`; nothing blocks. A question or form that needed a person "
-                "is reported as code needs_input with a `site` id and the choices/fields; call again with `answers: {\"<site>\": value}` "
-                "(a button name such as Yes/No/Ok/Cancel, an item text or index, a text, an integer, a file path, or for forms true/false/{field: value}). "
-                "Stable sites: connect.port, connect.board_type, connect.dfu_device, connect.bricked, connect.retry, connect.upgrade_firmware, "
-                "connect.install_dev_release, script.save_strip, romfs.target, mpy.options, vela.options, stedgeai.options, fb.save_image_path. "
-                "`policy`: elicit (default: ask the user through your client when it supports elicitation, else the safe default), auto (safe default, "
-                "Cancel/No), fail (safe default and report). `deadlineMs` bounds the whole call; firmware work can take minutes.\n"
-                "\n"
-                "Destructive tools (openmv_firmware_install, openmv_camera_erase_filesystem) need confirm:true and, when your client supports "
-                "elicitation, the user's confirmation. openmv_camera_reset / enter_bootloader / script_save_to_camera are marked destructive but need no confirm.\n"
-                "\n"
-                "Settings: a call leaves the user's IDE settings as it found them unless persist:true.\n"
-                "\n"
-                "Rich data: frames and view captures come back as image content blocks (use maxWidth/jpeg to keep them small); compile tools can embed "
-                "their output file (embed:true). Long operations stream progress as task status messages when your client supports MCP tasks.\n"
-                "\n"
-                "Terminal: openmv_terminal_read uses absolute byte cursors; pass back the `cursor` you got to read only what is new. "
-                "openmv_terminal_clear forgets the history without touching the IDE's terminal.\n"
-                "\n"
-                "The server listens on localhost only; there is no authentication beyond that.");
-
-            return CallToolResult{}.isError(false).addContent(TextContent().text(guide));
+            return CallToolResult{}.isError(false).addContent(TextContent().text(guideText()));
         });
+
+    // ---- resources ----------------------------------------------------------
+    // The same data as readable documents, for clients with a resource picker.
+
+    auto textResource = [](const QString &uri, const QString &mime, const QString &text) {
+        return ReadResourceResult().contents({TextResourceContents().uri(uri).mimeType(mime).text(text)});
+    };
+
+    ToolRegistry::registerResource(
+        Resource().uri(QStringLiteral("openmv://guide")).name(QStringLiteral("openmv-guide")).title(QStringLiteral("OpenMV IDE tool guide"))
+            .description(QStringLiteral("How to drive OpenMV IDE through its MCP tools.")).mimeType(QStringLiteral("text/plain")),
+        [textResource](const ReadResourceRequestParams &params) -> Utils::Result<ReadResourceResult> {
+            return textResource(params.uri(), QStringLiteral("text/plain"), guideText());
+        });
+
+    ToolRegistry::registerResource(
+        Resource().uri(QStringLiteral("openmv://status")).name(QStringLiteral("openmv-status")).title(QStringLiteral("OpenMV camera status"))
+            .description(QStringLiteral("What openmv_camera_status returns, as JSON.")).mimeType(QStringLiteral("application/json")),
+        [this, textResource](const ReadResourceRequestParams &params) -> Utils::Result<ReadResourceResult> {
+            QJsonObject out{
+                {QStringLiteral("connected"), m_connected}, {QStringLiteral("working"), m_working},
+                {QStringLiteral("running"), m_connected && m_running}, {QStringLiteral("port"), m_portName},
+                {QStringLiteral("lastError"), m_lastScriptError}};
+            if(m_connected)
+            {
+                out.insert(QStringLiteral("board"), m_boardType);
+                out.insert(QStringLiteral("sensor"), m_sensorType);
+                out.insert(QStringLiteral("firmware"), QStringLiteral("%1.%2.%3").arg(m_major).arg(m_minor).arg(m_patch));
+                out.insert(QStringLiteral("drivePath"), m_portPath);
+            }
+            return textResource(params.uri(), QStringLiteral("application/json"), QString::fromUtf8(QJsonDocument(out).toJson(QJsonDocument::Indented)));
+        });
+
+    ToolRegistry::registerResource(
+        Resource().uri(QStringLiteral("openmv://terminal")).name(QStringLiteral("openmv-terminal")).title(QStringLiteral("OpenMV serial terminal"))
+            .description(QStringLiteral("Everything the camera printed recently (the openmv_terminal_read ring).")).mimeType(QStringLiteral("text/plain")),
+        [this, textResource](const ReadResourceRequestParams &params) -> Utils::Result<ReadResourceResult> {
+            return textResource(params.uri(), QStringLiteral("text/plain"), QString::fromUtf8(m_mcpTerminalLog));
+        });
+
+    ToolRegistry::registerResource(
+        Resource().uri(QStringLiteral("openmv://examples")).name(QStringLiteral("openmv-examples")).title(QStringLiteral("OpenMV example scripts"))
+            .description(QStringLiteral("The bundled example scripts: the folder they live in and their relative paths.")).mimeType(QStringLiteral("text/plain")),
+        [this, textResource](const ReadResourceRequestParams &params) -> Utils::Result<ReadResourceResult> {
+            const Utils::FilePath root = Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples")));
+            const QDir rootDir(root.toUserOutput());
+            QStringList lines{root.toUserOutput()};
+            QDirIterator it(root.toUserOutput(), QStringList() << QStringLiteral("*.py"), QDir::Files, QDirIterator::Subdirectories);
+            while(it.hasNext()) lines.append(rootDir.relativeFilePath(it.next()));
+            return textResource(params.uri(), QStringLiteral("text/plain"), lines.join(QLatin1Char('\n')));
+        });
+
 
     // ---- openmv_camera_status ---------------------------------------------
 
@@ -2738,6 +2796,50 @@ void OpenMVPlugin::registerMcpTools()
 
                 return runTool(toolInterface, params, body);
             });
+    }
+
+    // ---- discovery file -----------------------------------------------------
+    // MCP has no broadcast discovery. The server's URL is written to a file at a
+    // known place (the user resource folder, next to the settings) whenever it
+    // changes, and removed on a clean exit, so a client or script can find a
+    // running IDE without being told the port. A killed IDE leaves the file
+    // behind: readers should check that `pid` is still alive.
+
+    {
+        auto writeDiscovery = [] {
+            const Utils::FilePath file = Core::ICore::userResourcePath(QStringLiteral("mcp-server.json"));
+            QJsonArray servers;
+
+            for(const Core::McpManager::ServerInfo &info : Core::McpManager::mcpServers())
+            {
+                // Only this IDE's own server(s): the manager also lists remote
+                // ones such as the Qt documentation server.
+                const QUrl *url = std::get_if<QUrl>(&info.launchInfo);
+                if(!url || !QHostAddress(url->host()).isLoopback()) continue;
+
+                servers.append(QJsonObject{
+                    {QStringLiteral("id"), info.id},
+                    {QStringLiteral("name"), info.name},
+                    {QStringLiteral("url"), url->toString()},
+                    {QStringLiteral("transport"), (info.connectionType == Core::McpManager::Sse) ? QStringLiteral("sse") : QStringLiteral("streamable-http")}});
+            }
+
+            if(servers.isEmpty())
+            {
+                file.removeFile();
+                return;
+            }
+
+            file.writeFileContents(QJsonDocument(QJsonObject{
+                {QStringLiteral("ide"), QGuiApplication::applicationDisplayName()},
+                {QStringLiteral("version"), QCoreApplication::applicationVersion()},
+                {QStringLiteral("pid"), qint64(QCoreApplication::applicationPid())},
+                {QStringLiteral("servers"), servers}}).toJson(QJsonDocument::Indented));
+        };
+
+        connect(&Core::McpManager::instance(), &Core::McpManager::mcpServersChanged, this, writeDiscovery);
+        connect(qApp, &QCoreApplication::aboutToQuit, this, [] { Core::ICore::userResourcePath(QStringLiteral("mcp-server.json")).removeFile(); });
+        writeDiscovery();
     }
 
     // ---- openmv_framebuffer_save --------------------------------------------
