@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
 #include "acpchatwidget.h"
+// OPENMV-DIFF //
+#include "acpclientapi.h"
+// OPENMV-DIFF //
 #include "acpclientconstants.h"
 #include "acpclienttr.h"
 #include "acpinspector.h"
@@ -38,7 +41,16 @@ class AcpClientPlugin final : public ExtensionSystem::IPlugin
     Q_PLUGIN_METADATA(IID "org.qt-project.Qt.QtCreatorPlugin" FILE "AcpClient.json")
 
 public:
-    AcpClientPlugin() = default;
+    // OPENMV-DIFF //
+    AcpClientPlugin() { s_instance = this; }
+    static AcpClientPlugin *s_instance;
+    QWidget *chatWidget()
+    {
+        createRightPaneChatWidget();
+        return m_rightPaneChatWidget;
+    }
+    // AcpClientPlugin() = default;
+    // OPENMV-DIFF //
 
     ~AcpClientPlugin() final
     {
@@ -57,7 +69,10 @@ public:
         // Create the ACP Client menu under Tools
         ActionContainer *menu = ActionManager::createMenu(Constants::MENU_ID);
         menu->menu()->setTitle(Tr::tr("ACP Client"));
-        ActionManager::actionContainer(Core::Constants::M_TOOLS)->addMenu(menu);
+        // OPENMV-DIFF //
+        // OpenMV IDE puts the chat in its own AI mode: no Tools entry, no editor button.
+        //         ActionManager::actionContainer(Core::Constants::M_TOOLS)->addMenu(menu);
+        // OPENMV-DIFF //
 
         // Show Chat in right side panel action
         auto showSidePanelAction = new QAction(sidePanelIcon(),
@@ -82,9 +97,12 @@ public:
 
             textEditorWidget->insertExtraToolBarWidget(TextEditor::TextEditorWidget::Right, button);
         };
-        connect(EditorManager::instance(), &EditorManager::editorOpened, this, checkEditor);
-        for (Core::IEditor *editor : DocumentModel::editorsForOpenedDocuments())
-            checkEditor(editor);
+        // OPENMV-DIFF //
+        Q_UNUSED(checkEditor)
+        // connect(EditorManager::instance(), &EditorManager::editorOpened, this, checkEditor);
+        // for (Core::IEditor *editor : DocumentModel::editorsForOpenedDocuments())
+        //     checkEditor(editor);
+        // OPENMV-DIFF //
 
         connect(showSidePanelAction, &QAction::triggered, this, [this] {
             createRightPaneChatWidget();
@@ -144,5 +162,14 @@ private:
 };
 
 } // namespace AcpClient::Internal
+
+// OPENMV-DIFF //
+AcpClient::Internal::AcpClientPlugin *AcpClient::Internal::AcpClientPlugin::s_instance = nullptr;
+
+QWidget *AcpClient::chatWidget()
+{
+    return Internal::AcpClientPlugin::s_instance ? Internal::AcpClientPlugin::s_instance->chatWidget() : nullptr;
+}
+// OPENMV-DIFF //
 
 #include "acpclientplugin.moc"

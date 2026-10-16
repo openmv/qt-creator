@@ -568,6 +568,20 @@ void prefetchAcpRegistry()
 {
     AcpRegistryBrowser::prefetch(
         [] {
+            // OPENMV-DIFF //
+            // First run: offer the agents people reach for, so the chat panel is
+            // not empty until someone finds the ACP Servers settings page.
+            if (AcpManagerSettings::instance().acpServers.items().isEmpty()) {
+                for (const char *id : {"claude-acp", "gemini", "codex-acp"}) {
+                    auto item = std::dynamic_pointer_cast<AcpServerAspect>(
+                        AcpManagerSettings::instance().acpServers.createAndAddItem());
+                    if (!item)
+                        continue;
+                    item->registryBrowser.setValue(QString::fromLatin1(id));
+                    item->applyRegistryTemplate();
+                }
+            }
+            // OPENMV-DIFF //
             AcpManagerSettings::instance().acpServers.forEachItem(
                 [](const std::shared_ptr<AcpServerAspect> &server) {
                     server->applyRegistryTemplate();

@@ -1054,6 +1054,10 @@ Result<> ProjectExplorerPlugin::initialize(const QStringList &arguments)
 
     dd->m_projectsMode.setWidget(splitter);
     dd->m_projectsMode.setEnabled(false);
+    // OPENMV-DIFF //
+    // OpenMV IDE has no projects: keep the mode off the strip.
+    dd->m_projectsMode.setVisible(false);
+    // OPENMV-DIFF //
 
     ICore::addPreCloseListener([]() -> bool { return coreAboutToClose(); });
 

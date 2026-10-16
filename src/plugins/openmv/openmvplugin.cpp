@@ -29,6 +29,9 @@
  */
 
 #include "openmvplugin.h"
+#include "openmvaimode.h"
+#include <acpclient/acpclientapi.h>
+#include <coreplugin/modemanager.h>
 #include <coreplugin/icore.h>
 
 #include "app/app_version.h"
@@ -805,8 +808,31 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
     return Utils::ResultOk;
 }
 
+// The left strip is the mode tabs (Edit, AI, Settings) plus the camera
+// buttons. Viewer mode hides the strip altogether (see below) and has no AI
+// mode; Settings there is a mode too, so Escape is its way out everywhere.
+void OpenMVPlugin::setupModes()
+{
+    if(!m_viewerMode)
+    {
+        // Core applies the saved selector style in its own extensionsInitialized(),
+        // which runs after ours: set the style a tick later.
+        QTimer::singleShot(0, this, [] { Core::ModeManager::setModeStyle(Core::ModeManager::Style::IconsAndText); });
+
+        m_aiMode = new OpenMVAIMode(this);
+        m_aiMode->setChatWidget(AcpClient::chatWidget());
+    }
+
+    QAction *leaveSettings = new QAction(Tr::tr("Leave Settings"), this);
+    Core::Command *leaveSettingsCommand = Core::ActionManager::registerAction(leaveSettings, Utils::Id("OpenMV.LeaveSettingsMode"), Core::Context(Core::Constants::C_SETTINGS_MODE));
+    leaveSettingsCommand->setDefaultKeySequence(QKeySequence(Qt::Key_Escape));
+    connect(leaveSettings, &QAction::triggered, this, [] { Core::ModeManager::activatePreviousMode(); });
+}
+
 void OpenMVPlugin::extensionsInitialized()
 {
+    setupModes();
+
 
     if(!m_viewerMode)
     {
@@ -2249,30 +2275,8 @@ void OpenMVPlugin::extensionsInitialized()
     if(!widget) widget = qobject_cast<Core::Internal::FancyTabWidget *>(mainWindow->centralWidget()->layout()->itemAt(1)->widget()); // for tabbededitor
     widget = q_check_ptr(widget);
 
-    Core::Internal::FancyActionBar *actionBar0 = new Core::Internal::FancyActionBar(widget);
-    widget->insertCornerWidget(0, actionBar0);
-
-    actionBar0->insertAction(0, Core::ActionManager::command(Core::Constants::NEW_FILE)->action(), QIcon(QStringLiteral(":/openmv/images/filenew.png")));
-    actionBar0->insertAction(1, Core::ActionManager::command(Core::Constants::OPEN)->action(), QIcon(QStringLiteral(":/openmv/images/fileopen.png")));
-    actionBar0->insertAction(2, Core::ActionManager::command(Core::Constants::SAVE)->action(), QIcon(QStringLiteral(":/openmv/images/filesave.png")));
-
-    actionBar0->setProperty("no_separator", true);
-    actionBar0->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Maximum);
-
-    Core::Internal::FancyActionBar *actionBar1 = new Core::Internal::FancyActionBar(widget);
-    widget->insertCornerWidget(1, actionBar1);
-
-    actionBar1->insertAction(0, Core::ActionManager::command(Core::Constants::UNDO)->action(), QIcon(QStringLiteral(":/openmv/images/undo.png")));
-    actionBar1->insertAction(1, Core::ActionManager::command(Core::Constants::REDO)->action(), QIcon(QStringLiteral(":/openmv/images/redo.png")));
-    actionBar1->insertAction(2, Core::ActionManager::command(Core::Constants::CUT)->action(), QIcon(QStringLiteral(":/openmv/images/editcut.png")));
-    actionBar1->insertAction(3, Core::ActionManager::command(Core::Constants::COPY)->action(), QIcon(QStringLiteral(":/openmv/images/editcopy.png")));
-    actionBar1->insertAction(4, Core::ActionManager::command(Core::Constants::PASTE)->action(), QIcon(QStringLiteral(":/openmv/images/editpaste.png")));
-
-    actionBar1->setProperty("no_separator", true);
-    actionBar1->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Minimum);
-
     Core::Internal::FancyActionBar *actionBar2 = new Core::Internal::FancyActionBar(widget);
-    widget->insertCornerWidget(2, actionBar2);
+    widget->insertCornerWidget(0, actionBar2);
 
     actionBar2->insertAction(0, m_connectCommand->action());
     actionBar2->insertAction(1, m_disconnectCommand->action());
@@ -2812,8 +2816,7 @@ void OpenMVPlugin::extensionsInitialized()
     connect(datasetEditorCloseButton, &QToolButton::clicked, this, [this, datasetEditorWidget] { m_datasetEditor->setRootPath(QString()); datasetEditorWidget->hide(); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathClosed, this, [] (const QString &path) { Core::EditorManager::closeEditors(Core::DocumentModel::editorsForFilePath(Utils::FilePath::fromString(path).pathAppended(QStringLiteral("/dataset_capture_script.py")))); });
     connect(m_datasetEditor, &OpenMVDatasetEditor::rootPathSet, datasetEditorWidget, &QWidget::show);
-    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [actionBar1, exportDataseFlatAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseByAPIKeyAction, closeDatasetAction, datasetEditorNewFolderAction, datasetEditorSnapshotAction, datasetEditorActionBar] (bool visible) {
-        actionBar1->setSizePolicy(QSizePolicy::Preferred, visible ? QSizePolicy::Maximum : QSizePolicy::Minimum);
+    connect(m_datasetEditor, &OpenMVDatasetEditor::visibilityChanged, this, [exportDataseFlatAction, uploadToEdgeImpulseProjectAction, uploadToEdgeImpulseByAPIKeyAction, closeDatasetAction, datasetEditorNewFolderAction, datasetEditorSnapshotAction, datasetEditorActionBar] (bool visible) {
         exportDataseFlatAction->setEnabled(visible);
         uploadToEdgeImpulseProjectAction->setEnabled(visible && (!loggedIntoEdgeImpulse().isEmpty()));
         uploadToEdgeImpulseByAPIKeyAction->setEnabled(visible);

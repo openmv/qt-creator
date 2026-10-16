@@ -577,7 +577,9 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
 {
     m_tabBar = new FancyTabBar(this);
     // OPENMV-DIFF //
-    m_tabBar->hide();
+    // The mode tabs (Edit, AI, Settings) are the left strip now; viewer mode
+    // hides the whole selection widget instead.
+    // m_tabBar->hide();
     // OPENMV-DIFF //
     m_tabBar->setObjectName("ModeSelector"); // used for UI introduction
 

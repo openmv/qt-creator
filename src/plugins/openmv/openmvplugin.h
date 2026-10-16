@@ -517,6 +517,7 @@ public slots: // private
     // extensionsInitialized(); the registry buffers them until the MCP server plugin
     // (if loaded) picks them up, so load order does not matter.
     void registerMcpTools();
+    void setupModes(); // the Edit / AI / Settings strip and the AI mode itself
     void connectClicked(bool forceBootloader = false,
                         QString forceFirmwarePath = QString(),
                         bool forceFlashFSErase = false,
@@ -828,6 +829,7 @@ private:
     QSize m_mcpFbResolution;
     QRect m_mcpFbRoi;
     int m_mcpFbFocus = 0;
+    class OpenMVAIMode *m_aiMode = Q_NULLPTR;
     bool m_useGetState;
     int m_frameSizeDumpSpacing;
     int m_getScriptRunningSpacing;
