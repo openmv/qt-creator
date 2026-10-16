@@ -25,6 +25,7 @@
 #include <utils/terminalhooks.h>
 #include <utils/utilsicons.h>
 
+#include <QDir> // OPENMV-DIFF
 #include <QFileIconProvider>
 #include <QGuiApplication>
 #include <QMenu>
@@ -45,7 +46,13 @@ enum MacroModelRoles { IsPrefixRole = Qt::UserRole + 1, ValueRole = Qt::UserRole
 }
 
 TerminalPane::TerminalPane(QObject *parent)
-    : IOutputPane(parent)
+    // OPENMV-DIFF //
+    // : IOutputPane(parent)
+    // OPENMV-DIFF //
+    // OpenMV's IOutputPane takes (bool hidden, QObject *parent): a bare pointer
+    // would convert to hidden = true and the pane would never register.
+    : IOutputPane(false, parent)
+    // OPENMV-DIFF //
     , m_closeCurrentTabAction(new QAction(Tr::tr("Close Tab"), this))
     , m_closeAllTabsAction(new QAction(Tr::tr("Close All Tabs"), this))
     , m_closeOtherTabsAction(new QAction(Tr::tr("Close Other Tabs"), this))
@@ -150,6 +157,15 @@ void TerminalPane::openTerminal(const OpenTerminalParameters &parameters)
 {
     OpenTerminalParameters parametersCopy{parameters};
 
+    // OPENMV-DIFF //
+    // No projects in OpenMV IDE: open in the user's OpenMV documents folder (where
+    // the ACP agents also start), falling back to the home directory.
+    if (!parametersCopy.workingDirectory && !startupProjectDirectory()) {
+        const FilePath documents = FilePath::fromString(
+            QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV"));
+        parametersCopy.workingDirectory = documents.isDir() ? documents : FilePath::fromUserInput(QDir::homePath());
+    }
+    // OPENMV-DIFF //
     if (!parametersCopy.workingDirectory) {
         const std::optional<FilePath> projectDir = startupProjectDirectory();
         if (projectDir) {
