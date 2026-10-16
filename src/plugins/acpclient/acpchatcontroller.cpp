@@ -20,8 +20,25 @@
 #include <texteditor/texteditor.h>
 
 #include <QLoggingCategory>
+// OPENMV-DIFF //
+#include <QDir>
+#include <QStandardPaths>
+// OPENMV-DIFF //
 
 static Q_LOGGING_CATEGORY(logController, "qtc.acpclient.controller", QtWarningMsg);
+
+// OPENMV-DIFF //
+// OpenMV IDE has no projects, so a session would otherwise start with an empty
+// cwd (agents reject that). Use the IDE's scripts folder, else the home directory.
+static Utils::FilePath withDefaultWorkingDirectory(const Utils::FilePath &workingDirectory)
+{
+    if (!workingDirectory.isEmpty())
+        return workingDirectory;
+    const Utils::FilePath documents = Utils::FilePath::fromString(
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation) + QStringLiteral("/OpenMV"));
+    return documents.isDir() ? documents : Utils::FilePath::fromString(QDir::homePath());
+}
+// OPENMV-DIFF //
 
 using namespace Acp;
 using namespace Utils;
@@ -161,7 +178,7 @@ void AcpChatController::createNewSession(const FilePath &workingDirectory)
     if (!m_client || !m_initialized)
         return;
 
-    m_workingDirectory = workingDirectory;
+    m_workingDirectory = withDefaultWorkingDirectory(workingDirectory); // OPENMV-DIFF
 
     m_client->newSession(buildNewSessionRequest(),
                          [this](const QJsonObject &result, const std::optional<Error> &error) {
@@ -469,7 +486,7 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
     if (!m_client || !m_initialized)
         return;
 
-    m_workingDirectory = workingDirectory;
+    m_workingDirectory = withDefaultWorkingDirectory(workingDirectory); // OPENMV-DIFF
 
     LoadSessionRequest req;
     req.sessionId(sessionId);

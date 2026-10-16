@@ -85,6 +85,48 @@ void AcpStdioTransport::start()
 
     m_stderrBuffer.clear();
 
+    // OPENMV-DIFF //
+    // Registry agents launch through npx/node/npm. When none is installed on
+    // the machine, fall back to the Node.js OpenMV IDE ships (for Copilot) and
+    // put its bin directory first on PATH so "#!/usr/bin/env node" resolves.
+    // Done before the existence check below so that check sees the real command.
+    std::optional<Environment> bundledEnv;
+    {
+        const QString tool = m_cmd.executable().fileName();
+        const bool nodeTool = (tool == "npx") || (tool == "node") || (tool == "npm")
+                              || (tool == "npx.cmd") || (tool == "node.exe") || (tool == "npm.cmd");
+        if (nodeTool && !m_cmd.executable().isAbsolutePath()
+            && !m_cmd.executable().searchInPath(FileUtils::usefulExtraSearchPaths()).isExecutableFile()) {
+            const FilePath binDir = bundledNodeBinDir();
+            if (!binDir.isEmpty()) {
+                const QString base = QFileInfo(tool).completeBaseName();
+                const FilePath node = binDir.pathAppended(HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node"));
+                // npm/npx are JavaScript: run their CLI through the bundled node
+                // rather than the bin/ launcher (a copied symlink that no longer
+                // finds its own lib/). Layouts: <prefix>/lib/node_modules/npm on
+                // Unix, <prefix>/node_modules/npm on Windows.
+                const FilePath npmBin = HostOsInfo::isWindowsHost()
+                    ? binDir.pathAppended("node_modules/npm/bin")
+                    : binDir.parentDir().pathAppended("lib/node_modules/npm/bin");
+                CommandLine cmd = m_cmd;
+                if (base == "node" && node.exists()) {
+                    cmd.setExecutable(node);
+                } else if ((base == "npx" || base == "npm") && node.exists()
+                           && npmBin.pathAppended(base + "-cli.js").exists()) {
+                    cmd = CommandLine(node, {npmBin.pathAppended(base + "-cli.js").path()});
+                    cmd.addArgs(m_cmd.arguments(), CommandLine::Raw);
+                }
+                if (cmd.executable() != m_cmd.executable()) {
+                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << cmd.toUserOutput();
+                    m_cmd = cmd;
+                    bundledEnv = m_env ? *m_env : m_cmd.executable().deviceEnvironment();
+                    bundledEnv->prependOrSetPath(binDir);
+                }
+            }
+        }
+    }
+    // OPENMV-DIFF //
+
     FilePath executable = m_cmd.executable();
     if (executable.isEmpty()) {
         emit errorOccurred(Tr::tr("No command configured for ACP server."));
@@ -129,48 +171,18 @@ void AcpStdioTransport::start()
         emit finished();
     });
 
-    // OPENMV-DIFF //
-    // Registry agents launch through npx/node/npm. When none is installed on
-    // the machine, fall back to the Node.js OpenMV IDE ships (for Copilot) and
-    // put its bin directory first on PATH so "#!/usr/bin/env node" resolves.
-    CommandLine cmd = m_cmd;
-    Environment env = m_env ? *m_env : m_cmd.executable().deviceEnvironment();
-    {
-        const QString tool = cmd.executable().fileName();
-        const bool nodeTool = (tool == "npx") || (tool == "node") || (tool == "npm")
-                              || (tool == "npx.cmd") || (tool == "node.exe") || (tool == "npm.cmd");
-        if (nodeTool && cmd.executable().parentDir().isEmpty()
-            && cmd.executable().searchInPath().isEmpty()) {
-            const FilePath binDir = bundledNodeBinDir();
-            if (!binDir.isEmpty()) {
-                const QString base = QFileInfo(tool).completeBaseName();
-                const FilePath node = binDir.pathAppended(HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node"));
-                // npm/npx are JavaScript: run their CLI through the bundled node
-                // rather than the bin/ launcher (a copied symlink that no longer
-                // finds its own lib/). Layouts: <prefix>/lib/node_modules/npm on
-                // Unix, <prefix>/node_modules/npm on Windows.
-                const FilePath npmBin = HostOsInfo::isWindowsHost()
-                    ? binDir.pathAppended("node_modules/npm/bin")
-                    : binDir.parentDir().pathAppended("lib/node_modules/npm/bin");
-                if (base == "node" && node.exists()) {
-                    cmd.setExecutable(node);
-                } else if ((base == "npx" || base == "npm") && node.exists()
-                           && npmBin.pathAppended(base + "-cli.js").exists()) {
-                    cmd = CommandLine(node, {npmBin.pathAppended(base + "-cli.js").path()});
-                    cmd.addArgs(m_cmd.arguments(), CommandLine::Raw);
-                }
-                if (cmd.executable() != m_cmd.executable()) {
-                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << cmd.toUserOutput();
-                    env.prependOrSetPath(binDir);
-                }
-            }
-        }
-    }
-    m_process->setCommand(cmd);
+    m_process->setCommand(m_cmd);
     if (!m_workingDirectory.isEmpty())
         m_process->setWorkingDirectory(m_workingDirectory);
-    m_process->setEnvironment(env);
     // OPENMV-DIFF //
+    if (bundledEnv)
+        m_process->setEnvironment(*bundledEnv);
+    else
+    // OPENMV-DIFF //
+    if (m_env)
+        m_process->setEnvironment(*m_env);
+    else
+        m_process->setEnvironment(m_cmd.executable().deviceEnvironment());
 
     qCDebug(logStdio) << "Starting:" << m_cmd.toUserOutput();
     m_process->start();
