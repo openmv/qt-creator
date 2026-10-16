@@ -153,7 +153,9 @@ public:
     {
         ActionBuilder inspectAction(this, "McpServer.Inspector");
         inspectAction.setText(Tr::tr("Inspect MCP Server..."));
-        inspectAction.addToContainer(Core::Constants::M_TOOLS_DEBUG);
+        // OPENMV-DIFF //
+        // inspectAction.addToContainer(Core::Constants::M_TOOLS_DEBUG);
+        // OPENMV-DIFF //
         inspectAction.addOnTriggered([this] { inspector.show(); });
 
         m_server.setInspector(&inspector);

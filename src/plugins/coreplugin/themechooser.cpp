@@ -26,7 +26,7 @@ namespace Core::Internal {
 const char themeNameKey[] = "ThemeName";
 // OPENMV-DIFF //
 // Synthetic theme id that follows the host's system color scheme at startup,
-// resolving to flat-light or flat-dark. It is OpenMV's default.
+// resolving to flat-light or flat-dark.
 const char themeAutoId[] = "auto";
 // OPENMV-DIFF //
 
@@ -141,12 +141,12 @@ Id ThemeEntry::defaultThemeId()
 {
     // OPENMV-DIFF //
     // OpenMV ships only flat-light / flat-dark, so the upstream
-    // light-2024 / dark-2024 / flat defaults do not exist here. Default to the
-    // synthetic "Auto" entry, which tracks the system color scheme at startup.
+    // light-2024 / dark-2024 / flat defaults do not exist here. Default to
+    // flat-dark; "Auto" (follow the system color scheme) stays selectable.
     // return Theme::systemColorScheme() == Qt::ColorScheme::Light ? "light-2024"
     //      : Theme::systemColorScheme() == Qt::ColorScheme::Dark  ? "dark-2024"
     //                                                             : "flat";
-    return themeAutoId;
+    return "flat-dark";
     // OPENMV-DIFF //
 }
 
@@ -209,7 +209,7 @@ QList<ThemeEntry> ThemeEntry::availableThemes()
         qWarning() << "Warning: No themes found in installation: "
                    << installThemeDir.toUserOutput();
     // OPENMV-DIFF //
-    // Prepend the synthetic "Auto" entry (the default) so it leads the selector;
+    // Prepend the synthetic "Auto" entry so it leads the selector;
     // it follows the system color scheme instead of a fixed theme. This replaces
     // the upstream "move default theme to front" reorder below.
     // const int defaultIndex = Utils::indexOf(themes, Utils::equal(&ThemeEntry::id, defaultThemeId()));
@@ -234,7 +234,16 @@ Id ThemeEntry::themeSetting()
         return Id();
     const bool settingValid = Utils::contains(themes, Utils::equal(&ThemeEntry::id, setting));
 
-    return settingValid ? setting : themes.first().id();
+    // OPENMV-DIFF //
+    // return settingValid ? setting : themes.first().id();
+    // OPENMV-DIFF //
+    // The first entry is "Auto", not the default, so fall back to the default.
+    if (settingValid)
+        return setting;
+    return Utils::contains(themes, Utils::equal(&ThemeEntry::id, defaultThemeId()))
+               ? defaultThemeId()
+               : themes.first().id();
+    // OPENMV-DIFF //
 }
 
 Theme *ThemeEntry::createTheme(Id id)

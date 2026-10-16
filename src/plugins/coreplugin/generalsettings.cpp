@@ -295,7 +295,13 @@ GeneralSettings::GeneralSettings()
         highDpiScaleFactorRoundingPolicy.addOption(option);
 
     const int defaultDpiValue = int(StyleHelper::defaultHighDpiScaleFactorRoundingPolicy());
-    highDpiScaleFactorRoundingPolicy.setDefaultValue(int(defaultDpiValue));
+    // OPENMV-DIFF //
+    // highDpiScaleFactorRoundingPolicy.setDefaultValue(int(defaultDpiValue));
+    // OPENMV-DIFF //
+    // The default is an option index, not the policy value (PassThrough is 5, past the last index).
+    highDpiScaleFactorRoundingPolicy.setDefaultValue(
+        highDpiScaleFactorRoundingPolicy.indexForItemValue(defaultDpiValue));
+    // OPENMV-DIFF //
 
     connect(&highDpiScaleFactorRoundingPolicy, &BaseAspect::changed, this, [] {
         ICore::askForRestart(
