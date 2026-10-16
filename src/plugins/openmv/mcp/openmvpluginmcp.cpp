@@ -36,6 +36,7 @@
 #include "openmvplugin.h"
 #include "openmvpluginio.h"
 #include "openmvromfs.h"
+#include "openmvterminal.h"
 #include "views/openmvpluginfb.h"
 #include "mcp/omvmcpcontext.h"
 #include "mcp/omvui.h"
@@ -745,6 +746,31 @@ void OpenMVPlugin::registerMcpTools()
                 if(args.contains(QStringLiteral("text")))
                 {
                     OMVMCP::Scope scope(call);
+
+                    // A script that is still running must be stopped (and the
+                    // soft reboot given a moment) before the camera can take a
+                    // new one; the Start button is disabled in that state.
+                    if(m_running)
+                    {
+                        m_iodevice->scriptStop();
+                        awaitSignal(m_iodevice, &OpenMVPluginIO::scriptStopDone, qMin(call.remainingMs(), 5000));
+
+                        QElapsedTimer settle;
+                        settle.start();
+
+                        while(m_running && (settle.elapsed() < 3000) && !call.expired())
+                        {
+                            QEventLoop loop;
+                            QTimer::singleShot(100, &loop, &QEventLoop::quit);
+                            loop.exec();
+                        }
+
+                        QEventLoop loop;
+                        QTimer::singleShot(500, &loop, &QEventLoop::quit);
+                        loop.exec();
+                        call.note(QStringLiteral("stopped the running script first"));
+                    }
+
                     m_iodevice->scriptExec(args.value(QStringLiteral("text")).toString().toUtf8());
                     bool done = awaitSignal(m_iodevice, &OpenMVPluginIO::scriptExecDone, call.remainingMs());
                     bool timedOut = m_iodevice->getTimeout();
@@ -2344,6 +2370,373 @@ void OpenMVPlugin::registerMcpTools()
 
                 if(!unknown.isEmpty()) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("Not a valid value for: %1.").arg(unknown.join(QStringLiteral(", "))), out);
                 return okResult(out);
+            });
+    }
+
+    // ---- frame buffer recording ---------------------------------------------
+    // The bar's Record / Stop buttons; Stop runs the Save Video flow (path,
+    // optional rescale, ffmpeg) with the answers pre-supplied.
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_framebuffer_record_start"))
+            .title(QStringLiteral("Start recording the frame buffer"))
+            .description(QStringLiteral("Starts recording the frames the IDE receives, like the Record button above the Frame Buffer. Stop and save with openmv_framebuffer_record_stop. Needs frames arriving from a running script."))
+            .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false)),
+        [this](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            if(!m_beginRecordingButton || !m_endRecordingButton) return errResult(QStringLiteral("not_available"), QStringLiteral("The Frame Buffer bar does not exist yet."));
+            if(m_endRecordingButton->isVisible()) return okResult(QJsonObject{{QStringLiteral("recording"), true}, {QStringLiteral("alreadyRecording"), true}});
+            if(!m_beginRecordingButton->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("No frames are arriving; run a script that streams the frame buffer first."));
+
+            m_beginRecordingButton->click();
+            return okResult(QJsonObject{{QStringLiteral("recording"), m_endRecordingButton->isVisible()}});
+        });
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Where to save the video; the extension picks the container (.mp4, .gif, .avi..., or .bin for OpenMV ImageReader).")}});
+        in.addProperty(QStringLiteral("width"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Rescale to this width keeping the aspect ratio (default: no rescale).")}});
+        in.addProperty(QStringLiteral("skipFrames"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("For .bin output: keep one frame in every skipFrames+1 (default 0).")}});
+        in.addRequired(QStringLiteral("path"));
+        addEmbed(in);
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_framebuffer_record_stop"))
+                .title(QStringLiteral("Stop recording and save the video"))
+                .description(QStringLiteral("Stops the frame buffer recording and converts it to `path` with the bundled ffmpeg, exactly like the Stop button and the Save Video dialog. Takes a few seconds per minute of video."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this, runFlow](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(path.isEmpty() || QFileInfo(path).completeSuffix().isEmpty()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` needs a file extension."));
+                if(!m_endRecordingButton || !m_endRecordingButton->isVisible()) return errResult(QStringLiteral("not_available"), QStringLiteral("Nothing is being recorded."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("video.save_path"), path);
+                call.answers.insert(OMV_UI_SITE("video.rescale"), args.contains(QStringLiteral("width")) ? QStringLiteral("Yes") : QStringLiteral("No"));
+                if(args.contains(QStringLiteral("width"))) call.answers.insert(OMV_UI_SITE("video.scale"), args.value(QStringLiteral("width")).toInt());
+                call.answers.insert(OMV_UI_SITE("video.skip_frames"), (args.value(QStringLiteral("skipFrames")).toInt() > 0) ? QStringLiteral("Yes") : QStringLiteral("No"));
+                call.answers.insert(OMV_UI_SITE("video.skip"), args.value(QStringLiteral("skipFrames")).toInt());
+
+                runFlow(call, [this] { m_endRecordingButton->click(); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("path"), path);
+                if(call.hasErrors(2) || !QFileInfo::exists(path)) return errResult(QStringLiteral("failed"), QStringLiteral("The video was not written; see errors."), out);
+                return fileResult(out, path, args.value(QStringLiteral("embed")).toBool());
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    // ---- channel recording --------------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("channel"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("The channel name (as in openmv_channels_get).")}});
+        in.addProperty(QStringLiteral("record"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("The waveform or depth record name.")}});
+        in.addProperty(QStringLiteral("path"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("Output file; the extension picks the format (.csv, .wav, .json / .cbor for Edge Impulse, .npy) as the row's Record button offers.")}});
+        in.addRequired(QStringLiteral("channel")).addRequired(QStringLiteral("record")).addRequired(QStringLiteral("path"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_channel_record_start"))
+                .title(QStringLiteral("Start recording a channel to a file"))
+                .description(QStringLiteral("Records a published waveform or depth record to `path` as new data arrives, like the Record button on its row in the Channels pane. Stop with openmv_channel_record_stop."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_connected || !m_channelsView) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
+                QString error;
+                const QString channel = args.value(QStringLiteral("channel")).toString();
+                const QString record = args.value(QStringLiteral("record")).toString();
+                const QString path = args.value(QStringLiteral("path")).toString();
+
+                if(!m_channelsView->startRecording(channel, record, path, &error)) return errResult(QStringLiteral("failed"), error);
+                return okResult(QJsonObject{{QStringLiteral("channel"), channel}, {QStringLiteral("record"), record}, {QStringLiteral("path"), path}, {QStringLiteral("recording"), true}});
+            });
+
+        Tool::InputSchema st;
+        st.addProperty(QStringLiteral("channel"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}});
+        st.addProperty(QStringLiteral("record"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}});
+        st.addRequired(QStringLiteral("channel")).addRequired(QStringLiteral("record"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_channel_record_stop"))
+                .title(QStringLiteral("Stop recording a channel"))
+                .description(QStringLiteral("Stops a recording started with openmv_channel_record_start and finalises the file."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(st),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_channelsView) return errResult(QStringLiteral("not_available"), QStringLiteral("The Channels pane does not exist yet."));
+
+                QString status;
+                const QString channel = args.value(QStringLiteral("channel")).toString();
+                const QString record = args.value(QStringLiteral("record")).toString();
+
+                if(!m_channelsView->stopRecording(channel, record, &status)) return errResult(QStringLiteral("not_available"), QStringLiteral("\"%1/%2\" is not being recorded.").arg(channel, record));
+                return okResult(QJsonObject{{QStringLiteral("channel"), channel}, {QStringLiteral("record"), record}, {QStringLiteral("status"), status}});
+            });
+    }
+
+    // ---- openmv_terminal_write ----------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("text"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Bytes to send to the script's stdin, exactly as typed into the Serial Terminal (add \"\\n\" for Enter).")}});
+        in.addRequired(QStringLiteral("text"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_terminal_write"))
+                .title(QStringLiteral("Type into the camera's serial terminal"))
+                .description(QStringLiteral("Sends text to the running script's stdin (input(), sys.stdin), like typing in the Serial Terminal pane. Read the reply with openmv_terminal_read."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                if(!m_connected || !m_iodevice) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
+                const QByteArray text = params.argumentsAsObject().value(QStringLiteral("text")).toString().toUtf8();
+                const qint64 cursor = m_mcpTerminalDropped + m_mcpTerminalLog.size();
+
+                // Only the V1 debug protocol carries stdin; V2 firmware does not
+                // accept terminal input from the IDE yet (typing in the pane is
+                // a no-op there too).
+                if(m_iodevice->v2ProtocolEnabled())
+                {
+                    return errResult(QStringLiteral("unsupported_on_v2"), QStringLiteral("This camera's firmware (debug protocol V2) does not accept terminal input from the IDE."));
+                }
+
+                m_iodevice->mainTerminalInput(text);
+
+                return okResult(QJsonObject{{QStringLiteral("bytes"), text.size()}, {QStringLiteral("terminalCursor"), cursor}});
+            });
+    }
+
+    // ---- extra terminal windows ---------------------------------------------
+    // Tools > Open Terminal: serial / UDP / TCP terminals in their own windows,
+    // independent of the camera connection.
+
+    auto terminalWindows = [] {
+        QList<OpenMVTerminal *> list;
+        for(QWidget *w : QApplication::topLevelWidgets())
+        {
+            if(OpenMVTerminal *t = qobject_cast<OpenMVTerminal *>(w)) list.append(t);
+        }
+        return list;
+    };
+
+    auto terminalByName = [terminalWindows](const QString &name) -> OpenMVTerminal * {
+        for(OpenMVTerminal *t : terminalWindows())
+        {
+            if(t->windowTitle().compare(name, Qt::CaseInsensitive) == 0) return t;
+        }
+        return Q_NULLPTR;
+    };
+
+    auto terminalsJson = [this, terminalWindows] {
+        QJsonArray open;
+        for(OpenMVTerminal *t : terminalWindows()) open.append(QJsonObject{{QStringLiteral("name"), t->windowTitle()}, {QStringLiteral("cursor"), t->mcpLogBase() + t->mcpLog().size()}});
+
+        QJsonArray known;
+        for(const openTerminalMenuData_t &data : std::as_const(m_openTerminalMenuData)) known.append(data.displayName);
+
+        return QJsonObject{{QStringLiteral("open"), open}, {QStringLiteral("known"), known}};
+    };
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_terminals_list"))
+            .title(QStringLiteral("List terminal windows"))
+            .description(QStringLiteral("The extra terminal windows that are open (serial / UDP / TCP, by their window title) and the ones the Open Terminal menu remembers."))
+            .annotations(ToolAnnotations{}.readOnlyHint(true)),
+        [terminalsJson](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            return okResult(terminalsJson());
+        });
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("kind"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("enum"), QJsonArray{QStringLiteral("serial"), QStringLiteral("udp"), QStringLiteral("tcp")}},
+            {QStringLiteral("description"), QStringLiteral("What to connect to.")}});
+        in.addProperty(QStringLiteral("port"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("serial: the port (from openmv_list_ports).")}});
+        in.addProperty(QStringLiteral("baud"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}, {QStringLiteral("description"), QStringLiteral("serial: baud rate (default 115200).")}});
+        in.addProperty(QStringLiteral("mode"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("enum"), QJsonArray{QStringLiteral("client"), QStringLiteral("server")}}, {QStringLiteral("description"), QStringLiteral("udp/tcp: connect to a server, or start one (default client).")}});
+        in.addProperty(QStringLiteral("host"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("udp/tcp client: host:port to connect to.")}});
+        in.addProperty(QStringLiteral("listenPort"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}, {QStringLiteral("description"), QStringLiteral("udp/tcp server: port to listen on (0 = any free port).")}});
+        in.addRequired(QStringLiteral("kind"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_terminal_open"))
+                .title(QStringLiteral("Open a terminal window"))
+                .description(QStringLiteral("Opens a serial, UDP or TCP terminal in its own window, exactly like Tools > Open Terminal > New Terminal, and returns its name for openmv_terminal_window_read/write."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this, runFlow, terminalsJson, terminalWindows](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString kind = args.value(QStringLiteral("kind")).toString();
+                const QStringList kinds{QStringLiteral("serial"), QStringLiteral("udp"), QStringLiteral("tcp")};
+                if(!kinds.contains(kind)) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("`kind` must be serial, udp or tcp."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("terminal.kind"), kinds.indexOf(kind)); // the option list is in that order
+                if(args.contains(QStringLiteral("port"))) call.answers.insert(OMV_UI_SITE("terminal.port"), args.value(QStringLiteral("port")).toString());
+                call.answers.insert(OMV_UI_SITE("terminal.baud"), QString::number(args.value(QStringLiteral("baud")).toInt(115200)));
+                const bool server = args.value(QStringLiteral("mode")).toString() == QStringLiteral("server");
+                call.answers.insert(OMV_UI_SITE("terminal.udp_mode"), server ? 1 : 0);
+                call.answers.insert(OMV_UI_SITE("terminal.tcp_mode"), server ? 1 : 0);
+                if(args.contains(QStringLiteral("host"))) call.answers.insert(OMV_UI_SITE("terminal.host"), args.value(QStringLiteral("host")).toString());
+                call.answers.insert(OMV_UI_SITE("terminal.listen_port"), args.value(QStringLiteral("listenPort")).toInt(0));
+
+                const QList<OpenMVTerminal *> before = terminalWindows();
+
+                // The menu's actions are rebuilt on every aboutToShow.
+                openTerminalAboutToShow();
+                QAction *newTerminal = Q_NULLPTR;
+                for(QAction *a : m_openTerminalMenu->menu()->actions())
+                {
+                    if(a->text().remove(QLatin1Char('&')) == QStringLiteral("New Terminal")) newTerminal = a;
+                }
+                if(!newTerminal) return errResult(QStringLiteral("not_available"), QStringLiteral("The New Terminal command is not available."));
+
+                runFlow(call, [newTerminal] { newTerminal->trigger(); });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("terminals"), terminalsJson());
+
+                for(OpenMVTerminal *t : terminalWindows())
+                {
+                    if(!before.contains(t)) out.insert(QStringLiteral("name"), t->windowTitle());
+                }
+
+                if(!out.contains(QStringLiteral("name"))) return errResult(QStringLiteral("failed"), QStringLiteral("No terminal window was opened; see errors."), out);
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("name"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("The terminal window's name (from openmv_terminals_list).")}});
+        in.addProperty(QStringLiteral("cursor"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}, {QStringLiteral("description"), QStringLiteral("Byte cursor from a previous read. Omitted: the most recent `maxBytes`.")}});
+        in.addProperty(QStringLiteral("maxBytes"), QJsonObject{{QStringLiteral("type"), QStringLiteral("integer")}, {QStringLiteral("description"), QStringLiteral("At most this many bytes (default 65536).")}});
+        in.addRequired(QStringLiteral("name"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_terminal_window_read"))
+                .title(QStringLiteral("Read a terminal window"))
+                .description(QStringLiteral("Text a terminal window received since `cursor`, with the cursor to pass next time (same scheme as openmv_terminal_read)."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(in),
+            [terminalByName](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                OpenMVTerminal *t = terminalByName(args.value(QStringLiteral("name")).toString());
+                if(!t) return errResult(QStringLiteral("not_available"), QStringLiteral("No open terminal window is called that; see openmv_terminals_list."));
+
+                const QByteArray log = t->mcpLog();
+                const qint64 base = t->mcpLogBase();
+                const qint64 end = base + log.size();
+                const int maxBytes = qBound(1, args.value(QStringLiteral("maxBytes")).toInt(TERMINAL_READ_DEFAULT), TERMINAL_RING_BYTES);
+                qint64 start = args.contains(QStringLiteral("cursor")) ? qint64(args.value(QStringLiteral("cursor")).toDouble()) : qMax(base, end - maxBytes);
+                const bool truncated = start < base;
+                start = qBound(base, start, end);
+                const qint64 stop = qMin(end, start + maxBytes);
+
+                return okResult(QJsonObject{
+                    {QStringLiteral("text"), QString::fromUtf8(log.mid(int(start - base), int(stop - start)))},
+                    {QStringLiteral("start"), start}, {QStringLiteral("cursor"), stop},
+                    {QStringLiteral("truncated"), truncated}, {QStringLiteral("more"), stop < end}});
+            });
+
+        Tool::InputSchema wr;
+        wr.addProperty(QStringLiteral("name"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}});
+        wr.addProperty(QStringLiteral("text"), QJsonObject{{QStringLiteral("type"), QStringLiteral("string")}, {QStringLiteral("description"), QStringLiteral("Bytes to send, exactly as typed (add \"\\n\" for Enter).")}});
+        wr.addRequired(QStringLiteral("name")).addRequired(QStringLiteral("text"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_terminal_window_write"))
+                .title(QStringLiteral("Type into a terminal window"))
+                .description(QStringLiteral("Sends text through a terminal window's connection, like typing into it."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(wr),
+            [terminalByName](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                OpenMVTerminal *t = terminalByName(args.value(QStringLiteral("name")).toString());
+                if(!t) return errResult(QStringLiteral("not_available"), QStringLiteral("No open terminal window is called that; see openmv_terminals_list."));
+
+                const QByteArray text = args.value(QStringLiteral("text")).toString().toUtf8();
+                t->mcpWrite(text);
+                return okResult(QJsonObject{{QStringLiteral("bytes"), text.size()}, {QStringLiteral("cursor"), t->mcpLogBase() + t->mcpLog().size()}});
+            });
+    }
+
+    // ---- openmv_camera_set_name ---------------------------------------------
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("name"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The name to show for this camera in place of its port (empty clears it).")}});
+        in.addRequired(QStringLiteral("name"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_camera_set_name"))
+                .title(QStringLiteral("Name the connected camera"))
+                .description(QStringLiteral("Gives the connected camera a display name (kept by its serial number) shown in place of the port in the status bar and port pickers, like clicking the port label. Pass persist:true to keep it."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_connected) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+                if(m_working) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("camera.alias"), QJsonObject{{QStringLiteral("name"), args.value(QStringLiteral("name")).toString()}});
+
+                {
+                    OMVMCP::Scope scope(call);
+                    setPortAlias();
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("name"), args.value(QStringLiteral("name")).toString());
+                out.insert(QStringLiteral("port"), m_portName);
+                if(call.hasErrors(1)) return errResult(QStringLiteral("failed"), QStringLiteral("Naming the camera reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
             });
     }
 

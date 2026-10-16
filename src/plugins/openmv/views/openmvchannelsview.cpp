@@ -4474,11 +4474,76 @@ QJsonArray OpenMVChannelsView::snapshot(bool includeData, int maxSamples) const
         if(r.waveform) o.insert(QStringLiteral("waveform"), r.waveform->describe(includeData, maxSamples));
         if(r.depth) o.insert(QStringLiteral("depth"), r.depth->describe(includeData));
         if(r.recorder) o.insert(QStringLiteral("recording"), true);
+        if(r.recordStatus && !r.recordStatus->text().isEmpty()) o.insert(QStringLiteral("recordStatus"), r.recordStatus->text());
 
         a.append(o);
     }
 
     return a;
+}
+
+bool OpenMVChannelsView::startRecording(const QString &channelName, const QString &recordName, const QString &path, QString *error)
+{
+    for(Record &r : m_records)
+    {
+        if((r.channelName != channelName) || (r.name != recordName)) continue;
+
+        if(!r.waveform && !r.depth)
+        {
+            *error = QStringLiteral("\"%1/%2\" is not a waveform or depth record.").arg(channelName, recordName);
+            return false;
+        }
+
+        if(r.recorder)
+        {
+            *error = QStringLiteral("\"%1/%2\" is already being recorded.").arg(channelName, recordName);
+            return false;
+        }
+
+        const OpenMVChannelRecorder::Info info = infoFor(r);
+        const QList<OpenMVChannelRecorder::Format> formats = OpenMVChannelRecorder::supportedFormats(info);
+        QStringList suffixes;
+        std::optional<OpenMVChannelRecorder::Format> format;
+
+        for(OpenMVChannelRecorder::Format f : formats)
+        {
+            suffixes.append(OpenMVChannelRecorder::suffixFor(f));
+            if(path.endsWith(QLatin1Char('.') + OpenMVChannelRecorder::suffixFor(f), Qt::CaseInsensitive)) format = f;
+        }
+
+        if(!format)
+        {
+            *error = (info.columns <= 0) ? QStringLiteral("No data to record yet.")
+                   : QStringLiteral("The extension must be one of: %1.").arg(suffixes.join(QStringLiteral(", ")));
+            return false;
+        }
+
+        if(!startRecorder(r, path, *format, false))
+        {
+            *error = r.recordStatus ? r.recordStatus->text() : QStringLiteral("Recording did not start.");
+            return false;
+        }
+
+        updateRecordButtonStates();
+        return true;
+    }
+
+    *error = QStringLiteral("No record \"%1/%2\" is published.").arg(channelName, recordName);
+    return false;
+}
+
+bool OpenMVChannelsView::stopRecording(const QString &channelName, const QString &recordName, QString *status)
+{
+    for(Record &r : m_records)
+    {
+        if((r.channelName != channelName) || (r.name != recordName) || !r.recorder) continue;
+        stopRecorder(r);
+        updateRecordButtonStates();
+        *status = r.recordStatus ? r.recordStatus->text() : QString();
+        return true;
+    }
+
+    return false;
 }
 
 bool OpenMVChannelsView::write(const QString &channelName, const QString &recordName, const QJsonValue &value)

@@ -1088,6 +1088,11 @@ OpenMVTerminal::OpenMVTerminal(const QString &displayName, Utils::QtcSettings *s
 
     m_edit = new MyPlainTextEdit(m_settings->value(FONT_ZOOM_STATE, TextEditor::TextEditorSettings::fontSettings().defaultFontSize()).toReal());
     connect(this, &OpenMVTerminal::readBytes, m_edit, &MyPlainTextEdit::readBytes);
+    connect(this, &OpenMVTerminal::readBytes, this, [this] (const QByteArray &data) {
+        // MCP: a bounded copy of everything shown, read with absolute cursors.
+        m_mcpLog.append(data);
+        if(m_mcpLog.size() > (1 << 20)) { const int drop = m_mcpLog.size() - (1 << 20); m_mcpLog.remove(0, drop); m_mcpLogBase += drop; }
+    });
     connect(m_edit, &MyPlainTextEdit::writeBytes, this, &OpenMVTerminal::writeBytes);
     connect(m_edit, &MyPlainTextEdit::execScript, this, &OpenMVTerminal::execScript);
     connect(m_edit, &MyPlainTextEdit::interruptScript, this, &OpenMVTerminal::interruptScript);

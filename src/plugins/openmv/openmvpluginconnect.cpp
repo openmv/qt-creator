@@ -1809,6 +1809,7 @@ void OpenMVPlugin::setPortAlias()
     form->addRow(Tr::tr("Serial port:"), new QLabel(m_portName, &dialog));
 
     QLineEdit *aliasEdit = new QLineEdit(cameraAlias(key), &dialog);
+    aliasEdit->setObjectName(QStringLiteral("name")); // MCP form field name
     aliasEdit->setClearButtonEnabled(true);
     aliasEdit->setMinimumWidth(220);
     form->addRow(Tr::tr("Name:"), aliasEdit);
@@ -1819,7 +1820,7 @@ void OpenMVPlugin::setPortAlias()
     connect(buttons, &QDialogButtonBox::accepted, &dialog, &QDialog::accept);
     connect(buttons, &QDialogButtonBox::rejected, &dialog, &QDialog::reject);
 
-    if(OMVUI::exec(dialog) != QDialog::Accepted)
+    if(OMVUI::exec(dialog, OMV_UI_SITE("camera.alias")) != QDialog::Accepted)
     {
         return;
     }

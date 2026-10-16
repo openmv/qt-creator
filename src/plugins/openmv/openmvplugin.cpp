@@ -2298,12 +2298,14 @@ void OpenMVPlugin::extensionsInitialized()
     styledBar0->setLayout(styledBar0Layout);
 
     QToolButton *beginRecordingButton = new QToolButton;
+    m_beginRecordingButton = beginRecordingButton;
     beginRecordingButton->setText(Tr::tr("Record"));
     beginRecordingButton->setToolTip(Tr::tr("Record the Frame Buffer"));
     beginRecordingButton->setEnabled(false);
     styledBar0Layout->addWidget(beginRecordingButton);
 
     QToolButton *endRecordingButton = new QToolButton;
+    m_endRecordingButton = endRecordingButton;
     endRecordingButton->setText(Tr::tr("Stop"));
     endRecordingButton->setToolTip(Tr::tr("Stop recording"));
     endRecordingButton->setVisible(false);
@@ -5241,7 +5243,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
             Tr::tr("New Terminal"), Tr::tr("Please select an option"),
             optionList, (optionListIndex != -1) ? optionListIndex : 0, false, &optionNameOk,
             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), Qt::ImhNone, OMV_UI_SITE("terminal.kind"));
 
         if(optionNameOk)
         {
@@ -5272,7 +5274,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             Tr::tr("New Terminal"), Tr::tr("Please select a serial port"),
                             stringList, (index != -1) ? index : 0, false, &portNameValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), Qt::ImhNone, OMV_UI_SITE("terminal.port"));
 
                         if(portNameValueOk)
                         {
@@ -5281,7 +5283,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                                 Tr::tr("New Terminal"), Tr::tr("Please enter a baud rate"),
                                 QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_SERIAL_PORT_BAUD_RATE, QStringLiteral("115200")).toString(), &baudRateOk,
                                 Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), Qt::ImhNone, OMV_UI_SITE("terminal.baud"));
 
                             if(baudRateOk && (!baudRate.isEmpty()))
                             {
@@ -5409,7 +5411,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                 {
                     int boxChoice = OMVUI::choiceBox(QMessageBox::Question, Core::ICore::dialogParent(), Tr::tr("New Terminal"), Tr::tr("Connect to a UDP server as a client or start a UDP Server?"),
                         QStringList() << Tr::tr(" Connect to a Server ") << Tr::tr(" Start a Server "),
-                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0).toInt() ? 1 : 0);
+                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_TYPE_SELECT, 0).toInt() ? 1 : 0, false, OMV_UI_SITE("terminal.udp_mode"));
 
                     if(boxChoice == 0)
                     {
@@ -5418,7 +5420,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
                             QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), Qt::ImhNone, OMV_UI_SITE("terminal.host"));
 
                         if(hostNameOk && (!hostName.isEmpty()))
                         {
@@ -5542,7 +5544,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
                             settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_UDP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("terminal.listen_port"));
 
                         if(portValueOk)
                         {
@@ -5647,7 +5649,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                 {
                     int boxChoice = OMVUI::choiceBox(QMessageBox::Question, Core::ICore::dialogParent(), Tr::tr("New Terminal"), Tr::tr("Connect to a TCP server as a client or start a TCP Server?"),
                         QStringList() << Tr::tr(" Connect to a Server ") << Tr::tr(" Start a Server "),
-                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0).toInt() ? 1 : 0);
+                        settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_TYPE_SELECT, 0).toInt() ? 1 : 0, false, OMV_UI_SITE("terminal.tcp_mode"));
 
                     if(boxChoice == 0)
                     {
@@ -5656,7 +5658,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             Tr::tr("New Terminal"), Tr::tr("Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)"),
                             QLineEdit::Normal, settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_PORT, QStringLiteral("xxx.xxx.xxx.xxx:xxxx")).toString(), &hostNameOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), Qt::ImhNone, OMV_UI_SITE("terminal.host"));
 
                         if(hostNameOk && (!hostName.isEmpty()))
                         {
@@ -5780,7 +5782,7 @@ void OpenMVPlugin::openTerminalAboutToShow()
                             Tr::tr("New Terminal"), Tr::tr("Please enter a port number (enter 0 for any random free port)"),
                             settings->value(SETTINGS_GROUP "/" LAST_OPEN_TERMINAL_TCP_SERVER_PORT, 0).toInt(), 0, 65535, 1, &portValueOk,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("terminal.listen_port"));
 
                         if(portValueOk)
                         {

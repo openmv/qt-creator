@@ -862,6 +862,8 @@ private:
     // Streaming mode selector: "JPEG Mode" (data true = jpegEnable) or
     // "RAW Mode" (data false). States the requested mode explicitly.
     QComboBox *m_jpgCompress;
+    QToolButton *m_beginRecordingButton = Q_NULLPTR; // the Frame Buffer bar's Record / Stop (MCP clicks them)
+    QToolButton *m_endRecordingButton = Q_NULLPTR;
     bool jpgCompressEnabled() const { return m_jpgCompress->currentData().toBool(); }
     void setJpgCompressEnabled(bool enable) { m_jpgCompress->setCurrentIndex(enable ? 0 : 1); }
     // Actual format of the frames arriving from the camera (V2 protocol);

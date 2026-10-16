@@ -68,6 +68,7 @@
 #define H264_GOP_SIZE       (30)
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -1621,7 +1622,7 @@ void convertVideoFileAction(const QString &drivePath)
                     int rescale = OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Convert Video"),
                         Tr::tr("Rescale the video?"),
-                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.rescale"));
 
                     if(rescale != QMessageBox::Cancel)
                     {
@@ -1635,7 +1636,7 @@ void convertVideoFileAction(const QString &drivePath)
                                     Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                                     settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                                     Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                    (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.scale"));
                         }
 
                         if(ok)
@@ -1643,7 +1644,7 @@ void convertVideoFileAction(const QString &drivePath)
                             int skipFrames = ext.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? OMVUI::information(Core::ICore::dialogParent(),
                                 Tr::tr("Convert Video"),
                                 Tr::tr("Skip frames?"),
-                                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
+                                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.skip_frames")) : QMessageBox::No;
 
                             if(skipFrames != QMessageBox::Cancel)
                             {
@@ -1657,7 +1658,7 @@ void convertVideoFileAction(const QString &drivePath)
                                            Tr::tr("Enter how many frames to skip at a time"),
                                            settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                            Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                           (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                           (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.skip"));
                                 }
 
                                 if(ok)
@@ -1729,7 +1730,7 @@ void convertVideoFileAction(const QString &drivePath)
             dst =
             OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Convert Video Output"),
                 settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_DST_PATH, QDir::homePath()).toString(),
-                Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
+                Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats(), Q_NULLPTR, QFileDialog::Options(), OMV_UI_SITE("video.save_path"));
 
             if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
             {
@@ -1748,7 +1749,7 @@ void convertVideoFileAction(const QString &drivePath)
             int rescale = OMVUI::information(Core::ICore::dialogParent(),
                 Tr::tr("Convert Video"),
                 Tr::tr("Rescale the video?"),
-                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+                QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.rescale"));
 
             if(rescale != QMessageBox::Cancel)
             {
@@ -1762,7 +1763,7 @@ void convertVideoFileAction(const QString &drivePath)
                             Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                             settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                             Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                            (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.scale"));
                 }
 
                 if(ok)
@@ -1770,7 +1771,7 @@ void convertVideoFileAction(const QString &drivePath)
                     int skipFrames = dst.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? OMVUI::information(Core::ICore::dialogParent(),
                         Tr::tr("Convert Video"),
                         Tr::tr("Skip frames?"),
-                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
+                        QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.skip_frames")) : QMessageBox::No;
 
                     if(skipFrames != QMessageBox::Cancel)
                     {
@@ -1784,7 +1785,7 @@ void convertVideoFileAction(const QString &drivePath)
                                    Tr::tr("Enter how many frames to skip at a time"),
                                    settings->value(VIDEO_SETTINGS_GROUP "/" LAST_CONVERT_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                    Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                   (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                   (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.skip"));
                         }
 
                         if(ok)
@@ -1933,7 +1934,7 @@ void saveVideoFile(const QString &srcPath)
         dst =
         OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Save Video"),
             settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_PATH, QDir::homePath()).toString(),
-            Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats());
+            Tr::tr("Video Files (*.mp4 *.*);;OpenMV ImageReader Files (*.bin);;") + getOutputFormats(), Q_NULLPTR, QFileDialog::Options(), OMV_UI_SITE("video.save_path"));
 
         if((!dst.isEmpty()) && QFileInfo(dst).completeSuffix().isEmpty())
         {
@@ -1952,7 +1953,7 @@ void saveVideoFile(const QString &srcPath)
         int rescale = OMVUI::information(Core::ICore::dialogParent(),
             Tr::tr("Convert Video"),
             Tr::tr("Rescale the video?"),
-            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No);
+            QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.rescale"));
 
         if(rescale != QMessageBox::Cancel)
         {
@@ -1966,7 +1967,7 @@ void saveVideoFile(const QString &srcPath)
                         Tr::tr("Enter a new width (the aspect ratio will be kept the same)"),
                         settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_HRES, 320).toInt(), 16, 65535, 1, &ok,
                         Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                        (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.scale"));
             }
 
             if(ok)
@@ -1974,7 +1975,7 @@ void saveVideoFile(const QString &srcPath)
                 int skipFrames = dst.endsWith(QStringLiteral(".bin"), Qt::CaseInsensitive) ? OMVUI::information(Core::ICore::dialogParent(),
                     Tr::tr("Convert Video"),
                     Tr::tr("Skip frames?"),
-                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No) : QMessageBox::No;
+                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("video.skip_frames")) : QMessageBox::No;
 
                 if(skipFrames != QMessageBox::Cancel)
                 {
@@ -1988,7 +1989,7 @@ void saveVideoFile(const QString &srcPath)
                                Tr::tr("Enter how many frames to skip at a time"),
                                settings->value(VIDEO_SETTINGS_GROUP "/" LAST_SAVE_VIDEO_SKIP, 0).toInt(), 0, 255, 1, &ok,
                                Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                               (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                               (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint), OMV_UI_SITE("video.skip"));
                     }
 
                     if(ok)

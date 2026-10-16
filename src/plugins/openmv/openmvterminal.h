@@ -139,6 +139,11 @@ public:
     explicit OpenMVTerminal(const QString &displayName, Utils::QtcSettings *settings, const Core::Context &context, bool stand_alone = false, QWidget *parent = Q_NULLPTR);
     ~OpenMVTerminal();
 
+    // MCP: what the window showed (bounded) and typing into it.
+    QByteArray mcpLog() const { return m_mcpLog; }
+    qint64 mcpLogBase() const { return m_mcpLogBase; }
+    void mcpWrite(const QByteArray &data) { emit writeBytes(data); }
+
 signals:
 
     void readBytes(const QByteArray &data);
@@ -171,6 +176,8 @@ private:
     Core::IContext *m_context;
     QString m_styleSheet, m_highDPIStyleSheet;
     qreal m_devicePixelRatio;
+    QByteArray m_mcpLog;
+    qint64 m_mcpLogBase = 0;
 };
 
 // Base ///////////////////////////////////////////////////////////////////////

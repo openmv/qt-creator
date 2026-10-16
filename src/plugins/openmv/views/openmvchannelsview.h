@@ -390,6 +390,11 @@ public:
     // pane is frozen (no script running) or no such control exists.
     bool write(const QString &channelName, const QString &recordName, const QJsonValue &value);
 
+    // Record a waveform/depth record to `path` (format from its extension, as
+    // the row's Record button offers) and stop again. For MCP.
+    bool startRecording(const QString &channelName, const QString &recordName, const QString &path, QString *error);
+    bool stopRecording(const QString &channelName, const QString &recordName, QString *status);
+
 signals:
 
     // A control changed: raw CBOR write payload for the named channel.
