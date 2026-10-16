@@ -564,6 +564,10 @@ bool EditorView::isShowingTabs() const
 
 void EditorView::setTabsVisible(bool visible)
 {
+    // OPENMV-DIFF //
+    // The TabbedEditor plugin provides the tabs; never show a second tab row.
+    visible = false;
+    // OPENMV-DIFF //
     m_isShowingTabs = visible;
     m_tabBar->setVisible(m_isShowingTabs);
     m_toolBar->setDocumentDropdownVisible(!visible);

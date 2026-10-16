@@ -2120,6 +2120,8 @@ void OpenMVPlugin::extensionsInitialized()
             Core::Command *docsPageCommand = Core::ActionManager::registerAction(docsPageAction,
                 Utils::Id::fromName(commandId));
             docsMenu->addAction(docsPageCommand);
+            if(page.path == docsPages.first().path)
+                docsMenu->addSeparator();
             connect(docsPageAction, &QAction::triggered, this, [this, path] {
                 // Resolve "html/..." against the dev docs (html-dev) when a dev cam
                 // is attached and that cache exists, otherwise the released html.

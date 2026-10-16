@@ -843,24 +843,16 @@ void FancyTabWidget::paintEvent(QPaintEvent *event)
 
         QRect rect = m_selectionWidget->rect().adjusted(0, 0, 1, 0);
         rect = QStyle::visualRect(layoutDirection(), geometry(), rect);
-        // OPENMV-DIFF //
-        // const QRectF boderRect = QRectF(rect).adjusted(0.5, 0.5, -0.5, -0.5);
-        // OPENMV-DIFF //
+        const QRectF boderRect = QRectF(rect).adjusted(0.5, 0.5, -0.5, -0.5);
 
         if (creatorTheme()->flag(Theme::FlatToolBars)) {
             painter.fillRect(rect, StyleHelper::baseColor());
             painter.setPen(StyleHelper::toolBarBorderColor());
-            // OPENMV-DIFF //
-            // No edge line beside the mode tabs: the selected tab is already lit.
-            // painter.drawLine(boderRect.topRight(), boderRect.bottomRight());
-            // OPENMV-DIFF //
+            painter.drawLine(boderRect.topRight(), boderRect.bottomRight());
         } else {
             StyleHelper::verticalGradient(&painter, rect, rect);
             painter.setPen(StyleHelper::borderColor());
-            // OPENMV-DIFF //
-            // No edge line beside the mode tabs: the selected tab is already lit.
-            // painter.drawLine(boderRect.topRight(), boderRect.bottomRight());
-            // OPENMV-DIFF //
+            painter.drawLine(boderRect.topRight(), boderRect.bottomRight());
 
             // OPENMV-DIFF //
             // const QColor light = StyleHelper::sidebarHighlight();

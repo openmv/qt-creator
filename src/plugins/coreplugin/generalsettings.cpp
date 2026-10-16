@@ -226,8 +226,15 @@ GeneralSettings::GeneralSettings()
     preferInfoBarOverPopup.setDefaultValue(false);
     preferInfoBarOverPopup.setLabelText(Tr::tr("Prefer banner style info bars over pop-ups"));
 
-    useTabsInEditorViews.setSettingsKey("General/UseTabsInEditorViews");
+    // OPENMV-DIFF //
+    // useTabsInEditorViews.setSettingsKey("General/UseTabsInEditorViews");
+    // useTabsInEditorViews.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // Qt Creator's tabbed editors are always off (the TabbedEditor plugin provides
+    // the tabs): no settings key, so a stored "on" is never loaded, and the
+    // checkbox is not offered. EditorView::setTabsVisible() also refuses them.
     useTabsInEditorViews.setDefaultValue(false);
+    // OPENMV-DIFF //
     useTabsInEditorViews.setLabelText(Tr::tr("Use tabbed editors"));
 
     showOkAndCancelInSettingsMode.setSettingsKey("General/ShowOkAndCancelInSettingsMode");
@@ -360,7 +367,7 @@ GeneralSettings::GeneralSettings()
                 // provideSplitterCursors, st, br,
                 // OPENMV-DIFF //
                 preferInfoBarOverPopup, st, br,
-                useTabsInEditorViews, st, br,
+                // useTabsInEditorViews, st, br, // Always off.
                 showOkAndCancelInSettingsMode, st, br,
                 // OPENMV-DIFF //
                 // Serial Terminal Tab size (viewer mode only). Applied immediately on change

@@ -14,6 +14,9 @@
 
 // OPENMV-DIFF //
 #include <extensionsystem/pluginmanager.h>
+#include <coreplugin/editortoolbar.h>
+
+#include <QApplication>
 // OPENMV-DIFF //
 
 using namespace TabbedEditor::Internal;
@@ -39,15 +42,29 @@ Utils::Result<> TabbedEditorPlugin::initialize(const QStringList &arguments)
 #endif
     // OPENMV-DIFF //
 
-    // The tab bar belongs to the editor area (above the editors, beside the
-    // frame buffer), not across the whole window above every mode. The Edit
-    // mode's widget exists once the core has opened; fall back to wrapping the
-    // central widget if its editor area cannot be found.
+    // The tab bar belongs to the editor area (beside the frame buffer), not
+    // across the whole window above every mode. It goes just below the editor
+    // view's toolbar so that toolbar lines up with the frame buffer's title bar.
+    // The Edit mode's widget exists once the core has opened; fall back to the
+    // top of the editor area, then to wrapping the central widget.
     m_tabBar = new TabBar();
     connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, [this] {
         QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
         QWidget *editorArea = mainWindow->findChild<QWidget *>(QLatin1String("EditModeEditorArea"));
         QVBoxLayout *editorLayout = editorArea ? qobject_cast<QVBoxLayout *>(editorArea->layout()) : nullptr;
+
+        // The main editor view's toolbar; its parent is the (internal) EditorView.
+        for (QWidget *widget : QApplication::allWidgets()) {
+            Core::EditorToolBar *editorToolBar = qobject_cast<Core::EditorToolBar *>(widget);
+            QWidget *editorView = editorToolBar ? editorToolBar->parentWidget() : nullptr;
+            if (!editorView || qstrcmp(editorView->metaObject()->className(), "Core::Internal::EditorView"))
+                continue;
+            QVBoxLayout *viewLayout = qobject_cast<QVBoxLayout *>(editorView->layout());
+            if (viewLayout && viewLayout->indexOf(editorToolBar) >= 0) {
+                viewLayout->insertWidget(viewLayout->indexOf(editorToolBar) + 1, m_tabBar);
+                return;
+            }
+        }
 
         if (editorLayout) {
             editorLayout->insertWidget(0, m_tabBar);
