@@ -47,14 +47,23 @@ public:
     static QString ensureRegistryServer(const QString &id);
     // Registry ids of the agents shown first in a new chat, in display order.
     static QList<const char *> defaultRegistryAgents() { return {"claude-acp", "codex-acp", "gemini"}; }
-    // The registry agents people actually use, most used first; the rest of the
-    // registry follows them in the chat's agent grid.
-    static QList<const char *> rankedRegistryAgents()
+    // The chat's agent picker: a few popular agents always shown, the rest in
+    // collapsible groups. Agents missing from every group land in the last one.
+    struct AgentGroup
     {
-        return {"claude-acp", "codex-acp", "gemini", "github-copilot-cli", "cursor", "antigravity-acp",
-                "qwen-code", "kimi", "glm-acp-agent", "minimax-code", "codebuddy-code", "qoder",
-                "grok-build", "mistral-vibe", "opencode", "cline", "kilo", "goose", "amp-acp",
-                "devin", "junie", "factory-droid", "auggie", "bob", "cortex-code", "poolside"};
+        const char *key;   // settings key
+        const char *title; // empty: shown without a header, always open
+        QList<const char *> ids;
+    };
+    static QList<AgentGroup> agentGroups()
+    {
+        return {{"popular", "", {"claude-acp", "codex-acp", "gemini", "github-copilot-cli", "cursor", "grok-build"}},
+                {"providers", QT_TRANSLATE_NOOP("QtC::AcpClient", "More providers"),
+                 {"antigravity-acp", "mistral-vibe", "qwen-code", "kimi", "glm-acp-agent", "minimax-code",
+                  "codebuddy-code", "qoder", "devin", "junie", "bob", "cortex-code"}},
+                {"opensource", QT_TRANSLATE_NOOP("QtC::AcpClient", "Open source"),
+                 {"opencode", "cline", "kilo", "goose", "deepagents", "fast-agent", "pi-acp", "vtcode", "stakpak", "sigit"}},
+                {"other", QT_TRANSLATE_NOOP("QtC::AcpClient", "Everything else"), {}}};
     }
     // OPENMV-DIFF //
 

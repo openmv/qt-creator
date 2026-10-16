@@ -53,7 +53,7 @@ private:
     QStackedWidget *m_configStack;
     // OPENMV-DIFF //
     // QVBoxLayout *m_serverButtonsLayout = nullptr;
-    QGridLayout *m_serverButtonsLayout = nullptr;
+    QVBoxLayout *m_serverGroupsLayout = nullptr;
     // OPENMV-DIFF //
     Utils::InfoLabel *m_noServerLabel;
     QLabel *m_connectionErrorLabel = nullptr;
