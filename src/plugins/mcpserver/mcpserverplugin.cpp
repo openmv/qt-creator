@@ -199,11 +199,16 @@ public:
         } else {
             qCInfo(mcpPlugin) << "MCP server started successfully on" << tcpServer->serverAddress()
                               << ":" << tcpServer->serverPort();
-            // Show startup message in General Messages panel
-            MessageManager::writeSilently(
-                Tr::tr("The MCP server is listening on \"%1:%2\".")
-                    .arg(tcpServer->serverAddress().toString())
-                    .arg(tcpServer->serverPort()));
+            // OPENMV-DIFF //
+            // The General Messages pane is the Serial Terminal in OpenMV IDE;
+            // the address is logged above and published by the OpenMV plugin's
+            // discovery file instead.
+            // // Show startup message in General Messages panel
+            // MessageManager::writeSilently(
+            //     Tr::tr("The MCP server is listening on \"%1:%2\".")
+            //         .arg(tcpServer->serverAddress().toString())
+            //         .arg(tcpServer->serverPort()));
+            // OPENMV-DIFF //
 
             const auto url = QUrl(QString("http://%1:%2")
                                       .arg(tcpServer->serverAddress().toString())

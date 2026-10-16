@@ -10,6 +10,37 @@
 
 #include <QLoggingCategory>
 
+// OPENMV-DIFF //
+#include <coreplugin/icore.h>
+#include <utils/environment.h>
+#include <utils/hostosinfo.h>
+
+namespace {
+
+// The Node.js OpenMV IDE ships (share/qtcreator/node/<platform>), resolved
+// the way the Copilot plugin does; empty when this platform has none.
+Utils::FilePath bundledNodeBinDir()
+{
+    using namespace Utils;
+    FilePath dir;
+    if (HostOsInfo::isWindowsHost()) {
+        dir = Core::ICore::resourcePath("node/windows");
+    } else if (HostOsInfo::isMacHost()) {
+        dir = Core::ICore::resourcePath(
+            ((HostOsInfo::hostArchitecture() == OsArchArm64) || HostOsInfo::isRunningUnderRosetta())
+                ? QString("node/mac-aarch64/bin") : QString("node/mac/bin"));
+    } else if (HostOsInfo::isLinuxHost()) {
+        const QString arch = QSysInfo::buildCpuArchitecture();
+        if (arch == "x86_64") dir = Core::ICore::resourcePath("node/linux-x64/bin");
+        else if (arch == "arm") dir = Core::ICore::resourcePath("node/linux-armv7/bin");
+        else if (arch == "arm64") dir = Core::ICore::resourcePath("node/linux-arm64/bin");
+    }
+    return (dir.isEmpty() || !dir.exists()) ? FilePath() : dir;
+}
+
+} // namespace
+// OPENMV-DIFF //
+
 static Q_LOGGING_CATEGORY(logStdio, "qtc.acpclient.stdio", QtWarningMsg);
 
 using namespace Utils;
@@ -98,13 +129,37 @@ void AcpStdioTransport::start()
         emit finished();
     });
 
-    m_process->setCommand(m_cmd);
+    // OPENMV-DIFF //
+    // Registry agents launch through npx/node/npm. When none is installed on
+    // the machine, fall back to the Node.js OpenMV IDE ships (for Copilot) and
+    // put its bin directory first on PATH so "#!/usr/bin/env node" resolves.
+    CommandLine cmd = m_cmd;
+    Environment env = m_env ? *m_env : m_cmd.executable().deviceEnvironment();
+    {
+        const QString tool = cmd.executable().fileName();
+        const bool nodeTool = (tool == "npx") || (tool == "node") || (tool == "npm")
+                              || (tool == "npx.cmd") || (tool == "node.exe") || (tool == "npm.cmd");
+        if (nodeTool && cmd.executable().parentDir().isEmpty()
+            && cmd.executable().searchInPath().isEmpty()) {
+            const FilePath binDir = bundledNodeBinDir();
+            if (!binDir.isEmpty()) {
+                const QString base = QFileInfo(tool).completeBaseName();
+                const FilePath bundled = binDir.pathAppended(
+                    HostOsInfo::isWindowsHost() ? (base == "node" ? QString("node.exe") : base + ".cmd")
+                                                : base);
+                if (bundled.exists()) {
+                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << bundled.toUserOutput();
+                    cmd.setExecutable(bundled);
+                    env.prependOrSetPath(binDir);
+                }
+            }
+        }
+    }
+    m_process->setCommand(cmd);
     if (!m_workingDirectory.isEmpty())
         m_process->setWorkingDirectory(m_workingDirectory);
-    if (m_env)
-        m_process->setEnvironment(*m_env);
-    else
-        m_process->setEnvironment(m_cmd.executable().deviceEnvironment());
+    m_process->setEnvironment(env);
+    // OPENMV-DIFF //
 
     qCDebug(logStdio) << "Starting:" << m_cmd.toUserOutput();
     m_process->start();
