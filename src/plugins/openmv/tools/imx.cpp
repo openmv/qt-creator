@@ -204,7 +204,7 @@ Utils::Process *imxArmCatcher(const QJsonObject &obj, const QString &pidvidKey,
 
     Utils::Environment env = process->environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
     env.prependOrSet("PYTHONPATH", spsdk.path());
     process->setEnvironment(env);
 
@@ -540,7 +540,7 @@ bool imxGetDevice(QJsonObject &obj)
 
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
 
     std::chrono::seconds timeout(10);
     process.setProcessChannelMode(QProcess::MergedChannels);
@@ -647,7 +647,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
 
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
 
     Utils::QtcSettings *settings = Core::ICore::settings();
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
@@ -832,7 +832,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("sdphost_flash_loader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -875,7 +875,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("jump-address") <<
                            obj.value(QStringLiteral("sdphost_flash_loader_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -951,7 +951,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("get-property") <<
                            QStringLiteral("1");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -989,7 +989,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_spi")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1025,7 +1025,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1063,7 +1063,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_secure_bootloader_fcb_address")).toString() <<
                            obj.value(QStringLiteral("blhost_secure_bootloader_fcb_length")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1101,7 +1101,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_fcb")).toString() <<
                            QStringLiteral("word");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1137,7 +1137,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_memory_configuration_type")).toString() <<
                            obj.value(QStringLiteral("blhost_memory_configuration_address")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1175,7 +1175,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_secure_bootloader_address")).toString() <<
                            obj.value(QStringLiteral("blhost_secure_bootloader_length")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1211,7 +1211,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_secure_bootloader_address")).toString() <<
                            QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_secure_bootloader_path")).toString()));
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1255,7 +1255,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
                                obj.value(QStringLiteral("blhost_disk_size_mbr")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -1300,7 +1300,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1336,7 +1336,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1379,7 +1379,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -1415,7 +1415,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -1452,7 +1452,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            obj.value(QStringLiteral("blhost_efuse_burn_address")).toString() <<
                            obj.value(QStringLiteral("blhost_efuse_burn_data")).toString();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1486,7 +1486,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -1535,7 +1535,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
 
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
 
     Utils::QtcSettings *settings = Core::ICore::settings();
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), ((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Read ROMFS") :
@@ -1716,7 +1716,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_disk_address")).toString() <<
                                obj.value(QStringLiteral("blhost_disk_size_mbr")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -1760,7 +1760,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_size")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1805,7 +1805,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1841,7 +1841,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1887,7 +1887,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                obj.value(QStringLiteral("blhost_romfs_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1923,7 +1923,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_romfs_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_romfs_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(900); // 15 minutes...
@@ -1967,7 +1967,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                obj.value(QStringLiteral("blhost_firmware_length")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -2003,7 +2003,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                                obj.value(QStringLiteral("blhost_firmware_address")).toString() <<
                                QDir::toNativeSeparators(QDir::cleanPath(obj.value(QStringLiteral("blhost_firmware_path")).toString()));
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -2038,7 +2038,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
                            QStringLiteral("--") <<
                            QStringLiteral("reset");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...

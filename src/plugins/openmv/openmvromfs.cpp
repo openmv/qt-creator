@@ -1461,7 +1461,7 @@ void OpenMVPlugin::resetRomfsClicked()
 
         QString path = OpenMVThirdParty::firmwareRootForBoard(boardSettings).
                 pathAppended(boardSettings.value(QStringLiteral("boardFirmwareFolder")).toString()).
-                pathAppended(QString(QStringLiteral("romfs%1.img").arg(romfsIndex))).toString();
+                pathAppended(QString(QStringLiteral("romfs%1.img").arg(romfsIndex))).toFSPathString();
 
         QTimer::singleShot(0, this, [this, path, boardSettings] {
             connectClicked(true, path, false, false, false, true,

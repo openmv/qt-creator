@@ -21,7 +21,11 @@ namespace Utils { class FilePath; }
 
 namespace Utils::HostOsInfo {
 
-QTCREATOR_UTILS_EXPORT constexpr OsType hostOs()
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr OsType hostOs()
+// OPENMV-DIFF //
+constexpr OsType hostOs()
+// OPENMV-DIFF //
 {
 #if defined(Q_OS_WIN)
     return OsTypeWindows;
@@ -50,10 +54,26 @@ QTCREATOR_UTILS_EXPORT OsArch binaryArchitecture();
 QTCREATOR_UTILS_EXPORT bool isRunningUnderRosetta();
 // OPENMV-DIFF //
 
-QTCREATOR_UTILS_EXPORT constexpr bool isWindowsHost() { return hostOs() == OsTypeWindows; }
-QTCREATOR_UTILS_EXPORT constexpr bool isLinuxHost() { return hostOs() == OsTypeLinux; }
-QTCREATOR_UTILS_EXPORT constexpr bool isMacHost() { return hostOs() == OsTypeMac; }
-QTCREATOR_UTILS_EXPORT constexpr bool isAnyUnixHost()
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr bool isWindowsHost() { return hostOs() == OsTypeWindows; }
+// OPENMV-DIFF //
+constexpr bool isWindowsHost() { return hostOs() == OsTypeWindows; }
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr bool isLinuxHost() { return hostOs() == OsTypeLinux; }
+// OPENMV-DIFF //
+constexpr bool isLinuxHost() { return hostOs() == OsTypeLinux; }
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr bool isMacHost() { return hostOs() == OsTypeMac; }
+// OPENMV-DIFF //
+constexpr bool isMacHost() { return hostOs() == OsTypeMac; }
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr bool isAnyUnixHost()
+// OPENMV-DIFF //
+constexpr bool isAnyUnixHost()
+// OPENMV-DIFF //
 {
 #ifdef Q_OS_UNIX
     return true;
@@ -76,12 +96,20 @@ constexpr Qt::CaseSensitivity fileNameCaseSensitivity()
 
 QTCREATOR_UTILS_EXPORT QString withExecutableSuffix(const QString &executable);
 
-QTCREATOR_UTILS_EXPORT constexpr QChar pathListSeparator()
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr QChar pathListSeparator()
+// OPENMV-DIFF //
+constexpr QChar pathListSeparator()
+// OPENMV-DIFF //
 {
     return OsSpecificAspects::pathListSeparator(hostOs());
 }
 
-QTCREATOR_UTILS_EXPORT constexpr Qt::KeyboardModifier controlModifier()
+// OPENMV-DIFF //
+// QTCREATOR_UTILS_EXPORT constexpr Qt::KeyboardModifier controlModifier()
+// OPENMV-DIFF //
+constexpr Qt::KeyboardModifier controlModifier()
+// OPENMV-DIFF //
 {
     return OsSpecificAspects::controlModifier(hostOs());
 }

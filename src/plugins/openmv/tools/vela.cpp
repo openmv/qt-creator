@@ -310,7 +310,7 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
                        QStringLiteral("--config") <<
                        QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::allUsersResourcePath().
                             pathAppended(QStringLiteral("firmware")).
-                            pathAppended(velaSettings.value(QStringLiteral("iniFilePath")).toString()).toString())) <<
+                            pathAppended(velaSettings.value(QStringLiteral("iniFilePath")).toString()).toFSPathString())) <<
                        QStringLiteral("--verbose-performance") <<
                        QStringLiteral("--verbose-cycle-estimate") <<
                        QStringLiteral("--output-dir") <<
@@ -327,11 +327,11 @@ QString velaCompile(const QString &model, const QJsonObject &velaSettings, Utils
         return model;
     }
 
-    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     Utils::Environment env = process.environment();
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
     env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
 

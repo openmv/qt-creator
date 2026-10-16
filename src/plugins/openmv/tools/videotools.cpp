@@ -782,7 +782,7 @@ static QString getOutputFormats()
 static QStringList h264EncoderArgs(const Utils::FilePath &binary)
 {
     static QHash<QString, QStringList> cache;
-    const QString key = binary.toString();
+    const QString key = binary.toFSPathString();
 
     if(cache.contains(key))
     {
@@ -1043,7 +1043,7 @@ static bool convertVideoFile(const QString &dst, const QString &src, int scale, 
     if(mjpeg) args = args << QStringLiteral("-f") << QStringLiteral("avi");
     args = args << QDir::toNativeSeparators(QDir::cleanPath(newDst));
 
-    QString command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    QString command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();
@@ -1174,7 +1174,7 @@ static bool playVideoFile(const QString &path)
         if(file.open(QIODevice::WriteOnly))
         {
             QByteArray command = QString(QStringLiteral("start /wait \"ffplay.exe\" \"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/windows/bin/ffplay.exe")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/windows/bin/ffplay.exe")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                 QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
             if(file.write(command) == command.size())
@@ -1204,7 +1204,7 @@ static bool playVideoFile(const QString &path)
                 ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay"));
             }
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                 QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"")).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())
@@ -1231,7 +1231,7 @@ static bool playVideoFile(const QString &path)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffplay")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                     QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
@@ -1299,7 +1299,7 @@ static bool playVideoFile(const QString &path)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffplay")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                     QDir::toNativeSeparators(QDir::cleanPath(path)) + QStringLiteral("\"\n")).toUtf8();
 
                 if(file.write(command) == command.size())
@@ -1384,7 +1384,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
         if(file.open(QIODevice::WriteOnly))
         {
             QByteArray command = QString(QStringLiteral("start /wait \"ffplay.exe\" \"") +
-                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/windows/bin/ffplay.exe")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/windows/bin/ffplay.exe")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                 url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
 
             if(file.write(command) == command.size())
@@ -1414,7 +1414,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
                 ffplayBinary = Core::ICore::resourcePath(QStringLiteral("ffmpeg/mac/ffplay"));
             }
             QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toString())) + QStringLiteral("\" -hide_banner \"") +
+                QDir::toNativeSeparators(QDir::cleanPath(ffplayBinary.toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                 url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer") : QStringLiteral("\" -fflags nobuffer"))).toUtf8(); // no extra new line
 
             if(file.write(command) == command.size())
@@ -1441,7 +1441,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-x86_64/bin/ffplay")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                     url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
 
                 if(file.write(command) == command.size())
@@ -1509,7 +1509,7 @@ static bool playRTSPStream(const QUrl &url, bool tcp)
             if(file.open(QIODevice::WriteOnly))
             {
                 QByteArray command = QString(QStringLiteral("#!/bin/sh\n\n\"") +
-                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffplay")).toString())) + QStringLiteral("\" -hide_banner \"") +
+                    QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::resourcePath(QStringLiteral("ffmpeg/linux-arm64/bin/ffplay")).toFSPathString())) + QStringLiteral("\" -hide_banner \"") +
                     url.toString() + (tcp ? QStringLiteral("\" -rtsp_transport tcp -fflags nobuffer\n") : QStringLiteral("\" -fflags nobuffer\n"))).toUtf8();
 
                 if(file.write(command) == command.size())

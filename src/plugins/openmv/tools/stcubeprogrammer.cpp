@@ -211,7 +211,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     }
 
     Utils::Environment env = process.environment();
-    env.prependOrSet("STM32_PRG_PATH", QFileInfo(binary.toString()).path());
+    env.prependOrSet("STM32_PRG_PATH", QFileInfo(binary.toFSPathString()).path());
 
     if(binary.isEmpty())
     {
@@ -223,7 +223,7 @@ void stCubeProgrammerDownloadFirmware(const QString &details, QString &command, 
     }
     else
     {
-        command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+        command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         process.setEnvironment(env);

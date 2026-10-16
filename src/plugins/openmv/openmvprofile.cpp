@@ -909,7 +909,7 @@ OpenMVProfileView::OpenMVProfileView(Utils::QtcSettings *settings, QWidget *pare
         if (validState) {
             QString err;
 
-            if (!loadElfFunctionMap(m_pathChooser->filePath().toString(), m_funcNames, m_funcSizes, &err, true, true))
+            if (!loadElfFunctionMap(m_pathChooser->filePath().toFSPathString(), m_funcNames, m_funcSizes, &err, true, true))
             {
                 OMVUI::critical(Core::ICore::dialogParent(),
                     Tr::tr("Code Profiler"), err);

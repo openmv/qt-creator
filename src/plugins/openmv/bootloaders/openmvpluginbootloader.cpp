@@ -220,7 +220,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                       dfuNoDialogs,
                                                       firmwareResourcePath()
                                                         .pathAppended(originalFirmwareFolder)
-                                                        .pathAppended(QStringLiteral("bootloader.bin")).toString(),
+                                                        .pathAppended(QStringLiteral("bootloader.bin")).toFSPathString(),
                                                       true);
                             return;
                         }
@@ -256,7 +256,7 @@ void OpenMVPlugin::openmvInternalBootloader(const QString &forceFirmwarePath,
                                                       dfuNoDialogs,
                                                       firmwareResourcePath()
                                                         .pathAppended(originalFirmwareFolder)
-                                                        .pathAppended(QStringLiteral("bootloader.bin")).toString(),
+                                                        .pathAppended(QStringLiteral("bootloader.bin")).toFSPathString(),
                                                       true);
                             return;
                         }

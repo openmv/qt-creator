@@ -71,7 +71,7 @@ static Utils::Result<Utils::FileUtils::CopyResult> copyFileOperator(const Utils:
 // Missing/unreadable => empty string, which orders below every real version.
 static QString readVersionFile(const Utils::FilePath &path)
 {
-    QFile file(path.toString());
+    QFile file(path.toFSPathString());
 
     if (file.open(QIODevice::ReadOnly))
     {
@@ -156,7 +156,7 @@ static bool parseConfigData(const QByteArray &data, const QString &context, cons
 
 static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo *repo, QString *error)
 {
-    QFile file(vendorDir.pathAppended(QStringLiteral("config.json")).toString());
+    QFile file(vendorDir.pathAppended(QStringLiteral("config.json")).toFSPathString());
 
     if (!file.open(QIODevice::ReadOnly))
     {
@@ -169,7 +169,7 @@ static bool parseConfig(const Utils::FilePath &vendorDir, OpenMVThirdParty::Repo
 
 static QStringList vendorFolderNames(const Utils::FilePath &root)
 {
-    QStringList names = QDir(root.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+    QStringList names = QDir(root.toFSPathString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
 
     // "<id>.old" is a repository set aside by a reinstall in progress (or one
     // that died midway); it must not show up as a second copy of the vendor.
@@ -418,7 +418,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
 
     for (const Repo &repo : repos)
     {
-        QFile file(repo.writablePath.pathAppended(QStringLiteral("firmware/settings.json")).toString());
+        QFile file(repo.writablePath.pathAppended(QStringLiteral("firmware/settings.json")).toFSPathString());
 
         if (!file.open(QIODevice::ReadOnly))
         {
@@ -450,7 +450,7 @@ QJsonDocument OpenMVThirdParty::mergeFirmwareSettings(const QJsonDocument &built
             warnings->append(Tr::tr("\"%L1\" firmware/settings.json - top-level \"firmware_version\" is ignored (use a per-board \"firmware_version\")").arg(repo.id));
         }
 
-        QString resourceRoot = repo.writablePath.pathAppended(QStringLiteral("firmware")).toString();
+        QString resourceRoot = repo.writablePath.pathAppended(QStringLiteral("firmware")).toFSPathString();
 
         for (const QJsonValue &value : vendorRoot.value(QStringLiteral("boards")).toArray())
         {
@@ -848,14 +848,14 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
         }
     }
 
-    if (!reader.extractAll(staging.toString()))
+    if (!reader.extractAll(staging.toFSPathString()))
     {
         *error = Tr::tr("failed to extract the downloaded archive");
         staging.removeRecursively();
         return false;
     }
 
-    QStringList entries = QDir(staging.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
+    QStringList entries = QDir(staging.toFSPathString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot, QDir::Name);
 
     if (entries.size() != 1)
     {
@@ -872,20 +872,20 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
     Utils::FilePath previous = vendorDir.pathAppended(part + QStringLiteral(".old"));
     previous.removeRecursively();
 
-    if (target.exists() && (!QDir().rename(target.toString(), previous.toString())))
+    if (target.exists() && (!QDir().rename(target.toFSPathString(), previous.toFSPathString())))
     {
         *error = Tr::tr("failed to move the existing \"%L1\" folder aside").arg(part);
         staging.removeRecursively();
         return false;
     }
 
-    if (!QDir().rename(staging.pathAppended(entries.first()).toString(), target.toString()))
+    if (!QDir().rename(staging.pathAppended(entries.first()).toFSPathString(), target.toFSPathString()))
     {
         *error = Tr::tr("failed to move the extracted folder into place");
 
         if (previous.exists())
         {
-            QDir().rename(previous.toString(), target.toString());
+            QDir().rename(previous.toFSPathString(), target.toFSPathString());
         }
 
         staging.removeRecursively();
@@ -900,7 +900,7 @@ static bool installArchiveToPart(const QByteArray &data, const Utils::FilePath &
 
 static bool writeVendorFile(const Utils::FilePath &path, const QByteArray &data, QString *error)
 {
-    QFile file(path.toString());
+    QFile file(path.toFSPathString());
 
     if ((!file.open(QIODevice::WriteOnly | QIODevice::Truncate)) || (file.write(data) != data.size()))
     {
@@ -1256,7 +1256,7 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
         previousVendorDir = writableRoot().pathAppended(remote.id + QStringLiteral(".old"));
         previousVendorDir.removeRecursively();
 
-        if (!QDir().rename(vendorDir.toString(), previousVendorDir.toString()))
+        if (!QDir().rename(vendorDir.toFSPathString(), previousVendorDir.toFSPathString()))
         {
             *error = Tr::tr("failed to move the existing repository \"%L1\" aside").arg(remote.id);
             return false;
@@ -1268,7 +1268,7 @@ bool OpenMVThirdParty::installFromUrl(const QUrl &url, bool overwrite, QString *
 
         if (previousVendorDir.exists())
         {
-            QDir().rename(previousVendorDir.toString(), vendorDir.toString());
+            QDir().rename(previousVendorDir.toFSPathString(), vendorDir.toFSPathString());
         }
     };
 
@@ -1304,7 +1304,7 @@ OpenMVThirdParty::Repo OpenMVThirdParty::repoForFirmwareRoot(const QString &firm
 {
     for (const Repo &repo : scanRepos())
     {
-        if (repo.writablePath.pathAppended(QStringLiteral("firmware")).toString() == firmwareRoot)
+        if (repo.writablePath.pathAppended(QStringLiteral("firmware")).toFSPathString() == firmwareRoot)
         {
             return repo;
         }
@@ -1322,10 +1322,10 @@ QStringList OpenMVThirdParty::stubPaths()
         Utils::FilePath stubs = repo.writablePath.pathAppended(QStringLiteral("stubs"));
 
         if (stubs.exists()
-        && QDirIterator(stubs.toString(), QStringList() << QStringLiteral("*.pyi"),
+        && QDirIterator(stubs.toFSPathString(), QStringList() << QStringLiteral("*.pyi"),
                         QDir::Files, QDirIterator::Subdirectories).hasNext())
         {
-            paths.append(stubs.toString());
+            paths.append(stubs.toFSPathString());
         }
     }
 
@@ -1472,7 +1472,7 @@ static void appendResourceOverrides(const QList<OpenMVThirdParty::Repo> &repos,
 
         if (dir.exists())
         {
-            roots.append(qMakePair(dir.toString(), repo.displayName));
+            roots.append(qMakePair(dir.toFSPathString(), repo.displayName));
         }
     }
 
@@ -1487,7 +1487,7 @@ static void appendResourceOverrides(const QList<OpenMVThirdParty::Repo> &repos,
 
     if (base.exists())
     {
-        roots.append(qMakePair(base.toString(), QGuiApplication::applicationDisplayName()));
+        roots.append(qMakePair(base.toFSPathString(), QGuiApplication::applicationDisplayName()));
     }
 
     QHash<QString, QString> winner; // relative path -> winning owner label

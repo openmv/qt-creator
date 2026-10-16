@@ -246,7 +246,7 @@ QUrl OpenMVPlugin::localChangelogUrl(const QString &product, const QString &vers
             QString(QStringLiteral("html/changelog/%1/index.html")).arg(product));
     }
 
-    return QUrl::fromLocalFile(page.toString());
+    return QUrl::fromLocalFile(page.toFSPathString());
 }
 
 void OpenMVPlugin::openUrlOrWarn(const QUrl &url)
@@ -411,7 +411,7 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
     int patch = 0;
     QJsonObject resourcesSettings;
 
-    QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toString());
+    QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toFSPathString());
 
     if (resourcesSettingsFile.open(QFile::ReadOnly))
     {
@@ -584,7 +584,7 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
 
     ///////////////////////////////////////////////////////////////////////////
 
-    QFile firmwareSettings(Core::ICore::allUsersResourcePath(QStringLiteral("firmware/settings.json")).toString());
+    QFile firmwareSettings(Core::ICore::allUsersResourcePath(QStringLiteral("firmware/settings.json")).toFSPathString());
 
     if(firmwareSettings.open(QIODevice::ReadOnly))
     {
@@ -628,7 +628,9 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
     {
         const QStringList overrideLines = OpenMVThirdParty::overrideLines(m_thirdPartyRepos, m_thirdPartyOverrides);
 
-        for(const QString &line : QStringList() << thirdPartyErrors << thirdPartyWarnings << overrideLines)
+        const QStringList allLines = QStringList() << thirdPartyErrors << thirdPartyWarnings << overrideLines;
+
+        for(const QString &line : allLines)
         {
             qWarning("[Third Party Repositories] %s", qPrintable(line));
         }
@@ -705,7 +707,7 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
     // Scan examples.
     {
         QThread *thread = new QThread;
-        examplesLoadFolderThread = new LoadFolderThread(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toString(), true);
+        examplesLoadFolderThread = new LoadFolderThread(Core::ICore::allUsersResourcePath(QStringLiteral("examples")).toFSPathString(), true);
         examplesLoadFolderThread->moveToThread(thread);
         m_scanExamplesTimer = new QTimer(this);
 
@@ -948,7 +950,7 @@ void OpenMVPlugin::extensionsInitialized()
                 // Repos are applied lowest priority first (m_thirdPartyRepos is
                 // highest first) so the highest-priority version wins a same-name
                 // collision -- matching the firmware override rule.
-                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples"))).toString(), examplesMenu->menu());
+                QMultiMap<QString, QAction *> actions = aboutToShowExamplesRecursive(Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples"))).toFSPathString(), examplesMenu->menu());
                 examplesMenu->menu()->addActions(actions.values());
 
                 for(auto it = m_thirdPartyRepos.crbegin(); it != m_thirdPartyRepos.crend(); ++it)
@@ -960,7 +962,7 @@ void OpenMVPlugin::extensionsInitialized()
                         // Build this repo's examples parented to the persistent Examples
                         // menu (so they are reclaimed by its clear() on the next open),
                         // then overlay them onto what's already there.
-                        QMultiMap<QString, QAction *> vendorActions = aboutToShowExamplesRecursive(examplesDir.toString(), examplesMenu->menu());
+                        QMultiMap<QString, QAction *> vendorActions = aboutToShowExamplesRecursive(examplesDir.toFSPathString(), examplesMenu->menu());
                         mergeExampleActions(examplesMenu->menu(), vendorActions.values());
                     }
                 }
@@ -2123,7 +2125,7 @@ void OpenMVPlugin::extensionsInitialized()
                 // is attached and that cache exists, otherwise the released html.
                 QString devPath = path;
                 devPath.replace(0, 4, devResourceFolder(QStringLiteral("html")));
-                openUrlOrWarn(QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(devPath).toString()));
+                openUrlOrWarn(QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(devPath).toFSPathString()));
             });
         }
 
@@ -3213,7 +3215,7 @@ void OpenMVPlugin::extensionsInitialized()
     // World instead of the command-line script (or the disk picker).
     if((!m_viewerMode) && (editor ? (editor->document() ? editor->document()->contents().isEmpty() : true) : true))
     {
-        QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
+        QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toFSPathString();
 
         QFile file(filePath);
 
@@ -4927,9 +4929,9 @@ void OpenMVPlugin::loadExampleFilters(const QString &examplesFolder)
 void OpenMVPlugin::appendExampleFilters(const Utils::FilePath &indexCsv, const Utils::FilePath &root)
 {
     // Same normalization as matchExample()'s file path, so prefix tests line up.
-    const QString cleanRoot = QDir::cleanPath(QDir::fromNativeSeparators(root.toString())) + QLatin1Char('/');
+    const QString cleanRoot = QDir::cleanPath(QDir::fromNativeSeparators(root.toFSPathString())) + QLatin1Char('/');
 
-    QFile filters(indexCsv.toString());
+    QFile filters(indexCsv.toFSPathString());
 
     if(filters.open(QIODevice::ReadOnly))
     {

@@ -1517,10 +1517,10 @@ void OpenMVPlugin::registerMcpTools()
             [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
                 const QString filter = params.argumentsAsObject().value(QStringLiteral("filter")).toString();
                 const Utils::FilePath root = Core::ICore::allUsersResourcePath(devResourceFolder(QStringLiteral("examples")));
-                const QDir rootDir(root.toString());
+                const QDir rootDir(root.toFSPathString());
 
                 QJsonArray examples;
-                QDirIterator it(root.toString(), QStringList() << QStringLiteral("*.py"), QDir::Files, QDirIterator::Subdirectories);
+                QDirIterator it(root.toFSPathString(), QStringList() << QStringLiteral("*.py"), QDir::Files, QDirIterator::Subdirectories);
 
                 while(it.hasNext())
                 {

@@ -180,7 +180,7 @@ QList<QString> getDevices()
     }
     else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
-        OMVUI::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toString() + QStringLiteral("\n\n") + process.stdOut());
+        OMVUI::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toFSPathString() + QStringLiteral("\n\n") + process.stdOut());
 
         return QList<QString>();
     }
@@ -445,7 +445,7 @@ void downloadFirmware(const QString &details,
                                QStringLiteral("--fn") <<
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
-            command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+            command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             dialog->show();
@@ -558,11 +558,11 @@ void downloadFirmware(const QString &details,
 
             Utils::FilePath binary = Utils::FilePath::fromString(QStringLiteral("python3"));
             QStringList args = QStringList() <<
-                               Core::ICore::resourcePath(QStringLiteral("pydfu/pydfu.py")).toString() <<
+                               Core::ICore::resourcePath(QStringLiteral("pydfu/pydfu.py")).toFSPathString() <<
                                QStringLiteral("-u") <<
                                QDir::toNativeSeparators(QDir::cleanPath(path));
 
-            command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+            command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             dialog->show();
@@ -754,7 +754,7 @@ void downloadFirmware(const QString &details,
         dialog->appendColoredText(extraMessage, true);
     }
 
-    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();

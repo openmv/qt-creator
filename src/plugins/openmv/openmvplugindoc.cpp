@@ -623,7 +623,7 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
         return names;
     };
 
-    QDirIterator it(stubsPath.toString(), QStringList() << QStringLiteral("*.pyi"), QDir::Files, QDirIterator::Subdirectories);
+    QDirIterator it(stubsPath.toFSPathString(), QStringList() << QStringLiteral("*.pyi"), QDir::Files, QDirIterator::Subdirectories);
 
     while(it.hasNext())
     {
@@ -642,7 +642,7 @@ void OpenMVPlugin::loadStubs(const Utils::FilePath &stubsPath,
             continue;
         }
 
-        QString relativePath = QDir(stubsPath.toString()).relativeFilePath(QFileInfo(file).absoluteFilePath());
+        QString relativePath = QDir(stubsPath.toFSPathString()).relativeFilePath(QFileInfo(file).absoluteFilePath());
         relativePath.chop(4); // ".pyi"
         QStringList moduleParts = relativePath.split(QLatin1Char('/'), Qt::SkipEmptyParts);
 
@@ -881,7 +881,7 @@ void OpenMVPlugin::loadDocUrls()
     // the Sphinx inventory (objects.inv), so F1 can open the exact page+anchor.
     m_docUrls.clear();
 
-    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("html/objects.inv")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("html/objects.inv")).toFSPathString());
 
     if(!file.open(QIODevice::ReadOnly))
     {
@@ -1203,7 +1203,7 @@ bool OpenMVPlugin::openHelpForCursor(TextEditor::TextEditorWidget *widget)
             fragment = uri.mid(hash + 1);
         }
 
-        QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/") + path).toString());
+        QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/") + path).toFSPathString());
 
         if(!fragment.isEmpty())
         {
@@ -1271,7 +1271,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
     // source and the language server workspace. Older documentation packages
     // without stubs fall back to the original html parsing path unchanged.
     const Utils::FilePath stubsPath = Core::ICore::allUsersResourcePath(QStringLiteral("html/stubs"));
-    const bool stubsAvailable = QDirIterator(stubsPath.toString(), QStringList() << QStringLiteral("*.pyi"), QDir::Files, QDirIterator::Subdirectories).hasNext();
+    const bool stubsAvailable = QDirIterator(stubsPath.toFSPathString(), QStringList() << QStringLiteral("*.pyi"), QDir::Files, QDirIterator::Subdirectories).hasNext();
 
     if(stubsAvailable)
     {
@@ -1286,7 +1286,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
         QStringList htmlFiles;
 
         {
-            QDirIterator it(Core::ICore::allUsersResourcePath(QStringLiteral("html/library")).toString(), QDir::Files);
+            QDirIterator it(Core::ICore::allUsersResourcePath(QStringLiteral("html/library")).toFSPathString(), QDir::Files);
 
             while(it.hasNext())
             {
@@ -1485,7 +1485,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
         connect(Core::EditorManager::instance(), &Core::EditorManager::editorCreated, this, [this, provider] (Core::IEditor *editor, const Utils::FilePath &filePath) {
             TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(editor);
 
-            if(textEditor && filePath.toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+            if(textEditor && filePath.toFSPathString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
             {
                 textEditor->textDocument()->setCompletionAssistProvider(provider);
 
@@ -1805,7 +1805,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
             }
         }
 
-        QDir().mkdir(headers.toString());
+        QDir().mkdir(headers.toFSPathString());
 
         for (const documentation_t &modules : m_modules)
         {
@@ -1816,7 +1816,7 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
 
             Utils::FilePath path = headers;
             path = path.pathAppended(modules.name + QStringLiteral(".py"));
-            QFile file(path.toString());
+            QFile file(path.toFSPathString());
 
             if(file.open(QIODevice::WriteOnly))
             {

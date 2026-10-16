@@ -617,7 +617,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
             {
                 for(int i = 0, j = resetROMFSCommandsCmd.size(); i < j; i++)
                 {
-                    QString path = firmwareResourcePath().pathAppended(resetROMFSCommandsPath.at(i)).toString();
+                    QString path = firmwareResourcePath().pathAppended(resetROMFSCommandsPath.at(i)).toFSPathString();
 
                     if (installTheLatestDevelopmentFirmware)
                     {
@@ -682,7 +682,7 @@ void OpenMVPlugin::openmvDFUBootloader(bool forceFlashFSErase,
         for(int i = 0, j = programCommandsCmd.size(); i < j; i++)
         {
             downloadFirmware(Tr::tr("Flashing Firmware"), command, process,
-                             firmwareResourcePath().pathAppended(programCommandsPath.at(i)).toString(),
+                             firmwareResourcePath().pathAppended(programCommandsPath.at(i)).toFSPathString(),
                              dfuDeviceVidPid, programCommandsCmd.at(i) +
                              (((i + 1) == j) ? QStringLiteral(" --reset") : QStringLiteral("")) + dfuDeviceSerial, 
                              false, 0, (i == 0) ? extraMessage : QString());

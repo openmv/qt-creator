@@ -116,7 +116,7 @@ void OpenMVPlugin::openmvAlifBootloader(const QString &forceFirmwarePath,
                 if(!m_boardResourceRoot.isEmpty())
                 {
                     alifFirmwareFolder = OpenMVThirdParty::firmwareRootForBoard(obj)
-                        .pathAppended(originalFirmwareFolder).toString();
+                        .pathAppended(originalFirmwareFolder).toFSPathString();
                 }
 
                 foundMatch = true;

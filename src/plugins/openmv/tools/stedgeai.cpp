@@ -71,7 +71,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     QFile jsonFile(QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::allUsersResourcePath().
                                                             pathAppended(QStringLiteral("firmware")).
-                                                            pathAppended(stedgeaiSettings.value(QStringLiteral("jsonFilePath")).toString()).toString())));
+                                                            pathAppended(stedgeaiSettings.value(QStringLiteral("jsonFilePath")).toString()).toFSPathString())));
 
     if (!jsonFile.copy(tempDir.path() + QDir::separator() + QFileInfo(jsonFile).fileName()))
     {
@@ -84,7 +84,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
 
     QFile mpoolFile(QDir::toNativeSeparators(QDir::cleanPath(Core::ICore::allUsersResourcePath().
                                                              pathAppended(QStringLiteral("firmware")).
-                                                             pathAppended(stedgeaiSettings.value(QStringLiteral("mpoolFilePath")).toString()).toString())));
+                                                             pathAppended(stedgeaiSettings.value(QStringLiteral("mpoolFilePath")).toString()).toFSPathString())));
 
     if (!mpoolFile.copy(tempDir.path() + QDir::separator() + QFileInfo(mpoolFile).fileName()))
     {
@@ -126,7 +126,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     lineEdit->setPlaceholderText(Tr::tr("--verbosity 2"));
     lineEdit->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING, true);
     QLabel *label = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Core CLI Options</a>").
-        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/command_line_interface.html")).toString()).toString()));
+        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/command_line_interface.html")).toFSPathString()).toString()));
     label->setTextFormat(Qt::RichText);
     label->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label->setOpenExternalLinks(true);
@@ -139,7 +139,7 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
     lineEdit2->setPlaceholderText(Tr::tr("--mapping-recap"));
     lineEdit2->setHistoryCompleter(LAST_STEDGEAI_COMPILIER_OPTIONS_STRING_ATONN, true);
     QLabel *label2 = new QLabel(Tr::tr("<a href=\"%1\">STEdgeAI Neural-ART CLI Options</a>").
-        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/stneuralart_neural_art_compiler.html")).toString()).toString()));
+        arg(QUrl::fromLocalFile(Core::ICore::resourcePath(QStringLiteral("stedgeai/Documentation/stneuralart_neural_art_compiler.html")).toFSPathString()).toString()));
     label2->setTextFormat(Qt::RichText);
     label2->setTextInteractionFlags(Qt::TextBrowserInteraction);
     label2->setOpenExternalLinks(true);
@@ -388,14 +388,14 @@ QString stedgeaiCompile(const QString &model, const QJsonObject &stedgeaiSetting
         return model;
     }
 
-    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PATH", stedgeai_core_dir.path());
-    env.prependOrSet("PATH", Core::ICore::resourcePath(QStringLiteral("arm/bin")).toString());
-    env.prependOrSet("STEDGEAI_CORE_DIR", Core::ICore::resourcePath(QStringLiteral("stedgeai")).toString());
+    env.prependOrSet("PATH", Core::ICore::resourcePath(QStringLiteral("arm/bin")).toFSPathString());
+    env.prependOrSet("STEDGEAI_CORE_DIR", Core::ICore::resourcePath(QStringLiteral("stedgeai")).toFSPathString());
     process.setEnvironment(env);
 
     dialog->appendColoredText(Tr::tr("This command takes a while to execute. Please be patient."), true);

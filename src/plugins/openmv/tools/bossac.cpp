@@ -311,7 +311,7 @@ void bossacDownloadFirmware(const QString &details, QString &command, Utils::Pro
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();

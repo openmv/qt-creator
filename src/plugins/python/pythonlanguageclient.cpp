@@ -242,7 +242,7 @@ protected:
 
         if (path.pathAppended("bin").pathAppended("pylsp").withExecutableSuffix().exists())
         {
-            env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+            env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
             env.prependOrSet("PYTHONPATH", path.path());
         }
         // OPENMV-DIFF //

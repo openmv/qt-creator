@@ -137,13 +137,13 @@ void OpenMVPlugin::openmvIMXBootloader(const QString &forceFirmwarePath,
 
                 QString secureBootloaderPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
-                        pathAppended(bootloaderSettings.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toString();
+                        pathAppended(bootloaderSettings.value(QStringLiteral("sdphost_flash_loader_path")).toString()).toFSPathString();
                 QString bootloaderPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
-                        pathAppended(bootloaderSettings.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toString();
+                        pathAppended(bootloaderSettings.value(QStringLiteral("blhost_secure_bootloader_path")).toString()).toFSPathString();
                 QString romfsPath = OpenMVThirdParty::firmwareRootForBoard(obj).
                         pathAppended(originalFirmwareFolder).
-                        pathAppended(bootloaderSettings.value(QStringLiteral("blhost_romfs_path")).toString()).toString();
+                        pathAppended(bootloaderSettings.value(QStringLiteral("blhost_romfs_path")).toString()).toFSPathString();
 
                 if ((romfsAccess == OPENMV_ROMFS_READ) || (romfsAccess == OPENMV_ROMFS_WRITE))
                 {

@@ -392,7 +392,7 @@ QList<CompletionAssistProvider *> CodeAssistantPrivate::identifyActivationSequen
     };
 
     // OPENMV-DIFF //
-    if (m_editorWidget->textDocument()->filePath().toString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+    if (m_editorWidget->textDocument()->filePath().toFSPathString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
     {
         enum
         {

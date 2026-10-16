@@ -464,8 +464,8 @@ QString OpenMVPlugin::devResourceFolder(const QString &name) const
 static QFuture<DevSyncOutcome> launchDevSync(int parts)
 {
     return Utils::asyncRun(devSyncWorker, parts,
-        Core::ICore::allUsersResourcePath().toString(),
-        bundledPythonBinary().toString());
+        Core::ICore::allUsersResourcePath().toFSPathString(),
+        bundledPythonBinary().toFSPathString());
 }
 
 void OpenMVPlugin::applyDevSyncOutcome(const DevSyncOutcome &out)
@@ -727,7 +727,7 @@ void OpenMVPlugin::packageUpdate()
                 int old_patch = 0;
                 QJsonObject resourcesSettings;
 
-                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toString());
+                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toFSPathString());
 
                 if (resourcesSettingsFile.open(QFile::ReadOnly))
                 {
@@ -779,7 +779,7 @@ void OpenMVPlugin::packageUpdate()
 
                                 QJsonObject resourcesSettings;
 
-                                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toString());
+                                QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toFSPathString());
 
                                 if (resourcesSettingsFile.open(QFile::ReadOnly))
                                 {
@@ -829,8 +829,8 @@ void OpenMVPlugin::packageUpdate()
                                     else
                                     {
                                         if(!(m_viewerMode
-                                            ? extractFolderWrapper(&data2, Core::ICore::allUsersResourcePath().toString(), QStringLiteral("firmware"))
-                                            : extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toString())))
+                                            ? extractFolderWrapper(&data2, Core::ICore::allUsersResourcePath().toFSPathString(), QStringLiteral("firmware"))
+                                            : extractAllWrapper(&data2, Core::ICore::allUsersResourcePath().toFSPathString())))
                                         {
                                             OMVUI::critical(Core::ICore::dialogParent(),
                                                 QString(),
@@ -990,7 +990,7 @@ void OpenMVPlugin::bootloaderClicked()
     QCheckBox *checkBox2 = new QCheckBox(Tr::tr("Reset ROMFS file system"));
     checkBox2->setChecked(settings->value(SETTINGS_GROUP "/" LAST_DFU_RESET_ROM_FS_STATE, false).toBool());
     layout2->addWidget(checkBox2);
-    checkBox2->setEnabled(!pathChooser->filePath().toString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive));
+    checkBox2->setEnabled(!pathChooser->filePath().toFSPathString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive));
     checkBox2->setToolTip(Tr::tr("If you enable this option the ROM file system on your OpenMV Cam will be reset back to default."));
 
     QDialogButtonBox *box = new QDialogButtonBox(QDialogButtonBox::Cancel);
@@ -1005,7 +1005,7 @@ void OpenMVPlugin::bootloaderClicked()
     connect(box, &QDialogButtonBox::rejected, dialog, &QDialog::reject);
     connect(pathChooser, &Utils::PathChooser::validChanged, run, &QPushButton::setEnabled);
     connect(pathChooser, &Utils::PathChooser::rawPathChanged, this, [this, dialog, pathChooser, checkBox2] () {
-        if(pathChooser->filePath().toString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
+        if(pathChooser->filePath().toFSPathString().endsWith(QStringLiteral(".img"), Qt::CaseInsensitive))
         {
             checkBox2->setEnabled(false);
         }
@@ -1019,7 +1019,7 @@ void OpenMVPlugin::bootloaderClicked()
 
     if(OMVUI::exec(dialog) == QDialog::Accepted)
     {
-        QString forceFirmwarePath = pathChooser->filePath().toString();
+        QString forceFirmwarePath = pathChooser->filePath().toFSPathString();
         bool flashFSErase = checkBox->isChecked();
         bool resetROMFS = checkBox2->isEnabled() ? checkBox2->isChecked() : false;
 
@@ -1416,7 +1416,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
         // either of which may be wrapped in one top-level directory. Resolve the directory that
         // actually holds this board's images.
         const Utils::FilePath root = Utils::FilePath::fromString(customBundleDir);
-        const QStringList subs = QDir(root.toString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
+        const QStringList subs = QDir(root.toFSPathString()).entryList(QDir::Dirs | QDir::NoDotAndDotDot);
 
         if(root.pathAppended(arch).exists())
             cachedDir = root.pathAppended(arch);                                    // <root>/<arch>
@@ -1443,7 +1443,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
         if(cachedDir.exists())
         {
-            for(const QFileInfo &info : QDir(cachedDir.toString()).entryInfoList(QDir::Files))
+            for(const QFileInfo &info : QDir(cachedDir.toFSPathString()).entryInfoList(QDir::Files))
             {
                 const QString dst = tempDir + QDir::separator() + info.fileName();
                 QFile::remove(dst);
@@ -1460,7 +1460,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
 
         if(!QFile(firmwareResourcePath()
             .pathAppended(originalFirmwareFolder)
-            .pathAppended(firmwareFileName).toString()).copy(tempTarget))
+            .pathAppended(firmwareFileName).toFSPathString()).copy(tempTarget))
         {
             return false;
         }
@@ -1520,7 +1520,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
             QFile::remove(info.absoluteFilePath());
         }
 
-        for(const QFileInfo &info : QDir(cachedDir.toString()).entryInfoList(QStringList{QStringLiteral("*.img")}, QDir::Files))
+        for(const QFileInfo &info : QDir(cachedDir.toFSPathString()).entryInfoList(QStringList{QStringLiteral("*.img")}, QDir::Files))
         {
             const QString dst = tempDir + QDir::separator() + info.fileName();
             QFile::remove(dst);
@@ -1544,7 +1544,7 @@ bool OpenMVPlugin::getTheLatestDevelopmentFirmware(const QString &arch, QString 
     // Copy into the temp file the caller flashes from (and may delete afterward),
     // so the cache itself is never consumed.
     *path = tempTarget;
-    return QFile(cached.toString()).copy(tempTarget);
+    return QFile(cached.toFSPathString()).copy(tempTarget);
 }
 
 QString OpenMVPlugin::viewerModeFirmwareText(const QString &detailed, const QString &viewerAction) const
@@ -2494,7 +2494,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                         ? Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                         : Utils::FilePath::fromString(resourceRootMappings.value(temp)))
                                         .pathAppended(originalFirmwareFolder)
-                                        .pathAppended(defaultFirmwareNameMappings.value(temp)).toString();
+                                        .pathAppended(defaultFirmwareNameMappings.value(temp)).toFSPathString();
                                     if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                                     forceBootloader = true;
                                     forceFlashFSErase = forceFlashFSEraseTemp;
@@ -3047,7 +3047,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                 {
                     if(firmwarePath.isEmpty()) firmwarePath = Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                         .pathAppended(QStringLiteral(OLD_API_BOARD))
-                        .pathAppended(QStringLiteral("firmware.bin")).toString();
+                        .pathAppended(QStringLiteral("firmware.bin")).toFSPathString();
 
                     if(installTheLatestDevelopmentFirmware)
                     {
@@ -3172,7 +3172,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 ? Core::ICore::allUsersResourcePath(QStringLiteral("firmware"))
                                 : Utils::FilePath::fromString(resourceRootMappings.value(temp)))
                                 .pathAppended(originalFirmwareFolder)
-                                .pathAppended(defaultFirmwareNameMapping.value(temp)).toString();
+                                .pathAppended(defaultFirmwareNameMapping.value(temp)).toFSPathString();
                             if (forceBootloader && (!forceFirmwarePath.isEmpty())) firmwarePath = forceFirmwarePath;
                             originalEraseFlashSectorStart = eraseMappings.value(temp).first;
                             originalEraseFlashSectorEnd = eraseMappings.value(temp).second;
@@ -3290,7 +3290,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                                 QString tempPath = tempDir.path();
 
                                 QDir originalFirmwareDir(firmwareResourcePath()
-                                    .pathAppended(originalFirmwareFolder).toString());
+                                    .pathAppended(originalFirmwareFolder).toFSPathString());
 
                                 if (originalFirmwareDir.exists())
                                 {
@@ -3477,7 +3477,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
                         QString tempPath = tempDir.path();
 
                         QDir originalFirmwareDir(firmwareResourcePath()
-                                                     .pathAppended(originalFirmwareFolder).toString());
+                                                     .pathAppended(originalFirmwareFolder).toFSPathString());
 
                         if (originalFirmwareDir.exists())
                         {
@@ -4352,7 +4352,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
             && (document->contents().simplified().trimmed()
                 == pristineHelloWorld.simplified().trimmed()))
             {
-                QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toString();
+                QString filePath = Core::ICore::allUsersResourcePath(QStringLiteral("examples/00-HelloWorld/helloworld.py")).toFSPathString();
 
                 QFile file(filePath);
 
@@ -4366,7 +4366,7 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
 
                         if (document->contents().simplified().trimmed() != data.simplified().trimmed())
                         {
-                            QFile reload(document->filePath().toString());
+                            QFile reload(document->filePath().toFSPathString());
 
                             if(reload.open(QIODevice::WriteOnly))
                             {

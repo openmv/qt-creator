@@ -327,11 +327,11 @@ QString mpyCompile(const QString &script, const QJsonObject &mpySettings, Utils:
         return script;
     }
 
-    command = QStringLiteral("%1 %2").arg(binary.toString(), args.join(QLatin1Char(' ')));
+    command = QStringLiteral("%1 %2").arg(binary.toFSPathString(), args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     Utils::Environment env = process.environment();
-    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toString());
+    env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
     env.prependOrSet("PYTHONPATH", pythonPath.path());
     process.setEnvironment(env);
 

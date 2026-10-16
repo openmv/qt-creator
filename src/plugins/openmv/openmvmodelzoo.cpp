@@ -88,8 +88,8 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
 
     // The released models' filters, then each third-party repo's models/index.csv
     // so vendor models filter to their boards (matched by their own path regex).
-    appendModelFilters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toString(),
-                       Core::ICore::allUsersResourcePath(QStringLiteral("models")).toString(), m_modelFilters);
+    appendModelFilters(Core::ICore::allUsersResourcePath(QStringLiteral("models/index.csv")).toFSPathString(),
+                       Core::ICore::allUsersResourcePath(QStringLiteral("models")).toFSPathString(), m_modelFilters);
 
     for(const OpenMVThirdParty::Repo &repo : OpenMVThirdParty::scanRepos())
     {
@@ -97,7 +97,7 @@ OpenMVModelZooBrowserFilter::OpenMVModelZooBrowserFilter(const QJsonObject &boar
 
         if(indexCsv.exists())
         {
-            appendModelFilters(indexCsv.toString(), repo.writablePath.pathAppended(QStringLiteral("models")).toString(), m_modelFilters);
+            appendModelFilters(indexCsv.toFSPathString(), repo.writablePath.pathAppended(QStringLiteral("models")).toFSPathString(), m_modelFilters);
         }
     }
 }
@@ -211,11 +211,11 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
 
         if(modelsDir.exists())
         {
-            modelRoots.append(modelsDir.toString());
+            modelRoots.append(modelsDir.toFSPathString());
         }
     }
 
-    modelRoots.append(path.toString());
+    modelRoots.append(path.toFSPathString());
     m_model->setRoots(modelRoots);
 
     m_treeView->setModel(m_filter);
@@ -392,7 +392,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
         }
     });
 
-    QString indexPath = path.toString() + QDir::separator() + QStringLiteral("index.html");
+    QString indexPath = path.toFSPathString() + QDir::separator() + QStringLiteral("index.html");
 
     if (QFileInfo::exists(indexPath))
     {
@@ -407,7 +407,7 @@ OpenMVModelZooBrowser::OpenMVModelZooBrowser(const QJsonObject &boardSettings, U
     }
 
     connect(m_treeView, &OpenMVModelZooBrowserTreeView::selectionCleared, this, [path, textBrowser]() {
-        QString indexPath = path.toString() + QDir::separator() + QStringLiteral("index.html");
+        QString indexPath = path.toFSPathString() + QDir::separator() + QStringLiteral("index.html");
 
         if (QFileInfo::exists(indexPath))
         {

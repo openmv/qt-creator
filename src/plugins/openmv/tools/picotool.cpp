@@ -132,7 +132,7 @@ QList<QString> picotoolGetDevices()
     }
     else if(QThread::currentThread() == QCoreApplication::instance()->thread())
     {
-        OMVUI::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toString() + QStringLiteral("\n\n") + process.stdOut());
+        OMVUI::detailedBox(QMessageBox::Warning, Core::ICore::dialogParent(), Tr::tr("Get Devices"), Tr::tr("Query failed!"), command.toFSPathString() + QStringLiteral("\n\n") + process.stdOut());
 
         return QList<QString>();
     }
@@ -186,7 +186,7 @@ void picotoolReset(QString &command, Utils::Process &process)
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
 
     std::chrono::seconds timeout(300); // 5 minutes...
     process.setTextChannelMode(Utils::Channel::Output, Utils::TextChannelMode::MultiLine);
@@ -347,7 +347,7 @@ void picotoolDownloadFirmware(const QString &details, QString &command, Utils::P
         }
     }
 
-    command = QString(QStringLiteral("%1 %2")).arg(binary.toString()).arg(args.join(QLatin1Char(' ')));
+    command = QString(QStringLiteral("%1 %2")).arg(binary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
     dialog->appendColoredText(command);
 
     dialog->show();

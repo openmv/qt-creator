@@ -341,7 +341,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
 
             for(int i = 0, j = resetROMFSAddrCommands.size(); i < j; i++)
             {
-                QString path = firmwareResourcePath().pathAppended(resetROMFSPathCommands.at(i)).toString();
+                QString path = firmwareResourcePath().pathAppended(resetROMFSPathCommands.at(i)).toFSPathString();
 
                 if (installTheLatestDevelopmentFirmware)
                 {
@@ -371,7 +371,7 @@ void OpenMVPlugin::openmvArduinoDFUBootloader(bool forceFlashFSErase,
             for(int i = 0, j = extraProgramAddrCommands.size(); i < j; i++)
             {
                 downloadFirmware(Tr::tr("Flashing Firmware"), command, process, firmwareResourcePath().
-                                 pathAppended(extraProgramPathCommands.at(i)).toString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
+                                 pathAppended(extraProgramPathCommands.at(i)).toFSPathString(), dfuDeviceVidPid, extraProgramAddrCommands.at(i) + dfuDeviceSerial);
 
                 if((process.result() != Utils::ProcessResult::FinishedWithSuccess) && (process.result() != Utils::ProcessResult::TerminatedAbnormally))
                 {

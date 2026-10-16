@@ -160,7 +160,7 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
         for (Core::IEditor *editor : m_tabBar->editors()) {
             if (!editor->document()->isTemporary())
             {
-                positions << editor->document()->filePath().toString();
+                positions << editor->document()->filePath().toFSPathString();
             }
         }
         settings->setValue("TabPositions", positions);
@@ -175,7 +175,7 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
         int from = -1;
         for (int j = 0; j < m_tabBar->editors().size(); j++) {
             Core::IEditor *editor = m_tabBar->editors().at(j);
-            if (!editor->document()->isTemporary() && editor->document()->filePath().toString() == positions[i]) {
+            if (!editor->document()->isTemporary() && editor->document()->filePath().toFSPathString() == positions[i]) {
                 from = j;
                 break;
             }

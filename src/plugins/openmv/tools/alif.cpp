@@ -105,7 +105,7 @@ bool alifSyncTools()
     }
     else
     {
-        QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toString());
+        QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toFSPathString());
 
         if (file.open(QFile::ReadOnly))
         {
@@ -116,7 +116,7 @@ bool alifSyncTools()
             int current_version_minor = doc.object().value(QStringLiteral("version_minor")).toInt();
             int current_version_patch = doc.object().value(QStringLiteral("version_patch")).toInt();
 
-            QFile file2(tools.pathAppended("version.json").toString());
+            QFile file2(tools.pathAppended("version.json").toFSPathString());
 
             if (file2.open(QFile::ReadOnly))
             {
@@ -248,7 +248,7 @@ QList<QString> alifGetDevices(const QJsonDocument &settings)
 
 static bool alifSelectPort(const QString &port)
 {
-    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/isp_config_data.cfg")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/isp_config_data.cfg")).toFSPathString());
 
     if (file.open(QFile::WriteOnly))
     {
@@ -274,7 +274,7 @@ static bool alifSelectPort(const QString &port)
 
 static bool alifWriteGlobalCFG(const QJsonObject &obj)
 {
-    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/utils/global-cfg.db")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/utils/global-cfg.db")).toFSPathString());
 
     if (file.open(QFile::WriteOnly))
     {
@@ -320,7 +320,7 @@ static bool alifUpdateBuild(const QString &originalFirmwareFolder)
         }
     }
 
-    QDir buildDir(Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).toString());
+    QDir buildDir(Core::ICore::allUsersResourcePath(QStringLiteral("alif/build")).toFSPathString());
 
     if (!buildDir.mkpath(QStringLiteral("images")))
     {
@@ -343,7 +343,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 {
     QMutexLocker locker(&alif_tools_working);
 
-    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toString());
+    QFile file(Core::ICore::allUsersResourcePath(QStringLiteral("alif/version.json")).toFSPathString());
 
     int current_version_major = 0;
     int current_version_minor = 0;
@@ -679,7 +679,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
     {
         QStringList args = QStringList() << QStringLiteral("-opt") << QStringLiteral("sesbanner");
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -699,7 +699,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
                 QStringList args = QStringList();
 
-                QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toString()).arg(args.join(QLatin1Char(' ')));
+                QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
                 dialog->appendColoredText(command);
 
                 std::chrono::seconds timeout(300); // 5 minutes...
@@ -749,7 +749,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
 
         QStringList args = QStringList();
 
-        QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toString()).arg(args.join(QLatin1Char(' ')));
+        QString command = QString(QStringLiteral("%1 %2")).arg(maintenanceBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
         dialog->appendColoredText(command);
 
         std::chrono::seconds timeout(300); // 5 minutes...
@@ -842,7 +842,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         {
             QStringList args = QStringList();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(updateSystemPackageBinary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(updateSystemPackageBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -880,7 +880,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
             QStringList args = QStringList() << QStringLiteral("-i") <<
                 dfuBootloaderProgramCommand.value(QStringLiteral("images")).toString();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -911,7 +911,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         {
             QStringList args = QStringList() << QStringLiteral("-f") << QStringLiteral("build/config/alif_cfg.json");
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(appGenToc.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(appGenToc.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...
@@ -940,7 +940,7 @@ bool alifDownloadFirmware(const QString &port, const QString &originalFirmwareFo
         {
             QStringList args = QStringList();
 
-            QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toString()).arg(args.join(QLatin1Char(' ')));
+            QString command = QString(QStringLiteral("%1 %2")).arg(appWriteMramBinary.toFSPathString()).arg(args.join(QLatin1Char(' ')));
             dialog->appendColoredText(command);
 
             std::chrono::seconds timeout(300); // 5 minutes...

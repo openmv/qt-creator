@@ -1417,7 +1417,11 @@ static QLayout *createSeparatorLayout()
     return layout;
 }
 
-static QLabel *createAnnotationSettingsLink()
+// OPENMV-DIFF //
+// static QLabel *createAnnotationSettingsLink()
+// OPENMV-DIFF //
+[[maybe_unused]] static QLabel *createAnnotationSettingsLink()
+// OPENMV-DIFF //
 {
     auto label = new QLabel("<small><i><a href>Annotation Settings</a></i></small>");
     QObject::connect(label, &QLabel::linkActivated, []() {

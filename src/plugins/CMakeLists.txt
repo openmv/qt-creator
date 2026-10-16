@@ -146,19 +146,19 @@ endif()
 # OPENMV-DIFF #
 # add_subdirectory(boot2qt)
 # OPENMV-DIFF #
-if (WITH_QMLDESIGNER)
-  unset(qmldesigner_builddir)
-  if (WIN32 AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
-    # Workaround for @CMakeFiles\QmlDesigner.rsp ld.lld.exe: The filename or extension is too long.
-    # Clang on Windows is having problems with QmlDesigner.rsp which is bigger than 32KiB
-    set(qmldesigner_builddir ${PROJECT_BINARY_DIR}/qmldsgnr)
-  endif()
-  add_subdirectory(qmldesigner ${qmldesigner_builddir})
 # OPENMV-DIFF #
+# if (WITH_QMLDESIGNER)
+#   unset(qmldesigner_builddir)
+#   if (WIN32 AND CMAKE_CXX_COMPILER_ID MATCHES "Clang")
+#     # Workaround for @CMakeFiles\QmlDesigner.rsp ld.lld.exe: The filename or extension is too long.
+#     # Clang on Windows is having problems with QmlDesigner.rsp which is bigger than 32KiB
+#     set(qmldesigner_builddir ${PROJECT_BINARY_DIR}/qmldsgnr)
+#   endif()
+#   add_subdirectory(qmldesigner ${qmldesigner_builddir})
 # add_subdirectory(effectcomposer)
 # add_subdirectory(multipropertyeditor)
+# endif()
 # OPENMV-DIFF #
-endif()
 # OPENMV-DIFF #
 # add_subdirectory(qnx)
 # add_subdirectory(mcusupport)

@@ -582,7 +582,7 @@ void Client::initialize()
     // the workspace root directly. Older packages fall back to the
     // micropython-headers folder generated from the parsed html.
     const Utils::FilePath stubsPath = Core::ICore::allUsersResourcePath(QStringLiteral("html/stubs"));
-    const bool stubsAvailable = QDirIterator(stubsPath.toString(), QStringList() << QStringLiteral("*.pyi"),
+    const bool stubsAvailable = QDirIterator(stubsPath.toFSPathString(), QStringList() << QStringLiteral("*.pyi"),
                                              QDir::Files, QDirIterator::Subdirectories).hasNext();
     params.setRootUri(hostPathToServerUri(stubsAvailable
         ? stubsPath : Core::ICore::allUsersResourcePath(QStringLiteral("micropython-headers"))));

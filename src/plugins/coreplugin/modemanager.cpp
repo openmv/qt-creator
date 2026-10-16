@@ -397,6 +397,7 @@ void ModeManagerPrivate::appendMode(IMode *mode, int originalIndex)
     // cmd->setDefaultKeySequence(QKeySequence(
     //     useMacShortcuts ? QString("Meta+%1").arg(originalIndex + 1)
     //                     : QString("Ctrl+%1").arg(originalIndex + 1)));
+    Q_UNUSED(originalIndex)
     // OPENMV-DIFF //
     // OpenMV IDE permanently hides the mode-selector strip (FancyTabWidget's
     // m_tabBar), so switching modes by shortcut (e.g. Ctrl+2 -> ProjectExplorer's

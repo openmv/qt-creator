@@ -843,7 +843,9 @@ void FancyTabWidget::paintEvent(QPaintEvent *event)
 
         QRect rect = m_selectionWidget->rect().adjusted(0, 0, 1, 0);
         rect = QStyle::visualRect(layoutDirection(), geometry(), rect);
-        const QRectF boderRect = QRectF(rect).adjusted(0.5, 0.5, -0.5, -0.5);
+        // OPENMV-DIFF //
+        // const QRectF boderRect = QRectF(rect).adjusted(0.5, 0.5, -0.5, -0.5);
+        // OPENMV-DIFF //
 
         if (creatorTheme()->flag(Theme::FlatToolBars)) {
             painter.fillRect(rect, StyleHelper::baseColor());
