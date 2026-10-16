@@ -605,6 +605,7 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
         fprintf(stdout, "%s\n", localMsg.constData()); fflush(stdout);
         break;
     case QtInfoMsg:
+        if(msg.startsWith(QLatin1String("ACP agent registry loaded:"))) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtWarningMsg:
@@ -618,6 +619,7 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
                                         "in an input file such as a font file.)"))) break;
         if(msg.startsWith(QLatin1String("requestActivate() called for  QWidgetWindow"))) break;
         if(msg.startsWith(QLatin1String("Corrupt JPEG data:"))) break;
+        if(msg.startsWith(QLatin1String("fromIccProfile: Failed to parse description"))) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtCriticalMsg:

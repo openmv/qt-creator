@@ -2013,19 +2013,22 @@ void ICorePrivate::registerDefaultActions()
     // Open Project (but just a dummy that is hidden if it is not actually registered anywhere)
     Command *openProjectCmd = ActionManager::createCommand(Constants::OPEN_PROJECT);
     openProjectCmd->setAttribute(Command::CA_Hide);
-    if (ActionContainer *container = ActionManager::actionContainer(Constants::M_FILE))
-        container->addAction(openProjectCmd, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // if (ActionContainer *container = ActionManager::actionContainer(Constants::M_FILE))
+    //     container->addAction(openProjectCmd, Constants::G_FILE_OPEN);
+    // OPENMV-DIFF //
+    // OpenMV has no project concept, and the Project Explorer registers a real
+    // action for this command, so it would show; keep it out of the File menu.
+    // OPENMV-DIFF //
 
-    // OPENMV-DIFF //
-    // Upstream 20.0.2 adds a separate "Open File" action in the G_FILE_OPEN group.
-    // Kept as upstream; note OpenMV already repurposes the OPEN action above as the
-    // file opener (in G_FILE_NEW) and otherwise empties G_FILE_OPEN, so this may
-    // surface a second "Open File..." entry -- maintainer may wish to drop it.
-    // OPENMV-DIFF //
     // Open File
     ActionBuilder(this, Constants::OPEN_FILE)
         .setText(Tr::tr("Open File..."))
-        .addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN)
+        // OPENMV-DIFF //
+        // .addToContainer(Constants::M_FILE, Constants::G_FILE_OPEN)
+        // OPENMV-DIFF //
+        // The OPEN action above is already the File menu's "Open File...".
+        // OPENMV-DIFF //
         .addOnTriggered(this, [] { openFile(); });
 
     // Open With Action

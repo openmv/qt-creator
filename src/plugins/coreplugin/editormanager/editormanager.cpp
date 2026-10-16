@@ -446,7 +446,9 @@ void EditorManagerPrivate::init()
     });
     saveWithoutFormatting.setCommandAttribute(Command::CA_UpdateText);
     saveWithoutFormatting.setCommandDescription(Tr::tr("Save Without Formatting"));
-    saveWithoutFormatting.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // OPENMV-DIFF //
+    // saveWithoutFormatting.addToContainer(Constants::M_FILE, Constants::G_FILE_SAVE);
+    // OPENMV-DIFF //
 
     // Revert to saved
     ActionBuilder revertToSaved(this, Constants::REVERTTOSAVED);
@@ -593,9 +595,11 @@ void EditorManagerPrivate::init()
     gotoPrevTab.bindContextAction(&m_gotoPreviousTabAction);
     gotoPrevTab.bindCommand(&m_gotoPreviousTabCommand);
     gotoPrevTab.setContext(editDesignContext);
-    gotoPrevTab
-        .setDefaultKeySequence(::Core::Tr::tr("Ctrl+Meta+Left"), ::Core::Tr::tr("Ctrl+Alt+Left"));
-    gotoPrevTab.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // gotoPrevTab
+    //     .setDefaultKeySequence(::Core::Tr::tr("Ctrl+Meta+Left"), ::Core::Tr::tr("Ctrl+Alt+Left"));
+    // gotoPrevTab.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     gotoPrevTab.addOnTriggered(this, &EditorManagerPrivate::gotoPreviousTab);
 
     // Goto Next Tab Action
@@ -604,9 +608,11 @@ void EditorManagerPrivate::init()
     gotoNextTab.bindContextAction(&m_gotoNextTabAction);
     gotoNextTab.bindCommand(&m_gotoNextTabCommand);
     gotoNextTab.setContext(editDesignContext);
-    gotoNextTab
-        .setDefaultKeySequence(::Core::Tr::tr("Ctrl+Meta+Right"), ::Core::Tr::tr("Ctrl+Alt+Right"));
-    gotoNextTab.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // gotoNextTab
+    //     .setDefaultKeySequence(::Core::Tr::tr("Ctrl+Meta+Right"), ::Core::Tr::tr("Ctrl+Alt+Right"));
+    // gotoNextTab.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     gotoNextTab.addOnTriggered(this, &EditorManagerPrivate::gotoNextTab);
 
     // Close All Tabs Action
@@ -615,7 +621,9 @@ void EditorManagerPrivate::init()
     closeAllTabs.bindContextAction(&m_closeAllTabsAction);
     closeAllTabs.bindCommand(&m_closeAllTabsCommand);
     closeAllTabs.setContext(editDesignContext);
-    closeAllTabs.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // closeAllTabs.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     closeAllTabs.addOnTriggered(this, &EditorManagerPrivate::closeAllTabs);
 
     // Close Other Tabs Action
@@ -624,7 +632,9 @@ void EditorManagerPrivate::init()
     closeOtherTabs.bindContextAction(&m_closeOtherTabsAction);
     closeOtherTabs.bindCommand(&m_closeOtherTabsCommand);
     closeOtherTabs.setContext(editDesignContext);
-    closeOtherTabs.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // closeOtherTabs.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     closeOtherTabs.addOnTriggered(this, &EditorManagerPrivate::closeOtherTabs);
 
     // Go back in navigation history
@@ -656,7 +666,9 @@ void EditorManagerPrivate::init()
     openPreviousDocument.setText(::Core::Tr::tr("Open Previous Document"));
     openPreviousDocument.bindContextAction(&m_prevDocAction);
     openPreviousDocument.setContext(editDesignContext);
-    openPreviousDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // openPreviousDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     openPreviousDocument.addOnTriggered(this, [] { openDocumentByDelta(-1); });
 
     ActionBuilder openNextDocument(this, Constants::OPEN_NEXT_DOCUMENT);
@@ -664,7 +676,9 @@ void EditorManagerPrivate::init()
     openNextDocument.setText(::Core::Tr::tr("Open Next Document"));
     openPreviousDocument.bindContextAction(&m_nextDocAction);
     openNextDocument.setContext(editDesignContext);
-    openNextDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
+    // openNextDocument.addToContainer(Constants::M_WINDOW, Constants::G_WINDOW_NAVIGATE);
+    // OPENMV-DIFF //
     openNextDocument.addOnTriggered(this, [] { openDocumentByDelta(1); });
 
     // Reopen last closed document
@@ -3117,14 +3131,20 @@ void EditorManagerPrivate::addSaveAndCloseEditorActions(
     });
     assignAction(saveAs, ActionManager::command(Constants::SAVEAS)->action());
 
-    // Save Without Formatting
-    QAction *saveWithoutFormatting
-        = addMenuAction(contextMenu, "" /* set below */, true, d, [contextDocument] {
-              if (contextDocument)
-                  d->saveDocument(contextDocument, IDocument::SaveOption::DisableFormatOnSave);
-          });
-    assignAction(
-        saveWithoutFormatting, ActionManager::command(Constants::SAVE_WITHOUT_FORMATTING)->action());
+    // OPENMV-DIFF //
+    // // Save Without Formatting
+    // QAction *saveWithoutFormatting
+    //     = addMenuAction(contextMenu, "" /* set below */, true, d, [contextDocument] {
+    //           if (contextDocument)
+    //               d->saveDocument(contextDocument, IDocument::SaveOption::DisableFormatOnSave);
+    //       });
+    // assignAction(
+    //     saveWithoutFormatting, ActionManager::command(Constants::SAVE_WITHOUT_FORMATTING)->action());
+    // OPENMV-DIFF //
+    // Nothing formats Python on save in the OpenMV IDE, so it would just be Save.
+    // saveWithoutFormatting is still created (but not added to the menu) so setupSaveActions() can configure it.
+    QAction *saveWithoutFormatting = new QAction(contextMenu);
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     // "Save All" and "Revert to Saved" (Reload) are hidden from this context menu in the OpenMV IDE.

@@ -375,6 +375,9 @@ static bool hideDebugMenu()
 
 static bool hideAnalyzeMenu()
 {
+    // OPENMV-DIFF //
+    return true;
+    // OPENMV-DIFF //
     return ICore::settings()->value(Constants::SETTINGS_MENU_HIDE_ANALYZE, false).toBool();
 }
 

@@ -823,6 +823,16 @@ void OpenMVPlugin::setupModes()
 
         m_aiMode = new OpenMVAIMode(this);
         m_aiMode->setChatWidget(AcpClient::chatWidget());
+
+        // Preferences is a mode on the strip, so the Edit menu doesn't repeat
+        // it (its shortcut still works). Viewer mode has no strip and keeps it,
+        // and macOS keeps it in the application menu where it's expected.
+        if(!Utils::HostOsInfo::isMacHost())
+        {
+            QMenu *editMenu = Core::ActionManager::actionContainer(Core::Constants::M_EDIT)->menu();
+            QAction *optionsAction = Core::ActionManager::command(Core::Constants::OPTIONS)->action();
+            connect(editMenu, &QMenu::aboutToShow, this, [optionsAction] { optionsAction->setVisible(false); });
+        }
     }
 
     QAction *leaveSettings = new QAction(Tr::tr("Leave Settings"), this);
