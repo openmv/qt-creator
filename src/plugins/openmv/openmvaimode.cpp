@@ -33,6 +33,8 @@
 
 #include <coreplugin/coreconstants.h>
 #include <coreplugin/icontext.h>
+#include <coreplugin/minisplitter.h>
+#include <coreplugin/outputpane.h>
 #include <utils/icon.h>
 #include <utils/theme/theme.h>
 
@@ -46,6 +48,17 @@ OpenMVAIMode::OpenMVAIMode(QObject *parent) : Core::IMode(parent)
     m_layout->setContentsMargins(0, 0, 0, 0);
     m_layout->setSpacing(0);
 
+    // The output panes (Serial Terminal, Search Results) are moved by Core
+    // into the current mode's placeholder, so this mode carries one too, laid
+    // out like Edit mode's: chat above, panes below.
+    Core::MiniSplitter *splitter = new Core::MiniSplitter(Qt::Vertical);
+    splitter->insertWidget(0, container);
+    QWidget *outputPane = new Core::OutputPanePlaceHolder(Utils::Id("OpenMV.AIMode"), splitter);
+    outputPane->setObjectName(QStringLiteral("AIModeOutputPanePlaceHolder"));
+    splitter->insertWidget(1, outputPane);
+    splitter->setStretchFactor(0, 3);
+    splitter->setStretchFactor(1, 0);
+
     setDisplayName(Tr::tr("AI"));
     // The ACP client's own chat icon, recoloured like the Edit mode's.
     setIcon(Utils::Icon::sideBarIcon(
@@ -54,7 +67,7 @@ OpenMVAIMode::OpenMVAIMode(QObject *parent) : Core::IMode(parent)
     setPriority(Core::Constants::P_MODE_EDIT - 10); // right after Edit, before Settings
     setId(Utils::Id("OpenMV.AIMode"));
     setContext(Core::Context("OpenMV.AIMode"));
-    setWidget(container);
+    setWidget(splitter);
 }
 
 OpenMVAIMode::~OpenMVAIMode()
