@@ -35,6 +35,7 @@
 #include <utils/theme/theme.h>
 
 #include "mcp/omvui.h"
+#include "mcp/omvmcpcontext.h"
 
 namespace OpenMV {
 namespace Internal {
@@ -147,7 +148,8 @@ void OpenMVDatasetEditor::newClassFolder()
                                          Tr::tr("Dataset Editor"), Tr::tr("Please enter a class name"),
                                          QLineEdit::Normal, QString(), &ok,
                                          Qt::MSWindowsFixedSizeDialogHint | Qt::WindowTitleHint | Qt::WindowSystemMenuHint |
-                                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint));
+                                         (Utils::HostOsInfo::isMacHost() ? Qt::WindowType(0) : Qt::WindowCloseButtonHint),
+                                         Qt::ImhNone, OMV_UI_SITE("dataset.class_name"));
 
     if(ok)
     {
@@ -209,7 +211,15 @@ void OpenMVDatasetEditor::newClassFolder()
 
 void OpenMVDatasetEditor::snapshot()
 {
-    QString path = getClassFolderPath();
+    snapshotTo(getClassFolderPath());
+}
+
+// Saves the latest frame into `path` (a class folder of the open dataset) as
+// the next numbered snapshot; the Snapshot button's path, and MCP's.
+QString OpenMVDatasetEditor::snapshotTo(const QString &path)
+{
+    if(path.isEmpty() || m_pixmap.isNull()) return QString();
+
     QStringList list = snapshotList(QDir(path).dirName());
     int number = 0;
 
@@ -233,13 +243,14 @@ void OpenMVDatasetEditor::snapshot()
         // macOS Cocoa a11y bridge (NSRangeException).
         if (newIndex.isValid() && isVisible())
             setCurrentIndex(newIndex);
+
+        return filePath;
     }
-    else
-    {
-        OMVUI::critical(Core::ICore::dialogParent(),
-            Tr::tr("Dataset Editor"),
-            Tr::tr("Failed to save the image file for an unknown reason!"));
-    }
+
+    OMVUI::critical(Core::ICore::dialogParent(),
+        Tr::tr("Dataset Editor"),
+        Tr::tr("Failed to save the image file for an unknown reason!"));
+    return QString();
 }
 
 void OpenMVDatasetEditor::contextMenuEvent(QContextMenuEvent *event)

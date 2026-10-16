@@ -40,6 +40,8 @@
 #include "mcp/omvmcpcontext.h"
 #include "mcp/omvui.h"
 
+#include <coreplugin/actionmanager/actionmanager.h>
+#include <coreplugin/actionmanager/command.h>
 #include <coreplugin/editormanager/editormanager.h>
 #include <coreplugin/icore.h>
 #include <coreplugin/idocument.h>
@@ -49,6 +51,8 @@
 #include <utils/qtcassert.h>
 
 #include <QSerialPortInfo>
+
+#include <algorithm>
 
 namespace OpenMV {
 namespace Internal {
@@ -1731,6 +1735,552 @@ void OpenMVPlugin::registerMcpTools()
                 if(stage == QStringLiteral("target")) return errResult(QStringLiteral("needs_input"), QStringLiteral("No ROMFS target was chosen; pass `target` (see errors for the choices)."), out);
                 if(outputPath.isEmpty() || call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The conversion did not produce a file; see errors and log."), out);
                 return fileResult(out, outputPath, args.value(QStringLiteral("embed")).toBool());
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    // ---- openmv_actions_list / openmv_action --------------------------------
+    // The whole menu surface: every OpenMV command, triggered the way a click
+    // would be, with its dialogs answered through `answers`. The dedicated tools
+    // above are the structured front doors; this is the long tail.
+
+    {
+        // Commands whose click changes the camera, its files or the user's data.
+        const QStringList destructive{
+            QStringLiteral("OpenMV.Erase"), QStringLiteral("OpenMV.Bootloader"), QStringLiteral("OpenMV.InstallTheLatestDevelopmentRelease"),
+            QStringLiteral("OpenMV.ResetROMFS"), QStringLiteral("OpenMV.EditROMFS"), QStringLiteral("OpenMV.Save"), QStringLiteral("OpenMV.Reset"),
+            QStringLiteral("OpenMV.EnterBootloader"), QStringLiteral("OpenMV.NewDataset"), QStringLiteral("OpenMV.CreateDefaultConfig"),
+            QStringLiteral("OpenMV.EditWiFiDebugBootPy"), QStringLiteral("OpenMV.FirmwareUpdate")};
+
+        auto describe = [destructive](Core::Command *command) {
+            QAction *action = command->action();
+            QJsonObject o{
+                {QStringLiteral("id"), command->id().toString()},
+                {QStringLiteral("text"), action->text().remove(QLatin1Char('&'))},
+                {QStringLiteral("enabled"), action->isEnabled()},
+                {QStringLiteral("visible"), action->isVisible()},
+                {QStringLiteral("destructive"), destructive.contains(command->id().toString())}};
+            if(!command->description().isEmpty() && (command->description() != action->text())) o.insert(QStringLiteral("description"), command->description());
+            if(!action->toolTip().isEmpty() && (action->toolTip() != action->text())) o.insert(QStringLiteral("tooltip"), action->toolTip());
+            if(action->isCheckable()) o.insert(QStringLiteral("checked"), action->isChecked());
+            return o;
+        };
+
+        Tool::InputSchema ls;
+        ls.addProperty(QStringLiteral("filter"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Case-insensitive substring to match against the id or text.")}});
+        ls.addProperty(QStringLiteral("enabledOnly"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Only commands that can be triggered right now (default false).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_actions_list"))
+                .title(QStringLiteral("List the OpenMV IDE commands"))
+                .description(QStringLiteral("Every OpenMV menu command (id, text, whether it is enabled right now, checkable state, whether it is destructive) for use with openmv_action. Prefer a dedicated openmv_* tool when one exists; this is the long tail (settings editor, model zoo, video tools, third-party packages, ROMFS, datasets, terminals...)."))
+                .annotations(ToolAnnotations{}.readOnlyHint(true))
+                .inputSchema(ls),
+            [describe](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString filter = args.value(QStringLiteral("filter")).toString();
+                const bool enabledOnly = args.value(QStringLiteral("enabledOnly")).toBool();
+
+                QJsonArray commands;
+
+                for(Core::Command *command : Core::ActionManager::commands())
+                {
+                    if(!command->action() || !command->id().toString().startsWith(QStringLiteral("OpenMV."))) continue;
+                    if(enabledOnly && !command->action()->isEnabled()) continue;
+
+                    const QString text = command->action()->text().remove(QLatin1Char('&'));
+                    if(!filter.isEmpty() && !command->id().toString().contains(filter, Qt::CaseInsensitive) && !text.contains(filter, Qt::CaseInsensitive)) continue;
+
+                    commands.append(describe(command));
+                }
+
+                return okResult(QJsonObject{{QStringLiteral("commands"), commands}});
+            });
+
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("id"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The command id from openmv_actions_list (e.g. OpenMV.OpenDataset).")}});
+        in.addProperty(QStringLiteral("checked"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("For a checkable command: set it to this state instead of toggling it.")}});
+        in.addProperty(QStringLiteral("confirm"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Required (true) for commands listed as destructive; the user is also asked when the client supports elicitation.")}});
+        in.addRequired(QStringLiteral("id"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_action"))
+                .title(QStringLiteral("Trigger an OpenMV IDE command"))
+                .description(QStringLiteral("Clicks an OpenMV menu command and waits for the flow it starts to finish. Every dialog it would have shown comes back in `errors` with a site id (or the form's fields) to answer through `answers` on the next call. Destructive commands need confirm:true."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true))
+                .inputSchema(in),
+            [this, runFlow, flowBusy, gateDestructive, destructive, describe](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString id = args.value(QStringLiteral("id")).toString();
+
+                Core::Command *command = Core::ActionManager::command(Utils::Id::fromString(id));
+                if(!command || !command->action() || !id.startsWith(QStringLiteral("OpenMV."))) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("No OpenMV command \"%1\"; see openmv_actions_list.").arg(id));
+
+                QAction *action = command->action();
+                if(!action->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("\"%1\" is disabled right now (it usually needs a connected camera, a mounted drive or an open dataset).").arg(action->text().remove(QLatin1Char('&'))));
+                if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+
+                if(destructive.contains(id))
+                {
+                    if(auto refused = gateDestructive(call, args, action->text().remove(QLatin1Char('&')), QStringLiteral("Run \"%1\"?").arg(action->text().remove(QLatin1Char('&'))))) return *refused;
+                }
+
+                const bool setChecked = action->isCheckable() && args.contains(QStringLiteral("checked"));
+                const bool checked = args.value(QStringLiteral("checked")).toBool();
+
+                runFlow(call, [action, setChecked, checked] {
+                    if(setChecked) action->setChecked(checked); else action->trigger();
+                });
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("command"), describe(command));
+
+                if(flowBusy(call)) return errResult(QStringLiteral("timeout"), QStringLiteral("The command's flow did not finish within the deadline."), out);
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("The command reported an error; see errors."), out);
+                if(call.hasErrors(1) && std::any_of(call.errors.cbegin(), call.errors.cend(), [](const OMVMCP::Error &e) { return e.code == QStringLiteral("needs_input"); }))
+                {
+                    return errResult(QStringLiteral("needs_input"), QStringLiteral("The command needed input it did not get; answer the sites in `errors` and call again."), out);
+                }
+
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    // ---- datasets -----------------------------------------------------------
+    // The Dataset Editor dock: a folder of <class>.class folders of numbered
+    // JPEG snapshots of the frame buffer, plus labels.txt and a capture script.
+
+    auto triggerCommand = [this, runFlow](OMVMCP::Call &call, const char *id) -> bool {
+        Core::Command *command = Core::ActionManager::command(Utils::Id::fromString(QString::fromLatin1(id)));
+        if(!command || !command->action() || !command->action()->isEnabled()) return false;
+        runFlow(call, [command] { command->action()->trigger(); });
+        return true;
+    };
+
+    auto datasetInfo = [this] {
+        const QString root = m_datasetEditor ? m_datasetEditor->rootPath() : QString();
+        QJsonObject o{{QStringLiteral("open"), !root.isEmpty()}};
+        if(root.isEmpty()) return o;
+
+        QJsonArray classes;
+
+        for(const QString &folder : m_datasetEditor->classFolderList())
+        {
+            QString name = folder;
+            if(name.endsWith(QStringLiteral(".class"))) name.chop(6);
+            classes.append(QJsonObject{{QStringLiteral("name"), name}, {QStringLiteral("folder"), folder}, {QStringLiteral("snapshots"), m_datasetEditor->snapshotList(folder).size()}});
+        }
+
+        o.insert(QStringLiteral("root"), root);
+        o.insert(QStringLiteral("captureScript"), QString(root + QStringLiteral("/dataset_capture_script.py")));
+        o.insert(QStringLiteral("classes"), classes);
+        return o;
+    };
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_dataset_info"))
+            .title(QStringLiteral("Describe the open dataset"))
+            .description(QStringLiteral("The dataset open in the Dataset Editor: its folder, capture script, classes and how many snapshots each has."))
+            .annotations(ToolAnnotations{}.readOnlyHint(true)),
+        [datasetInfo](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            return okResult(datasetInfo());
+        });
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The folder to build the dataset in (created if missing).")}});
+        in.addProperty(QStringLiteral("confirm"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Required (true) to wipe the folder when it is not empty.")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_dataset_new"))
+                .title(QStringLiteral("Create a dataset"))
+                .description(QStringLiteral("Creates a new dataset in `path` exactly like Tools > Dataset Editor > New Dataset: writes a dataset_capture_script.py, opens it in the editor and opens the Dataset Editor on the folder. A non-empty folder is wiped first, which needs confirm:true."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true))
+                .inputSchema(in),
+            [this, triggerCommand, gateDestructive, datasetInfo](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(path.isEmpty()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` is required."));
+                if(!QDir(path).exists() && !QDir().mkpath(path)) return errResult(QStringLiteral("invalid_path"), QStringLiteral("Cannot create \"%1\".").arg(path));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+
+                const bool nonEmpty = !QDir(path).entryList(QDir::AllEntries | QDir::NoDotAndDotDot).isEmpty();
+                if(nonEmpty)
+                {
+                    if(auto refused = gateDestructive(call, args, QStringLiteral("New Dataset"), QStringLiteral("\"%1\" is not empty and its contents will be deleted. Continue?").arg(path))) return *refused;
+                }
+
+                call.answers.insert(OMV_UI_SITE("dataset.new_path"), path);
+                call.answers.insert(OMV_UI_SITE("dataset.new_clear"), QStringLiteral("Yes"));
+
+                if(!triggerCommand(call, "OpenMV.NewDataset")) return errResult(QStringLiteral("not_available"), QStringLiteral("The New Dataset command is not available."));
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("dataset"), datasetInfo());
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("Creating the dataset reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("A dataset folder (one containing dataset_capture_script.py).")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_dataset_open"))
+                .title(QStringLiteral("Open a dataset"))
+                .description(QStringLiteral("Opens an existing dataset folder in the Dataset Editor (and its capture script in the editor), like Tools > Dataset Editor > Open Dataset."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in),
+            [this, triggerCommand, datasetInfo](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(!QDir(path).exists()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("\"%1\" does not exist.").arg(path));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("dataset.open_path"), path);
+
+                if(!triggerCommand(call, "OpenMV.OpenDataset")) return errResult(QStringLiteral("not_available"), QStringLiteral("The Open Dataset command is not available."));
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("dataset"), datasetInfo());
+                if(call.hasErrors(2) || (m_datasetEditor->rootPath().isEmpty())) return errResult(QStringLiteral("failed"), QStringLiteral("The dataset did not open; see errors."), out);
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    ToolRegistry::registerTool(
+        Tool{}
+            .name(QStringLiteral("openmv_dataset_close"))
+            .title(QStringLiteral("Close the open dataset"))
+            .description(QStringLiteral("Closes the dataset in the Dataset Editor (files are untouched)."))
+            .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true)),
+        [this, datasetInfo](const CallToolRequestParams &) -> Utils::Result<CallToolResult> {
+            if(m_datasetEditor && !m_datasetEditor->rootPath().isEmpty())
+            {
+                Core::Command *command = Core::ActionManager::command(Utils::Id("OpenMV.CloseDataset"));
+                if(command && command->action() && command->action()->isEnabled()) command->action()->trigger();
+                else m_datasetEditor->setRootPath(QString());
+            }
+
+            return okResult(datasetInfo());
+        });
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("name"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The class name (becomes the <name>.class folder and a labels.txt line).")}});
+        in.addRequired(QStringLiteral("name"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_dataset_add_class"))
+                .title(QStringLiteral("Add a class to the open dataset"))
+                .description(QStringLiteral("Adds a class folder to the open dataset and updates labels.txt, like the Dataset Editor's New Class Folder button."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this, datasetInfo](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString name = args.value(QStringLiteral("name")).toString().trimmed();
+                if(name.isEmpty()) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("`name` is required."));
+                if(!m_datasetEditor || m_datasetEditor->rootPath().isEmpty()) return errResult(QStringLiteral("not_available"), QStringLiteral("No dataset is open; use openmv_dataset_open or openmv_dataset_new."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("dataset.class_name"), name);
+
+                {
+                    OMVMCP::Scope scope(call);
+                    m_datasetEditor->newClassFolder();
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("dataset"), datasetInfo());
+                if(call.hasErrors(2)) return errResult(QStringLiteral("failed"), QStringLiteral("Adding the class reported an error; see errors."), out);
+                return okResult(out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("class"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The class to capture into (name or <name>.class folder).")}});
+        in.addProperty(QStringLiteral("count"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("How many new frames to save, 1-100 (default 1).")}});
+        in.addProperty(QStringLiteral("intervalMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Minimum time between saved frames in milliseconds (default 0: consecutive frames).")}});
+        in.addProperty(QStringLiteral("deadlineMs"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("integer")},
+            {QStringLiteral("description"), QStringLiteral("Give up after this long if frames stop arriving (default 30000).")}});
+        in.addRequired(QStringLiteral("class"));
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_dataset_capture"))
+                .title(QStringLiteral("Save camera frames into a dataset class"))
+                .description(QStringLiteral("Saves the next frame(s) from the running script into a class of the open dataset as numbered JPEGs, exactly like the Dataset Editor's Capture Data button. Needs a connected camera streaming its frame buffer."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_datasetEditor || m_datasetEditor->rootPath().isEmpty()) return errResult(QStringLiteral("not_available"), QStringLiteral("No dataset is open."));
+                if(!m_connected || !m_frameBuffer) return errResult(QStringLiteral("not_connected"), QStringLiteral("No camera is connected."));
+
+                QString folder = args.value(QStringLiteral("class")).toString().trimmed();
+                if(!folder.endsWith(QStringLiteral(".class"))) folder += QStringLiteral(".class");
+                const QString path = m_datasetEditor->rootPath() + QLatin1Char('/') + folder;
+                if(!QDir(path).exists()) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("No class \"%1\" in the open dataset; see openmv_dataset_info.").arg(folder));
+
+                const int count = qBound(1, args.value(QStringLiteral("count")).toInt(1), 100);
+                const int intervalMs = qBound(0, args.value(QStringLiteral("intervalMs")).toInt(0), 60000);
+                const int deadlineMs = qBound(1000, args.value(QStringLiteral("deadlineMs")).toInt(30000), 600000);
+
+                QElapsedTimer wall;
+                wall.start();
+
+                QJsonArray saved;
+                qint64 last = -1;
+
+                while((saved.size() < count) && (wall.elapsed() < deadlineMs))
+                {
+                    if((last >= 0) && (intervalMs > 0))
+                    {
+                        QEventLoop loop;
+                        QTimer::singleShot(qMax<qint64>(0, last + intervalMs - wall.elapsed()), &loop, &QEventLoop::quit);
+                        loop.exec();
+                    }
+
+                    if(!awaitSignal(m_frameBuffer, &OpenMVPluginFB::pixmapUpdate, int(deadlineMs - wall.elapsed()))) break;
+                    QCoreApplication::processEvents(); // let the editor take the same frame first
+
+                    const QString file = m_datasetEditor->snapshotTo(path);
+                    if(file.isEmpty()) return errResult(QStringLiteral("failed"), QStringLiteral("Saving a snapshot failed."), QJsonObject{{QStringLiteral("saved"), saved}});
+                    saved.append(file);
+                    last = wall.elapsed();
+                }
+
+                if(saved.isEmpty()) return errResult(QStringLiteral("timeout"), QStringLiteral("No frame arrived from the camera; is a script streaming the frame buffer?"));
+                return okResult(QJsonObject{{QStringLiteral("saved"), saved}, {QStringLiteral("complete"), saved.size() == count}, {QStringLiteral("class"), folder}});
+            });
+    }
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("path"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("The .zip to write.")}});
+        in.addRequired(QStringLiteral("path"));
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_dataset_export"))
+                .title(QStringLiteral("Export the open dataset to a zip"))
+                .description(QStringLiteral("Zips the open dataset, like Tools > Dataset Editor > Export > Export Dataset to Zip File."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in),
+            [this, triggerCommand](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString path = args.value(QStringLiteral("path")).toString();
+                if(path.isEmpty() || !path.endsWith(QStringLiteral(".zip"), Qt::CaseInsensitive)) return errResult(QStringLiteral("invalid_path"), QStringLiteral("`path` must end in .zip."));
+                if(!m_datasetEditor || m_datasetEditor->rootPath().isEmpty()) return errResult(QStringLiteral("not_available"), QStringLiteral("No dataset is open."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                call.answers.insert(OMV_UI_SITE("dataset.export_path"), path);
+
+                if(!triggerCommand(call, "OpenMV.ExportDataset")) return errResult(QStringLiteral("not_available"), QStringLiteral("The Export Dataset command is not available (the Dataset Editor must be showing)."));
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("path"), path);
+                if(call.hasErrors(2) || !QFileInfo::exists(path)) return errResult(QStringLiteral("failed"), QStringLiteral("The export did not produce a file; see errors."), out);
+                return fileResult(out, path, args.value(QStringLiteral("embed")).toBool());
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    // ---- ROMFS --------------------------------------------------------------
+    // The camera's read-only file system (models, assets): pull it into a
+    // folder to inspect, edit the folder with file tools, write it back.
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("dir"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Folder to unpack into (created; default: a new temporary folder).")}});
+        in.addProperty(QStringLiteral("target"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("ROMFS target on boards that have more than one (answers site romfs.target).")}});
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_romfs_read"))
+                .title(QStringLiteral("Read the camera's ROMFS into a folder"))
+                .description(QStringLiteral("Pulls the attached camera's ROM file system (through its bootloader, like Tools > ROMFS > Edit ROMFS on OpenMV Cam) and unpacks it into `dir`, then lists the files. The camera reconnects afterwards. Edit the folder with file tools and write it back with openmv_romfs_write."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                QString dir = args.value(QStringLiteral("dir")).toString();
+                if(dir.isEmpty()) dir = QDir::tempPath() + QStringLiteral("/openmv-romfs-") + QString::number(QDateTime::currentMSecsSinceEpoch());
+                if(!QDir(dir).exists() && !QDir().mkpath(dir)) return errResult(QStringLiteral("invalid_path"), QStringLiteral("Cannot create \"%1\".").arg(dir));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                if(args.contains(QStringLiteral("target"))) call.answers.insert(OMV_UI_SITE("romfs.target"), args.value(QStringLiteral("target")).toString());
+
+                QString error;
+                bool ok = false;
+
+                {
+                    OMVMCP::Scope scope(call);
+                    ok = romfsReadToDir(dir, &error);
+
+                    while((m_working || m_firmwareUpdateInProgress) && !call.expired())
+                    {
+                        awaitSignal(this, &OpenMVPlugin::workingDone, qMin(call.remainingMs(), 250));
+                    }
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("dir"), dir);
+                out.insert(QStringLiteral("connected"), m_connected);
+
+                if(ok)
+                {
+                    QJsonArray files;
+                    QDirIterator it(dir, QDir::Files, QDirIterator::Subdirectories);
+
+                    while(it.hasNext())
+                    {
+                        it.next();
+                        files.append(QJsonObject{{QStringLiteral("path"), QDir(dir).relativeFilePath(it.filePath())}, {QStringLiteral("bytes"), it.fileInfo().size()}});
+                    }
+
+                    out.insert(QStringLiteral("files"), files);
+                    return okResult(out);
+                }
+
+                return errResult(QStringLiteral("failed"), error.isEmpty() ? QStringLiteral("Reading the ROMFS failed; see errors.") : error, out);
+                };
+
+                return runTool(toolInterface, params, body);
+            });
+    }
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("dir"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Folder whose contents become the ROMFS (as unpacked by openmv_romfs_read).")}});
+        in.addProperty(QStringLiteral("target"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("ROMFS target on boards that have more than one (answers site romfs.target).")}});
+        in.addRequired(QStringLiteral("dir"));
+        addConfirm(in);
+        addCallControls(in);
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_romfs_write"))
+                .title(QStringLiteral("Write a folder to the camera's ROMFS"))
+                .description(QStringLiteral("Packs `dir` into a ROMFS image for the attached board and writes it through the bootloader, like Commit in the ROMFS editor; the camera reconnects afterwards. Replaces the whole ROMFS. Destructive: requires confirm:true and, when the client supports it, the user's confirmation."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true))
+                .inputSchema(in),
+            [this, gateDestructive](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+                auto body = [&]() -> CallToolResult {
+                const QJsonObject args = params.argumentsAsObject();
+                const QString dir = args.value(QStringLiteral("dir")).toString();
+                if(!QDir(dir).exists()) return errResult(QStringLiteral("invalid_path"), QStringLiteral("\"%1\" does not exist.").arg(dir));
+                if(m_working || m_firmwareUpdateInProgress) return errResult(QStringLiteral("busy"), QStringLiteral("The IDE is already performing a camera operation."));
+
+                OMVMCP::Call call = makeCall(args);
+                call.tool = toolInterface;
+                if(args.contains(QStringLiteral("target"))) call.answers.insert(OMV_UI_SITE("romfs.target"), args.value(QStringLiteral("target")).toString());
+
+                if(auto refused = gateDestructive(call, args, QStringLiteral("Commit ROMFS"), QStringLiteral("Replace the OpenMV Cam's ROM file system with the contents of \"%1\"?").arg(dir))) return *refused;
+
+                QString error;
+                bool ok = false;
+
+                {
+                    OMVMCP::Scope scope(call);
+                    ok = romfsWriteFromDir(dir, &error);
+
+                    while((m_working || m_firmwareUpdateInProgress) && !call.expired())
+                    {
+                        awaitSignal(this, &OpenMVPlugin::workingDone, qMin(call.remainingMs(), 250));
+                    }
+                }
+
+                QJsonObject out = outcome(call);
+                out.insert(QStringLiteral("dir"), dir);
+                out.insert(QStringLiteral("connected"), m_connected);
+
+                if(!ok) return errResult(QStringLiteral("failed"), error.isEmpty() ? QStringLiteral("Writing the ROMFS failed; see errors.") : error, out);
+                return okResult(out);
                 };
 
                 return runTool(toolInterface, params, body);

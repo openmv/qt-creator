@@ -825,6 +825,166 @@ void OpenMVPlugin::romfsOperationIncomplete(const QString &title, bool write)
     }
 }
 
+// The board's ROMFS target (index, size, alignment rules) for the attached or
+// chosen board, or an empty object with `error` set.
+QJsonObject OpenMVPlugin::romfsTarget(const QString &title, QJsonObject *boardSettings, QString *error)
+{
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    *boardSettings = getBoardSettings(title, settings, true);
+
+    if (boardSettings->isEmpty())
+    {
+        *error = Tr::tr("No board type was chosen.");
+        return QJsonObject();
+    }
+
+    if (!boardSettings->contains(QStringLiteral("romfsConfig")))
+    {
+        *error = Tr::tr("ROMFS is not supported on this board!");
+        return QJsonObject();
+    }
+
+    QJsonObject romfsConfigSettings = getROMFSConfig(title, *boardSettings, settings);
+
+    if (romfsConfigSettings.isEmpty() || (!romfsConfigSettings.value(QStringLiteral("size")).toInt()))
+    {
+        *error = romfsConfigSettings.isEmpty() ? Tr::tr("No ROMFS target was chosen.") : Tr::tr("ROMFS is not supported on this board!");
+        return QJsonObject();
+    }
+
+    (*boardSettings)[QStringLiteral("romfsConfig")] = romfsConfigSettings;
+    return romfsConfigSettings;
+}
+
+bool OpenMVPlugin::romfsReadToDir(const QString &dir, QString *error)
+{
+    const QString title = Tr::tr("Edit ROMFS");
+    QJsonObject boardSettings;
+    QJsonObject romfs = romfsTarget(title, &boardSettings, error);
+    if (romfs.isEmpty()) return false;
+
+    const int romfsIndex = romfs.value(QStringLiteral("index")).toInt();
+    const int romfsImageSize = romfs.value(QStringLiteral("size")).toInt();
+
+    RomfsSessionGuard romfsSession(this);
+    bool wasConnected = m_connected;
+
+    QFile romfsFile(romfsStagingPath(romfsIndex));
+
+    if (romfsFile.exists() && (!romfsFile.remove()))
+    {
+        *error = romfsFile.errorString();
+        return false;
+    }
+
+    {
+        QEventLoop loop;
+        connect(this, &OpenMVPlugin::workingDone, &loop, &QEventLoop::quit);
+        QString path = QFileInfo(romfsFile).filePath();
+        QTimer::singleShot(0, this, [this, path, boardSettings] {
+            connectClicked(true, path, false, false, false, m_nonDFUBoardPresent,
+                           boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                           OPENMV_ROMFS_READ);
+        });
+        loop.exec();
+    }
+
+    if (m_romfsOperationFailed)
+    {
+        romfsFile.remove();
+
+        if (m_romfsBootloaderLeft)
+        {
+            if (wasConnected) connectClicked(false, QString(), false, false, false, true);
+        }
+        else
+        {
+            romfsOperationIncomplete(title, false);
+        }
+
+        *error = Tr::tr("Reading the ROMFS from the camera failed.");
+        return false;
+    }
+
+    bool ok = false;
+
+    if (romfsFile.open(QFile::ReadOnly))
+    {
+        QByteArray data = romfsFile.readAll();
+        VfsRomReader reader(data);
+        ok = (data.size() >= romfsImageSize) && reader.unpack(dir);
+        romfsFile.close();
+        if (!ok) *error = Tr::tr("Failed to unpack ROMFS!");
+    }
+    else
+    {
+        *error = romfsFile.errorString();
+    }
+
+    if (wasConnected) connectClicked(false, QString(), false, false, false, true);
+    return ok;
+}
+
+bool OpenMVPlugin::romfsWriteFromDir(const QString &dir, QString *error)
+{
+    const QString title = Tr::tr("Edit ROMFS");
+    QJsonObject boardSettings;
+    QJsonObject romfs = romfsTarget(title, &boardSettings, error);
+    if (romfs.isEmpty()) return false;
+
+    const int romfsIndex = romfs.value(QStringLiteral("index")).toInt();
+    const int romfsImageSize = romfs.value(QStringLiteral("size")).toInt();
+    const QJsonArray alignmentRules = romfs.value(QStringLiteral("alignmentRules")).toArray();
+
+    // Pack first: an over-size image must not touch the camera.
+    VfsRomWriter writer(alignmentRules);
+    packDirIntoRomfs(&writer, QDir(dir));
+    const QByteArray image = writer.finalize();
+
+    if (image.size() > romfsImageSize)
+    {
+        *error = Tr::tr("The ROMFS image is %L1 bytes but the board's ROMFS holds %L2 bytes.").arg(image.size()).arg(romfsImageSize);
+        return false;
+    }
+
+    RomfsSessionGuard romfsSession(this);
+    bool wasConnected = m_connected;
+
+    QFile romfsFile(romfsStagingPath(romfsIndex));
+
+    if (!romfsFile.open(QIODevice::WriteOnly | QIODevice::Truncate))
+    {
+        *error = romfsFile.errorString();
+        return false;
+    }
+
+    romfsFile.write(image);
+    romfsFile.close();
+
+    {
+        QEventLoop loop;
+        connect(this, &OpenMVPlugin::workingDone, &loop, &QEventLoop::quit);
+        QString path = QFileInfo(romfsFile).filePath();
+        QTimer::singleShot(0, this, [this, path, boardSettings] {
+            connectClicked(true, path, false, false, false, true,
+                           boardSettings.value(QStringLiteral("boardDisplayName")).toString(),
+                           OPENMV_ROMFS_WRITE);
+        });
+        loop.exec();
+    }
+
+    if (m_romfsOperationFailed)
+    {
+        romfsOperationIncomplete(title, true);
+        if (m_romfsBootloaderLeft && wasConnected) connectClicked(false, QString(), false, false, false, true);
+        *error = Tr::tr("Writing the ROMFS to the camera failed.");
+        return false;
+    }
+
+    if (wasConnected) connectClicked(false, QString(), false, false, false, true);
+    return true;
+}
+
 void OpenMVPlugin::editRomfsClicked(bool fromConnect, bool newRomfs)
 {
     if (m_working)

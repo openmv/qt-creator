@@ -1750,7 +1750,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         QString path =
             OMVUI::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a folder to build the dataset in"),
-                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
+                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString(), QFileDialog::ShowDirsOnly, OMV_UI_SITE("dataset.new_path"));
 
         if(!path.isEmpty())
         {
@@ -1761,7 +1761,7 @@ void OpenMVPlugin::extensionsInitialized()
                 if(OMVUI::warning(Core::ICore::dialogParent(),
                     Tr::tr("New Dataset"),
                     Tr::tr("The selected folder is not empty and the contents will be deleted. Continue?"),
-                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No)
+                    QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel, QMessageBox::No, OMV_UI_SITE("dataset.new_clear"))
                 == QMessageBox::Yes)
                 {
                     if(QDir::cleanPath(QDir::fromNativeSeparators(m_datasetEditor->rootPath())) == QDir::cleanPath(QDir::fromNativeSeparators(path)))
@@ -1863,7 +1863,7 @@ void OpenMVPlugin::extensionsInitialized()
 
         QString path =
             OMVUI::getExistingDirectory(Core::ICore::dialogParent(), Tr::tr("Dataset Editor - Choose a dataset folder to open"),
-                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString());
+                settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_PATH, QDir::homePath()).toString(), QFileDialog::ShowDirsOnly, OMV_UI_SITE("dataset.open_path"));
 
         if(!path.isEmpty())
         {
@@ -1911,7 +1911,7 @@ void OpenMVPlugin::extensionsInitialized()
             path =
             OMVUI::getSaveFileName(Core::ICore::dialogParent(), Tr::tr("Export Dataset"),
                 settings->value(SETTINGS_GROUP "/" LAST_DATASET_EDITOR_EXPORT_PATH, QDir::homePath()).toString(),
-                Tr::tr("Zip Files (*.zip)"));
+                Tr::tr("Zip Files (*.zip)"), Q_NULLPTR, QFileDialog::Options(), OMV_UI_SITE("dataset.export_path"));
 
             if((!path.isEmpty()) && QFileInfo(path).completeSuffix().isEmpty())
             {

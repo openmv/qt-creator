@@ -505,6 +505,11 @@ public slots: // private
     void packageUpdate();
     void bootloaderClicked();
     void loadCustomFirmware(const QString &forceFirmwarePath, bool flashFSErase, bool resetROMFS);
+    // The ROMFS editor's read and commit steps without the editor (MCP): pull the
+    // camera's ROMFS into `dir`, or pack `dir` and write it to the camera.
+    QJsonObject romfsTarget(const QString &title, QJsonObject *boardSettings, QString *error);
+    bool romfsReadToDir(const QString &dir, QString *error);
+    bool romfsWriteFromDir(const QString &dir, QString *error);
     void editRomfsClicked(bool fromConnect = false, bool newRomfs = false);
     void resetRomfsClicked();
     void installTheLatestDevelopmentRelease();

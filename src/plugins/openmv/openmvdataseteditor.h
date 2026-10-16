@@ -74,6 +74,7 @@ public slots:
     void frameBufferData(const QPixmap &data);
     void newClassFolder();
     void snapshot();
+    QString snapshotTo(const QString &classFolderPath); // the saved file, or empty
 
 signals:
 
