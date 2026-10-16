@@ -29,6 +29,7 @@
 #include <QComboBox>
 #include <QFormLayout>
 #include <QGridLayout> // OPENMV-DIFF
+#include <QScrollArea> // OPENMV-DIFF
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
@@ -56,12 +57,20 @@ AcpChatTab::AcpChatTab(QWidget *parent)
     {
         auto *configPage = new QWidget;
         auto *configOuter = new QVBoxLayout(configPage);
-        configOuter->addStretch();
+        // OPENMV-DIFF //
+        // configOuter->addStretch();
+        //
+        // Anchored at the top (not centred) so opening a group grows the page
+        // downwards instead of shifting the rows above it.
+        configOuter->addSpacing(24);
+        // OPENMV-DIFF //
 
         m_configStack = new QStackedWidget;
         // OPENMV-DIFF //
         // m_configStack->setMaximumWidth(480);
-        m_configStack->setMaximumWidth(640); // room for the three-column agent grid
+        // A fixed width (room for the three-column agent grid) so opening or
+        // closing a group never changes the page's size.
+        m_configStack->setFixedWidth(640);
         // OPENMV-DIFF //
         m_configStack->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
 
@@ -138,15 +147,20 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             m_connectionErrorLabel->setPalette(errorPal);
             connectLayout->addWidget(m_connectionErrorLabel);
 
-            auto *manageButton = new QtcButton(Tr::tr("Manage Agents..."),
-                                               QtcButton::MediumGhost);
-            manageButton->setToolTip(Tr::tr("Open ACP server settings."));
-            manageButton->setPixmap(Utils::Icons::SETTINGS.pixmap());
-            connect(manageButton, &QAbstractButton::clicked, this, [] {
-                Core::ICore::showSettings("AI.ACPSERVERS");
-            });
-            connectLayout->addWidget(Layouting::createHr());
-            connectLayout->addWidget(manageButton);
+            // OPENMV-DIFF //
+            // No "Manage Agents..." here: the grid picks the agent, and the
+            // server list stays reachable from Preferences > AI.
+            //
+            // auto *manageButton = new QtcButton(Tr::tr("Manage Agents..."),
+            //                                    QtcButton::MediumGhost);
+            // manageButton->setToolTip(Tr::tr("Open ACP server settings."));
+            // manageButton->setPixmap(Utils::Icons::SETTINGS.pixmap());
+            // connect(manageButton, &QAbstractButton::clicked, this, [] {
+            //     Core::ICore::showSettings("AI.ACPSERVERS");
+            // });
+            // connectLayout->addWidget(Layouting::createHr());
+            // connectLayout->addWidget(manageButton);
+            // OPENMV-DIFF //
 
             connectLayout->addStretch();
 
@@ -160,7 +174,18 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         configOuter->addLayout(configCenter);
         configOuter->addStretch();
 
-        m_stack->addWidget(configPage);  // index 0
+        // OPENMV-DIFF //
+        // m_stack->addWidget(configPage);  // index 0
+        //
+        // The agent groups can be taller than the chat area, so the page
+        // scrolls instead of squeezing its buttons.
+        auto *configScroll = new QScrollArea;
+        configScroll->setWidgetResizable(true);
+        configScroll->setFrameShape(QFrame::NoFrame);
+        configScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        configScroll->setWidget(configPage);
+        m_stack->addWidget(configScroll);  // index 0
+        // OPENMV-DIFF //
     }
 
     // --- Page 1: Authentication (shown when auth required) ---
@@ -636,10 +661,15 @@ void AcpChatTab::populateServerButtons()
                         connectToConfiguredServer(id, name);
                 });
             });
+            // Reserve the icon's space now, so the button does not widen when
+            // the icon arrives.
+            const int iconSize = button->fontMetrics().height();
+            QPixmap blank(iconSize, iconSize);
+            blank.fill(Qt::transparent);
+            button->setPixmap(blank);
             Utils::onResultReady(
-                AcpSettings::iconForUrl(entry.iconUrl), button, [button](const QIcon &icon) {
-                    const int size = button->fontMetrics().height();
-                    button->setPixmap(icon.pixmap(size, size));
+                AcpSettings::iconForUrl(entry.iconUrl), button, [button, iconSize](const QIcon &icon) {
+                    button->setPixmap(icon.pixmap(iconSize, iconSize));
                 });
             gridLayout->addWidget(button, n / columns, n % columns);
             ++n;
@@ -682,6 +712,7 @@ void AcpChatTab::populateServerButtons()
             Core::ICore::settings()->setValue(settingsKey, nowOpen);
         });
     }
+
 
     m_configStack->setCurrentIndex(total == 0 ? 0 : 1);
     // OPENMV-DIFF //

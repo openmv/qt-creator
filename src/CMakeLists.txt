@@ -12,6 +12,9 @@ add_subdirectory(app)
 # OPENMV-DIFF #
 # add_subdirectory(tools)
 # OPENMV-DIFF #
+# Only the download wrapper the ACP client uses to fetch binary-distributed agents.
+add_subdirectory(tools/dlwrapper)
+# OPENMV-DIFF #
 
 install(
   FILES
