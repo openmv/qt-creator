@@ -127,6 +127,9 @@ public:
     }
 
     std::optional<Acp::Registry::ACPAgentRegistry> registry() const { return s_registry; }
+    // OPENMV-DIFF //
+    static const std::optional<Acp::Registry::ACPAgentRegistry> &data() { return s_registry; }
+    // OPENMV-DIFF //
 
     QList<QStandardItem *> registryItems()
     {
@@ -435,6 +438,7 @@ public:
         info.id = id.value();
         info.name = name.value();
         info.iconUrl = iconUrl.value();
+        info.registryId = registryBrowser.value(); // OPENMV-DIFF
         info.launchCommand = CommandLine(
             FilePath::fromUserInput(launchCommand.value()),
             launchArguments.value(),
@@ -550,6 +554,60 @@ QList<AcpSettings::ServerInfo> AcpSettings::servers()
     return result;
 }
 
+// OPENMV-DIFF //
+QList<AcpSettings::RegistryAgent> AcpSettings::registryAgents()
+{
+    QList<RegistryAgent> result;
+    if (const auto &registry = AcpRegistryBrowser::data()) {
+        for (const Acp::Registry::ACPAgent &agent : registry->agents())
+            result.push_back({agent.id(), agent.name(), agent.description(), agent.icon().value_or(QString())});
+    }
+    return result;
+}
+
+// Adds a server for registry agent `id` unless one already exists. Returns
+// the server id (empty if the registry does not know the agent). Does not
+// save or notify; callers batch that.
+static QString addRegistryServerSilently(const QString &id)
+{
+    QString found;
+    AcpManagerSettings::instance().acpServers.forEachItem(
+        [&](const std::shared_ptr<AcpServerAspect> &server) {
+            if (found.isEmpty() && server->registryBrowser.value() == id)
+                found = server->id.value();
+        });
+    if (!found.isEmpty())
+        return found;
+
+    const auto &registry = AcpRegistryBrowser::data();
+    if (!registry)
+        return QString();
+    const bool known = std::any_of(registry->agents().begin(), registry->agents().end(),
+                                   [&id](const Acp::Registry::ACPAgent &a) { return a.id() == id; });
+    if (!known)
+        return QString();
+
+    auto item = std::dynamic_pointer_cast<AcpServerAspect>(
+        AcpManagerSettings::instance().acpServers.createAndAddItem());
+    if (!item)
+        return QString();
+    item->registryBrowser.setValue(id);
+    item->applyRegistryTemplate();
+    return item->id.value();
+}
+
+QString AcpSettings::ensureRegistryServer(const QString &id)
+{
+    const int before = AcpManagerSettings::instance().acpServers.items().size();
+    const QString serverId = addRegistryServerSilently(id);
+    if (AcpManagerSettings::instance().acpServers.items().size() != before) {
+        AcpManagerSettings::instance().acpServers.writeSettings();
+        emit AcpSettings::instance().serversChanged();
+    }
+    return serverId;
+}
+// OPENMV-DIFF //
+
 QFuture<QIcon> AcpSettings::iconForUrl(const QString &url)
 {
     auto promise = std::make_shared<QPromise<QIcon>>();
@@ -569,18 +627,10 @@ void prefetchAcpRegistry()
     AcpRegistryBrowser::prefetch(
         [] {
             // OPENMV-DIFF //
-            // First run: offer the agents people reach for, so the chat panel is
-            // not empty until someone finds the ACP Servers settings page.
-            if (AcpManagerSettings::instance().acpServers.items().isEmpty()) {
-                for (const char *id : {"claude-acp", "gemini", "codex-acp"}) {
-                    auto item = std::dynamic_pointer_cast<AcpServerAspect>(
-                        AcpManagerSettings::instance().acpServers.createAndAddItem());
-                    if (!item)
-                        continue;
-                    item->registryBrowser.setValue(QString::fromLatin1(id));
-                    item->applyRegistryTemplate();
-                }
-            }
+            // Always offer the agents people reach for (Claude, OpenAI, Google), so
+            // the chat panel has them without a trip to the ACP Servers settings page.
+            for (const char *id : AcpSettings::defaultRegistryAgents())
+                addRegistryServerSilently(QString::fromLatin1(id));
             // OPENMV-DIFF //
             AcpManagerSettings::instance().acpServers.forEachItem(
                 [](const std::shared_ptr<AcpServerAspect> &server) {

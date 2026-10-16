@@ -1878,7 +1878,7 @@ void OpenMVPlugin::registerMcpTools()
 
                 for(Core::Command *command : Core::ActionManager::commands())
                 {
-                    if(!command->action() || !command->id().toString().startsWith(QStringLiteral("OpenMV."))) continue;
+                    if(!command->action() || (!command->id().toString().startsWith(QStringLiteral("OpenMV.")) && qEnvironmentVariableIsEmpty("OPENMV_MCP_ANY_COMMAND"))) continue;
                     if(enabledOnly && !command->action()->isEnabled()) continue;
 
                     const QString text = command->action()->text().remove(QLatin1Char('&'));
@@ -1916,7 +1916,7 @@ void OpenMVPlugin::registerMcpTools()
                 const QString id = args.value(QStringLiteral("id")).toString();
 
                 Core::Command *command = Core::ActionManager::command(Utils::Id::fromString(id));
-                if(!command || !command->action() || !id.startsWith(QStringLiteral("OpenMV."))) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("No OpenMV command \"%1\"; see openmv_actions_list.").arg(id));
+                if(!command || !command->action() || (!id.startsWith(QStringLiteral("OpenMV.")) && qEnvironmentVariableIsEmpty("OPENMV_MCP_ANY_COMMAND"))) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("No OpenMV command \"%1\"; see openmv_actions_list.").arg(id));
 
                 QAction *action = command->action();
                 if(!action->isEnabled()) return errResult(QStringLiteral("not_available"), QStringLiteral("\"%1\" is disabled right now (it usually needs a connected camera, a mounted drive or an open dataset).").arg(action->text().remove(QLatin1Char('&'))));

@@ -161,10 +161,23 @@ OutputPanePlaceHolder::~OutputPanePlaceHolder()
     delete d;
 }
 
+// OPENMV-DIFF //
+static bool s_sharedValid = false;
+static bool s_sharedVisible = false;
+static int s_sharedHeight = 0;
+// OPENMV-DIFF //
+
 void OutputPanePlaceHolder::currentModeChanged(Id mode)
 {
     if (OutputPanePlaceHolderPrivate::m_current == this) {
         OutputPanePlaceHolderPrivate::m_current = nullptr;
+        // OPENMV-DIFF //
+        // Remember how this mode left the pane so the next mode shows it the same
+        // way: OpenMV IDE wants Edit and AI to feel like one window.
+        s_sharedVisible = !isHidden(); // not isVisible(): the mode widget is already hidden here
+        s_sharedHeight = d->m_nonMaximizedSize;
+        s_sharedValid = true;
+        // OPENMV-DIFF //
         if (d->m_initialized)
             Internal::OutputPaneManager::setOutputPaneHeightSetting(d->m_nonMaximizedSize);
         Internal::OutputPaneManager *om = Internal::OutputPaneManager::instance();
@@ -175,10 +188,27 @@ void OutputPanePlaceHolder::currentModeChanged(Id mode)
     if (d->m_mode == mode) {
         if (OutputPanePlaceHolderPrivate::m_current && OutputPanePlaceHolderPrivate::m_current->d->m_initialized)
             Internal::OutputPaneManager::setOutputPaneHeightSetting(OutputPanePlaceHolderPrivate::m_current->d->m_nonMaximizedSize);
+        // OPENMV-DIFF //
+        // Slots run in connection order, so the placeholder being entered may
+        // run before the one being left: take the state from it here too.
+        if (OutputPanePlaceHolderPrivate::m_current && OutputPanePlaceHolderPrivate::m_current != this) {
+            s_sharedVisible = !OutputPanePlaceHolderPrivate::m_current->isHidden();
+            s_sharedHeight = OutputPanePlaceHolderPrivate::m_current->d->m_nonMaximizedSize;
+            s_sharedValid = true;
+        }
+        // OPENMV-DIFF //
         Core::OutputPanePlaceHolderPrivate::m_current = this;
         Internal::OutputPaneManager *om = Internal::OutputPaneManager::instance();
         layout()->addWidget(om);
         om->show();
+        // OPENMV-DIFF //
+        if (s_sharedValid) {
+            if (isHidden() == s_sharedVisible)
+                setVisible(s_sharedVisible);
+            if (s_sharedVisible && s_sharedHeight > 0)
+                setHeight(s_sharedHeight);
+        }
+        // OPENMV-DIFF //
         om->updateStatusButtons(isVisible());
         Internal::OutputPaneManager::updateMaximizeButton(d->m_isMaximized);
     }

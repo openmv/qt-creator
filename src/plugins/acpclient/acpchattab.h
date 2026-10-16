@@ -9,6 +9,7 @@ class QComboBox;
 class QLabel;
 class QStackedWidget;
 class QVBoxLayout;
+class QGridLayout; // OPENMV-DIFF
 
 namespace Utils {
 class FilePath;
@@ -36,19 +37,24 @@ public:
     void setFocus();
 
     QString title() const;
+    bool isInUse() const { return !m_currentServerName.isEmpty(); } // OPENMV-DIFF: an agent was picked
 
 signals:
     void titleChanged();
 
 private:
     void populateServerButtons();
+    void connectToConfiguredServer(const QString &serverId, const QString &serverName); // OPENMV-DIFF
     void updateTitle();
     void showSessionPicker();
 
     // Config page
     QStackedWidget *m_stack;
     QStackedWidget *m_configStack;
-    QVBoxLayout *m_serverButtonsLayout = nullptr;
+    // OPENMV-DIFF //
+    // QVBoxLayout *m_serverButtonsLayout = nullptr;
+    QGridLayout *m_serverButtonsLayout = nullptr;
+    // OPENMV-DIFF //
     Utils::InfoLabel *m_noServerLabel;
     QLabel *m_connectionErrorLabel = nullptr;
     QString m_currentServerName;

@@ -44,6 +44,9 @@ namespace Internal {
 OpenMVAIMode::OpenMVAIMode(QObject *parent) : Core::IMode(parent)
 {
     QWidget *container = new QWidget;
+    // The chat page (its agent grid) has a tall minimum; do not let it push the
+    // output pane below the height it had in Edit mode.
+    container->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Ignored);
     m_layout = new QVBoxLayout(container);
     m_layout->setContentsMargins(0, 0, 0, 0);
     m_layout->setSpacing(0);

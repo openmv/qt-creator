@@ -143,6 +143,14 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
     // OPENMV-DIFF //
 
     m_tabBar->setStyleSheet(stylesheetPattern);
+    // OPENMV-DIFF //
+    // Other tab bars that want the same look (the AI chat tabs) pick it up by
+    // object name, and later ones read it from the application.
+    qApp->setProperty("openmv.tabBarStyleSheet", stylesheetPattern);
+    const QList<QWidget *> styled = Core::ICore::mainWindow()->findChildren<QWidget *>(QLatin1String("OpenMVStyledTabBar"));
+    for (QWidget *w : styled)
+        w->setStyleSheet(stylesheetPattern);
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this] {

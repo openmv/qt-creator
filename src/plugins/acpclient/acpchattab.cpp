@@ -28,10 +28,12 @@
 
 #include <QComboBox>
 #include <QFormLayout>
+#include <QGridLayout> // OPENMV-DIFF
 #include <QHBoxLayout>
 #include <QLabel>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QTimer> // OPENMV-DIFF
 #include <QVBoxLayout>
 
 using namespace Acp;
@@ -57,7 +59,10 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         configOuter->addStretch();
 
         m_configStack = new QStackedWidget;
-        m_configStack->setMaximumWidth(480);
+        // OPENMV-DIFF //
+        // m_configStack->setMaximumWidth(480);
+        m_configStack->setMaximumWidth(640); // room for the three-column agent grid
+        // OPENMV-DIFF //
         m_configStack->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
 
         // Config stack page 0: no servers configured
@@ -107,9 +112,18 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             connectLayout->addWidget(titleLabel);
             connectLayout->addWidget(Layouting::createHr());
 
-            m_serverButtonsLayout = new QVBoxLayout;
+            // OPENMV-DIFF //
+            // m_serverButtonsLayout = new QVBoxLayout;
+            // m_serverButtonsLayout->setSpacing(6);
+            // connectLayout->addLayout(m_serverButtonsLayout);
+            //
+            // A grid of every registry agent, most used first, plus any custom
+            // servers; picking one that is not configured yet adds it as a
+            // server (saved like one made in settings) and connects.
+            m_serverButtonsLayout = new QGridLayout;
             m_serverButtonsLayout->setSpacing(6);
             connectLayout->addLayout(m_serverButtonsLayout);
+            // OPENMV-DIFF //
 
             m_connectionErrorLabel = new QLabel;
             m_connectionErrorLabel->setWordWrap(true);
@@ -530,30 +544,105 @@ void AcpChatTab::populateServerButtons()
         delete item;
     }
 
+    // OPENMV-DIFF //
+    // One entry per registry agent, ranked, then the rest of the registry,
+    // then servers that were not made from the registry. Configured or not,
+    // an entry connects; unconfigured ones are added as servers first.
+    struct Entry
+    {
+        QString serverId;   // empty until configured
+        QString registryId; // empty for custom servers
+        QString name;
+        QString iconUrl;
+        QString description;
+    };
+    QList<Entry> entries;
     const QList<AcpSettings::ServerInfo> servers = AcpSettings::servers();
-    for (const AcpSettings::ServerInfo &info : servers) {
-        auto *button = new QtcButton(info.name, QtcButton::MediumTertiary);
-        button->setToolTip(info.name);
-        const QString serverId = info.id;
-        const QString serverName = info.name;
-        connect(button, &QAbstractButton::clicked, this, [this, serverId, serverName] {
-            m_connectionErrorLabel->hide();
-            m_currentServerName = serverName;
-            updateTitle();
-            m_initializingLabel->setText(Tr::tr("Connecting to %1").arg(serverName));
-            m_stack->setCurrentIndex(3);
-            m_controller->connectToServer(serverId);
+    const QList<AcpSettings::RegistryAgent> agents = AcpSettings::registryAgents();
+    const auto serverFor = [&servers](const QString &registryId) -> const AcpSettings::ServerInfo * {
+        for (const AcpSettings::ServerInfo &s : servers) {
+            if (!registryId.isEmpty() && s.registryId == registryId)
+                return &s;
+        }
+        return nullptr;
+    };
+    const auto addAgent = [&](const AcpSettings::RegistryAgent &agent) {
+        const AcpSettings::ServerInfo *s = serverFor(agent.id);
+        entries.push_back({s ? s->id : QString(), agent.id, s ? s->name : agent.name,
+                           agent.iconUrl, agent.description});
+    };
+    QStringList placed;
+    for (const char *rankedId : AcpSettings::rankedRegistryAgents()) {
+        for (const AcpSettings::RegistryAgent &agent : agents) {
+            if (agent.id == QLatin1String(rankedId)) {
+                addAgent(agent);
+                placed << agent.id;
+            }
+        }
+    }
+    for (const AcpSettings::RegistryAgent &agent : agents) {
+        if (!placed.contains(agent.id))
+            addAgent(agent);
+    }
+    for (const AcpSettings::ServerInfo &s : servers) {
+        const bool fromRegistry = std::any_of(agents.begin(), agents.end(),
+                                              [&s](const AcpSettings::RegistryAgent &a) { return a.id == s.registryId; });
+        if (!fromRegistry)
+            entries.push_back({s.id, QString(), s.name, s.iconUrl, QString()});
+    }
+
+    const int columns = 3;
+    int n = 0;
+    for (const Entry &entry : entries) {
+        auto *button = new QtcButton(entry.name, QtcButton::MediumTertiary);
+        button->setToolTip(entry.description.isEmpty() ? entry.name : entry.description);
+        button->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        const QString serverId = entry.serverId;
+        const QString registryId = entry.registryId;
+        const QString serverName = entry.name;
+        connect(button, &QAbstractButton::clicked, this, [this, serverId, registryId, serverName] {
+            // Adding a server repopulates this grid, deleting the button that
+            // was clicked, so finish on the event loop.
+            QTimer::singleShot(0, this, [this, serverId, registryId, serverName] {
+                QString id = serverId;
+                QString name = serverName;
+                if (id.isEmpty()) {
+                    id = AcpSettings::ensureRegistryServer(registryId);
+                    for (const AcpSettings::ServerInfo &info : AcpSettings::servers()) {
+                        if (info.id == id)
+                            name = info.name;
+                    }
+                }
+                if (!id.isEmpty())
+                    connectToConfiguredServer(id, name);
+            });
         });
         Utils::onResultReady(
-            AcpSettings::iconForUrl(info.iconUrl), button, [button](const QIcon &icon) {
+            AcpSettings::iconForUrl(entry.iconUrl), button, [button](const QIcon &icon) {
                 const int size = button->fontMetrics().height();
                 button->setPixmap(icon.pixmap(size, size));
             });
-        m_serverButtonsLayout->addWidget(button);
+        m_serverButtonsLayout->addWidget(button, n / columns, n % columns);
+        ++n;
     }
+    for (int c = 0; c < columns; ++c)
+        m_serverButtonsLayout->setColumnStretch(c, 1);
 
-    m_configStack->setCurrentIndex(servers.isEmpty() ? 0 : 1);
+    m_configStack->setCurrentIndex(entries.isEmpty() ? 0 : 1);
+    // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+void AcpChatTab::connectToConfiguredServer(const QString &serverId, const QString &serverName)
+{
+    m_connectionErrorLabel->hide();
+    m_currentServerName = serverName;
+    updateTitle();
+    m_initializingLabel->setText(Tr::tr("Connecting to %1").arg(serverName));
+    m_stack->setCurrentIndex(3);
+    m_controller->connectToServer(serverId);
+}
+// OPENMV-DIFF //
 
 void AcpChatTab::updateTitle()
 {

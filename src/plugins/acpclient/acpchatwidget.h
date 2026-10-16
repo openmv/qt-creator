@@ -6,6 +6,9 @@
 #include <QWidget>
 
 class QTabWidget;
+// OPENMV-DIFF //
+namespace AcpClient::Internal { class ChatTabs; }
+// OPENMV-DIFF //
 class QToolButton;
 
 namespace AcpClient::Internal {
@@ -31,9 +34,13 @@ signals:
 private:
     AcpChatTab *addNewTab();
     void closeTab(int index);
+    void updateTrailingTab(); // OPENMV-DIFF
     AcpChatTab *currentTab() const;
 
-    QTabWidget *m_tabWidget;
+    // OPENMV-DIFF //
+    // QTabWidget *m_tabWidget;
+    ChatTabs *m_tabWidget;
+    // OPENMV-DIFF //
     AcpInspector *m_inspector = nullptr;
 };
 
