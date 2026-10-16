@@ -15,7 +15,7 @@
 #include <utils/environment.h>
 #include <utils/hostosinfo.h>
 
-namespace {
+namespace AcpClient::Internal {
 
 // The Node.js OpenMV IDE ships (share/qtcreator/node/<platform>), resolved
 // the way the Copilot plugin does; empty when this platform has none.
@@ -38,7 +38,7 @@ Utils::FilePath bundledNodeBinDir()
     return (dir.isEmpty() || !dir.exists()) ? FilePath() : dir;
 }
 
-} // namespace
+} // namespace AcpClient::Internal
 // OPENMV-DIFF //
 
 static Q_LOGGING_CATEGORY(logStdio, "qtc.acpclient.stdio", QtWarningMsg);

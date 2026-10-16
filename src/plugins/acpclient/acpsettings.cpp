@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
 #include "acpsettings.h"
+// OPENMV-DIFF //
+#include "acpstdiotransport.h"
+// OPENMV-DIFF //
 #include "acpclienttr.h"
 
 #include <acp/acpregistry.h>
@@ -168,8 +171,14 @@ public:
             wrapper.setRequest(request);
         };
         const auto fetchDone = [onDone](const QNetworkReplyWrapper &wrapper, DoneWith doneWith) {
-            if (doneWith != DoneWith::Success)
+            if (doneWith != DoneWith::Success) {
+                // OPENMV-DIFF //
+                // Say why the registry is empty instead of failing silently.
+                qWarning() << "Failed to fetch the ACP agent registry:"
+                           << (wrapper.reply() ? wrapper.reply()->errorString() : QString("no reply"));
+                // OPENMV-DIFF //
                 return;
+            }
 
             const QByteArray data = wrapper.reply()->readAll();
             QJsonParseError error;
@@ -186,6 +195,9 @@ public:
                 return;
             }
             s_registry = std::move(*registry);
+            // OPENMV-DIFF //
+            qInfo() << "ACP agent registry loaded:" << s_registry->agents().size() << "agents";
+            // OPENMV-DIFF //
             if (onDone)
                 onDone();
         };
@@ -267,8 +279,16 @@ public:
                                          .arg(launchArguments());
                 templateCmdInfo->setText(info);
                 templateCmdInfo->setVisible(!isCustom);
+                // OPENMV-DIFF //
+                // npx/node/npm are also satisfied by the Node.js the IDE ships
+                // (the transport launches through it when PATH has none).
+                const QString tool = executable.fileName();
+                const bool bundledNode = ((tool == "npx") || (tool == "node") || (tool == "npm"))
+                                         && !bundledNodeBinDir().isEmpty();
                 const bool executableCanBeFound
-                    = executable.searchInPath(FileUtils::usefulExtraSearchPaths()).exists();
+                    = bundledNode
+                      || executable.searchInPath(FileUtils::usefulExtraSearchPaths()).exists();
+                // OPENMV-DIFF //
                 cmdNotFoundLabel->setVisible(!isCustom && !executableCanBeFound);
                 QString warningText = Tr::tr("\"%1\" is needed for this Agent, but was not found.")
                                           .arg(executable.toUserOutput().toHtmlEscaped());

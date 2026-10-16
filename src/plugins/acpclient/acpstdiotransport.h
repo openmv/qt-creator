@@ -15,6 +15,12 @@ namespace Utils { class Process; }
 
 namespace AcpClient::Internal {
 
+// OPENMV-DIFF //
+// The bin directory of the Node.js OpenMV IDE ships, or empty: used when the
+// machine has no npx/node/npm of its own.
+Utils::FilePath bundledNodeBinDir();
+// OPENMV-DIFF //
+
 class AcpStdioTransport : public AcpTransport
 {
     Q_OBJECT
