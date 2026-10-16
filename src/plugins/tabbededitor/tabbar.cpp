@@ -20,6 +20,11 @@
 
 #include <QMenu>
 #include <QMouseEvent>
+// OPENMV-DIFF //
+#include <QAbstractButton>
+#include <QPainter>
+#include <utils/theme/theme.h>
+// OPENMV-DIFF //
 #include <QShortcut>
 #include <QTabBar>
 // OPENMV-DIFF //
@@ -331,3 +336,39 @@ void TabBar::mouseReleaseEvent(QMouseEvent *event)
         closeTab(tabAt(event->pos()));
     QTabBar::mouseReleaseEvent(event);
 }
+
+// OPENMV-DIFF //
+// Where the current tab is drawn. While a tab is dragged (and while it slides
+// back into place afterwards) QTabBar draws it with a temporary child widget
+// that it positions during its own paintEvent; that is the only child that is
+// not a button, so follow it. Otherwise it is the current tab's slot.
+static QRect currentTabRect(const QTabBar *bar)
+{
+    for (QObject *child : bar->children()) {
+        QWidget *widget = qobject_cast<QWidget *>(child);
+        if (widget && widget->isVisible() && !qobject_cast<QAbstractButton *>(widget))
+            return widget->geometry();
+    }
+    return bar->currentIndex() >= 0 ? bar->tabRect(bar->currentIndex()) : QRect();
+}
+
+// A line along the bottom of the tab row, except under the current tab, which
+// opens straight into the editor below it.
+void TabBar::paintEvent(QPaintEvent *event)
+{
+    QTabBar::paintEvent(event);
+
+    QPainter painter(this);
+    painter.setPen(Utils::creatorColor(Utils::Theme::SplitterColor));
+    const int y = height() - 1;
+    const QRect current = currentTabRect(this);
+    if (current.isNull()) {
+        painter.drawLine(0, y, width() - 1, y);
+    } else {
+        if (current.left() > 0)
+            painter.drawLine(0, y, current.left() - 1, y);
+        if (current.right() < width() - 1)
+            painter.drawLine(current.right() + 1, y, width() - 1, y);
+    }
+}
+// OPENMV-DIFF //

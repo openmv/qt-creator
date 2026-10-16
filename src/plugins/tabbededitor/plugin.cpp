@@ -15,6 +15,9 @@
 // OPENMV-DIFF //
 #include <extensionsystem/pluginmanager.h>
 #include <coreplugin/editortoolbar.h>
+#include <texteditor/fontsettings.h>
+#include <texteditor/texteditorconstants.h>
+#include <texteditor/texteditorsettings.h>
 
 #include <QApplication>
 // OPENMV-DIFF //
@@ -99,77 +102,16 @@ QString TabbedEditorPlugin::getStylesheetPatternFromFile(const QString &filepath
     return QString::fromUtf8(stylesheetFile.readAll());
 }
 
+// OPENMV-DIFF //
+// The stylesheet is applyStyleSheet(), so it can be re-applied when the text
+// editor's color scheme changes (the selected tab takes its background); the
+// rest runs once at startup.
 void TabbedEditorPlugin::updateStyleToBaseColor()
 {
-    Utils::Theme *theme = Utils::creatorTheme();
+    applyStyleSheet();
+    connect(TextEditor::TextEditorSettings::instance(), &TextEditor::TextEditorSettings::fontSettingsChanged,
+            this, &TabbedEditorPlugin::applyStyleSheet, Qt::UniqueConnection);
 
-    QString baseColorQss;
-    QString borderColorQss;
-    QString highlightColorQss;
-    QString selectedTabBorderColorQss;
-    QString shadowColorQss;
-
-    // OPENMV-DIFF //
-    // if(theme->preferredStyles().isEmpty()) {
-    // OPENMV-DIFF //
-    if(0) { // if(theme->preferredStyles().isEmpty()) {
-    // OPENMV-DIFF //
-        baseColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor().lighter(130));
-        borderColorQss = getQssStringFromColor(Utils::StyleHelper::borderColor());
-        highlightColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor());
-        selectedTabBorderColorQss
-                = getQssStringFromColor(Utils::StyleHelper::highlightColor().lighter());
-        shadowColorQss = getQssStringFromColor(Utils::StyleHelper::shadowColor());
-    } else { // Flat widget style
-        // OPENMV-DIFF //
-        // baseColorQss
-        //         = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
-        // borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
-        // OPENMV-DIFF //
-        baseColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
-        borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::SplitterColor));
-        // OPENMV-DIFF //
-        // OPENMV-DIFF //
-        // highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
-        // selectedTabBorderColorQss
-        //         = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
-        // OPENMV-DIFF //
-        highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
-        selectedTabBorderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
-        // OPENMV-DIFF //
-        shadowColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
-    }
-
-    QString stylesheetPattern = getStylesheetPatternFromFile(QStringLiteral(":/styles/default.qss"));
-
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%FRAME_BACKGROUND_COLOR%"), highlightColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BORDER_COLOR%"), selectedTabBorderColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BACKGROUND_COLOR%"), baseColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BOTTOM_BORDER_COLOR%"), baseColorQss);
-
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BACKGROUND_COLOR_FROM%"), shadowColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BACKGROUND_COLOR_TO%"), shadowColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BORDER_COLOR%"), borderColorQss);
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BOTTOM_BORDER_COLOR%"), borderColorQss);
-    // OPENMV-DIFF //
-    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_TEXT_COLOR%"),
-                                                  getQssStringFromColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
-    if (!Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)) {
-        stylesheetPattern = stylesheetPattern.replace(QStringLiteral("close_button_light_grey.png"), QStringLiteral("close_button_dark.png"));
-    }
-    // OPENMV-DIFF //
-
-    m_tabBar->setStyleSheet(stylesheetPattern);
-    // OPENMV-DIFF //
-    // Other tab bars that want the same look (the AI chat tabs) pick it up by
-    // object name, and later ones read it from the application.
-    qApp->setProperty("openmv.tabBarStyleSheet", stylesheetPattern);
-    const QList<QWidget *> styled = Core::ICore::mainWindow()->findChildren<QWidget *>(QLatin1String("OpenMVStyledTabBar"));
-    for (QWidget *w : styled)
-        w->setStyleSheet(stylesheetPattern);
-    // OPENMV-DIFF //
-
-    // OPENMV-DIFF //
     connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested, this, [this] {
         Utils::QtcSettings *settings = Core::ICore::settings();
         settings->beginGroup("TabbedEditor");
@@ -203,6 +145,100 @@ void TabbedEditorPlugin::updateStyleToBaseColor()
     }
 
     settings->endGroup();
+}
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// void TabbedEditorPlugin::updateStyleToBaseColor()
+// OPENMV-DIFF //
+void TabbedEditorPlugin::applyStyleSheet()
+// OPENMV-DIFF //
+{
+    Utils::Theme *theme = Utils::creatorTheme();
+
+    QString baseColorQss;
+    QString borderColorQss;
+    QString highlightColorQss;
+    QString selectedTabBorderColorQss;
+    QString shadowColorQss;
+
+    // OPENMV-DIFF //
+    // if(theme->preferredStyles().isEmpty()) {
+    // OPENMV-DIFF //
+    if(0) { // if(theme->preferredStyles().isEmpty()) {
+    // OPENMV-DIFF //
+        baseColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor().lighter(130));
+        borderColorQss = getQssStringFromColor(Utils::StyleHelper::borderColor());
+        highlightColorQss = getQssStringFromColor(Utils::StyleHelper::baseColor());
+        selectedTabBorderColorQss
+                = getQssStringFromColor(Utils::StyleHelper::highlightColor().lighter());
+        shadowColorQss = getQssStringFromColor(Utils::StyleHelper::shadowColor());
+    } else { // Flat widget style
+        // OPENMV-DIFF //
+        // baseColorQss
+        //         = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
+        // borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // baseColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+        // OPENMV-DIFF //
+        // The selected tab is the editor's own background so it opens into the
+        // code; the tab row and the other tabs are the toolbar's color.
+        const QColor editorBackground = TextEditor::TextEditorSettings::fontSettings()
+            .toTextCharFormat(TextEditor::C_TEXT).background().color();
+        baseColorQss = getQssStringFromColor(editorBackground.isValid()
+            ? editorBackground : theme->color(Utils::Theme::BackgroundColorNormal));
+        // OPENMV-DIFF //
+        borderColorQss = getQssStringFromColor(theme->color(Utils::Theme::SplitterColor));
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+        // selectedTabBorderColorQss
+        //         = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
+        // OPENMV-DIFF //
+        highlightColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+        // OPENMV-DIFF //
+        selectedTabBorderColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorHover));
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // shadowColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorNormal));
+        // OPENMV-DIFF //
+        shadowColorQss = getQssStringFromColor(theme->color(Utils::Theme::BackgroundColorDark));
+        // OPENMV-DIFF //
+    }
+
+    QString stylesheetPattern = getStylesheetPatternFromFile(QStringLiteral(":/styles/default.qss"));
+
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%FRAME_BACKGROUND_COLOR%"), highlightColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BORDER_COLOR%"), selectedTabBorderColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BACKGROUND_COLOR%"), baseColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_SELECTED_BOTTOM_BORDER_COLOR%"), baseColorQss);
+
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BACKGROUND_COLOR_FROM%"), shadowColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BACKGROUND_COLOR_TO%"), shadowColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BORDER_COLOR%"), borderColorQss);
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_BOTTOM_BORDER_COLOR%"), borderColorQss);
+    // OPENMV-DIFF //
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_HOVER_BACKGROUND_COLOR%"),
+                                                  getQssStringFromColor(Utils::creatorTheme()->color(Utils::Theme::BackgroundColorHover)));
+    stylesheetPattern = stylesheetPattern.replace(QLatin1String("%TAB_TEXT_COLOR%"),
+                                                  getQssStringFromColor(Utils::creatorTheme()->color(Utils::Theme::TextColorNormal)));
+    if (!Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)) {
+        stylesheetPattern = stylesheetPattern.replace(QStringLiteral("close_button_light_grey.png"), QStringLiteral("close_button_dark.png"));
+    }
+    // OPENMV-DIFF //
+
+    m_tabBar->setStyleSheet(stylesheetPattern);
+    // OPENMV-DIFF //
+    // Other tab bars that want the same look (the AI chat tabs) pick it up by
+    // object name, and later ones read it from the application.
+    qApp->setProperty("openmv.tabBarStyleSheet", stylesheetPattern);
+    const QList<QWidget *> styled = Core::ICore::mainWindow()->findChildren<QWidget *>(QLatin1String("OpenMVStyledTabBar"));
+    for (QWidget *w : styled)
+        w->setStyleSheet(stylesheetPattern);
     // OPENMV-DIFF //
 }
 

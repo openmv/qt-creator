@@ -3791,7 +3791,7 @@ void OpenMVPlugin::showCopilotDialog()
             QMessageBox::Yes | QMessageBox::No | QMessageBox::Cancel,
             QMessageBox::Yes, QMessageBox::No, {}, {}, QMessageBox::Yes) == QMessageBox::Yes)
         {
-            Core::ICore::showSettings(Utils::Id("Copilot.General"));
+            Core::ICore::showSettings(Utils::Id("AI.Copilot")); // Copilot's COPILOT_GENERAL_OPTIONS_ID
         }
     } else {
         QTimer::singleShot(2000, this, &OpenMVPlugin::showCopilotDialog); // try again

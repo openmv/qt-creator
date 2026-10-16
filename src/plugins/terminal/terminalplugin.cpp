@@ -39,7 +39,11 @@ public:
         m_terminalPane = new TerminalPane(this);
 
         Core::IOptionsPage::registerCategory(
-            "ZY.Terminal", Tr::tr("Terminal"), ":/terminal/images/settingscategory_terminal.png");
+            // OPENMV-DIFF //
+            // "ZY.Terminal", Tr::tr("Terminal"), ":/terminal/images/settingscategory_terminal.png");
+            // OPENMV-DIFF //
+            "ZY.Terminal", Tr::tr("Shell"), ":/terminal/images/settingscategory_terminal.png");
+            // OPENMV-DIFF //
 
         TerminalWidget::initActions(this);
 

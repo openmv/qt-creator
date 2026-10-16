@@ -160,7 +160,11 @@ void TerminalWidget::setupPty()
         const int exitCode = QTC_GUARD(m_process) ? m_process->exitCode() : -1;
         if (m_process) {
             if (exitCode != 0) {
-                errorMessage = Tr::tr("Terminal process exited with code %1.").arg(exitCode);
+                // OPENMV-DIFF //
+                // errorMessage = Tr::tr("Terminal process exited with code %1.").arg(exitCode);
+                // OPENMV-DIFF //
+                errorMessage = Tr::tr("Shell process exited with code %1.").arg(exitCode);
+                // OPENMV-DIFF //
 
                 if (!m_process->errorString().isEmpty())
                     errorMessage += QString(" (%1)").arg(m_process->errorString());
@@ -289,7 +293,11 @@ void TerminalWidget::setupActions()
     ActionBuilder closeTerminalAction(this, Core::Constants::CLOSE);
     closeTerminalAction.setContext(m_context)
         .addOnTriggered(this, &TerminalWidget::closeTerminal)
-        .setText(Tr::tr("Close Terminal"));
+        // OPENMV-DIFF //
+        // .setText(Tr::tr("Close Terminal"));
+        // OPENMV-DIFF //
+        .setText(Tr::tr("Close Shell"));
+        // OPENMV-DIFF //
     m_closeTerminal = make_registered(closeTerminalAction, false);
 
     ActionBuilder clearTerminalAction(this, Constants::CLEAR_TERMINAL);
@@ -687,7 +695,11 @@ void TerminalWidget::initActions(QObject *parent)
     pasteAction.setDefaultKeySequences(keySequence('V'));
 
     ActionBuilder clearTerminalAction(parent, Constants::CLEAR_TERMINAL);
-    clearTerminalAction.setText(Tr::tr("Clear Terminal"));
+    // OPENMV-DIFF //
+    // clearTerminalAction.setText(Tr::tr("Clear Terminal"));
+    // OPENMV-DIFF //
+    clearTerminalAction.setText(Tr::tr("Clear Shell"));
+    // OPENMV-DIFF //
     clearTerminalAction.setContext(context);
 
     ActionBuilder selectAllAction(parent, Constants::SELECTALL);

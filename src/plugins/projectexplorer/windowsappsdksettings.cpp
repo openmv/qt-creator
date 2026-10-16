@@ -556,7 +556,12 @@ void setupWindowsAppSdkSettings()
     if (!HostOsInfo::isWindowsHost())
         return;
 
-    static WindowsSettingsPage theWindowsSettingsPage;
+    // OPENMV-DIFF //
+    // static WindowsSettingsPage theWindowsSettingsPage;
+    // OPENMV-DIFF //
+    // The OpenMV IDE doesn't build Windows apps: no "SDKs > Windows App SDK" page.
+    // The settings themselves still load below (the device kit aspects read them).
+    // OPENMV-DIFF //
 
     (void) windowsAppSdkSettings();
 }

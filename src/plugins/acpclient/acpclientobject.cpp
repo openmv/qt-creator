@@ -194,9 +194,19 @@ void AcpClientObject::handleNotification(const QString &method, const QJsonObjec
             emit sessionUpdate(notif->sessionId(), notif->update());
         else
             qCWarning(logClient) << "Invalid session notification:" << params;
+    // OPENMV-DIFF //
+    // } else {
+    //     qCWarning(logClient) << "Unknown notification method:" << method;
+    // }
+    // OPENMV-DIFF //
+    } else if (method.startsWith(QLatin1Char('_'))) {
+        // ACP extension methods (agent-specific, e.g. "_auth/status_update") are
+        // meant to be ignored by clients that don't know them; don't warn.
+        qCDebug(logClient) << "Ignoring extension notification:" << method;
     } else {
         qCWarning(logClient) << "Unknown notification method:" << method;
     }
+    // OPENMV-DIFF //
 }
 
 void AcpClientObject::handleResponse(const QJsonValue &id, const QJsonObject &message)

@@ -460,6 +460,14 @@ Options parseCommandLine(int argc, char *argv[])
             ++it;
             options.uiLanguage = nextArg;
             options.preAppArguments << arg << nextArg;
+        } else if (arg == SETTINGS_OPTION && hasNext) {
+            // For running a dev build beside the installed IDE: its own settings
+            // (and user resources next to them) and its own single-instance id, so
+            // it neither shares the installed IDE's settings nor hands off to it.
+            ++it;
+            options.settingsPath = QDir::fromNativeSeparators(nextArg);
+            options.singleAppIdPostfix = QLatin1Char('-') + options.settingsPath;
+            options.preAppArguments << arg << nextArg;
         } else { // arguments that are still passed on to the application
             options.appArguments.push_back(*it);
         }

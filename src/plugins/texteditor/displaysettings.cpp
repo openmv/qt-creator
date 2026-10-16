@@ -206,7 +206,9 @@ public:
                         s.openLinksInNextSplit,
                         s.displayFileEncoding,
                         s.displayFileLineEnding,
-                        s.displayTabSettings,
+                        // OPENMV-DIFF //
+                        // s.displayTabSettings,
+                        // OPENMV-DIFF //
                         s.displayMinimap,
                     }
                 }

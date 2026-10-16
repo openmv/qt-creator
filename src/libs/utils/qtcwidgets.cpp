@@ -411,6 +411,12 @@ QtcSearchBox::QtcSearchBox(QWidget *parent)
                  creatorColor(Theme::Token_Text_Subtle));
     pal.setColor(QPalette::Text, searchBoxTextTF.color());
     setPalette(pal);
+    // OPENMV-DIFF //
+    // OpenMV puts a stylesheet on the main window's tab widget, and under a
+    // stylesheet Qt ignores the transparent Base above, so the line edit painted
+    // an opaque box inside the rounded background. Say it in the stylesheet too.
+    setStyleSheet(QStringLiteral("QLineEdit { background: transparent; border: none; }"));
+    // OPENMV-DIFF //
 
     setContentsMargins({PaddingHM, PaddingVS, 0, PaddingVS});
     setFixedHeight(PaddingVS + searchBoxTextTF.lineHeight() + PaddingVS);

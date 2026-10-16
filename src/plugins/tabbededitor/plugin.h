@@ -21,6 +21,9 @@ public:
 private slots:
     QString getStylesheetPatternFromFile(const QString &filepath);
     void updateStyleToBaseColor();
+    // OPENMV-DIFF //
+    void applyStyleSheet();
+    // OPENMV-DIFF //
     void showTabBar();
 
 private:

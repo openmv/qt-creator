@@ -2146,6 +2146,11 @@ void ICorePrivate::registerDefaultActions()
     selectAllAction.setDefaultKeySequence(QKeySequence::SelectAll);
     selectAllAction.addToContainer(Constants::M_EDIT, Constants::G_EDIT_SELECTALL);
     selectAllAction.setEnabled(false);
+    // OPENMV-DIFF //
+    // The Advanced submenu went into its group before that group's separator, so
+    // nothing divided it from Select All.
+    medit->addSeparator(Constants::G_EDIT_SELECTALL);
+    // OPENMV-DIFF //
 
     // Goto Action
     ActionBuilder gotoLineAction(this, Constants::GOTO);

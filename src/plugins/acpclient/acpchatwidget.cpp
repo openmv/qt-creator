@@ -10,6 +10,10 @@
 #include <utils/utilsicons.h>
 
 #include <QHBoxLayout>
+// OPENMV-DIFF //
+#include <QAbstractButton>
+#include <QPainter>
+// OPENMV-DIFF //
 #include <QTabWidget>
 // OPENMV-DIFF //
 #include <QApplication>
@@ -63,6 +67,40 @@ public:
         return QSize(0, QTabBar::minimumSizeHint().height());
     }
 
+    // Where the current tab is drawn. While a tab is dragged (and while it slides
+    // back into place afterwards) QTabBar draws it with a temporary child widget
+    // that it positions during its own paintEvent; that is the only child that is
+    // not a button, so follow it. Otherwise it is the current tab's slot.
+    QRect currentTabRect() const
+    {
+        for (QObject *child : children()) {
+            QWidget *widget = qobject_cast<QWidget *>(child);
+            if (widget && widget->isVisible() && !qobject_cast<QAbstractButton *>(widget))
+                return widget->geometry();
+        }
+        return currentIndex() >= 0 ? tabRect(currentIndex()) : QRect();
+    }
+
+    // Like the editor tabs: a line along the bottom of the tab row, except
+    // under the current tab, which opens straight into the chat below it.
+    void paintEvent(QPaintEvent *event) override
+    {
+        Utils::DocumentTabBar::paintEvent(event);
+
+        QPainter painter(this);
+        painter.setPen(Utils::creatorColor(Utils::Theme::SplitterColor));
+        const int y = height() - 1;
+        const QRect current = currentTabRect();
+        if (current.isNull()) {
+            painter.drawLine(0, y, width() - 1, y);
+        } else {
+            if (current.left() > 0)
+                painter.drawLine(0, y, current.left() - 1, y);
+            if (current.right() < width() - 1)
+                painter.drawLine(current.right() + 1, y, width() - 1, y);
+        }
+    }
+
     // The editor tab bar's close icon and hover tint, as a plain tool button.
     QToolButton *makeCloseButton()
     {
@@ -73,10 +111,15 @@ public:
         button->setToolTip(Tr::tr("Close"));
         button->setAutoRaise(true);
         button->setCursor(Qt::ArrowCursor);
+        // Same size as the editor tabs' close button: 20x20, the 16px icon unscaled.
+        button->setFixedSize(20, 20);
+        button->setIconSize(QSize(16, 16));
+        // rgba(), not name(): the hover color is translucent, and name() drops the alpha.
+        const QColor hover = Utils::creatorColor(Utils::Theme::BackgroundColorHover);
         button->setStyleSheet(QString::fromLatin1(
-            "QToolButton { background: transparent; border: none; padding: 2px; }"
-            "QToolButton:hover { background-color: %1; }")
-            .arg(Utils::creatorColor(Utils::Theme::BackgroundColorHover).name()));
+            "QToolButton { background: transparent; border: none; padding: 0px; }"
+            "QToolButton:hover { background-color: rgba(%1, %2, %3, %4); }")
+            .arg(hover.red()).arg(hover.green()).arg(hover.blue()).arg(hover.alpha()));
         connect(button, &QToolButton::clicked, this, [this, button] {
             for (int i = 0; i < count(); ++i) {
                 if (tabButton(i, QTabBar::RightSide) == button) {
@@ -103,6 +146,9 @@ public:
         layout->setSpacing(0);
         m_bar = new ChatTabBar(this);
         m_stack = new QStackedWidget(this);
+        // A blank bar above the tabs, like the editor's toolbar above its tabs
+        // (and the bar above Preferences), so it lines up with the Frame Buffer bar.
+        layout->addWidget(new Utils::StyledBar(this));
         layout->addWidget(m_bar);
         layout->addWidget(m_stack, 1);
 

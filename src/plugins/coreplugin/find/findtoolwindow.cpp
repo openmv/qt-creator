@@ -92,7 +92,15 @@ FindToolWindow::FindToolWindow(QWidget *parent)
 
     m_searchTerm = new FancyLineEdit;
     m_searchTerm->setFiltering(true);
-    m_searchTerm->setPlaceholderText({});
+    // OPENMV-DIFF //
+    // m_searchTerm->setPlaceholderText({});
+    // OPENMV-DIFF //
+    // An empty term is invalid ("Empty search term."), which drew the caret in the
+    // error color. With (invisible) placeholder text an empty field is in the
+    // placeholder state instead: normal color, and still not valid, so Search
+    // stays disabled until something is typed.
+    m_searchTerm->setPlaceholderText(QStringLiteral(" "));
+    // OPENMV-DIFF //
 
     m_searchLabel = new QLabel;
     m_searchLabel->setText(Tr::tr("Search f&or:", nullptr));
@@ -138,11 +146,22 @@ FindToolWindow::FindToolWindow(QWidget *parent)
 
     using namespace Layouting;
 
+    // OPENMV-DIFF //
+    // Column {
+    //     Row { m_matchCase, m_wholeWords, m_regExp, st, },
+    //     Row { m_ignoreBinaryFiles, m_ignoreGeneratedFiles, st, },
+    //     noMargin,
+    // }.attachTo(m_optionsWidget);
+    // OPENMV-DIFF //
+    // One row, with "Ignore binary files" after "Use regular expressions".
+    // "Ignore generated files" is about project build output, which OpenMV
+    // doesn't have (its scopes all leave it checked and disabled), so it's hidden.
     Column {
-        Row { m_matchCase, m_wholeWords, m_regExp, st, },
-        Row { m_ignoreBinaryFiles, m_ignoreGeneratedFiles, st, },
+        Row { m_matchCase, m_wholeWords, m_regExp, m_ignoreBinaryFiles, m_ignoreGeneratedFiles, st, },
         noMargin,
     }.attachTo(m_optionsWidget);
+    m_ignoreGeneratedFiles->setVisible(false);
+    // OPENMV-DIFF //
 
     Grid {
         label, m_filterList, br,

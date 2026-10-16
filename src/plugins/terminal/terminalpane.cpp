@@ -59,8 +59,15 @@ TerminalPane::TerminalPane(QObject *parent)
     , m_selfContext("Terminal.Pane")
 {
     setId("Terminal");
-    setDisplayName(Tr::tr("Terminal"));
-    setPriorityInStatusBar(20);
+    // OPENMV-DIFF //
+    // setDisplayName(Tr::tr("Terminal"));
+    // setPriorityInStatusBar(20);
+    // OPENMV-DIFF //
+    // "Shell", not "Terminal", so it isn't confused with the Serial Terminal (the
+    // camera); and after it (priority 1) on the bar, still shown (>= 0).
+    setDisplayName(Tr::tr("Shell"));
+    setPriorityInStatusBar(0);
+    // OPENMV-DIFF //
 
     setupContext(m_selfContext, &m_tabWidget);
     setZoomButtonsEnabled(true);
@@ -209,7 +216,11 @@ void TerminalPane::openTerminal(const OpenTerminalParameters &parameters)
             icon = iconProvider.icon(command.toFileInfo());
         }
     }
-    m_tabWidget.setCurrentIndex(m_tabWidget.addTab(terminalWidget, icon, Tr::tr("Terminal")));
+    // OPENMV-DIFF //
+    // m_tabWidget.setCurrentIndex(m_tabWidget.addTab(terminalWidget, icon, Tr::tr("Terminal")));
+    // OPENMV-DIFF //
+    m_tabWidget.setCurrentIndex(m_tabWidget.addTab(terminalWidget, icon, Tr::tr("Shell")));
+    // OPENMV-DIFF //
     setupTerminalWidget(terminalWidget);
 
     if (!m_isVisible)
@@ -313,24 +324,44 @@ void TerminalPane::initActions()
     using namespace Constants;
 
     ActionBuilder(this, NEWTERMINAL)
-        .setText(Tr::tr("New Terminal"))
+        // OPENMV-DIFF //
+        // .setText(Tr::tr("New Terminal"))
+        // OPENMV-DIFF //
+        .setText(Tr::tr("New Shell"))
+        // OPENMV-DIFF //
         .bindContextAction(&m_newTerminalAction)
         .setIcon(NEW_TERMINAL_ICON.icon())
-        .setToolTip(Tr::tr("Create a new Terminal."))
+        // OPENMV-DIFF //
+        // .setToolTip(Tr::tr("Create a new Terminal."))
+        // OPENMV-DIFF //
+        .setToolTip(Tr::tr("Create a new shell."))
+        // OPENMV-DIFF //
         .setContext(m_selfContext)
         .setDefaultKeySequence("Ctrl+T", "Ctrl+Shift+T")
         .addOnTriggered(this, [this] { openTerminal({}); });
 
     ActionBuilder(this, CLOSETERMINAL)
-        .setText(Tr::tr("Close Terminal"))
+        // OPENMV-DIFF //
+        // .setText(Tr::tr("Close Terminal"))
+        // OPENMV-DIFF //
+        .setText(Tr::tr("Close Shell"))
+        // OPENMV-DIFF //
         .bindContextAction(&m_closeTerminalAction)
         .setIcon(CLOSE_TERMINAL_ICON.icon())
-        .setToolTip(Tr::tr("Close the current Terminal."))
+        // OPENMV-DIFF //
+        // .setToolTip(Tr::tr("Close the current Terminal."))
+        // OPENMV-DIFF //
+        .setToolTip(Tr::tr("Close the current shell."))
+        // OPENMV-DIFF //
         .setContext(m_selfContext)
         .addOnTriggered(this, [this] { removeTab(m_tabWidget.currentIndex()); });
 
     ActionBuilder(this, NEXTTERMINAL)
-        .setText(Tr::tr("Next Terminal"))
+        // OPENMV-DIFF //
+        // .setText(Tr::tr("Next Terminal"))
+        // OPENMV-DIFF //
+        .setText(Tr::tr("Next Shell"))
+        // OPENMV-DIFF //
         .setContext(m_selfContext)
         .setDefaultKeySequences(
             {QKeySequence("Alt+Tab"),
@@ -342,7 +373,11 @@ void TerminalPane::initActions()
         });
 
     ActionBuilder(this, PREVTERMINAL)
-        .setText(Tr::tr("Previous Terminal"))
+        // OPENMV-DIFF //
+        // .setText(Tr::tr("Previous Terminal"))
+        // OPENMV-DIFF //
+        .setText(Tr::tr("Previous Shell"))
+        // OPENMV-DIFF //
         .setContext(m_selfContext)
         .setDefaultKeySequences(
             {QKeySequence("Alt+Shift+Tab"),

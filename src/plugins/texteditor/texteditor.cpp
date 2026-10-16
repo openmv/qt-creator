@@ -342,7 +342,14 @@ private:
     {
         QTC_ASSERT(m_doc, return);
         auto menu = new QMenu(this);
-        menu->addAction(ActionManager::command(Constants::AUTO_INDENT_SELECTION)->action());
+        // OPENMV-DIFF //
+        // menu->addAction(ActionManager::command(Constants::AUTO_INDENT_SELECTION)->action());
+        // OPENMV-DIFF //
+        // The Auto-indent Selection action isn't registered in the OpenMV IDE, so
+        // the command is null; dereferencing it crashed when this menu opened.
+        if (Command *autoIndent = ActionManager::command(Constants::AUTO_INDENT_SELECTION))
+            menu->addAction(autoIndent->action());
+        // OPENMV-DIFF //
         menu->setAttribute(Qt::WA_DeleteOnClose);
         if (auto indenter = m_doc->indenter(); indenter && indenter->respectsTabSettings()) {
             auto documentSettings = menu->addMenu(Tr::tr("Document Settings"));
@@ -4015,7 +4022,12 @@ void TextEditorWidgetPrivate::updateFileLineEndingVisible()
 
 void TextEditorWidgetPrivate::updateTabSettingsButtonVisible()
 {
-    m_tabSettingsButton->setVisible(m_displaySettings.m_displayTabSettings && !q->isReadOnly());
+    // OPENMV-DIFF //
+    // m_tabSettingsButton->setVisible(m_displaySettings.m_displayTabSettings && !q->isReadOnly());
+    // OPENMV-DIFF //
+    // The "Spaces: 4" readout is never shown in the OpenMV IDE.
+    m_tabSettingsButton->setVisible(false);
+    // OPENMV-DIFF //
 }
 
 void TextEditorWidgetPrivate::reconfigure()

@@ -44,6 +44,9 @@ private slots:
 protected:
     void contextMenuEvent(QContextMenuEvent *event) override;
     void mouseReleaseEvent(QMouseEvent *event) override;
+    // OPENMV-DIFF //
+    void paintEvent(QPaintEvent *event) override;
+    // OPENMV-DIFF //
 
 private:
     QList<Core::IEditor *> m_editors;

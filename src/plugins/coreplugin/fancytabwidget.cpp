@@ -586,6 +586,12 @@ FancyTabWidget::FancyTabWidget(QWidget *parent)
     auto bar = new StyledBar;
     // OPENMV-DIFF //
     bar->setProperty("NoDrawToolBarBorders", true);
+    // One pixel shorter than a toolbar (the style's single-row height), so the
+    // first mode tab starts on the editor toolbar's bottom line instead of a
+    // pixel below it. Not single-row, or the style would fix the height back.
+    bar->setSingleRow(false);
+    bar->setFixedHeight(qMax(StyleHelper::navigationWidgetHeight(),
+                             QFontMetrics(QApplication::font()).height()) - 1);
     // OPENMV-DIFF //
     auto fancyButton = new FancyColorButton;
     // OPENMV-DIFF //

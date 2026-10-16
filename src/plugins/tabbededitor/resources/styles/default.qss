@@ -1,6 +1,11 @@
 QTabBar {
     background-color: %FRAME_BACKGROUND_COLOR%; /*#848484*/
-    border-bottom: 1px solid %TAB_BORDER_COLOR%; /*#9a9a9a*/
+    /* OPENMV-DIFF */
+    /* border-bottom: 1px solid %TAB_BORDER_COLOR%; */ /*#9a9a9a*/
+    /* OPENMV-DIFF */
+    /* No line under the tab row: the selected tab opens straight into the editor. */
+    border: none;
+    /* OPENMV-DIFF */
     height: 20px;
 }
 
@@ -29,7 +34,11 @@ QTabBar::close-button:hover {
 }
 
 QToolButton {
-    background-color: %TAB_SELECTED_BACKGROUND_COLOR% ; /*#636363*/
+    /* OPENMV-DIFF */
+    /* background-color: %TAB_SELECTED_BACKGROUND_COLOR% ; */ /*#636363*/
+    /* OPENMV-DIFF */
+    background-color: %FRAME_BACKGROUND_COLOR%;
+    /* OPENMV-DIFF */
     border: 1px solid %TAB_BORDER_COLOR%; /*#9a9a9a*/
 }
 
@@ -44,7 +53,9 @@ QTabBar::tab {
     /* OPENMV-DIFF */
 
     border: 0px solid %TAB_BORDER_COLOR%; /*#313131*/
-    border-bottom: 1px solid %TAB_BORDER_COLOR%; /*#9a9a9a*/
+    /* OPENMV-DIFF */
+    /* border-bottom: 1px solid %TAB_BORDER_COLOR%; */ /*#9a9a9a*/
+    /* OPENMV-DIFF */
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
     height: 18px;
@@ -67,6 +78,12 @@ QTabBar::tab:selected {
     color: %TAB_TEXT_COLOR%;
     /* OPENMV-DIFF */
 }
+
+/* OPENMV-DIFF */
+QTabBar::tab:!selected:hover {
+    background-color: %TAB_HOVER_BACKGROUND_COLOR%;
+}
+/* OPENMV-DIFF */
 
 QTabBar QToolButton {
     border-top: none;

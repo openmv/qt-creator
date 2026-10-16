@@ -703,7 +703,11 @@ public:
     TerminalSettingsPage()
     {
         setId("Terminal.General");
-        setDisplayName("Terminal");
+        // OPENMV-DIFF //
+        // setDisplayName("Terminal");
+        // OPENMV-DIFF //
+        setDisplayName("Shell");
+        // OPENMV-DIFF //
         setCategory("ZY.Terminal");
         setSettingsProvider([] { return &settings(); });
     }
