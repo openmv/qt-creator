@@ -60,10 +60,10 @@ OpenMVAIMode::OpenMVAIMode(QObject *parent) : Core::IMode(parent)
     splitter->setStretchFactor(1, 0);
 
     setDisplayName(Tr::tr("AI"));
-    // The ACP client's own chat icon, recoloured like the Edit mode's.
+    // A neutral "sparkles" glyph (images/ai.png), masked and recoloured like the Edit icon.
     setIcon(Utils::Icon::sideBarIcon(
-        Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/acpclient/images/sparklebubble.png")), Utils::Theme::IconsBaseColor}}),
-        Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/acpclient/images/sparklebubble.png")), Utils::Theme::IconsBaseColor}})));
+        Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/openmv/images/ai.png")), Utils::Theme::IconsBaseColor}}),
+        Utils::Icon({{Utils::FilePath::fromString(QStringLiteral(":/openmv/images/ai.png")), Utils::Theme::IconsBaseColor}})));
     setPriority(Core::Constants::P_MODE_EDIT - 10); // right after Edit, before Settings
     setId(Utils::Id("OpenMV.AIMode"));
     setContext(Core::Context("OpenMV.AIMode"));

@@ -36,6 +36,11 @@ public:
         // OPENMV-DIFF //
 
         QWidget *rightSplitWidget = new QWidget;
+        // OPENMV-DIFF //
+        // Named so the TabbedEditor plugin can put its tab bar above the editors
+        // (inside the editor area) instead of across the whole window.
+        rightSplitWidget->setObjectName(QLatin1String("EditModeEditorArea"));
+        // OPENMV-DIFF //
         auto rightSplitWidgetLayout = new QVBoxLayout(rightSplitWidget);
         rightSplitWidgetLayout->setSpacing(0);
         rightSplitWidgetLayout->setContentsMargins(0, 0, 0, 0);

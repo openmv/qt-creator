@@ -39,23 +39,37 @@ Utils::Result<> TabbedEditorPlugin::initialize(const QStringList &arguments)
 #endif
     // OPENMV-DIFF //
 
-    QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
-    mainWindow->layout()->setSpacing(0);
-
-    QWidget *wrapper = new QWidget(mainWindow);
-    wrapper->setMinimumHeight(0);
-
-    QVBoxLayout *layout = new QVBoxLayout();
-    layout->setSpacing(0);
-    layout->setContentsMargins(0, 0, 0, 0);
-
+    // The tab bar belongs to the editor area (above the editors, beside the
+    // frame buffer), not across the whole window above every mode. The Edit
+    // mode's widget exists once the core has opened; fall back to wrapping the
+    // central widget if its editor area cannot be found.
     m_tabBar = new TabBar();
-    layout->addWidget(m_tabBar);
-    layout->addWidget(mainWindow->centralWidget());
+    connect(Core::ICore::instance(), &Core::ICore::coreOpened, this, [this] {
+        QMainWindow *mainWindow = qobject_cast<QMainWindow *>(Core::ICore::mainWindow());
+        QWidget *editorArea = mainWindow->findChild<QWidget *>(QLatin1String("EditModeEditorArea"));
+        QVBoxLayout *editorLayout = editorArea ? qobject_cast<QVBoxLayout *>(editorArea->layout()) : nullptr;
 
-    wrapper->setLayout(layout);
+        if (editorLayout) {
+            editorLayout->insertWidget(0, m_tabBar);
+            return;
+        }
 
-    mainWindow->setCentralWidget(wrapper);
+        mainWindow->layout()->setSpacing(0);
+
+        QWidget *wrapper = new QWidget(mainWindow);
+        wrapper->setMinimumHeight(0);
+
+        QVBoxLayout *layout = new QVBoxLayout();
+        layout->setSpacing(0);
+        layout->setContentsMargins(0, 0, 0, 0);
+
+        layout->addWidget(m_tabBar);
+        layout->addWidget(mainWindow->centralWidget());
+
+        wrapper->setLayout(layout);
+
+        mainWindow->setCentralWidget(wrapper);
+    });
 
     return Utils::ResultOk;
 }

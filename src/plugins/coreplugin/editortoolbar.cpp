@@ -397,8 +397,13 @@ void EditorToolBar::setGoForwardMenu(QMenu *menu)
 
 void EditorToolBar::setDocumentDropdownVisible(bool visible)
 {
-    d->m_editorList->setVisible(visible);
-    d->m_closeEditorButton->setVisible(visible);
+    // OPENMV-DIFF //
+    // The document dropdown and its close button stay hidden (the tab bar
+    // does that job); this setter re-showed them after the constructor hid them.
+    Q_UNUSED(visible)
+    // d->m_editorList->setVisible(visible);
+    // d->m_closeEditorButton->setVisible(visible);
+    // OPENMV-DIFF //
 }
 
 void EditorToolBar::updateActionShortcuts()
