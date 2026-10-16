@@ -144,12 +144,23 @@ void AcpStdioTransport::start()
             const FilePath binDir = bundledNodeBinDir();
             if (!binDir.isEmpty()) {
                 const QString base = QFileInfo(tool).completeBaseName();
-                const FilePath bundled = binDir.pathAppended(
-                    HostOsInfo::isWindowsHost() ? (base == "node" ? QString("node.exe") : base + ".cmd")
-                                                : base);
-                if (bundled.exists()) {
-                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << bundled.toUserOutput();
-                    cmd.setExecutable(bundled);
+                const FilePath node = binDir.pathAppended(HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node"));
+                // npm/npx are JavaScript: run their CLI through the bundled node
+                // rather than the bin/ launcher (a copied symlink that no longer
+                // finds its own lib/). Layouts: <prefix>/lib/node_modules/npm on
+                // Unix, <prefix>/node_modules/npm on Windows.
+                const FilePath npmBin = HostOsInfo::isWindowsHost()
+                    ? binDir.pathAppended("node_modules/npm/bin")
+                    : binDir.parentDir().pathAppended("lib/node_modules/npm/bin");
+                if (base == "node" && node.exists()) {
+                    cmd.setExecutable(node);
+                } else if ((base == "npx" || base == "npm") && node.exists()
+                           && npmBin.pathAppended(base + "-cli.js").exists()) {
+                    cmd = CommandLine(node, {npmBin.pathAppended(base + "-cli.js").path()});
+                    cmd.addArgs(m_cmd.arguments(), CommandLine::Raw);
+                }
+                if (cmd.executable() != m_cmd.executable()) {
+                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << cmd.toUserOutput();
                     env.prependOrSetPath(binDir);
                 }
             }
