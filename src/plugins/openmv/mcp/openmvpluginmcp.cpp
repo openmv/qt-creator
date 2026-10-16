@@ -1052,7 +1052,8 @@ void OpenMVPlugin::registerMcpTools()
 
     {
         const QStringList views{QStringLiteral("frame_buffer"), QStringLiteral("histogram"), QStringLiteral("board_info"), QStringLiteral("memory"),
-                                QStringLiteral("channels"), QStringLiteral("statistics"), QStringLiteral("terminal"), QStringLiteral("main_window")};
+                                QStringLiteral("channels"), QStringLiteral("statistics"), QStringLiteral("terminal"), QStringLiteral("main_window"),
+                                QStringLiteral("profiler")};
 
         Tool::InputSchema in;
         in.addProperty(QStringLiteral("view"), QJsonObject{
@@ -1084,6 +1085,7 @@ void OpenMVPlugin::registerMcpTools()
                     case 5: widget = m_statisticsView; break;
                     case 6: widget = Core::MessageManager::outputWindow(); break;
                     case 7: widget = Core::ICore::mainWindow(); break;
+                    case 8: widget = m_profile; break; // only while the Code Profiler is shown
                     default: return errResult(QStringLiteral("invalid_argument"), QStringLiteral("`view` must be one of: %1.").arg(views.join(QStringLiteral(", "))));
                 }
 
@@ -2284,6 +2286,64 @@ void OpenMVPlugin::registerMcpTools()
                 };
 
                 return runTool(toolInterface, params, body);
+            });
+    }
+
+    // ---- openmv_framebuffer_set ---------------------------------------------
+    // The Frame Buffer bar's controls (combos, not commands).
+
+    {
+        Tool::InputSchema in;
+        in.addProperty(QStringLiteral("source"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("Stream source by its label as shown in the bar (\"Off\", \"On\", or a named stream) or index.")}});
+        in.addProperty(QStringLiteral("jpeg"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("true = JPG Mode (compressed frames, fast), false = RAW Mode (exact pixels).")}});
+        in.addProperty(QStringLiteral("fit"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("boolean")},
+            {QStringLiteral("description"), QStringLiteral("Zoom the frame to fit the pane (true) or show it 1:1 (false).")}});
+
+        ToolRegistry::registerTool(
+            Tool{}
+                .name(QStringLiteral("openmv_framebuffer_set"))
+                .title(QStringLiteral("Set the Frame Buffer bar controls"))
+                .description(QStringLiteral("Changes the frame buffer stream source (Off/On/named stream), JPG vs RAW transfer mode and fit-to-window zoom, like the controls above the Frame Buffer pane. Returns the resulting state and the available sources."))
+                .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(false).idempotentHint(true))
+                .inputSchema(in),
+            [this](const CallToolRequestParams &params) -> Utils::Result<CallToolResult> {
+                const QJsonObject args = params.argumentsAsObject();
+                if(!m_frameBufferSource || !m_jpgCompress) return errResult(QStringLiteral("not_available"), QStringLiteral("The Frame Buffer bar does not exist yet."));
+
+                QStringList unknown;
+
+                if(args.contains(QStringLiteral("source")))
+                {
+                    const QJsonValue v = args.value(QStringLiteral("source"));
+                    int i = v.isDouble() ? v.toInt(-1) : m_frameBufferSource->findText(v.toString(), Qt::MatchFixedString);
+                    if((i < 0) || (i >= m_frameBufferSource->count())) unknown.append(QStringLiteral("source"));
+                    else m_frameBufferSource->setCurrentIndex(i);
+                }
+
+                if(args.contains(QStringLiteral("jpeg")))
+                {
+                    const int i = m_jpgCompress->findData(args.value(QStringLiteral("jpeg")).toBool());
+                    if(i < 0) unknown.append(QStringLiteral("jpeg"));
+                    else m_jpgCompress->setCurrentIndex(i);
+                }
+
+                if(args.contains(QStringLiteral("fit")) && m_frameBuffer) m_frameBuffer->enableFitInView(args.value(QStringLiteral("fit")).toBool());
+
+                QJsonArray sources;
+                for(int i = 0; i < m_frameBufferSource->count(); i++) sources.append(m_frameBufferSource->itemText(i));
+
+                QJsonObject out{
+                    {QStringLiteral("source"), m_frameBufferSource->currentText()},
+                    {QStringLiteral("sources"), sources},
+                    {QStringLiteral("jpeg"), m_jpgCompress->currentData().toBool()}};
+
+                if(!unknown.isEmpty()) return errResult(QStringLiteral("invalid_argument"), QStringLiteral("Not a valid value for: %1.").arg(unknown.join(QStringLiteral(", "))), out);
+                return okResult(out);
             });
     }
 
