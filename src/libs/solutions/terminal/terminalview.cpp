@@ -62,6 +62,10 @@ public:
     std::unique_ptr<TerminalSurface> m_surface;
 
     QSizeF m_cellSize;
+    // OPENMV-DIFF //
+    qreal m_lineSpacing{1.0};
+    qreal m_glyphOffsetY{0}; // centers the text in a row taller/shorter than the font
+    // OPENMV-DIFF //
 
     bool m_ignoreScroll{false};
 
@@ -284,6 +288,13 @@ void TerminalView::enableMouseTracking(bool enable)
     d->m_allowMouseTracking = enable;
 }
 
+// OPENMV-DIFF //
+void TerminalView::setLineSpacing(qreal spacing)
+{
+    d->m_lineSpacing = qBound(0.5, spacing, 3.0);
+}
+// OPENMV-DIFF //
+
 void TerminalView::setFont(const QFont &font)
 {
     QAbstractScrollArea::setFont(font);
@@ -292,7 +303,13 @@ void TerminalView::setFont(const QFont &font)
     qCInfo(terminalLog) << font.family() << font.pointSize() << qfm.averageCharWidth()
                         << qfm.maxWidth() << viewport()->size();
 
-    d->m_cellSize = {qfm.averageCharWidth(), (double) qCeil(qfm.height())};
+    // OPENMV-DIFF //
+    // d->m_cellSize = {qfm.averageCharWidth(), (double) qCeil(qfm.height())};
+    // OPENMV-DIFF //
+    d->m_cellSize = {qfm.averageCharWidth(),
+                     (double) qMax(1, qCeil(qfm.height() * d->m_lineSpacing))};
+    d->m_glyphOffsetY = qRound((d->m_cellSize.height() - qfm.height()) / 2.0);
+    // OPENMV-DIFF //
 
     QAbstractScrollArea::setFont(font);
 
@@ -740,6 +757,9 @@ int TerminalView::paintCell(QPainter &p,
                 brOffset.setY(-(brSize.height() - cellRect.size().height()) / 2.0);
 
             QPointF finalPos = cellRect.topLeft() + brOffset;
+            // OPENMV-DIFF //
+            finalPos.ry() += d->m_glyphOffsetY; // line spacing: keep text centered
+            // OPENMV-DIFF //
 
             p.drawGlyphRun(finalPos, *r);
 

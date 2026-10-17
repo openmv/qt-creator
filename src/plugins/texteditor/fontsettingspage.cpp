@@ -171,12 +171,27 @@ public:
             Group {
                 title(Tr::tr("Font")),
                 Column {
+                    // OPENMV-DIFF //
+                    // Row {
+                    //     Tr::tr("Family:"), m_fontComboBox, Space(20),
+                    //     Tr::tr("Size:"), m_sizeComboBox, Space(20),
+                    //     Tr::tr("Zoom:"), m_zoomSpinBox, Space(20),
+                    //     Tr::tr("Line spacing:"), m_lineSpacingSpinBox, m_lineSpacingWarningLabel, st
+                    // },
+                    // OPENMV-DIFF //
+                    // Two rows, columns aligned: family and size, then zoom and line
+                    // spacing.
                     Row {
-                        Tr::tr("Family:"), m_fontComboBox, Space(20),
-                        Tr::tr("Size:"), m_sizeComboBox, Space(20),
-                        Tr::tr("Zoom:"), m_zoomSpinBox, Space(20),
-                        Tr::tr("Line spacing:"), m_lineSpacingSpinBox, m_lineSpacingWarningLabel, st
+                        Grid {
+                            Tr::tr("Family:"), m_fontComboBox, Space(20),
+                            Tr::tr("Size:"), m_sizeComboBox, br,
+                            Tr::tr("Zoom:"), m_zoomSpinBox, Space(20),
+                            Tr::tr("Line spacing:"),
+                            Row { m_lineSpacingSpinBox, m_lineSpacingWarningLabel, noMargin }, br,
+                        },
+                        st
                     },
+                    // OPENMV-DIFF //
                     m_antialias
                 }
             },

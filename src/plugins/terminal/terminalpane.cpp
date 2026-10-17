@@ -421,11 +421,19 @@ void TerminalPane::initActions()
     cmd->setAttribute(Command::CA_UpdateIcon);
 }
 
+// OPENMV-DIFF //
+// static Internal::ShellModel *shellModel()
+// {
+//     static Internal::ShellModel model;
+//     return &model;
+// }
+// OPENMV-DIFF //
+// Shared with the "Default shell" setting (shellmodel.cpp).
 static Internal::ShellModel *shellModel()
 {
-    static Internal::ShellModel model;
-    return &model;
+    return &Internal::shellModel();
 }
+// OPENMV-DIFF //
 
 void TerminalPane::createShellMenu()
 {

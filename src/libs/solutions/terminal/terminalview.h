@@ -54,6 +54,11 @@ public:
     bool allowBlinkingCursor() const;
 
     void setFont(const QFont &font);
+    // OPENMV-DIFF //
+    // Row height as a fraction of the font's line height (1.0 = normal); applies
+    // on the next setFont().
+    void setLineSpacing(qreal spacing);
+    // OPENMV-DIFF //
 
     void enableMouseTracking(bool enable);
 

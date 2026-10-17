@@ -226,4 +226,12 @@ QList<ShellModelItem> ShellModel::remote() const
     return result;
 }
 
+// OPENMV-DIFF //
+ShellModel &shellModel()
+{
+    static ShellModel model;
+    return model;
+}
+// OPENMV-DIFF //
+
 } // namespace Terminal::Internal

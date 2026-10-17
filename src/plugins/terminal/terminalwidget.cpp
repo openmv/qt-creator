@@ -234,7 +234,14 @@ void TerminalWidget::setupFont()
     QFont f;
     f.setFixedPitch(true);
     f.setFamily(settings().fontFamily());
-    f.setPointSize(settings().fontSize());
+    // OPENMV-DIFF //
+    // f.setPointSize(settings().fontSize());
+    // OPENMV-DIFF //
+    // The size times the saved zoom; line spacing goes in before setFont(), which
+    // sizes the rows.
+    f.setPointSize(qMax(1, qRound(settings().fontSize() * settings().fontZoom() / 100.0)));
+    setLineSpacing(settings().lineSpacing() / 100.0);
+    // OPENMV-DIFF //
 
     setFont(f);
 }

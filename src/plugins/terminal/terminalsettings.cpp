@@ -3,6 +3,10 @@
 
 #include "terminalsettings.h"
 
+// OPENMV-DIFF //
+#include "shellmodel.h"
+// OPENMV-DIFF //
+
 #include "terminalicons.h"
 #include "terminaltr.h"
 
@@ -21,6 +25,7 @@
 
 // OPENMV-DIFF //
 #include <QSettings>
+#include <QStandardItem>
 #include <QStandardPaths>
 // OPENMV-DIFF //
 #include <QGuiApplication>
@@ -177,6 +182,24 @@ FilePath shellIconFile(const FilePath &shell)
     return shell;
 }
 
+// A stable id for a shell, saved by the "Default shell" setting: not the
+// display name (translated) and, for the common shells, not the path (moves on
+// reinstall).
+static QString shellKey(const CommandLine &command)
+{
+    const FilePath exe = command.executable();
+    if (isWslLauncher(exe))
+        return QString("wsl");
+    if (HostOsInfo::isWindowsHost()) {
+        if (exe == gitBashPath())
+            return QString("git-bash");
+        const QString base = exe.baseName().toLower();
+        if (base == "pwsh" || base == "powershell" || base == "cmd")
+            return base;
+    }
+    return QString(exe.toUserOutput() + ' ' + command.arguments()).trimmed();
+}
+
 // The best shell available, with the arguments it needs:
 //   Windows: Git Bash, PowerShell 7, Windows PowerShell, then cmd (%COMSPEC%).
 //            (Not a bare bash.exe on PATH: that is usually WSL's launcher.)
@@ -213,7 +236,12 @@ void setupColor(TerminalSettings *settings,
                 const QColor &defaultColor,
                 const QString &humanReadableName = {})
 {
-    color.setSettingsKey(keyFromString(label));
+    // OPENMV-DIFF //
+    // color.setSettingsKey(keyFromString(label));
+    // OPENMV-DIFF //
+    // The colors always follow the IDE theme (Flat Dark / Flat Light): no settings
+    // keys, so a stored or imported palette is never loaded, and no Colors group.
+    // OPENMV-DIFF //
     color.setDefaultValue(defaultColor);
     color.setToolTip(Tr::tr("The color used for %1.")
                          .arg(humanReadableName.isEmpty() ? label : humanReadableName));
@@ -558,7 +586,12 @@ static Result<> loadVsCodeOrWindows(const FilePath &path)
         [path](const auto &) { return loadWindowsTerminalColors(path); });
 }
 
-static Result<> loadColorScheme(const FilePath &path)
+// OPENMV-DIFF //
+// static Result<> loadColorScheme(const FilePath &path)
+// OPENMV-DIFF //
+// Unused while the Colors group (and its Load Theme button) is hidden.
+[[maybe_unused]] static Result<> loadColorScheme(const FilePath &path)
+// OPENMV-DIFF //
 {
     if (path.endsWith("Xdefaults"))
         return loadXdefaults(path);
@@ -585,7 +618,12 @@ TerminalSettings::TerminalSettings()
     setSettingsGroup("Terminal");
     setAutoApply(false);
 
-    enableTerminal.setSettingsKey("EnableTerminal");
+    // OPENMV-DIFF //
+    // enableTerminal.setSettingsKey("EnableTerminal");
+    // OPENMV-DIFF //
+    // Hidden, always on: it routes Qt Creator's run configurations and "Open
+    // Terminal Here" to this pane, and the OpenMV IDE has neither. No settings key.
+    // OPENMV-DIFF //
     enableTerminal.setLabelText(Tr::tr("Use internal terminal"));
     enableTerminal.setToolTip(
         Tr::tr("Uses the internal terminal when \"Run In Terminal\" is "
@@ -605,6 +643,26 @@ TerminalSettings::TerminalSettings()
     fontSize.setDefaultValue(defaultFontSize());
     fontSize.setRange(1, 100);
 
+    // OPENMV-DIFF //
+    // Zoom and line spacing, as the text editor's font settings have.
+    fontZoom.setSettingsKey("FontZoom");
+    fontZoom.setLabelText(Tr::tr("Zoom:"));
+    fontZoom.setToolTip(Tr::tr("Scales the font size. Ctrl+wheel zooms a single shell for the "
+                               "session."));
+    fontZoom.setSuffix("%");
+    fontZoom.setRange(10, 3000);
+    fontZoom.setSingleStep(10);
+    fontZoom.setDefaultValue(100);
+
+    lineSpacing.setSettingsKey("LineSpacing");
+    lineSpacing.setLabelText(Tr::tr("Line spacing:"));
+    lineSpacing.setToolTip(Tr::tr("The height of each line, as a percentage of the font's."));
+    lineSpacing.setSuffix("%");
+    lineSpacing.setRange(50, 300);
+    lineSpacing.setSingleStep(10);
+    lineSpacing.setDefaultValue(100);
+    // OPENMV-DIFF //
+
     allowBlinkingCursor.setSettingsKey("AllowBlinkingCursor");
     allowBlinkingCursor.setLabelText(Tr::tr("Allow blinking cursor"));
     allowBlinkingCursor.setToolTip(Tr::tr("Allow the cursor to blink."));
@@ -614,7 +672,9 @@ TerminalSettings::TerminalSettings()
     allowBlinkingCursor.setDefaultValue(true);
     // OPENMV-DIFF //
 
-    shell.setSettingsKey("ShellPath");
+    // OPENMV-DIFF //
+    // shell.setSettingsKey("ShellPath");
+    // OPENMV-DIFF //
     shell.setLabelText(Tr::tr("Shell path:"));
     shell.setExpectedKind(PathChooser::ExistingCommand);
     shell.setHistoryCompleter("Terminal.Shell.History");
@@ -626,7 +686,9 @@ TerminalSettings::TerminalSettings()
     shell.setDefaultValue(defaultShellPath);
     // OPENMV-DIFF //
 
-    shellArguments.setSettingsKey("ShellArguments");
+    // OPENMV-DIFF //
+    // shellArguments.setSettingsKey("ShellArguments");
+    // OPENMV-DIFF //
     shellArguments.setLabelText(Tr::tr("Shell arguments:"));
     shellArguments.setDisplayStyle(StringAspect::LineEditDisplay);
     shellArguments.setHistoryCompleter("Terminal.Shell.History");
@@ -734,77 +796,83 @@ TerminalSettings::TerminalSettings()
     setLayouter([this] {
         using namespace Layouting;
 
-        auto loadThemeButton = new QPushButton(Tr::tr("Load Theme..."));
-        auto resetTheme = new QPushButton(Tr::tr("Reset Theme"));
-        auto copyTheme = schemeLog().isDebugEnabled() ? new QPushButton(Tr::tr("Copy Theme"))
-                                                      : nullptr;
+        // OPENMV-DIFF //
+        // auto loadThemeButton = new QPushButton(Tr::tr("Load Theme..."));
+        // auto resetTheme = new QPushButton(Tr::tr("Reset Theme"));
+        // auto copyTheme = schemeLog().isDebugEnabled() ? new QPushButton(Tr::tr("Copy Theme"))
+        //                                               : nullptr;
 
-        connect(loadThemeButton, &QPushButton::clicked, this, [] {
-            const FilePath path = FileUtils::getOpenFilePath(
-                "Open Theme",
-                {},
-                "All Scheme formats (*.itermcolors *.json *.colorscheme *.theme *.theme.txt);;"
-                "Xdefaults (.Xdefaults Xdefaults);;"
-                "iTerm Color Schemes(*.itermcolors);;"
-                "VS Code Color Schemes(*.json);;"
-                "Windows Terminal Schemes(*.json);;"
-                "Konsole Color Schemes(*.colorscheme);;"
-                "XFCE4 Terminal Color Schemes(*.theme *.theme.txt);;"
-                "All files (*)",
-                nullptr,
-                {},
-                true,
-                false);
+        // connect(loadThemeButton, &QPushButton::clicked, this, [] {
+        //     const FilePath path = FileUtils::getOpenFilePath(
+        //         "Open Theme",
+        //         {},
+        //         "All Scheme formats (*.itermcolors *.json *.colorscheme *.theme *.theme.txt);;"
+        //         "Xdefaults (.Xdefaults Xdefaults);;"
+        //         "iTerm Color Schemes(*.itermcolors);;"
+        //         "VS Code Color Schemes(*.json);;"
+        //         "Windows Terminal Schemes(*.json);;"
+        //         "Konsole Color Schemes(*.colorscheme);;"
+        //         "XFCE4 Terminal Color Schemes(*.theme *.theme.txt);;"
+        //         "All files (*)",
+        //         nullptr,
+        //         {},
+        //         true,
+        //         false);
 
-            if (path.isEmpty())
-                return;
+        //     if (path.isEmpty())
+        //         return;
 
-            const Result<> result = loadColorScheme(path);
-            if (!result)
-                QMessageBox::warning(Core::ICore::dialogParent(), Tr::tr("Error"), result.error());
-        });
+        //     const Result<> result = loadColorScheme(path);
+        //     if (!result)
+        //         QMessageBox::warning(Core::ICore::dialogParent(), Tr::tr("Error"), result.error());
+        // });
 
-        connect(resetTheme, &QPushButton::clicked, this, [this] {
-            foregroundColor.setVolatileValue(foregroundColor.defaultValue());
-            backgroundColor.setVolatileValue(backgroundColor.defaultValue());
-            selectionColor.setVolatileValue(selectionColor.defaultValue());
+        // connect(resetTheme, &QPushButton::clicked, this, [this] {
+        //     foregroundColor.setVolatileValue(foregroundColor.defaultValue());
+        //     backgroundColor.setVolatileValue(backgroundColor.defaultValue());
+        //     selectionColor.setVolatileValue(selectionColor.defaultValue());
 
-            for (ColorAspect &color : colors)
-                color.setVolatileValue(color.defaultValue());
-        });
+        //     for (ColorAspect &color : colors)
+        //         color.setVolatileValue(color.defaultValue());
+        // });
 
-        if (schemeLog().isDebugEnabled()) {
-            connect(copyTheme, &QPushButton::clicked, this, [this] {
-                auto toThemeColor = [](const ColorAspect &color) -> QString {
-                    QColor c = color.value();
-                    QString a = c.alpha() != 255 ? QString("%1").arg(c.alpha(), 2, 16, QChar('0'))
-                                                 : QString();
-                    return QString("%1%2%3%4")
-                        .arg(a)
-                        .arg(c.red(), 2, 16, QChar('0'))
-                        .arg(c.green(), 2, 16, QChar('0'))
-                        .arg(c.blue(), 2, 16, QChar('0'));
-                };
+        // if (schemeLog().isDebugEnabled()) {
+        //     connect(copyTheme, &QPushButton::clicked, this, [this] {
+        //         auto toThemeColor = [](const ColorAspect &color) -> QString {
+        //             QColor c = color.value();
+        //             QString a = c.alpha() != 255 ? QString("%1").arg(c.alpha(), 2, 16, QChar('0'))
+        //                                          : QString();
+        //             return QString("%1%2%3%4")
+        //                 .arg(a)
+        //                 .arg(c.red(), 2, 16, QChar('0'))
+        //                 .arg(c.green(), 2, 16, QChar('0'))
+        //                 .arg(c.blue(), 2, 16, QChar('0'));
+        //         };
 
-                QString theme;
-                QTextStream stream(&theme);
-                stream << "TerminalForeground=" << toThemeColor(foregroundColor) << '\n';
-                stream << "TerminalBackground=" << toThemeColor(backgroundColor) << '\n';
-                stream << "TerminalSelection=" << toThemeColor(selectionColor) << '\n';
-                stream << "TerminalFindMatch=" << toThemeColor(findMatchColor) << '\n';
-                for (int i = 0; i < 16; ++i)
-                    stream << "TerminalAnsi" << i << '=' << toThemeColor(colors[i]) << '\n';
+        //         QString theme;
+        //         QTextStream stream(&theme);
+        //         stream << "TerminalForeground=" << toThemeColor(foregroundColor) << '\n';
+        //         stream << "TerminalBackground=" << toThemeColor(backgroundColor) << '\n';
+        //         stream << "TerminalSelection=" << toThemeColor(selectionColor) << '\n';
+        //         stream << "TerminalFindMatch=" << toThemeColor(findMatchColor) << '\n';
+        //         for (int i = 0; i < 16; ++i)
+        //             stream << "TerminalAnsi" << i << '=' << toThemeColor(colors[i]) << '\n';
 
-                setClipboardAndSelection(theme);
-            });
-        }
+        //         setClipboardAndSelection(theme);
+        //     });
+        // }
+        // OPENMV-DIFF //
+        // No Colors group (the colors follow the IDE theme), so no theme buttons.
+        // OPENMV-DIFF //
 
         // clang-format off
         return Column {
             Group {
                 title(Tr::tr("General")),
                 Column {
-                    enableTerminal, st,
+                    // OPENMV-DIFF //
+                    // enableTerminal, st,
+                    // OPENMV-DIFF //
                     sendEscapeToTerminal, st,
                     lockKeyboard, st,
                     audibleBell, st,
@@ -815,50 +883,101 @@ TerminalSettings::TerminalSettings()
             },
             Group {
                 title(Tr::tr("Font")),
+                // OPENMV-DIFF //
+                // Row {
+                //     fontFamily, Space(20),
+                //     fontSize, st,
+                // },
+                // OPENMV-DIFF //
+                // Two rows, columns aligned: family and size, then zoom and line
+                // spacing (as on the text editor's Font page).
                 Row {
-                    fontFamily, Space(20),
-                    fontSize, st,
+                    Grid {
+                        fontFamily, Space(20), fontSize, br,
+                        fontZoom, Space(20), lineSpacing, br,
+                    },
+                    st,
                 },
+                // OPENMV-DIFF //
             },
-            Group {
-                title(Tr::tr("Colors")),
-                Column {
-                    Row {
-                        Tr::tr("Foreground"), foregroundColor, st,
-                        Tr::tr("Background"), backgroundColor, st,
-                        Tr::tr("Selection"), selectionColor, st,
-                        Tr::tr("Find match"), findMatchColor, st,
-                    },
-                    Row {
-                        colors[0], colors[1],
-                        colors[2], colors[3],
-                        colors[4], colors[5],
-                        colors[6], colors[7]
-                    },
-                    Row {
-                        colors[8], colors[9],
-                        colors[10], colors[11],
-                        colors[12], colors[13],
-                        colors[14], colors[15]
-                    },
-                    Row {
-                        loadThemeButton, resetTheme, copyTheme, st,
-                    }
-                },
-            },
+            // OPENMV-DIFF //
+            // Group {
+            //     title(Tr::tr("Colors")),
+            //     Column {
+            //         Row {
+            //             Tr::tr("Foreground"), foregroundColor, st,
+            //             Tr::tr("Background"), backgroundColor, st,
+            //             Tr::tr("Selection"), selectionColor, st,
+            //             Tr::tr("Find match"), findMatchColor, st,
+            //         },
+            //         Row {
+            //             colors[0], colors[1],
+            //             colors[2], colors[3],
+            //             colors[4], colors[5],
+            //             colors[6], colors[7]
+            //         },
+            //         Row {
+            //             colors[8], colors[9],
+            //             colors[10], colors[11],
+            //             colors[12], colors[13],
+            //             colors[14], colors[15]
+            //         },
+            //         Row {
+            //             loadThemeButton, resetTheme, copyTheme, st,
+            //         }
+            //     },
+            // },
+            // OPENMV-DIFF //
             Group {
                 title(Tr::tr("Default Shell")),
+                // OPENMV-DIFF //
+                // Column {
+                //     shell,
+                //     shellArguments,
+                // },
+                // OPENMV-DIFF //
+                // Full width, like the shell path field it replaces; the group title
+                // already names it.
                 Column {
-                    shell,
-                    shellArguments,
+                    defaultShell,
                 },
+                // OPENMV-DIFF //
             },
             st,
         };
         // clang-format on
     });
 
+    // OPENMV-DIFF //
+    defaultShell.setSettingsKey("DefaultShell");
+    defaultShell.setToolTip(Tr::tr("The shell the + button opens. Automatic picks the best one "
+                                   "installed and follows changes to what is installed."));
+    defaultShell.setComboBoxEditable(false);
+    defaultShell.setDefaultValue("auto");
+    defaultShell.setFillCallback([](const StringSelectionAspect::ResultCallback &cb) {
+        QList<QStandardItem *> items;
+        const FilePath best = FilePath::fromUserInput(defaultShellAndArguments().first);
+        const QString bestName = friendlyShellName(best);
+        auto automatic = new QStandardItem(
+            Tr::tr("Automatic (%1)").arg(bestName.isEmpty() ? best.fileName() : bestName));
+        automatic->setData(QString("auto"));
+        items.append(automatic);
+        for (const Internal::ShellModelItem &shellItem : Internal::shellModel().local()) {
+            if (!shellItem.openParameters.shellCommand)
+                continue;
+            auto item = new QStandardItem(shellItem.openParameters.icon, shellItem.name);
+            item->setData(shellKey(*shellItem.openParameters.shellCommand));
+            items.append(item);
+        }
+        cb(items);
+    });
+    connect(&defaultShell, &BaseAspect::changed, this, &TerminalSettings::applyDefaultShell);
+    // OPENMV-DIFF //
+
     readSettings();
+    // OPENMV-DIFF //
+    applyDefaultShell();
+    // OPENMV-DIFF //
 }
 
 class TerminalSettingsPage final : public Core::IOptionsPage
@@ -878,5 +997,27 @@ public:
 };
 
 const TerminalSettingsPage settingsPage;
+
+// OPENMV-DIFF //
+// Sets the shell path and arguments (no longer saved) from the "Default shell"
+// choice; a shell that is no longer installed falls back to Automatic.
+void TerminalSettings::applyDefaultShell()
+{
+    const QString choice = defaultShell();
+    if (choice != "auto") {
+        for (const Internal::ShellModelItem &item : Internal::shellModel().local()) {
+            if (item.openParameters.shellCommand
+                && shellKey(*item.openParameters.shellCommand) == choice) {
+                shell.setValue(item.openParameters.shellCommand->executable());
+                shellArguments.setValue(item.openParameters.shellCommand->arguments());
+                return;
+            }
+        }
+    }
+    const auto [path, arguments] = defaultShellAndArguments();
+    shell.setValue(FilePath::fromUserInput(path));
+    shellArguments.setValue(arguments);
+}
+// OPENMV-DIFF //
 
 } // Terminal

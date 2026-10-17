@@ -16,6 +16,10 @@ public:
 
     Utils::FontFamilyAspect fontFamily{this};
     Utils::IntegerAspect fontSize{this};
+    // OPENMV-DIFF //
+    Utils::IntegerAspect fontZoom{this};    // percent of the font size, like the editor's
+    Utils::IntegerAspect lineSpacing{this}; // percent of the font's line height
+    // OPENMV-DIFF //
     Utils::FilePathAspect shell{this};
     Utils::StringAspect shellArguments{this};
 
@@ -34,6 +38,13 @@ public:
 
     Utils::BoolAspect enableMouseTracking{this};
     Utils::BoolAspect enableLiveReflow{this};
+
+    // OPENMV-DIFF //
+    // Which shell + opens: "auto" (the best one found) or a shell's stable id. The
+    // shell path and arguments above are no longer saved; they follow this.
+    Utils::StringSelectionAspect defaultShell{this};
+    void applyDefaultShell();
+    // OPENMV-DIFF //
 };
 
 TerminalSettings &settings();

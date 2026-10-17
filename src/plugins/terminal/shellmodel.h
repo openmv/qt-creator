@@ -33,4 +33,9 @@ private:
     std::unique_ptr<ShellModelPrivate> d;
 };
 
+// OPENMV-DIFF //
+// The one model the new-shell menu and the "Default shell" setting both use.
+ShellModel &shellModel();
+// OPENMV-DIFF //
+
 } // namespace Terminal::Internal
