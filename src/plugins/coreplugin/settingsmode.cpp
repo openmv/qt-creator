@@ -580,8 +580,14 @@ SettingsWidget::SettingsWidget()
     connect(m_sortCheckBox, &QAbstractButton::toggled, this, [this](bool checked) {
         m_proxyModel.sort(checked ? 0 : -1);
     });
-    QtcSettings *settings = ICore::settings();
-    m_sortCheckBox->setChecked(settings->value(sortKeyC, false).toBool());
+    // OPENMV-DIFF //
+    // QtcSettings *settings = ICore::settings();
+    // m_sortCheckBox->setChecked(settings->value(sortKeyC, false).toBool());
+    // OPENMV-DIFF //
+    // Categories stay in their defined order: the switch is hidden and never on,
+    // whatever an older settings file says.
+    m_sortCheckBox->setChecked(false);
+    // OPENMV-DIFF //
 
     connect(m_categoryList->selectionModel(), &QItemSelectionModel::currentRowChanged,
             this, &SettingsWidget::currentCategoryChanged);
@@ -589,7 +595,9 @@ SettingsWidget::SettingsWidget()
     connect(ICore::instance(), &ICore::saveSettingsRequested, this, [this] {
         QtcSettings *settings = ICore::settings();
         settings->setValue(pageKeyC, m_currentPage.toSetting());
-        settings->setValue(sortKeyC, m_sortCheckBox->isChecked());
+        // OPENMV-DIFF //
+        // settings->setValue(sortKeyC, m_sortCheckBox->isChecked());
+        // OPENMV-DIFF //
     });
 
     connect(
@@ -744,11 +752,16 @@ void SettingsWidget::createGui()
         noMargin,
         m_filterLineEdit,
         m_categoryList,
-        Row {
-            st,
-            m_sortCheckBox,
-        },
+        // OPENMV-DIFF //
+        // Row {
+        //     st,
+        //     m_sortCheckBox,
+        // },
+        // OPENMV-DIFF //
     }.emerge();
+    // OPENMV-DIFF //
+    m_sortCheckBox->setVisible(false); // not in a layout; keep it out of sight
+    // OPENMV-DIFF //
     leftColumn->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Preferred);
 
     QWidget *rightColumn = Column {

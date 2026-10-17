@@ -1,6 +1,10 @@
 [General]
 Includes=light.figmatokens, qmldesigner-light.inc, light-palette.inc
-ThemeName=Light (2016)
+;OPENMV-DIFF;
+;ThemeName=Light (2016)
+;OPENMV-DIFF;
+ThemeName=Flat Light
+;OPENMV-DIFF;
 PreferredStyles=
 ;OPENMV-DIFF;
 DefaultTextEditorColorScheme=flat-light.xml

@@ -603,13 +603,21 @@ static QString defaultPylsConfiguration()
         QJsonObject disabled;
         disabled.insert("enabled", false);
         // OPENMV-DIFF //
-        QJsonObject maxLineLength;
-        maxLineLength.insert("maxLineLength", 120);
+        // flake8 off and pycodestyle on (pylsp's own defaults, spelled out), both
+        // with 120-column lines. One object per plugin: a second insert() under the
+        // same key replaces the first, which used to drop the "enabled" flags.
+        QJsonObject flake8;
+        flake8.insert("enabled", false);
+        flake8.insert("maxLineLength", 120);
+        QJsonObject pycodestyle;
+        pycodestyle.insert("enabled", true);
+        pycodestyle.insert("maxLineLength", 120);
         // OPENMV-DIFF //
         QJsonObject plugins;
-        plugins.insert("flake8", disabled);
         // OPENMV-DIFF //
-        plugins.insert("flake8", maxLineLength);
+        // plugins.insert("flake8", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("flake8", flake8);
         // OPENMV-DIFF //
         plugins.insert("jedi_completion", enabled);
         plugins.insert("jedi_definition", enabled);
@@ -618,9 +626,10 @@ static QString defaultPylsConfiguration()
         plugins.insert("jedi_signature_help", enabled);
         plugins.insert("jedi_symbols", enabled);
         plugins.insert("mccabe", disabled);
-        plugins.insert("pycodestyle", disabled);
         // OPENMV-DIFF //
-        plugins.insert("pycodestyle", maxLineLength);
+        // plugins.insert("pycodestyle", disabled);
+        // OPENMV-DIFF //
+        plugins.insert("pycodestyle", pycodestyle);
         // OPENMV-DIFF //
         plugins.insert("pydocstyle", disabled);
         plugins.insert("pyflakes", enabled);

@@ -310,6 +310,10 @@ void ColorSchemeEdit::setFormatDescriptions(const FormatDescriptions &descriptio
     // selecting on the hidden list trips the macOS Cocoa a11y bridge
     // (NSRangeException).
     if (!m_descriptions.empty()) {
+        // The list selection may be deferred, but the current item can't wait:
+        // setColorScheme() calls updateControls() right after this, and with
+        // m_curItem still -1 that read m_descriptions[-1] and crashed.
+        m_curItem = 0;
         if (m_itemList->isVisible()) {
             m_itemList->setCurrentIndex(m_formatsModel->index(0));
         } else {
@@ -363,6 +367,11 @@ void ColorSchemeEdit::currentItemChanged(const QModelIndex &index)
 
 void ColorSchemeEdit::updateControls()
 {
+    // OPENMV-DIFF //
+    // No current format (no descriptions yet): nothing to show.
+    if (m_curItem < 0 || m_curItem >= int(m_descriptions.size()))
+        return;
+    // OPENMV-DIFF //
     updateForegroundControls();
     updateBackgroundControls();
     updateRelativeForegroundControls();

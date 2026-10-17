@@ -222,8 +222,14 @@ GeneralSettings::GeneralSettings()
                "not displayed properly, you can use the cursors provided by %1.")
             .arg(QGuiApplication::applicationDisplayName()));
 
-    preferInfoBarOverPopup.setSettingsKey("General/PreferInfoBarOverPopup");
-    preferInfoBarOverPopup.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // preferInfoBarOverPopup.setSettingsKey("General/PreferInfoBarOverPopup");
+    // preferInfoBarOverPopup.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // Always banners, never pop-ups: no settings key (a stored "off" is never
+    // loaded) and no checkbox.
+    preferInfoBarOverPopup.setDefaultValue(true);
+    // OPENMV-DIFF //
     preferInfoBarOverPopup.setLabelText(Tr::tr("Prefer banner style info bars over pop-ups"));
 
     // OPENMV-DIFF //
@@ -237,7 +243,12 @@ GeneralSettings::GeneralSettings()
     // OPENMV-DIFF //
     useTabsInEditorViews.setLabelText(Tr::tr("Use tabbed editors"));
 
-    showOkAndCancelInSettingsMode.setSettingsKey("General/ShowOkAndCancelInSettingsMode");
+    // OPENMV-DIFF //
+    // showOkAndCancelInSettingsMode.setSettingsKey("General/ShowOkAndCancelInSettingsMode");
+    // OPENMV-DIFF //
+    // Always just Apply and Discard: no settings key (a stored "on" is never
+    // loaded) and no checkbox.
+    // OPENMV-DIFF //
     showOkAndCancelInSettingsMode.setDefaultValue(false);
     showOkAndCancelInSettingsMode.setLabelText(Tr::tr("Show OK and Cancel buttons in Preferences mode"));
 
@@ -361,7 +372,13 @@ GeneralSettings::GeneralSettings()
                 // The OpenMV IDE hides the Color, Toolbar style, Text codec, "Show keyboard
                 // shortcuts in context menus" and "Override cursors for views" rows.
                 // color, st, br,
-                theme, st, br,
+                // OPENMV-DIFF //
+                // theme, st, br,
+                // OPENMV-DIFF //
+                // As in the OpenMV IDE's Qt Creator 14 base: which theme is in use
+                // (a change only takes effect after a restart).
+                theme, Tr::tr("Current theme: %1").arg(creatorTheme()->displayName()), st, br,
+                // OPENMV-DIFF //
                 // toolbarStyle, st, br,
                 language, st, br,
                 If (showDpiPolicy) >> Then {
@@ -372,9 +389,9 @@ GeneralSettings::GeneralSettings()
                 // showShortcutsInContextMenus, st, br,
                 // provideSplitterCursors, st, br,
                 // OPENMV-DIFF //
-                preferInfoBarOverPopup, st, br,
+                // preferInfoBarOverPopup, st, br, // Always on.
                 // useTabsInEditorViews, st, br, // Always off.
-                showOkAndCancelInSettingsMode, st, br,
+                // showOkAndCancelInSettingsMode, st, br, // Always off.
                 // OPENMV-DIFF //
                 // Serial Terminal Tab size (viewer mode only). Applied immediately on change
                 // because there is no GeneralSettings aspect/member to apply it on OK.
@@ -382,7 +399,12 @@ GeneralSettings::GeneralSettings()
                     Tr::tr("Serial Terminal Tab size:"), serialTerminalTabSize, st, br
                 },
                 // OPENMV-DIFF //
-                Row { new ResetWarningsButton, st },
+                // OPENMV-DIFF //
+                // Row { new ResetWarningsButton, st },
+                // OPENMV-DIFF //
+                // In the field column, lined up with the combo boxes and checkboxes.
+                empty, Row { new ResetWarningsButton, st },
+                // OPENMV-DIFF //
             }
         };
         // clang-format on

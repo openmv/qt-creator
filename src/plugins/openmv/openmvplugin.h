@@ -146,6 +146,7 @@
 #define SNAPSHOT_PATH ":/openmv/images/snapshot.png"
 
 #define SETTINGS_GROUP "OpenMV"
+#define LAST_MODE "LastMode" // Edit, AI or Preferences, restored at startup
 #define EDITOR_MANAGER_STATE "EditorManagerState"
 #define MSPLITTER_STATE "MSplitterState"
 #define HSPLITTER_STATE "HSplitterState"

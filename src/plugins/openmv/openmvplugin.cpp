@@ -824,6 +824,14 @@ void OpenMVPlugin::setupModes()
         m_aiMode = new OpenMVAIMode(this);
         m_aiMode->setChatWidget(AcpClient::chatWidget());
 
+        // Remember the mode (Edit, AI or Preferences) so the next launch opens in
+        // it; restored at the end of delayedInitialize(). Written on each switch
+        // (in memory; saved with the other settings at exit).
+        connect(Core::ModeManager::instance(), &Core::ModeManager::currentModeChanged,
+                this, [](Utils::Id mode) {
+            Core::ICore::settings()->setValue(SETTINGS_GROUP "/" LAST_MODE, mode.toSetting());
+        });
+
         // Preferences is a mode on the strip, so the Edit menu doesn't repeat
         // it (its shortcut still works). Viewer mode has no strip and keeps it,
         // and macOS keeps it in the application menu where it's expected.
@@ -3767,6 +3775,18 @@ bool OpenMVPlugin::delayedInitialize()
         }
 
         QTimer::singleShot(2000, this, &OpenMVPlugin::showCopilotDialog);
+
+        // Reopen in the mode the IDE was closed in. After a zero-delay timer so it
+        // follows anything startup queued (opening a file switches to Edit).
+        const Utils::Id lastMode = Utils::Id::fromSetting(
+            Core::ICore::settings()->value(SETTINGS_GROUP "/" LAST_MODE));
+        if(lastMode.isValid() && (lastMode != Core::ModeManager::currentModeId()))
+        {
+            QTimer::singleShot(0, this, [lastMode] {
+                if(Core::ModeManager::currentModeId() != lastMode)
+                    Core::ModeManager::activateMode(lastMode);
+            });
+        }
 
         if(Core::EditorManager::currentEditor()
             ? Core::EditorManager::currentEditor()->document()

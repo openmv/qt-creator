@@ -55,7 +55,11 @@ DisplaySettings::DisplaySettings()
     visualizeIndent.setDefaultValue(true);
     visualizeIndent.setLabelText(Tr::tr("Visualize indent"));
 
-    displayFoldingMarkers.setSettingsKey("DisplayFoldingMarkers");
+    // OPENMV-DIFF //
+    // displayFoldingMarkers.setSettingsKey("DisplayFoldingMarkers");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // displayFoldingMarkers.setDefaultValue(true);
     // OPENMV-DIFF //
@@ -67,7 +71,11 @@ DisplaySettings::DisplaySettings()
     highlightCurrentLine.setDefaultValue(false);
     highlightCurrentLine.setLabelText(Tr::tr("Highlight current &line"));
 
-    highlightBlocks.setSettingsKey("HighlightBlocksKey");
+    // OPENMV-DIFF //
+    // highlightBlocks.setSettingsKey("HighlightBlocksKey");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     highlightBlocks.setDefaultValue(false);
     highlightBlocks.setLabelText(Tr::tr("Highlight &blocks"));
 
@@ -83,7 +91,11 @@ DisplaySettings::DisplaySettings()
     markTextChanges.setDefaultValue(true);
     markTextChanges.setLabelText(Tr::tr("Mark &text changes"));
 
-    autoFoldFirstComment.setSettingsKey("AutoFoldFirstComment");
+    // OPENMV-DIFF //
+    // autoFoldFirstComment.setSettingsKey("AutoFoldFirstComment");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // autoFoldFirstComment.setDefaultValue(true);
     // OPENMV-DIFF //
@@ -91,18 +103,30 @@ DisplaySettings::DisplaySettings()
     // OPENMV-DIFF //
     autoFoldFirstComment.setLabelText(Tr::tr("Auto-fold first &comment"));
 
-    centerCursorOnScroll.setSettingsKey("CenterCursorOnScroll");
+    // OPENMV-DIFF //
+    // centerCursorOnScroll.setSettingsKey("CenterCursorOnScroll");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     centerCursorOnScroll.setDefaultValue(false);
     centerCursorOnScroll.setLabelText(Tr::tr("Center &cursor on scroll"));
 
-    openLinksInNextSplit.setSettingsKey("OpenLinksInNextSplitKey");
+    // OPENMV-DIFF //
+    // openLinksInNextSplit.setSettingsKey("OpenLinksInNextSplitKey");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     openLinksInNextSplit.setDefaultValue(false);
     openLinksInNextSplit.setLabelText(Tr::tr("Always open links in another split"));
 
     forceOpenLinksInNextSplit.setDefaultValue(false);
 
     displayFileEncoding.setDefaultValue(false);
-    displayFileEncoding.setSettingsKey("DisplayFileEncoding");
+    // OPENMV-DIFF //
+    // displayFileEncoding.setSettingsKey("DisplayFileEncoding");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     displayFileEncoding.setLabelText(Tr::tr("Display file encoding"));
 
     // OPENMV-DIFF //
@@ -110,7 +134,11 @@ DisplaySettings::DisplaySettings()
     // OPENMV-DIFF //
     displayFileLineEnding.setDefaultValue(false);
     // OPENMV-DIFF //
-    displayFileLineEnding.setSettingsKey("DisplayFileLineEnding");
+    // OPENMV-DIFF //
+    // displayFileLineEnding.setSettingsKey("DisplayFileLineEnding");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     displayFileLineEnding.setLabelText(Tr::tr("Display file line ending"));
 
     displayTabSettings.setDefaultValue(true);
@@ -121,11 +149,21 @@ DisplaySettings::DisplaySettings()
     scrollBarHighlights.setDefaultValue(true);
     scrollBarHighlights.setLabelText(Tr::tr("Highlight search results on the scrollbar"));
 
-    animateNavigationWithinFile.setSettingsKey("AnimateNavigationWithinFile");
+    // OPENMV-DIFF //
+    // animateNavigationWithinFile.setSettingsKey("AnimateNavigationWithinFile");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default: no settings key, so a stored value is never loaded.
+    // OPENMV-DIFF //
     animateNavigationWithinFile.setDefaultValue(false);
     animateNavigationWithinFile.setLabelText(Tr::tr("Animate navigation within file"));
 
-    highlightSelection.setSettingsKey("HighlightSelection");
+    // OPENMV-DIFF //
+    // highlightSelection.setSettingsKey("HighlightSelection");
+    // OPENMV-DIFF //
+    // Hidden, locked to its default (on): no settings key, so a stored value is
+    // never loaded. In Python it mostly duplicates the language server's
+    // occurrence highlighting, so the checkbox seemed to do nothing.
+    // OPENMV-DIFF //
     highlightSelection.setDefaultValue(true);
     highlightSelection.setLabelText(Tr::tr("&Highlight selection"));
     highlightSelection.setToolTip(Tr::tr("Adds a colored background and a marker to the "
@@ -172,8 +210,15 @@ public:
                 title(Tr::tr("Margin")),
                 Column {
                     Row { m.showMargin, m.marginColumn, st },
-                    Row { m.useIndenter, m.tintMarginArea, st },
-                    Row { m.centerEditorContentWidthPercent, st }
+                    // OPENMV-DIFF //
+                    // Row { m.useIndenter, m.tintMarginArea, st },
+                    // OPENMV-DIFF //
+                    Row { m.tintMarginArea, st },
+                    Row { s.displayMinimap, st },
+                    // OPENMV-DIFF //
+                    // OPENMV-DIFF //
+                    // Row { m.centerEditorContentWidthPercent, st }
+                    // OPENMV-DIFF //
                 }
             },
             Group {
@@ -185,33 +230,50 @@ public:
             },
             Group {
                 title(Tr::tr("Display")),
+                // OPENMV-DIFF //
+                // Row {
+                //     Column {
+                //         s.displayLineNumbers,
+                //         s.displayFoldingMarkers,
+                //         s.markTextChanges,
+                //         s.visualizeWhitespace,
+                //         s.centerCursorOnScroll,
+                //         s.autoFoldFirstComment,
+                //         s.scrollBarHighlights,
+                //         s.animateNavigationWithinFile,
+                //         s.highlightSelection,
+                //     },
+                //     Column {
+                //         s.highlightCurrentLine,
+                //         s.highlightBlocks,
+                //         s.animateMatchingParentheses,
+                //         s.visualizeIndent,
+                //         s.highlightMatchingParentheses,
+                //         s.openLinksInNextSplit,
+                //         s.displayFileEncoding,
+                //         s.displayFileLineEnding,
+                //         s.displayTabSettings,
+                //         s.displayMinimap,
+                //     }
+                // }
+                // OPENMV-DIFF //
+                // The OpenMV IDE's options, as in its Qt Creator 14 base (the
+                // minimap is in the Margin group); the rest are hidden.
                 Row {
                     Column {
                         s.displayLineNumbers,
-                        s.displayFoldingMarkers,
                         s.markTextChanges,
                         s.visualizeWhitespace,
-                        s.centerCursorOnScroll,
-                        s.autoFoldFirstComment,
                         s.scrollBarHighlights,
-                        s.animateNavigationWithinFile,
-                        s.highlightSelection,
                     },
                     Column {
                         s.highlightCurrentLine,
-                        s.highlightBlocks,
                         s.animateMatchingParentheses,
                         s.visualizeIndent,
                         s.highlightMatchingParentheses,
-                        s.openLinksInNextSplit,
-                        s.displayFileEncoding,
-                        s.displayFileLineEnding,
-                        // OPENMV-DIFF //
-                        // s.displayTabSettings,
-                        // OPENMV-DIFF //
-                        s.displayMinimap,
                     }
                 }
+                // OPENMV-DIFF //
             },
             Group {
                 title(Tr::tr("Line Annotations")),

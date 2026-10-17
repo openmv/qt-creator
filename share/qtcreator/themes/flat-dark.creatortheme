@@ -1,6 +1,10 @@
 [General]
 Includes=dark.figmatokens, qmldesigner-dark.inc
-ThemeName=Dark (2016)
+;OPENMV-DIFF;
+;ThemeName=Dark (2016)
+;OPENMV-DIFF;
+ThemeName=Flat Dark
+;OPENMV-DIFF;
 PreferredStyles=
 ;OPENMV-DIFF;
 ;DefaultTextEditorColorScheme=creator-dark.xml

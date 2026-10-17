@@ -56,7 +56,11 @@ StorageSettings::StorageSettings()
     inEntireDocument.setToolTip(Tr::tr("Cleans whitespace in entire document instead of only for changed parts."));
 
     addFinalNewLine.setSettingsKey("addFinalNewLine");
-    addFinalNewLine.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // addFinalNewLine.setDefaultValue(false);
+    // OPENMV-DIFF //
+    addFinalNewLine.setDefaultValue(true);
+    // OPENMV-DIFF //
     addFinalNewLine.setLabelText(Tr::tr("&Ensure newline at end of file"));
     addFinalNewLine.setToolTip(Tr::tr("Always writes a newline character at the end of the file."));
 

@@ -35,7 +35,12 @@ MarginSettings::MarginSettings(const Key &keyPrefix)
     tintMarginArea.setDefaultValue(true);
     tintMarginArea.setLabelText(Tr::tr("Tint whole margin area"));
 
-    useIndenter.setSettingsKey(keyPrefix + "UseIndenter");
+    // OPENMV-DIFF //
+    // useIndenter.setSettingsKey(keyPrefix + "UseIndenter");
+    // OPENMV-DIFF //
+    // Always off: only ClangFormat (not built) supplies a context-specific margin.
+    // No settings key, so a stored value is never loaded, and no checkbox.
+    // OPENMV-DIFF //
     useIndenter.setDefaultValue(false);
     useIndenter.setLabelText(Tr::tr("Use context-specific margin"));
     useIndenter.setToolTip(Tr::tr("If available, use a different margin. "
@@ -49,7 +54,12 @@ MarginSettings::MarginSettings(const Key &keyPrefix)
     // OPENMV-DIFF //
     marginColumn.setRange(0, 999);
 
-    centerEditorContentWidthPercent.setSettingsKey(keyPrefix + "centeredEditorContentWidthPercent");
+    // OPENMV-DIFF //
+    // centerEditorContentWidthPercent.setSettingsKey(keyPrefix + "centeredEditorContentWidthPercent");
+    // OPENMV-DIFF //
+    // Always 100% (the full editor width): no settings key, so a stored value is
+    // never loaded, and no control on the Display page.
+    // OPENMV-DIFF //
     centerEditorContentWidthPercent.setRange(50, 100);
     centerEditorContentWidthPercent.setDefaultValue(100);
     centerEditorContentWidthPercent.setSuffix("%");
