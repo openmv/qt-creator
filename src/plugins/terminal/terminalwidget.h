@@ -61,6 +61,9 @@ protected:
     void showEvent(QShowEvent *event) override;
     void focusInEvent(QFocusEvent *event) override;
     bool event(QEvent *event) override;
+    // OPENMV-DIFF //
+    void wheelEvent(QWheelEvent *event) override;
+    // OPENMV-DIFF //
 
     void onReadyRead(bool forceFlush);
     void setupFont();
@@ -91,6 +94,11 @@ private:
     std::unique_ptr<ShellIntegration> m_shellIntegration;
 
     QString m_shellName;
+    // OPENMV-DIFF //
+    // Git Bash's prompt starts with a newline; drop it before the first prompt.
+    enum class LeadingNewline { Unchecked, Strip, Done };
+    LeadingNewline m_leadingNewline = LeadingNewline::Unchecked;
+    // OPENMV-DIFF //
     QString m_title;
 
     Utils::Id m_identifier;

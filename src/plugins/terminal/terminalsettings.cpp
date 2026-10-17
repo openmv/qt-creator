@@ -19,6 +19,10 @@
 #include <utils/stringutils.h>
 #include <utils/theme/theme.h>
 
+// OPENMV-DIFF //
+#include <QSettings>
+#include <QStandardPaths>
+// OPENMV-DIFF //
 #include <QGuiApplication>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -55,17 +59,153 @@ static int defaultFontSize()
     return 10;
 }
 
-static QString defaultShell()
+// OPENMV-DIFF //
+// static QString defaultShell()
+// {
+//     if (HostOsInfo::isWindowsHost())
+//         return qtcEnvironmentVariable("COMSPEC");
+//
+//     FilePath defaultShell = FilePath::fromUserInput(qtcEnvironmentVariable("SHELL"));
+//     if (defaultShell.isExecutableFile())
+//         return defaultShell.toUserOutput();
+//
+//     return Environment::systemEnvironment().searchInPath("sh").toUserOutput();
+// }
+// OPENMV-DIFF //
+// Git Bash: next to git.exe on PATH, else in Git for Windows' install folders.
+FilePath gitBashPath()
 {
-    if (HostOsInfo::isWindowsHost())
-        return qtcEnvironmentVariable("COMSPEC");
+    const FilePath gitExe = FilePath::fromUserInput(QStandardPaths::findExecutable("git.exe"));
+    if (!gitExe.isEmpty()) {
+        const FilePath bash = gitExe.parentDir().parentDir().pathAppended("bin/bash.exe");
+        if (bash.isExecutableFile())
+            return bash;
+    }
+    for (const QString &root : {QString("ProgramFiles"), QString("ProgramFiles(x86)"),
+                                QString("ProgramW6432")}) {
+        const QString dir = qtcEnvironmentVariable(root);
+        if (dir.isEmpty())
+            continue;
+        const FilePath bash = FilePath::fromUserInput(dir).pathAppended("Git/bin/bash.exe");
+        if (bash.isExecutableFile())
+            return bash;
+    }
+    const QString localAppData = qtcEnvironmentVariable("LOCALAPPDATA");
+    if (!localAppData.isEmpty()) {
+        const FilePath bash
+            = FilePath::fromUserInput(localAppData).pathAppended("Programs/Git/bin/bash.exe");
+        if (bash.isExecutableFile())
+            return bash;
+    }
+    return {};
+}
+
+// PowerShell 7 (pwsh), on PATH or in its default install folder.
+FilePath powerShell7Path()
+{
+    const FilePath pwsh = FilePath::fromUserInput(QStandardPaths::findExecutable("pwsh.exe"));
+    if (!pwsh.isEmpty())
+        return pwsh;
+    const QString dir = qtcEnvironmentVariable("ProgramFiles");
+    if (!dir.isEmpty()) {
+        const FilePath candidate = FilePath::fromUserInput(dir).pathAppended("PowerShell/7/pwsh.exe");
+        if (candidate.isExecutableFile())
+            return candidate;
+    }
+    return {};
+}
+
+// WSL's launchers live in the Windows system folder; Git Bash, MSYS2 or Cygwin
+// bash.exe live elsewhere.
+bool isWslLauncher(const FilePath &shell)
+{
+    if (!HostOsInfo::isWindowsHost())
+        return false;
+    const FilePath system32
+        = FilePath::fromUserInput(qtcEnvironmentVariable("SystemRoot")).pathAppended("System32");
+    const QString name = shell.fileName().toLower();
+    return (name == "bash.exe" || name == "wsl.exe")
+           && shell.parentDir().toFSPathString().compare(system32.toFSPathString(),
+                                                          Qt::CaseInsensitive) == 0;
+}
+
+// The WSL launchers exist whenever the WSL feature is on, even with no Linux
+// distribution installed (then they just fail). Installed distributions are
+// registered here; reading it is instant, unlike running "wsl --list".
+bool wslHasDistribution()
+{
+    if (!HostOsInfo::isWindowsHost())
+        return false;
+    QSettings lxss("HKEY_CURRENT_USER\\Software\\Microsoft\\Windows\\CurrentVersion\\Lxss",
+                   QSettings::NativeFormat);
+    return !lxss.childGroups().isEmpty();
+}
+
+QString friendlyShellName(const FilePath &shell)
+{
+    if (!HostOsInfo::isWindowsHost())
+        return {};
+    if (isWslLauncher(shell))
+        return Tr::tr("WSL Bash");
+    const QString name = shell.fileName().toLower();
+    if (name == "bash.exe" && shell == gitBashPath())
+        return Tr::tr("Git Bash");
+    if (name == "pwsh.exe")
+        return Tr::tr("PowerShell 7");
+    if (name == "powershell.exe")
+        return Tr::tr("Windows PowerShell");
+    if (name == "cmd.exe")
+        return Tr::tr("Command Prompt");
+    return {};
+}
+
+// Git Bash's and WSL's bash.exe have a generic console icon; their launchers
+// (git-bash.exe, wsl.exe) carry the real ones.
+FilePath shellIconFile(const FilePath &shell)
+{
+    if (!HostOsInfo::isWindowsHost())
+        return shell;
+    if (isWslLauncher(shell)) {
+        const FilePath wsl = shell.parentDir().pathAppended("wsl.exe");
+        if (wsl.exists())
+            return wsl;
+    } else if (shell.fileName().toLower() == "bash.exe" && shell == gitBashPath()) {
+        const FilePath gitBashExe = shell.parentDir().parentDir().pathAppended("git-bash.exe");
+        if (gitBashExe.exists())
+            return gitBashExe;
+    }
+    return shell;
+}
+
+// The best shell available, with the arguments it needs:
+//   Windows: Git Bash, PowerShell 7, Windows PowerShell, then cmd (%COMSPEC%).
+//            (Not a bare bash.exe on PATH: that is usually WSL's launcher.)
+//   macOS/Linux: the user's login shell ($SHELL), then bash, then sh; as a login shell.
+static std::pair<QString, QString> defaultShellAndArguments()
+{
+    if (HostOsInfo::isWindowsHost()) {
+        if (const FilePath bash = gitBashPath(); !bash.isEmpty())
+            return {bash.toUserOutput(), QString("-l")}; // "-l": shell integration needs it
+        if (const FilePath pwsh = powerShell7Path(); !pwsh.isEmpty())
+            return {pwsh.toUserOutput(), QString()};
+        const FilePath powershell
+            = FilePath::fromUserInput(QStandardPaths::findExecutable("powershell.exe"));
+        if (!powershell.isEmpty())
+            return {powershell.toUserOutput(), QString()};
+        return {qtcEnvironmentVariable("COMSPEC"), QString()};
+    }
 
     FilePath defaultShell = FilePath::fromUserInput(qtcEnvironmentVariable("SHELL"));
     if (defaultShell.isExecutableFile())
-        return defaultShell.toUserOutput();
+        return {defaultShell.toUserOutput(), QString("-l")};
 
-    return Environment::systemEnvironment().searchInPath("sh").toUserOutput();
+    const FilePath bash = Environment::systemEnvironment().searchInPath("bash");
+    if (!bash.isEmpty())
+        return {bash.toUserOutput(), QString("-l")};
+
+    return {Environment::systemEnvironment().searchInPath("sh").toUserOutput(), QString("-l")};
 }
+// OPENMV-DIFF //
 
 void setupColor(TerminalSettings *settings,
                 ColorAspect &color,
@@ -468,28 +608,46 @@ TerminalSettings::TerminalSettings()
     allowBlinkingCursor.setSettingsKey("AllowBlinkingCursor");
     allowBlinkingCursor.setLabelText(Tr::tr("Allow blinking cursor"));
     allowBlinkingCursor.setToolTip(Tr::tr("Allow the cursor to blink."));
-    allowBlinkingCursor.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // allowBlinkingCursor.setDefaultValue(false);
+    // OPENMV-DIFF //
+    allowBlinkingCursor.setDefaultValue(true);
+    // OPENMV-DIFF //
 
     shell.setSettingsKey("ShellPath");
     shell.setLabelText(Tr::tr("Shell path:"));
     shell.setExpectedKind(PathChooser::ExistingCommand);
     shell.setHistoryCompleter("Terminal.Shell.History");
     shell.setToolTip(Tr::tr("The shell executable to be started."));
-    shell.setDefaultValue(defaultShell());
+    // OPENMV-DIFF //
+    // shell.setDefaultValue(defaultShell());
+    // OPENMV-DIFF //
+    const auto [defaultShellPath, defaultShellArguments] = defaultShellAndArguments();
+    shell.setDefaultValue(defaultShellPath);
+    // OPENMV-DIFF //
 
     shellArguments.setSettingsKey("ShellArguments");
     shellArguments.setLabelText(Tr::tr("Shell arguments:"));
     shellArguments.setDisplayStyle(StringAspect::LineEditDisplay);
     shellArguments.setHistoryCompleter("Terminal.Shell.History");
     shellArguments.setToolTip(Tr::tr("The arguments to be passed to the shell."));
-    if (!HostOsInfo::isWindowsHost())
-        shellArguments.setDefaultValue(QString("-l"));
+    // OPENMV-DIFF //
+    // if (!HostOsInfo::isWindowsHost())
+    //     shellArguments.setDefaultValue(QString("-l"));
+    // OPENMV-DIFF //
+    shellArguments.setDefaultValue(defaultShellArguments);
+    // OPENMV-DIFF //
 
     sendEscapeToTerminal.setSettingsKey("SendEscapeToTerminal");
     sendEscapeToTerminal.setLabelText(Tr::tr("Send escape key to terminal"));
     sendEscapeToTerminal.setToolTip(Tr::tr("Sends the escape key to the terminal when pressed "
                                            "instead of closing the terminal."));
-    sendEscapeToTerminal.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // sendEscapeToTerminal.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // A focused shell gets every key, Esc included (leave it by clicking away).
+    sendEscapeToTerminal.setDefaultValue(true);
+    // OPENMV-DIFF //
 
     static const QString escKey = QKeySequence(Qt::Key_Escape).toString(QKeySequence::NativeText);
     static const QString shiftEsc = QKeySequence(QKeyCombination(Qt::ShiftModifier, Qt::Key_Escape))
@@ -508,7 +666,13 @@ TerminalSettings::TerminalSettings()
     lockKeyboard.setLabelText(Tr::tr("Block shortcuts in terminal"));
     lockKeyboard.setToolTip(
         Tr::tr("Keeps Qt Creator shortcuts from interfering with the terminal."));
-    lockKeyboard.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // lockKeyboard.setDefaultValue(false);
+    // OPENMV-DIFF //
+    // A focused shell gets every key; only the shell pane's own commands
+    // (new/next/previous shell, find, preferences) still reach the IDE.
+    lockKeyboard.setDefaultValue(true);
+    // OPENMV-DIFF //
 
     lockKeyboard.setIcon(LOCK_KEYBOARD_ICON.icon());
     lockKeyboard.setOffIcon(UNLOCK_KEYBOARD_ICON.icon());

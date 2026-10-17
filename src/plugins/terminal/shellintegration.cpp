@@ -105,6 +105,16 @@ static QString unescape(QStringView str)
     return result;
 }
 
+// OPENMV-DIFF //
+// PowerShell reports its directory with backslashes; FilePath only splits on
+// '/', so the tab's folder name came out as the whole path. Only for Windows
+// shells: elsewhere a backslash is an ordinary file-name character.
+static QString toShellPath(const QString &path, bool windowsShell)
+{
+    return windowsShell ? QString(path).replace('\\', '/') : path;
+}
+// OPENMV-DIFF //
+
 void ShellIntegration::onOsc(int cmd, std::string_view str, bool initial, bool final)
 {
     if (initial)
@@ -121,13 +131,23 @@ void ShellIntegration::onOsc(int cmd, std::string_view str, bool initial, bool f
     if (cmd == 1337) {
         const auto [key, value] = Utils::splitAtFirst(command, '=');
         if (key == QStringView(u"CurrentDir")) {
-            const FilePath cwd = m_shell.withNewPath(value.toString());
+            // OPENMV-DIFF //
+            // const FilePath cwd = m_shell.withNewPath(value.toString());
+            // OPENMV-DIFF //
+            const FilePath cwd = m_shell.withNewPath(
+                toShellPath(value.toString(), m_shell.osType() == OsTypeWindows));
+            // OPENMV-DIFF //
             emit currentDirChanged(cwd);
         }
 
     } else if (cmd == 7) {
         const QString decoded = QUrl::fromPercentEncoding(d.toUtf8());
-        const FilePath cwd = m_shell.withNewPath(decoded);
+        // OPENMV-DIFF //
+        // const FilePath cwd = m_shell.withNewPath(decoded);
+        // OPENMV-DIFF //
+        const FilePath cwd = m_shell.withNewPath(
+            toShellPath(decoded, m_shell.osType() == OsTypeWindows));
+        // OPENMV-DIFF //
         emit currentDirChanged(cwd);
     } else if (cmd == 133) {
         qCDebug(integrationLog) << "OSC 133:" << data;
@@ -140,7 +160,12 @@ void ShellIntegration::onOsc(int cmd, std::string_view str, bool initial, bool f
         } else if (command[0] == 'P') {
             const auto [key, value] = Utils::splitAtFirst(data, '=');
             if (key == QStringView(u"Cwd")) {
-                const FilePath cwd = m_shell.withNewPath(unescape(value.toString()));
+                // OPENMV-DIFF //
+                // const FilePath cwd = m_shell.withNewPath(unescape(value.toString()));
+                // OPENMV-DIFF //
+                const FilePath cwd = m_shell.withNewPath(
+                    toShellPath(unescape(value.toString()), m_shell.osType() == OsTypeWindows));
+                // OPENMV-DIFF //
                 emit currentDirChanged(cwd);
             }
         }
@@ -218,10 +243,29 @@ void ShellIntegration::prepareProcess(Utils::Process &process)
         const Result<> copyResult = rcPath.copyFile(tmpRc);
         QTC_ASSERT_RESULT(copyResult, return);
 
-        cmd.addArgs(QString("-noexit -command try { . '%1' } catch {Write-Host \"Shell "
-                            "integration error:\" $_}")
-                        .arg(tmpRc.nativePath()),
+        // OPENMV-DIFF //
+        // cmd.addArgs(QString("-noexit -command try { . '%1' } catch {Write-Host \"Shell "
+        //                     "integration error:\" $_}")
+        //                 .arg(tmpRc.nativePath()),
+        //             CommandLine::Raw);
+        // OPENMV-DIFF //
+        // Windows' default execution policy (Restricted) refuses every .ps1 file,
+        // this one included. The policy covers script files, not commands, so
+        // load the script's text as a script block and dot-source that: the
+        // integration loads, and the user's policy still applies to everything
+        // they run in this shell. The command goes in as -EncodedCommand (base64
+        // of UTF-16LE): it needs parentheses, and raw Windows arguments with
+        // &()<>| get run through cmd.exe /c instead of starting PowerShell.
+        const QString command
+            = QString("try { . ([scriptblock]::Create([IO.File]::ReadAllText('%1'))) } "
+                      "catch {Write-Host \"Shell integration error:\" $_}")
+                  .arg(tmpRc.nativePath().replace('\'', "''"));
+        const QByteArray utf16le(reinterpret_cast<const char *>(command.utf16()),
+                                 command.size() * 2);
+        cmd.addArgs(QString("-noexit -EncodedCommand %1")
+                        .arg(QString::fromLatin1(utf16le.toBase64())),
                     CommandLine::Raw);
+        // OPENMV-DIFF //
     } else if (cmd.executable().baseName() == "cmd") {
         const FilePath rcPath = filesToCopy.clink.script;
         const FilePath tmpRc = m_tempDir->filePath() / filesToCopy.clink.script.fileName();

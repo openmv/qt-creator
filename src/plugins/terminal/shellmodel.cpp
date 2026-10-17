@@ -2,6 +2,9 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0+ OR GPL-3.0 WITH Qt-GPL-exception-1.0
 
 #include "shellmodel.h"
+// OPENMV-DIFF //
+#include "terminalsettings.h"
+// OPENMV-DIFF //
 
 #include <projectexplorer/devicesupport/devicemanager.h>
 #include <projectexplorer/projectexplorerconstants.h>
@@ -81,33 +84,82 @@ ShellModelPrivate::ShellModelPrivate()
 {
     QFileIconProvider iconProvider;
     if (Utils::HostOsInfo::isWindowsHost()) {
-        const FilePath comspec = FilePath::fromUserInput(qtcEnvironmentVariable("COMSPEC"));
-        localShells << ShellItemBuilder(iconProvider, comspec);
+        // OPENMV-DIFF //
+        // const FilePath comspec = FilePath::fromUserInput(qtcEnvironmentVariable("COMSPEC"));
+        // localShells << ShellItemBuilder(iconProvider, comspec);
 
-        if (comspec.fileName() != "cmd.exe") {
-            FilePath cmd = FilePath::fromUserInput(QStandardPaths::findExecutable("cmd.exe"));
-            localShells << ShellItemBuilder(iconProvider, cmd);
-        }
+        // if (comspec.fileName() != "cmd.exe") {
+        //     FilePath cmd = FilePath::fromUserInput(QStandardPaths::findExecutable("cmd.exe"));
+        //     localShells << ShellItemBuilder(iconProvider, cmd);
+        // }
+
+        // const FilePath powershell = FilePath::fromUserInput(
+        //     QStandardPaths::findExecutable("powershell.exe"));
+
+        // if (powershell.exists())
+        //     localShells << ShellItemBuilder(iconProvider, powershell);
+
+        // const FilePath sys_bash =
+        //         FilePath::fromUserInput(QStandardPaths::findExecutable("bash.exe"));
+        // if (sys_bash.exists())
+        //     localShells << ShellItemBuilder(iconProvider, {sys_bash, {"--login"}});
+
+        // const FilePath git_exe = FilePath::fromUserInput(QStandardPaths::findExecutable("git.exe"));
+        // if (git_exe.exists()) {
+        //     FilePath git_bash = git_exe.parentDir().parentDir().pathAppended("bin/bash.exe");
+        //     if (git_bash.exists()) {
+        //         localShells << ShellItemBuilder(iconProvider, {git_bash, {"--login"}})
+        //                   .icon(git_bash.parentDir().parentDir().pathAppended("git-bash.exe"));
+        //     }
+        // }
+        // OPENMV-DIFF //
+        // Friendly names ("Git Bash", "WSL Bash", ...) instead of executable paths;
+        // WSL only when a distribution is installed (its launcher exists without
+        // one and then just fails), with WSL's own icon; Git Bash also when git
+        // isn't on PATH; no second entry when bash.exe on PATH is Git Bash.
+        const auto named = [&iconProvider](const CommandLine &command) {
+            ShellItemBuilder builder(iconProvider, command);
+            const QString name = friendlyShellName(command.executable());
+            if (!name.isEmpty())
+                builder.name(name);
+            builder.icon(shellIconFile(command.executable()));
+            return builder;
+        };
+
+        // Best first, the same order the default shell is picked in.
+        const FilePath git_bash = gitBashPath();
+        if (git_bash.exists())
+            localShells << named({git_bash, {"-l"}}); // "-l", not "--login": shell integration
+
+        const FilePath pwsh = powerShell7Path();
+        if (pwsh.exists())
+            localShells << named(CommandLine(pwsh));
 
         const FilePath powershell = FilePath::fromUserInput(
             QStandardPaths::findExecutable("powershell.exe"));
-
         if (powershell.exists())
-            localShells << ShellItemBuilder(iconProvider, powershell);
+            localShells << named(CommandLine(powershell));
+
+        const FilePath comspec = FilePath::fromUserInput(qtcEnvironmentVariable("COMSPEC"));
+        localShells << named(CommandLine(comspec));
+
+        if (comspec.fileName() != "cmd.exe") {
+            FilePath cmd = FilePath::fromUserInput(QStandardPaths::findExecutable("cmd.exe"));
+            localShells << named(CommandLine(cmd));
+        }
 
         const FilePath sys_bash =
                 FilePath::fromUserInput(QStandardPaths::findExecutable("bash.exe"));
-        if (sys_bash.exists())
-            localShells << ShellItemBuilder(iconProvider, {sys_bash, {"--login"}});
-
-        const FilePath git_exe = FilePath::fromUserInput(QStandardPaths::findExecutable("git.exe"));
-        if (git_exe.exists()) {
-            FilePath git_bash = git_exe.parentDir().parentDir().pathAppended("bin/bash.exe");
-            if (git_bash.exists()) {
-                localShells << ShellItemBuilder(iconProvider, {git_bash, {"--login"}})
-                          .icon(git_bash.parentDir().parentDir().pathAppended("git-bash.exe"));
+        if (sys_bash.exists() && sys_bash != git_bash) {
+            if (isWslLauncher(sys_bash)) {
+                if (wslHasDistribution()) {
+                    localShells << named({sys_bash, {"--login"}});
+                }
+            } else {
+                localShells << named({sys_bash, {"--login"}});
             }
         }
+        // OPENMV-DIFF //
 
         const QStringList msys2_args{"-defterm", "-no-start", "-here"};
         for (const FilePath &msys2_path : msysPaths()) {

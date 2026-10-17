@@ -26,6 +26,11 @@
 #include <utils/utilsicons.h>
 
 #include <QDir> // OPENMV-DIFF
+// OPENMV-DIFF //
+#include <utils/theme/theme.h>
+#include <QAbstractButton>
+#include <QPainter>
+// OPENMV-DIFF //
 #include <QFileIconProvider>
 #include <QGuiApplication>
 #include <QMenu>
@@ -70,7 +75,12 @@ TerminalPane::TerminalPane(QObject *parent)
     // OPENMV-DIFF //
 
     setupContext(m_selfContext, &m_tabWidget);
-    setZoomButtonsEnabled(true);
+    // OPENMV-DIFF //
+    // setZoomButtonsEnabled(true);
+    // OPENMV-DIFF //
+    // No zoom buttons: Ctrl+wheel zooms, like the Serial Terminal.
+    setZoomButtonsEnabled(false);
+    // OPENMV-DIFF //
 
     connect(this, &IOutputPane::zoomInRequested, this, [this] {
         if (currentTerminal())
@@ -213,7 +223,12 @@ void TerminalPane::openTerminal(const OpenTerminalParameters &parameters)
             const FilePath command = parametersCopy.shellCommand
                                          ? parametersCopy.shellCommand->executable()
                                          : settings().shell();
-            icon = iconProvider.icon(command.toFileInfo());
+            // OPENMV-DIFF //
+            // icon = iconProvider.icon(command.toFileInfo());
+            // OPENMV-DIFF //
+            // Git Bash and WSL Bash take their launchers' icons, as in the new-shell menu.
+            icon = iconProvider.icon(shellIconFile(command).toFileInfo());
+            // OPENMV-DIFF //
         }
     }
     // OPENMV-DIFF //
@@ -271,6 +286,11 @@ QWidget *TerminalPane::outputWidget(QWidget *parent)
         m_widgetInitialized = true;
         m_tabWidget.setTabBarAutoHide(false);
         m_tabWidget.setDocumentMode(true);
+        // OPENMV-DIFF //
+        // Document mode turns the tab bar's base line back on: a second divider
+        // under the one the tab bar draws itself.
+        m_tabWidget.tabBar()->setDrawBase(false);
+        // OPENMV-DIFF //
         m_tabWidget.setTabsClosable(true);
         m_tabWidget.setMovable(true);
 
@@ -308,6 +328,12 @@ void TerminalPane::setupTerminalWidget(TerminalWidget *terminal)
     const auto setTabText = [this, terminal] {
         const int index = m_tabWidget.indexOf(terminal);
         m_tabWidget.setTabText(index, terminal->title());
+        // OPENMV-DIFF //
+        // The tab shows only the folder's name; the full path is the tooltip.
+        m_tabWidget.setTabToolTip(index, terminal->cwd().isEmpty()
+                                             ? QString()
+                                             : terminal->cwd().toUserOutput());
+        // OPENMV-DIFF //
     };
 
     connect(terminal, &TerminalWidget::started, this, setTabText);
@@ -426,13 +452,22 @@ void TerminalPane::createShellMenu()
 
 QList<QWidget *> TerminalPane::toolBarWidgets() const
 {
-    QList<QWidget *> widgets = IOutputPane::toolBarWidgets();
-
-    widgets.prepend(m_newTerminalButton);
-    widgets.prepend(m_closeTerminalButton);
-
-    return widgets << m_openSettingsButton << m_lockKeyboardButton << m_escSettingButton
-                   << m_variablesButton;
+    // OPENMV-DIFF //
+    // QList<QWidget *> widgets = IOutputPane::toolBarWidgets();
+    //
+    // widgets.prepend(m_newTerminalButton);
+    // widgets.prepend(m_closeTerminalButton);
+    //
+    // return widgets << m_openSettingsButton << m_lockKeyboardButton << m_escSettingButton
+    //                << m_variablesButton;
+    // OPENMV-DIFF //
+    // Just close and new shell. No zoom buttons (the base class's; Ctrl+wheel
+    // zooms), no settings gear (Preferences > Shell), no Esc-routing or
+    // keyboard-lock toggles (a focused shell gets every key by default; both stay
+    // in Preferences > Shell), and no macro-variable menu (mostly project
+    // variables).
+    return {m_closeTerminalButton, m_newTerminalButton};
+    // OPENMV-DIFF //
 }
 
 void TerminalPane::clearContents()
@@ -535,9 +570,63 @@ void TerminalPane::contextMenuRequested(const QPoint &pos)
     }
 }
 
+// OPENMV-DIFF //
+// The editor and AI chat tabs' look: their stylesheet (applied by the TabbedEditor
+// plugin by object name, or read from the application for later tab bars) and a
+// line along the bottom of the tab row except under the current tab.
+class ShellTabBar : public DocumentTabBar
+{
+public:
+    ShellTabBar()
+    {
+        setObjectName(QLatin1String("OpenMVStyledTabBar"));
+        setDrawBase(false);
+        setElideMode(Qt::ElideNone);
+        const QString tabStyle = qApp->property("openmv.tabBarStyleSheet").toString();
+        if (!tabStyle.isEmpty())
+            setStyleSheet(tabStyle);
+    }
+
+protected:
+    // Where the current tab is drawn; while dragged (and sliding back) QTabBar
+    // draws it with its only non-button child widget.
+    QRect currentTabRect() const
+    {
+        for (QObject *child : children()) {
+            QWidget *widget = qobject_cast<QWidget *>(child);
+            if (widget && widget->isVisible() && !qobject_cast<QAbstractButton *>(widget))
+                return widget->geometry();
+        }
+        return currentIndex() >= 0 ? tabRect(currentIndex()) : QRect();
+    }
+
+    void paintEvent(QPaintEvent *event) override
+    {
+        DocumentTabBar::paintEvent(event);
+
+        QPainter painter(this);
+        painter.setPen(creatorColor(Theme::SplitterColor));
+        const int y = height() - 1;
+        const QRect current = currentTabRect();
+        if (current.isNull()) {
+            painter.drawLine(0, y, width() - 1, y);
+        } else {
+            if (current.left() > 0)
+                painter.drawLine(0, y, current.left() - 1, y);
+            if (current.right() < width() - 1)
+                painter.drawLine(current.right() + 1, y, width() - 1, y);
+        }
+    }
+};
+// OPENMV-DIFF //
+
 TabWidget::TabWidget()
 {
-    setTabBar(new DocumentTabBar);
+    // OPENMV-DIFF //
+    // setTabBar(new DocumentTabBar);
+    // OPENMV-DIFF //
+    setTabBar(new ShellTabBar);
+    // OPENMV-DIFF //
 }
 
 static QAbstractItemModel *macroModel(QObject *parent)

@@ -38,4 +38,15 @@ public:
 
 TerminalSettings &settings();
 
+// OPENMV-DIFF //
+// Windows shells, found and named the same way for the default shell, the
+// new-shell menu and the tab labels.
+Utils::FilePath gitBashPath();      // Git for Windows' bash.exe, or empty
+Utils::FilePath powerShell7Path();  // pwsh.exe, or empty
+bool isWslLauncher(const Utils::FilePath &shell); // System32's bash.exe / wsl.exe
+bool wslHasDistribution();          // a WSL distro is installed for this user
+QString friendlyShellName(const Utils::FilePath &shell); // e.g. "Git Bash", or empty
+Utils::FilePath shellIconFile(const Utils::FilePath &shell); // the file to take its icon from
+// OPENMV-DIFF //
+
 } // Terminal

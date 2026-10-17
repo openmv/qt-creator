@@ -18,6 +18,10 @@
 #include <coreplugin/messagemanager.h>
 #include <coreplugin/vcsmanager.h>
 
+// OPENMV-DIFF //
+#include <utils/fadingindicator.h>
+#include <QWheelEvent>
+// OPENMV-DIFF //
 #include <utils/algorithm.h>
 #include <utils/async.h>
 #include <utils/environment.h>
@@ -59,6 +63,12 @@ TerminalWidget::TerminalWidget(QWidget *parent, const OpenTerminalParameters &op
     , m_openParameters(openParameters)
 {
     IContext::attach(this, m_context);
+
+    // OPENMV-DIFF //
+    // No scroll-area frame: it drew a second 1px border all around the shell
+    // (scroll bar included), inside the pane's own edges.
+    setFrameShape(QFrame::NoFrame);
+    // OPENMV-DIFF //
 
     setupFont();
     setupColors();
@@ -202,6 +212,11 @@ void TerminalWidget::setupPty()
     });
 
     connect(m_process.get(), &Process::started, this, [this] {
+        // OPENMV-DIFF //
+        // Tabs read "Git Bash", "WSL Bash", ... like the new-shell menu.
+        if (m_shellName.isEmpty())
+            m_shellName = friendlyShellName(m_process->commandLine().executable());
+        // OPENMV-DIFF //
         if (m_shellName.isEmpty())
             m_shellName = m_process->commandLine().executable().fileName();
         if (HostOsInfo::isWindowsHost() && m_shellName.endsWith(QTC_WIN_EXE_SUFFIX))
@@ -457,9 +472,79 @@ std::optional<TerminalSolution::TerminalView::Link> TerminalWidget::toLink(const
     return std::nullopt;
 }
 
+// OPENMV-DIFF //
+// Ctrl+wheel zooms, like the Serial Terminal (the pane has no zoom buttons).
+void TerminalWidget::wheelEvent(QWheelEvent *event)
+{
+    if (event->modifiers() & Qt::ControlModifier) {
+        const int delta = event->angleDelta().y();
+        if (delta > 0)
+            zoomIn();
+        else if (delta < 0)
+            zoomOut();
+        const int baseSize = qMax(1, int(settings().fontSize()));
+        Utils::FadingIndicator::showText(this,
+                                         Tr::tr("Zoom: %1%").arg(100 * font().pointSize() / baseSize),
+                                         Utils::FadingIndicator::SmallText);
+        event->accept();
+        return;
+    }
+    Core::SearchableTerminal::wheelEvent(event);
+}
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// Removes the first line break in data if it comes before any visible text,
+// skipping escape sequences (CSI "ESC [ ... final", OSC "ESC ] ... BEL/ST", and
+// two-byte "ESC x"). Returns true once that is decided (removed, or visible text
+// came first); false if data ran out first.
+static bool stripLeadingNewline(QByteArray &data)
+{
+    qsizetype i = 0;
+    const qsizetype n = data.size();
+    while (i < n) {
+        const char c = data.at(i);
+        if (c == '\x1b') {
+            if (i + 1 >= n)
+                return false;
+            const char kind = data.at(i + 1);
+            i += 2;
+            if (kind == '[') {
+                while (i < n && !(data.at(i) >= 0x40 && data.at(i) <= 0x7e))
+                    ++i;
+                ++i; // final byte
+            } else if (kind == ']') {
+                while (i < n && data.at(i) != '\a'
+                       && !(data.at(i) == '\x1b' && i + 1 < n && data.at(i + 1) == '\\'))
+                    ++i;
+                i += (i < n && data.at(i) == '\a') ? 1 : 2;
+            }
+            continue;
+        }
+        if (c == '\r' || c == '\n') {
+            const qsizetype len = (c == '\r' && i + 1 < n && data.at(i + 1) == '\n') ? 2 : 1;
+            data.remove(i, len);
+            return true;
+        }
+        return true; // visible text first: nothing to strip
+    }
+    return false;
+}
+// OPENMV-DIFF //
+
 void TerminalWidget::onReadyRead(bool forceFlush)
 {
     QByteArray data = m_process->readAllRawStandardOutput();
+
+    // OPENMV-DIFF //
+    if (m_leadingNewline == LeadingNewline::Unchecked) {
+        m_leadingNewline = m_process->commandLine().executable() == gitBashPath()
+                               ? LeadingNewline::Strip
+                               : LeadingNewline::Done;
+    }
+    if (m_leadingNewline == LeadingNewline::Strip && stripLeadingNewline(data))
+        m_leadingNewline = LeadingNewline::Done;
+    // OPENMV-DIFF //
 
     writeToTerminal(data, forceFlush);
 }
