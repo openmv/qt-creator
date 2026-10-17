@@ -20,6 +20,11 @@
 #include <utils/pathchooser.h>
 
 #include <QToolTip>
+// OPENMV-DIFF //
+#include <QLineEdit>
+#include <QTimer>
+#include <QUrl>
+// OPENMV-DIFF //
 
 using namespace Utils;
 
@@ -160,8 +165,16 @@ CopilotSettings::CopilotSettings()
     proxy.setSettingsKey("Copilot.Proxy");
     proxy.setLabelText(Tr::tr("Proxy:"));
     proxy.setDefaultValue("");
-    proxy.setPlaceHolderText("http://localhost:3128");
-    proxy.setToolTip(Tr::tr("The proxy server to use for connections."));
+    // OPENMV-DIFF //
+    // proxy.setPlaceHolderText("http://localhost:3128");
+    // proxy.setToolTip(Tr::tr("The proxy server to use for connections."));
+    // OPENMV-DIFF //
+    // Show the whole format, user name and password included.
+    proxy.setPlaceHolderText("http://user:password@host:port");
+    proxy.setToolTip(Tr::tr("The proxy server to use for connections, as "
+                            "http://host:port, or http://user:password@host:port if the proxy "
+                            "needs a login."));
+    // OPENMV-DIFF //
 
     proxyRejectUnauthorized.setDisplayName(Tr::tr("Reject Unauthorized"));
     proxyRejectUnauthorized.setSettingsKey("Copilot.ProxyRejectUnauthorized");
@@ -172,7 +185,12 @@ CopilotSettings::CopilotSettings()
 
     githubEnterpriseUrl.setDisplayName(Tr::tr("GitHub Enterprise URL"));
     githubEnterpriseUrl.setDisplayStyle(StringAspect::DisplayStyle::LineEditDisplay);
-    githubEnterpriseUrl.setSettingsKey("Copilot.GithubEnterpriseUrl");
+    // OPENMV-DIFF //
+    // githubEnterpriseUrl.setSettingsKey("Copilot.GithubEnterpriseUrl");
+    // OPENMV-DIFF //
+    // Hidden and always empty (github.com): no settings key, so a stored URL is
+    // never loaded. Only for companies running Copilot through their own GitHub.
+    // OPENMV-DIFF //
     githubEnterpriseUrl.setLabelText(Tr::tr("GitHub Enterprise URL:"));
     githubEnterpriseUrl.setDefaultValue("");
     githubEnterpriseUrl.setToolTip(Tr::tr("The URL of your GitHub Enterprise server."));
@@ -180,6 +198,33 @@ CopilotSettings::CopilotSettings()
     initEnableAspect(enableCopilot);
 
     readSettings();
+
+    // OPENMV-DIFF //
+    // The OpenMV IDE's Qt Creator 14 base had separate proxy fields; this one URL
+    // replaced them. Carry an enabled proxy over once (the old password was stored
+    // in plain text in the settings), then drop the old keys so clearing the new
+    // field later doesn't bring it back.
+    {
+        QtcSettings *s = Core::ICore::settings();
+        const QString host = s->value("Copilot.ProxyHost").toString();
+        if (proxy().isEmpty() && s->value("Copilot.UseProxy").toBool() && !host.isEmpty()) {
+            QUrl url;
+            url.setScheme("http");
+            url.setHost(host);
+            url.setPort(s->value("Copilot.ProxyPort", 3128).toInt());
+            url.setUserName(s->value("Copilot.ProxyUser").toString());
+            url.setPassword(s->value("Copilot.ProxyPassword").toString());
+            proxy.setValue(url.toString());
+            writeSettings();
+        }
+        for (const Utils::Key &key :
+             {Utils::Key("Copilot.UseProxy"), Utils::Key("Copilot.ProxyHost"),
+              Utils::Key("Copilot.ProxyPort"), Utils::Key("Copilot.ProxyUser"),
+              Utils::Key("Copilot.SaveProxyPassword"), Utils::Key("Copilot.ProxyPassword")}) {
+            s->remove(key);
+        }
+    }
+    // OPENMV-DIFF //
 
     // TODO: As a workaround we set the enabler after reading the settings, as that does not signal
     // a change.
@@ -189,7 +234,20 @@ CopilotSettings::CopilotSettings()
     githubEnterpriseUrl.setEnabler(&enableCopilot);
 
     proxy.setEnabler(&enableCopilot);
-    proxyRejectUnauthorized.setEnabler(&enableCopilot);
+    // OPENMV-DIFF //
+    // proxyRejectUnauthorized.setEnabler(&enableCopilot);
+    // OPENMV-DIFF //
+    // Only meaningful with a proxy: greyed out while the Proxy field is empty.
+    const auto updateRejectUnauthorized = [this] {
+        proxyRejectUnauthorized.setEnabled(enableCopilot.volatileValue()
+                                           && !proxy.volatileValue().trimmed().isEmpty());
+    };
+    connect(&enableCopilot, &BaseAspect::volatileValueChanged, this, updateRejectUnauthorized);
+    connect(&proxy, &BaseAspect::volatileValueChanged, this, updateRejectUnauthorized);
+    connect(&enableCopilot, &BaseAspect::changed, this, updateRejectUnauthorized);
+    connect(&proxy, &BaseAspect::changed, this, updateRejectUnauthorized);
+    updateRejectUnauthorized();
+    // OPENMV-DIFF //
 
     setLayouter([this] {
         using namespace Layouting;
@@ -238,6 +296,21 @@ CopilotSettings::CopilotSettings()
                     // OPENMV-DIFF //
                 }
             },
+            // OPENMV-DIFF //
+            // No variable chooser on this page's text fields (StringAspect always adds
+            // one): once the page is built, clear the property it attaches by.
+            [] {
+                auto marker = new QWidget;
+                marker->hide();
+                QTimer::singleShot(0, marker, [marker] {
+                    if (QWidget *page = marker->parentWidget()) {
+                        for (QLineEdit *edit : page->findChildren<QLineEdit *>())
+                            edit->setProperty("QtCreator.VariableSupport", QVariant());
+                    }
+                });
+                return marker;
+            }(),
+            // OPENMV-DIFF //
             Form {
                 new AuthWidget, br,
                 enableCopilot, br,
@@ -248,8 +321,10 @@ CopilotSettings::CopilotSettings()
                 // distPath, br,
                 // autoComplete, br,
                 // OPENMV-DIFF //
-                githubEnterpriseUrl, br,
-                hr, br,
+                // OPENMV-DIFF //
+                // githubEnterpriseUrl, br,
+                // hr, br,
+                // OPENMV-DIFF //
                 proxy, br,
                 proxyRejectUnauthorized, br,
             },

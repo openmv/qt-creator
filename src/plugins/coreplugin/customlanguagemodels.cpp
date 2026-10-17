@@ -58,6 +58,11 @@ class CustomLanguageModelsSettingsPage final : public Core::IOptionsPage
 {
 public:
     CustomLanguageModelsSettingsPage()
+        // OPENMV-DIFF //
+        // Not registered: the models only feed "Get help from <model>" in the
+        // Issues pane, which the OpenMV IDE doesn't have.
+        : Core::IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId("AI.CustomModels");
         setDisplayName(Tr::tr("Custom Language Models"));
@@ -110,7 +115,9 @@ CustomLanguageModels::CustomLanguageModels()
     setAutoApply(false);
     setSettingsGroup("CustomLanguageModels");
     models.setCreateItemFunction([] { return std::make_shared<CustomLanguageModel>(); });
-    models.setSettingsKey("ModelList");
+    // OPENMV-DIFF //
+    // models.setSettingsKey("ModelList");
+    // OPENMV-DIFF //
     models.setDisplayStyle(AspectList::DisplayStyle::ListViewWithDetails);
     models.listViewDataCallback = [](CustomLanguageModel *aspect, int role)->QVariant {
         if (role == Qt::DisplayRole)

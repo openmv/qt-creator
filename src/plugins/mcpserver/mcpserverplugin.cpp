@@ -6,6 +6,9 @@
 #include "mcpserverinspector.h"
 #include "mcpservertr.h"
 
+// OPENMV-DIFF //
+#include <app/app_version.h>
+// OPENMV-DIFF //
 #include <coreplugin/actionmanager/actionmanager.h>
 #include <coreplugin/coreconstants.h>
 #include <coreplugin/dialogs/ioptionspage.h>
@@ -57,14 +60,22 @@ public:
     ListenAddressAspect(AspectContainer *parent)
         : AspectContainer(parent)
     {
-        addressType.setSettingsKey("AddressType");
+        // OPENMV-DIFF //
+        // addressType.setSettingsKey("AddressType");
+        // OPENMV-DIFF //
+        // Always localhost: the server has no authentication, so listening on the
+        // network would let anyone there drive the IDE and the camera. No settings
+        // keys (a stored address is never loaded) and no "Listen on" row.
+        // OPENMV-DIFF //
         addressType.addOption("localhost", Tr::tr("Localhost (127.0.0.1)"));
         addressType.addOption("any", Tr::tr("Any (0.0.0.0)"));
         addressType.addOption("custom", Tr::tr("Custom"));
         addressType.setDefaultValue("localhost");
         addressType.setDisplayStyle(SelectionAspect::DisplayStyle::ComboBox);
 
-        customAddress.setSettingsKey("CustomAddress");
+        // OPENMV-DIFF //
+        // customAddress.setSettingsKey("CustomAddress");
+        // OPENMV-DIFF //
         customAddress.setEnabled(false);
         customAddress.setDefaultValue("127.0.0.1");
         customAddress.setDisplayStyle(StringAspect::DisplayStyle::LineEditDisplay);
@@ -131,7 +142,11 @@ public:
     McpServerSettingsPage(McpServerPluginSettings *settings)
     {
         setId(Constants::SETTINGS_PAGE_ID);
-        setDisplayName("Qt Creator MCP Server");
+        // OPENMV-DIFF //
+        // setDisplayName("Qt Creator MCP Server");
+        // OPENMV-DIFF //
+        setDisplayName(Tr::tr("MCP Server"));
+        // OPENMV-DIFF //
         setCategory(Core::Constants::SETTINGS_CATEGORY_AI);
         setSettingsProvider([settings] { return settings; });
     }
@@ -250,9 +265,15 @@ private:
     Mcp::AutoRegisteringServer m_server{
         Mcp::Schema::Implementation()
             .name("qt-creator-mcp-server")
-            .title("Qt Creator MCP Server")
-            .description(
-                "MCP server for Qt Creator to allow external tools to interact with the IDE.")
+            // OPENMV-DIFF //
+            // .title("Qt Creator MCP Server")
+            // .description(
+            //     "MCP server for Qt Creator to allow external tools to interact with the IDE.")
+            // OPENMV-DIFF //
+            .title(QString("%1 MCP Server").arg(QLatin1String(Core::Constants::IDE_DISPLAY_NAME)))
+            .description(QString("MCP server for %1 to allow external tools to interact with "
+                                 "the IDE.").arg(QLatin1String(Core::Constants::IDE_DISPLAY_NAME)))
+            // OPENMV-DIFF //
             .version(QCoreApplication::applicationVersion())};
 
     McpServerPluginSettings settings{this};
@@ -284,7 +305,12 @@ McpServerPluginSettings::McpServerPluginSettings(McpServerPlugin *plugin)
         Tr::tr("The port for the MCP Server to listen on. Leave on 0 to auto-select a free port."));
     port.setEnabler(&enabled);
 
-    enableCors.setSettingsKey("EnableCors");
+    // OPENMV-DIFF //
+    // enableCors.setSettingsKey("EnableCors");
+    // OPENMV-DIFF //
+    // Always off (any web page could otherwise call the server): no settings key
+    // and no checkbox.
+    // OPENMV-DIFF //
     enableCors.setEnabler(&enabled);
     enableCors.setLabel(Tr::tr("Enable Cross Origin access:"));
     enableCors.setToolTip(
@@ -335,13 +361,24 @@ McpServerPluginSettings::McpServerPluginSettings(McpServerPlugin *plugin)
         connect(this, &AspectContainer::applied, this, [updateStatus]() { updateStatus(); });
 
         // clang-format off
+        // OPENMV-DIFF //
+        // return Form {
+        //     enabled, br,
+        //     Tr::tr("Listen on:"), listenAddress, br,
+        //     port, br,
+        //     enableCors, br,
+        //     statusIcon, statusLabel, br,
+        // };
+        // OPENMV-DIFF //
+        // A "Status:" label instead of a check/cross glyph; the text still turns
+        // red when the server isn't running.
+        statusIcon->hide();
         return Form {
             enabled, br,
-            Tr::tr("Listen on:"), listenAddress, br,
             port, br,
-            enableCors, br,
-            statusIcon, statusLabel, br,
+            Tr::tr("Status:"), statusLabel, br,
         };
+        // OPENMV-DIFF //
         // clang-format on
     });
 };

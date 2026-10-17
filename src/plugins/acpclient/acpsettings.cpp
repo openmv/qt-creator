@@ -511,6 +511,12 @@ class AcpSettingsPage final : public Core::IOptionsPage
 {
 public:
     AcpSettingsPage()
+        // OPENMV-DIFF //
+        // Not registered: the AI mode's agent picker lists every registry agent and
+        // adds the one you pick, so this list never needs editing by hand. The
+        // server list itself (agents used so far) is still saved.
+        : Core::IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId(ACP_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("ACP Servers"));

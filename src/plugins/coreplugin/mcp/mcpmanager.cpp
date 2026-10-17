@@ -1046,7 +1046,14 @@ public:
     McpManagerSettings()
     {
         setAutoApply(false);
-        mcpServers.setSettingsKey("McpServers");
+        // OPENMV-DIFF //
+        // mcpServers.setSettingsKey("McpServers");
+        // OPENMV-DIFF //
+        // The page is hidden (see McpManagerSettingsPage), so user-added servers are
+        // never loaded: nothing hidden gets handed to the AI agents. Agents keep
+        // their own MCP configuration. The IDE's own server is registered directly
+        // with the manager and is unaffected.
+        // OPENMV-DIFF //
         mcpServers.setDisplayStyle(AspectList::DisplayStyle::ListViewWithDetails);
         mcpServers.setCreateItemFunction([] {
             auto newItem = std::make_shared<McpServerAspect>();
@@ -1061,8 +1068,14 @@ public:
             Tr::tr(
                 "When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp "
                 "will be used."));
-        enableDocsMcpServer.setDefaultValue(true);
-        enableDocsMcpServer.setSettingsKey("EnableQtDocsServer");
+        // OPENMV-DIFF //
+        // enableDocsMcpServer.setDefaultValue(true);
+        // enableDocsMcpServer.setSettingsKey("EnableQtDocsServer");
+        // OPENMV-DIFF //
+        // Always off (Qt's documentation is no use for MicroPython): no settings
+        // key, so a stored "on" is never loaded.
+        enableDocsMcpServer.setDefaultValue(false);
+        // OPENMV-DIFF //
 
         connect(&enableDocsMcpServer, &BoolAspect::changed, this, [this] {
             if (enableDocsMcpServer())
@@ -1128,6 +1141,12 @@ class McpManagerSettingsPage final : public IOptionsPage
 {
 public:
     McpManagerSettingsPage()
+        // OPENMV-DIFF //
+        // Not registered: agents keep their own MCP configuration, and the "Add
+        // From Registry" list is ~44,000 unvetted public servers (many of which
+        // would download and run code locally).
+        : IOptionsPage(false)
+        // OPENMV-DIFF //
     {
         setId(MCPMANAGER_SETTINGS_PAGE_ID);
         setDisplayName(Tr::tr("MCP Servers"));

@@ -81,20 +81,37 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             noServerLayout->setSpacing(12);
             noServerLayout->addStretch();
 
+            // OPENMV-DIFF //
+            // m_noServerLabel = new InfoLabel(
+            //     Tr::tr("No ACP servers configured. Add a server in the settings to get started."),
+            //     InfoLabel::Information);
+            // OPENMV-DIFF //
+            // Only shown when the agent registry couldn't be fetched and no agent has
+            // been used yet (the agent settings page is hidden).
             m_noServerLabel = new InfoLabel(
-                Tr::tr("No ACP servers configured. Add a server in the settings to get started."),
+                Tr::tr("Couldn't load the list of AI agents. Check your internet connection, "
+                       "then try again."),
                 InfoLabel::Information);
+            // OPENMV-DIFF //
             m_noServerLabel->setElideMode(Qt::ElideNone);
             m_noServerLabel->setWordWrap(true);
             noServerLayout->addWidget(m_noServerLabel);
 
-            auto *manageButton = new QtcButton(Tr::tr("Manage Agents..."),
-                                               QtcButton::MediumSecondary);
-            manageButton->setToolTip(Tr::tr("Open ACP server settings."));
-            manageButton->setPixmap(Utils::Icons::SETTINGS.pixmap());
-            connect(manageButton, &QAbstractButton::clicked, this, [] {
-                Core::ICore::showSettings("AI.ACPSERVERS");
-            });
+            // OPENMV-DIFF //
+            // auto *manageButton = new QtcButton(Tr::tr("Manage Agents..."),
+            //                                    QtcButton::MediumSecondary);
+            // manageButton->setToolTip(Tr::tr("Open ACP server settings."));
+            // manageButton->setPixmap(Utils::Icons::SETTINGS.pixmap());
+            // connect(manageButton, &QAbstractButton::clicked, this, [] {
+            //     Core::ICore::showSettings("AI.ACPSERVERS");
+            // });
+            // OPENMV-DIFF //
+            // Fetch the registry again; on success the settings emit serversChanged
+            // and the picker repopulates.
+            auto *manageButton = new QtcButton(Tr::tr("Try Again"), QtcButton::MediumSecondary);
+            manageButton->setToolTip(Tr::tr("Load the list of AI agents again."));
+            connect(manageButton, &QAbstractButton::clicked, this, [] { prefetchAcpRegistry(); });
+            // OPENMV-DIFF //
             auto *manageRow = new QHBoxLayout;
             manageRow->addStretch();
             manageRow->addWidget(manageButton);
