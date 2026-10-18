@@ -10,6 +10,7 @@
 
 #include <coreplugin/findplaceholder.h>
 
+#include <utils/algorithm.h> // OPENMV-DIFF
 #include <utils/elidinglabel.h>
 #include <utils/fileutils.h>
 #include <utils/qtcwidgets.h>
@@ -22,6 +23,19 @@
 
 #include <QApplication>
 #include <QComboBox>
+// OPENMV-DIFF //
+#include <QBuffer>
+#include <QDragEnterEvent>
+#include <QMimeData>
+#include <QScopeGuard>
+#include <QAbstractButton>
+#include <QLocale>
+#include <QPainterPath>
+#include <QShortcut>
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+#include <QScrollBar>
+// OPENMV-DIFF //
 #include <QFileDialog>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -60,21 +74,216 @@ protected:
     }
 };
 
+// OPENMV-DIFF //
+// The round buttons in the input box: send (an arrow; a stop square while the
+// agent works) and commands ("/").
+class ChatActionButton : public QAbstractButton
+{
+public:
+    enum Kind { Send, Stop, Commands };
+
+    explicit ChatActionButton(Kind kind)
+        : m_kind(kind)
+    {
+        setCursor(Qt::PointingHandCursor);
+        setAttribute(Qt::WA_Hover);
+        setFocusPolicy(Qt::NoFocus);
+        setFixedSize(24, 24);
+    }
+
+    void setKind(Kind kind)
+    {
+        m_kind = kind;
+        update();
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        const QRectF r = QRectF(rect()).adjusted(0.5, 0.5, -0.5, -0.5);
+        const QPointF c = r.center();
+        const bool hover = underMouse() && isEnabled();
+
+        QColor fill = Qt::transparent;
+        QColor fg = creatorColor(isEnabled() ? Theme::Token_Text_Default : Theme::Token_Text_Muted);
+        if (m_kind == Send && isEnabled()) {
+            fill = creatorColor(Theme::Token_Accent_Default);
+            fg = creatorColor(Theme::Token_Basic_White);
+        } else if (m_kind == Stop) {
+            fill = creatorColor(Theme::Token_Notification_Danger_Default);
+            fg = creatorColor(Theme::Token_Basic_White);
+        } else if (m_kind == Send) {
+            fill = creatorColor(Theme::Token_Foreground_Muted);
+        }
+        if (hover)
+            fill = fill.alpha() ? fill.lighter(120) : creatorColor(Theme::Token_Foreground_Muted);
+        p.setPen(Qt::NoPen);
+        p.setBrush(fill);
+        p.drawEllipse(r);
+
+        if (m_kind == Send) {
+            QPen pen(fg, 2, Qt::SolidLine, Qt::RoundCap, Qt::RoundJoin);
+            p.setPen(pen);
+            p.setBrush(Qt::NoBrush);
+            p.drawLine(QPointF(c.x(), c.y() + 5), QPointF(c.x(), c.y() - 5));
+            QPainterPath head;
+            head.moveTo(c.x() - 4, c.y() - 1);
+            head.lineTo(c.x(), c.y() - 5);
+            head.lineTo(c.x() + 4, c.y() - 1);
+            p.drawPath(head);
+        } else if (m_kind == Stop) {
+            p.setBrush(fg);
+            p.drawRoundedRect(QRectF(c.x() - 4, c.y() - 4, 8, 8), 1.5, 1.5);
+        } else {
+            QFont f = font();
+            f.setBold(true);
+            p.setFont(f);
+            p.setPen(fg);
+            p.drawText(r, Qt::AlignCenter, QStringLiteral("/"));
+        }
+    }
+
+private:
+    Kind m_kind;
+};
+
+// How full the session's context is: a ring and a percentage in the session
+// bar. Clicking it compacts the conversation when the agent can.
+class ContextGauge : public QAbstractButton
+{
+public:
+    ContextGauge()
+    {
+        setAttribute(Qt::WA_Hover);
+        setFocusPolicy(Qt::NoFocus);
+        hide(); // until the agent reports usage
+    }
+
+    void setFraction(double fraction)
+    {
+        m_fraction = qBound(0.0, fraction, 1.0);
+        updateGeometry();
+        update();
+    }
+
+    void setClickable(bool clickable)
+    {
+        m_clickable = clickable;
+        setCursor(clickable ? Qt::PointingHandCursor : Qt::ArrowCursor);
+        update();
+    }
+
+    bool isClickable() const { return m_clickable; }
+
+    QSize sizeHint() const override
+    {
+        return QSize(kPadding + kRing + kGap + fontMetrics().horizontalAdvance("100%") + kPadding,
+                     qMax(kRing, fontMetrics().height()) + 6);
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        if (m_clickable && underMouse()) {
+            QColor c = creatorColor(Theme::TextColorDisabled);
+            c.setAlphaF(c.alphaF() * .5);
+            StyleHelper::drawCardBg(&p, rect(), c, Qt::NoPen, RadiusS);
+        }
+
+        const QRectF ring(kPadding + 1, (height() - kRing) / 2.0 + 1, kRing - 2, kRing - 2);
+        p.setPen(QPen(creatorColor(Theme::Token_Stroke_Subtle), 2.5));
+        p.setBrush(Qt::NoBrush);
+        p.drawEllipse(ring);
+        const QColor arc = creatorColor(m_fraction >= 0.95   ? Theme::Token_Notification_Danger_Default
+                                        : m_fraction >= 0.80 ? Theme::Token_Notification_Alert_Default
+                                                             : Theme::Token_Accent_Default);
+        p.setPen(QPen(arc, 2.5, Qt::SolidLine, Qt::FlatCap));
+        p.drawArc(ring, 90 * 16, -qRound(m_fraction * 360 * 16));
+
+        p.setPen(creatorColor(Theme::Token_Text_Muted));
+        const QRect text(kPadding + kRing + kGap, 0, width() - kPadding - kRing - kGap, height());
+        p.drawText(text, Qt::AlignLeft | Qt::AlignVCenter,
+                   QString::number(qRound(m_fraction * 100)) + QLatin1Char('%'));
+    }
+
+private:
+    static constexpr int kPadding = 6;
+    static constexpr int kRing = 14;
+    static constexpr int kGap = 4;
+    double m_fraction = 0;
+    bool m_clickable = false;
+};
+
+// The chip's remove button: its hover highlight is rounded like the chip.
+class ChipCloseButton : public QtcIconButton
+{
+public:
+    using QtcIconButton::QtcIconButton;
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        if (underMouse() && isEnabled()) {
+            QColor c = creatorColor(Theme::TextColorDisabled);
+            c.setAlphaF(c.alphaF() * .5);
+            StyleHelper::drawCardBg(&p, rect(), c, Qt::NoPen, RadiusS);
+        }
+        icon().paint(&p, rect(), Qt::AlignCenter);
+    }
+};
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// The strip above the input showing a queued message.
+class QueueBar : public QWidget
+{
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        StyleHelper::drawCardBg(
+            &p, rect(), creatorColor(Theme::Token_Foreground_Subtle), QPen(Qt::NoPen), RadiusS);
+    }
+};
+// OPENMV-DIFF //
+
 class ContextItem : public QWidget
 {
     Q_OBJECT
 public:
-    explicit ContextItem(const QString &text, QWidget *parent = nullptr)
+    // OPENMV-DIFF //
+    // explicit ContextItem(const QString &text, QWidget *parent = nullptr)
+    explicit ContextItem(const QString &text, QWidget *parent = nullptr,
+                         const QPixmap &thumbnail = {})
+    // OPENMV-DIFF //
         : QWidget(parent)
     {
         auto *layout = new QHBoxLayout(this);
         layout->setContentsMargins(PaddingHM, 0, 0, 0);
         layout->setSpacing(0);
+        // OPENMV-DIFF //
+        if (!thumbnail.isNull()) {
+            auto *image = new QLabel;
+            image->setPixmap(thumbnail);
+            layout->addWidget(image);
+            layout->addSpacing(GapHS);
+        }
+        // OPENMV-DIFF //
 
         auto *label = new QLabel(text);
         layout->addWidget(label);
 
-        auto *closeBtn = new QtcIconButton();
+        // OPENMV-DIFF //
+        // auto *closeBtn = new QtcIconButton();
+        auto *closeBtn = new ChipCloseButton();
+        // OPENMV-DIFF //
         closeBtn->setIcon(Icons::CLOSE_TOOLBAR.icon());
         closeBtn->setContentsMargins(0, 0, 0, 0);
         closeBtn->setToolTip(Tr::tr("Remove Context"));
@@ -95,6 +304,41 @@ protected:
     }
 };
 
+// OPENMV-DIFF //
+// The message view's scroll bar, shown beside the whole panel (messages and input
+// area) so it runs the panel's full height and ends at the bottom. It mirrors the
+// view's own scroll bar, which is hidden but still drives auto-scrolling.
+class PanelScrollBar : public QScrollBar
+{
+public:
+    explicit PanelScrollBar(QScrollBar *source)
+        : QScrollBar(Qt::Vertical)
+        , m_source(source)
+    {
+        connect(source, &QScrollBar::rangeChanged, this, [this] { sync(); });
+        connect(source, &QScrollBar::valueChanged, this, [this](int value) {
+            if (pageStep() != m_source->pageStep())
+                sync();
+            setValue(value);
+        });
+        connect(this, &QScrollBar::valueChanged, source, &QScrollBar::setValue);
+        sync();
+    }
+
+private:
+    void sync()
+    {
+        setRange(m_source->minimum(), m_source->maximum());
+        setPageStep(m_source->pageStep());
+        setSingleStep(m_source->singleStep());
+        setValue(m_source->value());
+        setVisible(m_source->maximum() > m_source->minimum());
+    }
+
+    QScrollBar *m_source;
+};
+// OPENMV-DIFF //
+
 ChatPanel::ChatPanel(QWidget *parent)
     : QWidget(parent)
 {
@@ -105,12 +349,23 @@ ChatPanel::ChatPanel(QWidget *parent)
     // --- Session toolbar (StyledBar) ---
     auto *toolbar = new StyledBar;
     auto *toolbarLayout = new QHBoxLayout(toolbar);
-    toolbarLayout->setContentsMargins(PaddingHM, 0, PaddingHM, 0);
+    // OPENMV-DIFF //
+    // toolbarLayout->setContentsMargins(PaddingHM, 0, PaddingHM, 0);
+    // OPENMV-DIFF //
+    // The last combo sits flush with the right edge, like the Frame Buffer bar's.
+    toolbarLayout->setContentsMargins(PaddingHM, 0, 0, 0);
+    // OPENMV-DIFF //
     toolbarLayout->setSpacing(GapHM);
 
     m_agentLabel = new QLabel;
     m_agentLabel->setTextFormat(Qt::RichText);
     toolbarLayout->addWidget(m_agentLabel);
+    // OPENMV-DIFF //
+    // The agent on the left, its settings on the right (like the editor toolbar's
+    // symbol and Line/Col); the stretch moved here from before the overflow button.
+    toolbarLayout->addStretch(1);
+    m_sessionToolBar = toolbar;
+    // OPENMV-DIFF //
 
     m_configOptionsWidget = new QWidget;
     m_configOptionsLayout = new QHBoxLayout(m_configOptionsWidget);
@@ -152,8 +407,18 @@ ChatPanel::ChatPanel(QWidget *parent)
         }
         menu->popup(QCursor::pos());
     });
-    toolbarLayout->addStretch(1);
+    // OPENMV-DIFF //
+    // toolbarLayout->addStretch(1);
+    // OPENMV-DIFF //
     toolbarLayout->addWidget(m_configOverflowButton);
+    // OPENMV-DIFF //
+    m_contextGauge = new ContextGauge;
+    connect(m_contextGauge, &QAbstractButton::clicked, this, [this] {
+        if (m_contextGauge->isClickable() && !m_prompting)
+            emit sendRequested(QStringLiteral("/compact"));
+    });
+    toolbarLayout->addWidget(m_contextGauge); // at the bar's right edge
+    // OPENMV-DIFF //
 
     // --- Message view ---
     m_messageView = new AcpMessageView;
@@ -166,9 +431,21 @@ ChatPanel::ChatPanel(QWidget *parent)
         connect(action, &QAction::toggled, m_messageView, &AcpMessageView::setThoughtsVisible);
         menu.exec(m_messageView->mapToGlobal(pos));
     });
-    layout->addWidget(m_messageView, 1);
-    layout->addWidget(new Core::FindToolBarPlaceHolder(m_messageView));
-    layout->addWidget(toolbar);
+    // OPENMV-DIFF //
+    // layout->addWidget(m_messageView, 1);
+    // layout->addWidget(new Core::FindToolBarPlaceHolder(m_messageView));
+    // Messages, find bar and input area form one column, with the message view's
+    // scroll bar beside all of it (see PanelScrollBar).
+    auto *column = new QVBoxLayout;
+    column->setContentsMargins(0, 0, 0, 0);
+    column->setSpacing(0);
+    column->addWidget(m_messageView, 1);
+    column->addWidget(new Core::FindToolBarPlaceHolder(m_messageView));
+    m_messageView->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+    // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    // layout->addWidget(toolbar);
+    // OPENMV-DIFF //
 
     // --- Input bar (rounded container) ---
     auto *inputOuter = new QWidget;
@@ -183,6 +460,7 @@ ChatPanel::ChatPanel(QWidget *parent)
 
     m_inputEdit = new ChatInputEdit;
     inputContainerLayout->addWidget(m_inputEdit);
+    // OPENMV-DIFF: the attachments (context bar) go above the text, see below
 
     auto *bottomRow = new QWidget;
     auto *bottomRowLayout = new QHBoxLayout(bottomRow);
@@ -199,11 +477,17 @@ ChatPanel::ChatPanel(QWidget *parent)
         updateContextBar();
     });
 
-    QVBoxLayout *verticalCenter = new QVBoxLayout;
-    verticalCenter->addStretch();
-    verticalCenter->addWidget(m_contextBar);
-    verticalCenter->addStretch();
-    bottomRowLayout->addLayout(verticalCenter, 1);
+    // OPENMV-DIFF //
+    // QVBoxLayout *verticalCenter = new QVBoxLayout;
+    // verticalCenter->addStretch();
+    // verticalCenter->addWidget(m_contextBar);
+    // verticalCenter->addStretch();
+    // bottomRowLayout->addLayout(verticalCenter, 1);
+    // Attachments sit inside the input box, above the text, and only take room
+    // while there are some.
+    inputContainerLayout->insertWidget(0, m_contextBar);
+    bottomRowLayout->addStretch(1);
+    // OPENMV-DIFF //
 
     auto addContextButton = new QtcButton("+", QtcButton::MediumTertiary);
     addContextButton->setToolTip(Tr::tr("Add Context"));
@@ -250,8 +534,15 @@ ChatPanel::ChatPanel(QWidget *parent)
 
     auto bottomRowButtonLayout = new QHBoxLayout;
     bottomRowButtonLayout->addWidget(addContextButton);
+    // OPENMV-DIFF //
+    // Files, folders and images are attached by pasting or dropping them instead.
+    addContextButton->hide();
+    // OPENMV-DIFF //
 
-    m_commandsButton = new QtcButton("/", QtcButton::MediumTertiary);
+    // OPENMV-DIFF //
+    // m_commandsButton = new QtcButton("/", QtcButton::MediumTertiary);
+    m_commandsButton = new ChatActionButton(ChatActionButton::Commands);
+    // OPENMV-DIFF //
     m_commandsButton->setToolTip(Tr::tr("Insert Command"));
     m_commandsButton->hide();
     connect(m_commandsButton, &QAbstractButton::clicked, this, [this] {
@@ -261,24 +552,95 @@ ChatPanel::ChatPanel(QWidget *parent)
         const QSize menuSize = m_commandsMenu->sizeHint();
         m_commandsMenu->popup(QPoint(topLeft.x(), topLeft.y() - menuSize.height()));
     });
-    bottomRowButtonLayout->addWidget(m_commandsButton);
-
-    m_sendButton = new QtcButton(Tr::tr("Send"), QtcButton::MediumPrimary);
+    // OPENMV-DIFF //
+    // bottomRowButtonLayout->addWidget(m_commandsButton);
+    //
+    // m_sendButton = new QtcButton(Tr::tr("Send"), QtcButton::MediumPrimary);
+    // m_sendButton->setEnabled(false);
+    // bottomRowButtonLayout->addWidget(m_sendButton);
+    // auto alignTop = new QVBoxLayout;
+    // alignTop->addLayout(bottomRowButtonLayout);
+    // alignTop->addStretch();
+    // bottomRowLayout->addLayout(alignTop);
+    m_sendButton = new ChatActionButton(ChatActionButton::Send);
+    m_sendButton->setToolTip(Tr::tr("Send (Enter)"));
     m_sendButton->setEnabled(false);
-    bottomRowButtonLayout->addWidget(m_sendButton);
-    auto alignTop = new QVBoxLayout;
-    alignTop->addLayout(bottomRowButtonLayout);
-    alignTop->addStretch();
-    bottomRowLayout->addLayout(alignTop);
+    // The buttons sit beside the text, at the bottom of the box as it grows; the
+    // row under the box is gone.
+    inputContainerLayout->removeWidget(m_inputEdit);
+    auto *editRow = new QHBoxLayout;
+    editRow->setContentsMargins(0, 0, 0, 0);
+    editRow->setSpacing(GapHS);
+    editRow->addWidget(m_inputEdit, 1, Qt::AlignVCenter);
+    auto *buttonColumn = new QVBoxLayout;
+    buttonColumn->setContentsMargins(0, 0, 0, 0);
+    buttonColumn->addStretch();
+    auto *buttons = new QHBoxLayout;
+    buttons->setContentsMargins(0, 0, 0, 0);
+    buttons->setSpacing(GapHXs);
+    buttons->addWidget(m_commandsButton);
+    buttons->addWidget(m_sendButton);
+    buttonColumn->addLayout(buttons);
+    editRow->addLayout(buttonColumn);
+    inputContainerLayout->addLayout(editRow);
+    bottomRow->hide();
+
+    // Esc stops the agent while it works.
+    auto *stopShortcut = new QShortcut(QKeySequence(Qt::Key_Escape), this);
+    stopShortcut->setContext(Qt::WidgetWithChildrenShortcut);
+    stopShortcut->setObjectName("StopShortcut");
+    stopShortcut->setEnabled(false); // only while the agent works: Esc is free otherwise
+    connect(stopShortcut, &QShortcut::activated, this, [this] {
+        if (m_prompting)
+            requestCancel();
+    });
+    // OPENMV-DIFF //
+
+    // OPENMV-DIFF //
+    m_queueBar = new QueueBar;
+    auto *queueLayout = new QVBoxLayout(m_queueBar);
+    queueLayout->setContentsMargins(PaddingHM, PaddingVXs, PaddingHXs, PaddingVXs);
+    queueLayout->setSpacing(0);
+    m_queueBar->hide();
+    inputOuterLayout->addWidget(m_queueBar);
+    // OPENMV-DIFF //
 
     inputOuterLayout->addWidget(inputContainer);
     inputOuterLayout->addWidget(bottomRow);
-    layout->addWidget(inputOuter);
+    // OPENMV-DIFF //
+    // layout->addWidget(inputOuter);
+    // OPENMV-DIFF //
+    column->addWidget(inputOuter);
+    auto *body = new QHBoxLayout;
+    body->setContentsMargins(0, 0, 0, 0);
+    body->setSpacing(0);
+    body->addLayout(column, 1);
+    body->addWidget(new PanelScrollBar(m_messageView->verticalScrollBar()));
+    layout->addLayout(body, 1);
+    // OPENMV-DIFF //
 
     // --- Connections ---
+    // OPENMV-DIFF //
+    m_inputEdit->setAttachHandler([this](const QMimeData *mimeData) {
+        return attachFromMimeData(mimeData);
+    });
+    setAcceptDrops(true);
+    // OPENMV-DIFF //
     connect(m_inputEdit, &ChatInputEdit::sendRequested, this, [this] {
         const QString text = m_inputEdit->toPlainText().trimmed();
-        if (!text.isEmpty()) {
+        // OPENMV-DIFF //
+        // if (!text.isEmpty()) {
+        // The input stays usable while the agent works: a message written then is
+        // queued, and sent when it's done.
+        if (!m_sendButton->isEnabled())
+            return;
+        if (m_prompting) {
+            if (!text.isEmpty() || hasAttachments())
+                queueMessage(text);
+            return;
+        }
+        if (!text.isEmpty() || hasAttachments()) {
+        // OPENMV-DIFF //
             m_inputEdit->clear();
             emit sendRequested(text);
         }
@@ -286,10 +648,16 @@ ChatPanel::ChatPanel(QWidget *parent)
 
     connect(m_sendButton, &QPushButton::clicked, this, [this] {
         if (m_prompting) {
-            emit cancelRequested();
+            // OPENMV-DIFF //
+            // emit cancelRequested();
+            requestCancel();
+            // OPENMV-DIFF //
         } else {
             const QString text = m_inputEdit->toPlainText().trimmed();
-            if (!text.isEmpty()) {
+            // OPENMV-DIFF //
+            // if (!text.isEmpty()) {
+            if (!text.isEmpty() || hasAttachments()) {
+            // OPENMV-DIFF //
                 m_inputEdit->clear();
                 emit sendRequested(text);
             }
@@ -317,9 +685,18 @@ void ChatPanel::setAgentInfo(const QString &name, const QString &version,
 void ChatPanel::setPrompting(bool prompting)
 {
     m_prompting = prompting;
-    m_sendButton->setText(prompting ? Tr::tr("Cancel") : Tr::tr("Send"));
-    m_sendButton->setRole(prompting ? QtcButton::MediumTertiary : QtcButton::MediumPrimary);
-    m_inputEdit->setEnabled(!prompting);
+    // OPENMV-DIFF //
+    // m_sendButton->setText(prompting ? Tr::tr("Cancel") : Tr::tr("Send"));
+    // m_sendButton->setRole(prompting ? QtcButton::MediumTertiary : QtcButton::MediumPrimary);
+    // m_inputEdit->setEnabled(!prompting);
+    m_sendButton->setKind(prompting ? ChatActionButton::Stop : ChatActionButton::Send);
+    m_sendButton->setToolTip(prompting ? Tr::tr("Stop (Esc)") : Tr::tr("Send (Enter)"));
+    m_contextGauge->setClickable(m_canCompact && !prompting);
+    if (auto *stopShortcut = findChild<QShortcut *>("StopShortcut"))
+        stopShortcut->setEnabled(prompting);
+    if (!prompting && !m_queue.isEmpty())
+        QTimer::singleShot(0, this, [this] { sendQueuedMessages(); });
+    // OPENMV-DIFF //
     m_messageView->setPrompting(prompting);
 }
 
@@ -328,9 +705,28 @@ void ChatPanel::setSendEnabled(bool enabled)
     m_sendButton->setEnabled(enabled);
 }
 
-void ChatPanel::updateConfigOptions(const QList<SessionConfigOption> &configOptions)
+// OPENMV-DIFF //
+// void ChatPanel::updateConfigOptions(const QList<SessionConfigOption> &configOptions)
+// {
+//     for (const SessionConfigOption &option : configOptions) {
+void ChatPanel::updateConfigOptions(const QList<SessionConfigOption> &agentOptions)
 {
+    // Model first, then Mode, then the rest in the agent's order.
+    const auto rank = [](const SessionConfigOption &option) {
+        const auto category = option.category();
+        if (category ? *category == SessionConfigOptionCategory::model : option.id() == "model")
+            return 0;
+        if (category ? *category == SessionConfigOptionCategory::mode : option.id() == "mode")
+            return 1;
+        return 2;
+    };
+    QList<SessionConfigOption> configOptions = agentOptions;
+    std::stable_sort(configOptions.begin(), configOptions.end(),
+                     [rank](const SessionConfigOption &a, const SessionConfigOption &b) {
+                         return rank(a) < rank(b);
+                     });
     for (const SessionConfigOption &option : configOptions) {
+    // OPENMV-DIFF //
         auto select = fromJson<SessionConfigSelect>(QJsonValue(toJson(option)));
         if (!select)
             continue;
@@ -397,13 +793,72 @@ void ChatPanel::updateConfigOptions(const QList<SessionConfigOption> &configOpti
         combo->setCurrentIndex(currentIndex);
         combo->setVisible(combo->count() > 0);
     }
+    // OPENMV-DIFF //
+    updateComboDividers();
+    // OPENMV-DIFF //
     updateConfigOverflow();
 }
 
+// OPENMV-DIFF //
+// The toolbar style draws a divider on each combo's right edge: keep the ones
+// between combos, and after the last one only while the context gauge follows it
+// (otherwise it would sit at the bar's edge).
+void ChatPanel::updateComboDividers()
+{
+    QComboBox *lastCombo = nullptr;
+    for (const QString &id : std::as_const(m_configOrder)) {
+        if (QComboBox *combo = m_configCombos.value(id); combo && combo->count() > 0)
+            lastCombo = combo;
+    }
+    const bool gaugeShown = !m_contextGauge->isHidden();
+    for (QComboBox *combo : std::as_const(m_configCombos)) {
+        combo->setProperty(Utils::StyleHelper::C_HIDE_BORDER, combo == lastCombo && !gaugeShown);
+        combo->update();
+    }
+}
+// OPENMV-DIFF //
+
 void ChatPanel::clear()
 {
+    unqueueAll(); // OPENMV-DIFF: not sent to the next session
     m_messageView->clear();
+    // OPENMV-DIFF //
+    m_contextGauge->hide(); // until the next session reports usage
+    updateComboDividers();
+    // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+void ChatPanel::setUsage(qint64 used, qint64 size, double cost, const QString &currency)
+{
+    if (size <= 0) {
+        m_contextGauge->hide();
+        updateComboDividers();
+        return;
+    }
+    const QLocale locale;
+    const double fraction = double(used) / double(size);
+    QString toolTip = Tr::tr("Context: %1 of %2 tokens used (%3%)")
+                          .arg(locale.toString(used), locale.toString(size))
+                          .arg(qRound(fraction * 100));
+    if (cost >= 0) {
+        toolTip += QLatin1Char('\n')
+                   + Tr::tr("Session cost: %1")
+                         .arg(currency == QLatin1String("USD")
+                                  ? QString(QLatin1Char('$') + locale.toString(cost, 'f', 2))
+                                  : QString(locale.toString(cost, 'f', 2) + QLatin1Char(' ') + currency));
+    }
+    if (m_canCompact)
+        toolTip += QLatin1Char('\n') + Tr::tr("Click to compact the conversation.");
+    m_contextGauge->setFraction(fraction);
+    m_contextGauge->setToolTip(toolTip);
+    m_contextGauge->setClickable(m_canCompact && !m_prompting);
+    if (m_contextGauge->isHidden()) {
+        m_contextGauge->show();
+        updateComboDividers();
+    }
+}
+// OPENMV-DIFF //
 
 void ChatPanel::clearConfigOptions()
 {
@@ -445,10 +900,275 @@ void ChatPanel::resizeEvent(QResizeEvent *event)
     updateConfigOverflow();
 }
 
-void ChatPanel::addUserMessage(const QString &text)
+// OPENMV-DIFF //
+// void ChatPanel::addUserMessage(const QString &text)
+// {
+//     m_messageView->addUserMessage(text);
+// }
+void ChatPanel::addUserMessage(const QString &text, const QList<QImage> &images,
+                               const QList<FilePath> &files)
 {
-    m_messageView->addUserMessage(text);
+    m_messageView->addUserMessage(text, images, files);
 }
+
+void ChatPanel::queueMessage(const QString &text)
+{
+    m_queue.append({text, std::exchange(m_manualContextFiles, {}), std::exchange(m_images, {})});
+    m_inputEdit->clear();
+    updateContextBar();
+    updateQueueBar();
+}
+
+void ChatPanel::unqueueMessage(int index)
+{
+    if (index < 0 || index >= m_queue.size())
+        return;
+    const OutgoingMessage queued = m_queue.takeAt(index);
+    const QString draft = m_inputEdit->toPlainText().trimmed();
+    m_inputEdit->setPlainText(draft.isEmpty() ? queued.text : queued.text + "\n\n" + draft);
+    m_inputEdit->moveCursor(QTextCursor::End);
+    for (const FilePath &file : queued.files) {
+        if (!m_manualContextFiles.contains(file))
+            m_manualContextFiles.append(file);
+    }
+    m_images = queued.images + m_images;
+    updateContextBar();
+    updateQueueBar();
+}
+
+void ChatPanel::unqueueAll()
+{
+    while (!m_queue.isEmpty())
+        unqueueMessage(m_queue.size() - 1); // last first, so they end up in order
+}
+
+void ChatPanel::sendQueuedMessages()
+{
+    if (m_queue.isEmpty() || m_prompting || !m_sendButton->isEnabled())
+        return;
+    const QList<OutgoingMessage> queue = std::exchange(m_queue, {});
+    updateQueueBar();
+
+    // One prompt with everything, so the agent sees them all at once.
+    QStringList texts;
+    QList<FilePath> files;
+    QList<PromptImage> images;
+    for (const OutgoingMessage &message : queue) {
+        if (!message.text.isEmpty())
+            texts.append(message.text);
+        for (const FilePath &file : message.files) {
+            if (!files.contains(file))
+                files.append(file);
+        }
+        images.append(message.images);
+    }
+    // The queued attachments go with it; whatever is attached in the input now
+    // stays there for the next message.
+    const QList<FilePath> draftFiles = std::exchange(m_manualContextFiles, files);
+    const QList<PromptImage> draftImages = std::exchange(m_images, images);
+    m_sentParts = queue.size() > 1 ? queue : QList<OutgoingMessage>();
+    emit sendRequested(texts.join("\n\n")); // takes the attachments and the parts
+    m_sentParts.clear();
+    m_manualContextFiles = draftFiles;
+    m_images = draftImages;
+    updateContextBar();
+}
+
+void ChatPanel::updateQueueBar()
+{
+    QLayout *queueLayout = m_queueBar->layout();
+    while (QLayoutItem *item = queueLayout->takeAt(0)) {
+        delete item->widget();
+        delete item;
+    }
+    for (int i = 0; i < m_queue.size(); ++i) {
+        const OutgoingMessage &message = m_queue.at(i);
+        auto *row = new QWidget;
+        auto *rowLayout = new QHBoxLayout(row);
+        rowLayout->setContentsMargins(0, 0, 0, 0);
+        rowLayout->setSpacing(GapHS);
+
+        QString text = message.text.simplified();
+        const int attachments = message.files.size() + message.images.size();
+        if (attachments > 0) {
+            const QString count = Tr::tr("%n attachment(s)", nullptr, attachments);
+            text = text.isEmpty() ? count : text + QLatin1String(" (") + count + QLatin1Char(')');
+        }
+        auto *label = new ElidingLabel(Tr::tr("Queued: %1").arg(text));
+        label->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        label->setToolTip(Tr::tr("Sent when the agent is done."));
+        QFont font = label->font();
+        font.setItalic(true);
+        label->setFont(font);
+        QPalette palette = label->palette();
+        palette.setColor(QPalette::WindowText, creatorColor(Theme::Token_Text_Muted));
+        label->setPalette(palette);
+        rowLayout->addWidget(label, 1);
+
+        auto *unqueueButton = new ChipCloseButton;
+        unqueueButton->setIcon(Icons::CLOSE_TOOLBAR.icon());
+        unqueueButton->setToolTip(Tr::tr("Edit Queued Message"));
+        connect(unqueueButton, &QAbstractButton::clicked, this, [this, i] {
+            QMetaObject::invokeMethod(this, [this, i] { unqueueMessage(i); }, Qt::QueuedConnection);
+        });
+        rowLayout->addWidget(unqueueButton);
+        queueLayout->addWidget(row);
+    }
+    m_queueBar->setVisible(!m_queue.isEmpty());
+}
+
+// Stopping the agent doesn't send the queued message: it goes back into the input.
+void ChatPanel::requestCancel()
+{
+    unqueueAll();
+    emit cancelRequested();
+}
+
+void ChatPanel::addUserFile(const FilePath &file)
+{
+    m_messageView->addUserFile(file);
+}
+
+void ChatPanel::addStatusMessage(const QString &text)
+{
+    m_messageView->addStatusMessage(text);
+}
+
+void ChatPanel::addUserImage(const QImage &image)
+{
+    m_messageView->addUserImage(image);
+}
+
+QList<FilePath> ChatPanel::takeContextFiles()
+{
+    const QList<FilePath> files = std::exchange(m_manualContextFiles, {});
+    updateContextBar();
+    return files;
+}
+
+QList<PromptImage> ChatPanel::takeImages()
+{
+    const QList<PromptImage> images = std::exchange(m_images, {});
+    updateContextBar();
+    return images;
+}
+
+static bool isImageFile(const FilePath &file)
+{
+    static const QStringList suffixes = {"png", "jpg", "jpeg", "gif", "bmp", "webp"};
+    return suffixes.contains(file.suffix().toLower());
+}
+
+// Whether a paste or drop carries something to attach: local files or folders,
+// or image data (a screenshot, an image copied from a browser).
+static bool isAttachable(const QMimeData *mimeData)
+{
+    if (!mimeData)
+        return false;
+    // Office apps put a picture of copied text beside the text: that's text.
+    if (mimeData->hasImage() && mimeData->text().trimmed().isEmpty())
+        return true;
+    return Utils::anyOf(mimeData->urls(), &QUrl::isLocalFile);
+}
+
+bool ChatPanel::attachFromMimeData(const QMimeData *mimeData)
+{
+    if (!isAttachable(mimeData))
+        return false;
+
+    bool attached = false;
+    for (const QUrl &url : mimeData->urls()) {
+        if (!url.isLocalFile())
+            continue;
+        const FilePath file = FilePath::fromUserInput(url.toLocalFile());
+        if (!file.exists())
+            continue;
+        attached = true;
+        if (file.isFile() && isImageFile(file)) {
+            const QImage image(file.toFSPathString());
+            if (!image.isNull()) {
+                attachImage(image, file);
+                continue;
+            }
+        }
+        if (!m_manualContextFiles.contains(file))
+            m_manualContextFiles.append(file);
+    }
+
+    if (!attached && mimeData->hasImage() && mimeData->text().trimmed().isEmpty()) {
+        const QImage image = qvariant_cast<QImage>(mimeData->imageData());
+        if (!image.isNull()) {
+            attachImage(image, {});
+            attached = true;
+        }
+    }
+
+    if (attached)
+        updateContextBar();
+    return attached;
+}
+
+static QByteArray encodeImage(const QImage &image, const char *format, int quality = -1)
+{
+    QByteArray data;
+    QBuffer buffer(&data);
+    buffer.open(QIODevice::WriteOnly);
+    image.save(&buffer, format, quality);
+    return data;
+}
+
+void ChatPanel::attachImage(const QImage &image, const FilePath &source)
+{
+    // Agents scale big images down anyway; sending them at most 2000 px keeps the
+    // prompt (and the session history) light. Photos that stay big as PNG go as JPEG.
+    constexpr int maxEdge = 2000;
+    const QImage sent = qMax(image.width(), image.height()) > maxEdge
+                            ? image.scaled(maxEdge, maxEdge, Qt::KeepAspectRatio,
+                                           Qt::SmoothTransformation)
+                            : image;
+    PromptImage prompt;
+    prompt.data = encodeImage(sent, "PNG");
+    prompt.mimeType = "image/png";
+    if (prompt.data.size() > 3 * 1024 * 1024) {
+        prompt.data = encodeImage(sent.convertToFormat(QImage::Format_RGB888), "JPEG", 85);
+        prompt.mimeType = "image/jpeg";
+    }
+    prompt.source = source;
+    prompt.preview = image.scaled(256, 256, Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    m_images.append(prompt);
+}
+
+void ChatPanel::dragEnterEvent(QDragEnterEvent *event)
+{
+    if (isAttachable(event->mimeData()) && (event->possibleActions() & Qt::CopyAction)) {
+        event->setDropAction(Qt::CopyAction); // never a move: the source file stays put
+        event->accept();
+        return;
+    }
+    QWidget::dragEnterEvent(event);
+}
+
+void ChatPanel::dragMoveEvent(QDragMoveEvent *event)
+{
+    if (isAttachable(event->mimeData()) && (event->possibleActions() & Qt::CopyAction)) {
+        event->setDropAction(Qt::CopyAction);
+        event->accept();
+        return;
+    }
+    QWidget::dragMoveEvent(event);
+}
+
+void ChatPanel::dropEvent(QDropEvent *event)
+{
+    if ((event->possibleActions() & Qt::CopyAction) && attachFromMimeData(event->mimeData())) {
+        event->setDropAction(Qt::CopyAction);
+        event->accept();
+        m_inputEdit->setFocus();
+        return;
+    }
+    QWidget::dropEvent(event);
+}
+// OPENMV-DIFF //
 
 void ChatPanel::appendAgentText(const QString &text)
 {
@@ -528,6 +1248,12 @@ void ChatPanel::updateAvailableCommands(const QList<AvailableCommand> &commands)
         commandInfos.append({cmd.name(), cmd.description(), hint});
     }
     m_inputEdit->setAvailableCommands(commandInfos);
+    // OPENMV-DIFF //
+    m_canCompact = Utils::anyOf(commands, [](const AvailableCommand &cmd) {
+        return cmd.name() == QLatin1String("compact");
+    });
+    m_contextGauge->setClickable(m_canCompact && !m_prompting);
+    // OPENMV-DIFF //
 
     delete m_commandsMenu;
     m_commandsMenu = nullptr;
@@ -551,12 +1277,20 @@ void ChatPanel::updateAvailableCommands(const QList<AvailableCommand> &commands)
 
 void ChatPanel::updateContextBar()
 {
+    // OPENMV-DIFF //
+    const auto showIfAny = qScopeGuard([this] { m_contextBar->setVisible(m_contextBarLayout->count() > 0); });
+    // OPENMV-DIFF //
     while (QLayoutItem *item = m_contextBarLayout->takeAt(0)) {
         delete item->widget();
         delete item;
     }
 
-    if (m_includeCurrentEditorContext) {
+    // OPENMV-DIFF //
+    // The open scripts go to the agent silently (see AcpChatController::sendPrompt),
+    // so they get no chip here.
+    // if (m_includeCurrentEditorContext) {
+    if (false) {
+    // OPENMV-DIFF //
         if (auto editorWidget = TextEditor::TextEditorWidget::currentTextEditorWidget()) {
             Utils::FilePath filePath = editorWidget->textDocument()->filePath();
             if (!filePath.isEmpty()) {
@@ -572,13 +1306,42 @@ void ChatPanel::updateContextBar()
     }
 
     for (const Utils::FilePath &file : std::as_const(m_manualContextFiles)) {
-        auto *item = new ContextItem(file.fileName(), m_contextBar);
+        // OPENMV-DIFF //
+        // auto *item = new ContextItem(file.fileName(), m_contextBar);
+        auto *item = new ContextItem(file.isDir() ? file.fileName() + '/' : file.fileName(),
+                                     m_contextBar);
+        item->setToolTip(file.toUserOutput());
+        // OPENMV-DIFF //
         connect(item, &ContextItem::removeRequested, this, [this, file] {
             m_manualContextFiles.removeOne(file);
             QMetaObject::invokeMethod(this, [this] { updateContextBar(); }, Qt::QueuedConnection);
         });
         m_contextBarLayout->addWidget(item);
     }
+
+    // OPENMV-DIFF //
+    const qreal dpr = devicePixelRatioF();
+    const int thumbHeight = fontMetrics().height();
+    for (int i = 0; i < m_images.size(); ++i) {
+        const PromptImage &image = m_images.at(i);
+        QPixmap thumbnail = QPixmap::fromImage(
+            image.preview.scaled(qRound(thumbHeight * 2 * dpr), qRound(thumbHeight * dpr),
+                                 Qt::KeepAspectRatio, Qt::SmoothTransformation));
+        thumbnail.setDevicePixelRatio(dpr);
+        const QString name = image.source.isEmpty() ? Tr::tr("Image") : image.source.fileName();
+        auto *item = new ContextItem(name, m_contextBar, thumbnail);
+        if (!image.source.isEmpty())
+            item->setToolTip(image.source.toUserOutput());
+        const QByteArray id = image.data.left(64) + QByteArray::number(image.data.size());
+        connect(item, &ContextItem::removeRequested, this, [this, i, id] {
+            if (i < m_images.size()
+                && m_images.at(i).data.left(64) + QByteArray::number(m_images.at(i).data.size()) == id)
+                m_images.removeAt(i);
+            QMetaObject::invokeMethod(this, [this] { updateContextBar(); }, Qt::QueuedConnection);
+        });
+        m_contextBarLayout->addWidget(item);
+    }
+    // OPENMV-DIFF //
 }
 
 } // namespace AcpClient::Internal

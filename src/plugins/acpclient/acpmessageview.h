@@ -6,6 +6,15 @@
 #include <acp/acp.h>
 
 #include <QHash>
+// OPENMV-DIFF //
+#include <functional>
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+#include <utils/filepath.h>
+// OPENMV-DIFF //
+// OPENMV-DIFF //
+#include <QImage>
+// OPENMV-DIFF //
 #include <QJsonValue>
 #include <QScrollArea>
 
@@ -24,6 +33,7 @@ class AgentMessageWidget;
 class AuthenticationWidget;
 class SessionPickerWidget;
 class ThoughtWidget;
+class UserMessageWidget; // OPENMV-DIFF
 class ToolCallDetailWidget;
 class ToolCallGroupWidget;
 
@@ -41,7 +51,13 @@ public:
     void setPrompting(bool prompting);
 
     void clear();
-    void addUserMessage(const QString &text);
+    // OPENMV-DIFF //
+    // void addUserMessage(const QString &text);
+    void addUserMessage(const QString &text, const QList<QImage> &images = {},
+                        const QList<Utils::FilePath> &files = {});
+    void addUserImage(const QImage &image); // to the message just added, if any
+    void addUserFile(const Utils::FilePath &file); // likewise
+    // OPENMV-DIFF //
     void appendAgentText(const QString &text);
     void appendAgentThought(const QString &text);
     void addToolCall(const Acp::ToolCall &toolCall);
@@ -71,7 +87,11 @@ protected:
 private:
     void updateElapsedTimeLabel();
     void scrollToBottom();
-    QWidget *wrapWithSpacer(QWidget *widget, Qt::Alignment side);
+    // OPENMV-DIFF //
+    // QWidget *wrapWithSpacer(QWidget *widget, Qt::Alignment side);
+    QWidget *wrapWithSpacer(QWidget *widget, Qt::Alignment side,
+                            const std::function<QString()> &copyText = {});
+    // OPENMV-DIFF //
     ToolCallGroupWidget *ensureToolCallGroup();
     void finishToolCallGroup();
     void addWidget(QWidget *widget);
@@ -93,6 +113,7 @@ private:
     AuthenticationWidget *m_currentAuthWidget = nullptr;
     QString m_agentIconUrl;
     bool m_autoScroll = true;
+    UserMessageWidget *m_lastUserMessage = nullptr; // OPENMV-DIFF: while it's the last widget
 };
 
 } // namespace AcpClient::Internal

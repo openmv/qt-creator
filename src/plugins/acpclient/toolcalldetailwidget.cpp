@@ -34,6 +34,54 @@ using namespace Utils::StyleHelper::SpacingTokens;
 
 namespace AcpClient::Internal {
 
+// OPENMV-DIFF //
+// A markdown view that renders (parses and syntax-highlights) only once it is on
+// screen. Tool call bodies start collapsed and most are never opened, but a chat
+// has hundreds of tool calls, each with diffs and raw-input JSON (often whole
+// files); rendering all of them as they arrived kept the IDE busy for seconds
+// when loading a chat, and on every streamed raw-input update.
+class LazyMarkdownBrowser : public Utils::MarkdownBrowser
+{
+public:
+    explicit LazyMarkdownBrowser(QWidget *parent = nullptr)
+        : Utils::MarkdownBrowser(parent)
+    {
+        // No box in the text area's own color: the tool call card shows through,
+        // and only the (rounded) code blocks have a background.
+        setAutoFillBackground(false);
+        viewport()->setAutoFillBackground(false);
+    }
+
+    void setMarkdownLazily(const QString &markdown)
+    {
+        if (markdown == m_markdown)
+            return;
+        m_markdown = markdown;
+        m_dirty = true;
+        if (isVisible())
+            render();
+    }
+
+protected:
+    void showEvent(QShowEvent *event) override
+    {
+        if (m_dirty)
+            render();
+        Utils::MarkdownBrowser::showEvent(event);
+    }
+
+private:
+    void render()
+    {
+        m_dirty = false;
+        setMarkdown(m_markdown);
+    }
+
+    QString m_markdown;
+    bool m_dirty = false;
+};
+// OPENMV-DIFF //
+
 QWidget *toolCallStatusWidget(ToolCallStatus status, QWidget *parent)
 {
     if (status == ToolCallStatus::in_progress)
@@ -110,6 +158,12 @@ ToolCallDetailWidget::ToolCallDetailWidget(const ToolCall &toolCall, QWidget *pa
     }
 
     m_titleLabel = new Utils::ElidingLabel(toolCall.title(), this);
+    // OPENMV-DIFF //
+    // Elided text may shrink below its full width (the OpenMV IDE's
+    // ElidingLabel no longer sets this): a long title made the chat wider
+    // than the panel instead of eliding.
+    m_titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+    // OPENMV-DIFF //
     m_titleLabel->setElideMode(Qt::ElideRight);
     m_headerLayout->addWidget(m_titleLabel, 1);
 
@@ -256,7 +310,10 @@ void ToolCallDetailWidget::addMarkdownContent(const QString &markdown)
     if (markdown.isEmpty())
         return;
 
-    auto *browser = new Utils::MarkdownBrowser(this);
+    // OPENMV-DIFF //
+    // auto *browser = new Utils::MarkdownBrowser(this);
+    auto *browser = new LazyMarkdownBrowser(this);
+    // OPENMV-DIFF //
     browser->setFrameShape(QFrame::NoFrame);
     browser->setEnableCodeCopyButton(true);
     browser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -275,7 +332,10 @@ void ToolCallDetailWidget::addMarkdownContent(const QString &markdown)
     });
 
     addBodyWidget(browser);
-    browser->setMarkdown(markdown);
+    // OPENMV-DIFF //
+    // browser->setMarkdown(markdown);
+    browser->setMarkdownLazily(markdown);
+    // OPENMV-DIFF //
 }
 
 void ToolCallDetailWidget::addTerminalContent(const Terminal &terminal)
@@ -379,7 +439,10 @@ void ToolCallDetailWidget::addRawInputContent(const QJsonValue &rawInput)
 
         frame->headerLayout()->addWidget(new QLabel(Tr::tr("Raw Input"), frame), 1);
 
-        auto *browser = new Utils::MarkdownBrowser(frame);
+        // OPENMV-DIFF //
+        // auto *browser = new Utils::MarkdownBrowser(frame);
+        auto *browser = new LazyMarkdownBrowser(frame);
+        // OPENMV-DIFF //
         browser->setFrameShape(QFrame::NoFrame);
         browser->setEnableCodeCopyButton(true);
         browser->setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
@@ -404,7 +467,10 @@ void ToolCallDetailWidget::addRawInputContent(const QJsonValue &rawInput)
         m_rawInputFrame = frame;
         m_rawInputContent = browser;
     }
-    m_rawInputContent->setMarkdown(markdown);
+    // OPENMV-DIFF //
+    // m_rawInputContent->setMarkdown(markdown);
+    m_rawInputContent->setMarkdownLazily(markdown);
+    // OPENMV-DIFF //
 }
 
 void ToolCallDetailWidget::addBodyWidget(QWidget *widget)

@@ -8,6 +8,10 @@
 #include <QJsonValue>
 #include <QObject>
 
+// OPENMV-DIFF //
+#include <utils/filepath.h>
+// OPENMV-DIFF //
+
 namespace AcpClient::Internal {
 
 class AcpClientObject;
@@ -18,6 +22,12 @@ class AcpFilesystemHandler : public QObject
 
 public:
     explicit AcpFilesystemHandler(AcpClientObject *client, QObject *parent = nullptr);
+
+    // OPENMV-DIFF //
+signals:
+    // The agent wrote this text into a script open in an editor.
+    void editorTextWritten(const Utils::FilePath &filePath, const QString &text);
+    // OPENMV-DIFF //
 
 private:
     void handleReadTextFile(const QJsonValue &id, const Acp::ReadTextFileRequest &request);

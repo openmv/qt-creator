@@ -76,8 +76,24 @@ static void fetchIconToPersistentCache(const QString &url, const std::shared_ptr
     const FilePath destPath = Core::ICore::userResourcePath("acpclient/icons")
         / QString::fromLatin1(hash.toHex() + ".svg");
 
+    // OPENMV-DIFF //
+    // Every agent message shows the agent's icon: reuse one QIcon (and its rendered
+    // pixmaps) instead of checking the disk and parsing the SVG again each time.
+    static QHash<FilePath, QIcon> loadedIcons;
+    if (const auto it = loadedIcons.constFind(destPath); it != loadedIcons.constEnd()) {
+        promise->addResult(*it);
+        promise->finish();
+        return;
+    }
+    // OPENMV-DIFF //
+
     if (destPath.isFile()) {
-        promise->addResult(QIcon(destPath.toFSPathString()));
+        // OPENMV-DIFF //
+        // promise->addResult(QIcon(destPath.toFSPathString()));
+        const QIcon icon(destPath.toFSPathString());
+        loadedIcons.insert(destPath, icon);
+        promise->addResult(icon);
+        // OPENMV-DIFF //
         promise->finish();
         return;
     }
@@ -561,6 +577,29 @@ QList<AcpSettings::ServerInfo> AcpSettings::servers()
 }
 
 // OPENMV-DIFF //
+// OPENMV-DIFF //
+static constexpr char kChatTitlesKey[] = "AcpChat/ChatTitles"; // session id -> name
+
+QString AcpSettings::chatTitle(const QString &sessionId)
+{
+    return Core::ICore::settings()->value(kChatTitlesKey).toMap().value(sessionId).toString();
+}
+
+void AcpSettings::setChatTitle(const QString &sessionId, const QString &title)
+{
+    if (sessionId.isEmpty())
+        return;
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    QVariantMap titles = settings->value(kChatTitlesKey).toMap();
+    if (title.isEmpty())
+        titles.remove(sessionId);
+    else
+        titles.insert(sessionId, title);
+    settings->setValue(kChatTitlesKey, titles);
+    emit AcpSettings::instance().chatTitleChanged(sessionId, title); // open tabs follow
+}
+// OPENMV-DIFF //
+
 QList<AcpSettings::RegistryAgent> AcpSettings::registryAgents()
 {
     QList<RegistryAgent> result;
@@ -574,6 +613,17 @@ QList<AcpSettings::RegistryAgent> AcpSettings::registryAgents()
 // Adds a server for registry agent `id` unless one already exists. Returns
 // the server id (empty if the registry does not know the agent). Does not
 // save or notify; callers batch that.
+// Persists the server list. The container doesn't auto-apply, so servers added
+// in code are pending edits until applied, and writing the list on its own also
+// misses the container's "AcpClient" group: that saved "AcpServers=@Invalid()",
+// so every launch recreated the agents with new ids (and reopened chats, which
+// refer to them by id, couldn't find theirs).
+static void saveServers()
+{
+    AcpManagerSettings::instance().acpServers.apply();
+    AcpManagerSettings::instance().writeSettings();
+}
+
 static QString addRegistryServerSilently(const QString &id)
 {
     QString found;
@@ -607,7 +657,7 @@ QString AcpSettings::ensureRegistryServer(const QString &id)
     const int before = AcpManagerSettings::instance().acpServers.items().size();
     const QString serverId = addRegistryServerSilently(id);
     if (AcpManagerSettings::instance().acpServers.items().size() != before) {
-        AcpManagerSettings::instance().acpServers.writeSettings();
+        saveServers();
         emit AcpSettings::instance().serversChanged();
     }
     return serverId;
@@ -642,7 +692,11 @@ void prefetchAcpRegistry()
                 [](const std::shared_ptr<AcpServerAspect> &server) {
                     server->applyRegistryTemplate();
                 });
-            AcpManagerSettings::instance().acpServers.writeSettings();
+            // OPENMV-DIFF //
+            // AcpManagerSettings::instance().acpServers.writeSettings();
+            // OPENMV-DIFF //
+            saveServers();
+            // OPENMV-DIFF //
             emit AcpSettings::instance().serversChanged();
         });
 }

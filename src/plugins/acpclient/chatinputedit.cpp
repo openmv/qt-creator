@@ -19,6 +19,9 @@
 #include <QAbstractItemModel>
 #include <QApplication>
 #include <QKeyEvent>
+// OPENMV-DIFF //
+#include <QMimeData>
+// OPENMV-DIFF //
 #include <QTextBlock>
 #include <QTextLayout>
 
@@ -31,7 +34,10 @@ ChatInputEdit::ChatInputEdit(QWidget *parent)
 {
     setupFallBackEditor(Utils::Id("AcpClient.ChatInput"));
     setTabChangesFocus(true);
-    setPlaceholderText(Tr::tr("Type your message..."));
+    // OPENMV-DIFF //
+    // setPlaceholderText(Tr::tr("Type your message..."));
+    setPlaceholderText(Tr::tr("Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them"));
+    // OPENMV-DIFF //
     setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
     setFrameShape(QFrame::NoFrame);
     setHighlightCurrentLine(false);
@@ -70,6 +76,22 @@ void ChatInputEdit::setAvailableCommands(const QList<CommandInfo> &commands)
 {
     m_completionProvider->setAvailableCommands(commands);
 }
+
+// OPENMV-DIFF //
+bool ChatInputEdit::canInsertFromMimeData(const QMimeData *source) const
+{
+    if (m_attachHandler && source && (source->hasImage() || source->hasUrls()))
+        return true;
+    return TextEditorWidget::canInsertFromMimeData(source);
+}
+
+void ChatInputEdit::insertFromMimeData(const QMimeData *source)
+{
+    if (m_attachHandler && source && m_attachHandler(source))
+        return;
+    TextEditorWidget::insertFromMimeData(source);
+}
+// OPENMV-DIFF //
 
 void ChatInputEdit::setDisplaySettings(const DisplaySettingsData &settings)
 {

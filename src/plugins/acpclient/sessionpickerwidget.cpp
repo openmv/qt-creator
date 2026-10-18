@@ -11,6 +11,13 @@
 #include <utils/qtcsettings.h>
 #include <utils/utilsicons.h>
 
+// OPENMV-DIFF //
+#include "acpsettings.h"
+#include <QContextMenuEvent>
+#include <QInputDialog>
+#include <QLineEdit>
+#include <QMenu>
+// OPENMV-DIFF //
 #include <QDateTime>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -64,8 +71,19 @@ public:
         layout->setContentsMargins(12, 2, 12, 2);
         layout->setSpacing(8);
 
-        const QString title = session.title().value_or(session.sessionId());
-        auto *titleLabel = new Utils::ElidingLabel(title, this);
+        // OPENMV-DIFF //
+        // const QString title = session.title().value_or(session.sessionId());
+        // auto *titleLabel = new Utils::ElidingLabel(title, this);
+        // OPENMV-DIFF //
+        // A name the user gave the chat wins over the agent's title.
+        m_agentTitle = session.title().value_or(session.sessionId());
+        const QString customTitle = AcpSettings::chatTitle(m_sessionId);
+        auto *titleLabel = new Utils::ElidingLabel(
+            customTitle.isEmpty() ? m_agentTitle : customTitle, this);
+        m_titleLabel = titleLabel;
+        // Elided text may shrink below its full width (see ElidingLabel).
+        titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        // OPENMV-DIFF //
         titleLabel->setElideMode(Qt::ElideRight);
         layout->addWidget(titleLabel, 1);
 
@@ -89,6 +107,28 @@ protected:
         QWidget::mousePressEvent(event);
     }
 
+    // OPENMV-DIFF //
+    // Rename from the picker too (same names as the chat tabs use).
+    void contextMenuEvent(QContextMenuEvent *event) override
+    {
+        QMenu menu;
+        QAction *rename = menu.addAction(Tr::tr("Rename Chat..."));
+        if (menu.exec(event->globalPos()) != rename)
+            return;
+        bool ok = false;
+        const QString current = AcpSettings::chatTitle(m_sessionId);
+        const QString name = QInputDialog::getText(this, Tr::tr("Rename Chat"),
+                                                   Tr::tr("Name (leave empty for automatic):"),
+                                                   QLineEdit::Normal,
+                                                   current.isEmpty() ? m_agentTitle : current,
+                                                   &ok).simplified();
+        if (!ok)
+            return;
+        AcpSettings::setChatTitle(m_sessionId, name == m_agentTitle ? QString() : name);
+        m_titleLabel->setText(name.isEmpty() ? m_agentTitle : name);
+    }
+    // OPENMV-DIFF //
+
     void paintEvent(QPaintEvent *) override
     {
         if (underMouse()) {
@@ -107,6 +147,10 @@ protected:
 private:
     QString m_sessionId;
     Utils::FilePath m_cwd;
+    // OPENMV-DIFF //
+    QString m_agentTitle;
+    Utils::ElidingLabel *m_titleLabel = nullptr;
+    // OPENMV-DIFF //
 };
 
 // ---------------------------------------------------------------------------
@@ -141,6 +185,12 @@ public:
 
         if (!subtitle.isEmpty()) {
             auto *subtitleLabel = new Utils::ElidingLabel(subtitle, this);
+            // OPENMV-DIFF //
+            // Elided text may shrink below its full width (the OpenMV IDE's
+            // ElidingLabel no longer sets this): a long title made the chat wider
+            // than the panel instead of eliding.
+            subtitleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+            // OPENMV-DIFF //
             subtitleLabel->setElideMode(Qt::ElideMiddle);
             QPalette pal = subtitleLabel->palette();
             pal.setColor(QPalette::WindowText, pal.color(QPalette::PlaceholderText));

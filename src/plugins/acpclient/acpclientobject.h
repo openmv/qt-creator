@@ -58,6 +58,12 @@ signals:
 
     // Session notifications
     void sessionUpdate(const QString &sessionId, const Acp::SessionUpdate &update);
+    // OPENMV-DIFF //
+    // The agent's report of how full the session's context is (usage_update, newer
+    // than the ACP library here); cost is negative when not reported.
+    void usageUpdated(const QString &sessionId, qint64 used, qint64 size, double cost,
+                      const QString &currency);
+    // OPENMV-DIFF //
 
     // Client-side method requests from agent (QJsonValue carries the raw JSON-RPC id)
     void createTerminalRequested(const QJsonValue &id, const Acp::CreateTerminalRequest &request);

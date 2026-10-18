@@ -24,6 +24,14 @@
 #include <QVBoxLayout>
 
 #include <coreplugin/rightpane.h>
+// OPENMV-DIFF //
+#include <coreplugin/icore.h>
+#include <utils/qtcsettings.h>
+#include <QLineEdit>
+#include <QMenu>
+#include <QShortcut>
+#include <memory>
+// OPENMV-DIFF //
 
 namespace AcpClient::Internal {
 
@@ -146,14 +154,40 @@ public:
         layout->setSpacing(0);
         m_bar = new ChatTabBar(this);
         m_stack = new QStackedWidget(this);
-        // A blank bar above the tabs, like the editor's toolbar above its tabs
-        // (and the bar above Preferences), so it lines up with the Frame Buffer bar.
-        layout->addWidget(new Utils::StyledBar(this));
+        // The bar above the tabs, like the editor's toolbar above its tabs (it lines
+        // up with the Frame Buffer bar): the current chat's agent / Mode / Model /
+        // Effort bar, or a blank one for a tab without one (the agent picker).
+        m_toolBars = new QStackedWidget(this);
+        m_toolBars->setSizePolicy(QSizePolicy::Preferred, QSizePolicy::Fixed);
+        m_emptyToolBar = new Utils::StyledBar;
+        m_toolBars->addWidget(m_emptyToolBar);
+        layout->addWidget(m_toolBars);
         layout->addWidget(m_bar);
         layout->addWidget(m_stack, 1);
 
         connect(m_bar, &QTabBar::currentChanged, m_stack, &QStackedWidget::setCurrentIndex);
+        connect(m_bar, &QTabBar::currentChanged, this, [this](int index) {
+            QWidget *toolBar = m_toolBarOf.value(m_stack->widget(index));
+            m_toolBars->setCurrentWidget(toolBar ? toolBar : m_emptyToolBar);
+        });
         connect(m_bar, &QTabBar::tabCloseRequested, this, &ChatTabs::tabCloseRequested);
+        // Rename: double-click a tab, or its context menu.
+        connect(m_bar, &QTabBar::tabBarDoubleClicked, this, &ChatTabs::renameRequested);
+        m_bar->setContextMenuPolicy(Qt::CustomContextMenu);
+        connect(m_bar, &QWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
+            const int index = m_bar->tabAt(pos);
+            if (index < 0)
+                return;
+            QMenu menu;
+            QAction *rename = menu.addAction(Tr::tr("Rename Chat..."));
+            QAction *close = menu.addAction(Tr::tr("Close Chat"));
+            close->setEnabled(m_bar->tabButton(index, QTabBar::RightSide) != nullptr);
+            QAction *chosen = menu.exec(m_bar->mapToGlobal(pos));
+            if (chosen == rename)
+                emit renameRequested(index);
+            else if (chosen == close)
+                emit tabCloseRequested(index);
+        });
         connect(m_bar, &QTabBar::tabMoved, this, [this](int from, int to) {
             QWidget *w = m_stack->widget(from);
             m_stack->removeWidget(w);
@@ -162,18 +196,54 @@ public:
         });
     }
 
-    int addTab(QWidget *page, const QString &text)
+    // toolBar (optional) is shown above the tabs while page is current; it is
+    // deleted with page.
+    int addTab(QWidget *page, const QString &text, QWidget *toolBar = nullptr)
     {
+        if (toolBar) {
+            m_toolBars->addWidget(toolBar);
+            m_toolBarOf.insert(page, toolBar);
+            connect(page, &QObject::destroyed, toolBar, &QObject::deleteLater);
+        }
         m_stack->addWidget(page);
         return m_bar->addTab(text);
     }
 
     void removeTab(int index)
     {
-        if (QWidget *w = m_stack->widget(index))
+        if (QWidget *w = m_stack->widget(index)) {
             m_stack->removeWidget(w);
+            if (QWidget *toolBar = m_toolBarOf.take(w))
+                m_toolBars->removeWidget(toolBar);
+        }
         m_bar->removeTab(index);
     }
+
+    void setTabIcon(int index, const QIcon &icon) { m_bar->setTabIcon(index, icon); }
+
+    // Edits a tab's title in place: Enter or clicking away applies, Escape cancels.
+    void editTabTitle(int index, const QString &text, const std::function<void(QString)> &apply)
+    {
+        auto *edit = new QLineEdit(m_bar);
+        edit->setText(text);
+        edit->selectAll();
+        edit->setGeometry(m_bar->tabRect(index).adjusted(2, 2, -2, -2));
+        auto cancelled = std::make_shared<bool>(false);
+        auto *escape = new QShortcut(QKeySequence(Qt::Key_Escape), edit, nullptr, nullptr,
+                                     Qt::WidgetShortcut);
+        connect(escape, &QShortcut::activated, edit, [edit, cancelled] {
+            *cancelled = true;
+            edit->clearFocus();
+        });
+        connect(edit, &QLineEdit::editingFinished, edit, [edit, cancelled, apply] {
+            if (!*cancelled)
+                apply(edit->text());
+            edit->deleteLater();
+        });
+        edit->show();
+        edit->setFocus();
+    }
+    void setTabToolTip(int index, const QString &tip) { m_bar->setTabToolTip(index, tip); }
 
     void setTabClosable(int index, bool closable)
     {
@@ -193,10 +263,14 @@ public:
 
 signals:
     void tabCloseRequested(int index);
+    void renameRequested(int index);
 
 private:
     ChatTabBar *m_bar = nullptr;
     QStackedWidget *m_stack = nullptr;
+    QStackedWidget *m_toolBars = nullptr;
+    QWidget *m_emptyToolBar = nullptr;
+    QHash<QWidget *, QWidget *> m_toolBarOf; // page -> its bar
 };
 // OPENMV-DIFF //
 
@@ -248,6 +322,12 @@ AcpChatWidget::AcpChatWidget(QWidget *parent)
     layout->addWidget(m_tabWidget);
 
     connect(m_tabWidget, &ChatTabs::tabCloseRequested, this, &AcpChatWidget::closeTab);
+    connect(m_tabWidget, &ChatTabs::renameRequested, this, &AcpChatWidget::renameTab);
+    // Reopen the chats that were open last time; save them on the way out.
+    connect(Core::ICore::instance(), &Core::ICore::saveSettingsRequested,
+            this, &AcpChatWidget::saveOpenChats);
+    if (restoreOpenChats())
+        return;
     // OPENMV-DIFF //
 
     // Auto-create first tab
@@ -306,6 +386,64 @@ void AcpChatWidget::updateTrailingTab()
     for (int i = 0; i < count; ++i)
         m_tabWidget->setTabClosable(i, i != count - 1);
 }
+
+void AcpChatWidget::renameTab(int index)
+{
+    auto *tab = qobject_cast<AcpChatTab *>(m_tabWidget->widget(index));
+    if (!tab || !tab->isInUse()) // the trailing "New Chat" tab has nothing to name
+        return;
+    m_tabWidget->editTabTitle(index, tab->title(), [tab](const QString &text) {
+        tab->setCustomTitle(text); // empty: back to the automatic title
+    });
+}
+
+static constexpr char kOpenChatsKey[] = "AcpChat/OpenChats";
+static constexpr char kCurrentChatKey[] = "AcpChat/CurrentChat";
+
+void AcpChatWidget::saveOpenChats() const
+{
+    QVariantList chats;
+    int current = -1;
+    for (int i = 0; i < m_tabWidget->count(); ++i) {
+        auto *tab = qobject_cast<AcpChatTab *>(m_tabWidget->widget(i));
+        if (!tab)
+            continue;
+        const QVariantMap state = tab->saveState();
+        if (state.isEmpty())
+            continue;
+        if (tab == m_tabWidget->currentWidget())
+            current = int(chats.size());
+        chats.append(state);
+    }
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    settings->setValue(kOpenChatsKey, chats);
+    settings->setValue(kCurrentChatKey, current);
+}
+
+bool AcpChatWidget::restoreOpenChats()
+{
+    Utils::QtcSettings *settings = Core::ICore::settings();
+    const QVariantList chats = settings->value(kOpenChatsKey).toList();
+    QList<AcpChatTab *> tabs;
+    for (const QVariant &chat : chats) {
+        // Restore into the trailing empty tab when there is one (each restored
+        // chat makes updateTrailingTab() add a fresh one), like picking an agent
+        // in the "New Chat" tab does; otherwise into a new tab.
+        const int n = m_tabWidget->count();
+        auto *last = n > 0 ? qobject_cast<AcpChatTab *>(m_tabWidget->widget(n - 1)) : nullptr;
+        AcpChatTab *tab = (last && !last->isInUse()) ? last : addNewTab();
+        tab->restoreState(chat.toMap());
+        if (tab->isInUse()) // else nothing usable was saved; the tab stays empty
+            tabs.append(tab);
+    }
+    if (tabs.isEmpty())
+        return false;
+    updateTrailingTab();
+    const int current = settings->value(kCurrentChatKey, 0).toInt();
+    m_tabWidget->setCurrentIndex(
+        m_tabWidget->indexOf(tabs.value(current >= 0 && current < tabs.size() ? current : 0)));
+    return true;
+}
 // OPENMV-DIFF //
 
 AcpChatTab *AcpChatWidget::addNewTab()
@@ -314,13 +452,22 @@ AcpChatTab *AcpChatWidget::addNewTab()
     if (m_inspector)
         tab->setInspector(m_inspector);
 
-    const int index = m_tabWidget->addTab(tab, tab->title());
+    // OPENMV-DIFF //
+    // const int index = m_tabWidget->addTab(tab, tab->title());
+    // OPENMV-DIFF //
+    const int index = m_tabWidget->addTab(tab, tab->title(), tab->sessionToolBar());
+    // OPENMV-DIFF //
     m_tabWidget->setCurrentIndex(index);
 
     connect(tab, &AcpChatTab::titleChanged, this, [this, tab] {
         const int i = m_tabWidget->indexOf(tab);
-        if (i >= 0)
+        if (i >= 0) {
             m_tabWidget->setTabText(i, tab->title());
+            // OPENMV-DIFF //
+            m_tabWidget->setTabIcon(i, tab->icon());
+            m_tabWidget->setTabToolTip(i, tab->toolTip());
+            // OPENMV-DIFF //
+        }
         updateTrailingTab(); // OPENMV-DIFF
     });
 

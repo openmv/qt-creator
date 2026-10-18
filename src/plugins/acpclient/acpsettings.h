@@ -42,6 +42,12 @@ public:
         QString iconUrl;
     };
     static QList<RegistryAgent> registryAgents(); // empty until the registry is fetched
+    // OPENMV-DIFF //
+    // Names the user gave chats, by session id (shared by the chat tabs and the
+    // session picker). Setting an empty name removes it.
+    static QString chatTitle(const QString &sessionId);
+    static void setChatTitle(const QString &sessionId, const QString &title);
+    // OPENMV-DIFF //
     // The server made from registry agent `id`, creating (and saving) it if
     // there is none; empty when the registry has no such agent.
     static QString ensureRegistryServer(const QString &id);
@@ -69,6 +75,9 @@ public:
 
 signals:
     void serversChanged();
+    // OPENMV-DIFF //
+    void chatTitleChanged(const QString &sessionId, const QString &title);
+    // OPENMV-DIFF //
 
 private:
     AcpSettings();

@@ -15,14 +15,25 @@
 
 #include <utils/algorithm.h>
 #include <utils/filepath.h>
+// OPENMV-DIFF //
+#include <utils/temporarydirectory.h>
+// OPENMV-DIFF //
 
 #include <texteditor/textdocument.h>
 #include <texteditor/texteditor.h>
+
+// OPENMV-DIFF //
+#include <coreplugin/editormanager/documentmodel.h>
+#include <coreplugin/editormanager/editormanager.h>
+// OPENMV-DIFF //
 
 #include <QLoggingCategory>
 // OPENMV-DIFF //
 #include <QDir>
 #include <QStandardPaths>
+// OPENMV-DIFF //
+#include <QUuid>
+// OPENMV-DIFF //
 // OPENMV-DIFF //
 
 static Q_LOGGING_CATEGORY(logController, "qtc.acpclient.controller", QtWarningMsg);
@@ -72,8 +83,17 @@ void AcpChatController::connectToServer(const QString &serverId)
                                   [&serverId](const AcpSettings::ServerInfo &s) {
                                       return s.id == serverId;
                                   });
-    if (it == servers.end())
+    // OPENMV-DIFF //
+    // if (it == servers.end())
+    //     return;
+    // OPENMV-DIFF //
+    // Say so instead of leaving the caller on "Connecting..." forever.
+    if (it == servers.end()) {
+        emit errorOccurred(Tr::tr("This agent is no longer available. Choose an agent to "
+                                  "start a new chat."));
         return;
+    }
+    // OPENMV-DIFF //
 
     const AcpSettings::ServerInfo &serverInfo = *it;
     m_serverName = serverInfo.name;
@@ -95,6 +115,13 @@ void AcpChatController::connectToServer(const QString &serverId)
         m_client->setInspector(m_inspector, m_serverName);
     m_terminalHandler = new AcpTerminalHandler(m_client, this);
     m_filesystemHandler = new AcpFilesystemHandler(m_client, this);
+    // OPENMV-DIFF //
+    // The agent's own edits to an open script needn't be sent back to it.
+    connect(m_filesystemHandler, &AcpFilesystemHandler::editorTextWritten,
+            this, [this](const FilePath &filePath, const QString &text) {
+        m_sentEditorTexts.insert(filePath, qHash(text));
+    });
+    // OPENMV-DIFF //
     m_permissionHandler = new AcpPermissionHandler(m_client, this);
 
     connect(m_permissionHandler, &AcpPermissionHandler::permissionRequested,
@@ -104,6 +131,8 @@ void AcpChatController::connectToServer(const QString &serverId)
             this, &AcpChatController::connectionStateChanged);
     connect(m_client, &AcpClientObject::sessionUpdate,
             this, &AcpChatController::sessionUpdate);
+    connect(m_client, &AcpClientObject::usageUpdated,
+            this, &AcpChatController::usageUpdated); // OPENMV-DIFF
     connect(m_client, &AcpClientObject::initializeResult,
             this, &AcpChatController::onInitializeResult);
     connect(m_client, &AcpClientObject::errorOccurred,
@@ -162,6 +191,7 @@ void AcpChatController::disconnectFromServer()
 
     m_workingDirectory.clear();
     m_sessionId.clear();
+    forgetSentEditorState(); // OPENMV-DIFF
     m_agentName.clear();
     m_agentVersion.clear();
     m_serverName.clear();
@@ -197,6 +227,7 @@ void AcpChatController::createNewSession(const FilePath &workingDirectory)
         }
 
         m_sessionId = response->sessionId();
+        forgetSentEditorState(); // OPENMV-DIFF
         emit sessionCreated(m_sessionId);
 
         if (const auto &opts = response->configOptions(); opts.has_value() && !opts->isEmpty()) {
@@ -225,12 +256,38 @@ static bool supportsEmbeddedPromptResources(std::optional<Acp::AgentCapabilities
     return false;
 }
 
+// OPENMV-DIFF //
+void AcpChatController::forgetSentEditorState()
+{
+    m_sentEditorTexts.clear();
+    m_sentCurrentScript.clear();
+}
+
+static bool supportsPromptImages(std::optional<Acp::AgentCapabilities> agentCapabilities)
+{
+    if (!agentCapabilities)
+        return false;
+    if (auto promptCapabilities = agentCapabilities->promptCapabilities())
+        return promptCapabilities->image().value_or(false);
+    return false;
+}
+// OPENMV-DIFF //
+
 void AcpChatController::sendPrompt(const QString &text,
                                    const QList<Utils::FilePath> &additionalFiles,
-                                   bool includeCurrentEditor)
+                                   // OPENMV-DIFF //
+                                   // bool includeCurrentEditor)
+                                   bool includeCurrentEditor,
+                                   const QList<PromptImage> &images)
+                                   // OPENMV-DIFF //
 {
     using namespace TextEditor;
-    if (text.isEmpty() || !m_client || m_sessionId.isEmpty())
+    // OPENMV-DIFF //
+    // if (text.isEmpty() || !m_client || m_sessionId.isEmpty())
+    // A message may be only attachments (a screenshot, say).
+    if ((text.isEmpty() && additionalFiles.isEmpty() && images.isEmpty()) || !m_client
+        || m_sessionId.isEmpty())
+    // OPENMV-DIFF //
         return;
 
     PromptRequest request;
@@ -238,54 +295,114 @@ void AcpChatController::sendPrompt(const QString &text,
 
     TextContent textContent;
     textContent.text(text);
-    QList<ContentBlock> content = {textContent};
-    TextEditorWidget *currentEditorWidget = TextEditorWidget::currentTextEditorWidget();
-    if (includeCurrentEditor && currentEditorWidget) {
-        const FilePath filePath = currentEditorWidget->textDocument()->filePath();
-        if (!filePath.isEmpty()) {
-            const QString uri = filePath.toUrl().toString();
-            content << ResourceLink()
-                           .name(filePath.fileName())
-                           .description("Qt Creators current main Text Editor file.")
-                           .uri(uri);
-
-            if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
-                TextResourceContents editorState;
-                editorState.uri(uri);
-                QString stateString
-                    = "This is the state of the current Text Editor in Qt Creator\n";
-                QTextCursor tc = currentEditorWidget->textCursor();
-                const QString cursorString
-                    = "Cursor %1: %2, Line(0-based): %3, Column(0-based): %4\n";
-                stateString += cursorString.arg("Position")
-                                   .arg(tc.position())
-                                   .arg(tc.blockNumber())
-                                   .arg(tc.positionInBlock());
-                tc.setPosition(tc.anchor());
-                stateString += cursorString.arg("Anchor")
-                                   .arg(tc.position())
-                                   .arg(tc.blockNumber())
-                                   .arg(tc.positionInBlock());
-                stateString += "First Visible Line: "
-                               + QString::number(currentEditorWidget->firstVisibleBlockNumber())
-                               + "\n";
-                stateString += "Last Visible Line: "
-                               + QString::number(currentEditorWidget->lastVisibleBlockNumber())
-                               + "\n";
-                content << EmbeddedResource().resource(
-                    TextResourceContents().text(stateString).uri(uri));
-            }
+    // OPENMV-DIFF //
+    // QList<ContentBlock> content = {textContent};
+    QList<ContentBlock> content;
+    if (!text.isEmpty())
+        content << textContent;
+    // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    // TextEditorWidget *currentEditorWidget = TextEditorWidget::currentTextEditorWidget();
+    // if (includeCurrentEditor && currentEditorWidget) {
+    //     const FilePath filePath = currentEditorWidget->textDocument()->filePath();
+    //     if (!filePath.isEmpty()) {
+    //         const QString uri = filePath.toUrl().toString();
+    //         content << ResourceLink()
+    //                        .name(filePath.fileName())
+    //                        .description("Qt Creators current main Text Editor file.")
+    //                        .uri(uri);
+    //
+    //         if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
+    //             TextResourceContents editorState;
+    //             editorState.uri(uri);
+    //             QString stateString
+    //                 = "This is the state of the current Text Editor in Qt Creator\n";
+    //             QTextCursor tc = currentEditorWidget->textCursor();
+    //             const QString cursorString
+    //                 = "Cursor %1: %2, Line(0-based): %3, Column(0-based): %4\n";
+    //             stateString += cursorString.arg("Position")
+    //                                .arg(tc.position())
+    //                                .arg(tc.blockNumber())
+    //                                .arg(tc.positionInBlock());
+    //             tc.setPosition(tc.anchor());
+    //             stateString += cursorString.arg("Anchor")
+    //                                .arg(tc.position())
+    //                                .arg(tc.blockNumber())
+    //                                .arg(tc.positionInBlock());
+    //             stateString += "First Visible Line: "
+    //                            + QString::number(currentEditorWidget->firstVisibleBlockNumber())
+    //                            + "\n";
+    //             stateString += "Last Visible Line: "
+    //                            + QString::number(currentEditorWidget->lastVisibleBlockNumber())
+    //                            + "\n";
+    //             content << EmbeddedResource().resource(
+    //                 TextResourceContents().text(stateString).uri(uri));
+    //         }
+    //     }
+    // }
+    // The open scripts, sent silently. The AI and Edit modes are separate, so the
+    // user doesn't point at a script while chatting; instead the agent gets:
+    // - the script last active in the editor, as a reference, when that changes;
+    // - each open script whose editor text differs from its file (unsaved edits,
+    //   an edited untitled script), with that text: each version once per chat,
+    //   so the history only grows when the user changed something. Saved scripts
+    //   the agent reads from disk itself.
+    if (includeCurrentEditor) {
+        Core::IDocument *current = Core::EditorManager::currentDocument();
+        if (current && !current->filePath().isEmpty()
+            && current->filePath() != m_sentCurrentScript) {
+            m_sentCurrentScript = current->filePath();
+            // Marked text rather than a resource link: agents replay a link as an
+            // ordinary "[@name](uri)" line, which would look like a user attachment.
+            content << TextContent().text(
+                ideContextMarker()
+                + QString(" The script the user has open in the IDE editor is \"%1\" (%2).")
+                      .arg(current->displayName(), current->filePath().toUserOutput()));
         }
     }
+    for (Core::IDocument *document : Core::DocumentModel::openedDocuments()) {
+        auto *textDocument = qobject_cast<TextDocument *>(document);
+        if (!textDocument || textDocument->filePath().isEmpty() || !textDocument->isModified())
+            continue;
+        const QString editorText = textDocument->plainText();
+        if (editorText.size() > 100 * 1024)
+            continue;
+        const FilePath path = textDocument->filePath();
+        const size_t hash = qHash(editorText);
+        if (m_sentEditorTexts.contains(path) && m_sentEditorTexts.value(path) == hash)
+            continue;
+        m_sentEditorTexts.insert(path, hash);
+
+        const QString note
+            = ideContextMarker()
+              + QString(" \"%1\" has unsaved changes in the user's IDE editor, so the file "
+                        "%2 on disk is older. Its current text in the editor follows.")
+                    .arg(textDocument->displayName(), path.toUserOutput());
+        // One marked text block (not an embedded resource, which agents replay as
+        // an attachment), so a reopened chat can leave it out.
+        content << TextContent().text(note + "\n\n```\n" + editorText + "\n```");
+    }
+    // OPENMV-DIFF //
 
     for (const Utils::FilePath &file : additionalFiles) {
         const QString uri = file.toUrl().toString();
+        // OPENMV-DIFF //
+        // content << ResourceLink()
+        //                .name(file.fileName())
+        //                .description("Manually added context file.")
+        //                .uri(uri);
+        // if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
+        // A folder is sent as a reference only (the agent can look inside); so is a
+        // big file, rather than its whole contents.
         content << ResourceLink()
                        .name(file.fileName())
-                       .description("Manually added context file.")
+                       .description(file.isDir() ? "Folder attached by the user."
+                                                 : "Manually added context file.")
                        .uri(uri);
 
-        if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
+        if (file.isFile() && file.fileSize() <= 512 * 1024
+            && supportsEmbeddedPromptResources(m_agentCapabilities)) {
+        // OPENMV-DIFF //
             const auto fileContents = file.fileContents();
             if (fileContents) {
                 content << EmbeddedResource().resource(
@@ -295,6 +412,33 @@ void AcpChatController::sendPrompt(const QString &text,
             }
         }
     }
+
+    // OPENMV-DIFF //
+    // Images go as image content when the agent takes it. Otherwise they go as a
+    // link to the image file (a pasted image is saved to a temporary file first),
+    // which agents that read files can still open.
+    for (const PromptImage &image : images) {
+        if (supportsPromptImages(m_agentCapabilities)) {
+            content << ImageContent()
+                           .data(QString::fromLatin1(image.data.toBase64()))
+                           .mimeType(image.mimeType);
+            continue;
+        }
+        FilePath file = image.source;
+        if (file.isEmpty()) {
+            const QString suffix = image.mimeType == "image/jpeg" ? "jpg" : "png";
+            file = TemporaryDirectory::masterDirectoryFilePath()
+                   / QString("chat-image-%1.%2")
+                         .arg(QUuid::createUuid().toString(QUuid::Id128).left(12), suffix);
+            if (!file.writeFileContents(image.data))
+                continue;
+        }
+        content << ResourceLink()
+                       .name(file.fileName())
+                       .description("Image attached by the user.")
+                       .uri(file.toUrl().toString());
+    }
+    // OPENMV-DIFF //
 
     request.prompt(content);
 
@@ -451,6 +595,13 @@ NewSessionRequest AcpChatController::buildNewSessionRequest() const
     return req;
 }
 
+// OPENMV-DIFF //
+bool AcpChatController::supportsLoadSession() const
+{
+    return m_agentCapabilities && m_agentCapabilities->loadSession().value_or(false);
+}
+// OPENMV-DIFF //
+
 bool AcpChatController::supportsSessionList() const
 {
     if (!m_agentCapabilities)
@@ -500,6 +651,7 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
             return;
         }
         m_sessionId = sessionId;
+        forgetSentEditorState(); // OPENMV-DIFF
         emit sessionLoaded(m_sessionId);
 
         auto resp = fromJson<LoadSessionResponse>(QJsonValue(result));

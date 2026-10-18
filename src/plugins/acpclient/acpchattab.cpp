@@ -29,6 +29,7 @@
 #include <QComboBox>
 #include <QFormLayout>
 #include <QGridLayout> // OPENMV-DIFF
+#include <QRegularExpression> // OPENMV-DIFF
 #include <QScrollArea> // OPENMV-DIFF
 #include <QHBoxLayout>
 #include <QLabel>
@@ -310,9 +311,15 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         cancelRow->addStretch();
         initLayout->addLayout(cancelRow);
         connect(cancelButton, &QAbstractButton::clicked, this, [this] {
+            // OPENMV-DIFF //
+            // Also gives up on a session that was loading (nothing left to report).
+            m_loadingSession = false;
+            m_loadingRestoredSession = false;
+            // OPENMV-DIFF //
             m_controller->disconnectFromServer();
             m_stack->setCurrentIndex(0);
         });
+        m_initializingCancel = cancelButton; // OPENMV-DIFF: hidden while a chat loads
 
         auto *initCenter = new QHBoxLayout;
         initCenter->addStretch();
@@ -336,7 +343,25 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             this, &AcpChatTab::populateServerButtons);
 
     // --- Connections: ChatPanel -> Controller ---
-    connect(m_chatPanel, &ChatPanel::sendRequested, this, [this](const QString &text) {
+    // OPENMV-DIFF //
+    const auto previews = [](const QList<PromptImage> &images) {
+        QList<QImage> result;
+        for (const PromptImage &image : images)
+            result.append(image.preview);
+        return result;
+    };
+    // OPENMV-DIFF //
+    // The files to show on the user's message: images show as thumbnails instead.
+    const auto attachedFiles = [](const QList<FilePath> &files, const QList<PromptImage> &) {
+        return files;
+    };
+    connect(m_chatPanel, &ChatPanel::sendRequested, this,
+            [this, previews, attachedFiles](const QString &text) {
+        // OPENMV-DIFF //
+        // Attachments go with this message only.
+        const QList<FilePath> files = m_chatPanel->takeContextFiles();
+        const QList<PromptImage> images = m_chatPanel->takeImages();
+        // OPENMV-DIFF //
         if (m_activePicker) {
             QObject::disconnect(m_controller, &AcpChatController::sessionsListed,
                                 m_activePicker, nullptr);
@@ -344,6 +369,14 @@ AcpChatTab::AcpChatTab(QWidget *parent)
                 = m_activePicker->firstNewSessionTarget();
             m_activePicker->deleteLater();
             m_pendingPrompt = text;
+            // OPENMV-DIFF //
+            m_pendingFiles = files;
+            m_pendingImages = images;
+            if (m_firstPrompt.isEmpty()) {
+                m_firstPrompt = text;
+                updateTitle();
+            }
+            // OPENMV-DIFF //
             const Project *project = ProjectManager::startupProject();
             const FilePath sessionPath = firstSessionTarget ? firstSessionTarget->cwd
                                          : project          ? project->projectDirectory()
@@ -351,12 +384,36 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             m_controller->createNewSession(sessionPath);
             return;
         }
-        m_chatPanel->addUserMessage(text);
+        // OPENMV-DIFF //
+        if (m_firstPrompt.isEmpty()) {
+            m_firstPrompt = text;
+            updateTitle();
+        }
+        // OPENMV-DIFF //
+        // OPENMV-DIFF //
+        // m_chatPanel->addUserMessage(text);
+        // m_chatPanel->setPrompting(true);
+        // m_controller->sendPrompt(
+        //     text, m_chatPanel->manualContextFiles(), m_chatPanel->includeCurrentEditorContext());
+        // Queued messages go as one prompt but show as the messages they were.
+        const QList<OutgoingMessage> parts = m_chatPanel->takeSentParts();
+        if (parts.isEmpty()) {
+            m_chatPanel->addUserMessage(text, previews(images), attachedFiles(files, images));
+        } else {
+            for (const OutgoingMessage &part : parts)
+                m_chatPanel->addUserMessage(part.text, previews(part.images), part.files);
+        }
         m_chatPanel->setPrompting(true);
-        m_controller->sendPrompt(
-            text, m_chatPanel->manualContextFiles(), m_chatPanel->includeCurrentEditorContext());
+        m_controller->sendPrompt(text, files, m_chatPanel->includeCurrentEditorContext(), images);
+        // OPENMV-DIFF //
     });
-    connect(m_chatPanel, &ChatPanel::cancelRequested, m_controller, &AcpChatController::cancelPrompt);
+    // OPENMV-DIFF //
+    // connect(m_chatPanel, &ChatPanel::cancelRequested, m_controller, &AcpChatController::cancelPrompt);
+    connect(m_chatPanel, &ChatPanel::cancelRequested, this, [this] {
+        m_controller->cancelPrompt();
+        m_chatPanel->addStatusMessage(Tr::tr("Request interrupted by user"));
+    });
+    // OPENMV-DIFF //
     connect(m_chatPanel, &ChatPanel::configOptionChanged,
             m_controller, &AcpChatController::setConfigOption);
 
@@ -370,6 +427,13 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             m_chatPanel->setPrompting(false);
             m_chatPanel->clearConfigOptions();
             m_currentServerName.clear();
+            // OPENMV-DIFF //
+            m_agentTitle.clear();
+            m_firstPrompt.clear();
+            m_icon = {};
+            m_customTitle.clear();
+            m_currentServerId.clear();
+            // OPENMV-DIFF //
             updateTitle();
         }
     });
@@ -390,25 +454,56 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         m_chatPanel->showAuthenticationError(
             Tr::tr("Authentication failed: %1").arg(error));
     });
-    connect(m_controller, &AcpChatController::sessionCreated, this, [this]() {
+    // OPENMV-DIFF //
+    // A rename elsewhere (the session picker, or another tab on the same session).
+    connect(&AcpSettings::instance(), &AcpSettings::chatTitleChanged,
+            this, [this](const QString &sessionId, const QString &title) {
+        const QString mine = m_restorePending ? m_restoreSessionId : m_controller->sessionId();
+        if (sessionId != mine || title == m_customTitle)
+            return;
+        m_customTitle = title;
+        updateTitle();
+    });
+    // OPENMV-DIFF //
+    connect(m_controller, &AcpChatController::sessionCreated, this,
+            [this, previews, attachedFiles]() {
+        rememberCustomTitle(); // OPENMV-DIFF: a name given before the session existed
         m_chatPanel->resolveAuthentication();
         m_stack->setCurrentIndex(2);
         m_chatPanel->setSendEnabled(true);
-        if (m_pendingPrompt.isEmpty()) {
+        // OPENMV-DIFF //
+        // if (m_pendingPrompt.isEmpty()) {
+        if (m_pendingPrompt.isEmpty() && m_pendingFiles.isEmpty() && m_pendingImages.isEmpty()) {
+        // OPENMV-DIFF //
             m_chatPanel->appendAgentText(
                 "Cute Greetings,\n\n your AI Agent is ready and you can start chatting.");
             m_chatPanel->finishAgentMessage();
         } else  {
             const QString text = m_pendingPrompt;
             m_pendingPrompt.clear();
-            m_chatPanel->addUserMessage(text);
+            // OPENMV-DIFF //
+            // m_chatPanel->addUserMessage(text);
+            // m_chatPanel->setPrompting(true);
+            // m_controller->sendPrompt(
+            //     text, m_chatPanel->manualContextFiles(), m_chatPanel->includeCurrentEditorContext());
+            const QList<FilePath> files = std::exchange(m_pendingFiles, {});
+            const QList<PromptImage> images = std::exchange(m_pendingImages, {});
+            m_chatPanel->addUserMessage(text, previews(images), attachedFiles(files, images));
             m_chatPanel->setPrompting(true);
-            m_controller->sendPrompt(
-                text, m_chatPanel->manualContextFiles(), m_chatPanel->includeCurrentEditorContext());
+            m_controller->sendPrompt(text, files, m_chatPanel->includeCurrentEditorContext(), images);
+            // OPENMV-DIFF //
         }
     });
     connect(m_controller, &AcpChatController::configOptionsReceived,
             m_chatPanel, &ChatPanel::updateConfigOptions);
+    // OPENMV-DIFF //
+    connect(m_controller, &AcpChatController::usageUpdated, this,
+            [this](const QString &sessionId, qint64 used, qint64 size, double cost,
+                   const QString &currency) {
+        if (sessionId == m_controller->sessionId())
+            m_chatPanel->setUsage(used, size, cost, currency);
+    });
+    // OPENMV-DIFF //
     connect(m_controller, &AcpChatController::sessionUpdate,
             this, [this](const QString &sessionId, const SessionUpdate &update) {
         Q_UNUSED(sessionId)
@@ -425,9 +520,64 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             }
         } else if (kind == QLatin1String("user_message_chunk")) {
             if (const auto *chunk = update.get<ContentChunk>()) {
-                if (const auto *textBlock = std::get_if<TextContent>(&chunk->content()))
+                // OPENMV-DIFF //
+                // if (const auto *textBlock = std::get_if<TextContent>(&chunk->content())) {
+                // Leave out what the IDE added to the user's messages (open scripts).
+                // Agents replay attachments as text too: a file as "[@name](uri)"
+                // (shown as a file chip) and its embedded contents as a
+                // "<context ref=...>" block (left out); a stopped request leaves
+                // a "[Request interrupted by user]" note (shown as a status line).
+                static const QRegularExpression linkRe(
+                    QStringLiteral("^\\[@([^\\]]*)\\]\\((\\S+)\\)$"));
+                const auto *textBlock = std::get_if<TextContent>(&chunk->content());
+                const QString chunkText = textBlock ? textBlock->text().trimmed() : QString();
+                const QRegularExpressionMatch link = linkRe.match(chunkText);
+                if (textBlock && textBlock->text().startsWith(AcpChatController::ideContextMarker())) {
+                } else if (textBlock && chunkText.startsWith(QLatin1String("<context ref="))) {
+                } else if (textBlock && chunkText.startsWith(QLatin1String("[Request interrupted by user"))
+                           && chunkText.endsWith(QLatin1Char(']'))) {
+                    m_chatPanel->addStatusMessage(chunkText.mid(1, chunkText.size() - 2));
+                } else if (textBlock && link.hasMatch()) {
+                    const QUrl url(link.captured(2));
+                    m_chatPanel->addUserFile(url.isLocalFile()
+                                                 ? FilePath::fromUserInput(url.toLocalFile())
+                                                 : FilePath::fromUserInput(link.captured(1)));
+                } else if (const auto *resourceLink = std::get_if<ResourceLink>(&chunk->content())) {
+                    const QUrl url(resourceLink->uri());
+                    m_chatPanel->addUserFile(url.isLocalFile()
+                                                 ? FilePath::fromUserInput(url.toLocalFile())
+                                                 : FilePath::fromUserInput(resourceLink->name()));
+                } else if (std::get_if<EmbeddedResource>(&chunk->content())) {
+                } else if (textBlock) {
+                // OPENMV-DIFF //
                     m_chatPanel->addUserMessage(textBlock->text());
+                    // OPENMV-DIFF //
+                    // A resumed session replays its history: name it after the first
+                    // message, as for a new one.
+                    if (m_firstPrompt.isEmpty()) {
+                        m_firstPrompt = textBlock->text();
+                        updateTitle();
+                    }
+                    // OPENMV-DIFF //
+                }
+                // OPENMV-DIFF //
+                // An image the user attached, replayed.
+                else if (const auto *imageBlock = std::get_if<ImageContent>(&chunk->content())) {
+                    QImage image;
+                    if (image.loadFromData(QByteArray::fromBase64(imageBlock->data().toLatin1()))) {
+                        m_chatPanel->addUserImage(image.scaled(256, 256, Qt::KeepAspectRatio,
+                                                               Qt::SmoothTransformation));
+                    }
+                }
+                // OPENMV-DIFF //
             }
+        // OPENMV-DIFF //
+        } else if (kind == QLatin1String("session_info_update")) {
+            if (const auto *info = update.get<SessionInfoUpdate>()) {
+                m_agentTitle = info->title().value_or(QString()).trimmed();
+                updateTitle();
+            }
+        // OPENMV-DIFF //
         } else if (kind == QLatin1String("tool_call")) {
             if (const auto *tc = update.get<ToolCall>())
                 m_chatPanel->addToolCall(*tc);
@@ -457,11 +607,28 @@ AcpChatTab::AcpChatTab(QWidget *parent)
     connect(m_controller, &AcpChatController::sessionSelectionRequired, this, [this] {
         m_chatPanel->resolveAuthentication();
         m_stack->setCurrentIndex(2);
+        // OPENMV-DIFF //
+        // A chat reopened after a restart: load its session (replays the history)
+        // instead of offering the picker, if the agent can.
+        const QString restoreId = std::exchange(m_restoreSessionId, QString());
+        if (!restoreId.isEmpty() && m_controller->supportsLoadSession()) {
+            m_loadingRestoredSession = true;
+            showLoading();
+            m_controller->loadSession(restoreId,
+                                      FilePath::fromUserInput(m_restoreWorkingDirectory));
+            return;
+        }
+        // OPENMV-DIFF //
         showSessionPicker();
     });
     connect(m_controller, &AcpChatController::sessionLoaded, this, [this]() {
         m_stack->setCurrentIndex(2);
         m_chatPanel->setSendEnabled(true);
+        // OPENMV-DIFF //
+        m_loadingRestoredSession = false;
+        m_loadingSession = false;
+        rememberCustomTitle();
+        // OPENMV-DIFF //
     });
 
     connect(m_controller, &AcpChatController::promptFinished, this, [this] {
@@ -469,6 +636,14 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         m_chatPanel->finishAgentMessage();
     });
     connect(m_controller, &AcpChatController::errorOccurred, this, [this](const QString &msg) {
+        // OPENMV-DIFF //
+        // A session that couldn't be loaded: back to the chat page (not the agent
+        // list) to show the error; a reopened chat also gets the picker.
+        if (std::exchange(m_loadingSession, false))
+            m_stack->setCurrentIndex(2);
+        if (std::exchange(m_loadingRestoredSession, false))
+            showSessionPicker();
+        // OPENMV-DIFF //
         if (m_stack->currentIndex() == 3)
             m_stack->setCurrentIndex(0);
         m_chatPanel->addErrorMessage(msg);
@@ -508,6 +683,34 @@ QString AcpChatTab::title() const
 {
     return m_title;
 }
+
+// OPENMV-DIFF //
+QWidget *AcpChatTab::sessionToolBar() const
+{
+    return m_chatPanel->sessionToolBar();
+}
+
+QString AcpChatTab::toolTip() const
+{
+    if (m_currentServerName.isEmpty())
+        return {};
+    QString full = !m_customTitle.isEmpty() ? m_customTitle
+                   : !m_agentTitle.isEmpty() ? m_agentTitle
+                                             : m_firstPrompt.trimmed();
+    // At most 6 lines and 300 characters.
+    const QStringList lines = full.split(QLatin1Char('\n'));
+    bool cut = lines.size() > 6;
+    full = lines.mid(0, 6).join(QLatin1Char('\n'));
+    if (full.size() > 300) {
+        full = full.left(300);
+        cut = true;
+    }
+    if (cut)
+        full = full.trimmed() + QChar(0x2026);
+    return full.isEmpty() ? m_currentServerName
+                          : QString("%1: %2").arg(m_currentServerName, full);
+}
+// OPENMV-DIFF //
 
 static IDocument *currentNonTemporaryDocument()
 {
@@ -554,6 +757,7 @@ void AcpChatTab::showSessionPicker()
     connect(picker, &SessionPickerWidget::sessionSelected, this,
             [this, picker](const QString &sessionId, const FilePath &cwd) {
         picker->setResolved(sessionId);
+        showLoading(); // OPENMV-DIFF: not the history arriving piece by piece
         m_controller->loadSession(sessionId, cwd);
     });
     connect(picker, &SessionPickerWidget::newSessionRequested,
@@ -740,8 +944,13 @@ void AcpChatTab::connectToConfiguredServer(const QString &serverId, const QStrin
 {
     m_connectionErrorLabel->hide();
     m_currentServerName = serverName;
+    // OPENMV-DIFF //
+    m_currentServerId = serverId;
+    fetchIcon(serverId);
+    // OPENMV-DIFF //
     updateTitle();
     m_initializingLabel->setText(Tr::tr("Connecting to %1").arg(serverName));
+    m_initializingCancel->show(); // OPENMV-DIFF: hidden while a chat loads
     m_stack->setCurrentIndex(3);
     m_controller->connectToServer(serverId);
 }
@@ -749,8 +958,155 @@ void AcpChatTab::connectToConfiguredServer(const QString &serverId, const QStrin
 
 void AcpChatTab::updateTitle()
 {
-    m_title = m_currentServerName.isEmpty() ? Tr::tr("New Chat") : m_currentServerName;
+    // OPENMV-DIFF //
+    // m_title = m_currentServerName.isEmpty() ? Tr::tr("New Chat") : m_currentServerName;
+    // OPENMV-DIFF //
+    // The chat's own title, else the start of the first message (first line, cut
+    // to a tab's length), else the agent's name until something is said.
+    QString title = !m_customTitle.isEmpty() ? m_customTitle : m_agentTitle;
+    if (title.isEmpty() && !m_firstPrompt.isEmpty()) {
+        title = m_firstPrompt.section(QLatin1Char('\n'), 0, 0).simplified();
+        if (title.size() > 32)
+            title = title.left(31).trimmed() + QChar(0x2026); // ...
+    }
+    if (title.isEmpty())
+        title = m_currentServerName;
+    m_title = title.isEmpty() ? Tr::tr("New Chat") : title;
+    // OPENMV-DIFF //
     emit titleChanged();
 }
+
+// OPENMV-DIFF //
+void AcpChatTab::fetchIcon(const QString &serverId)
+{
+    for (const AcpSettings::ServerInfo &info : AcpSettings::servers()) {
+        if (info.id == serverId && !info.iconUrl.isEmpty()) {
+            Utils::onResultReady(AcpSettings::iconForUrl(info.iconUrl), this,
+                                 [this](const QIcon &icon) {
+                                     m_icon = icon;
+                                     emit titleChanged();
+                                 });
+            return;
+        }
+    }
+}
+
+void AcpChatTab::setCustomTitle(const QString &title)
+{
+    m_customTitle = title.simplified();
+    // Saved per session (an empty name removes it); a chat without a session yet
+    // saves it once the session starts (rememberCustomTitle()).
+    AcpSettings::setChatTitle(m_controller->sessionId(), m_customTitle);
+    updateTitle();
+}
+
+// When a session starts or is resumed: keep a name given before it existed, or
+// pick up the one given earlier (in this tab, another one, or the picker).
+void AcpChatTab::rememberCustomTitle()
+{
+    const QString sessionId = m_controller->sessionId();
+    if (sessionId.isEmpty())
+        return;
+    if (!m_customTitle.isEmpty()) {
+        AcpSettings::setChatTitle(sessionId, m_customTitle);
+        return;
+    }
+    m_customTitle = AcpSettings::chatTitle(sessionId);
+    if (!m_customTitle.isEmpty())
+        updateTitle();
+}
+
+QVariantMap AcpChatTab::saveState() const
+{
+    // A reopened chat that was never shown keeps what it was restored with.
+    const QString sessionId = m_restorePending ? m_restoreSessionId : m_controller->sessionId();
+    if (m_currentServerId.isEmpty() || sessionId.isEmpty())
+        return {};
+    const QString workingDirectory = m_restorePending
+                                         ? m_restoreWorkingDirectory
+                                         : m_controller->workingDirectory().toFSPathString();
+    QString registryId;
+    for (const AcpSettings::ServerInfo &info : AcpSettings::servers()) {
+        if (info.id == m_currentServerId)
+            registryId = info.registryId;
+    }
+    return {{"serverId", m_currentServerId},
+            {"registryId", registryId},
+            {"serverName", m_currentServerName},
+            {"sessionId", sessionId},
+            {"workingDirectory", workingDirectory},
+            {"customTitle", m_customTitle},
+            {"agentTitle", m_agentTitle},
+            {"firstPrompt", m_firstPrompt}};
+}
+
+void AcpChatTab::restoreState(const QVariantMap &state)
+{
+    QString serverId = state.value("serverId").toString();
+    const QString sessionId = state.value("sessionId").toString();
+    if (serverId.isEmpty() || sessionId.isEmpty())
+        return;
+    // The saved id may predate the agent list being saved (ids were recreated on
+    // every launch then): find the agent by the registry agent it was made from.
+    const QList<AcpSettings::ServerInfo> servers = AcpSettings::servers();
+    const bool known = std::any_of(servers.begin(), servers.end(),
+                                   [&serverId](const AcpSettings::ServerInfo &info) {
+                                       return info.id == serverId;
+                                   });
+    const QString registryId = state.value("registryId").toString();
+    if (!known && !registryId.isEmpty()) {
+        for (const AcpSettings::ServerInfo &info : servers) {
+            if (info.registryId == registryId)
+                serverId = info.id;
+        }
+    }
+    m_currentServerId = serverId;
+    m_currentServerName = state.value("serverName").toString();
+    m_restoreSessionId = sessionId;
+    m_restoreWorkingDirectory = state.value("workingDirectory").toString();
+    m_customTitle = state.value("customTitle").toString();
+    m_agentTitle = state.value("agentTitle").toString();
+    m_firstPrompt = state.value("firstPrompt").toString();
+    m_restorePending = true;
+    fetchIcon(serverId);
+    updateTitle();
+}
+
+// A reopened chat connects to its agent the first time it is shown, so startup
+// doesn't launch an agent per saved chat.
+// While a session loads, the agent replays its history as updates before it
+// confirms the load; show the spinner page meanwhile instead of the chat filling
+// in piece by piece. sessionLoaded switches to the chat.
+void AcpChatTab::showLoading()
+{
+    m_loadingSession = true;
+    m_initializingLabel->setText(Tr::tr("Loading chat..."));
+    m_stack->setCurrentIndex(3);
+    revealCancelLater();
+}
+
+// For steps the user didn't start (loading a chat, a reopened chat connecting):
+// no Cancel cluttering the spinner, unless the step is still going after 5 s
+// (the agent hangs, a very long history). Connecting to an agent the user just
+// picked shows Cancel at once instead.
+void AcpChatTab::revealCancelLater()
+{
+    m_initializingCancel->hide();
+    const int generation = ++m_loadingGeneration;
+    QTimer::singleShot(5000, this, [this, generation] {
+        if ((generation == m_loadingGeneration) && (m_stack->currentIndex() == 3))
+            m_initializingCancel->show();
+    });
+}
+
+void AcpChatTab::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    if (std::exchange(m_restorePending, false)) {
+        connectToConfiguredServer(m_currentServerId, m_currentServerName);
+        revealCancelLater(); // the IDE reopened this chat, the user didn't pick it
+    }
+}
+// OPENMV-DIFF //
 
 } // namespace AcpClient::Internal

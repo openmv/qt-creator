@@ -20,6 +20,8 @@ class MarkdownBrowser;
 
 namespace AcpClient::Internal {
 
+class LazyMarkdownBrowser; // OPENMV-DIFF
+
 QWidget *toolCallStatusWidget(Acp::ToolCallStatus status, QWidget *parent = nullptr);
 QColor toolCallBorderColor(Acp::ToolCallStatus status);
 std::optional<Utils::Icon> iconForToolKind(std::optional<Acp::ToolKind> kind);
@@ -53,7 +55,10 @@ private:
     Utils::ElidingLabel *m_titleLabel = nullptr;
     QLabel *m_commandLabel = nullptr;
     CollapsibleFrame *m_rawInputFrame = nullptr;
-    Utils::MarkdownBrowser *m_rawInputContent = nullptr;
+    // OPENMV-DIFF //
+    // Utils::MarkdownBrowser *m_rawInputContent = nullptr;
+    LazyMarkdownBrowser *m_rawInputContent = nullptr;
+    // OPENMV-DIFF //
     Acp::ToolCallStatus m_status = Acp::ToolCallStatus::in_progress;
     int m_contentMaxWidth = -1;
 };

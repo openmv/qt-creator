@@ -482,6 +482,57 @@ private:
     QNetworkAccessManager *m_networkAccessManager = NetworkAccessManager::instance();
 };
 
+// OPENMV-DIFF //
+// Code blocks get rounded corners, like the other cards in the UI. A text frame
+// can only fill a square background, so code block frames carry this property
+// instead, and the painter below draws a rounded background behind each one
+// (on the viewport, just before the text is drawn over it).
+static constexpr int kCodeBlockFrameProperty = QTextFormat::UserProperty + 0x434b;
+
+class CodeBlockBackgroundPainter : public QObject
+{
+public:
+    explicit CodeBlockBackgroundPainter(QTextBrowser *browser)
+        : QObject(browser)
+        , m_browser(browser)
+    {
+        browser->viewport()->installEventFilter(this);
+    }
+
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (event->type() == QEvent::Paint && watched == m_browser->viewport()) {
+            QPainter p(m_browser->viewport());
+            p.setClipRegion(static_cast<QPaintEvent *>(event)->region());
+            p.setRenderHint(QPainter::Antialiasing);
+            p.translate(-m_browser->horizontalScrollBar()->value(),
+                        -m_browser->verticalScrollBar()->value());
+            paintFrames(p, m_browser->document()->rootFrame());
+        }
+        return false;
+    }
+
+private:
+    void paintFrames(QPainter &p, QTextFrame *frame)
+    {
+        for (QTextFrame *child : frame->childFrames()) {
+            const QTextFrameFormat fmt = child->frameFormat();
+            if (fmt.boolProperty(kCodeBlockFrameProperty)) {
+                const QRectF rect = m_browser->document()->documentLayout()
+                    ->frameBoundingRect(child)
+                    .adjusted(fmt.leftMargin(), fmt.topMargin(),
+                              -fmt.rightMargin(), -fmt.bottomMargin());
+                StyleHelper::drawCardBg(&p, rect, creatorColor(Theme::Token_Background_Muted),
+                                        Qt::NoPen, StyleHelper::SpacingTokens::RadiusM);
+            }
+            paintFrames(p, child);
+        }
+    }
+
+    QTextBrowser *m_browser;
+};
+// OPENMV-DIFF //
+
 MarkdownBrowser::MarkdownBrowser(QWidget *parent)
     : QTextBrowser(parent)
     , m_enableCodeCopyButton(false)
@@ -497,6 +548,7 @@ MarkdownBrowser::MarkdownBrowser(QWidget *parent)
     connect(document()->documentLayout(),
             &QAbstractTextDocumentLayout::update,
             this, &MarkdownBrowser::updateCopyButtonPositions);
+    new CodeBlockBackgroundPainter(this); // OPENMV-DIFF
 }
 
 void MarkdownBrowser::highlightCodeBlock(const QString &language, QTextBlock &block)
@@ -524,7 +576,10 @@ void MarkdownBrowser::highlightCodeBlock(const QString &language, QTextBlock &bl
 
     QTextFrameFormat frameFormat;
     frameFormat.setBorderStyle(QTextFrameFormat::BorderStyle_Solid);
-    frameFormat.setBackground(creatorColor(Theme::Token_Background_Muted));
+    // OPENMV-DIFF //
+    // frameFormat.setBackground(creatorColor(Theme::Token_Background_Muted));
+    frameFormat.setProperty(kCodeBlockFrameProperty, true); // rounded, see above
+    // OPENMV-DIFF //
     frameFormat.setPadding(SpacingTokens::PaddingVS);
     frameFormat.setLeftMargin(SpacingTokens::PaddingVXs);
     frameFormat.setRightMargin(SpacingTokens::PaddingVXs);

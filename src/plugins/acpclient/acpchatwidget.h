@@ -35,6 +35,11 @@ private:
     AcpChatTab *addNewTab();
     void closeTab(int index);
     void updateTrailingTab(); // OPENMV-DIFF
+    // OPENMV-DIFF //
+    void renameTab(int index);  // inline editor on the tab
+    void saveOpenChats() const; // reopened at the next start
+    bool restoreOpenChats();    // false if there was nothing to reopen
+    // OPENMV-DIFF //
     AcpChatTab *currentTab() const;
 
     // OPENMV-DIFF //

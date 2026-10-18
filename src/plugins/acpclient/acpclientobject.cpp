@@ -189,11 +189,29 @@ void AcpClientObject::handleNotification(const QString &method, const QJsonObjec
     qCDebug(logClient) << "Agent notification:" << method;
 
     if (method == QLatin1String("session/update")) {
+        // OPENMV-DIFF //
+        const QJsonObject update = params.value("update").toObject();
+        if (update.value("sessionUpdate").toString() == QLatin1String("usage_update")) {
+            const QJsonObject cost = update.value("cost").toObject();
+            emit usageUpdated(params.value("sessionId").toString(),
+                              qint64(update.value("used").toDouble()),
+                              qint64(update.value("size").toDouble()),
+                              cost.contains("amount") ? cost.value("amount").toDouble() : -1.0,
+                              cost.value("currency").toString());
+            return;
+        }
+        // OPENMV-DIFF //
         auto notif = fromJson<SessionNotification>(QJsonValue(params));
         if (notif)
             emit sessionUpdate(notif->sessionId(), notif->update());
+        // OPENMV-DIFF //
+        // else
+        //     qCWarning(logClient) << "Invalid session notification:" << params;
+        // Agents send update kinds newer than this client knows (usage_update, for
+        // one): expected as the protocol grows, so not a warning.
         else
-            qCWarning(logClient) << "Invalid session notification:" << params;
+            qCDebug(logClient) << "Unhandled session notification:" << params;
+        // OPENMV-DIFF //
     // OPENMV-DIFF //
     // } else {
     //     qCWarning(logClient) << "Unknown notification method:" << method;

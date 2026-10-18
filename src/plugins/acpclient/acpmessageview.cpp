@@ -25,6 +25,13 @@
 #include <utils/stylehelper.h>
 #include <utils/theme/theme.h>
 #include <utils/utilsicons.h>
+// OPENMV-DIFF //
+#include <utils/fsengine/fileiconprovider.h>
+#include <utils/stringutils.h>
+
+#include <QAbstractButton>
+#include <QEnterEvent>
+// OPENMV-DIFF //
 
 #include <limits>
 
@@ -41,6 +48,9 @@
 #include <QPalette>
 #include <QScrollBar>
 #include <QTextDocument>
+// OPENMV-DIFF //
+#include <QTextEdit>
+// OPENMV-DIFF //
 #include <QTimer>
 #include <QVBoxLayout>
 #include <QElapsedTimer>
@@ -93,6 +103,150 @@ private:
 // UserMessageWidget — bubble for user messages, plain text via QLabel
 // ---------------------------------------------------------------------------
 
+// OPENMV-DIFF //
+// The text in a user bubble. Unlike a QLabel it also wraps long unbroken runs
+// (URLs, paths, keyboard mashing) instead of cutting them off, and stays
+// selectable, copying the exact text.
+class BubbleText : public QTextEdit
+{
+public:
+    explicit BubbleText(QWidget *parent)
+        : QTextEdit(parent)
+    {
+        setReadOnly(true);
+        setFrameShape(QFrame::NoFrame);
+        setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        setLineWrapMode(QTextEdit::WidgetWidth);
+        setWordWrapMode(QTextOption::WrapAtWordBoundaryOrAnywhere);
+        setTextInteractionFlags(Qt::TextSelectableByMouse | Qt::TextSelectableByKeyboard);
+        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        setMinimumWidth(1);
+        setContentsMargins(0, 0, 0, 0);
+        document()->setDocumentMargin(0);
+        setAutoFillBackground(false);
+        viewport()->setAutoFillBackground(false);
+        QPalette pal = palette();
+        pal.setColor(QPalette::Text, Utils::creatorColor(Utils::Theme::Token_Text_Default));
+        setPalette(pal);
+        connect(document()->documentLayout(), &QAbstractTextDocumentLayout::documentSizeChanged,
+                this, [this](const QSizeF &size) {
+            setFixedHeight(qMax(qCeil(size.height()), fontMetrics().height()));
+        });
+    }
+};
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// Copies a message: a copy icon, a check mark for a moment after copying.
+class CopyMessageButton : public QAbstractButton
+{
+public:
+    explicit CopyMessageButton(const std::function<QString()> &text, QWidget *parent)
+        : QAbstractButton(parent)
+    {
+        setAttribute(Qt::WA_Hover);
+        setCursor(Qt::PointingHandCursor);
+        setFocusPolicy(Qt::NoFocus);
+        setToolTip(Tr::tr("Copy"));
+        setFixedSize(22, 22);
+        connect(this, &QAbstractButton::clicked, this, [this, text] {
+            Utils::setClipboardAndSelection(text());
+            m_copied = true;
+            update();
+            QTimer::singleShot(1500, this, [this] {
+                m_copied = false;
+                update();
+            });
+        });
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        if (underMouse()) {
+            QColor c = Utils::creatorColor(Utils::Theme::TextColorDisabled);
+            c.setAlphaF(c.alphaF() * .5);
+            Utils::StyleHelper::drawCardBg(&p, rect(), c, Qt::NoPen, RadiusS);
+        }
+        const QIcon icon = m_copied ? Utils::Icons::OK.icon() : Utils::Icons::COPY.icon();
+        icon.paint(&p, rect().adjusted(3, 3, -3, -3), Qt::AlignCenter);
+    }
+
+private:
+    bool m_copied = false;
+};
+
+// A message with its actions (copy) under it, shown while the mouse is over it.
+// Their space stays reserved so nothing moves when they appear.
+class MessageRow : public QWidget
+{
+public:
+    explicit MessageRow(QWidget *parent)
+        : QWidget(parent)
+    {}
+
+    void setActions(QWidget *actions)
+    {
+        m_actions = actions;
+        QSizePolicy policy = actions->sizePolicy();
+        policy.setRetainSizeWhenHidden(true);
+        actions->setSizePolicy(policy);
+        actions->hide();
+    }
+
+protected:
+    void enterEvent(QEnterEvent *event) override
+    {
+        if (m_actions)
+            m_actions->show();
+        QWidget::enterEvent(event);
+    }
+
+    void leaveEvent(QEvent *event) override
+    {
+        if (m_actions)
+            m_actions->hide();
+        QWidget::leaveEvent(event);
+    }
+
+private:
+    QWidget *m_actions = nullptr;
+};
+
+// A file or folder attached to a user message: its icon and name; the full path
+// in the tooltip.
+class FileChip : public QWidget
+{
+public:
+    FileChip(const Utils::FilePath &file, QWidget *parent)
+        : QWidget(parent)
+    {
+        auto *layout = new QHBoxLayout(this);
+        layout->setContentsMargins(PaddingHS, PaddingVXs, PaddingHM, PaddingVXs);
+        layout->setSpacing(GapHXs);
+        auto *icon = new QLabel(this);
+        icon->setPixmap(Utils::FileIconProvider::icon(file).pixmap(16, 16));
+        layout->addWidget(icon);
+        auto *name = new QLabel(file.isDir() ? file.fileName() + '/' : file.fileName(), this);
+        layout->addWidget(name);
+        setToolTip(file.toUserOutput());
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        Utils::StyleHelper::drawCardBg(&p, rect(),
+                                       Utils::creatorColor(Utils::Theme::Token_Foreground_Subtle),
+                                       Qt::NoPen, RadiusS);
+    }
+};
+// OPENMV-DIFF //
+
 class UserMessageWidget : public QFrame
 {
 public:
@@ -103,22 +257,81 @@ public:
 
         auto *layout = new QVBoxLayout(this);
         layout->setContentsMargins(PrimitiveL, PrimitiveM, PrimitiveL, PrimitiveM);
-        layout->setSpacing(0);
+        // OPENMV-DIFF //
+        // layout->setSpacing(0);
+        layout->setSpacing(GapVL); // between the text, attached files and images
+        // OPENMV-DIFF //
 
-        m_label = new QLabel(this);
-        m_label->setTextFormat(Qt::PlainText);
-        m_label->setWordWrap(true);
-        m_label->setTextInteractionFlags(Qt::TextSelectableByMouse);
-        m_label->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
-        m_label->setMinimumWidth(1);
-        QPalette pal = m_label->palette();
-        pal.setColor(QPalette::WindowText,
-                     Utils::creatorColor(Utils::Theme::Token_Text_Default));
-        m_label->setPalette(pal);
+        // OPENMV-DIFF //
+        // m_label = new QLabel(this);
+        // m_label->setTextFormat(Qt::PlainText);
+        // m_label->setWordWrap(true);
+        // m_label->setTextInteractionFlags(Qt::TextSelectableByMouse);
+        // m_label->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Preferred);
+        // m_label->setMinimumWidth(1);
+        // QPalette pal = m_label->palette();
+        // pal.setColor(QPalette::WindowText,
+        //              Utils::creatorColor(Utils::Theme::Token_Text_Default));
+        // m_label->setPalette(pal);
+        m_label = new BubbleText(this);
+        // OPENMV-DIFF //
         layout->addWidget(m_label);
     }
 
-    void setText(const QString &text) { m_label->setText(text); }
+    // OPENMV-DIFF //
+    // void setText(const QString &text) { m_label->setText(text); }
+    void setText(const QString &text)
+    {
+        m_label->setPlainText(text);
+        m_label->setVisible(!text.isEmpty()); // a message may be only images
+    }
+
+    // Attached images, as thumbnails under the text.
+    void addImage(const QImage &image)
+    {
+        if (!m_imageRow) {
+            m_imageRow = new QHBoxLayout;
+            m_imageRow->setContentsMargins(0, 0, 0, 0);
+            m_imageRow->setSpacing(GapHS);
+            static_cast<QVBoxLayout *>(layout())->addLayout(m_imageRow);
+        }
+        const qreal dpr = devicePixelRatioF();
+        const QImage scaled = image.scaled(qRound(160 * dpr), qRound(120 * dpr),
+                                           Qt::KeepAspectRatio, Qt::SmoothTransformation);
+        // Rounded corners, like the bubble and the cards.
+        QPixmap thumbnail(scaled.size());
+        thumbnail.fill(Qt::transparent);
+        {
+            QPainter p(&thumbnail);
+            p.setRenderHint(QPainter::Antialiasing);
+            QPainterPath clip;
+            clip.addRoundedRect(QRectF(QPointF(), scaled.size()), RadiusS * dpr, RadiusS * dpr);
+            p.setClipPath(clip);
+            p.drawImage(0, 0, scaled);
+        }
+        thumbnail.setDevicePixelRatio(dpr);
+        auto *label = new QLabel(this);
+        label->setPixmap(thumbnail);
+        m_imageRow->addWidget(label);
+        updateGeometry();
+    }
+    QString text() const { return m_label->toPlainText(); }
+
+    // Attached files and folders, as chips between the text and the images.
+    void addFile(const Utils::FilePath &file)
+    {
+        if (!m_fileBox) {
+            m_fileBox = new QWidget(this);
+            Layouting::Flow{}.attachTo(m_fileBox);
+            m_fileBox->layout()->setContentsMargins(0, 0, 0, 0);
+            m_fileBox->layout()->setSpacing(GapHS);
+            static_cast<QVBoxLayout *>(layout())->insertWidget(1, m_fileBox);
+        }
+        auto *chip = new FileChip(file, m_fileBox);
+        m_fileBox->layout()->addWidget(chip);
+        updateGeometry();
+    }
+    // OPENMV-DIFF //
 
     QSize sizeHint() const override
     {
@@ -126,8 +339,21 @@ public:
         const QMargins lm = layout()->contentsMargins();
         const QMargins cm = m_label->contentsMargins();
         int maxLineWidth = 0;
-        for (const QString &line : m_label->text().split(QLatin1Char('\n')))
+        // OPENMV-DIFF //
+        // for (const QString &line : m_label->text().split(QLatin1Char('\n')))
+        for (const QString &line : m_label->toPlainText().split(QLatin1Char('\n')))
+        // OPENMV-DIFF //
             maxLineWidth = qMax(maxLineWidth, fm.horizontalAdvance(line));
+        // OPENMV-DIFF //
+        if (m_imageRow)
+            maxLineWidth = qMax(maxLineWidth, m_imageRow->sizeHint().width());
+        if (m_fileBox)
+            maxLineWidth = qMax(maxLineWidth, m_fileBox->sizeHint().width());
+        // The text view lays out with fractional advances and keeps room for its
+        // (hidden) cursor: a few pixels of slack, or a short message wraps at its
+        // first break chance ("/" + "compact").
+        maxLineWidth += 4;
+        // OPENMV-DIFF //
         const int w = maxLineWidth + lm.left() + lm.right() + cm.left() + cm.right();
         return QSize(w, QFrame::sizeHint().height());
     }
@@ -142,7 +368,12 @@ protected:
     }
 
 private:
-    QLabel *m_label = nullptr;
+    // OPENMV-DIFF //
+    // QLabel *m_label = nullptr;
+    BubbleText *m_label = nullptr;
+    QHBoxLayout *m_imageRow = nullptr;
+    QWidget *m_fileBox = nullptr;
+    // OPENMV-DIFF //
 };
 
 // ---------------------------------------------------------------------------
@@ -169,7 +400,10 @@ public:
         m_renderTimer->setSingleShot(true);
         m_renderTimer->setInterval(100);
         connect(m_renderTimer, &QTimer::timeout, this, [this] {
-            setMarkdown(m_rawText);
+            // OPENMV-DIFF //
+            // setMarkdown(m_rawText);
+            render();
+            // OPENMV-DIFF //
         });
 
         connect(document()->documentLayout(),
@@ -195,11 +429,16 @@ public:
         m_renderTimer->start();
     }
 
+    QString rawText() const { return m_rawText; } // OPENMV-DIFF: the Markdown, for copying
+
     void flush()
     {
         if (m_renderTimer->isActive()) {
             m_renderTimer->stop();
-            setMarkdown(m_rawText);
+            // OPENMV-DIFF //
+            // setMarkdown(m_rawText);
+            render();
+            // OPENMV-DIFF //
         }
     }
 
@@ -222,6 +461,22 @@ public:
     }
 
 private:
+    // OPENMV-DIFF //
+    // Each render re-parses, re-highlights and re-lays out the whole message, so a
+    // long message re-rendered every 100 ms while it streams kept the IDE busy
+    // most of the time. Space the renders by how long one takes, so they use at
+    // most about a quarter of the time (100 ms to 1 s apart).
+    void render()
+    {
+        QElapsedTimer timer;
+        timer.start();
+        setMarkdown(m_rawText);
+        (void) document()->size(); // the layout, otherwise done later (uncounted)
+        (void) sizeHint();         // the unwrapped width, likewise
+        m_renderTimer->setInterval(qBound(100, int(timer.elapsed()) * 4, 1000));
+    }
+    // OPENMV-DIFF //
+
     void updateBrowserHeight()
     {
         const int docHeight = qCeil(document()->size().height())
@@ -274,7 +529,17 @@ public:
 
     void appendText(const QString &text)
     {
-        m_label->setText(m_label->text() + text);
+        // OPENMV-DIFF //
+        // m_label->setText(m_label->text() + text);
+        // Batch the streamed chunks: re-wrapping the whole (growing) thought for
+        // every chunk added up to a lot of work for long thoughts.
+        if (m_pendingText.isEmpty()) {
+            QTimer::singleShot(100, this, [this] {
+                m_label->setText(m_label->text() + std::exchange(m_pendingText, {}));
+            });
+        }
+        m_pendingText += text;
+        // OPENMV-DIFF //
     }
 
 protected:
@@ -290,6 +555,7 @@ protected:
 
 private:
     QLabel *m_label = nullptr;
+    QString m_pendingText; // OPENMV-DIFF
 };
 
 // ---------------------------------------------------------------------------
@@ -555,6 +821,12 @@ public:
 
         if (!title.isEmpty()) {
             auto *titleLabel = new Utils::ElidingLabel(title, this);
+            // OPENMV-DIFF //
+            // Elided text may shrink below its full width (the OpenMV IDE's
+            // ElidingLabel no longer sets this): a long title made the chat wider
+            // than the panel instead of eliding.
+            titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+            // OPENMV-DIFF //
             titleLabel->setWordWrap(true);
             m_bodyLayout->addWidget(titleLabel);
         }
@@ -574,6 +846,12 @@ public:
         m_bodyLayout->addWidget(buttonWidget);
 
         m_statusLabel = new Utils::ElidingLabel(this);
+        // OPENMV-DIFF //
+        // Elided text may shrink below its full width (the OpenMV IDE's
+        // ElidingLabel no longer sets this): a long title made the chat wider
+        // than the panel instead of eliding.
+        m_statusLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+        // OPENMV-DIFF //
         m_statusLabel->hide();
         m_headerLayout->addWidget(m_statusLabel);
     }
@@ -1055,8 +1333,10 @@ void AcpMessageView::setPrompting(bool prompting)
         m_progressUpdateTimer->stop();
         for (auto it = m_toolCallDetailWidgets.constBegin();
              it != m_toolCallDetailWidgets.constEnd(); ++it) {
-            qDebug() << "Checking tool call" << it.key() << "status"
-                     << toString(it.value()->status());
+            // OPENMV-DIFF //
+            // qDebug() << "Checking tool call" << it.key() << "status"
+            //          << toString(it.value()->status());
+            // OPENMV-DIFF //
             if (it.value()->status() == ToolCallStatus::in_progress
                 || it.value()->status() == ToolCallStatus::pending) {
                 it.value()->applyStatus(ToolCallStatus::failed);
@@ -1083,22 +1363,75 @@ void AcpMessageView::clear()
     m_currentThoughtWidget = nullptr;
     m_currentToolCallGroup = nullptr;
     m_currentAuthWidget = nullptr;
+    m_lastUserMessage = nullptr; // OPENMV-DIFF
     m_thoughtWidgets.clear();
     m_toolCallDetailWidgets.clear();
     m_toolCallGroups.clear();
     m_autoScroll = true;
 }
 
-void AcpMessageView::addUserMessage(const QString &text)
+// OPENMV-DIFF //
+// void AcpMessageView::addUserMessage(const QString &text)
+void AcpMessageView::addUserMessage(const QString &text, const QList<QImage> &images,
+                                    const QList<Utils::FilePath> &files)
+// OPENMV-DIFF //
 {
     finishAgentMessage();
     finishToolCallGroup();
     auto *msg = new UserMessageWidget(m_container);
     msg->setText(text);
-    addWidget(wrapWithSpacer(msg, Qt::AlignRight));
+    // OPENMV-DIFF //
+    for (const Utils::FilePath &file : files)
+        msg->addFile(file);
+    for (const QImage &image : images)
+        msg->addImage(image);
+    // OPENMV-DIFF //
+    // OPENMV-DIFF //
+    // addWidget(wrapWithSpacer(msg, Qt::AlignRight));
+    addWidget(wrapWithSpacer(msg, Qt::AlignRight, [msg] { return msg->text(); }));
+    m_lastUserMessage = msg;
+    // OPENMV-DIFF //
     m_autoScroll = true; // reset auto-scroll when user sends a message to ensure they see the response
     scrollToBottom();
 }
+
+// OPENMV-DIFF //
+// A replayed message's images arrive after its text, as separate updates.
+void AcpMessageView::addUserImage(const QImage &image)
+{
+    if (m_lastUserMessage)
+        m_lastUserMessage->addImage(image);
+    else
+        addUserMessage({}, {image});
+}
+
+void AcpMessageView::addUserFile(const Utils::FilePath &file)
+{
+    if (m_lastUserMessage)
+        m_lastUserMessage->addFile(file);
+    else
+        addUserMessage({}, {}, {file});
+}
+
+// A note in the conversation that isn't anyone's message, e.g. that the user
+// stopped the agent: small, muted, centered.
+void AcpMessageView::addStatusMessage(const QString &text)
+{
+    finishAgentMessage();
+    finishToolCallGroup();
+    auto *label = new QLabel(text, m_container);
+    label->setAlignment(Qt::AlignCenter);
+    label->setWordWrap(true);
+    QFont f = label->font();
+    f.setItalic(true);
+    f.setPointSizeF(f.pointSizeF() * 0.9);
+    label->setFont(f);
+    QPalette pal = label->palette();
+    pal.setColor(QPalette::WindowText, Utils::creatorColor(Utils::Theme::Token_Text_Muted));
+    label->setPalette(pal);
+    addWidget(label);
+}
+// OPENMV-DIFF //
 
 void AcpMessageView::appendAgentText(const QString &text)
 {
@@ -1109,7 +1442,12 @@ void AcpMessageView::appendAgentText(const QString &text)
     if (!m_currentAgentWidget) {
         m_currentAgentWidget = new AgentMessageWidget(m_container);
         m_currentAgentWidget->appendText(text);
-        addWidget(wrapWithSpacer(m_currentAgentWidget, Qt::AlignLeft));
+        // OPENMV-DIFF //
+        // addWidget(wrapWithSpacer(m_currentAgentWidget, Qt::AlignLeft));
+        AgentMessageWidget *agentMessage = m_currentAgentWidget;
+        addWidget(wrapWithSpacer(agentMessage, Qt::AlignLeft,
+                                 [agentMessage] { return agentMessage->rawText(); }));
+        // OPENMV-DIFF //
     } else {
         m_currentAgentWidget->appendText(text);
     }
@@ -1340,10 +1678,36 @@ void AcpMessageView::scrollToBottom()
         verticalScrollBar()->setValue(verticalScrollBar()->maximum());
 }
 
-QWidget *AcpMessageView::wrapWithSpacer(QWidget *widget, Qt::Alignment side)
+// OPENMV-DIFF //
+// QWidget *AcpMessageView::wrapWithSpacer(QWidget *widget, Qt::Alignment side)
+// {
+//     auto *row = new QWidget(m_container);
+//     auto *hbox = new QHBoxLayout(row);
+QWidget *AcpMessageView::wrapWithSpacer(QWidget *widget, Qt::Alignment side,
+                                        const std::function<QString()> &copyText)
 {
-    auto *row = new QWidget(m_container);
-    auto *hbox = new QHBoxLayout(row);
+    auto *row = new MessageRow(m_container);
+    auto *column = new QVBoxLayout(row);
+    column->setContentsMargins(0, 0, 0, 0);
+    column->setSpacing(GapVXs);
+    auto *hbox = new QHBoxLayout;
+    column->addLayout(hbox);
+    if (copyText) {
+        auto *actions = new QWidget(row);
+        auto *actionsLayout = new QHBoxLayout(actions);
+        actionsLayout->setContentsMargins(0, 0, 0, 0);
+        actionsLayout->setSpacing(GapHXs);
+        if (side == Qt::AlignRight)
+            actionsLayout->addStretch();
+        else // under the text, past the avatar
+            actionsLayout->addSpacing(28 /* AvatarWidget */ + GapHM);
+        actionsLayout->addWidget(new CopyMessageButton(copyText, actions));
+        if (side != Qt::AlignRight)
+            actionsLayout->addStretch();
+        column->addWidget(actions);
+        row->setActions(actions);
+    }
+    // OPENMV-DIFF //
     hbox->setContentsMargins(0, 0, 0, 0);
     hbox->setSpacing(GapHM);
     // Widget takes as much space as it needs (Preferred) but won't grow
@@ -1366,6 +1730,7 @@ QWidget *AcpMessageView::wrapWithSpacer(QWidget *widget, Qt::Alignment side)
 
 void AcpMessageView::addWidget(QWidget *widget)
 {
+    m_lastUserMessage = nullptr; // OPENMV-DIFF: set again by addUserMessage
     // Insert before the trailing elapsed label and the bottom stretch
     m_layout->insertWidget(m_layout->count() - 2, widget);
 }

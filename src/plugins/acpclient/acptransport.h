@@ -30,9 +30,16 @@ signals:
 protected:
     virtual void sendData(const QByteArray &data) = 0;
     void parseData(const QByteArray &data);
+    // OPENMV-DIFF //
+    void processBuffer(); // handles buffered messages in time slices
+    // OPENMV-DIFF //
 
 private:
     QByteArray m_buffer;
+    // OPENMV-DIFF //
+    qsizetype m_bufferOffset = 0;      // start of the unprocessed data in m_buffer
+    bool m_processingScheduled = false; // a continuation is queued
+    // OPENMV-DIFF //
 };
 
 } // namespace AcpClient::Internal
