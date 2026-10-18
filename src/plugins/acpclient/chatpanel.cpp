@@ -188,10 +188,10 @@ protected:
     {
         QPainter p(this);
         p.setRenderHint(QPainter::Antialiasing);
-        if (m_clickable && underMouse()) {
+        if (m_clickable && underMouse()) { // square, like the bar's other buttons
             QColor c = creatorColor(Theme::TextColorDisabled);
             c.setAlphaF(c.alphaF() * .5);
-            StyleHelper::drawCardBg(&p, rect(), c, Qt::NoPen, RadiusS);
+            StyleHelper::drawPanelBgRect(&p, rect(), c);
         }
 
         const QRectF ring(kPadding + 1, (height() - kRing) / 2.0 + 1, kRing - 2, kRing - 2);
@@ -424,6 +424,11 @@ ChatPanel::ChatPanel(QWidget *parent)
     m_messageView = new AcpMessageView;
     m_messageView->setContextMenuPolicy(Qt::CustomContextMenu);
     connect(m_messageView, &QWidget::customContextMenuRequested, this, [this](const QPoint &pos) {
+        // OPENMV-DIFF //
+        // Only agents that stream their reasoning have thoughts to show or hide.
+        if (!m_messageView->hasThoughts())
+            return;
+        // OPENMV-DIFF //
         QMenu menu(m_messageView);
         QAction *action = menu.addAction(Tr::tr("Show Thoughts"));
         action->setCheckable(true);

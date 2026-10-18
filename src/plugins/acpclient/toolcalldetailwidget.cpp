@@ -17,6 +17,10 @@
 #include <utils/utilsicons.h>
 
 #include <QAbstractTextDocumentLayout>
+// OPENMV-DIFF //
+#include <QContextMenuEvent>
+#include <QMenu>
+// OPENMV-DIFF //
 #include <QJsonArray>
 #include <QJsonDocument>
 #include <QJsonObject>
@@ -68,6 +72,18 @@ protected:
         if (m_dirty)
             render();
         Utils::MarkdownBrowser::showEvent(event);
+    }
+
+    // The browser's menu without "Copy Link Location" unless there's a link to copy.
+    void contextMenuEvent(QContextMenuEvent *event) override
+    {
+        QMenu *menu = createStandardContextMenu(event->pos());
+        for (QAction *action : menu->actions()) {
+            if (action->objectName() == QLatin1String("link-copy") && !action->isEnabled())
+                menu->removeAction(action);
+        }
+        menu->setAttribute(Qt::WA_DeleteOnClose);
+        menu->popup(event->globalPos());
     }
 
 private:

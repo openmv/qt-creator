@@ -273,33 +273,41 @@ static bool supportsPromptImages(std::optional<Acp::AgentCapabilities> agentCapa
 }
 // OPENMV-DIFF //
 
+// OPENMV-DIFF //
+// void AcpChatController::sendPrompt(const QString &text,
+//                                    const QList<Utils::FilePath> &additionalFiles,
+//                                    bool includeCurrentEditor)
+// {
 void AcpChatController::sendPrompt(const QString &text,
                                    const QList<Utils::FilePath> &additionalFiles,
-                                   // OPENMV-DIFF //
-                                   // bool includeCurrentEditor)
                                    bool includeCurrentEditor,
                                    const QList<PromptImage> &images)
-                                   // OPENMV-DIFF //
 {
+    sendPrompt(QList<OutgoingMessage>{{text, additionalFiles, images}}, includeCurrentEditor);
+}
+
+void AcpChatController::sendPrompt(const QList<OutgoingMessage> &messages,
+                                   bool includeCurrentEditor)
+{
+    const bool isEmpty = Utils::allOf(messages, [](const OutgoingMessage &message) {
+        return message.text.isEmpty() && message.files.isEmpty() && message.images.isEmpty();
+    });
+    // OPENMV-DIFF //
     using namespace TextEditor;
     // OPENMV-DIFF //
     // if (text.isEmpty() || !m_client || m_sessionId.isEmpty())
     // A message may be only attachments (a screenshot, say).
-    if ((text.isEmpty() && additionalFiles.isEmpty() && images.isEmpty()) || !m_client
-        || m_sessionId.isEmpty())
+    if (isEmpty || !m_client || m_sessionId.isEmpty())
     // OPENMV-DIFF //
         return;
 
     PromptRequest request;
     request.sessionId(m_sessionId);
 
-    TextContent textContent;
-    textContent.text(text);
     // OPENMV-DIFF //
+    // TextContent textContent;
+    // textContent.text(text);
     // QList<ContentBlock> content = {textContent};
-    QList<ContentBlock> content;
-    if (!text.isEmpty())
-        content << textContent;
     // OPENMV-DIFF //
     // OPENMV-DIFF //
     // TextEditorWidget *currentEditorWidget = TextEditorWidget::currentTextEditorWidget();
@@ -340,6 +348,75 @@ void AcpChatController::sendPrompt(const QString &text,
     //         }
     //     }
     // }
+    // OPENMV-DIFF //
+
+    QList<ContentBlock> content;
+    for (const OutgoingMessage &message : messages) {
+        // Agents run consecutive text blocks together ("2", "3" read as "23"): end
+        // each queued message but the last with a blank line.
+        if (!message.text.isEmpty()) {
+            const bool last = &message == &messages.constLast();
+            content << TextContent().text(last ? message.text : message.text + "\n\n");
+        }
+
+        for (const Utils::FilePath &file : message.files) {
+            const QString uri = file.toUrl().toString();
+            // OPENMV-DIFF //
+            // content << ResourceLink()
+            //                .name(file.fileName())
+            //                .description("Manually added context file.")
+            //                .uri(uri);
+            // if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
+            // A folder is sent as a reference only (the agent can look inside); so is a
+            // big file, rather than its whole contents.
+            content << ResourceLink()
+                           .name(file.fileName())
+                           .description(file.isDir() ? "Folder attached by the user."
+                                                     : "Manually added context file.")
+                           .uri(uri);
+
+            if (file.isFile() && file.fileSize() <= 512 * 1024
+                && supportsEmbeddedPromptResources(m_agentCapabilities)) {
+            // OPENMV-DIFF //
+                const auto fileContents = file.fileContents();
+                if (fileContents) {
+                    content << EmbeddedResource().resource(
+                        TextResourceContents()
+                            .text(QString::fromUtf8(*fileContents))
+                            .uri(uri));
+                }
+            }
+        }
+
+        // OPENMV-DIFF //
+        // Images go as image content when the agent takes it. Otherwise they go as a
+        // link to the image file (a pasted image is saved to a temporary file first),
+        // which agents that read files can still open.
+        for (const PromptImage &image : message.images) {
+            if (supportsPromptImages(m_agentCapabilities)) {
+                content << ImageContent()
+                               .data(QString::fromLatin1(image.data.toBase64()))
+                               .mimeType(image.mimeType);
+                continue;
+            }
+            FilePath file = image.source;
+            if (file.isEmpty()) {
+                const QString suffix = image.mimeType == "image/jpeg" ? "jpg" : "png";
+                file = TemporaryDirectory::masterDirectoryFilePath()
+                       / QString("chat-image-%1.%2")
+                             .arg(QUuid::createUuid().toString(QUuid::Id128).left(12), suffix);
+                if (!file.writeFileContents(image.data))
+                    continue;
+            }
+            content << ResourceLink()
+                           .name(file.fileName())
+                           .description("Image attached by the user.")
+                           .uri(file.toUrl().toString());
+        }
+        // OPENMV-DIFF //
+    }
+    // OPENMV-DIFF //
+
     // The open scripts, sent silently. The AI and Edit modes are separate, so the
     // user doesn't point at a script while chatting; instead the agent gets:
     // - the script last active in the editor, as a reference, when that changes;
@@ -381,62 +458,6 @@ void AcpChatController::sendPrompt(const QString &text,
         // One marked text block (not an embedded resource, which agents replay as
         // an attachment), so a reopened chat can leave it out.
         content << TextContent().text(note + "\n\n```\n" + editorText + "\n```");
-    }
-    // OPENMV-DIFF //
-
-    for (const Utils::FilePath &file : additionalFiles) {
-        const QString uri = file.toUrl().toString();
-        // OPENMV-DIFF //
-        // content << ResourceLink()
-        //                .name(file.fileName())
-        //                .description("Manually added context file.")
-        //                .uri(uri);
-        // if (supportsEmbeddedPromptResources(m_agentCapabilities)) {
-        // A folder is sent as a reference only (the agent can look inside); so is a
-        // big file, rather than its whole contents.
-        content << ResourceLink()
-                       .name(file.fileName())
-                       .description(file.isDir() ? "Folder attached by the user."
-                                                 : "Manually added context file.")
-                       .uri(uri);
-
-        if (file.isFile() && file.fileSize() <= 512 * 1024
-            && supportsEmbeddedPromptResources(m_agentCapabilities)) {
-        // OPENMV-DIFF //
-            const auto fileContents = file.fileContents();
-            if (fileContents) {
-                content << EmbeddedResource().resource(
-                    TextResourceContents()
-                        .text(QString::fromUtf8(*fileContents))
-                        .uri(uri));
-            }
-        }
-    }
-
-    // OPENMV-DIFF //
-    // Images go as image content when the agent takes it. Otherwise they go as a
-    // link to the image file (a pasted image is saved to a temporary file first),
-    // which agents that read files can still open.
-    for (const PromptImage &image : images) {
-        if (supportsPromptImages(m_agentCapabilities)) {
-            content << ImageContent()
-                           .data(QString::fromLatin1(image.data.toBase64()))
-                           .mimeType(image.mimeType);
-            continue;
-        }
-        FilePath file = image.source;
-        if (file.isEmpty()) {
-            const QString suffix = image.mimeType == "image/jpeg" ? "jpg" : "png";
-            file = TemporaryDirectory::masterDirectoryFilePath()
-                   / QString("chat-image-%1.%2")
-                         .arg(QUuid::createUuid().toString(QUuid::Id128).left(12), suffix);
-            if (!file.writeFileContents(image.data))
-                continue;
-        }
-        content << ResourceLink()
-                       .name(file.fileName())
-                       .description("Image attached by the user.")
-                       .uri(file.toUrl().toString());
     }
     // OPENMV-DIFF //
 

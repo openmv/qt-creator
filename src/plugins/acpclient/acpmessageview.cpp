@@ -30,7 +30,9 @@
 #include <utils/stringutils.h>
 
 #include <QAbstractButton>
+#include <QContextMenuEvent>
 #include <QEnterEvent>
+#include <QMenu>
 // OPENMV-DIFF //
 
 #include <limits>
@@ -430,6 +432,20 @@ public:
     }
 
     QString rawText() const { return m_rawText; } // OPENMV-DIFF: the Markdown, for copying
+
+    // OPENMV-DIFF //
+    // The browser's menu without "Copy Link Location" unless there's a link to copy.
+    void contextMenuEvent(QContextMenuEvent *event) override
+    {
+        QMenu *menu = createStandardContextMenu(event->pos());
+        for (QAction *action : menu->actions()) {
+            if (action->objectName() == QLatin1String("link-copy") && !action->isEnabled())
+                menu->removeAction(action);
+        }
+        menu->setAttribute(Qt::WA_DeleteOnClose);
+        menu->popup(event->globalPos());
+    }
+    // OPENMV-DIFF //
 
     void flush()
     {

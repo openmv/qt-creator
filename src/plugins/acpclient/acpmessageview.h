@@ -47,6 +47,7 @@ public:
     void setAgentIconUrl(const QString &iconUrl);
     void setThoughtsVisible(bool visible);
     bool thoughtsVisible() const { return m_thoughtsVisible; }
+    bool hasThoughts() const { return !m_thoughtWidgets.isEmpty(); } // OPENMV-DIFF
 
     void setPrompting(bool prompting);
 

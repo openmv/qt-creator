@@ -399,12 +399,14 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         const QList<OutgoingMessage> parts = m_chatPanel->takeSentParts();
         if (parts.isEmpty()) {
             m_chatPanel->addUserMessage(text, previews(images), attachedFiles(files, images));
+            m_chatPanel->setPrompting(true);
+            m_controller->sendPrompt(text, files, m_chatPanel->includeCurrentEditorContext(), images);
         } else {
             for (const OutgoingMessage &part : parts)
                 m_chatPanel->addUserMessage(part.text, previews(part.images), part.files);
+            m_chatPanel->setPrompting(true);
+            m_controller->sendPrompt(parts, m_chatPanel->includeCurrentEditorContext());
         }
-        m_chatPanel->setPrompting(true);
-        m_controller->sendPrompt(text, files, m_chatPanel->includeCurrentEditorContext(), images);
         // OPENMV-DIFF //
     });
     // OPENMV-DIFF //
@@ -550,12 +552,16 @@ AcpChatTab::AcpChatTab(QWidget *parent)
                 } else if (std::get_if<EmbeddedResource>(&chunk->content())) {
                 } else if (textBlock) {
                 // OPENMV-DIFF //
-                    m_chatPanel->addUserMessage(textBlock->text());
+                    // OPENMV-DIFF //
+                    // m_chatPanel->addUserMessage(textBlock->text());
+                    // Trimmed: queued messages end with a blank line (see sendPrompt()).
+                    m_chatPanel->addUserMessage(chunkText);
+                    // OPENMV-DIFF //
                     // OPENMV-DIFF //
                     // A resumed session replays its history: name it after the first
                     // message, as for a new one.
                     if (m_firstPrompt.isEmpty()) {
-                        m_firstPrompt = textBlock->text();
+                        m_firstPrompt = chunkText;
                         updateTitle();
                     }
                     // OPENMV-DIFF //

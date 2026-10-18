@@ -67,6 +67,9 @@ public:
     //                 bool includeCurrentEditor = true);
     void sendPrompt(const QString &text, const QList<Utils::FilePath> &additionalFiles = {},
                     bool includeCurrentEditor = true, const QList<PromptImage> &images = {});
+    // Several messages as one prompt (queued ones): each its own text block, with
+    // its attachments after it, so the agent's history keeps them apart.
+    void sendPrompt(const QList<OutgoingMessage> &messages, bool includeCurrentEditor = true);
     // OPENMV-DIFF //
     void cancelPrompt();
     void authenticate(const QString &methodId);
