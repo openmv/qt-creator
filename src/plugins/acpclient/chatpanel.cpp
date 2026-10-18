@@ -289,6 +289,10 @@ public:
         m_list->setTextElideMode(Qt::ElideRight);
         m_list->setItemDelegate(new CommandDelegate(m_list));
         m_list->setFocusPolicy(Qt::NoFocus); // typing stays in the filter
+        // One highlight, the row Enter picks: the mouse moves it as the arrows do.
+        m_list->setMouseTracking(true);
+        connect(m_list, &QListWidget::itemEntered, m_list,
+                [this](QListWidgetItem *item) { m_list->setCurrentItem(item); });
         m_list->viewport()->setAutoFillBackground(false);
         // A slim scroll bar, as popups have: a rounded thumb, no arrows or track.
         m_list->verticalScrollBar()->setStyleSheet(
