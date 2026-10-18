@@ -100,6 +100,12 @@ find_package(Qt6 COMPONENTS Test QUIET ${QT_TEST_COMPONENT_REQUIRED})
 find_package(Qt6 OPTIONAL_COMPONENTS Quick QuickWidgets Designer DesignerComponentsPrivate
                                      Help SerialPort Svg Tools LinguistTools QUIET)
 
+# OPENMV-DIFF #
+# Qt Creator uses Qt's private modules on purpose, and the IDE ships with the exact
+# Qt it was built against, so Qt's "tied to this Qt build" configure warning for
+# each private module is expected noise.
+set(QT_NO_PRIVATE_MODULE_WARNING ON)
+# OPENMV-DIFF #
 if (Qt6_VERSION VERSION_GREATER_EQUAL 6.9.0)
   find_package(Qt6 OPTIONAL_COMPONENTS
     CorePrivate

@@ -628,6 +628,12 @@ void myMessageOutput(QtMsgType type, const QMessageLogContext &context, const QS
         if(msg.startsWith(QLatin1String("requestActivate() called for  QWidgetWindow"))) break;
         if(msg.startsWith(QLatin1String("Corrupt JPEG data:"))) break;
         if(msg.startsWith(QLatin1String("fromIccProfile: Failed to parse description"))) break;
+        // KSyntaxHighlighting: a syntax definition (Markdown, HTML, Bash, CMake...)
+        // embeds a language the IDE doesn't ship; that code just isn't colored.
+        if(msg.startsWith(QLatin1String("Unable to resolve external include rule for definition"))) break;
+        if(msg.startsWith(QLatin1String("Unable to resolve include rule for definition"))) break;
+        if(msg.startsWith(QLatin1String("Unable to resolve external include keyword for definition"))) break;
+        if(msg.startsWith(QLatin1String("cannot find definition in"))) break;
         fprintf(stderr, "%s\n", localMsg.constData()); fflush(stderr);
         break;
     case QtCriticalMsg:
