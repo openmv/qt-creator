@@ -55,6 +55,9 @@ OpenMVAIMode::OpenMVAIMode(QObject *parent) : Core::IMode(parent)
     // into the current mode's placeholder, so this mode carries one too, laid
     // out like Edit mode's: chat above, panes below.
     Core::MiniSplitter *splitter = new Core::MiniSplitter(Qt::Vertical);
+    // The panes below can't squash the chat away: room for the tabs, the input
+    // box and a few lines of messages (Edit mode's 120 px squeezes the input).
+    container->setMinimumSize(160, 160);
     splitter->insertWidget(0, container);
     QWidget *outputPane = new Core::OutputPanePlaceHolder(Utils::Id("OpenMV.AIMode"), splitter);
     outputPane->setObjectName(QStringLiteral("AIModeOutputPanePlaceHolder"));

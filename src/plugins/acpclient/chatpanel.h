@@ -149,7 +149,12 @@ private:
     ContextGauge *m_contextGauge = nullptr;
     bool m_canCompact = false; // the agent has a "compact" command
     // OPENMV-DIFF //
-    QMenu *m_commandsMenu = nullptr;
+    QMenu *m_commandsMenu = nullptr; // OPENMV-DIFF: unused, see m_commands
+    // OPENMV-DIFF //
+    QList<QPair<QString, QString>> m_commands; // the agent's commands: name, description
+    QWidget *m_inputBox = nullptr;
+    void showCommandPalette();
+    // OPENMV-DIFF //
     QWidget *m_contextBar = nullptr;
     QLayout *m_contextBarLayout = nullptr;
     bool m_includeCurrentEditorContext = true;

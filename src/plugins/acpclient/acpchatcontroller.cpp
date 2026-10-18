@@ -424,7 +424,11 @@ void AcpChatController::sendPrompt(const QList<OutgoingMessage> &messages,
     //   an edited untitled script), with that text: each version once per chat,
     //   so the history only grows when the user changed something. Saved scripts
     //   the agent reads from disk itself.
-    if (includeCurrentEditor) {
+    // A slash command runs only as the whole message ("/compact"), so for one the
+    // open scripts wait for the next message.
+    const bool isCommand = messages.size() == 1 && messages.first().text.startsWith('/')
+                           && messages.first().files.isEmpty() && messages.first().images.isEmpty();
+    if (includeCurrentEditor && !isCommand) {
         Core::IDocument *current = Core::EditorManager::currentDocument();
         if (current && !current->filePath().isEmpty()
             && current->filePath() != m_sentCurrentScript) {
@@ -437,7 +441,8 @@ void AcpChatController::sendPrompt(const QList<OutgoingMessage> &messages,
                       .arg(current->displayName(), current->filePath().toUserOutput()));
         }
     }
-    for (Core::IDocument *document : Core::DocumentModel::openedDocuments()) {
+    for (Core::IDocument *document : isCommand ? QList<Core::IDocument *>()
+                                               : Core::DocumentModel::openedDocuments()) {
         auto *textDocument = qobject_cast<TextDocument *>(document);
         if (!textDocument || textDocument->filePath().isEmpty() || !textDocument->isModified())
             continue;

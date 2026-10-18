@@ -32,6 +32,14 @@
 #include <QLocale>
 #include <QPainterPath>
 #include <QShortcut>
+#include <QHelpEvent>
+#include <utils/tooltip/tooltip.h>
+#include <QPointer>
+#include <QMouseEvent>
+#include <QKeyEvent>
+#include <QLineEdit>
+#include <QListWidget>
+#include <QStyledItemDelegate>
 // OPENMV-DIFF //
 // OPENMV-DIFF //
 #include <QScrollBar>
@@ -240,6 +248,238 @@ protected:
 // OPENMV-DIFF //
 
 // OPENMV-DIFF //
+// The agent's commands, from the "/" button: a filter field over a list of
+// names with their descriptions, popping up over the input box. Typing filters
+// (name or description), arrows/PgUp/PgDn move, Enter or a click picks.
+class CommandPalette : public QFrame
+{
+public:
+    // An overlay in the chat panel (not a popup window), so its rounded corners
+    // are drawn smoothly over the panel behind it.
+    CommandPalette(const QList<QPair<QString, QString>> &commands,
+                   const std::function<void(const QString &)> &onPicked, QWidget *parent)
+        : QFrame(parent)
+        , m_onPicked(onPicked)
+    {
+        setAttribute(Qt::WA_DeleteOnClose);
+        setFrameShape(QFrame::NoFrame);
+        setAutoFillBackground(false);
+
+        auto *layout = new QVBoxLayout(this);
+        layout->setContentsMargins(PaddingHS, PaddingVS, PaddingHS, PaddingVS);
+        layout->setSpacing(GapVS);
+
+        // The filter field: the size of a row, its text lined up with theirs.
+        m_filter = new QLineEdit;
+        m_filter->setPlaceholderText(Tr::tr("Filter commands..."));
+        m_filter->setFrame(false);
+        m_filter->setFixedHeight(rowHeight(fontMetrics()));
+        m_filter->setStyleSheet(QString("QLineEdit { background: %1; border-radius: %2px;"
+                                        " padding-left: %3px; padding-right: %3px; }")
+                                    .arg(creatorColor(Theme::Token_Background_Muted).name())
+                                    .arg(RadiusS)
+                                    .arg(PaddingHM - 2));
+        m_filter->installEventFilter(this);
+        layout->addWidget(m_filter);
+
+        m_list = new QListWidget;
+        m_list->setFrameShape(QFrame::NoFrame);
+        m_list->setUniformItemSizes(true);
+        m_list->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        m_list->setTextElideMode(Qt::ElideRight);
+        m_list->setItemDelegate(new CommandDelegate(m_list));
+        m_list->setFocusPolicy(Qt::NoFocus); // typing stays in the filter
+        m_list->viewport()->setAutoFillBackground(false);
+        // A slim scroll bar, as popups have: a rounded thumb, no arrows or track.
+        m_list->verticalScrollBar()->setStyleSheet(
+            QString("QScrollBar:vertical { background: transparent; width: 8px; margin: 0; }"
+                    "QScrollBar::handle:vertical { background: %1; border-radius: 4px;"
+                    " min-height: 24px; }"
+                    "QScrollBar::handle:vertical:hover { background: %2; }"
+                    "QScrollBar::add-line:vertical, QScrollBar::sub-line:vertical"
+                    " { height: 0; border: none; }"
+                    "QScrollBar::add-page:vertical, QScrollBar::sub-page:vertical"
+                    " { background: none; }")
+                .arg(creatorColor(Theme::Token_Foreground_Muted).name(),
+                     creatorColor(Theme::Token_Text_Muted).name()));
+        for (const auto &[name, description] : commands) {
+            auto *item = new QListWidgetItem(QLatin1Char('/') + name, m_list);
+            item->setData(Qt::UserRole, name);
+            item->setData(Qt::UserRole + 1, description);
+        }
+        layout->addWidget(m_list);
+        m_list->viewport()->installEventFilter(this); // the descriptions' tooltips
+        connect(m_filter, &QLineEdit::textChanged, this, [this](const QString &text) {
+            const QString needle = text.trimmed().remove(QLatin1Char('/'));
+            QListWidgetItem *first = nullptr;
+            for (int i = 0; i < m_list->count(); ++i) {
+                QListWidgetItem *item = m_list->item(i);
+                const bool match = needle.isEmpty()
+                                   || item->data(Qt::UserRole).toString().contains(needle, Qt::CaseInsensitive)
+                                   || item->data(Qt::UserRole + 1).toString().contains(needle, Qt::CaseInsensitive);
+                item->setHidden(!match);
+                if (match && !first)
+                    first = item;
+            }
+            m_list->setCurrentItem(first);
+        });
+        connect(m_list, &QListWidget::itemClicked, this, [this](QListWidgetItem *item) { pick(item); });
+        m_list->setCurrentRow(0);
+    }
+
+    ~CommandPalette() override { qApp->removeEventFilter(this); }
+
+    // Rows shown before the list scrolls.
+    static constexpr int kVisibleRows = 10;
+    // Room between the rows and the scroll bar.
+    static constexpr int kScrollBarGap = 6;
+
+    static int rowHeight(const QFontMetrics &fm) { return fm.height() + 2 * PaddingVS + 2; }
+
+    // The button that opened it: a click there closes the palette and stops,
+    // rather than also reopening it.
+    void setToggleButton(QWidget *button) { m_toggleButton = button; }
+
+    // Over the input box, as wide as it, in the parent (the chat panel).
+    void popupAbove(QWidget *anchor)
+    {
+        const int rows = qMin(kVisibleRows, m_list->count());
+        m_list->setFixedHeight(rows * m_list->sizeHintForRow(0) + 2);
+        setFixedWidth(anchor->width());
+        resize(width(), sizeHint().height());
+        const QPoint topLeft = anchor->mapTo(parentWidget(), QPoint(0, 0));
+        move(topLeft.x(), qMax(0, topLeft.y() - height() - GapVXs));
+        raise();
+        show();
+        m_filter->setFocus();
+        qApp->installEventFilter(this); // closes on a click elsewhere
+    }
+
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (watched == m_filter && event->type() == QEvent::KeyPress) {
+            auto *key = static_cast<QKeyEvent *>(event);
+            switch (key->key()) {
+            case Qt::Key_Up:
+            case Qt::Key_Down:
+            case Qt::Key_PageUp:
+            case Qt::Key_PageDown:
+                QCoreApplication::sendEvent(m_list, event);
+                return true;
+            case Qt::Key_Return:
+            case Qt::Key_Enter:
+                pick(m_list->currentItem());
+                return true;
+            case Qt::Key_Escape:
+                close();
+                return true;
+            default:
+                break;
+            }
+        }
+        // A click outside closes it, like a popup; one on the button that opened
+        // it goes no further (it would reopen it).
+        if (event->type() == QEvent::MouseButtonPress && watched->isWidgetType()) {
+            auto *widget = static_cast<QWidget *>(watched);
+            if (widget != this && !isAncestorOf(widget)) {
+                const bool onToggle = m_toggleButton
+                                      && (widget == m_toggleButton
+                                          || m_toggleButton->isAncestorOf(widget));
+                close();
+                return onToggle;
+            }
+        }
+        if (event->type() == QEvent::ApplicationDeactivate)
+            close();
+        // A row's whole description (the row cuts it short), in the theme's tooltip
+        // laid out like the documentation hovers (which wraps long text itself).
+        if (m_list && watched == m_list->viewport() && event->type() == QEvent::ToolTip) {
+            auto *help = static_cast<QHelpEvent *>(event);
+            if (QListWidgetItem *item = m_list->itemAt(help->pos())) {
+                const QString text
+                    = item->data(Qt::UserRole + 1).toString().simplified().toHtmlEscaped();
+                Utils::ToolTip::show(help->globalPos(),
+                                     "<table><tr><td style=\"padding:6px;\">" + text
+                                         + "</td></tr></table>",
+                                     m_list->viewport(), {}, m_list->visualItemRect(item));
+            } else {
+                Utils::ToolTip::hide();
+            }
+            return true;
+        }
+        return QFrame::eventFilter(watched, event);
+    }
+
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        StyleHelper::drawCardBg(&p, QRectF(rect()).adjusted(0.5, 0.5, -0.5, -0.5),
+                                creatorColor(Theme::Token_Background_Default),
+                                QPen(creatorColor(Theme::Token_Stroke_Subtle), 1), RadiusM);
+    }
+
+private:
+    // A command's name, then its description in the muted color, on one line.
+    class CommandDelegate : public QStyledItemDelegate
+    {
+    public:
+        using QStyledItemDelegate::QStyledItemDelegate;
+
+        void paint(QPainter *painter, const QStyleOptionViewItem &option,
+                   const QModelIndex &index) const override
+        {
+            QStyleOptionViewItem opt = option;
+            initStyleOption(&opt, index);
+            painter->save();
+            const QRect row = opt.rect.adjusted(0, 1, -kScrollBarGap, -1);
+            if (opt.state & QStyle::State_Selected) {
+                painter->setRenderHint(QPainter::Antialiasing);
+                StyleHelper::drawCardBg(painter, row,
+                                        creatorColor(Theme::Token_Foreground_Subtle),
+                                        Qt::NoPen, RadiusS);
+            }
+            const QRect text = row.adjusted(PaddingHM, 0, -PaddingHM, 0);
+            const QString name = opt.text;
+            painter->setFont(opt.font);
+            painter->setPen(creatorColor(Theme::Token_Text_Default));
+            const int nameWidth = qMin(opt.fontMetrics.horizontalAdvance(name), text.width());
+            painter->drawText(text, Qt::AlignLeft | Qt::AlignVCenter,
+                              opt.fontMetrics.elidedText(name, Qt::ElideRight, text.width()));
+            const QRect rest = text.adjusted(nameWidth + PaddingHL, 0, 0, 0);
+            if (rest.width() > 20) {
+                painter->setPen(creatorColor(Theme::Token_Text_Muted));
+                const QString description = index.data(Qt::UserRole + 1).toString().simplified();
+                painter->drawText(rest, Qt::AlignLeft | Qt::AlignVCenter,
+                                  opt.fontMetrics.elidedText(description, Qt::ElideRight, rest.width()));
+            }
+            painter->restore();
+        }
+
+        QSize sizeHint(const QStyleOptionViewItem &option, const QModelIndex &index) const override
+        {
+            QSize size = QStyledItemDelegate::sizeHint(option, index);
+            size.setHeight(rowHeight(option.fontMetrics));
+            return size;
+        }
+    };
+
+    void pick(QListWidgetItem *item)
+    {
+        if (!item || item->isHidden())
+            return;
+        const QString name = item->data(Qt::UserRole).toString();
+        close();
+        m_onPicked(name);
+    }
+
+    QLineEdit *m_filter = nullptr;
+    QListWidget *m_list = nullptr;
+    QPointer<QWidget> m_toggleButton;
+    std::function<void(const QString &)> m_onPicked;
+};
+
 // The strip above the input showing a queued message.
 class QueueBar : public QWidget
 {
@@ -459,6 +699,7 @@ ChatPanel::ChatPanel(QWidget *parent)
     inputOuterLayout->setSpacing(GapVXs);
 
     auto *inputContainer = new InputContainerWidget;
+    m_inputBox = inputContainer; // OPENMV-DIFF: the command palette pops up over it
     auto *inputContainerLayout = new QVBoxLayout(inputContainer);
     inputContainerLayout->setContentsMargins(PaddingHM, PaddingVXs, PaddingHM, PaddingVXs);
     inputContainerLayout->setSpacing(GapVXs);
@@ -550,13 +791,16 @@ ChatPanel::ChatPanel(QWidget *parent)
     // OPENMV-DIFF //
     m_commandsButton->setToolTip(Tr::tr("Insert Command"));
     m_commandsButton->hide();
-    connect(m_commandsButton, &QAbstractButton::clicked, this, [this] {
-        if (!m_commandsMenu)
-            return;
-        const QPoint topLeft = m_commandsButton->mapToGlobal(QPoint(0, 0));
-        const QSize menuSize = m_commandsMenu->sizeHint();
-        m_commandsMenu->popup(QPoint(topLeft.x(), topLeft.y() - menuSize.height()));
-    });
+    // OPENMV-DIFF //
+    // connect(m_commandsButton, &QAbstractButton::clicked, this, [this] {
+    //     if (!m_commandsMenu)
+    //         return;
+    //     const QPoint topLeft = m_commandsButton->mapToGlobal(QPoint(0, 0));
+    //     const QSize menuSize = m_commandsMenu->sizeHint();
+    //     m_commandsMenu->popup(QPoint(topLeft.x(), topLeft.y() - menuSize.height()));
+    // });
+    connect(m_commandsButton, &QAbstractButton::clicked, this, &ChatPanel::showCommandPalette);
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // bottomRowButtonLayout->addWidget(m_commandsButton);
     //
@@ -1260,25 +1504,48 @@ void ChatPanel::updateAvailableCommands(const QList<AvailableCommand> &commands)
     m_contextGauge->setClickable(m_canCompact && !m_prompting);
     // OPENMV-DIFF //
 
-    delete m_commandsMenu;
-    m_commandsMenu = nullptr;
+    // OPENMV-DIFF //
+    // delete m_commandsMenu;
+    // m_commandsMenu = nullptr;
+    // m_commandsButton->setVisible(!commands.isEmpty());
+    //
+    // if (commands.isEmpty())
+    //     return;
+    //
+    // m_commandsMenu = new QMenu(m_commandsButton);
+    // m_commandsMenu->setToolTipsVisible(true);
+    // for (const AvailableCommand &cmd : commands) {
+    //     QAction *action = m_commandsMenu->addAction(cmd.name());
+    //     action->setToolTip(cmd.description());
+    //     connect(action, &QAction::triggered, this, [this, cmd] {
+    //         m_inputEdit->setPlainText('/' + cmd.name() + QLatin1Char(' '));
+    //         m_inputEdit->moveCursor(QTextCursor::End);
+    //         m_inputEdit->setFocus();
+    //     });
+    // }
+    // A menu of a hundred-odd commands ran off the screen in columns: they go in
+    // a filterable palette instead (showCommandPalette()).
+    m_commands.clear();
+    for (const AvailableCommand &cmd : commands)
+        m_commands.append({cmd.name(), cmd.description()});
     m_commandsButton->setVisible(!commands.isEmpty());
-
-    if (commands.isEmpty())
-        return;
-
-    m_commandsMenu = new QMenu(m_commandsButton);
-    m_commandsMenu->setToolTipsVisible(true);
-    for (const AvailableCommand &cmd : commands) {
-        QAction *action = m_commandsMenu->addAction(cmd.name());
-        action->setToolTip(cmd.description());
-        connect(action, &QAction::triggered, this, [this, cmd] {
-            m_inputEdit->setPlainText('/' + cmd.name() + QLatin1Char(' '));
-            m_inputEdit->moveCursor(QTextCursor::End);
-            m_inputEdit->setFocus();
-        });
-    }
+    // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+void ChatPanel::showCommandPalette()
+{
+    if (m_commands.isEmpty())
+        return;
+    auto *palette = new CommandPalette(m_commands, [this](const QString &name) {
+        m_inputEdit->setPlainText('/' + name + QLatin1Char(' '));
+        m_inputEdit->moveCursor(QTextCursor::End);
+        m_inputEdit->setFocus();
+    }, this);
+    palette->setToggleButton(m_commandsButton);
+    palette->popupAbove(m_inputBox);
+}
+// OPENMV-DIFF //
 
 void ChatPanel::updateContextBar()
 {
