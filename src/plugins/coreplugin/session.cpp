@@ -427,8 +427,12 @@ void SessionManagerPrivate::restoreStartupSession()
 {
     NANOTRACE_SCOPE("Core", "SessionManagerPrivate::restoreStartupSession");
     QString sessionToRestoreAtStartup = determineSessionToRestoreAtStartup();
-    if (!sessionToRestoreAtStartup.isEmpty())
-        ModeManager::activateMode(Core::Constants::MODE_EDIT);
+    // OPENMV-DIFF //
+    // Loading the session switches to its saved mode anyway; switching to Edit
+    // first only flashes Edit when the IDE reopens in another mode.
+    // if (!sessionToRestoreAtStartup.isEmpty())
+    //     ModeManager::activateMode(Core::Constants::MODE_EDIT);
+    // OPENMV-DIFF //
 
     // We have command line arguments, try to find a session in them
     QStringList arguments = PluginManager::arguments();

@@ -3025,8 +3025,10 @@ void ICorePrivate::restoreWindowState()
         }
     }
 
+    // Focus only: the IDE may be reopening in another mode (AI, Preferences),
+    // which activating the editor would switch away from to Edit.
     if (editor) {
-        EditorManager::activateEditor(editor);
+        EditorManager::activateEditor(editor, EditorManager::DoNotSwitchToEditMode);
     }
     // OPENMV-DIFF //
 }

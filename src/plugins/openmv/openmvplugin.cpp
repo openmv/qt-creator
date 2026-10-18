@@ -29,6 +29,7 @@
  */
 
 #include "openmvplugin.h"
+
 #include "openmvaimode.h"
 #include <acpclient/acpclientapi.h>
 #include <coreplugin/modemanager.h>
@@ -826,10 +827,21 @@ void OpenMVPlugin::setupModes()
 
         // Remember the mode (Edit, AI or Preferences) so the next launch opens in
         // it; restored at the end of delayedInitialize(). Written on each switch
-        // (in memory; saved with the other settings at exit).
+        // (in memory; saved with the other settings at exit), but not before the
+        // restore: startup switches to Edit by itself (opening the first script,
+        // restoring the session), which would overwrite the saved mode first.
+        m_startupMode = Utils::Id::fromSetting(Core::ICore::settings()->value(SETTINGS_GROUP "/" LAST_MODE));
+        // Start in it right away, so there's no flash of Edit first: just before
+        // the window shows (other plugins may switch modes while they start up);
+        // the startup steps that switch to Edit later are told not to.
+        connect(Core::ICore::instance(), &Core::ICore::coreAboutToOpen, this, [this] {
+            if(m_startupMode.isValid())
+                Core::ModeManager::activateMode(m_startupMode);
+        });
         connect(Core::ModeManager::instance(), &Core::ModeManager::currentModeChanged,
-                this, [](Utils::Id mode) {
-            Core::ICore::settings()->setValue(SETTINGS_GROUP "/" LAST_MODE, mode.toSetting());
+                this, [this](Utils::Id mode) {
+            if(m_modeRestored)
+                Core::ICore::settings()->setValue(SETTINGS_GROUP "/" LAST_MODE, mode.toSetting());
         });
 
         // Preferences is a mode on the strip, so the Edit menu doesn't repeat
@@ -880,8 +892,14 @@ void OpenMVPlugin::extensionsInitialized()
                            "    img = csi0.snapshot()\n"
                            "    print(clock.fps())\n").arg(Utils::Environment::systemEnvironment().toDictionary().userName(), QDate::currentDate().toString()).toUtf8();
 
+            // The script opened at startup doesn't switch to Edit when the IDE is
+            // reopening in another mode (see setupModes()).
+            const Core::EditorManager::OpenEditorFlags modeFlags =
+                ((!m_modeRestored) && m_startupMode.isValid() && (m_startupMode != Core::Constants::MODE_EDIT))
+                    ? Core::EditorManager::DoNotSwitchToEditMode : Core::EditorManager::NoFlags;
+
             TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(
-                Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, fixScriptForSensor(data, false, true)));
+                Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, fixScriptForSensor(data, false, true), QString(), modeFlags));
 
             if(editor)
             {
@@ -897,7 +915,7 @@ void OpenMVPlugin::extensionsInitialized()
                         editor->document()->setProperty("diffFilePath", QFileInfo(file).canonicalFilePath());
                         Core::EditorManager::addCurrentPositionToNavigationHistory();
                         editor->editorWidget()->configureGenericHighlighter();
-                        Core::EditorManager::activateEditor(editor);
+                        Core::EditorManager::activateEditor(editor, modeFlags);
 
                         QTimer::singleShot(0, this, [this, editor, data] () {
                             QString filePath = tempFileForPythonEditor(data, editor->document()->displayName());
@@ -3779,22 +3797,19 @@ bool OpenMVPlugin::delayedInitialize()
         // Reopen in the mode the IDE was closed in. Once startup is done: restoring
         // the last session (when all plugins are initialized) switches to Edit, as
         // does opening a file, so a zero-delay timer after that.
-        const Utils::Id lastMode = Utils::Id::fromSetting(
-            Core::ICore::settings()->value(SETTINGS_GROUP "/" LAST_MODE));
-        if(lastMode.isValid())
-        {
-            const auto restoreMode = [this, lastMode] {
-                QTimer::singleShot(0, this, [lastMode] {
-                    if(Core::ModeManager::currentModeId() != lastMode)
-                        Core::ModeManager::activateMode(lastMode);
-                });
-            };
-            if(ExtensionSystem::PluginManager::isInitializationDone())
-                restoreMode();
-            else
-                connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone,
-                        this, restoreMode, Qt::SingleShotConnection);
-        }
+        const auto restoreMode = [this] {
+            QTimer::singleShot(0, this, [this] {
+                if(m_startupMode.isValid() && (Core::ModeManager::currentModeId() != m_startupMode))
+                    Core::ModeManager::activateMode(m_startupMode);
+                m_modeRestored = true;
+                Core::ICore::settings()->setValue(SETTINGS_GROUP "/" LAST_MODE, Core::ModeManager::currentModeId().toSetting());
+            });
+        };
+        if(ExtensionSystem::PluginManager::isInitializationDone())
+            restoreMode();
+        else
+            connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone,
+                    this, restoreMode, Qt::SingleShotConnection);
 
         if(Core::EditorManager::currentEditor()
             ? Core::EditorManager::currentEditor()->document()

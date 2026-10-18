@@ -831,6 +831,8 @@ private:
     QRect m_mcpFbRoi;
     int m_mcpFbFocus = 0;
     class OpenMVAIMode *m_aiMode = Q_NULLPTR;
+    Utils::Id m_startupMode; // the mode the IDE was closed in, restored after startup
+    bool m_modeRestored = false; // until then, startup's own switches aren't remembered
     bool m_useGetState;
     int m_frameSizeDumpSpacing;
     int m_getScriptRunningSpacing;
