@@ -106,6 +106,7 @@ QWidget *FindInOpenFiles::createConfigWidget()
     if (!m_configWidget) {
         QLabel *label = new QLabel(Tr::tr("Please note that this only searches files that have been saved to disk."));
         label->setAlignment(Qt::AlignRight);
+        label->setWordWrap(true); // wraps in a narrow Search Results pane
         m_configWidget = label;
     }
     return m_configWidget;

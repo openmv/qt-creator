@@ -95,6 +95,8 @@ private:
 
     QString m_shellName;
     // OPENMV-DIFF //
+    QTimer *m_ptyResizeTimer = nullptr; // debounces resizing the shell's terminal
+    QSize m_pendingPtySize;
     // Git Bash's prompt starts with a newline; drop it before the first prompt.
     enum class LeadingNewline { Unchecked, Strip, Done };
     LeadingNewline m_leadingNewline = LeadingNewline::Unchecked;

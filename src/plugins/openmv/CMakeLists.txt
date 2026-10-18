@@ -1,6 +1,6 @@
 add_qtc_plugin(OpenMV
   DEPENDS Qt::PrintSupport Qt::SerialPort Qt::Svg
-  PLUGIN_DEPENDS Core TextEditor Python Copilot AcpClient
+  PLUGIN_DEPENDS Core TextEditor Python Copilot AcpClient LanguageClient
   SOURCES
     openmvplugin.cpp openmvplugin.h openmvtr.h
     openmvaimode.cpp openmvaimode.h

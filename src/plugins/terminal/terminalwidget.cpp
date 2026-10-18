@@ -385,7 +385,25 @@ bool TerminalWidget::resizePty(QSize newSize)
     if (!m_process || !m_process->ptyData() || !m_process->isRunning())
         return false;
 
-    m_process->ptyData()->resize(newSize);
+    // OPENMV-DIFF //
+    // m_process->ptyData()->resize(newSize);
+    // OPENMV-DIFF //
+    // Dragging the pane changes the size row by row; each resize made the shell
+    // (and Windows' ConPTY) redraw the prompt, which left stray copies of it.
+    // The view follows at once, but the shell only gets the final size, once the
+    // size has settled.
+    m_pendingPtySize = newSize;
+    if (!m_ptyResizeTimer) {
+        m_ptyResizeTimer = new QTimer(this);
+        m_ptyResizeTimer->setSingleShot(true);
+        m_ptyResizeTimer->setInterval(150);
+        connect(m_ptyResizeTimer, &QTimer::timeout, this, [this] {
+            if (m_process && m_process->ptyData() && m_process->isRunning())
+                m_process->ptyData()->resize(m_pendingPtySize);
+        });
+    }
+    m_ptyResizeTimer->start();
+    // OPENMV-DIFF //
     return true;
 }
 

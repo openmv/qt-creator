@@ -31,6 +31,12 @@
 #include "openmvplugin.h"
 
 #include "openmvtr.h"
+#include <texteditor/texteditorconstants.h>
+#include <utils/fadingindicator.h>
+#include <languageclient/client.h>
+#include <languageclient/languageclientmanager.h>
+#include <languageclient/languageclientsymbolsupport.h>
+#include <QPointer>
 
 #include <QGuiApplication>
 
@@ -1187,34 +1193,257 @@ bool OpenMVPlugin::openHelpForCursor(TextEditor::TextEditorWidget *widget)
             fqn = d->moduleName + QLatin1Char('.') + d->className + QLatin1Char('.') + d->name;
         }
 
-        if(!m_docUrls.contains(fqn))
+        if(openDocForName(fqn))
         {
-            continue;
+            return true;
         }
-
-        const QString uri = m_docUrls.value(fqn);
-        QString path = uri;
-        QString fragment;
-        const int hash = uri.indexOf(QLatin1Char('#'));
-
-        if(hash >= 0)
-        {
-            path = uri.left(hash);
-            fragment = uri.mid(hash + 1);
-        }
-
-        QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/") + path).toFSPathString());
-
-        if(!fragment.isEmpty())
-        {
-            url.setFragment(fragment);
-        }
-
-        openUrlOrWarn(url);
-        return true;
     }
 
     return false;
+}
+
+// The docs inventory name of a documentation entry: module -> "name",
+// function/class/module data -> "module.name", method/class constant ->
+// "module.class.name"; builtins without the "builtins." prefix.
+QString OpenMVPlugin::docNameOf(const documentation_t *d) const
+{
+    if(d->moduleName.isEmpty())
+    {
+        return d->name;
+    }
+
+    if(d->moduleName == QStringLiteral("builtins"))
+    {
+        return d->className.isEmpty() ? d->name : QString(d->className + QLatin1Char('.') + d->name);
+    }
+
+    if(d->className.isEmpty())
+    {
+        return d->moduleName + QLatin1Char('.') + d->name;
+    }
+
+    return d->moduleName + QLatin1Char('.') + d->className + QLatin1Char('.') + d->name;
+}
+
+// Opens the docs page (and anchor) of a fully-qualified name from the docs
+// inventory, e.g. "csi.CSI.reset"; false if the docs don't have it.
+bool OpenMVPlugin::openDocForName(const QString &fqn)
+{
+    if(!m_docUrls.contains(fqn))
+    {
+        return false;
+    }
+
+    const QString uri = m_docUrls.value(fqn);
+    QString path = uri;
+    QString fragment;
+    const int hash = uri.indexOf(QLatin1Char('#'));
+
+    if(hash >= 0)
+    {
+        path = uri.left(hash);
+        fragment = uri.mid(hash + 1);
+    }
+
+    QUrl url = QUrl::fromLocalFile(Core::ICore::allUsersResourcePath(QStringLiteral("html/") + path).toFSPathString());
+
+    if(!fragment.isEmpty())
+    {
+        url.setFragment(fragment);
+    }
+
+    openUrlOrWarn(url);
+    return true;
+}
+
+void OpenMVPlugin::showNoDocumentation(TextEditor::TextEditorWidget *widget, const QString &word)
+{
+    Utils::FadingIndicator::showText(widget,
+        word.isEmpty() ? Tr::tr("No documentation here")
+                       : Tr::tr("No documentation for \"%1\"").arg(word),
+        Utils::FadingIndicator::SmallText);
+}
+
+// The docs name for a definition the language server found, from where it is
+// in the stubs: the module is the stub's path ("csi.pyi" -> csi, "ml/utils.pyi"
+// -> ml.utils, "array-stubs/__init__.pyi" -> array), the class the nearest less
+// indented "class" line above the definition, then the word. Empty, with
+// *inStubs false, for a definition outside the stubs (the user's own code).
+QString OpenMVPlugin::docNameForDefinition(const Utils::FilePath &file, int line, const QString &word,
+                                           bool *inStubs) const
+{
+    *inStubs = false;
+    Utils::FilePaths roots = {Core::ICore::allUsersResourcePath(QStringLiteral("html/stubs")),
+                              Core::ICore::allUsersResourcePath(QStringLiteral("html-dev/stubs"))};
+
+    for(const QString &path : OpenMVThirdParty::stubPaths())
+    {
+        roots.append(Utils::FilePath::fromUserInput(path));
+    }
+
+    QString relative;
+
+    for(const Utils::FilePath &root : roots)
+    {
+        if(file.isChildOf(root))
+        {
+            relative = file.relativeChildPath(root).path();
+            break;
+        }
+    }
+
+    if(relative.isEmpty() || (!relative.endsWith(QStringLiteral(".pyi"))))
+    {
+        return QString();
+    }
+
+    *inStubs = true;
+    relative.chop(4);
+    QStringList parts = relative.split(QLatin1Char('/'), Qt::SkipEmptyParts);
+
+    for(QString &part : parts)
+    {
+        if(part.endsWith(QStringLiteral("-stubs")))
+        {
+            part.chop(6);
+        }
+    }
+
+    if((!parts.isEmpty()) && (parts.last() == QStringLiteral("__init__")))
+    {
+        parts.removeLast();
+    }
+
+    const QString module = parts.join(QLatin1Char('.'));
+
+    // The module itself (an import line, or the definition is the file's top).
+    if(word == parts.value(parts.size() - 1) && line <= 1)
+    {
+        return module;
+    }
+
+    // The enclosing class, if any.
+    QString className;
+    QFile stub(file.toFSPathString());
+
+    if(stub.open(QIODevice::ReadOnly | QIODevice::Text))
+    {
+        const QStringList lines = QString::fromUtf8(stub.readAll()).split(QLatin1Char('\n'));
+        const int index = line - 1; // the link's lines are 1-based
+
+        if((index >= 0) && (index < lines.size()))
+        {
+            const auto indentOf = [](const QString &text) {
+                int i = 0;
+                while((i < text.size()) && text.at(i).isSpace()) i++;
+                return i;
+            };
+
+            int indent = indentOf(lines.at(index));
+            static const QRegularExpression classRegEx(QStringLiteral("^\\s*class\\s+([A-Za-z_][A-Za-z0-9_]*)"));
+
+            for(int i = index - 1; (i >= 0) && (indent > 0); i--)
+            {
+                const QString &text = lines.at(i);
+
+                if(text.trimmed().isEmpty())
+                {
+                    continue;
+                }
+
+                const int textIndent = indentOf(text);
+
+                if(textIndent < indent)
+                {
+                    const QRegularExpressionMatch match = classRegEx.match(text);
+
+                    if(match.hasMatch())
+                    {
+                        className = match.captured(1);
+                        break;
+                    }
+
+                    indent = textIndent;
+                }
+            }
+        }
+    }
+
+    // Builtins are documented without the "builtins." prefix (print, str.split...).
+    QStringList name;
+
+    if(module != QStringLiteral("builtins"))
+    {
+        name.append(module);
+    }
+
+    if(!className.isEmpty())
+    {
+        name.append(className);
+    }
+
+    name.append(word);
+    return name.join(QLatin1Char('.'));
+}
+
+void OpenMVPlugin::contextHelp(TextEditor::TextEditorWidget *widget)
+{
+    QTextCursor wordCursor = widget->textCursor();
+    wordCursor.select(QTextCursor::WordUnderCursor);
+    const QString word = wordCursor.selectedText().trimmed();
+
+    const QPointer<TextEditor::TextEditorWidget> guard(widget);
+    const auto fallback = [this, guard, word] {
+        if(guard && (!openHelpForCursor(guard)))
+        {
+            showNoDocumentation(guard, word);
+        }
+    };
+
+    TextEditor::TextDocument *document = widget->textDocument();
+    LanguageClient::Client *client = LanguageClient::LanguageClientManager::clientForDocument(document);
+
+    if((!client) || (!client->reachable()))
+    {
+        fallback();
+        return;
+    }
+
+    const LanguageServerProtocol::MessageId id = client->symbolSupport().findLinkAt(document, widget->textCursor(),
+        [this, guard, word, fallback](const Utils::Link &link) {
+            if(!guard)
+            {
+                return;
+            }
+
+            if(!link.hasValidTarget())
+            {
+                fallback();
+                return;
+            }
+
+            bool inStubs = false;
+            const QString name = docNameForDefinition(link.targetFilePath, link.target.line, word, &inStubs);
+
+            if((!name.isEmpty()) && openDocForName(name))
+            {
+                return;
+            }
+
+            if(!inStubs)
+            {
+                // Defined in the user's own code: not an OpenMV API.
+                showNoDocumentation(guard, word);
+                return;
+            }
+
+            fallback();
+        }, false, LanguageClient::LinkTarget::SymbolDef);
+
+    if(!id.isValid())
+    {
+        fallback();
+    }
 }
 
 bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
@@ -1482,6 +1711,33 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                                                                                   providerMethods, providerMethodArgs,
                                                                                                   this);
 
+        // F1 on an OpenMV symbol opens its docs page in the external browser (the
+        // in-IDE help viewer can't render the docs well, and the Help plugin is
+        // disabled so F1 is free). A registered command, so it shows (and can be
+        // rebound) in the keyboard settings and can't be shadowed silently. Also
+        // bound to the Help key: Microsoft keyboards send that for F1 while their
+        // F Lock is off.
+        static bool contextHelpRegistered = false;
+
+        if(!contextHelpRegistered)
+        {
+            contextHelpRegistered = true;
+            QAction *contextHelpAction = new QAction(Tr::tr("Context Help"), this);
+            Core::Command *contextHelpCommand = Core::ActionManager::registerAction(contextHelpAction,
+                Utils::Id("OpenMV.ContextHelp"), Core::Context(TextEditor::Constants::C_TEXTEDITOR));
+            contextHelpCommand->setDefaultKeySequences({QKeySequence(Qt::Key_F1), QKeySequence(Qt::Key_Help)});
+            connect(contextHelpAction, &QAction::triggered, this, [this] {
+                TextEditor::BaseTextEditor *textEditor = TextEditor::BaseTextEditor::currentTextEditor();
+
+                if(!textEditor || !textEditor->document()->filePath().toFSPathString().endsWith(QStringLiteral(".py"), Qt::CaseInsensitive))
+                {
+                    return;
+                }
+
+                contextHelp(textEditor->editorWidget());
+            });
+        }
+
         connect(Core::EditorManager::instance(), &Core::EditorManager::editorCreated, this, [this, provider] (Core::IEditor *editor, const Utils::FilePath &filePath) {
             TextEditor::BaseTextEditor *textEditor = qobject_cast<TextEditor::BaseTextEditor *>(editor);
 
@@ -1489,18 +1745,8 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
             {
                 textEditor->textDocument()->setCompletionAssistProvider(provider);
 
-                // F1 on an OpenMV symbol opens its docs page in the external
-                // browser (the in-IDE help viewer can't render the docs well,
-                // and the Help plugin is disabled so F1 is free). Falls through
-                // silently when the symbol is not a documented OpenMV API.
-                TextEditor::TextEditorWidget *editorWidget = textEditor->editorWidget();
-                QAction *helpAction = new QAction(editorWidget);
-                helpAction->setShortcut(QKeySequence(Qt::Key_F1));
-                helpAction->setShortcutContext(Qt::WidgetWithChildrenShortcut);
-                editorWidget->addAction(helpAction);
-                connect(helpAction, &QAction::triggered, this, [this, editorWidget] {
-                    openHelpForCursor(editorWidget);
-                });
+                // F1 (context help) is the "OpenMV.ContextHelp" command registered
+                // below, not a per-editor action.
 
                 connect(textEditor->editorWidget(), &TextEditor::TextEditorWidget::lateTooltipOverrideRequested, this,
                     [this] (TextEditor::TextEditorWidget *widget, const QPoint &globalPos, int position, bool *handled, const QString &originalToolTip) {
@@ -1605,8 +1851,12 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                 const int wStart = qMin(cursor.position(), cursor.anchor());
                                 const bool isAttr = (wStart > 0) && (doc->characterAt(wStart - 1) == QLatin1Char('.'));
 
-                                // Same matcher F1 uses; the hover shows every match.
-                                for(const documentation_t *d : resolveDocSymbol(text, maybeModuleName, nextChar, isAttr))
+                                // Same matcher F1 uses. Several matches: the language server's
+                                // hover (it resolved the symbol) or, without one, a grid of all
+                                // of them. One match: checked against the server's definition.
+                                const QList<const documentation_t *> matches = resolveDocSymbol(text, maybeModuleName, nextChar, isAttr);
+
+                                for(const documentation_t *d : matches)
                                 {
                                     list.append(d->text);
                                 }
@@ -1682,6 +1932,67 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                         // the candidates are shown as a grid.
                                         showOriginalToolTip(originalToolTip);
                                         return;
+                                    }
+
+                                    // A name matching exactly one documented API may still be
+                                    // something else -- the user's own variable or function, or
+                                    // another API pylsp resolves it to. Ask the language server
+                                    // where it is defined before showing that one entry; the
+                                    // tooltip appears when it answers, if the mouse is still on
+                                    // the word.
+                                    if(matches.size() == 1)
+                                    {
+                                        LanguageClient::Client *client = LanguageClient::LanguageClientManager::clientForDocument(widget->textDocument());
+
+                                        if(client && client->reachable())
+                                        {
+                                            const QPointer<TextEditor::TextEditorWidget> guard(widget);
+                                            const QString expected = docNameOf(matches.first());
+                                            const QString entry = QStringLiteral("<table><tr><td style=\"padding:6px;\">") + list.first() + QStringLiteral("</td></tr></table>");
+                                            const auto stillHovering = [guard, globalPos] {
+                                                return guard && guard->isVisible()
+                                                    && ((QCursor::pos() - globalPos).manhattanLength() < 24);
+                                            };
+                                            QTextCursor at(widget->textDocument()->document());
+                                            at.setPosition(position);
+
+                                            const LanguageServerProtocol::MessageId id = client->symbolSupport().findLinkAt(widget->textDocument(), at,
+                                                [this, guard, globalPos, entry, expected, text, originalToolTip, showOriginalToolTip, stillHovering] (const Utils::Link &link) {
+                                                    if(!stillHovering())
+                                                    {
+                                                        return;
+                                                    }
+
+                                                    if(!link.hasValidTarget())
+                                                    {
+                                                        Utils::ToolTip::show(globalPos, entry, guard);
+                                                        return;
+                                                    }
+
+                                                    bool inStubs = false;
+                                                    const QString name = docNameForDefinition(link.targetFilePath, link.target.line, text, &inStubs);
+
+                                                    if(!inStubs)
+                                                    {
+                                                        return; // the user's own symbol: no OpenMV docs apply
+                                                    }
+
+                                                    if(name.isEmpty() || (name == expected))
+                                                    {
+                                                        Utils::ToolTip::show(globalPos, entry, guard);
+                                                    }
+                                                    else if(!originalToolTip.isEmpty())
+                                                    {
+                                                        showOriginalToolTip(originalToolTip); // another API: pylsp's hover describes it
+                                                    }
+                                                }, false, LanguageClient::LinkTarget::SymbolDef);
+
+                                            if(id.isValid())
+                                            {
+                                                Utils::ToolTip::hide();
+                                                return;
+                                            }
+                                        }
                                     }
 
                                     QString string;

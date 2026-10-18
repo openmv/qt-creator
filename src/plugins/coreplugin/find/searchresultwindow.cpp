@@ -53,6 +53,10 @@ namespace Internal {
             setFrameStyle(QFrame::NoFrame);
             setVerticalScrollBarPolicy(Qt::ScrollBarAsNeeded);
             setHorizontalScrollBarPolicy(Qt::ScrollBarAsNeeded);
+            // OPENMV-DIFF //
+            // The Find panel follows the pane's width (it has no fixed size now).
+            setWidgetResizable(true);
+            // OPENMV-DIFF //
         }
 
         QSize sizeHint() const override

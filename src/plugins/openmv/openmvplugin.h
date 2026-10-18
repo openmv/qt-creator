@@ -1021,6 +1021,15 @@ private:
     void loadDocUrls();
     QList<const documentation_t *> resolveDocSymbol(const QString &word, const QString &qualifier, const QChar &nextChar, bool isAttr) const;
     bool openHelpForCursor(TextEditor::TextEditorWidget *widget);
+    // F1: asks the Python language server where the symbol under the cursor is
+    // defined (it knows csi0 is a csi.CSI), and opens that API's docs; falls back
+    // to openHelpForCursor()'s name matching when it can't tell.
+    void contextHelp(TextEditor::TextEditorWidget *widget);
+    QString docNameForDefinition(const Utils::FilePath &file, int line, const QString &word,
+                                 bool *inStubs) const;
+    bool openDocForName(const QString &fqn);
+    QString docNameOf(const documentation_t *d) const; // e.g. "csi.CSI.reset"
+    void showNoDocumentation(TextEditor::TextEditorWidget *widget, const QString &word);
 
     void parseImports(const QString &fileText, const QString &moduleFolder, const QStringList &builtInModules, importDataList_t &targetModules, QStringList &errorModules);
     bool importHelper(const QByteArray &text);

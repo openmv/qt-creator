@@ -140,7 +140,9 @@ FindToolWindow::FindToolWindow(QWidget *parent)
     sizePolicy2.setHorizontalStretch(0);
     sizePolicy2.setVerticalStretch(10);
     m_uiConfigWidget->setSizePolicy(sizePolicy2);
-    m_uiConfigWidget->setMinimumSize(QSize(800, 0));
+    // OPENMV-DIFF //
+    // m_uiConfigWidget->setMinimumSize(QSize(800, 0));
+    // OPENMV-DIFF //
 
     setFocusProxy(m_searchTerm);
 
@@ -163,15 +165,31 @@ FindToolWindow::FindToolWindow(QWidget *parent)
     m_ignoreGeneratedFiles->setVisible(false);
     // OPENMV-DIFF //
 
-    Grid {
-        label, m_filterList, br,
-        m_searchLabel, m_searchTerm, br,
-        empty, m_optionsWidget, br,
-        Span(2, m_uiConfigWidget), br,
-        Span(2, Row { st, m_searchButton, m_replaceButton }), br,
+    // OPENMV-DIFF //
+    // Grid {
+    //     label, m_filterList, br,
+    //     m_searchLabel, m_searchTerm, br,
+    //     empty, m_optionsWidget, br,
+    //     Span(2, m_uiConfigWidget), br,
+    //     Span(2, Row { st, m_searchButton, m_replaceButton }), br,
+    // }.attachTo(this);
+    //
+    // layout()->setSizeConstraint(QLayout::SetFixedSize);
+    // OPENMV-DIFF //
+    // Fits the Search Results pane's width (its scroll area resizes this panel)
+    // instead of a fixed size with an 800 px minimum, which put a horizontal
+    // scroll bar under any narrower pane; the stretch keeps the rows at the top.
+    Column {
+        Grid {
+            label, m_filterList, br,
+            m_searchLabel, m_searchTerm, br,
+            empty, m_optionsWidget, br,
+            Span(2, m_uiConfigWidget), br,
+            Span(2, Row { st, m_searchButton, m_replaceButton }), br,
+        },
+        st,
     }.attachTo(this);
-
-    layout()->setSizeConstraint(QLayout::SetFixedSize);
+    // OPENMV-DIFF //
 
     connect(m_searchButton, &QAbstractButton::clicked, this, &FindToolWindow::search);
     connect(m_replaceButton, &QAbstractButton::clicked, this, &FindToolWindow::replace);

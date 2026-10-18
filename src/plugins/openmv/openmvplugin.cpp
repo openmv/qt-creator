@@ -3776,16 +3776,24 @@ bool OpenMVPlugin::delayedInitialize()
 
         QTimer::singleShot(2000, this, &OpenMVPlugin::showCopilotDialog);
 
-        // Reopen in the mode the IDE was closed in. After a zero-delay timer so it
-        // follows anything startup queued (opening a file switches to Edit).
+        // Reopen in the mode the IDE was closed in. Once startup is done: restoring
+        // the last session (when all plugins are initialized) switches to Edit, as
+        // does opening a file, so a zero-delay timer after that.
         const Utils::Id lastMode = Utils::Id::fromSetting(
             Core::ICore::settings()->value(SETTINGS_GROUP "/" LAST_MODE));
-        if(lastMode.isValid() && (lastMode != Core::ModeManager::currentModeId()))
+        if(lastMode.isValid())
         {
-            QTimer::singleShot(0, this, [lastMode] {
-                if(Core::ModeManager::currentModeId() != lastMode)
-                    Core::ModeManager::activateMode(lastMode);
-            });
+            const auto restoreMode = [this, lastMode] {
+                QTimer::singleShot(0, this, [lastMode] {
+                    if(Core::ModeManager::currentModeId() != lastMode)
+                        Core::ModeManager::activateMode(lastMode);
+                });
+            };
+            if(ExtensionSystem::PluginManager::isInitializationDone())
+                restoreMode();
+            else
+                connect(ExtensionSystem::PluginManager::instance(), &ExtensionSystem::PluginManager::initializationDone,
+                        this, restoreMode, Qt::SingleShotConnection);
         }
 
         if(Core::EditorManager::currentEditor()
