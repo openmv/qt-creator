@@ -7,6 +7,9 @@
 
 #include <QHash>
 // OPENMV-DIFF //
+#include <QPointer>
+// OPENMV-DIFF //
+// OPENMV-DIFF //
 #include <functional>
 // OPENMV-DIFF //
 // OPENMV-DIFF //
@@ -84,6 +87,7 @@ signals:
 
 protected:
     void resizeEvent(QResizeEvent *event) override;
+    bool eventFilter(QObject *watched, QEvent *event) override; // OPENMV-DIFF
 
 private:
     void updateElapsedTimeLabel();
@@ -114,6 +118,16 @@ private:
     AuthenticationWidget *m_currentAuthWidget = nullptr;
     QString m_agentIconUrl;
     bool m_autoScroll = true;
+    // OPENMV-DIFF //
+    // Scrolled up, the view keeps the message at its top where it is while the
+    // messages above it change height (re-wrapping on a resize, say).
+    QPointer<QWidget> m_anchor;
+    int m_anchorOffset = 0; // its top, relative to the view's top
+    double m_anchorFraction = -1; // or, scrolled partway into it, how far (0..1)
+    bool m_restoringAnchor = false;
+    void captureAnchor();
+    void restoreAnchor();
+    // OPENMV-DIFF //
     UserMessageWidget *m_lastUserMessage = nullptr; // OPENMV-DIFF: while it's the last widget
 };
 

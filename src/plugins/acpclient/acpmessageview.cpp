@@ -32,6 +32,7 @@
 #include <QAbstractButton>
 #include <QContextMenuEvent>
 #include <QEnterEvent>
+#include <QScopedValueRollback>
 #include <QMenu>
 // OPENMV-DIFF //
 
@@ -408,6 +409,7 @@ public:
             // OPENMV-DIFF //
         });
 
+        // Batched while text streams in; a resize updates it at once (resizeEvent()).
         connect(document()->documentLayout(),
                 &QAbstractTextDocumentLayout::documentSizeChanged,
                 this, [this] {
@@ -432,6 +434,18 @@ public:
     }
 
     QString rawText() const { return m_rawText; } // OPENMV-DIFF: the Markdown, for copying
+
+    // OPENMV-DIFF //
+    // A new width re-wraps the text right away (in the base class); take the new
+    // height in the same pass. Waiting for the queued update painted a frame of
+    // re-wrapped text at the old height, which flickered while dragging a splitter.
+    void resizeEvent(QResizeEvent *event) override
+    {
+        Utils::MarkdownBrowser::resizeEvent(event);
+        if (event->size().width() != event->oldSize().width())
+            updateBrowserHeight();
+    }
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     // The browser's menu without "Copy Link Location" unless there's a link to copy.
@@ -1318,8 +1332,16 @@ AcpMessageView::AcpMessageView(QWidget *parent)
     // Track whether user has scrolled up to suppress auto-scroll
     connect(verticalScrollBar(), &QScrollBar::valueChanged, this, [this](int value) {
         m_autoScroll = (value >= verticalScrollBar()->maximum() - 10);
+        // OPENMV-DIFF //
+        if (!m_restoringAnchor)
+            captureAnchor();
+        // OPENMV-DIFF //
     });
-    connect(verticalScrollBar(), &QScrollBar::rangeChanged, this, &AcpMessageView::scrollToBottom);
+    // OPENMV-DIFF //
+    // connect(verticalScrollBar(), &QScrollBar::rangeChanged, this, &AcpMessageView::scrollToBottom);
+    connect(verticalScrollBar(), &QScrollBar::rangeChanged, this, &AcpMessageView::restoreAnchor);
+    // OPENMV-DIFF //
+
 
     m_thoughtsVisible = Core::ICore::settings()->value(SETTINGS_THOUGHTS_VISIBLE, true).toBool();
 }
@@ -1749,7 +1771,54 @@ void AcpMessageView::addWidget(QWidget *widget)
     m_lastUserMessage = nullptr; // OPENMV-DIFF: set again by addUserMessage
     // Insert before the trailing elapsed label and the bottom stretch
     m_layout->insertWidget(m_layout->count() - 2, widget);
+    widget->installEventFilter(this); // OPENMV-DIFF: moves of the scroll anchor
 }
+
+// OPENMV-DIFF //
+// The message at the top of the view, and where it sits there.
+void AcpMessageView::captureAnchor()
+{
+    const int top = verticalScrollBar()->value();
+    m_anchor = nullptr;
+    for (int i = 0; i < m_layout->count(); ++i) {
+        QWidget *widget = m_layout->itemAt(i)->widget();
+        if (widget && widget->isVisible() && widget->geometry().bottom() >= top) {
+            m_anchor = widget;
+            m_anchorOffset = widget->y() - top;
+            // Partway into a message, its re-wrapped text moves within it: keep the
+            // same proportion of the way through it rather than the same pixels.
+            m_anchorFraction = (m_anchorOffset < 0 && widget->height() > 0)
+                                   ? double(top - widget->y()) / widget->height()
+                                   : -1;
+            return;
+        }
+    }
+}
+
+// After a re-layout: at the end, stay at the end; scrolled up, put the message
+// that was at the top back where it was.
+void AcpMessageView::restoreAnchor()
+{
+    if (m_autoScroll || !m_anchor) {
+        scrollToBottom();
+        return;
+    }
+    const QScopedValueRollback guard(m_restoringAnchor, true);
+    if (m_anchorFraction >= 0)
+        verticalScrollBar()->setValue(m_anchor->y() + qRound(m_anchorFraction * m_anchor->height()));
+    else
+        verticalScrollBar()->setValue(m_anchor->y() - m_anchorOffset);
+}
+
+bool AcpMessageView::eventFilter(QObject *watched, QEvent *event)
+{
+    if ((event->type() == QEvent::Move || event->type() == QEvent::Resize)
+        && watched == m_anchor && !m_autoScroll) {
+        restoreAnchor();
+    }
+    return QScrollArea::eventFilter(watched, event);
+}
+// OPENMV-DIFF //
 
 int AcpMessageView::contentMaxWidth() const
 {
@@ -1767,6 +1836,19 @@ void AcpMessageView::resizeEvent(QResizeEvent *event)
     const int maxW = contentMaxWidth();
     for (ToolCallDetailWidget *detail : std::as_const(m_toolCallDetailWidgets))
         detail->setContentMaxWidth(maxW);
+    // OPENMV-DIFF //
+    // A new width re-wraps the messages, which take their new heights right away,
+    // but the list's height (and the scroll range) only follows through queued
+    // layout requests, a pass or more later; a frame painted in between showed the
+    // chat shifted or with a gap, a flicker while dragging a splitter. Settle them
+    // here (each pass can queue the next level up), then keep the view on what it
+    // showed: the end, or the message that was at the top.
+    if (event->size().width() != event->oldSize().width()) {
+        for (int pass = 0; pass < 4; ++pass)
+            QCoreApplication::sendPostedEvents(nullptr, QEvent::LayoutRequest);
+        restoreAnchor();
+    }
+    // OPENMV-DIFF //
 }
 
 void AcpMessageView::updateElapsedTimeLabel()

@@ -28,6 +28,7 @@
 #include <QDragEnterEvent>
 #include <QMimeData>
 #include <QScopeGuard>
+#include <QScopedValueRollback>
 #include <QAbstractButton>
 #include <QLocale>
 #include <QPainterPath>
@@ -559,25 +560,31 @@ public:
         : QScrollBar(Qt::Vertical)
         , m_source(source)
     {
+        // Follows the view's bar without echoing back: copying its value before its
+        // new range clamped it to the old one, and passing that back scrolled the
+        // chat a few pixels off for a frame on every resize (a flicker).
         connect(source, &QScrollBar::rangeChanged, this, [this] { sync(); });
-        connect(source, &QScrollBar::valueChanged, this, [this](int value) {
-            if (pageStep() != m_source->pageStep())
-                sync();
-            setValue(value);
+        connect(source, &QScrollBar::valueChanged, this, [this] { sync(); });
+        // Only the user's own moves (drag, click, wheel) go the other way.
+        connect(this, &QScrollBar::valueChanged, this, [this](int value) {
+            if (!m_syncing)
+                m_source->setValue(value);
         });
-        connect(this, &QScrollBar::valueChanged, source, &QScrollBar::setValue);
         sync();
     }
 
 private:
     void sync()
     {
+        const QScopedValueRollback guard(m_syncing, true);
         setRange(m_source->minimum(), m_source->maximum());
         setPageStep(m_source->pageStep());
         setSingleStep(m_source->singleStep());
         setValue(m_source->value());
         setVisible(m_source->maximum() > m_source->minimum());
     }
+
+    bool m_syncing = false;
 
     QScrollBar *m_source;
 };
@@ -838,14 +845,13 @@ ChatPanel::ChatPanel(QWidget *parent)
     inputContainerLayout->addLayout(editRow);
     bottomRow->hide();
 
-    // Esc stops the agent while it works.
-    auto *stopShortcut = new QShortcut(QKeySequence(Qt::Key_Escape), this);
-    stopShortcut->setContext(Qt::WidgetWithChildrenShortcut);
-    stopShortcut->setObjectName("StopShortcut");
-    stopShortcut->setEnabled(false); // only while the agent works: Esc is free otherwise
-    connect(stopShortcut, &QShortcut::activated, this, [this] {
-        if (m_prompting)
-            requestCancel();
+    // Esc in the input stops the agent while it works (claimed there, ahead of the
+    // IDE's own Esc action, only then).
+    m_inputEdit->setEscapeHandler([this] {
+        if (!m_prompting)
+            return false;
+        requestCancel();
+        return true;
     });
     // OPENMV-DIFF //
 
@@ -945,8 +951,6 @@ void ChatPanel::setPrompting(bool prompting)
     m_sendButton->setKind(prompting ? ChatActionButton::Stop : ChatActionButton::Send);
     m_sendButton->setToolTip(prompting ? Tr::tr("Stop (Esc)") : Tr::tr("Send (Enter)"));
     m_contextGauge->setClickable(m_canCompact && !prompting);
-    if (auto *stopShortcut = findChild<QShortcut *>("StopShortcut"))
-        stopShortcut->setEnabled(prompting);
     if (!prompting && !m_queue.isEmpty())
         QTimer::singleShot(0, this, [this] { sendQueuedMessages(); });
     // OPENMV-DIFF //
