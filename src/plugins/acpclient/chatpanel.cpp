@@ -1005,6 +1005,13 @@ void ChatPanel::updateConfigOptions(const QList<SessionConfigOption> &agentOptio
             QSizePolicy policy = combo->sizePolicy();
             policy.setHorizontalPolicy(QSizePolicy::Preferred);
             combo->setSizePolicy(policy);
+            // OPENMV-DIFF //
+            // Room permitting, the whole value shows; short of it the combo shrinks
+            // (its text cut short with "...") to about six characters before the
+            // options fold into the gear menu (updateConfigOverflow()).
+            combo->setMinimumWidth(combo->fontMetrics().horizontalAdvance(QString(6, QLatin1Char('x')))
+                                   + 2 * PaddingHM + 16 /* arrow */);
+            // OPENMV-DIFF //
 
             if (option.description().has_value())
                 combo->setToolTip(*option.description());
@@ -1144,7 +1151,11 @@ void ChatPanel::updateConfigOverflow()
     // Re-enable widget so its sizeHint reflects natural width
     m_configOptionsWidget->setVisible(true);
     const int agentW = m_agentLabel ? m_agentLabel->sizeHint().width() : 0;
-    const int configW = m_configOptionsWidget->sizeHint().width();
+    // OPENMV-DIFF //
+    // const int configW = m_configOptionsWidget->sizeHint().width();
+    // Fold only once the options don't fit even shrunk (combos and labels give).
+    const int configW = m_configOptionsWidget->minimumSizeHint().width();
+    // OPENMV-DIFF //
     const int reserved = agentW + PaddingHM * 2 + GapHM * 3;
     const bool collapse = (configW + reserved) > width();
     m_configOptionsWidget->setVisible(!collapse);
