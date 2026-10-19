@@ -6,6 +6,8 @@
 #include "acpclienttr.h"
 #include "acppermissionhandler.h"
 #include "acpsettings.h"
+
+#include <app/app_version.h> // OPENMV-DIFF
 #include "chatinputedit.h"
 #include "chatpanel.h"
 #include "sessionpickerwidget.h"
@@ -44,6 +46,41 @@ using namespace Utils;
 using namespace ProjectExplorer;
 
 namespace AcpClient::Internal {
+
+// OPENMV-DIFF //
+// For a permission request to use one of the IDE's own MCP tools, the option to
+// allow it this once (every call is answered here, and "always" would make Claude
+// write a settings file into the user's project); nothing for any other tool. Agents name MCP
+// tools after their server: "mcp__OpenMV_IDE__openmv_camera_connect" (Claude,
+// in the request's _meta), or with the server's name in the title.
+static std::optional<QString> ideToolPermission(const Acp::RequestPermissionRequest &request)
+{
+    const QString server = QLatin1String(Core::Constants::IDE_DISPLAY_NAME);
+    QString sanitized = server;
+    sanitized.replace(QRegularExpression("[^A-Za-z0-9_-]"), "_");
+
+    const Acp::ToolCallUpdate &toolCall = request.toolCall();
+    const QString toolName = toolCall._meta()
+                                 ? toolCall._meta()->value("claudeCode").toObject()
+                                       .value("toolName").toString()
+                                 : QString();
+    const QString title = toolCall.title().value_or(QString());
+    const QString prefix = "mcp__" + sanitized + "__";
+    const bool ideTool = toolName.startsWith(prefix) || title.startsWith(prefix)
+                         || title.contains(server) || title.contains(sanitized);
+    if (!ideTool)
+        return std::nullopt;
+
+    std::optional<QString> allowAlways;
+    for (const Acp::PermissionOption &option : request.options()) {
+        if (option.kind() == Acp::PermissionOptionKind::allow_once)
+            return option.optionId();
+        if (option.kind() == Acp::PermissionOptionKind::allow_always && !allowAlways)
+            allowAlways = option.optionId();
+    }
+    return allowAlways;
+}
+// OPENMV-DIFF //
 
 AcpChatTab::AcpChatTab(QWidget *parent)
     : QWidget(parent)
@@ -477,9 +514,16 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         // if (m_pendingPrompt.isEmpty()) {
         if (m_pendingPrompt.isEmpty() && m_pendingFiles.isEmpty() && m_pendingImages.isEmpty()) {
         // OPENMV-DIFF //
-            m_chatPanel->appendAgentText(
-                "Cute Greetings,\n\n your AI Agent is ready and you can start chatting.");
-            m_chatPanel->finishAgentMessage();
+            // OPENMV-DIFF //
+            // m_chatPanel->appendAgentText(
+            //     "Cute Greetings,\n\n your AI Agent is ready and you can start chatting.");
+            // m_chatPanel->finishAgentMessage();
+            // A note from the IDE, not something the agent said.
+            m_chatPanel->addStatusMessage(
+                Tr::tr("%1 is ready.")
+                    .arg(m_controller->agentName().isEmpty() ? Tr::tr("The agent")
+                                                             : m_controller->agentName()));
+            // OPENMV-DIFF //
         } else  {
             const QString text = m_pendingPrompt;
             m_pendingPrompt.clear();
@@ -603,6 +647,14 @@ AcpChatTab::AcpChatTab(QWidget *parent)
     });
     connect(m_controller, &AcpChatController::permissionRequested,
             this, [this](const QJsonValue &id, const Acp::RequestPermissionRequest &request) {
+        // OPENMV-DIFF //
+        // The IDE's own tools (its MCP server: the camera, scripts, editors) are
+        // allowed without asking: using the IDE is what the chat in it is for.
+        if (const std::optional<QString> option = ideToolPermission(request)) {
+            m_controller->sendPermissionResponse(id, *option);
+            return;
+        }
+        // OPENMV-DIFF //
         m_chatPanel->addPermissionRequest(id, request);
     });
     connect(m_chatPanel, &ChatPanel::permissionOptionSelected,

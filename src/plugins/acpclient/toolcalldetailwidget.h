@@ -11,6 +11,9 @@
 
 #include <optional>
 
+#include <QImage> // OPENMV-DIFF
+#include <QSet> // OPENMV-DIFF
+
 class QLabel;
 
 namespace Utils {
@@ -26,6 +29,17 @@ QWidget *toolCallStatusWidget(Acp::ToolCallStatus status, QWidget *parent = null
 QColor toolCallBorderColor(Acp::ToolCallStatus status);
 std::optional<Utils::Icon> iconForToolKind(std::optional<Acp::ToolKind> kind);
 
+// OPENMV-DIFF //
+// A script the agent ran on the camera: a chip (Python icon, "script.py · N
+// lines") that opens it in the editor, as examples open, when clicked.
+QWidget *createScriptChip(const QString &script, const QString &name, QWidget *parent = nullptr);
+int chipHeight(const QFontMetrics &fm); // of the chips in tool call header rows
+// A tool's title for display: "mcp__OpenMV_IDE__open_file" -> "Open file · OpenMV IDE";
+// other titles as they are.
+QString displayToolTitle(const QString &title);
+void openScriptInEditor(const QString &script, const QString &name);
+// OPENMV-DIFF //
+
 class ToolCallDetailWidget : public CollapsibleFrame
 {
     Q_OBJECT
@@ -37,6 +51,15 @@ public:
     void applyStatus(Acp::ToolCallStatus status);
     void updateContent(const Acp::ToolCallUpdate &update);
     void setContentMaxWidth(int width);
+    // OPENMV-DIFF //
+    QString script() const { return m_script; } // the script it ran, if it ran one
+    QString scriptName() const { return m_scriptName; } // its file name, if the agent gave one
+    QImage latestImage() const { return m_latestImage; } // the last image it returned
+
+signals:
+    void scriptFound(const QString &script, const QString &name);
+    void imageFound(const QImage &image);
+    // OPENMV-DIFF //
 
 protected:
     void paintEvent(QPaintEvent *e) override;
@@ -60,6 +83,17 @@ private:
     LazyMarkdownBrowser *m_rawInputContent = nullptr;
     // OPENMV-DIFF //
     Acp::ToolCallStatus m_status = Acp::ToolCallStatus::in_progress;
+    // OPENMV-DIFF //
+    QString m_toolName; // e.g. "mcp__OpenMV_IDE__openmv_script_run"
+    bool isIdeTool() const; // one of the IDE's own MCP tools
+    QSet<size_t> m_imageHashes; // images shown, so a repeated update adds none
+    QImage m_latestImage;
+    void addImage(const QByteArray &encoded);
+    void addImagesFrom(const QJsonValue &value);
+    QString m_script;
+    void setScript(const QString &script, const QString &name);
+    QString m_scriptName;
+    // OPENMV-DIFF //
     int m_contentMaxWidth = -1;
 };
 

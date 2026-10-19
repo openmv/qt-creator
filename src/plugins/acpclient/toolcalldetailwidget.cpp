@@ -8,6 +8,15 @@
 #include <coreplugin/editormanager/editormanager.h>
 
 #include <utils/link.h>
+// OPENMV-DIFF //
+#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginspec.h>
+#include <utils/fsengine/fileiconprovider.h>
+
+#include <QAbstractButton>
+#include <app/app_version.h>
+#include <QRegularExpression>
+// OPENMV-DIFF //
 #include <utils/markdownbrowser.h>
 #include <utils/progressindicator.h>
 #include <utils/qtcwidgets.h>
@@ -98,6 +107,116 @@ private:
 };
 // OPENMV-DIFF //
 
+// OPENMV-DIFF //
+class ScriptChip : public QAbstractButton
+{
+public:
+    ScriptChip(const QString &script, const QString &name, QWidget *parent)
+        : QAbstractButton(parent)
+    {
+        setAttribute(Qt::WA_Hover);
+        setCursor(Qt::PointingHandCursor);
+        setFocusPolicy(Qt::NoFocus);
+        setToolTip(Tr::tr("Open in Editor"));
+        const int lines = script.count(QLatin1Char('\n')) + (script.endsWith('\n') ? 0 : 1);
+        // The name the agent gave it (an example's, say), else "script.py".
+        QString fileName = Utils::FilePath::fromUserInput(name.trimmed()).fileName();
+        if (fileName.isEmpty())
+            fileName = QStringLiteral("script.py");
+        else if (!fileName.endsWith(QLatin1String(".py"), Qt::CaseInsensitive))
+            fileName += QStringLiteral(".py");
+        setText(lines == 1 ? Tr::tr("%1 \u00b7 1 line").arg(fileName)
+                           : Tr::tr("%1 \u00b7 %2 lines").arg(fileName).arg(lines));
+        m_icon = Utils::FileIconProvider::icon(Utils::FilePath::fromString("script.py"));
+        connect(this, &QAbstractButton::clicked, this,
+                [script, fileName] { openScriptInEditor(script, fileName); });
+    }
+
+    QSize sizeHint() const override
+    {
+        const QFontMetrics fm = fontMetrics();
+        // No taller than a line of text: the header rows it sits in (whose
+        // expand arrow is top-aligned) keep their height.
+        return QSize(PaddingHS + iconSize() + GapHXs + fm.horizontalAdvance(text()) + PaddingHM,
+                     chipHeight(fm));
+    }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        QColor fill = Utils::creatorColor(Utils::Theme::Token_Foreground_Subtle);
+        if (underMouse())
+            fill = fill.lighter(125);
+        Utils::StyleHelper::drawCardBg(&p, rect(), fill, Qt::NoPen, RadiusS);
+        const int icon = iconSize();
+        const QRect iconRect(PaddingHS, (height() - icon) / 2, icon, icon);
+        m_icon.paint(&p, iconRect);
+        p.setPen(Utils::creatorColor(Utils::Theme::Token_Text_Default));
+        p.drawText(rect().adjusted(PaddingHS + iconSize() + GapHXs, 0, -PaddingHM, 0),
+                   Qt::AlignLeft | Qt::AlignVCenter, text());
+    }
+
+private:
+    int iconSize() const { return 16; }
+
+    QIcon m_icon;
+};
+
+QString displayToolTitle(const QString &title)
+{
+    static const QRegularExpression mcpName(QStringLiteral("^mcp__(.+?)__(.+)$"));
+    const QRegularExpressionMatch match = mcpName.match(title.trimmed());
+    if (!match.hasMatch())
+        return title;
+    const QString server = QString(match.captured(1)).replace(QLatin1Char('_'), QLatin1Char(' '));
+    QString tool = match.captured(2);
+    if (tool.startsWith(QLatin1String("openmv_"))) // the IDE's tools all carry it
+        tool = tool.mid(7);
+    tool.replace(QLatin1Char('_'), QLatin1Char(' '));
+    if (!tool.isEmpty())
+        tool[0] = tool[0].toUpper();
+    return tool + QStringLiteral(" \u00b7 ") + server;
+}
+
+int chipHeight(const QFontMetrics &fm)
+{
+    return qMax(16, fm.height()) + 2 * PaddingVXs;
+}
+
+QWidget *createScriptChip(const QString &script, const QString &name, QWidget *parent)
+{
+    return new ScriptChip(script, name, parent);
+}
+
+// Through the OpenMV plugin (as examples open), else as a plain untitled tab.
+void openScriptInEditor(const QString &script, const QString &name)
+{
+    for (ExtensionSystem::PluginSpec *spec : ExtensionSystem::PluginManager::plugins()) {
+        if (spec->id() == QLatin1String("openmv") && spec->plugin()
+            && QMetaObject::invokeMethod(spec->plugin(), "openScriptInEditor",
+                                         Q_ARG(QString, script), Q_ARG(QString, name))) {
+            return;
+        }
+    }
+    QString titlePattern = QStringLiteral("script_$.py");
+    Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern,
+                                                script.toUtf8());
+}
+
+// The tool's name: Claude's "mcp__<server>__<tool>" in _meta, else the title.
+static QString toolNameOf(const std::optional<QJsonObject> &meta, const QString &title)
+{
+    if (meta) {
+        const QString name = meta->value("claudeCode").toObject().value("toolName").toString();
+        if (!name.isEmpty())
+            return name;
+    }
+    return title;
+}
+// OPENMV-DIFF //
+
 QWidget *toolCallStatusWidget(ToolCallStatus status, QWidget *parent)
 {
     if (status == ToolCallStatus::in_progress)
@@ -173,7 +292,11 @@ ToolCallDetailWidget::ToolCallDetailWidget(const ToolCall &toolCall, QWidget *pa
         m_headerLayout->addWidget(kindIcon);
     }
 
-    m_titleLabel = new Utils::ElidingLabel(toolCall.title(), this);
+    // OPENMV-DIFF //
+    // m_titleLabel = new Utils::ElidingLabel(toolCall.title(), this);
+    m_titleLabel = new Utils::ElidingLabel(displayToolTitle(toolCall.title()), this);
+    m_titleLabel->setToolTip(toolCall.title());
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // Elided text may shrink below its full width (the OpenMV IDE's
     // ElidingLabel no longer sets this): a long title made the chat wider
@@ -184,8 +307,28 @@ ToolCallDetailWidget::ToolCallDetailWidget(const ToolCall &toolCall, QWidget *pa
     m_headerLayout->addWidget(m_titleLabel, 1);
 
     m_status = status;
+    m_toolName = toolNameOf(toolCall._meta(), toolCall.title()); // OPENMV-DIFF
     populateContent(toolCall);
 }
+
+// OPENMV-DIFF //
+// The script, on a chip in the header and as highlighted code in the body.
+void ToolCallDetailWidget::setScript(const QString &script, const QString &name)
+{
+    if (script.isEmpty() || script == m_script)
+        return;
+    const bool first = m_script.isEmpty();
+    m_script = script;
+    m_scriptName = name;
+    if (first) {
+        QWidget *chip = createScriptChip(script, name, this);
+        m_headerLayout->addWidget(chip);
+        setFirstRowHeight(chip->sizeHint().height());
+    }
+    addMarkdownContent(QStringLiteral("```python\n") + script + QStringLiteral("\n```"));
+    emit scriptFound(script, name);
+}
+// OPENMV-DIFF //
 
 void ToolCallDetailWidget::applyStatus(ToolCallStatus status)
 {
@@ -228,10 +371,29 @@ void ToolCallDetailWidget::updateContent(const ToolCallUpdate &update)
     if (const auto status = update.status())
         applyStatus(*status);
     if (const auto title = update.title(); title && !title->isEmpty())
-        m_titleLabel->setText(*title);
+    {
+        // OPENMV-DIFF //
+        // m_titleLabel->setText(*title);
+        m_titleLabel->setText(displayToolTitle(*title));
+        m_titleLabel->setToolTip(*title);
+        // OPENMV-DIFF //
+    }
+    // OPENMV-DIFF //
+    if (const QString name = toolNameOf(update._meta(), update.title().value_or(QString()));
+        !name.isEmpty() && (m_toolName.isEmpty() || name.startsWith("mcp__"))) {
+        m_toolName = name;
+    }
+    // OPENMV-DIFF //
 
     if (const auto &rawInput = update.rawInput())
         addRawInputContent(*rawInput);
+
+    // OPENMV-DIFF //
+    // Images the tool returned (a camera frame, say): agents pass the tool's raw
+    // result along, images included, while the text content carries none.
+    if (const auto &rawOutput = update.rawOutput())
+        addImagesFrom(*rawOutput);
+    // OPENMV-DIFF //
 
     // Parse updated content if available
     if (const auto &contentArr = update.content()) {
@@ -363,11 +525,164 @@ void ToolCallDetailWidget::addTerminalContent(const Terminal &terminal)
     addBodyWidget(label);
 }
 
+// OPENMV-DIFF //
+// A fenced block of plain text, with a fence its text can't close.
+static QString fencedText(QString text)
+{
+    text.replace(QStringLiteral("\r\n"), QStringLiteral("\n"));
+    text = text.trimmed();
+    const QString fence = text.contains(QStringLiteral("```")) ? QStringLiteral("~~~")
+                                                               : QStringLiteral("```");
+    return fence + QStringLiteral("text\n") + text + QLatin1Char('\n') + fence;
+}
+
+// The result of one of the IDE's own tools, which is a JSON object, laid out:
+// the terminal output and any traceback as text blocks, the errors as a list,
+// the log, then short facts (ok, elapsedMs, ...) on one line and anything else
+// as compact JSON. Empty if it isn't such an object.
+static QString ideResultMarkdown(const QString &text)
+{
+    QJsonParseError error;
+    const QJsonDocument document = QJsonDocument::fromJson(text.toUtf8(), &error);
+    if (error.error != QJsonParseError::NoError || !document.isObject())
+        return {};
+    const QJsonObject result = document.object();
+
+    QStringList parts;
+    if (const QString output = result.value("output").toString(); !output.trimmed().isEmpty())
+        parts << QStringLiteral("**Output**\n\n") + fencedText(output);
+    if (const QString lastError = result.value("lastError").toString(); !lastError.trimmed().isEmpty())
+        parts << QStringLiteral("**Error**\n\n") + fencedText(lastError);
+    if (const QJsonArray errors = result.value("errors").toArray(); !errors.isEmpty()) {
+        QStringList items;
+        for (const QJsonValue &value : errors) {
+            const QJsonObject item = value.toObject();
+            const QString title = item.value("title").toString();
+            const QString body = item.value("text").toString().simplified();
+            items << QStringLiteral("- ") + (title.isEmpty() ? body
+                                                             : QStringLiteral("**") + title
+                                                                   + QStringLiteral("**") + (body.isEmpty() ? QString() : QStringLiteral(": ") + body));
+        }
+        parts << QStringLiteral("**Errors**\n\n") + items.join(QLatin1Char('\n'));
+    }
+    if (const QJsonArray log = result.value("log").toArray(); !log.isEmpty()) {
+        QStringList lines;
+        for (const QJsonValue &value : log)
+            lines << value.toString();
+        parts << QStringLiteral("*") + lines.join(QStringLiteral("; ")) + QStringLiteral("*");
+    }
+
+    QStringList facts;
+    QJsonObject rest;
+    for (auto it = result.constBegin(); it != result.constEnd(); ++it) {
+        static const QStringList shown = {"output", "lastError", "errors", "log"};
+        if (shown.contains(it.key()))
+            continue;
+        const QJsonValue value = it.value();
+        if (value.isBool())
+            facts << it.key() + QStringLiteral(": ") + (value.toBool() ? QStringLiteral("yes") : QStringLiteral("no"));
+        else if (value.isDouble())
+            facts << it.key() + QStringLiteral(": ") + QString::number(value.toDouble());
+        else if (value.isString() && value.toString().size() <= 80 && !value.toString().contains('\n'))
+            facts << it.key() + QStringLiteral(": ") + value.toString();
+        else if (!value.isNull())
+            rest.insert(it.key(), value);
+    }
+    if (!facts.isEmpty())
+        parts << facts.join(QStringLiteral(" \u00b7 "));
+    if (!rest.isEmpty()) {
+        parts << QStringLiteral("```json\n")
+                     + QString::fromUtf8(QJsonDocument(rest).toJson(QJsonDocument::Indented)).trimmed()
+                     + QStringLiteral("\n```");
+    }
+    return parts.join(QStringLiteral("\n\n"));
+}
+
+// Image blocks in a tool result, as MCP ({type: image, data, mimeType}) or the
+// Anthropic API ({type: image, source: {data, media_type}}) put them, at any depth.
+void ToolCallDetailWidget::addImagesFrom(const QJsonValue &value)
+{
+    if (value.isArray()) {
+        for (const QJsonValue &item : value.toArray())
+            addImagesFrom(item);
+        return;
+    }
+    if (!value.isObject())
+        return;
+    const QJsonObject object = value.toObject();
+    if (object.value("type").toString() == QLatin1String("image")) {
+        const QString data = object.value("data").isString()
+                                 ? object.value("data").toString()
+                                 : object.value("source").toObject().value("data").toString();
+        if (!data.isEmpty())
+            addImage(data.toLatin1());
+        return;
+    }
+    for (const QString key : {QStringLiteral("content"), QStringLiteral("resource")})
+        addImagesFrom(object.value(key));
+}
+
+// A rounded thumbnail of an image the tool returned, its size in the tooltip.
+void ToolCallDetailWidget::addImage(const QByteArray &encoded)
+{
+    const QByteArray bytes = QByteArray::fromBase64(encoded);
+    const size_t hash = qHash(bytes);
+    if (m_imageHashes.contains(hash))
+        return;
+    QImage image;
+    if (!image.loadFromData(bytes))
+        return;
+    m_imageHashes.insert(hash);
+
+    const qreal dpr = devicePixelRatioF();
+    const QImage scaled = image.scaled(qRound(320 * dpr), qRound(240 * dpr),
+                                       Qt::KeepAspectRatio, Qt::SmoothTransformation);
+    QPixmap thumbnail(scaled.size());
+    thumbnail.fill(Qt::transparent);
+    {
+        QPainter p(&thumbnail);
+        p.setRenderHint(QPainter::Antialiasing);
+        QPainterPath clip;
+        clip.addRoundedRect(QRectF(QPointF(), scaled.size()), RadiusS * dpr, RadiusS * dpr);
+        p.setClipPath(clip);
+        p.drawImage(0, 0, scaled);
+    }
+    thumbnail.setDevicePixelRatio(dpr);
+    auto *label = new QLabel(this);
+    label->setPixmap(thumbnail);
+    label->setToolTip(QStringLiteral("%1 \u00d7 %2").arg(image.width()).arg(image.height()));
+    label->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
+    addBodyWidget(label);
+    m_latestImage = image;
+    emit imageFound(image);
+}
+
+bool ToolCallDetailWidget::isIdeTool() const
+{
+    QString server = QLatin1String(Core::Constants::IDE_DISPLAY_NAME);
+    server.replace(QRegularExpression("[^A-Za-z0-9_-]"), "_");
+    return m_toolName.startsWith(QStringLiteral("mcp__") + server + QStringLiteral("__"));
+}
+// OPENMV-DIFF //
+
 void ToolCallDetailWidget::addTextContent(const Content &content)
 {
     const auto &block = content.content();
-    if (auto *textBlock = std::get_if<TextContent>(&block))
-        addMarkdownContent(textBlock->text());
+    // OPENMV-DIFF //
+    // if (auto *textBlock = std::get_if<TextContent>(&block))
+    //     addMarkdownContent(textBlock->text());
+    if (auto *textBlock = std::get_if<TextContent>(&block)) {
+        // Claude's stand-in text for an image ("[Image: source: <file>]"): the
+        // image itself is shown (addImagesFrom()).
+        static const QRegularExpression imageStandIn(QStringLiteral("^\\[Image: source: [^\\]]*\\]$"));
+        if (imageStandIn.match(textBlock->text().trimmed()).hasMatch())
+            return;
+        const QString laidOut = isIdeTool() ? ideResultMarkdown(textBlock->text()) : QString();
+        addMarkdownContent(laidOut.isEmpty() ? textBlock->text() : laidOut);
+    } else if (auto *imageBlock = std::get_if<ImageContent>(&block)) {
+        addImage(imageBlock->data().toLatin1());
+    }
+    // OPENMV-DIFF //
 }
 
 void ToolCallDetailWidget::addLocations(const QList<ToolCallLocation> &locations)
@@ -412,6 +727,13 @@ void ToolCallDetailWidget::addRawInputContent(const QJsonValue &rawInput)
         json = QString::fromUtf8(QJsonDocument(inputObject).toJson(QJsonDocument::Indented));
         if (inputObject.contains("command") && inputObject["command"].isString())
             command = inputObject["command"].toString();
+        // OPENMV-DIFF //
+        // A script run on the camera: show the script itself (and offer it).
+        const bool scriptRun = m_toolName.contains("openmv_script_run")
+                               || m_titleLabel->toolTip().contains("openmv_script_run");
+        if (scriptRun && inputObject.value("text").isString())
+            setScript(inputObject.value("text").toString(), inputObject.value("name").toString());
+        // OPENMV-DIFF //
         if (m_titleLabel->text().contains(command))
             command.clear();
     } else if (rawInput.isArray()) {

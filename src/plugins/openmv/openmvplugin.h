@@ -497,6 +497,9 @@ public:
     bool delayedInitialize();
     ExtensionSystem::IPlugin::ShutdownFlag aboutToShutdown();
     QObject *remoteCommand(const QStringList &options, const QString &workingDirectory, const QStringList &arguments);
+    // Opens a script (from the AI chat, say) as a new untitled tab, the way
+    // examples open; called by name from other plugins.
+    Q_INVOKABLE void openScriptInEditor(const QString &text, const QString &name);
     QList<QObject *> createTestObjects() const { return QList<QObject *>(); }
 
 public slots: // private

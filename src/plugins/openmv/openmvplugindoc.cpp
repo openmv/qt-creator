@@ -1227,6 +1227,50 @@ QString OpenMVPlugin::docNameOf(const documentation_t *d) const
 
 // Opens the docs page (and anchor) of a fully-qualified name from the docs
 // inventory, e.g. "csi.CSI.reset"; false if the docs don't have it.
+void OpenMVPlugin::openScriptInEditor(const QString &text, const QString &name)
+{
+    const QByteArray data = text.toUtf8();
+    // Named like an example opened from the menu: "<name>_1.py".
+    const QString baseName = QFileInfo(name).completeBaseName().simplified();
+    QString titlePattern = (baseName.isEmpty() ? QStringLiteral("script") : baseName) + QStringLiteral("_$.py");
+
+    Core::EditorManager::cutForwardNavigationHistory();
+    Core::EditorManager::addCurrentPositionToNavigationHistory();
+
+    TextEditor::BaseTextEditor *editor = qobject_cast<TextEditor::BaseTextEditor *>(
+        Core::EditorManager::openEditorWithContents("PythonEditor.PythonEditor", &titlePattern, data));
+
+    if(!editor)
+    {
+        return;
+    }
+
+    // As for a new file: the text it started with is what changes are compared to.
+    QTemporaryFile file(QDir::tempPath() + QDir::separator() + QString(editor->document()->displayName()).replace(QStringLiteral(".py"), QStringLiteral("_XXXXXX.py")));
+
+    if(file.open() && (file.write(data) == data.size()))
+    {
+        file.setAutoRemove(false);
+        file.close();
+        editor->document()->setProperty("diffFilePath", QFileInfo(file).canonicalFilePath());
+    }
+
+    Core::EditorManager::addCurrentPositionToNavigationHistory();
+    editor->editorWidget()->configureGenericHighlighter();
+    Core::EditorManager::activateEditor(editor);
+
+    QTimer::singleShot(0, this, [this, editor, data] () {
+        QString filePath = tempFileForPythonEditor(data, editor->document()->displayName());
+
+        if(!filePath.isEmpty())
+        {
+            editor->document()->setTemporary(true);
+            editor->document()->setFilePath(Utils::FilePath::fromString(filePath));
+            emit qobject_cast<TextEditor::TextDocument *>(editor->document())->openFinishedSuccessfully();
+        }
+    });
+}
+
 bool OpenMVPlugin::openDocForName(const QString &fqn)
 {
     if(!m_docUrls.contains(fqn))

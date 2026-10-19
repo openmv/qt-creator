@@ -43,6 +43,11 @@ public:
     QVBoxLayout *bodyLayout() const { return m_bodyLayout; }
 
     void setIndicatorColor(Utils::Theme::Color indicatorColor);
+    // OPENMV-DIFF //
+    // The expand arrow sits at the top of the header; when its first row is taller
+    // than a line of text (a chip in it), this centers the arrow on that row.
+    void setFirstRowHeight(int height);
+    // OPENMV-DIFF //
 
 signals:
     void collapsedChanged(bool collapsed);
@@ -58,6 +63,7 @@ private:
     Utils::Icon indicatorIcon() const;
 
     QVBoxLayout *m_outerLayout = nullptr;
+    QVBoxLayout *m_indicatorColumn = nullptr; // OPENMV-DIFF
     QWidget *m_headerWidget = nullptr;
     QWidget *m_body = nullptr;
     Utils::QtcIconDisplay *m_indicator = nullptr;

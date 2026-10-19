@@ -29,7 +29,16 @@ CollapsibleFrame::CollapsibleFrame(QWidget *parent)
 
     m_indicator = new Utils::QtcIconDisplay(this);
     m_indicator->setIcon(indicatorIcon());
-    headerRow->addWidget(m_indicator, 0, Qt::AlignTop);
+    // OPENMV-DIFF //
+    // headerRow->addWidget(m_indicator, 0, Qt::AlignTop);
+    // At the top, centered on the first row (see setFirstRowHeight()).
+    m_indicatorColumn = new QVBoxLayout;
+    m_indicatorColumn->setContentsMargins(0, 0, 0, 0);
+    m_indicatorColumn->setSpacing(0);
+    m_indicatorColumn->addWidget(m_indicator);
+    m_indicatorColumn->addStretch();
+    headerRow->addLayout(m_indicatorColumn);
+    // OPENMV-DIFF //
 
     m_headerLayout = new QHBoxLayout;
     m_headerLayout->setContentsMargins(0, 0, 0, 0);
@@ -45,6 +54,14 @@ CollapsibleFrame::CollapsibleFrame(QWidget *parent)
     m_bodyLayout->setSpacing(2);
     m_outerLayout->addWidget(m_body);
 }
+
+// OPENMV-DIFF //
+void CollapsibleFrame::setFirstRowHeight(int height)
+{
+    const int offset = qMax(0, (height - m_indicator->sizeHint().height()) / 2);
+    m_indicatorColumn->setContentsMargins(0, offset, 0, 0);
+}
+// OPENMV-DIFF //
 
 void CollapsibleFrame::setCollapsed(bool collapsed)
 {

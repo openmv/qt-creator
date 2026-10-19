@@ -634,6 +634,7 @@ public:
         }
 
         summaryRow->addStretch(1);
+        m_summaryRow = summaryRow; // OPENMV-DIFF: script chips go here
         headerVBox->addLayout(summaryRow);
 
         // Running-tools row
@@ -664,6 +665,48 @@ public:
         updateSummary();
     }
 
+    // OPENMV-DIFF //
+    // A script the agent ran, on the summary row: seen without expanding the group.
+    void addScriptChip(const QString &script, const QString &name)
+    {
+        if (m_scripts.contains(script))
+            return;
+        m_scripts.append(script);
+        QWidget *chip = createScriptChip(script, name, this);
+        m_summaryRow->insertWidget(m_summaryRow->count() - 1, chip);
+        setFirstRowHeight(chip->sizeHint().height());
+    }
+
+    // The last image a tool in the group returned (a camera frame, say), small,
+    // on the summary row; the full one is in the tool call.
+    void setLatestImage(const QImage &image)
+    {
+        if (image.isNull())
+            return;
+        const int height = chipHeight(fontMetrics());
+        if (!m_imageThumb) {
+            m_imageThumb = new QLabel(this);
+            m_summaryRow->insertWidget(m_summaryRow->count() - 1, m_imageThumb);
+            setFirstRowHeight(height);
+        }
+        const qreal dpr = devicePixelRatioF();
+        const QImage scaled = image.scaledToHeight(qRound(height * dpr), Qt::SmoothTransformation);
+        QPixmap thumbnail(scaled.size());
+        thumbnail.fill(Qt::transparent);
+        {
+            QPainter p(&thumbnail);
+            p.setRenderHint(QPainter::Antialiasing);
+            QPainterPath clip;
+            clip.addRoundedRect(QRectF(QPointF(), scaled.size()), RadiusS * dpr, RadiusS * dpr);
+            p.setClipPath(clip);
+            p.drawImage(0, 0, scaled);
+        }
+        thumbnail.setDevicePixelRatio(dpr);
+        m_imageThumb->setPixmap(thumbnail);
+        m_imageThumb->setToolTip(QStringLiteral("%1 \u00d7 %2").arg(image.width()).arg(image.height()));
+    }
+    // OPENMV-DIFF //
+
     void addChildWidget(QWidget *widget)
     {
         m_innerLayout->addWidget(widget);
@@ -678,7 +721,7 @@ public:
 
     void trackTitle(const QString &toolCallId, const QString &title)
     {
-        m_titles[toolCallId] = title;
+        m_titles[toolCallId] = displayToolTitle(title); // OPENMV-DIFF
         updateSummary();
     }
 
@@ -736,6 +779,9 @@ private:
     QWidget *m_runningIcon = nullptr;
     QLabel *m_runningLabel = nullptr;
     QVBoxLayout *m_innerLayout = nullptr;
+    QHBoxLayout *m_summaryRow = nullptr; // OPENMV-DIFF
+    QLabel *m_imageThumb = nullptr; // OPENMV-DIFF
+    QStringList m_scripts; // OPENMV-DIFF
     QHash<QString, ToolCallStatus> m_statuses;
     QHash<QString, QString> m_titles;
 
@@ -1535,6 +1581,14 @@ void AcpMessageView::addToolCall(const ToolCall &toolCall)
     m_toolCallGroups[toolCall.toolCallId()] = group;
 
     auto *detail = new ToolCallDetailWidget(toolCall, group);
+    connect(detail, &ToolCallDetailWidget::scriptFound, group,
+            [group](const QString &script, const QString &name) {
+                group->addScriptChip(script, name);
+            }); // OPENMV-DIFF
+    if (!detail->script().isEmpty()) // OPENMV-DIFF: found while it was built
+        group->addScriptChip(detail->script(), detail->scriptName());
+    connect(detail, &ToolCallDetailWidget::imageFound, group,
+            [group](const QImage &image) { group->setLatestImage(image); }); // OPENMV-DIFF
     detail->setContentMaxWidth(contentMaxWidth());
     group->addChildWidget(detail);
     m_toolCallDetailWidgets[toolCall.toolCallId()] = detail;
@@ -1566,6 +1620,14 @@ void AcpMessageView::updateToolCall(const ToolCallUpdate &update)
         group->trackTitle(update.toolCallId(), title);
         m_toolCallGroups[update.toolCallId()] = group;
         detail = new ToolCallDetailWidget(tc, group);
+        connect(detail, &ToolCallDetailWidget::scriptFound, group,
+                [group](const QString &script, const QString &name) {
+                    group->addScriptChip(script, name);
+                }); // OPENMV-DIFF
+        if (!detail->script().isEmpty()) // OPENMV-DIFF: found while it was built
+            group->addScriptChip(detail->script(), detail->scriptName());
+        connect(detail, &ToolCallDetailWidget::imageFound, group,
+                [group](const QImage &image) { group->setLatestImage(image); }); // OPENMV-DIFF
         detail->setContentMaxWidth(contentMaxWidth());
         group->addChildWidget(detail);
         m_toolCallDetailWidgets[update.toolCallId()] = detail;

@@ -375,7 +375,7 @@ QString guideText()
     return QStringLiteral(
         "OpenMV IDE MCP tools\n"
         "\n"
-        "Workflow: openmv_list_ports -> openmv_camera_connect {port?} -> openmv_script_run {text, waitMs} -> "
+        "Workflow: openmv_list_ports -> openmv_camera_connect {port?} -> openmv_script_run {text, name, waitMs} -> "
         "openmv_terminal_read {cursor} / openmv_framebuffer_get {maxWidth, format:jpeg} / openmv_histogram_get / openmv_channels_get -> "
         "openmv_script_stop. openmv_camera_status tells you what is connected, whether a script is running and the last traceback. "
         "openmv_script_save_to_camera writes the editor's script to main.py so it runs at boot.\n"
@@ -752,6 +752,9 @@ void OpenMVPlugin::registerMcpTools()
         in.addProperty(QStringLiteral("text"), QJsonObject{
             {QStringLiteral("type"), QStringLiteral("string")},
             {QStringLiteral("description"), QStringLiteral("MicroPython source to run on the camera. Omitted: runs the script in the current editor, exactly like the Start button.")}});
+        in.addProperty(QStringLiteral("name"), QJsonObject{
+            {QStringLiteral("type"), QStringLiteral("string")},
+            {QStringLiteral("description"), QStringLiteral("File name for `text`, such as the example it came from (\"blazeface_detector.py\"). The IDE's chat shows the script under this name, and opens it under this name if the user opens it in the editor. Optional.")}});
         in.addProperty(QStringLiteral("waitMs"), QJsonObject{
             {QStringLiteral("type"), QStringLiteral("integer")},
             {QStringLiteral("description"), QStringLiteral("After the camera accepts the script, keep collecting its output for this long and return it (`output`, `lastError`, `running`). Default 0: return at once and use openmv_terminal_read.")}});

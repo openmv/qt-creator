@@ -233,7 +233,11 @@ public:
 
             const auto serverInfo = McpManager::ServerInfo{
                 QT_MCPSERVER_MANAGER_ID,
-                "Qt Creator builtin",
+                // OPENMV-DIFF //
+                // "Qt Creator builtin",
+                // The name agents know the IDE's tools by (mcp__OpenMV_IDE__...).
+                QLatin1String(Core::Constants::IDE_DISPLAY_NAME),
+                // OPENMV-DIFF //
                 McpManager::ConnectionType::Streamable_Http,
                 url,
                 {},
