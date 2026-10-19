@@ -2504,6 +2504,17 @@ namespace Internal {
 
 void ICorePrivate::setFocusToEditor()
 {
+    // OPENMV-DIFF //
+    // Esc leaves Preferences for the mode before it, and stays put in the AI mode
+    // (where it stops the agent); only in Edit does it move focus back to the
+    // editor. (A second Esc action for Preferences made the key ambiguous.)
+    if (ModeManager::currentModeId() == Constants::MODE_SETTINGS) {
+        ModeManager::activatePreviousMode();
+        return;
+    }
+    if (ModeManager::currentModeId() != Constants::MODE_EDIT)
+        return;
+    // OPENMV-DIFF //
     EditorManagerPrivate::doEscapeKeyFocusMoveMagic();
 }
 

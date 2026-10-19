@@ -78,6 +78,21 @@ void ChatInputEdit::setAvailableCommands(const QList<CommandInfo> &commands)
 }
 
 // OPENMV-DIFF //
+// Esc is the IDE's shortcut too: claim it (ShortcutOverride) when the handler
+// wants it, then hand it over on the key press.
+bool ChatInputEdit::event(QEvent *event)
+{
+    if (event->type() == QEvent::ShortcutOverride && m_escapeHandler) {
+        auto *key = static_cast<QKeyEvent *>(event);
+        if (key->key() == Qt::Key_Escape && key->modifiers() == Qt::NoModifier
+            && m_escapeHandler()) {
+            event->accept();
+            return true;
+        }
+    }
+    return TextEditorWidget::event(event);
+}
+
 bool ChatInputEdit::canInsertFromMimeData(const QMimeData *source) const
 {
     if (m_attachHandler && source && (source->hasImage() || source->hasUrls()))

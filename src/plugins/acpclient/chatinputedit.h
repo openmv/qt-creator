@@ -30,6 +30,8 @@ public:
     {
         m_attachHandler = handler;
     }
+    // Esc goes to this handler first; it returns whether it took the key.
+    void setEscapeHandler(const std::function<bool()> &handler) { m_escapeHandler = handler; }
     // OPENMV-DIFF //
 
 signals:
@@ -56,6 +58,8 @@ private:
     int m_historyIndex = -1;
     QString m_editBuffer;
     std::function<bool(const QMimeData *)> m_attachHandler; // OPENMV-DIFF
+    std::function<bool()> m_escapeHandler; // OPENMV-DIFF
+    bool event(QEvent *event) override; // OPENMV-DIFF
 };
 
 } // namespace AcpClient::Internal

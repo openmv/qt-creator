@@ -857,7 +857,10 @@ void OpenMVPlugin::setupModes()
 
     QAction *leaveSettings = new QAction(Tr::tr("Leave Settings"), this);
     Core::Command *leaveSettingsCommand = Core::ActionManager::registerAction(leaveSettings, Utils::Id("OpenMV.LeaveSettingsMode"), Core::Context(Core::Constants::C_SETTINGS_MODE));
-    leaveSettingsCommand->setDefaultKeySequence(QKeySequence(Qt::Key_Escape));
+    // Esc leaves Preferences through Core's "Return to Editor" (see
+    // ICorePrivate::setFocusToEditor()); a second Esc action made the key ambiguous.
+    // leaveSettingsCommand->setDefaultKeySequence(QKeySequence(Qt::Key_Escape));
+    Q_UNUSED(leaveSettingsCommand)
     connect(leaveSettings, &QAction::triggered, this, [] { Core::ModeManager::activatePreviousMode(); });
 }
 
