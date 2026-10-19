@@ -138,17 +138,22 @@ class PythonPlugin final : public ExtensionSystem::IPlugin
         ProjectManager::registerProjectType<PythonProject>(
             Constants::C_PY_PROJECT_MIME_TYPE_TOML, issuesGenerator);
 
-        auto oldHighlighter = Utils::Text::codeHighlighter();
-        Utils::Text::setCodeHighlighter(
-            [oldHighlighter](const QString &code, const QString &mimeType)
-                -> QFuture<QTextDocument *> {
-                if (mimeType == "text/python" || mimeType == "text/x-python"
-                    || mimeType == "text/x-python3") {
-                    return highlightCode(code, mimeType);
-                }
-
-                return oldHighlighter(code, mimeType);
-            });
+        // OPENMV-DIFF //
+        // Python in chat code blocks is highlighted like the IDE's editors, which
+        // use the generic (KSyntaxHighlighting) highlighter, not this plugin's.
+        // auto oldHighlighter = Utils::Text::codeHighlighter();
+        // Utils::Text::setCodeHighlighter(
+        //     [oldHighlighter](const QString &code, const QString &mimeType)
+        //         -> QFuture<QTextDocument *> {
+        //         if (mimeType == "text/python" || mimeType == "text/x-python"
+        //             || mimeType == "text/x-python3") {
+        //             return highlightCode(code, mimeType);
+        //         }
+        //
+        //         return oldHighlighter(code, mimeType);
+        //     });
+        Q_UNUSED(&highlightCode)
+        // OPENMV-DIFF //
     }
 
     void extensionsInitialized() final

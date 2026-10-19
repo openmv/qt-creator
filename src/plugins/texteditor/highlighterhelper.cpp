@@ -265,8 +265,29 @@ QFuture<QTextDocument *> highlightCode(const QString &code, const QString &mimeT
     QTextDocument *document = new QTextDocument;
     document->setPlainText(code);
 
-    const HighlighterHelper::Definitions definitions = HighlighterHelper::definitionsForMimeType(
+    // OPENMV-DIFF //
+    // const HighlighterHelper::Definitions definitions = HighlighterHelper::definitionsForMimeType(
+    //     mimeType);
+    HighlighterHelper::Definitions definitions = HighlighterHelper::definitionsForMimeType(
         mimeType);
+    // Markdown code blocks name their language ("python"), which becomes a type
+    // like "text/python" that no definition lists (Python's is "text/x-python"):
+    // then look the language up by name.
+    if (definitions.isEmpty() && mimeType.startsWith(QLatin1String("text/"))) {
+        QString language = mimeType.mid(5);
+        if (language.startsWith(QLatin1String("x-")))
+            language = language.mid(2);
+        QString capitalized = language;
+        if (!capitalized.isEmpty())
+            capitalized[0] = capitalized[0].toUpper();
+        for (const QString &name : {language, capitalized, language.toUpper()}) {
+            if (const Definition definition = definitionForName(name); definition.isValid()) {
+                definitions = {definition};
+                break;
+            }
+        }
+    }
+    // OPENMV-DIFF //
 
     std::shared_ptr<QPromise<QTextDocument *>> promise
         = std::make_shared<QPromise<QTextDocument *>>();
@@ -296,6 +317,11 @@ QFuture<QTextDocument *> highlightCode(const QString &code, const QString &mimeT
     highlighter->setFontSettings(TextEditorSettings::fontSettings());
     highlighter->setMimeType(mimeType);
     highlighter->setDocument(document);
+    // OPENMV-DIFF //
+    // Now, not later: the markdown view takes the result at once and shows the
+    // code unhighlighted if it isn't finished.
+    highlighter->rehighlight();
+    // OPENMV-DIFF //
 
     return promise->future();
 }
