@@ -55,6 +55,7 @@ public:
     QString script() const { return m_script; } // the script it ran, if it ran one
     QString scriptName() const { return m_scriptName; } // its file name, if the agent gave one
     QImage latestImage() const { return m_latestImage; } // the last image it returned
+    QWidget *latestImageWidget() const { return m_latestImageWidget; } // shown at full size
 
 signals:
     void scriptFound(const QString &script, const QString &name);
@@ -88,6 +89,7 @@ private:
     bool isIdeTool() const; // one of the IDE's own MCP tools
     QSet<size_t> m_imageHashes; // images shown, so a repeated update adds none
     QImage m_latestImage;
+    QWidget *m_latestImageWidget = nullptr;
     void addImage(const QByteArray &encoded);
     void addImagesFrom(const QJsonValue &value);
     QString m_script;

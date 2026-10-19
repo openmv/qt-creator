@@ -654,6 +654,7 @@ void ToolCallDetailWidget::addImage(const QByteArray &encoded)
     label->setSizePolicy(QSizePolicy::Maximum, QSizePolicy::Fixed);
     addBodyWidget(label);
     m_latestImage = image;
+    m_latestImageWidget = label;
     emit imageFound(image);
 }
 

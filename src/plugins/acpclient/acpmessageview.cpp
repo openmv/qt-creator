@@ -592,6 +592,40 @@ private:
 // ToolCallGroupWidget — groups consecutive tool calls into one collapsible
 // ---------------------------------------------------------------------------
 
+// OPENMV-DIFF //
+// A small image that acts as a button (so a click on it isn't also a click on
+// the header it sits in, which would open or close the group).
+class ImageThumbButton : public QAbstractButton
+{
+public:
+    explicit ImageThumbButton(QWidget *parent)
+        : QAbstractButton(parent)
+    {
+        setCursor(Qt::PointingHandCursor);
+        setFocusPolicy(Qt::NoFocus);
+    }
+
+    void setPixmap(const QPixmap &pixmap)
+    {
+        m_pixmap = pixmap;
+        updateGeometry();
+        update();
+    }
+
+    QSize sizeHint() const override { return m_pixmap.deviceIndependentSize().toSize(); }
+
+protected:
+    void paintEvent(QPaintEvent *) override
+    {
+        QPainter p(this);
+        p.drawPixmap(0, 0, m_pixmap);
+    }
+
+private:
+    QPixmap m_pixmap;
+};
+// OPENMV-DIFF //
+
 class ToolCallGroupWidget : public CollapsibleFrame
 {
 public:
@@ -679,13 +713,17 @@ public:
 
     // The last image a tool in the group returned (a camera frame, say), small,
     // on the summary row; the full one is in the tool call.
-    void setLatestImage(const QImage &image)
+    // Clicking it opens the group and that tool call, and brings the full-size
+    // image into view.
+    void setLatestImage(const QImage &image, ToolCallDetailWidget *detail)
     {
         if (image.isNull())
             return;
+        m_imageDetail = detail;
         const int height = chipHeight(fontMetrics());
         if (!m_imageThumb) {
-            m_imageThumb = new QLabel(this);
+            m_imageThumb = new ImageThumbButton(this);
+            connect(m_imageThumb, &QAbstractButton::clicked, this, [this] { revealImage(); });
             m_summaryRow->insertWidget(m_summaryRow->count() - 1, m_imageThumb);
             setFirstRowHeight(height);
         }
@@ -704,6 +742,24 @@ public:
         thumbnail.setDevicePixelRatio(dpr);
         m_imageThumb->setPixmap(thumbnail);
         m_imageThumb->setToolTip(QStringLiteral("%1 \u00d7 %2").arg(image.width()).arg(image.height()));
+    }
+
+    void revealImage()
+    {
+        if (!m_imageDetail)
+            return;
+        setCollapsed(false);
+        m_imageDetail->setCollapsed(false);
+        // After the layout has made room for them.
+        QTimer::singleShot(0, this, [this] {
+            QWidget *target = m_imageDetail ? m_imageDetail->latestImageWidget() : nullptr;
+            for (QWidget *w = parentWidget(); target && w; w = w->parentWidget()) {
+                if (auto *scrollArea = qobject_cast<QScrollArea *>(w)) {
+                    scrollArea->ensureWidgetVisible(target, 0, PaddingVL);
+                    break;
+                }
+            }
+        });
     }
     // OPENMV-DIFF //
 
@@ -780,7 +836,8 @@ private:
     QLabel *m_runningLabel = nullptr;
     QVBoxLayout *m_innerLayout = nullptr;
     QHBoxLayout *m_summaryRow = nullptr; // OPENMV-DIFF
-    QLabel *m_imageThumb = nullptr; // OPENMV-DIFF
+    ImageThumbButton *m_imageThumb = nullptr; // OPENMV-DIFF
+    QPointer<ToolCallDetailWidget> m_imageDetail; // OPENMV-DIFF: whose image it is
     QStringList m_scripts; // OPENMV-DIFF
     QHash<QString, ToolCallStatus> m_statuses;
     QHash<QString, QString> m_titles;
@@ -1588,7 +1645,9 @@ void AcpMessageView::addToolCall(const ToolCall &toolCall)
     if (!detail->script().isEmpty()) // OPENMV-DIFF: found while it was built
         group->addScriptChip(detail->script(), detail->scriptName());
     connect(detail, &ToolCallDetailWidget::imageFound, group,
-            [group](const QImage &image) { group->setLatestImage(image); }); // OPENMV-DIFF
+            [group, detail](const QImage &image) {
+                group->setLatestImage(image, detail);
+            }); // OPENMV-DIFF
     detail->setContentMaxWidth(contentMaxWidth());
     group->addChildWidget(detail);
     m_toolCallDetailWidgets[toolCall.toolCallId()] = detail;
@@ -1627,7 +1686,9 @@ void AcpMessageView::updateToolCall(const ToolCallUpdate &update)
         if (!detail->script().isEmpty()) // OPENMV-DIFF: found while it was built
             group->addScriptChip(detail->script(), detail->scriptName());
         connect(detail, &ToolCallDetailWidget::imageFound, group,
-                [group](const QImage &image) { group->setLatestImage(image); }); // OPENMV-DIFF
+                [group, detail](const QImage &image) {
+                    group->setLatestImage(image, detail);
+                }); // OPENMV-DIFF
         detail->setContentMaxWidth(contentMaxWidth());
         group->addChildWidget(detail);
         m_toolCallDetailWidgets[update.toolCallId()] = detail;
