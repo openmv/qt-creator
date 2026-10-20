@@ -37,6 +37,7 @@
 #include <QLabel>
 #include <QPushButton>
 #include <QStackedWidget>
+#include <QStandardPaths> // OPENMV-DIFF
 #include <QTimer> // OPENMV-DIFF
 #include <QVBoxLayout>
 
@@ -100,7 +101,10 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         //
         // Anchored at the top (not centred) so opening a group grows the page
         // downwards instead of shifting the rows above it.
-        configOuter->addSpacing(24);
+        // configOuter->addSpacing(24);
+        // Centered as if every group were open (updateAgentPageOffset()).
+        m_configTopSpace = new QSpacerItem(0, 24, QSizePolicy::Minimum, QSizePolicy::Fixed);
+        configOuter->addItem(m_configTopSpace);
         // OPENMV-DIFF //
 
         m_configStack = new QStackedWidget;
@@ -165,7 +169,9 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             auto *connectPage = new QWidget;
             auto *connectLayout = new QVBoxLayout(connectPage);
             connectLayout->setSpacing(12);
-            connectLayout->addStretch();
+            // OPENMV-DIFF //
+            // connectLayout->addStretch();
+            // OPENMV-DIFF //
 
             auto *titleLabel = new QLabel(Tr::tr("Choose AI Agent"));
             QFont titleFont = titleLabel->font();
@@ -240,6 +246,8 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         configScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         configScroll->setWidget(configPage);
         m_stack->addWidget(configScroll);  // index 0
+        m_configScroll = configScroll;
+        configScroll->viewport()->installEventFilter(this);
         // OPENMV-DIFF //
     }
 
@@ -355,6 +363,7 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             // OPENMV-DIFF //
             m_controller->disconnectFromServer();
             m_stack->setCurrentIndex(0);
+            emit closeRequested(); // OPENMV-DIFF: the chat goes; New Chat stays for another try
         });
         m_initializingCancel = cancelButton; // OPENMV-DIFF: hidden while a chat loads
 
@@ -367,6 +376,34 @@ AcpChatTab::AcpChatTab(QWidget *parent)
 
         m_stack->addWidget(initPage); // index 3
     }
+
+    // OPENMV-DIFF //
+    // --- Page 4: Start a chat (new, in a folder, or a previous one) ---
+    // Its own page in the agent page's style, not an item in the chat (whose
+    // input box doesn't apply yet).
+    {
+        auto *pickerPage = new QWidget;
+        auto *pickerOuter = new QVBoxLayout(pickerPage);
+        pickerOuter->addSpacing(24);
+        auto *pickerColumn = new QWidget;
+        pickerColumn->setFixedWidth(640);
+        m_pickerHost = new QVBoxLayout(pickerColumn);
+        m_pickerHost->setContentsMargins(0, 0, 0, 0);
+        auto *pickerCenter = new QHBoxLayout;
+        pickerCenter->addStretch();
+        pickerCenter->addWidget(pickerColumn);
+        pickerCenter->addStretch();
+        pickerOuter->addLayout(pickerCenter);
+        pickerOuter->addStretch();
+
+        auto *pickerScroll = new QScrollArea;
+        pickerScroll->setWidgetResizable(true);
+        pickerScroll->setFrameShape(QFrame::NoFrame);
+        pickerScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
+        pickerScroll->setWidget(pickerPage);
+        m_stack->addWidget(pickerScroll); // index 4
+    }
+    // OPENMV-DIFF //
 
     layout->addWidget(m_stack);
 
@@ -780,37 +817,42 @@ static IDocument *currentNonTemporaryDocument()
 
 void AcpChatTab::showSessionPicker()
 {
-    auto *picker = m_chatPanel->addSessionPicker();
+    // OPENMV-DIFF //
+    // auto *picker = m_chatPanel->addSessionPicker();
+    // m_activePicker = picker;
+    // m_chatPanel->setSendEnabled(true);
+    // Its own page (index 4), replacing any earlier one.
+    while (QLayoutItem *item = m_pickerHost->takeAt(0)) {
+        delete item->widget();
+        delete item;
+    }
+    auto *picker = new SessionPickerWidget;
+    m_pickerHost->addWidget(picker);
+    m_stack->setCurrentIndex(4);
     m_activePicker = picker;
-    m_chatPanel->setSendEnabled(true);
+    // OPENMV-DIFF //
     connect(picker, &QObject::destroyed, this, [this] { m_activePicker = nullptr; });
 
     if (const Project *startup = ProjectManager::startupProject())
         picker->setCurrentProjectDir(startup->projectDirectory());
 
-    QList<SessionPickerWidget::NewSessionTarget> targets;
-    IDocument *currentDocument = currentNonTemporaryDocument();
-    Project *projectForCurrentDocument = currentDocument ? ProjectManager::projectForFile(
-                                                               currentDocument->filePath())
-                                                         : nullptr;
-    if (currentDocument && !projectForCurrentDocument) {
-        SessionPickerWidget::NewSessionTarget t;
-        t.label = currentDocument->displayName();
-        t.cwd = currentDocument->filePath().parentDir();
-        t.tooltip = t.cwd.toUserOutput();
-        targets.append(t);
-    }
-    for (const Project *p : ProjectManager::projects()) {
-        SessionPickerWidget::NewSessionTarget t;
-        t.label = p->displayName();
-        t.cwd = p->projectDirectory();
-        t.tooltip = p->projectDirectory().toUserOutput();
-        if (p == projectForCurrentDocument)
-            targets.prepend(t);
-        else
-            targets.append(t);
-    }
-    picker->setNewSessionTargets(targets);
+    // OPENMV-DIFF //
+    // New chats start in the IDE's own folder (Documents/OpenMV), never in the
+    // folder of whatever is open, which can be the IDE's examples or a temporary
+    // folder. "New Chat in Folder..." picks another.
+    // QList<SessionPickerWidget::NewSessionTarget> targets;
+    // IDocument *currentDocument = currentNonTemporaryDocument();
+    // ...
+    const FilePath chatsFolder = FilePath::fromString(
+        QStandardPaths::writableLocation(QStandardPaths::DocumentsLocation)
+        + QStringLiteral("/OpenMV"));
+    chatsFolder.ensureWritableDir();
+    SessionPickerWidget::NewSessionTarget target;
+    target.label = chatsFolder.fileName();
+    target.cwd = chatsFolder;
+    target.tooltip = chatsFolder.toUserOutput();
+    picker->setNewSessionTargets({target});
+    // OPENMV-DIFF //
 
     connect(picker, &SessionPickerWidget::sessionSelected, this,
             [this, picker](const QString &sessionId, const FilePath &cwd) {
@@ -820,13 +862,20 @@ void AcpChatTab::showSessionPicker()
     });
     connect(picker, &SessionPickerWidget::newSessionRequested,
             this, [this](const FilePath &cwd) {
+        // OPENMV-DIFF //
+        m_initializingLabel->setText(Tr::tr("Starting chat..."));
+        m_initializingCancel->show();
+        m_stack->setCurrentIndex(3);
+        // OPENMV-DIFF //
         m_controller->createNewSession(cwd);
     });
     connect(picker, &SessionPickerWidget::loadMoreRequested,
             m_controller, &AcpChatController::listSessions);
 
-    if (!m_controller->supportsSessionList())
+    if (!m_controller->supportsSessionList()) {
+        picker->setInitialSessions({}, std::nullopt); // OPENMV-DIFF: "No previous chats."
         return;
+    }
 
     auto isFirstPage = QSharedPointer<bool>::create(true);
     connect(m_controller, &AcpChatController::sessionsListed, picker,
@@ -975,10 +1024,22 @@ void AcpChatTab::populateServerButtons()
         toggle->setArrowType(open ? Qt::DownArrow : Qt::RightArrow);
         toggle->setText(Tr::tr("%1 (%2)").arg(Tr::tr(groups.at(g).title)).arg(entries.size()));
         toggle->setCursor(Qt::PointingHandCursor);
+        // OPENMV-DIFF //
+        // toggle->setStyleSheet(QString::fromLatin1(
+        //     "QToolButton { background: transparent; border: none; padding: 2px 4px; }"
+        //     "QToolButton:hover { background-color: %1; }")
+        //     .arg(Utils::creatorColor(Utils::Theme::BackgroundColorHover).name()));
+        // The agent buttons' subtle highlight (the theme's hover color is near white).
         toggle->setStyleSheet(QString::fromLatin1(
-            "QToolButton { background: transparent; border: none; padding: 2px 4px; }"
-            "QToolButton:hover { background-color: %1; }")
-            .arg(Utils::creatorColor(Utils::Theme::BackgroundColorHover).name()));
+            "QToolButton { background: transparent; border: none; border-radius: %3px;"
+            " padding: 2px 4px; color: %2; }"
+            "QToolButton:hover { background-color: %1; color: %4; }")
+            .arg(Utils::creatorColor(Utils::Theme::Token_Foreground_Subtle).name(),
+                 Utils::creatorColor(Utils::Theme::Token_Text_Muted).name())
+            .arg(Utils::StyleHelper::SpacingTokens::RadiusS)
+            .arg(Utils::creatorColor(Utils::Theme::Token_Text_Default).name()));
+        grid->setProperty("agentGroupGrid", true);
+        // OPENMV-DIFF //
         headerLayout->addWidget(toggle);
         headerLayout->addWidget(Layouting::createHr(), 1);
         m_serverGroupsLayout->addWidget(header);
@@ -994,8 +1055,42 @@ void AcpChatTab::populateServerButtons()
 
 
     m_configStack->setCurrentIndex(total == 0 ? 0 : 1);
+    updateAgentPageOffset();
     // OPENMV-DIFF //
 }
+
+// OPENMV-DIFF //
+// The space above the agent page: half of what's left once every group is
+// open (at least 24 px), so opening or closing one never moves the rows above.
+void AcpChatTab::updateAgentPageOffset()
+{
+    if (!m_configScroll || !m_configTopSpace)
+        return;
+    QWidget *page = m_configStack->currentWidget();
+    if (!page)
+        return;
+    int fullHeight = page->sizeHint().height();
+    if (auto *layout = qobject_cast<QBoxLayout *>(m_serverGroupsLayout)) {
+        for (QWidget *grid : page->findChildren<QWidget *>()) {
+            if (grid->property("agentGroupGrid").toBool() && grid->isHidden())
+                fullHeight += grid->sizeHint().height() + layout->spacing();
+        }
+    }
+    const int top = qMax(24, (m_configScroll->viewport()->height() - fullHeight) / 2);
+    if (m_configTopSpace->geometry().height() == top && m_configTopSpace->sizeHint().height() == top)
+        return;
+    m_configTopSpace->changeSize(0, top, QSizePolicy::Minimum, QSizePolicy::Fixed);
+    if (QLayout *layout = m_configScroll->widget()->layout())
+        layout->invalidate();
+}
+
+bool AcpChatTab::eventFilter(QObject *watched, QEvent *event)
+{
+    if (m_configScroll && watched == m_configScroll->viewport() && event->type() == QEvent::Resize)
+        updateAgentPageOffset();
+    return QWidget::eventFilter(watched, event);
+}
+// OPENMV-DIFF //
 
 // OPENMV-DIFF //
 void AcpChatTab::connectToConfiguredServer(const QString &serverId, const QString &serverName)

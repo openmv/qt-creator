@@ -1,36 +1,50 @@
 // Copyright (C) 2025 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
+// OPENMV-DIFF //
+// Rewritten for the OpenMV IDE (see sessionpickerwidget.h).
+// OPENMV-DIFF //
+
 #include "sessionpickerwidget.h"
+
 #include "acpclienttr.h"
+#include "acpsettings.h"
 
 #include <coreplugin/icore.h>
 
-#include <utils/elidinglabel.h>
 #include <utils/fileutils.h>
 #include <utils/qtcsettings.h>
+#include <utils/layoutbuilder.h>
+#include <utils/qtcwidgets.h>
+#include <utils/stylehelper.h>
+#include <utils/theme/theme.h>
 #include <utils/utilsicons.h>
 
-// OPENMV-DIFF //
-#include "acpsettings.h"
+#include <QAbstractButton>
+
 #include <QContextMenuEvent>
+#include <QDateTime>
+#include <QDir>
+#include <QHBoxLayout>
 #include <QInputDialog>
+#include <QLabel>
 #include <QLineEdit>
 #include <QMenu>
-// OPENMV-DIFF //
-#include <QDateTime>
-#include <QHBoxLayout>
-#include <QLabel>
-#include <QMouseEvent>
 #include <QPainter>
-#include <QPushButton>
 #include <QVBoxLayout>
 
 using namespace Acp;
+using namespace Utils;
+using namespace Utils::StyleHelper::SpacingTokens;
 
 namespace AcpClient::Internal {
 
-const char kCurrentGroupCollapsedKey[] = "AcpClient/SessionPicker/CurrentGroupCollapsed";
+// The list gets a filter field once it has more chats than this.
+static constexpr int kFilterThreshold = 8;
+// The newest this many show at first.
+static constexpr int kRecentCount = 30;
+// The folder "New Chat in a Folder..." last started a chat in.
+const char kLastFolderKey[] = "AcpClient/SessionPicker/LastFolder";
 
 static QString relativeTime(const QString &isoTimestamp)
 {
@@ -39,76 +53,121 @@ static QString relativeTime(const QString &isoTimestamp)
         return isoTimestamp;
 
     const qint64 secs = dt.secsTo(QDateTime::currentDateTime());
+    const auto count = [](qint64 n, const QString &one, const QString &many) {
+        return n == 1 ? one : many.arg(n);
+    };
     if (secs < 60)
         return Tr::tr("just now");
     if (secs < 3600)
-        return Tr::tr("%n minute(s) ago", nullptr, static_cast<int>(secs / 60));
+        return count(secs / 60, Tr::tr("1 minute ago"), Tr::tr("%1 minutes ago"));
     if (secs < 86400)
-        return Tr::tr("%n hour(s) ago", nullptr, static_cast<int>(secs / 3600));
+        return count(secs / 3600, Tr::tr("1 hour ago"), Tr::tr("%1 hours ago"));
     if (secs < 7 * 86400)
-        return Tr::tr("%n day(s) ago", nullptr, static_cast<int>(secs / 86400));
+        return count(secs / 86400, Tr::tr("yesterday"), Tr::tr("%1 days ago"));
     return dt.toString(QStringLiteral("MMM d, yyyy"));
 }
 
-// ---------------------------------------------------------------------------
-// SessionItemWidget — one row in the picker list
-// ---------------------------------------------------------------------------
-
-class SessionItemWidget : public QWidget
+// A folder for display: "~" for the home folder, else as the user writes it.
+static QString displayFolder(const QString &path)
 {
-    Q_OBJECT
+    if (path.isEmpty())
+        return {};
+    QString shown = FilePath::fromUserInput(path).toUserOutput();
+    const QString home = QDir::toNativeSeparators(QDir::homePath());
+    if (shown.startsWith(home, Qt::CaseInsensitive))
+        shown = QStringLiteral("~") + shown.mid(home.size());
+    return shown;
+}
 
+static QColor muted()
+{
+    return creatorColor(Theme::Token_Text_Muted);
+}
+
+// ---------------------------------------------------------------------------
+// SessionRow: one previous chat. Its title, then when and where (muted); a
+// rounded highlight on hover. Right-click renames it.
+// ---------------------------------------------------------------------------
+
+class SessionRow : public QAbstractButton
+{
 public:
-    explicit SessionItemWidget(const SessionInfo &session, QWidget *parent = nullptr)
-        : QWidget(parent)
+    SessionRow(const SessionInfo &session, QWidget *parent)
+        : QAbstractButton(parent)
         , m_sessionId(session.sessionId())
-        , m_cwd(Utils::FilePath::fromUserInput(session.cwd()))
+        , m_cwd(FilePath::fromUserInput(session.cwd()))
+        , m_agentTitle(session.title().value_or(Tr::tr("Untitled chat")).simplified())
+        , m_when(session.updatedAt() ? relativeTime(*session.updatedAt()) : QString())
+        , m_updated(session.updatedAt()
+                        ? QDateTime::fromString(*session.updatedAt(), Qt::ISODate).toLocalTime()
+                        : QDateTime())
+        , m_folder(displayFolder(session.cwd()))
     {
-        setCursor(Qt::PointingHandCursor);
         setAttribute(Qt::WA_Hover);
-
-        auto *layout = new QHBoxLayout(this);
-        layout->setContentsMargins(12, 2, 12, 2);
-        layout->setSpacing(8);
-
-        // OPENMV-DIFF //
-        // const QString title = session.title().value_or(session.sessionId());
-        // auto *titleLabel = new Utils::ElidingLabel(title, this);
-        // OPENMV-DIFF //
-        // A name the user gave the chat wins over the agent's title.
-        m_agentTitle = session.title().value_or(session.sessionId());
-        const QString customTitle = AcpSettings::chatTitle(m_sessionId);
-        auto *titleLabel = new Utils::ElidingLabel(
-            customTitle.isEmpty() ? m_agentTitle : customTitle, this);
-        m_titleLabel = titleLabel;
-        // Elided text may shrink below its full width (see ElidingLabel).
-        titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
-        // OPENMV-DIFF //
-        titleLabel->setElideMode(Qt::ElideRight);
-        layout->addWidget(titleLabel, 1);
-
-        if (session.updatedAt().has_value()) {
-            auto *timeLabel = new QLabel(relativeTime(*session.updatedAt()), this);
-            QPalette pal = timeLabel->palette();
-            pal.setColor(QPalette::WindowText, pal.color(QPalette::PlaceholderText));
-            timeLabel->setPalette(pal);
-            layout->addWidget(timeLabel, 0, Qt::AlignRight);
-        }
+        setCursor(Qt::PointingHandCursor);
+        setFocusPolicy(Qt::NoFocus);
+        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+        setToolTip(m_cwd.toUserOutput());
+        updateTitle();
     }
 
-signals:
-    void clicked(const QString &sessionId, const Utils::FilePath &cwd);
+    QString sessionId() const { return m_sessionId; }
+    FilePath cwd() const { return m_cwd; }
+    QDateTime updated() const { return m_updated; }
+
+    bool matches(const QString &needle) const
+    {
+        return text().contains(needle, Qt::CaseInsensitive)
+               || m_folder.contains(needle, Qt::CaseInsensitive);
+    }
+
+    QSize sizeHint() const override
+    {
+        return QSize(200, fontMetrics().height() + 2 * PaddingVS + 2);
+    }
 
 protected:
-    void mousePressEvent(QMouseEvent *event) override
+    void paintEvent(QPaintEvent *) override
     {
-        if (event->button() == Qt::LeftButton)
-            emit clicked(m_sessionId, m_cwd);
-        QWidget::mousePressEvent(event);
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
+        if (underMouse() && isEnabled()) {
+            StyleHelper::drawCardBg(&p, rect(), creatorColor(Theme::Token_Foreground_Subtle),
+                                    Qt::NoPen, RadiusS);
+        }
+        const QFontMetrics fm = fontMetrics();
+        const QRect area = rect().adjusted(PaddingHM, 0, -PaddingHM, 0);
+        const int gap = PaddingHL;
+
+        // The title, then when (muted) beside it; where (muted) on the right in
+        // what's left, shortened in the middle. A long title gives way only past
+        // the folder's minimum.
+        const int whenWidth = m_when.isEmpty() ? 0 : fm.horizontalAdvance(m_when) + gap;
+        const int folderMin = m_folder.isEmpty() ? 0 : qMin(fm.horizontalAdvance(m_folder), 120) + gap;
+        const int titleWidth = qMin(fm.horizontalAdvance(text()),
+                                    area.width() - whenWidth - folderMin);
+        // Shortened only when it doesn't fit (eliding to its exact width can cut
+        // a title that fits).
+        const QString title = fm.horizontalAdvance(text()) <= titleWidth
+                                  ? text()
+                                  : fm.elidedText(text(), Qt::ElideRight, qMax(0, titleWidth));
+
+        p.setPen(creatorColor(Theme::Token_Text_Default));
+        p.drawText(area, Qt::AlignLeft | Qt::AlignVCenter, title);
+        p.setPen(muted());
+        const int whenX = area.left() + fm.horizontalAdvance(title) + gap;
+        if (!m_when.isEmpty())
+            p.drawText(QRect(whenX, area.top(), area.right() - whenX, area.height()),
+                       Qt::AlignLeft | Qt::AlignVCenter, m_when);
+        const int folderLeft = whenX + (m_when.isEmpty() ? 0 : fm.horizontalAdvance(m_when) + gap);
+        const int folderRoom = area.right() - folderLeft;
+        if (!m_folder.isEmpty() && folderRoom > 0)
+            p.drawText(QRect(folderLeft, area.top(), folderRoom, area.height()),
+                       Qt::AlignRight | Qt::AlignVCenter,
+                       fm.elidedText(m_folder, Qt::ElideMiddle, folderRoom));
     }
 
-    // OPENMV-DIFF //
-    // Rename from the picker too (same names as the chat tabs use).
+    // Rename from here too (the same names as the chat tabs use).
     void contextMenuEvent(QContextMenuEvent *event) override
     {
         QMenu menu;
@@ -125,106 +184,54 @@ protected:
         if (!ok)
             return;
         AcpSettings::setChatTitle(m_sessionId, name == m_agentTitle ? QString() : name);
-        m_titleLabel->setText(name.isEmpty() ? m_agentTitle : name);
-    }
-    // OPENMV-DIFF //
-
-    void paintEvent(QPaintEvent *) override
-    {
-        if (underMouse()) {
-            QPainter p(this);
-            p.fillRect(rect(), palette().color(QPalette::Highlight).lighter(170));
-        }
-    }
-
-    bool event(QEvent *e) override
-    {
-        if (e->type() == QEvent::HoverEnter || e->type() == QEvent::HoverLeave)
-            update();
-        return QWidget::event(e);
+        updateTitle();
     }
 
 private:
+    // A name the user gave the chat wins over the agent's title.
+    void updateTitle()
+    {
+        const QString custom = AcpSettings::chatTitle(m_sessionId);
+        setText(custom.isEmpty() ? m_agentTitle : custom);
+        update();
+    }
+
     QString m_sessionId;
-    Utils::FilePath m_cwd;
-    // OPENMV-DIFF //
+    FilePath m_cwd;
     QString m_agentTitle;
-    Utils::ElidingLabel *m_titleLabel = nullptr;
-    // OPENMV-DIFF //
+    QString m_when;
+    QDateTime m_updated;
+    QString m_folder;
 };
 
-// ---------------------------------------------------------------------------
-// NewSessionItemWidget — clickable "New Session" row styled like SessionItemWidget
-// ---------------------------------------------------------------------------
-
-class NewSessionItemWidget : public QWidget
+class OlderChatsRow : public QAbstractButton
 {
-    Q_OBJECT
-
 public:
-    explicit NewSessionItemWidget(const QString &label,
-                                  const QIcon &icon,
-                                  const QString &subtitle,
-                                  QWidget *parent = nullptr)
-        : QWidget(parent)
+    explicit OlderChatsRow(QWidget *parent)
+        : QAbstractButton(parent)
     {
-        setCursor(Qt::PointingHandCursor);
         setAttribute(Qt::WA_Hover);
-
-        auto *layout = new QHBoxLayout(this);
-        layout->setContentsMargins(12, 2, 12, 2);
-        layout->setSpacing(8);
-
-        auto *iconLabel = new QLabel(this);
-        const int size = fontMetrics().height();
-        iconLabel->setPixmap(icon.pixmap(size, size));
-        layout->addWidget(iconLabel);
-
-        auto *textLabel = new QLabel(label, this);
-        layout->addWidget(textLabel);
-
-        if (!subtitle.isEmpty()) {
-            auto *subtitleLabel = new Utils::ElidingLabel(subtitle, this);
-            // OPENMV-DIFF //
-            // Elided text may shrink below its full width (the OpenMV IDE's
-            // ElidingLabel no longer sets this): a long title made the chat wider
-            // than the panel instead of eliding.
-            subtitleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
-            // OPENMV-DIFF //
-            subtitleLabel->setElideMode(Qt::ElideMiddle);
-            QPalette pal = subtitleLabel->palette();
-            pal.setColor(QPalette::WindowText, pal.color(QPalette::PlaceholderText));
-            subtitleLabel->setPalette(pal);
-            layout->addWidget(subtitleLabel, 1);
-        } else {
-            layout->addStretch(1);
-        }
+        setCursor(Qt::PointingHandCursor);
+        setFocusPolicy(Qt::NoFocus);
+        setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
     }
 
-signals:
-    void clicked();
+    QSize sizeHint() const override
+    {
+        return QSize(200, fontMetrics().height() + 2 * PaddingVS + 2);
+    }
 
 protected:
-    void mousePressEvent(QMouseEvent *event) override
-    {
-        if (event->button() == Qt::LeftButton)
-            emit clicked();
-        QWidget::mousePressEvent(event);
-    }
-
     void paintEvent(QPaintEvent *) override
     {
+        QPainter p(this);
+        p.setRenderHint(QPainter::Antialiasing);
         if (underMouse()) {
-            QPainter p(this);
-            p.fillRect(rect(), palette().color(QPalette::Highlight).lighter(170));
+            StyleHelper::drawCardBg(&p, rect(), creatorColor(Theme::Token_Foreground_Subtle),
+                                    Qt::NoPen, RadiusS);
         }
-    }
-
-    bool event(QEvent *e) override
-    {
-        if (e->type() == QEvent::HoverEnter || e->type() == QEvent::HoverLeave)
-            update();
-        return QWidget::event(e);
+        p.setPen(underMouse() ? creatorColor(Theme::Token_Text_Default) : muted());
+        p.drawText(rect(), Qt::AlignCenter, text());
     }
 };
 
@@ -232,116 +239,136 @@ protected:
 // SessionPickerWidget
 // ---------------------------------------------------------------------------
 
-static QLabel *createGroupHeaderLabel(const QString &text, QWidget *parent)
+// A section heading in the agent page's style: muted text, then a hairline.
+static QWidget *sectionHeader(QLabel *label)
 {
-    auto *label = new QLabel(text, parent);
-    QFont f = label->font();
-    f.setBold(true);
-    f.setPointSizeF(f.pointSizeF() * 0.85);
-    label->setFont(f);
+    auto *header = new QWidget;
+    auto *layout = new QHBoxLayout(header);
+    layout->setContentsMargins(0, 6, 0, 0);
+    layout->setSpacing(6);
     QPalette pal = label->palette();
-    pal.setColor(QPalette::WindowText, pal.color(QPalette::PlaceholderText));
+    pal.setColor(QPalette::WindowText, muted());
     label->setPalette(pal);
-    return label;
-}
-
-static QFrame *createSeparator(QWidget *parent)
-{
-    auto *sep = new QFrame(parent);
-    sep->setFrameShape(QFrame::HLine);
-    sep->setFrameShadow(QFrame::Sunken);
-    sep->hide();
-    return sep;
+    layout->addWidget(label);
+    layout->addWidget(Layouting::createHr(), 1);
+    return header;
 }
 
 SessionPickerWidget::SessionPickerWidget(QWidget *parent)
-    : CollapsibleFrame(parent)
+    : QWidget(parent)
 {
-    setFrameShape(QFrame::NoFrame);
-    setCollapsible(false);
-    setHeaderVisible(false);
+    auto *layout = new QVBoxLayout(this);
+    layout->setContentsMargins(0, 0, 0, 0);
+    layout->setSpacing(12);
 
-    m_newSessionContainer = new QVBoxLayout;
-    m_newSessionContainer->setContentsMargins(0, 0, 0, 0);
-    m_newSessionContainer->setSpacing(0);
-    m_bodyLayout->addLayout(m_newSessionContainer);
+    auto *title = new QLabel(Tr::tr("Start a Chat"));
+    QFont titleFont = title->font();
+    titleFont.setPointSizeF(titleFont.pointSizeF() * 1.3);
+    titleFont.setBold(true);
+    title->setFont(titleFont);
+    title->setAlignment(Qt::AlignHCenter);
+    layout->addWidget(title);
+    layout->addWidget(Layouting::createHr());
 
-    m_topSeparator = createSeparator(this);
-    m_bodyLayout->addWidget(m_topSeparator);
-
-    m_currentGroupContainer = new QVBoxLayout;
-    m_currentGroupContainer->setContentsMargins(0, 0, 0, 0);
-    m_currentGroupContainer->setSpacing(0);
-    m_bodyLayout->addLayout(m_currentGroupContainer);
-
-    m_middleSeparator = createSeparator(this);
-    m_bodyLayout->addWidget(m_middleSeparator);
-
-    m_otherGroupsContainer = new QVBoxLayout;
-    m_otherGroupsContainer->setContentsMargins(0, 0, 0, 0);
-    m_otherGroupsContainer->setSpacing(0);
-    m_bodyLayout->addLayout(m_otherGroupsContainer);
-
-    m_emptyLabel = new QLabel(Tr::tr("No sessions available"), this);
-    m_emptyLabel->setContentsMargins(12, 8, 12, 8);
-    QPalette emptyPal = m_emptyLabel->palette();
-    emptyPal.setColor(QPalette::WindowText, emptyPal.color(QPalette::PlaceholderText));
-    m_emptyLabel->setPalette(emptyPal);
-    m_emptyLabel->hide();
-    m_bodyLayout->addWidget(m_emptyLabel);
-
-    m_loadMoreButton = new QPushButton(Tr::tr("Load More..."), this);
-    m_loadMoreButton->setFlat(true);
-    m_loadMoreButton->hide();
-    connect(m_loadMoreButton, &QPushButton::clicked, this, [this] {
-        m_loadMoreButton->setEnabled(false);
-        emit loadMoreRequested(m_nextCursor);
+    // New chat, here or in a folder of one's choice.
+    auto *buttons = new QHBoxLayout;
+    buttons->setSpacing(6);
+    m_newButton = new QtcButton(Tr::tr("New Chat"), QtcButton::MediumTertiary);
+    m_newButton->setPixmap(Icons::PLUS_TOOLBAR.pixmap());
+    m_newButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    connect(m_newButton, &QAbstractButton::clicked, this, [this] {
+        if (m_firstNewSessionTarget)
+            requestNewSession(m_firstNewSessionTarget->cwd);
     });
-    m_bodyLayout->addWidget(m_loadMoreButton);
+    buttons->addWidget(m_newButton, 1);
+    auto *folderButton = new QtcButton(Tr::tr("New Chat in a Folder..."), QtcButton::MediumTertiary);
+    folderButton->setPixmap(Icons::OPENFILE_TOOLBAR.pixmap());
+    folderButton->setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
+    connect(folderButton, &QAbstractButton::clicked,
+            this, &SessionPickerWidget::requestCustomDirectorySession);
+    buttons->addWidget(folderButton, 1);
+    layout->addLayout(buttons);
+
+    m_folderLabel = new QLabel;
+    m_folderLabel->setAlignment(Qt::AlignHCenter);
+    QPalette folderPal = m_folderLabel->palette();
+    folderPal.setColor(QPalette::WindowText, muted());
+    m_folderLabel->setPalette(folderPal);
+    m_folderLabel->hide();
+    layout->addWidget(m_folderLabel);
+
+    // Previous chats: one list, newest first.
+    m_listHeader = new QLabel(Tr::tr("Previous Chats"));
+    layout->addWidget(sectionHeader(m_listHeader));
+
+    // Styled like the command palette's filter: a row's height, rounded, its
+    // text lined up with the rows'.
+    m_filter = new QLineEdit;
+    m_filter->setPlaceholderText(Tr::tr("Filter chats..."));
+    m_filter->setClearButtonEnabled(true);
+    m_filter->setFrame(false);
+    m_filter->setFixedHeight(fontMetrics().height() + 2 * PaddingVS + 2);
+    m_filter->setStyleSheet(QString("QLineEdit { background: %1; border-radius: %2px;"
+                                    " padding-left: %3px; padding-right: %3px; }")
+                                .arg(creatorColor(Theme::Token_Background_Muted).name())
+                                .arg(RadiusS)
+                                .arg(PaddingHM - 2));
+    m_filter->hide();
+    connect(m_filter, &QLineEdit::textChanged, this, &SessionPickerWidget::applyFilter);
+    layout->addWidget(m_filter);
+
+    m_rows = new QVBoxLayout;
+    m_rows->setContentsMargins(0, 0, 0, 0);
+    m_rows->setSpacing(2);
+    layout->addLayout(m_rows);
+
+    // "Show N older chats": a row in the rows' style, muted, centered.
+    m_olderRow = new OlderChatsRow(this);
+    m_olderRow->hide();
+    connect(m_olderRow, &QAbstractButton::clicked, this, [this] {
+        m_showAll = true;
+        applyFilter();
+    });
+    layout->addWidget(m_olderRow);
+
+    m_emptyLabel = new QLabel(Tr::tr("Loading previous chats..."));
+    m_emptyLabel->setAlignment(Qt::AlignHCenter);
+    QPalette emptyPal = m_emptyLabel->palette();
+    emptyPal.setColor(QPalette::WindowText, muted());
+    m_emptyLabel->setPalette(emptyPal);
+    layout->addWidget(m_emptyLabel);
+
+
+    layout->addStretch();
 }
 
-void SessionPickerWidget::setCurrentProjectDir(const Utils::FilePath &dir)
+void SessionPickerWidget::showEvent(QShowEvent *event)
+{
+    QWidget::showEvent(event);
+    m_newButton->setFocus(); // Enter starts a new chat
+}
+
+void SessionPickerWidget::setCurrentProjectDir(const FilePath &dir)
 {
     m_currentProjectDir = dir;
-    m_currentGroupKey = dir.isEmpty() ? QString() : dir.toUserOutput();
 }
 
 void SessionPickerWidget::setNewSessionTargets(const QList<NewSessionTarget> &targets)
 {
-    while (QLayoutItem *item = m_newSessionContainer->takeAt(0)) {
-        delete item->widget();
-        delete item;
-    }
-
     m_firstNewSessionTarget.reset();
     if (!targets.isEmpty())
         m_firstNewSessionTarget = targets.first();
-
-    const QIcon plusIcon = Utils::Icons::PLUS_TOOLBAR.icon();
-    for (const NewSessionTarget &t : targets) {
-        const QString label = Tr::tr("New Session for %1").arg(t.label);
-        auto *item = new NewSessionItemWidget(
-            label, plusIcon, t.tooltip.isEmpty() ? t.cwd.toUserOutput() : t.tooltip, this);
-        if (!t.tooltip.isEmpty())
-            item->setToolTip(t.tooltip);
-        const Utils::FilePath cwd = t.cwd;
-        connect(item, &NewSessionItemWidget::clicked, this, [this, cwd] {
-            requestNewSession(cwd);
-        });
-        m_newSessionContainer->addWidget(item);
+    m_newButton->setEnabled(m_firstNewSessionTarget.has_value());
+    if (m_firstNewSessionTarget) {
+        m_folderLabel->setText(Tr::tr("New chats start in %1")
+                                   .arg(displayFolder(m_firstNewSessionTarget->cwd.toUserOutput())));
+        m_folderLabel->show();
+    } else {
+        m_folderLabel->hide();
     }
-
-    auto *customItem = new NewSessionItemWidget(
-        Tr::tr("New Session in Directory..."),
-        Utils::Icons::OPENFILE_TOOLBAR.icon(),
-        QString(),
-        this);
-    connect(customItem, &NewSessionItemWidget::clicked,
-            this, &SessionPickerWidget::requestCustomDirectorySession);
-    m_newSessionContainer->addWidget(customItem);
 }
 
-void SessionPickerWidget::requestNewSession(const Utils::FilePath &cwd)
+void SessionPickerWidget::requestNewSession(const FilePath &cwd)
 {
     if (m_resolved)
         return;
@@ -355,114 +382,102 @@ void SessionPickerWidget::requestCustomDirectorySession()
 {
     if (m_resolved)
         return;
-
-    const Utils::FilePath dir = Utils::FileUtils::getExistingDirectory(
-        Tr::tr("Choose Working Directory"), m_currentProjectDir);
+    // Starts where the last one was chosen, else in the chats folder.
+    const FilePath last = FilePath::fromSettings(Core::ICore::settings()->value(kLastFolderKey));
+    const FilePath start = last.isDir() ? last
+                           : m_firstNewSessionTarget ? m_firstNewSessionTarget->cwd
+                                                     : m_currentProjectDir;
+    const FilePath dir = FileUtils::getExistingDirectory(Tr::tr("Choose a Folder for the Chat"),
+                                                         start);
     if (dir.isEmpty())
         return;
-
+    Core::ICore::settings()->setValue(kLastFolderKey, dir.toSettings());
     requestNewSession(dir);
 }
 
 void SessionPickerWidget::setInitialSessions(const QList<SessionInfo> &sessions,
                                              const std::optional<QString> &nextCursor)
 {
-    clearGroups();
-
-    for (const SessionInfo &session : sessions)
-        addSessionItem(session);
-
-    updateCollapseState();
-    updateEmptyState();
-
-    m_nextCursor = nextCursor.value_or(QString{});
-    updateLoadMoreButton();
+    for (SessionRow *row : std::as_const(m_sessionRows))
+        delete row;
+    m_sessionRows.clear();
+    m_listed = true;
+    m_nextCursor = nextCursor.value_or(QString());
+    addSessionRows(sessions);
+    fetchMore();
 }
 
 void SessionPickerWidget::appendSessions(const QList<SessionInfo> &sessions,
                                          const std::optional<QString> &nextCursor)
 {
-    for (const SessionInfo &session : sessions)
-        addSessionItem(session);
-
-    updateEmptyState();
-
-    m_nextCursor = nextCursor.value_or(QString{});
-    m_loadMoreButton->setEnabled(true);
-    updateLoadMoreButton();
+    m_nextCursor = nextCursor.value_or(QString());
+    addSessionRows(sessions);
+    fetchMore();
 }
 
-void SessionPickerWidget::clearGroups()
+// All of them (a list entry is small; the filter finds one): the next page as
+// soon as one arrives.
+void SessionPickerWidget::fetchMore()
 {
-    const auto clearContainer = [](QVBoxLayout *layout) {
-        while (QLayoutItem *item = layout->takeAt(0)) {
-            delete item->widget();
-            delete item;
-        }
-    };
-    clearContainer(m_currentGroupContainer);
-    clearContainer(m_otherGroupsContainer);
-    m_groups.clear();
-    m_emptyLabel->hide();
-    m_topSeparator->hide();
-    m_middleSeparator->hide();
+    if (!m_nextCursor.isEmpty() && !m_resolved)
+        emit loadMoreRequested(m_nextCursor);
 }
 
-void SessionPickerWidget::updateEmptyState()
+// Newest first: the agent lists them that way, and each page continues it.
+void SessionPickerWidget::addSessionRows(const QList<SessionInfo> &sessions)
 {
-    const bool hasCurrent = !m_currentGroupKey.isEmpty() && m_groups.contains(m_currentGroupKey);
-    const bool hasOthers = m_groups.size() > (hasCurrent ? 1 : 0);
-    m_emptyLabel->setVisible(m_groups.isEmpty());
-    m_topSeparator->setVisible(hasCurrent || hasOthers);
-    m_middleSeparator->setVisible(hasCurrent && hasOthers);
-}
-
-void SessionPickerWidget::updateCollapseState()
-{
-    for (auto it = m_groups.begin(); it != m_groups.end(); ++it) {
-        if (it.key() != m_currentGroupKey || m_currentGroupKey.isEmpty())
-            it.value().frame->setCollapsed(true);
-    }
-}
-
-SessionPickerWidget::Group &SessionPickerWidget::ensureGroup(const QString &cwd)
-{
-    auto it = m_groups.find(cwd);
-    if (it != m_groups.end())
-        return it.value();
-
-    const bool isCurrent = !m_currentGroupKey.isEmpty() && cwd == m_currentGroupKey;
-    QString headerText;
-    if (isCurrent)
-        headerText = Tr::tr("Current Project (%1)").arg(cwd);
-    else if (cwd.isEmpty())
-        headerText = Tr::tr("(No Working Directory)");
-    else
-        headerText = cwd;
-
-    Group group;
-    group.frame = new CollapsibleFrame(this);
-    group.frame->setFrameShape(QFrame::NoFrame);
-    group.frame->headerLayout()->addWidget(createGroupHeaderLabel(headerText, group.frame), 1);
-    group.layout = group.frame->bodyLayout();
-    group.layout->setContentsMargins(0, 0, 0, 0);
-    group.layout->setSpacing(0);
-
-    if (isCurrent) {
-        const bool collapsed
-            = Core::ICore::settings()->value(kCurrentGroupCollapsedKey, false).toBool();
-        group.frame->setCollapsed(collapsed);
-        connect(group.frame, &CollapsibleFrame::collapsedChanged, this, [](bool c) {
-            Core::ICore::settings()->setValue(kCurrentGroupCollapsedKey, c);
+    for (const SessionInfo &session : sessions) {
+        auto *row = new SessionRow(session, this);
+        connect(row, &QAbstractButton::clicked, this, [this, row] {
+            if (m_resolved)
+                return;
+            emit sessionSelected(row->sessionId(), row->cwd());
         });
-    } else {
-        group.frame->setCollapsed(true);
+        m_rows->addWidget(row);
+        m_sessionRows.append(row);
     }
+    applyFilter();
+}
 
-    QVBoxLayout *container = isCurrent ? m_currentGroupContainer : m_otherGroupsContainer;
-    container->addWidget(group.frame);
+void SessionPickerWidget::applyFilter()
+{
+    const QString needle = m_filter->text().trimmed();
+    // Filtering searches them all; otherwise the newest kRecentCount show until
+    // "Show N older chats" is clicked.
+    int shown = 0;
+    for (SessionRow *row : std::as_const(m_sessionRows)) {
+        const bool visible = needle.isEmpty() ? (m_showAll || shown < kRecentCount)
+                                              : row->matches(needle);
+        row->setVisible(visible);
+        if (visible)
+            ++shown;
+    }
+    const int older = needle.isEmpty() && !m_showAll
+                          ? qMax(0, int(m_sessionRows.size()) - kRecentCount)
+                          : 0;
+    m_olderRow->setText(older == 1 ? Tr::tr("Show 1 older chat")
+                                   : Tr::tr("Show %1 older chats").arg(older));
+    m_olderRow->setVisible(older > 0);
+    updateState();
+}
 
-    return m_groups.insert(cwd, group).value();
+void SessionPickerWidget::updateState()
+{
+    const int count = m_sessionRows.size();
+    m_listHeader->setText(count > 0 ? Tr::tr("Previous Chats (%1%2)")
+                                          .arg(count)
+                                          .arg(m_nextCursor.isEmpty() ? QString() : QStringLiteral("+"))
+                                    : Tr::tr("Previous Chats"));
+    m_filter->setVisible(count > kFilterThreshold);
+    const bool anyShown = std::any_of(m_sessionRows.cbegin(), m_sessionRows.cend(),
+                                      [](SessionRow *row) { return !row->isHidden(); });
+    if (!m_listed)
+        m_emptyLabel->setText(Tr::tr("Loading previous chats..."));
+    else if (count == 0)
+        m_emptyLabel->setText(Tr::tr("No previous chats."));
+    else
+        m_emptyLabel->setText(Tr::tr("No chats match."));
+    m_emptyLabel->setVisible(!anyShown);
 }
 
 void SessionPickerWidget::setResolved(const QString &)
@@ -470,7 +485,6 @@ void SessionPickerWidget::setResolved(const QString &)
     if (m_resolved)
         return;
     m_resolved = true;
-
     setEnabled(false);
     deleteLater();
 }
@@ -480,30 +494,4 @@ std::optional<SessionPickerWidget::NewSessionTarget> SessionPickerWidget::firstN
     return m_firstNewSessionTarget;
 }
 
-void SessionPickerWidget::addSessionItem(const SessionInfo &session)
-{
-    auto *item = new SessionItemWidget(session, this);
-    connect(item, &SessionItemWidget::clicked, this,
-            [this](const QString &sessionId, const Utils::FilePath &cwd) {
-        if (m_resolved)
-            return;
-        emit sessionSelected(sessionId, cwd);
-    });
-
-    QString key = session.cwd();
-    if (!key.isEmpty() && !m_currentProjectDir.isEmpty()
-        && Utils::FilePath::fromUserInput(key) == m_currentProjectDir) {
-        key = m_currentGroupKey;
-    }
-    Group &group = ensureGroup(key);
-    group.layout->addWidget(item);
-}
-
-void SessionPickerWidget::updateLoadMoreButton()
-{
-    m_loadMoreButton->setVisible(!m_nextCursor.isEmpty());
-}
-
 } // namespace AcpClient::Internal
-
-#include "sessionpickerwidget.moc"

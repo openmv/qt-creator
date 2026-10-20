@@ -953,14 +953,18 @@ public:
         }
 
         if (!title.isEmpty()) {
-            auto *titleLabel = new Utils::ElidingLabel(title, this);
             // OPENMV-DIFF //
-            // Elided text may shrink below its full width (the OpenMV IDE's
-            // ElidingLabel no longer sets this): a long title made the chat wider
-            // than the panel instead of eliding.
-            titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
-            // OPENMV-DIFF //
+            // auto *titleLabel = new Utils::ElidingLabel(title, this);
+            // titleLabel->setSizePolicy(QSizePolicy::Ignored, QSizePolicy::Preferred);
+            // titleLabel->setWordWrap(true);
+            // All of it, wrapped: it's what the user is approving (a whole shell
+            // command, say), and an eliding label kept it to one cut-off line.
+            auto *titleLabel = new QLabel(title, this);
+            titleLabel->setTextFormat(Qt::PlainText);
             titleLabel->setWordWrap(true);
+            titleLabel->setTextInteractionFlags(Qt::TextSelectableByMouse);
+            titleLabel->setMinimumWidth(1);
+            // OPENMV-DIFF //
             m_bodyLayout->addWidget(titleLabel);
         }
         if (!command.isEmpty()) {
@@ -976,6 +980,7 @@ public:
         auto *buttonWidget = new QWidget(this);
         Layouting::Flow{}.attachTo(buttonWidget);
         m_buttonLayout = buttonWidget->layout();
+        m_buttonRow = buttonWidget; // OPENMV-DIFF
         m_bodyLayout->addWidget(buttonWidget);
 
         m_statusLabel = new Utils::ElidingLabel(this);
@@ -998,8 +1003,13 @@ public:
         QString buttonText;
         if (text.isEmpty())
             buttonText = optionKindToUiString(kind);
-        else if (text.size() > 30)
-            buttonText = text.left(27) + QStringLiteral("...");
+        // OPENMV-DIFF //
+        // else if (text.size() > 30)
+        //     buttonText = text.left(27) + QStringLiteral("...");
+        // Room for Claude's "Yes, and don't ask again for ..." options.
+        else if (text.size() > 48)
+            buttonText = text.left(45) + QStringLiteral("...");
+        // OPENMV-DIFF //
         else
             buttonText = text;
         auto *button = new Utils::QtcButton(buttonText, role, this);
@@ -1013,6 +1023,8 @@ public:
     {
         for (Utils::QtcButton *button : std::as_const(m_buttons))
             button->hide();
+        // OPENMV-DIFF: the row too, or its height stays as a gap under the text
+        m_buttonRow->hide();
         m_iconDisplay->setIcon(accepted ? Utils::Icons::OK : Utils::Icons::CRITICAL);
         m_statusLabel->setText(QStringLiteral("<i>%1</i>").arg(text.toHtmlEscaped()));
         m_statusLabel->show();
@@ -1041,6 +1053,7 @@ protected:
 private:
     Utils::QtcIconDisplay *m_iconDisplay = nullptr;
     QLayout *m_buttonLayout = nullptr;
+    QWidget *m_buttonRow = nullptr; // OPENMV-DIFF
     Utils::ElidingLabel *m_statusLabel = nullptr;
     QList<Utils::QtcButton *> m_buttons;
 };

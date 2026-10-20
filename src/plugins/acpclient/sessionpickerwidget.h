@@ -1,25 +1,35 @@
 // Copyright (C) 2025 The Qt Company Ltd.
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0-only WITH Qt-GPL-exception-1.0
 
-#pragma once
+// OPENMV-DIFF //
+// Rewritten for the OpenMV IDE: a page of its own (not an item in the chat),
+// styled like the agent page. "New Chat" (in the IDE's chats folder) and "New
+// Chat in Folder..." at the top, then one list of the agent's previous chats,
+// newest first, with a filter once it's long. The interface is unchanged.
+// OPENMV-DIFF //
 
-#include "collapsibleframe.h"
+#pragma once
 
 #include <acp/acp.h>
 
 #include <utils/filepath.h>
 
-#include <QHash>
+#include <QWidget>
 
 QT_BEGIN_NAMESPACE
+class QAbstractButton;
 class QLabel;
-class QPushButton;
+class QLineEdit;
 class QVBoxLayout;
 QT_END_NAMESPACE
 
+namespace Utils { class QtcButton; }
+
 namespace AcpClient::Internal {
 
-class SessionPickerWidget : public CollapsibleFrame
+class SessionRow;
+
+class SessionPickerWidget : public QWidget
 {
     Q_OBJECT
 
@@ -34,6 +44,7 @@ public:
     explicit SessionPickerWidget(QWidget *parent = nullptr);
 
     void setCurrentProjectDir(const Utils::FilePath &dir);
+    // The first target is where "New Chat" starts a chat.
     void setNewSessionTargets(const QList<NewSessionTarget> &targets);
 
     void setInitialSessions(const QList<Acp::SessionInfo> &sessions,
@@ -50,33 +61,31 @@ signals:
     void loadMoreRequested(const QString &cursor);
     void newSessionRequested(const Utils::FilePath &cwd);
 
-private:
-    struct Group
-    {
-        CollapsibleFrame *frame = nullptr;
-        QVBoxLayout *layout = nullptr;
-    };
+protected:
+    void showEvent(QShowEvent *event) override;
 
-    void addSessionItem(const Acp::SessionInfo &session);
+private:
+    void addSessionRows(const QList<Acp::SessionInfo> &sessions);
     void requestNewSession(const Utils::FilePath &cwd);
     void requestCustomDirectorySession();
-    void updateLoadMoreButton();
-    void updateEmptyState();
-    void clearGroups();
-    void updateCollapseState();
-    Group &ensureGroup(const QString &cwd);
+    void applyFilter();
+    void updateState();
+    void fetchMore();
 
-    QVBoxLayout *m_newSessionContainer = nullptr;
-    QVBoxLayout *m_currentGroupContainer = nullptr;
-    QVBoxLayout *m_otherGroupsContainer = nullptr;
-    QHash<QString, Group> m_groups;
-    QString m_currentGroupKey;
-    QFrame *m_topSeparator = nullptr;
-    QFrame *m_middleSeparator = nullptr;
+    Utils::QtcButton *m_newButton = nullptr;
+    QLabel *m_folderLabel = nullptr;
+    QLabel *m_listHeader = nullptr;
+    QLineEdit *m_filter = nullptr;
+    QVBoxLayout *m_rows = nullptr;
+    QList<SessionRow *> m_sessionRows;
+    // The newest few show; the rest behind one "Show N older chats" row (the
+    // filter always searches them all).
+    QAbstractButton *m_olderRow = nullptr;
+    bool m_showAll = false;
     QLabel *m_emptyLabel = nullptr;
-    QPushButton *m_loadMoreButton = nullptr;
     Utils::FilePath m_currentProjectDir;
     QString m_nextCursor;
+    bool m_listed = false;
     std::optional<NewSessionTarget> m_firstNewSessionTarget;
     bool m_resolved = false;
 };

@@ -35,8 +35,9 @@ CollapsibleFrame::CollapsibleFrame(QWidget *parent)
     m_indicatorColumn = new QVBoxLayout;
     m_indicatorColumn->setContentsMargins(0, 0, 0, 0);
     m_indicatorColumn->setSpacing(0);
-    m_indicatorColumn->addWidget(m_indicator);
-    m_indicatorColumn->addStretch();
+    // Top-aligned, not over a stretch: a stretch made every header claim spare
+    // height, opening gaps in it.
+    m_indicatorColumn->addWidget(m_indicator, 0, Qt::AlignTop);
     headerRow->addLayout(m_indicatorColumn);
     // OPENMV-DIFF //
 

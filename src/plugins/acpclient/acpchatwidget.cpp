@@ -235,11 +235,25 @@ public:
             *cancelled = true;
             edit->clearFocus();
         });
-        connect(edit, &QLineEdit::editingFinished, edit, [edit, cancelled, apply] {
+        // OPENMV-DIFF //
+        // connect(edit, &QLineEdit::editingFinished, edit, [edit, cancelled, apply] {
+        //     if (!*cancelled)
+        //         apply(edit->text());
+        //     edit->deleteLater();
+        // });
+        // Done on Enter, on losing focus, and on switching tabs (a tab click
+        // doesn't take the focus, which left the editor over the old tab).
+        auto done = std::make_shared<bool>(false);
+        const auto finish = [edit, cancelled, done, apply] {
+            if (std::exchange(*done, true))
+                return;
             if (!*cancelled)
                 apply(edit->text());
             edit->deleteLater();
-        });
+        };
+        connect(edit, &QLineEdit::editingFinished, edit, finish);
+        connect(m_bar, &QTabBar::currentChanged, edit, finish);
+        // OPENMV-DIFF //
         edit->show();
         edit->setFocus();
     }
@@ -459,6 +473,17 @@ AcpChatTab *AcpChatWidget::addNewTab()
     // OPENMV-DIFF //
     m_tabWidget->setCurrentIndex(index);
 
+    // OPENMV-DIFF //
+    connect(tab, &AcpChatTab::closeRequested, this, [this, tab] {
+        const int index = m_tabWidget->indexOf(tab);
+        if (index >= 0)
+            closeTab(index);
+        // Back to "New Chat" (the user was starting one), not the neighbouring chat
+        // the tab bar would fall back to.
+        if (m_tabWidget->count() > 0)
+            m_tabWidget->setCurrentIndex(m_tabWidget->count() - 1);
+    }, Qt::QueuedConnection);
+    // OPENMV-DIFF //
     connect(tab, &AcpChatTab::titleChanged, this, [this, tab] {
         const int i = m_tabWidget->indexOf(tab);
         if (i >= 0) {

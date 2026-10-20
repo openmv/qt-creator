@@ -16,6 +16,8 @@
 class QComboBox;
 class QLabel;
 class QStackedWidget;
+class QScrollArea; // OPENMV-DIFF
+class QSpacerItem; // OPENMV-DIFF
 class QVBoxLayout;
 class QGridLayout; // OPENMV-DIFF
 
@@ -64,10 +66,12 @@ public:
 
 signals:
     void titleChanged();
+    void closeRequested(); // OPENMV-DIFF: the user gave up on this chat (Cancel while connecting)
 
 // OPENMV-DIFF //
 protected:
     void showEvent(QShowEvent *event) override;
+    bool eventFilter(QObject *watched, QEvent *event) override;
 // OPENMV-DIFF //
 
 private:
@@ -79,6 +83,13 @@ private:
     // Config page
     QStackedWidget *m_stack;
     QStackedWidget *m_configStack;
+    // OPENMV-DIFF //
+    // The agent page is centered as if every group were open, so opening one
+    // grows it downwards and nothing above it moves.
+    QScrollArea *m_configScroll = nullptr;
+    QSpacerItem *m_configTopSpace = nullptr;
+    void updateAgentPageOffset();
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // QVBoxLayout *m_serverButtonsLayout = nullptr;
     QVBoxLayout *m_serverGroupsLayout = nullptr;
@@ -123,6 +134,7 @@ private:
 
     AcpChatController *m_controller;
     SessionPickerWidget *m_activePicker = nullptr;
+    QVBoxLayout *m_pickerHost = nullptr; // OPENMV-DIFF: the picker's page (index 4)
     QString m_pendingPrompt;
     // OPENMV-DIFF //
     QList<Utils::FilePath> m_pendingFiles;
