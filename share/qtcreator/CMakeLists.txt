@@ -214,6 +214,10 @@ endif()
 # OPENMV-DIFF #
 
 # OPENMV-DIFF #
+# The OpenMV changes to the language server (pylsp/openmv/sitecustomize.py, which
+# patches the bundled Jedi at startup), for every platform's bundle.
+list(APPEND resource_directories pylsp/openmv)
+
 # The viewer is a lean, read-only telemetry app, so strip the resources it never
 # uses -- authoring (examples), the Copilot assistant (copilot.vim + its node
 # runtime), offline docs (html), the model zoo (models), and the developer

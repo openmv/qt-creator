@@ -244,6 +244,9 @@ protected:
         {
             env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
             env.prependOrSet("PYTHONPATH", path.path());
+            // The OpenMV changes to the server (its sitecustomize.py patches Jedi
+            // at startup; the bundle stays as downloaded), first on the path.
+            env.prependOrSet("PYTHONPATH", (Core::ICore::resourcePath() / "pylsp" / "openmv").path());
         }
         // OPENMV-DIFF //
         const FilePath lspPath = pyLspPath(python);

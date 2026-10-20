@@ -1,48 +1,53 @@
 OpenMV modifications to the embedded pylsp bundle
 ==================================================
 
-If you regenerate or upgrade the pylsp/jedi packages in this directory, the
-patches below are LOST and must be re-applied. To check whether a bundle
-still carries them, grep it for "OPENMV-DIFF":
+The bundles in this directory (windows/, mac/, mac-aarch64/, linux-x86_64/,
+linux-arm64/) are kept EXACTLY as downloaded. Do not edit them.
 
-    grep -rn "OPENMV-DIFF" share/qtcreator/pylsp
+OpenMV's changes live in openmv/sitecustomize.py. The IDE puts openmv/ first on
+the language server's PYTHONPATH (src/plugins/python/pythonlanguageclient.cpp,
+PyLSInterface::startImpl), so Python runs it as `sitecustomize` when the server
+starts, and it patches Jedi in memory. The build copies openmv/ with the
+bundles (share/qtcreator/CMakeLists.txt).
 
-Patch 1: disable Jedi's private-name-mangling completion filter
----------------------------------------------------------------
-Date:  2026-07-09
-Files: windows/jedi/inference/value/klass.py
-       mac/jedi/inference/value/klass.py
-       mac-aarch64/jedi/inference/value/klass.py
-       linux-x86_64/jedi/inference/value/klass.py
-Where: ClassFilter._access_possible (around line 122 in jedi 0.19.1)
+Updating a bundle
+-----------------
+1. Replace the platform folder(s) with the new download.
+2. Run the checks with a desktop Python:
 
-Change: the method now unconditionally returns True. The original body is
-kept commented out between "# OPENMV-DIFF #" markers.
+       python share/qtcreator/pylsp/openmv/check_patches.py
 
-Rationale: Jedi emulates CPython private name mangling — a class member
-named __foo (two leading underscores, not a dunder) is mangled to
-_ClassName__foo, so CPython code outside the class cannot access it as
-obj.__foo. Jedi therefore drops such members from completions unless the
-completion happens inside the class body itself.
+   Every bundle should report "OK". A failure names the behavior that broke;
+   a patch whose target Jedi reshaped also prints "OpenMV IDE pylsp patches:
+   <name> not applied" -- adjust that patch in sitecustomize.py to the new Jedi.
+3. Restart OpenMV IDE (pylsp keeps Jedi loaded while it runs).
 
-MicroPython does NOT implement name mangling, so on OpenMV cameras these
-members are plain, accessible attributes. Without this patch, completion
-on a csi.CSI object silently omitted __read_reg and __write_reg even
-though html/stubs/csi.pyi declares them correctly (the stub is parsed
-fine; the names are removed later, at Jedi's access-filter stage). The
-patch also un-hides __name members of user-defined classes in scripts,
-which likewise matches MicroPython behavior.
+The patches (Jedi 0.19.1)
+-------------------------
+OpenMV's stubs (share/qtcreator/html/stubs) describe the camera's MicroPython
+API. Left alone, Jedi treats a stub as a partial description of a desktop module
+of the same name and fills in the rest from it, and it emulates CPython behavior
+MicroPython doesn't have; both made the editor offer code the camera can't run
+(e.g. "AttributeError: module 're' has no attribute 'findall'", forum 11904).
 
-How to verify a bundle (any platform copy, run with desktop Python):
+  1. No name mangling (ClassFilter._access_possible): Jedi hid `__name` class
+     members from outside the class, as CPython mangles them; MicroPython
+     doesn't, so csi.CSI().__read_reg/__write_reg must complete.
+  2. Stub-only completion (jedi.api.completion.complete_trailer): no names from
+     the desktop module behind a stub (re.findall, json.JSONDecoder).
+  3. Stubs first (Script.goto / Script.infer prefer_stubs): go to definition,
+     hover and help land on the stub, not the desktop source.
+  4. Stub docstrings (TreeNameDefinition.py__doc__): a stub's own docstring wins;
+     the implementation's only when the stub has none.
+  5. Stub submodules (StubModuleValue.sub_modules_dict): only the stub's own (not
+     re's _compiler, _parser...).
 
-    import sys
-    sys.path.insert(0, "<this dir>/windows")
-    import jedi
-    proj = jedi.Project(path=".", sys_path=["<share/qtcreator>/html/stubs"],
-                        smart_sys_path=False)
-    src = "import csi\nc = csi.CSI()\nc."
-    names = [c.name for c in jedi.Script(src, project=proj).complete(3, 2)]
-    assert "__read_reg" in names and "__write_reg" in names
+Modules without an OpenMV stub (tkinter...) still complete from desktop Python.
 
-Note: pylsp holds jedi in memory once started — restart OpenMV IDE after
-patching for the change to take effect.
+History: patch 1 was first made (2026-07-09), and patches 2-5 briefly
+(2026-10-20), by editing the bundles' Jedi files; both moved here on 2026-10-20
+and the bundles were restored to the original wheels' files.
+
+Known, harmless: every bundle lacks jedi/third_party/django-stubs/django-stubs/
+core/ (75 files), most likely dropped by a git ignore rule for "core"; it only
+affects Django completion.
