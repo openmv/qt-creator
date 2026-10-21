@@ -31,6 +31,7 @@
 #include <QComboBox>
 #include <QFormLayout>
 #include <QGridLayout> // OPENMV-DIFF
+#include <QPainter> // OPENMV-DIFF
 #include <QRegularExpression> // OPENMV-DIFF
 #include <QScrollArea> // OPENMV-DIFF
 #include <QHBoxLayout>
@@ -83,6 +84,23 @@ static std::optional<QString> ideToolPermission(const Acp::RequestPermissionRequ
 }
 // OPENMV-DIFF //
 
+// OPENMV-DIFF //
+// The chat tab's pages are white on light themes, like the chat (ChatPanel). A
+// scroll area makes its widget fill its background, so both get the color.
+static void whiteOnLightThemes(QScrollArea *scrollArea)
+{
+    if (creatorTheme()->flag(Theme::DarkUserInterface))
+        return;
+    QPalette pal = scrollArea->viewport()->palette();
+    pal.setColor(QPalette::Window, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+    pal.setColor(QPalette::Base, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+    scrollArea->viewport()->setPalette(pal);
+    scrollArea->viewport()->setAutoFillBackground(true);
+    if (QWidget *page = scrollArea->widget())
+        page->setPalette(pal);
+}
+// OPENMV-DIFF //
+
 AcpChatTab::AcpChatTab(QWidget *parent)
     : QWidget(parent)
     , m_title(Tr::tr("New Chat"))
@@ -91,6 +109,15 @@ AcpChatTab::AcpChatTab(QWidget *parent)
     layout->setContentsMargins(0, 0, 0, 0);
 
     m_stack = new QStackedWidget;
+    // OPENMV-DIFF //
+    // White on light themes behind every page (connecting, sign-in), like the chat.
+    if (!creatorTheme()->flag(Theme::DarkUserInterface)) {
+        QPalette pal = m_stack->palette();
+        pal.setColor(QPalette::Window, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+        m_stack->setPalette(pal);
+        m_stack->setAutoFillBackground(true);
+    }
+    // OPENMV-DIFF //
 
     // --- Page 0: Configuration (shown when disconnected) ---
     {
@@ -245,6 +272,7 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         configScroll->setFrameShape(QFrame::NoFrame);
         configScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         configScroll->setWidget(configPage);
+        whiteOnLightThemes(configScroll); // OPENMV-DIFF
         m_stack->addWidget(configScroll);  // index 0
         m_configScroll = configScroll;
         configScroll->viewport()->installEventFilter(this);
@@ -401,6 +429,7 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         pickerScroll->setFrameShape(QFrame::NoFrame);
         pickerScroll->setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         pickerScroll->setWidget(pickerPage);
+        whiteOnLightThemes(pickerScroll); // OPENMV-DIFF
         m_stack->addWidget(pickerScroll); // index 4
     }
     // OPENMV-DIFF //
@@ -997,7 +1026,19 @@ void AcpChatTab::populateServerButtons()
             button->setPixmap(blank);
             Utils::onResultReady(
                 AcpSettings::iconForUrl(entry.iconUrl), button, [button, iconSize](const QIcon &icon) {
-                    button->setPixmap(icon.pixmap(iconSize, iconSize));
+                    // OPENMV-DIFF //
+                    // button->setPixmap(icon.pixmap(iconSize, iconSize));
+                    // At the screen's pixel ratio (sharp on high-DPI screens), in the
+                    // muted text color as the chat's agent icons are, not the theme's
+                    // pure text color (black on light themes).
+                    QPixmap pixmap = icon.pixmap(QSize(iconSize, iconSize),
+                                                 button->devicePixelRatioF());
+                    QPainter p(&pixmap);
+                    p.setCompositionMode(QPainter::CompositionMode_SourceIn);
+                    p.fillRect(pixmap.rect(), Utils::creatorColor(Utils::Theme::Token_Text_Muted));
+                    p.end();
+                    button->setPixmap(pixmap);
+                    // OPENMV-DIFF //
                 });
             gridLayout->addWidget(button, n / columns, n % columns);
             ++n;
@@ -1030,14 +1071,18 @@ void AcpChatTab::populateServerButtons()
         //     "QToolButton:hover { background-color: %1; }")
         //     .arg(Utils::creatorColor(Utils::Theme::BackgroundColorHover).name()));
         // The agent buttons' subtle highlight (the theme's hover color is near white).
+        // On light themes darker text, as on the start page (SessionPickerWidget).
+        const bool lightTheme = !Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface);
         toggle->setStyleSheet(QString::fromLatin1(
             "QToolButton { background: transparent; border: none; border-radius: %3px;"
             " padding: 2px 4px; color: %2; }"
             "QToolButton:hover { background-color: %1; color: %4; }")
             .arg(Utils::creatorColor(Utils::Theme::Token_Foreground_Subtle).name(),
-                 Utils::creatorColor(Utils::Theme::Token_Text_Muted).name())
+                 lightTheme ? Utils::creatorColor(Utils::Theme::Token_Text_Muted).darker(140).name()
+                            : Utils::creatorColor(Utils::Theme::Token_Text_Muted).name())
             .arg(Utils::StyleHelper::SpacingTokens::RadiusS)
-            .arg(Utils::creatorColor(Utils::Theme::Token_Text_Default).name()));
+            .arg(Utils::creatorColor(lightTheme ? Utils::Theme::TextColorNormal
+                                                : Utils::Theme::Token_Text_Default).name()));
         grid->setProperty("agentGroupGrid", true);
         // OPENMV-DIFF //
         headerLayout->addWidget(toggle);

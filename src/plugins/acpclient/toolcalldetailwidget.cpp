@@ -59,10 +59,13 @@ public:
     explicit LazyMarkdownBrowser(QWidget *parent = nullptr)
         : Utils::MarkdownBrowser(parent)
     {
-        // No box in the text area's own color: the tool call card shows through,
-        // and only the (rounded) code blocks have a background.
+        // The tool call card's color, not a box in the text area's own (white on
+        // light themes); opaque, or Windows' sharp text smoothing is lost.
+        QPalette pal = palette();
+        pal.setColor(QPalette::Base, Utils::creatorColor(Utils::Theme::ChatToolCallBackground));
+        setPalette(pal);
         setAutoFillBackground(false);
-        viewport()->setAutoFillBackground(false);
+        viewport()->setAutoFillBackground(true);
     }
 
     void setMarkdownLazily(const QString &markdown)
@@ -567,8 +570,19 @@ static QString ideResultMarkdown(const QString &text)
     }
     if (const QJsonArray log = result.value("log").toArray(); !log.isEmpty()) {
         QStringList lines;
-        for (const QJsonValue &value : log)
-            lines << value.toString();
+        // OPENMV-DIFF //
+        // for (const QJsonValue &value : log)
+        //     lines << value.toString();
+        // One line each, without the site tag ("[auto.5450e740] Connecting..."):
+        // a line break inside would leave the italics' asterisks showing.
+        static const QRegularExpression siteTag(QStringLiteral("^\\[[\\w.-]+\\]\\s*"));
+        for (const QJsonValue &value : log) {
+            const QString line = value.toString().remove(siteTag).simplified();
+            if (!line.isEmpty())
+                lines << line;
+        }
+        if (!lines.isEmpty())
+        // OPENMV-DIFF //
         parts << QStringLiteral("*") + lines.join(QStringLiteral("; ")) + QStringLiteral("*");
     }
 

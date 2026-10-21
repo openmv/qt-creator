@@ -522,7 +522,12 @@ private:
                     ->frameBoundingRect(child)
                     .adjusted(fmt.leftMargin(), fmt.topMargin(),
                               -fmt.rightMargin(), -fmt.bottomMargin());
-                StyleHelper::drawCardBg(&p, rect, creatorColor(Theme::Token_Background_Muted),
+                // On light themes, a shade darker than what the block sits on (the
+                // muted color is barely distinct from a tool call's card).
+                const QColor bg = creatorTheme()->flag(Theme::DarkUserInterface)
+                                      ? creatorColor(Theme::Token_Background_Muted)
+                                      : m_browser->palette().color(QPalette::Base).darker(106);
+                StyleHelper::drawCardBg(&p, rect, bg,
                                         Qt::NoPen, StyleHelper::SpacingTokens::RadiusM);
             }
             paintFrames(p, child);
@@ -879,6 +884,29 @@ void MarkdownBrowser::postProcessDocument(bool firstTime)
             fc.setCharFormat(charFormat);
         }
     }
+
+    // OPENMV-DIFF //
+    // A document that starts or ends with a code block keeps an empty paragraph
+    // before or after its frame, which shows as a line's worth of blank space
+    // (a tool call's code is all code block): collapse those.
+    const auto inFrame = [this](const QTextBlock &block) {
+        return block.isValid() && QTextCursor(block).currentFrame() != document()->rootFrame();
+    };
+    const auto collapse = [&updateBlocker](const QTextBlock &block) {
+        QTextBlockFormat format = block.blockFormat();
+        format.setLineHeight(0, QTextBlockFormat::FixedHeight);
+        format.setTopMargin(0);
+        format.setBottomMargin(0);
+        QTextCursor cursor(block);
+        cursor.setBlockFormat(format);
+    };
+    const QTextBlock first = document()->firstBlock();
+    if (first.text().isEmpty() && !inFrame(first) && inFrame(first.next()))
+        collapse(first);
+    const QTextBlock last = document()->lastBlock();
+    if (last != first && last.text().isEmpty() && !inFrame(last) && inFrame(last.previous()))
+        collapse(last);
+    // OPENMV-DIFF //
 
     updateBlocker.endEditBlock();
 }

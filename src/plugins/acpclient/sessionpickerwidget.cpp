@@ -79,9 +79,18 @@ static QString displayFolder(const QString &path)
     return shown;
 }
 
+// On light themes, the OpenMV views' text color and a darker muted one (the
+// defaults are too faint on white); the defaults on dark themes.
 static QColor muted()
 {
-    return creatorColor(Theme::Token_Text_Muted);
+    const QColor color = creatorColor(Theme::Token_Text_Muted);
+    return creatorTheme()->flag(Theme::DarkUserInterface) ? color : color.darker(140);
+}
+
+static QColor primary()
+{
+    return creatorColor(creatorTheme()->flag(Theme::DarkUserInterface) ? Theme::Token_Text_Default
+                                                                        : Theme::TextColorNormal);
 }
 
 // ---------------------------------------------------------------------------
@@ -152,7 +161,7 @@ protected:
                                   ? text()
                                   : fm.elidedText(text(), Qt::ElideRight, qMax(0, titleWidth));
 
-        p.setPen(creatorColor(Theme::Token_Text_Default));
+        p.setPen(primary());
         p.drawText(area, Qt::AlignLeft | Qt::AlignVCenter, title);
         p.setPen(muted());
         const int whenX = area.left() + fm.horizontalAdvance(title) + gap;
@@ -230,7 +239,7 @@ protected:
             StyleHelper::drawCardBg(&p, rect(), creatorColor(Theme::Token_Foreground_Subtle),
                                     Qt::NoPen, RadiusS);
         }
-        p.setPen(underMouse() ? creatorColor(Theme::Token_Text_Default) : muted());
+        p.setPen(underMouse() ? primary() : muted());
         p.drawText(rect(), Qt::AlignCenter, text());
     }
 };
@@ -313,6 +322,9 @@ SessionPickerWidget::SessionPickerWidget(QWidget *parent)
                                 .arg(creatorColor(Theme::Token_Background_Muted).name())
                                 .arg(RadiusS)
                                 .arg(PaddingHM - 2));
+    QPalette filterPal = m_filter->palette();
+    filterPal.setColor(QPalette::PlaceholderText, muted());
+    m_filter->setPalette(filterPal);
     m_filter->hide();
     connect(m_filter, &QLineEdit::textChanged, this, &SessionPickerWidget::applyFilter);
     layout->addWidget(m_filter);

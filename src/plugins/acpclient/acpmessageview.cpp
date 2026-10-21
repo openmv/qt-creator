@@ -86,7 +86,19 @@ protected:
         const QRectF r = QRectF(rect()).adjusted(2, 2, -2, -2);
 
         if (!m_icon.isNull()) {
-            m_icon.paint(&p, r.toAlignedRect());
+            // OPENMV-DIFF //
+            // m_icon.paint(&p, r.toAlignedRect());
+            // Tinted with the theme's muted text color: the icons come colored for
+            // the panels (black on light themes), too heavy beside the messages.
+            const qreal dpr = devicePixelRatioF();
+            QPixmap tinted = m_icon.pixmap(r.size().toSize(), dpr);
+            {
+                QPainter tint(&tinted);
+                tint.setCompositionMode(QPainter::CompositionMode_SourceIn);
+                tint.fillRect(tinted.rect(), Utils::creatorColor(Utils::Theme::Token_Text_Muted));
+            }
+            p.drawPixmap(r.toAlignedRect(), tinted);
+            // OPENMV-DIFF //
         } else {
             QRadialGradient gradient(r.center(), r.width() / 2.0);
             gradient.setColorAt(0, QColor(0x5e, 0xea, 0x8d));
@@ -105,6 +117,47 @@ private:
 // ---------------------------------------------------------------------------
 // UserMessageWidget — bubble for user messages, plain text via QLabel
 // ---------------------------------------------------------------------------
+
+// OPENMV-DIFF //
+// Text views paint an opaque background in the color behind them: transparent
+// ones lose Windows' sharp (ClearType) text smoothing and look fuzzy.
+static void setOpaqueBackground(QAbstractScrollArea *view, const QColor &color)
+{
+    QPalette pal = view->palette();
+    pal.setColor(QPalette::Base, color);
+    view->setPalette(pal);
+    view->setAutoFillBackground(false);
+    view->viewport()->setAutoFillBackground(true);
+}
+
+// The color the chat is drawn on: that of the nearest ancestor that paints one.
+static QColor chatBackground(QWidget *widget)
+{
+    for (QWidget *w = widget; w; w = w->parentWidget()) {
+        if (w->autoFillBackground())
+            return w->palette().color(w->backgroundRole());
+    }
+    return widget ? widget->palette().color(QPalette::Window) : QColor();
+}
+
+// Message text: on light themes the OpenMV views' (frame buffer, histogram...)
+// text color, softer than the near-black default; the default on dark themes.
+static QColor chatTextColor()
+{
+    return Utils::creatorColor(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
+                                   ? Utils::Theme::Token_Text_Default
+                                   : Utils::Theme::TextColorNormal);
+}
+
+// The user's bubble: the theme's foreground on dark themes, its lighter
+// "subtle" one on light themes (the default was a heavy grey there).
+static QColor userBubbleColor()
+{
+    return Utils::creatorColor(Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)
+                                   ? Utils::Theme::Token_Foreground_Default
+                                   : Utils::Theme::Token_Foreground_Subtle);
+}
+// OPENMV-DIFF //
 
 // OPENMV-DIFF //
 // The text in a user bubble. Unlike a QLabel it also wraps long unbroken runs
@@ -127,11 +180,10 @@ public:
         setMinimumWidth(1);
         setContentsMargins(0, 0, 0, 0);
         document()->setDocumentMargin(0);
-        setAutoFillBackground(false);
-        viewport()->setAutoFillBackground(false);
         QPalette pal = palette();
-        pal.setColor(QPalette::Text, Utils::creatorColor(Utils::Theme::Token_Text_Default));
+        pal.setColor(QPalette::Text, chatTextColor());
         setPalette(pal);
+        setOpaqueBackground(this, userBubbleColor());
         connect(document()->documentLayout(), &QAbstractTextDocumentLayout::documentSizeChanged,
                 this, [this](const QSizeF &size) {
             setFixedHeight(qMax(qCeil(size.height()), fontMetrics().height()));
@@ -366,7 +418,10 @@ protected:
     {
         QPainter p(this);
         p.setRenderHint(QPainter::Antialiasing);
-        const QColor bg = Utils::creatorColor(Utils::Theme::Token_Foreground_Default);
+        // OPENMV-DIFF //
+        // const QColor bg = Utils::creatorColor(Utils::Theme::Token_Foreground_Default);
+        const QColor bg = userBubbleColor();
+        // OPENMV-DIFF //
         Utils::StyleHelper::drawCardBg(&p, rect(), bg, Qt::NoPen, RadiusS);
     }
 
@@ -396,6 +451,11 @@ public:
         setVerticalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         setHorizontalScrollBarPolicy(Qt::ScrollBarAlwaysOff);
         setTextColor(Utils::creatorColor(Utils::Theme::Token_Text_Default));
+        // OPENMV-DIFF //
+        // On the chat's background (see showEvent()), not a box in the text area's
+        // own color (white on light themes).
+        setAutoFillBackground(false);
+        // OPENMV-DIFF //
         setSizePolicy(QSizePolicy::Expanding, QSizePolicy::Fixed);
         setMinimumWidth(1);
 
@@ -434,6 +494,14 @@ public:
     }
 
     QString rawText() const { return m_rawText; } // OPENMV-DIFF: the Markdown, for copying
+
+    // OPENMV-DIFF //
+    void showEvent(QShowEvent *event) override
+    {
+        setOpaqueBackground(this, chatBackground(parentWidget()));
+        Utils::MarkdownBrowser::showEvent(event);
+    }
+    // OPENMV-DIFF //
 
     // OPENMV-DIFF //
     // A new width re-wraps the text right away (in the base class); take the new
@@ -496,11 +564,38 @@ private:
     // long message re-rendered every 100 ms while it streams kept the IDE busy
     // most of the time. Space the renders by how long one takes, so they use at
     // most about a quarter of the time (100 ms to 1 s apart).
+    // The markdown view colors every piece of text the theme's default text color
+    // (headings too); that text gets the chat's (chatTextColor()) instead. Links
+    // and highlighted code keep theirs.
+    void recolorText()
+    {
+        const QColor from = Utils::creatorColor(Utils::Theme::Token_Text_Default);
+        const QColor to = chatTextColor();
+        if (from == to)
+            return;
+        QTextCursor cursor(document());
+        cursor.beginEditBlock();
+        for (QTextBlock block = document()->begin(); block.isValid(); block = block.next()) {
+            for (auto it = block.begin(); !it.atEnd(); ++it) {
+                const QTextFragment fragment = it.fragment();
+                if (fragment.charFormat().foreground().color() != from)
+                    continue;
+                QTextCharFormat format;
+                format.setForeground(to);
+                cursor.setPosition(fragment.position());
+                cursor.setPosition(fragment.position() + fragment.length(), QTextCursor::KeepAnchor);
+                cursor.mergeCharFormat(format);
+            }
+        }
+        cursor.endEditBlock();
+    }
+
     void render()
     {
         QElapsedTimer timer;
         timer.start();
         setMarkdown(m_rawText);
+        recolorText();
         (void) document()->size(); // the layout, otherwise done later (uncounted)
         (void) sizeHint();         // the unwrapped width, likewise
         m_renderTimer->setInterval(qBound(100, int(timer.elapsed()) * 4, 1000));
@@ -1442,6 +1537,19 @@ AcpMessageView::AcpMessageView(QWidget *parent)
     connect(m_progressUpdateTimer, &QTimer::timeout, this, &AcpMessageView::updateElapsedTimeLabel);
 
     setWidget(m_container);
+    // OPENMV-DIFF //
+    // White on light themes (see ChatPanel); replies paint the same color.
+    if (!Utils::creatorTheme()->flag(Utils::Theme::DarkUserInterface)) {
+        QPalette pal = viewport()->palette();
+        pal.setColor(QPalette::Window, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+        pal.setColor(QPalette::Base, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+        viewport()->setPalette(pal);
+        viewport()->setAutoFillBackground(true);
+        // setWidget() made the container fill its background (the theme's grey)
+        // over the viewport: white too.
+        m_container->setPalette(pal);
+    }
+    // OPENMV-DIFF //
 
     Aggregation::aggregate({this, new MessageViewFindSupport(this)});
 

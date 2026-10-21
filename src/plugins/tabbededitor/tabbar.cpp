@@ -370,5 +370,13 @@ void TabBar::paintEvent(QPaintEvent *event)
         if (current.right() < width() - 1)
             painter.drawLine(current.right() + 1, y, width() - 1, y);
     }
+    // The current tab's sides, so it stands apart from the tabs next to it
+    // (on light themes the other tabs are barely darker).
+    if (!current.isNull()) {
+        if (current.left() > 0)
+            painter.drawLine(current.left(), 0, current.left(), y);
+        if (current.right() < width() - 1)
+            painter.drawLine(current.right(), 0, current.right(), y);
+    }
 }
 // OPENMV-DIFF //

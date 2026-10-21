@@ -62,7 +62,7 @@ public:
         setMovable(true);
         setExpanding(false);
         setDrawBase(false);
-        setUsesScrollButtons(false);
+        setUsesScrollButtons(true); // OPENMV-DIFF: like the editor tabs, when they overflow
         setElideMode(Qt::ElideNone); // like the editor tabs: never truncate the name
         const QString tabStyle = qApp->property("openmv.tabBarStyleSheet").toString();
         if (!tabStyle.isEmpty())
@@ -106,6 +106,14 @@ public:
                 painter.drawLine(0, y, current.left() - 1, y);
             if (current.right() < width() - 1)
                 painter.drawLine(current.right() + 1, y, width() - 1, y);
+        }
+        // The current tab's sides, so it stands apart from the tabs next to it
+        // (on light themes the other tabs are barely darker).
+        if (!current.isNull()) {
+            if (current.left() > 0)
+                painter.drawLine(current.left(), 0, current.left(), y);
+            if (current.right() < width() - 1)
+                painter.drawLine(current.right(), 0, current.right(), y);
         }
     }
 
@@ -219,7 +227,30 @@ public:
         m_bar->removeTab(index);
     }
 
-    void setTabIcon(int index, const QIcon &icon) { m_bar->setTabIcon(index, icon); }
+    // OPENMV-DIFF //
+    // void setTabIcon(int index, const QIcon &icon) { m_bar->setTabIcon(index, icon); }
+    // Tinted with the theme's muted text color, like the agent's avatar in the
+    // chat: the icons come colored for the panels (black on light themes).
+    void setTabIcon(int index, const QIcon &icon)
+    {
+        if (icon.isNull()) {
+            m_bar->setTabIcon(index, icon);
+            return;
+        }
+        const QColor tint = Utils::creatorColor(Utils::Theme::Token_Text_Muted);
+        QIcon tinted;
+        for (const qreal dpr : {1.0, 2.0}) {
+            QPixmap pixmap = icon.pixmap(QSize(16, 16), dpr);
+            {
+                QPainter p(&pixmap);
+                p.setCompositionMode(QPainter::CompositionMode_SourceIn);
+                p.fillRect(pixmap.rect(), tint);
+            }
+            tinted.addPixmap(pixmap);
+        }
+        m_bar->setTabIcon(index, tinted);
+    }
+    // OPENMV-DIFF //
 
     // Edits a tab's title in place: Enter or clicking away applies, Escape cancels.
     void editTabTitle(int index, const QString &text, const std::function<void(QString)> &apply)

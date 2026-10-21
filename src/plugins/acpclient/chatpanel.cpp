@@ -593,6 +593,16 @@ private:
 ChatPanel::ChatPanel(QWidget *parent)
     : QWidget(parent)
 {
+    // OPENMV-DIFF //
+    // White on light themes (messages and the input area around the box), as
+    // chat apps are; dark themes keep their background.
+    if (!creatorTheme()->flag(Theme::DarkUserInterface)) {
+        QPalette pal = palette();
+        pal.setColor(QPalette::Window, Utils::creatorColor(Utils::Theme::BackgroundColorNormal));
+        setPalette(pal);
+        setAutoFillBackground(true);
+    }
+    // OPENMV-DIFF //
     auto *layout = new QVBoxLayout(this);
     layout->setContentsMargins(0, 0, 0, 0);
     layout->setSpacing(0);
