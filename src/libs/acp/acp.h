@@ -149,12 +149,17 @@ struct SessionCapabilities {
      */
     std::optional<QJsonObject> __meta;
     std::optional<SessionListCapabilities> _list;  //!< Whether the agent supports `session/list`.
+    // OPENMV-DIFF //
+    // Whether the agent takes `additionalDirectories` in session/new and session/load.
+    std::optional<QJsonObject> _additionalDirectories;
+    // OPENMV-DIFF //
 
     SessionCapabilities& _meta(const std::optional<QJsonObject> & v) { __meta = v; return *this; }
     SessionCapabilities& list(const std::optional<SessionListCapabilities> & v) { _list = v; return *this; }
 
     const std::optional<QJsonObject>& _meta() const { return __meta; }
     const std::optional<SessionListCapabilities>& list() const { return _list; }
+    const std::optional<QJsonObject>& additionalDirectories() const { return _additionalDirectories; } // OPENMV-DIFF
 };
 
 template<>
@@ -2674,6 +2679,13 @@ struct LoadSessionRequest {
     QString _cwd;  //!< The working directory for this session.
     QList<McpServer> _mcpServers;  //!< List of MCP servers to connect to for this session.
     SessionId _sessionId;  //!< The ID of the session to load.
+    // OPENMV-DIFF //
+    // More directories (absolute paths) the agent may work in besides `cwd`; only
+    // for an agent with the `sessionCapabilities.additionalDirectories` capability.
+    std::optional<QStringList> _additionalDirectories;
+    LoadSessionRequest& additionalDirectories(const std::optional<QStringList> & v) { _additionalDirectories = v; return *this; }
+    const std::optional<QStringList>& additionalDirectories() const { return _additionalDirectories; }
+    // OPENMV-DIFF //
 
     LoadSessionRequest& _meta(const std::optional<QJsonObject> & v) { __meta = v; return *this; }
     LoadSessionRequest& cwd(const QString & v) { _cwd = v; return *this; }
@@ -2708,6 +2720,13 @@ struct NewSessionRequest {
     std::optional<QJsonObject> __meta;
     QString _cwd;  //!< The working directory for this session. Must be an absolute path.
     QList<McpServer> _mcpServers;  //!< List of MCP (Model Context Protocol) servers the agent should connect to.
+    // OPENMV-DIFF //
+    // More directories (absolute paths) the agent may work in besides `cwd`; only
+    // for an agent with the `sessionCapabilities.additionalDirectories` capability.
+    std::optional<QStringList> _additionalDirectories;
+    NewSessionRequest& additionalDirectories(const std::optional<QStringList> & v) { _additionalDirectories = v; return *this; }
+    const std::optional<QStringList>& additionalDirectories() const { return _additionalDirectories; }
+    // OPENMV-DIFF //
 
     NewSessionRequest& _meta(const std::optional<QJsonObject> & v) { __meta = v; return *this; }
     NewSessionRequest& cwd(const QString & v) { _cwd = v; return *this; }

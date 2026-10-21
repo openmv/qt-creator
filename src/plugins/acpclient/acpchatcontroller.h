@@ -118,6 +118,7 @@ signals:
 private:
     void onInitializeResult(const Acp::InitializeResponse &response);
     Acp::NewSessionRequest buildNewSessionRequest() const;
+    QStringList additionalDirectories() const; // OPENMV-DIFF
 
     AcpInspector *m_inspector = nullptr;
     AcpTransport *m_transport = nullptr;

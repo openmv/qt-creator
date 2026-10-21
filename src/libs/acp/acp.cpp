@@ -102,6 +102,10 @@ Utils::Result<SessionCapabilities> fromJson<SessionCapabilities>(const QJsonValu
         }
     if (obj.contains("list") && !obj["list"].isNull())
         result._list = co_await fromJson<SessionListCapabilities>(obj["list"]);
+    // OPENMV-DIFF //
+    if (obj.contains("additionalDirectories") && obj["additionalDirectories"].isObject())
+        result._additionalDirectories = obj.value("additionalDirectories").toObject();
+    // OPENMV-DIFF //
     co_return result;
 }
 
@@ -112,6 +116,10 @@ QJsonObject toJson(const SessionCapabilities &data)
         obj.insert("_meta", *data.__meta);
     if (data._list.has_value())
         obj.insert("list", toJson(*data._list));
+    // OPENMV-DIFF //
+    if (data._additionalDirectories.has_value())
+        obj.insert("additionalDirectories", *data._additionalDirectories);
+    // OPENMV-DIFF //
     return obj;
 }
 
@@ -3140,6 +3148,10 @@ QJsonObject toJson(const LoadSessionRequest &data)
     QJsonArray arr_mcpServers;
     for (const auto &v : data._mcpServers) arr_mcpServers.append(toJsonValue(v));
     obj.insert("mcpServers", arr_mcpServers);
+    // OPENMV-DIFF //
+    if (data._additionalDirectories && !data._additionalDirectories->isEmpty())
+        obj.insert("additionalDirectories", QJsonArray::fromStringList(*data._additionalDirectories));
+    // OPENMV-DIFF //
     return obj;
 }
 
@@ -3176,6 +3188,10 @@ QJsonObject toJson(const NewSessionRequest &data)
     QJsonArray arr_mcpServers;
     for (const auto &v : data._mcpServers) arr_mcpServers.append(toJsonValue(v));
     obj.insert("mcpServers", arr_mcpServers);
+    // OPENMV-DIFF //
+    if (data._additionalDirectories && !data._additionalDirectories->isEmpty())
+        obj.insert("additionalDirectories", QJsonArray::fromStringList(*data._additionalDirectories));
+    // OPENMV-DIFF //
     return obj;
 }
 

@@ -1227,6 +1227,11 @@ QString OpenMVPlugin::docNameOf(const documentation_t *d) const
 
 // Opens the docs page (and anchor) of a fully-qualified name from the docs
 // inventory, e.g. "csi.CSI.reset"; false if the docs don't have it.
+QString OpenMVPlugin::cameraDrivePath() const
+{
+    return m_connected ? m_portPath : QString();
+}
+
 void OpenMVPlugin::openScriptInEditor(const QString &text, const QString &name)
 {
     const QByteArray data = text.toUtf8();

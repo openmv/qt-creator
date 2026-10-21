@@ -25,6 +25,10 @@
 // OPENMV-DIFF //
 #include <coreplugin/editormanager/documentmodel.h>
 #include <coreplugin/editormanager/editormanager.h>
+#include <coreplugin/icore.h>
+
+#include <extensionsystem/pluginmanager.h>
+#include <extensionsystem/pluginspec.h>
 // OPENMV-DIFF //
 
 #include <QLoggingCategory>
@@ -618,8 +622,56 @@ NewSessionRequest AcpChatController::buildNewSessionRequest() const
     NewSessionRequest req;
     req.cwd(m_workingDirectory.toFSPathString());
     req.mcpServers(buildMcpServers());
+    req.additionalDirectories(additionalDirectories()); // OPENMV-DIFF
     return req;
 }
+
+// OPENMV-DIFF //
+// Where the user's scripts are, besides the chat's folder: the camera's drive and
+// the folders of the open scripts (not the IDE's own examples or temporary ones).
+// The agent may then read and edit them without asking each time. Only for an
+// agent that takes them (sessionCapabilities.additionalDirectories); fixed when
+// the session starts or loads.
+QStringList AcpChatController::additionalDirectories() const
+{
+    const bool supported = m_agentCapabilities && m_agentCapabilities->sessionCapabilities()
+                           && m_agentCapabilities->sessionCapabilities()->additionalDirectories();
+    if (!supported)
+        return {};
+
+    QList<FilePath> folders;
+    const auto add = [&folders, this](const FilePath &folder) {
+        if (folder.isEmpty() || !folder.isAbsolutePath() || !folder.isDir())
+            return;
+        if (folder == m_workingDirectory || folders.contains(folder))
+            return;
+        if (folder.isChildOf(Core::ICore::resourcePath()) || folder == Core::ICore::resourcePath())
+            return; // the IDE's own files (its examples)
+        if (folder.isChildOf(FilePath::fromString(QDir::tempPath())))
+            return; // untitled scripts' temporary files
+        folders.append(folder);
+    };
+
+    // The camera's drive, from the OpenMV plugin (asked by name: no link to it).
+    for (ExtensionSystem::PluginSpec *spec : ExtensionSystem::PluginManager::plugins()) {
+        QString drive;
+        if (spec->id() == QLatin1String("openmv") && spec->plugin()
+            && QMetaObject::invokeMethod(spec->plugin(), "cameraDrivePath",
+                                         Q_RETURN_ARG(QString, drive))) {
+            add(FilePath::fromUserInput(drive));
+        }
+    }
+    for (Core::IDocument *document : Core::DocumentModel::openedDocuments()) {
+        if (!document->isTemporary() && !document->filePath().isEmpty())
+            add(document->filePath().parentDir());
+    }
+
+    QStringList paths;
+    for (const FilePath &folder : std::as_const(folders))
+        paths.append(folder.toFSPathString());
+    return paths;
+}
+// OPENMV-DIFF //
 
 // OPENMV-DIFF //
 bool AcpChatController::supportsLoadSession() const
@@ -669,6 +721,7 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
     req.sessionId(sessionId);
     req.cwd(m_workingDirectory.toFSPathString());
     req.mcpServers(buildMcpServers());
+    req.additionalDirectories(additionalDirectories()); // OPENMV-DIFF
 
     m_client->loadSession(req, [this, sessionId](const QJsonObject &result,
                                                   const std::optional<Error> &error) {

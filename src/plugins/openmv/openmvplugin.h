@@ -500,6 +500,8 @@ public:
     // Opens a script (from the AI chat, say) as a new untitled tab, the way
     // examples open; called by name from other plugins.
     Q_INVOKABLE void openScriptInEditor(const QString &text, const QString &name);
+    // The connected camera's drive (its filesystem, where main.py lives), or "".
+    Q_INVOKABLE QString cameraDrivePath() const;
     QList<QObject *> createTestObjects() const { return QList<QObject *>(); }
 
 public slots: // private
