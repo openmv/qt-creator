@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ar_EG">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>إغلاق علامة التبويب</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>لا أحد</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>ينسخ</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>الأعلى</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>الوسيط</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>وضع</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>جامعة كوينزلاند</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>دقيقة</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>يقصد</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>يطفو</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>لم يُعثر على إدخال كلمة المرور</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>تعذر فك تشفير البيانات</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>لم يُعثر على إدخال كلمة المرور</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>تعذر فك تشفير البيانات</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>تعذر فك تشفير البيانات: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>فشل التشفير: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>يتجاوز حجم بيانات الاعتماد الحجم الأقصى %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>يتجاوز مفتاح بيانات الاعتماد الحجم الأقصى %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>فشلت كتابة بيانات الاعتماد: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>جاري تحميل تعريف بناء الجملة الجديد لـ &apos;%1&apos; ...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>جارٍ تنزيل تعريف تمييز جديد لـ &apos;%1&apos;…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>جاري تحديث تعريف بناء الجملة لـ &apos;%1&apos; إلى الإصدار%2 ...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>جارٍ تحديث تعريف الصياغة لـ &apos;%1&apos; إلى الإصدار %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">جاري تحميل تعريف بناء الجملة الجديد لـ &apos;%1&apos; ...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">جاري تحديث تعريف بناء الجملة لـ &apos;%1&apos; إلى الإصدار%2 ...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>نسخ/تحويل ملف Python</translation>
     </message>
@@ -242,6 +304,79 @@
         <location line="+19" />
         <source>Convert Model</source>
         <translation>تحويل النموذج</translation>
+    </message>
+</context>
+<context>
+    <name>QUnicodeControlCharacterMenu</name>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM علامة من اليسار إلى اليمين</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM علامة من اليمين إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ رابط عرضه صفر</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ فاصل عرضه صفر</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP مسافة عرضها صفر</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE بداية تضمين من اليسار إلى اليمين</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE بداية تضمين من اليمين إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO بداية تجاوز من اليسار إلى اليمين</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO بداية تجاوز من اليمين إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF إنهاء التنسيق الاتجاهي</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI عزل من اليسار إلى اليمين</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI عزل من اليمين إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI أول عزل قوي</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI إنهاء العزل الاتجاهي</translation>
     </message>
 </context>
 <context>
@@ -384,47 +519,697 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QtC::AcpClient</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>لا يمكن فتح%1:%2</translation>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>هذا الوكيل لم يعد متاحًا. اختر وكيلاً لبدء محادثة جديدة.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>خطأ في الجلسة: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>خطأ في الجلسة: استجابة غير صالحة.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>خطأ في الموجه: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>فشل تعيين خيار الإعداد: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>فشل سرد الجلسات: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>فشل سرد الجلسات: استجابة غير صالحة.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>فشل تحميل الجلسة: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>محادثة جديدة</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>تعذر تحميل قائمة وكلاء الذكاء الاصطناعي. تحقق من اتصالك بالإنترنت، ثم حاول مرة أخرى.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>حاول مرة أخرى</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>إعادة تحميل قائمة وكلاء الذكاء الاصطناعي.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>اختر وكيل ذكاء اصطناعي</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>المصادقة مطلوبة</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>الطريقة:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>إلغاء</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>مصادقة</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>تمت مقاطعة الطلب بواسطة المستخدم</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>فشلت المصادقة: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 جاهز.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>الوكيل</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>جارٍ بدء المحادثة...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>جارٍ الاتصال بـ %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>جارٍ تحميل المحادثة...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>إغلاق</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>إعادة تسمية المحادثة...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>إغلاق المحادثة</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>عميل ACP</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>إظهار محادثة الذكاء الاصطناعي الوكيلي في اللوحة الجانبية</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>فحص عميل ACP...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>توسيع الكل</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>رسالة العميل</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>الرسائل</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>رسالة الخادم</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>ملف السجل</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>مدقق ACP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;اختر&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>مسح</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>عميل ACP:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>غير معروف</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>نسخ</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>سماح</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>سماح دائمًا</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>رفض</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>رفض دائمًا</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>طلب إذن</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>تمت المصادقة</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>رفض</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>مرفوض</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 دقيقة</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 ثانية</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;مخصص&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>تحديد وكيل غير مدرج في السجل يدويًا.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>القالب:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>اختر قالبًا من السجل لملء الإعدادات مسبقًا.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>الاسم:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>الاسم المعروض.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;خادم جديد&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>الملف التنفيذي:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>الملف التنفيذي لتشغيل عملية خادم ACP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>الوسائط:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>الوسائط لتشغيل عملية خادم ACP.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>تغييرات البيئة:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>الأمر الذي سيشغّل خادم ACP.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>&quot;%1&quot; مطلوب لهذا الوكيل، لكنه لم يُعثر عليه.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>تأكد من تثبيت Node.js وأن npx متاح في PATH. راجع &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; لتعليمات التثبيت.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>تأكد من تثبيت UV وأن uvx متاح في PATH. راجع &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; لتعليمات التثبيت.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>خوادم ACP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>مزيد من المزودين</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>مفتوح المصدر</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>كل ما عدا ذلك</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>لم يتم تكوين أمر لخادم ACP.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>الأمر غير موجود: &quot;%1&quot;. تحقق من وجوده وقابليته للتنفيذ.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>الأمر غير موجود: &quot;%1&quot;. تحقق من قابليته للتنفيذ ووجوده في PATH.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>تعذر إرسال البيانات: لم تبدأ العملية (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>تعذر إرسال البيانات: العملية &quot;%1&quot; غير قيد التشغيل (رمز الخروج %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>خطأ في تحليل JSON: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>كان المتوقع كائن JSON.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter للإرسال، Shift+Enter لسطر جديد؛ الصق الصور والملفات أو أفلتها لإرفاقها</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>تصفية الأوامر...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>إزالة السياق</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>خيارات الإعداد</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>إظهار الأفكار</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>إضافة سياق</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>إضافة ملف...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>إضافة ملف سياق</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>إضافة ملف بعيد...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>المحرر الحالي</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>إدراج أمر</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>إرسال (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>خطأ في الملف</translation>
+        <source>Stop (Esc)</source>
+        <translation>إيقاف (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>السياق: استُخدم %1 من %2 رمزًا (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>تكلفة الجلسة: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>انقر لضغط المحادثة.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n مرفق</numerusform>
+            <numerusform>%n مرفق</numerusform>
+            <numerusform>%n مرفق</numerusform>
+            <numerusform>%n مرفق</numerusform>
+            <numerusform>%n مرفق</numerusform>
+            <numerusform>%n مرفق</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>في قائمة الانتظار: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>يُرسل عندما ينتهي الوكيل.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>تحرير الرسالة في قائمة الانتظار</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>صورة</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>الآن</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>قبل دقيقة</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>قبل %1 دقيقة</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>قبل ساعة</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>قبل %1 ساعة</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>أمس</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>قبل %1 يوم</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>محادثة بلا عنوان</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>إعادة تسمية المحادثة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>الاسم (اتركه فارغًا للتعيين التلقائي):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>بدء محادثة</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>محادثة جديدة في مجلد...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>المحادثات السابقة</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>تصفية المحادثات...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>جارٍ تحميل المحادثات السابقة...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>تبدأ المحادثات الجديدة في %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>اختر مجلدًا للمحادثة</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>إظهار محادثة أقدم واحدة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>إظهار %1 من المحادثات الأقدم</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>المحادثات السابقة (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>لا توجد محادثات سابقة.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>لا توجد محادثات مطابقة.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>فتح في المحرر</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 · سطر واحد</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 · %2 سطر</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>إدخال خام</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">لا يمكن فتح%1:%2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">خطأ في الملف</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>لا يمكن للمحرر الثنائي فتح ملفات فارغة.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>الملف كبير جدًا بالنسبة لمحرر الخيارات الثنائية (بحد أقصى 32 جيجابايت).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>إزاحة الملف كبيرة جدًا.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>عنوان البايت</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;الغاء التحميل</translation>
+        <translation type="vanished">&amp;الغاء التحميل</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;إعادة</translation>
+        <translation type="vanished">&amp;إعادة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>الذاكرة عند 0x%1</translation>
     </message>
@@ -484,7 +1269,7 @@
         <translation>القيمة السابقة &amp; nbsp ؛ الثمانية &amp; nbsp ؛</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;قيمة:</translation>
     </message>
@@ -494,7 +1279,7 @@
         <translation>القيمة السابقة &lt;i&gt; المزدوجة &lt;/ i&gt; &amp; nbsp ؛</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt; تعويم &lt;/ i&gt; &amp; nbsp ؛ القيمة:</translation>
     </message>
@@ -504,12 +1289,12 @@
         <translation>القيمة &lt;i&gt; العائمة &lt;/ i&gt; السابقة:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>تكبير / تصغير:%1٪</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>فشل النسخ</translation>
     </message>
@@ -519,7 +1304,7 @@
         <translation>لا يمكنك نسخ أكثر من 4 ميغا بايت من البيانات الثنائية.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>نسخ التحديد كأحرف ASCII</translation>
     </message>
@@ -534,7 +1319,7 @@
         <translation>قم بتعيين نقطة فصل البيانات عند التحديد</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>نسخ 0x%1</translation>
@@ -555,12 +1340,26 @@
         <translation>قيمة النسخ</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>انتقال سريع إلى العنوان 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>الانتقال إلى العنوان 0x%1 في هذه النافذة</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>تعذر فتح &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>المحرر الثنائي</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">انتقال سريع إلى العنوان 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>انتقل إلى العنوان 0x%1 في نافذة جديدة</translation>
     </message>
@@ -568,21 +1367,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>تسجيل الدخول</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>فشل طلب تسجيل الدخول: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>سيفتح نافذة المتصفح. أدخل الكود %1 عند الطلب.
  تم نسخ الكود إلى الحافظة الخاصة بك.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>فشل تسجيل الدخول</translation>
     </message>
@@ -592,48 +1396,40 @@ The code has been copied to your clipboard.</source>
         <translation>فشل طلب تسجيل الدخول: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Copilot</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>اسم المستخدم وكلمة المرور بالوكالة المطلوبة:</translation>
+        <translation type="vanished">اسم المستخدم وكلمة المرور بالوكالة المطلوبة:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>لا تسأل مرة أخرى. هذا سوف يعطل Copilot الآن.</translation>
+        <translation type="vanished">لا تسأل مرة أخرى. هذا سوف يعطل Copilot الآن.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>حدد اقتراح Copilot السابق</translation>
+        <translation type="vanished">حدد اقتراح Copilot السابق</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>حدد اقتراح Copilot التالي</translation>
+        <translation type="vanished">حدد اقتراح Copilot التالي</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>تطبيق (%1)</translation>
+        <translation type="vanished">تطبيق (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>تطبيق الكلمة (%1)</translation>
+        <translation type="vanished">تطبيق الكلمة (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 من %2</translation>
+        <translation type="vanished">%1 من %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>طلب اقتراح copilot</translation>
     </message>
@@ -669,25 +1465,25 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>تعطيل Copilot.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>تمكين Copilot</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>تمكين Copilot.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>تبديل copilot</translation>
     </message>
@@ -697,7 +1493,7 @@ The code has been copied to your clipboard.</source>
         <translation>يتيح تكامل Copilot.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>مسار Node.js:</translation>
     </message>
@@ -719,13 +1515,12 @@ The code has been copied to your clipboard.</source>
         <translation>الطريق إلى %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>%1 المسار</translation>
+        <translation type="vanished">%1 المسار</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>حدد المسار إلى %2 في البرنامج المساعد Copilot Neovim. انظر %1 للحصول على تعليمات التثبيت.</translation>
@@ -746,97 +1541,100 @@ The code has been copied to your clipboard.</source>
         <translation>طلب اقتراحات تلقائيًا لموضع مؤشر النص الحالي بعد تغييرات على المستند.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>استخدم الوكيل</translation>
+        <translation type="vanished">استخدم الوكيل</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>استخدم الوكيل</translation>
+        <translation type="vanished">استخدم الوكيل</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>استخدم وكيلًا للاتصال بخوادم Copilot.</translation>
+        <translation type="vanished">استخدم وكيلًا للاتصال بخوادم Copilot.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>مضيف وكيل</translation>
+        <translation type="vanished">مضيف وكيل</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>مضيف الوكيل:</translation>
+        <translation type="vanished">مضيف الوكيل:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>اسم المضيف لخادم الوكيل.</translation>
+        <translation type="vanished">اسم المضيف لخادم الوكيل.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>ميناء وكيل</translation>
+        <translation type="vanished">ميناء وكيل</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>منفذ الوكيل:</translation>
+        <translation type="vanished">منفذ الوكيل:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>منفذ خادم الوكيل.</translation>
+        <translation type="vanished">منفذ خادم الوكيل.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>مستخدم وكيل</translation>
+        <translation type="vanished">مستخدم وكيل</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>مستخدم الوكيل:</translation>
+        <translation type="vanished">مستخدم الوكيل:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>اسم المستخدم للوصول إلى خادم الوكيل.</translation>
+        <translation type="vanished">اسم المستخدم للوصول إلى خادم الوكيل.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>حفظ كلمة مرور الوكيل</translation>
+        <translation type="vanished">حفظ كلمة مرور الوكيل</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>حفظ كلمة مرور الوكيل</translation>
+        <translation type="vanished">حفظ كلمة مرور الوكيل</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>احفظ كلمة المرور للوصول إلى خادم الوكيل. يتم تخزين كلمة المرور بشكل غير مؤلم.</translation>
+        <translation type="vanished">احفظ كلمة المرور للوصول إلى خادم الوكيل. يتم تخزين كلمة المرور بشكل غير مؤلم.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>كلمة مرور الوكيل</translation>
+        <translation type="vanished">كلمة مرور الوكيل</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">كلمة مرور الوكيل:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">كلمة المرور لخادم الوكيل.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>المسار إلى %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>وكيل</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>كلمة مرور الوكيل:</translation>
+        <source>Proxy:</source>
+        <translation>الوكيل:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>كلمة المرور لخادم الوكيل.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>خادم الوكيل المستخدم للاتصالات، بصيغة http://host:port، أو http://user:password@host:port إذا كان الوكيل يتطلب تسجيل دخول.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>رفض غير مصرح به</translation>
     </message>
@@ -851,7 +1649,22 @@ The code has been copied to your clipboard.</source>
         <translation>رفض الشهادات غير المصرح بها من خادم الوكيل. إيقاف تشغيل هذا هو خطر أمني.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>عنوان URL لـ GitHub Enterprise</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>عنوان URL لـ GitHub Enterprise:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>عنوان URL لخادم GitHub Enterprise الخاص بك.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>يخضع تمكين %1 لموافقتك والتزامك بشروط %1 المعمول بها. تقع على عاتقك مسؤولية معرفة وقبول متطلبات ومعايير استخدام أدوات مثل %1. قد يشمل ذلك، على سبيل المثال لا الحصر، التأكد من امتلاكك الحقوق للسماح لـ %1 بالوصول إلى شفرتك، بالإضافة إلى فهم أي تبعات لاستخدامك %1 والاقتراحات الناتجة (مثل حقوق النشر والدقة وما إلى ذلك).</translation>
     </message>
@@ -874,30 +1687,35 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+86" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+83" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>فشل إنشاء الملف</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="-63" />
         <source>Existing files</source>
         <translation>الملفات الموجودة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>فشل تعيين الأذونات.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>تعذر إنشاء الدليل%1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>فشل في فتح محرر لـ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[يقرأ فقط]</translation>
     </message>
@@ -912,56 +1730,91 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>[ارتباط رمزي]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>يحتوي دليل المشروع%1 على ملفات لا يمكن الكتابة فوقها:
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+455" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>العودة إلى المحفوظات</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>يغلق</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>أغلق الكل</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>أغلق الآخرين</translation>
     </message>
     <message>
-        <location line="-1710" />
+        <location line="-1815" />
         <source>Revert File to Saved</source>
         <translation>إعادة الملف إلى المحفوظة</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-12" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>حفظ بدون تنسيق</translation>
+    </message>
+    <message>
+        <location line="-1755" />
         <source>Ctrl+W</source>
         <translation>السيطرة + W</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+104" />
+        <source>Previous Tab</source>
+        <translation>علامة التبويب السابقة</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>علامة التبويب التالية</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>إغلاق كل علامات التبويب</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>إغلاق علامات التبويب الأخرى</translation>
+    </message>
+    <message>
+        <location line="-2560" />
+        <source>Open Previous Document</source>
+        <translation>فتح المستند السابق</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>فتح المستند التالي</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -987,34 +1840,38 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>إزالة كافة الانقسامات</translation>
     </message>
     <message>
-        <location line="+2669" />
+        <location line="+2529" />
+        <source>Diff Against Current File</source>
+        <translation>مقارنة مع الملف الحالي</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>فتح ملف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>تعذر حفظ الملفات.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2471" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2825" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>خطأ في الملف</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>خطأ أثناء حفظ الملف:%1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>كل الملفات (*.*)</translation>
@@ -1031,27 +1888,42 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>يوجد عنصر يسمى &quot;%1&quot; بالفعل في هذا الموقع. هل تريد الكتابة عليه؟</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+229" />
         <source>Open File</source>
         <translation>افتح ملف</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>لا يمكن إعادة تحميل%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>فتح باستخدام VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>فروقات &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>السجل &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>تعليق توضيحي على &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-619" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
         <translation>&lt;b&gt; تحذير: &lt;/ b&gt; أنت تقوم بتغيير ملف للقراءة فقط.</translation>
     </message>
     <message>
-        <location line="-1490" />
+        <location line="-1626" />
         <source>Next Open Document in History</source>
         <translation>التالي افتح المستند في المحفوظات</translation>
     </message>
@@ -1061,59 +1933,58 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>فتح المستند السابق في المحفوظات</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>عُد</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>تقدم للامام</translation>
     </message>
     <message>
-        <location line="-238" />
-        <location line="+124" />
+        <location line="-118" />
         <source>Close All Except Visible</source>
         <translation>أغلق الكل ما عدا المرئي</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+159" />
         <source>Go to Last Edit</source>
         <translation>انتقل إلى آخر تحرير</translation>
     </message>
     <message>
-        <location line="-268" />
+        <location line="+2383" />
         <source>Copy Full Path</source>
         <translation>نسخ المسار الكامل</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>نسخ المسار ورقم السطر</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>نسخ اسم الملف</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Properties...</source>
-        <translation>ملكيات...</translation>
+        <translation type="vanished">ملكيات...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>دبوس</translation>
+        <translation type="vanished">دبوس</translation>
     </message>
     <message>
         <source>Alternative Close</source>
         <translation type="vanished">إغلاق بديل</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="-2596" />
         <source>Ctrl+F4</source>
         <translation>السيطرة + F4</translation>
     </message>
@@ -1122,13 +1993,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation type="vanished">Ctrl+Shift+W.</translation>
     </message>
     <message>
-        <location line="+158" />
+        <location line="+182" />
         <source>Reopen Last Closed Document</source>
         <translation>إعادة فتح وثيقة مغلقة الأخيرة</translation>
     </message>
     <message>
         <location line="+41" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-309" />
         <source>Open in New Window</source>
         <translation>افتح في نافذة جديدة</translation>
     </message>
@@ -1143,12 +2014,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>انتقل إلى Next Split أو Window</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1852" />
         <source>Ad&amp;vanced</source>
         <translation>متقدم (&amp;V)</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>الوثيقة الحالية</translation>
     </message>
@@ -1163,7 +2034,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>تنسيق Y للركن الأيسر العلوي للمحرر الحالي ، بالنسبة للشاشة.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>هل تريد متابعة فتح ملف نصي ضخم؟</translation>
     </message>
@@ -1177,22 +2048,21 @@ Continue?</source>
 يكمل؟</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>تعذر فتح &quot;%1&quot;: لا يمكن فتح ملفات من النوع &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>تعذر فتح &quot;%1&quot; للقراءة. إما أن الملف غير موجود أو ليس لديك الأذونات لفتحه.</translation>
+        <translation type="vanished">تعذر فتح &quot;%1&quot; للقراءة. إما أن الملف غير موجود أو ليس لديك الأذونات لفتحه.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>تعذر فتح &quot;%1&quot;: خطأ غير معروف.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt; تحذير: &lt;/ b&gt; لم يتم فتح هذا الملف في%1 بعد.</translation>
     </message>
@@ -1202,7 +2072,7 @@ Continue?</source>
         <translation>يفتح</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+30" />
         <source>&amp;Save %1</source>
         <translation>&amp;حفظ%1</translation>
     </message>
@@ -1210,6 +2080,11 @@ Continue?</source>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>حفظ%1 &amp;باسم ...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>حفظ %1 بدون تنسيق</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1222,7 +2097,7 @@ Continue?</source>
         <translation>إعادة تحميل%1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>أغلق%1</translation>
     </message>
@@ -1232,7 +2107,7 @@ Continue?</source>
         <translation>إغلاق الكل باستثناء%1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>لا يمكن فتح ملف</translation>
     </message>
@@ -1242,7 +2117,7 @@ Continue?</source>
         <translation>لا يمكن فتح الملف للتحرير باستخدام VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>ستفقد تغييراتك الحالية إذا تابعت التراجع عن%1.</translation>
     </message>
@@ -1253,9 +2128,12 @@ Continue?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+887" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>يلغي</translation>
     </message>
@@ -1265,12 +2143,12 @@ Continue?</source>
         <translation>إلغاء &amp;&amp;&amp; الفرق (&amp;D)</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>إغلاق &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+65" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>إزالة تثبيت &quot;%1&quot;</translation>
     </message>
@@ -1285,7 +2163,7 @@ Continue?</source>
         <translation>محرر دبوس</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-489" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-482" />
         <source>Overwrite?</source>
         <translation>الكتابة فوق؟</translation>
     </message>
@@ -1295,17 +2173,21 @@ Continue?</source>
         <translation>احفظ الملف تحت اسم</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>يحرر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>اسحب لسحب المستندات بين الانقسامات</translation>
+        <translation type="vanished">اسحب لسحب المستندات بين الانقسامات</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>اسحب لفتح المستند في تقسيم آخر.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>وثيقة وثيقة</translation>
     </message>
@@ -1320,23 +2202,22 @@ Continue?</source>
         <translation>الملف قابل للكتابة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+152" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>إعادة تعيين مربعات عدم السؤال / العرض مرة أخرى</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>إعادة تعيين إلى الافتراضي.</translation>
+        <translation type="vanished">إعادة تعيين إلى الافتراضي.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>سمة:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>لغة:</translation>
     </message>
@@ -1349,12 +2230,11 @@ Continue?</source>
         <translation type="vanished">ستصبح إعدادات DPI العالية نافذة المفعول بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>User Interface</source>
-        <translation>واجهة المستخدم</translation>
+        <translation type="vanished">واجهة المستخدم</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="-66" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>إظهار اختصارات لوحة المفاتيح في قوائم السياق (الافتراضي:%1)</translation>
     </message>
@@ -1369,7 +2249,7 @@ Continue?</source>
         <translation>عن</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>تجاوز المؤشرات للطلاء</translation>
     </message>
@@ -1381,7 +2261,32 @@ If the system cursors for resizing views are not displayed properly, you can use
  إذا لم يتم عرض مؤشرات النظام لتغيير حجم المشاهدات بشكل صحيح ، فيمكنك استخدام المؤشرات التي توفرها %1.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+12" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>تفضيل أشرطة المعلومات على النوافذ المنبثقة</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>استخدام محررات بعلامات تبويب</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>إظهار الزرين موافق وإلغاء في وضع التفضيلات</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>ترميز النص للأدوات:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>اللون:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Round Up for .5 and Above</source>
         <translation>جولة ل 0.5 وما فوق</translation>
     </message>
@@ -1401,42 +2306,52 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>جولة ل .75 وما فوق</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>لا تدور</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>سياسة تقريب DPI:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>يتم تعيين متغيرات البيئة التالية ويمكن أن تؤثر على سلوك تحجيم واجهة المستخدم من %1:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>البيئة تؤثر على سلوك واجهة المستخدم.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>حجم الجدولة في الطرفية التسلسلية:</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;لغة النظام&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>إعادة تفعيل التحذيرات التي تم إخفاؤها باختيار &quot;عدم الإظهار مرة أخرى&quot; (مثل غياب أداة تمييز الصياغة).</translation>
+    </message>
+    <message>
+        <location line="+126" />
         <source>The language change will take effect after restart.</source>
         <translation>سيصبح تغيير اللغة ساري المفعول بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>نمط شريط الأدوات:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>مضغوط</translation>
     </message>
@@ -1446,41 +2361,39 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>استرخاء</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>سيؤدي تغيير سياسة تقريب DPI إلى سرية بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>واجهه المستخدم</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+356" />
         <source>Environment</source>
         <translation>بيئة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+480" />
         <source>Variables</source>
-        <translation>المتغيرات</translation>
+        <translation type="vanished">المتغيرات</translation>
     </message>
     <message>
-        <location line="-271" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+116" />
         <source>Terminal:</source>
         <translation>صالة:</translation>
     </message>
     <message>
-        <location line="-166" />
         <source>Bytes</source>
-        <translation>بايت</translation>
+        <translation type="vanished">بايت</translation>
     </message>
     <message>
         <source>KB</source>
         <translation type="vanished">كيلو بايت</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+111" />
         <source>MB</source>
         <translation>ميغا بايت</translation>
     </message>
@@ -1493,77 +2406,81 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation type="vanished">تيرابايت</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-33" />
         <source>Auto-suspend unmodified files</source>
         <translation>الإيقاف التلقائي للملفات غير المعدلة</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+8" />
         <source>Enable crash reporting</source>
         <translation>تمكين الإبلاغ عن الأعطال</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+7" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>تُحفظ تقارير الأعطال في &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Warn before opening text files greater than</source>
         <translation>تحذير قبل فتح ملفات نصية أكبر من</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+10" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>عدد &quot;الملفات الأخيرة&quot;:</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Ask for confirmation before exiting</source>
         <translation>اطلب التأكيد قبل الخروج</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-75" />
         <source>Auto-save modified files</source>
         <translation>الحفظ التلقائي للملفات المعدلة</translation>
     </message>
     <message>
-        <location line="+96" />
         <source>Clear Local Crash Reports</source>
-        <translation>مسح تقارير الأعطال المحلية</translation>
+        <translation type="vanished">مسح تقارير الأعطال المحلية</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+17" />
         <source>Auto-save files after refactoring</source>
         <translation>الحفظ التلقائي للملفات بعد إعادة البناء</translation>
     </message>
     <message>
-        <location line="-49" />
         <source>KiB</source>
-        <translation>كيب</translation>
+        <translation type="vanished">كيب</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>MIB</translation>
+        <translation type="vanished">MIB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>جيب</translation>
+        <translation type="vanished">جيب</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>تيب</translation>
+        <translation type="vanished">تيب</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+10" />
         <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
         <translation>حرر تلقائيًا موارد المستندات القديمة غير المرئية وغير المعدلة. تظل مرئية في قائمة المستندات المفتوحة.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+8" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>السماح بالإبلاغ عن الأعطال تلقائيًا. يتم استخدام التقارير المجمعة لغرض وحيد هو إصلاح الخلل.</translation>
     </message>
     <message>
-        <location line="+35" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>وسيطات سطر الأوامر المستخدمة في &quot;تشغيل في المحطة الطرفية&quot;.</translation>
+        <translation type="vanished">وسيطات سطر الأوامر المستخدمة في &quot;تشغيل في المحطة الطرفية&quot;.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+33" />
         <source>Always Ask</source>
         <translation>اسال دائما</translation>
     </message>
@@ -1578,27 +2495,24 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>تجاهل التعديلات</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-61" />
         <source>min</source>
         <translation>دقيقة</translation>
     </message>
     <message>
-        <location line="+105" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>وسيطات سطر الأوامر المستخدمة لـ &quot;%1&quot;.</translation>
+        <translation type="vanished">وسيطات سطر الأوامر المستخدمة لـ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>File system case sensitivity:</source>
-        <translation>حساسية حالة نظام الملفات:</translation>
+        <translation type="vanished">حساسية حالة نظام الملفات:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>يؤثر على كيفية مطابقة أسماء الملفات لتقرير ما إذا كانت متطابقة.</translation>
+        <translation type="vanished">يؤثر على كيفية مطابقة أسماء الملفات لتقرير ما إذا كانت متطابقة.</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="+37" />
         <source>Files to keep open:</source>
         <translation>الملفات المراد إبقائها مفتوحة:</translation>
     </message>
@@ -1608,55 +2522,77 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>الحد الأدنى من عدد المستندات المفتوحة التي يجب الاحتفاظ بها في الذاكرة. ستؤدي زيادة هذا الرقم إلى زيادة استخدام الموارد عند عدم إغلاق المستندات يدويًا.</translation>
     </message>
     <message>
-        <location line="+84" />
-        <location line="+3" />
         <source>?</source>
-        <translation>؟</translation>
+        <translation type="vanished">؟</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>إعادة تعيين إلى الافتراضي.</translation>
+        <translation type="vanished">إعادة تعيين إلى الافتراضي.</translation>
     </message>
     <message>
-        <location line="-130" />
+        <location line="-53" />
         <source>Patch command:</source>
         <translation>أمر التصحيح:</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="-11" />
         <source>External file browser:</source>
         <translation>متصفح الملفات الخارجي:</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="+88" />
         <source>When files are externally modified:</source>
         <translation>عندما يتم تعديل الملفات خارجيًا:</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-60" />
         <source>Interval:</source>
         <translation>فاصلة:</translation>
     </message>
     <message>
-        <location line="+147" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>الحد الأقصى لعدد الإدخالات في &quot;الملفات الأخيرة&quot;:</translation>
+        <translation type="vanished">الحد الأقصى لعدد الإدخالات في &quot;الملفات الأخيرة&quot;:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+121" />
         <source>System</source>
         <translation>نظام</translation>
     </message>
     <message>
-        <location line="-423" />
+        <location line="-137" />
         <source>Command used for reverting diff chunks.</source>
         <translation>الأمر المستخدم لعكس أجزاء الفرق.</translation>
     </message>
     <message>
+        <location line="-96" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;المتغير&lt;/th&gt;&lt;th&gt;يتوسع إلى&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;دليل الملف الحالي&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;اسم الملف (مع المسار الكامل)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;اسم الملف (بدون المسار)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>فواصل المتغيرات:</translation>
+    </message>
+    <message>
         <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>استخدام واجهة D-Bus لمدير الملفات من freedesktop.org</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>يستخدم &lt;a href=&quot;%1&quot;&gt;واجهة D-Bus من freedesktop.org&lt;/a&gt; لـ &lt;i&gt;الفتح في مدير الملفات&lt;/i&gt;، إن توفرت. وإلا يعود إلى &quot;متصفح الملفات الخارجي&quot; أعلاه.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>الأمر المستخدم لـ &lt;i&gt;Open in File Manager&lt;/i&gt; إذا لم تكن واجهة D-Bus الخاصة بـ freedesktop.org متاحة. يمكن أن يحتوي الأمر على المتغيرات التالية:
+</translation>
+    </message>
+    <message>
+        <location line="+17" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
         <translation>يقوم تلقائيًا بإنشاء نسخ مؤقتة من الملفات المعدلة. إذا تمت إعادة تشغيل%1 بعد تعطل أو انقطاع التيار الكهربائي ، فإنه يسأل عما إذا كان سيتم استرداد المحتوى المحفوظ تلقائيًا.</translation>
     </message>
@@ -1668,7 +2604,8 @@ provided they were unmodified before the refactoring.</source>
 شريطة أن تكون غير معدلة قبل إعادة البناء.</translation>
     </message>
     <message>
-        <location line="+183" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>الإبلاغ عن الأعطال</translation>
     </message>
@@ -1677,32 +2614,28 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">سيصبح التغيير ساري المفعول بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>حساس لحالة الأحرف (افتراضي)</translation>
+        <translation type="vanished">حساس لحالة الأحرف (افتراضي)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>غير حساس لحالة الأحرف (افتراضي)</translation>
+        <translation type="vanished">غير حساس لحالة الأحرف (افتراضي)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>حالة الأحرف</translation>
+        <translation type="vanished">حالة الأحرف</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>سيسري تغيير حساسية حالة نظام الملفات بعد إعادة التشغيل.</translation>
+        <translation type="vanished">سيسري تغيير حساسية حالة نظام الملفات بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-25" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-121" />
         <source>Output</source>
         <translation>انتاج |</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-27" />
         <source>&amp;File</source>
         <translation>&amp;ملف</translation>
     </message>
@@ -1712,7 +2645,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;يحرر</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+41" />
         <source>&amp;Tools</source>
         <translation>&amp;أدوات</translation>
     </message>
@@ -1727,16 +2660,14 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;يساعد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+133" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+132" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1006" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+162" />
         <source>&amp;Save</source>
         <translation>&amp;يحفظ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
-        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>&amp;حفظ باسم ...</translation>
@@ -1747,23 +2678,23 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl + Shift + S</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+695" />
         <source>Save A&amp;ll</source>
         <translation>احفظ الكل (&amp;L)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-338" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>هل تريد الخروج من%1؟</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+135" />
         <source>&amp;View</source>
         <translation>&amp;منظر</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+74" />
         <source>Return to Editor</source>
         <translation>ارجع إلى المحرر</translation>
     </message>
@@ -1789,7 +2720,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;فتح ملف ...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>فتح ملف...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>فتح ملف &amp;باستخدام ...</translation>
     </message>
@@ -1864,7 +2800,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>اختر الكل (&amp;A)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;انتقل إلى الخط...</translation>
     </message>
@@ -1879,7 +2815,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl ++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>تصغير</translation>
     </message>
@@ -1895,7 +2831,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl + Shift + -</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>الحجم الأصلي</translation>
     </message>
@@ -1910,7 +2846,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>السيطرة + 0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>إظهار السجلات ...</translation>
     </message>
@@ -1944,7 +2880,7 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">Ctrl+Alt+M.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>إخفاء شريط القائمة</translation>
     </message>
@@ -1954,7 +2890,8 @@ provided they were unmodified before the refactoring.</source>
         <translation>سيؤدي هذا إلى إخفاء شريط القوائم بالكامل. يمكنك إظهاره مرة أخرى بكتابة %1.&lt;br&gt;&lt;br&gt;أو قم بتنفيذ الإجراء &quot;%2&quot; من مرشح المُحدِّد &quot;%3&quot;‏ (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;الآراء</translation>
     </message>
@@ -1979,42 +2916,58 @@ provided they were unmodified before the refactoring.</source>
         <translation>اتصال...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>أنماط محدد وضع الدورة</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>نمط محدد الوضع</translation>
+        <translation type="vanished">نمط محدد الوضع</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>إخفاء</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>الأوضاع</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>الأيقونات والنصوص</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>أيقونات فقط</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>مختفي</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>إظهار %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+578" />
         <source>Version:</source>
         <translation>إصدار:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>سجل التغيير</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+61" />
         <source>Contact</source>
         <translation>اتصال</translation>
     </message>
@@ -2024,12 +2977,39 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt; يمكن الوصول إلى مطوري Qt Creator على القائمة البريدية لـ Qt Creator: &lt;/p&gt;%1 &lt;p&gt; أو القناة # qt-creator على Libera.Chat IRC: &lt;/p&gt;%2 &lt;p&gt; أداة تعقب الأخطاء لدينا موجود في%3. &lt;/p&gt; &lt;p&gt; الرجاء استخدام%4 لأجزاء النص الأكبر. &lt;/ p&gt;</translation>
     </message>
     <message>
-        <location line="-819" />
+        <location line="-780" />
         <source>Ctrl+L</source>
         <translation>السيطرة + L.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="-1591" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>فتح التفضيلات.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>تعذر العثور على الملف التنفيذي %1 في %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>تم البناء في %1 %2 استنادًا إلى Qt %3 (%4، %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>شعار Qt، وشعار axivion stopping software erosion، وشعار Qt Group، وكذلك Qt®، وAxivion®، وaxivion stopping software erosion®، وBoot to Qt®، وBuilt with Qt®، وCoco®، وfroglogic®، وQt Cloud Services®، وQt Developer Days®، وQt Embedded®، وQt Enterprise®، وQt Group®، وQt Mobile®، وQt Quick®، وQt Quick Compiler®، وSquish® هي علامات تجارية مسجلة لشركة The Qt Company Ltd. أو الشركات التابعة لها.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 برنامج حر، ويمكنك إعادة توزيعه وفق &lt;a href=&quot;%2&quot;&gt;شروط معينة&lt;/a&gt;. قد تنطبق شروط مختلفة على بعض المكونات.</translation>
+    </message>
+    <message>
+        <location line="+733" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-27" />
         <source>Minimize</source>
         <translation>تصغير</translation>
@@ -2046,18 +3026,18 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>تكبير الشاشة</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+125" />
         <source>About &amp;Plugins...</source>
         <translation>حول &amp;المكونات الإضافية ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>افتح المستندات</translation>
@@ -2073,19 +3053,17 @@ provided they were unmodified before the refactoring.</source>
         <translation>Alt + O</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+855" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+938" />
         <source>Close Editor</source>
         <translation>أغلق المحرر</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>إغلاق الكل باستثناء &quot;%1&quot;</translation>
+        <translation type="vanished">إغلاق الكل باستثناء &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>أغلق المحررون الآخرون</translation>
+        <translation type="vanished">أغلق المحررون الآخرون</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+55" />
@@ -2093,14 +3071,14 @@ provided they were unmodified before the refactoring.</source>
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+522" />
         <location line="+88" />
         <source>Category</source>
         <translation>فئة</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+369" />
         <source>Type</source>
         <translation>يكتب</translation>
     </message>
@@ -2116,7 +3094,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2124,8 +3102,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>واضح</translation>
     </message>
@@ -2160,7 +3138,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>الطابع الزمني</translation>
     </message>
     <message>
-        <location line="-411" />
+        <location line="-458" />
         <source>Entry is missing a logging category name.</source>
         <translation>الإدخال مفقود اسم فئة التسجيل.</translation>
     </message>
@@ -2175,7 +3153,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>مستوى غير صالح: %1</translation>
     </message>
     <message>
-        <location line="+312" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>تستخدم فئة التسجيل هذه أسلوبًا غير ثابت لا يُنصح به ولا يمكن لعارض السجلات التعامل معها.</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Debug</source>
         <translation>تصحيح</translation>
     </message>
@@ -2260,27 +3243,27 @@ provided they were unmodified before the refactoring.</source>
         <translation>التحديث من الإعداد المسبق ...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+47" />
         <source>Save Enabled Categories As...</source>
         <translation>حفظ فئات ممكّنة مثل ...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+48" />
         <source>Failed to open preset file &quot;%1&quot; for reading.</source>
         <translation>فشل في فتح ملف مسبق &quot;%1&quot; للقراءة.</translation>
     </message>
     <message>
-        <location line="-172" />
+        <location line="-165" />
         <source>Uncheck All</source>
         <translation>الغاءالكل</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+87" />
         <source>Save Logs As</source>
         <translation>حفظ السجلات باسم</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>فشل كتابة السجلات إلى &quot;%1&quot;.</translation>
     </message>
@@ -2294,12 +3277,12 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">حفظ الفئات الممكّنة باسم</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>فشل في كتابة ملف معد مسبقًا &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>تحميل الفئات الممكّنة من</translation>
     </message>
@@ -2318,42 +3301,56 @@ provided they were unmodified before the refactoring.</source>
         <translation>تنسيق ملف مضبوط مسبقًا غير متوقع.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>إظهار خطوط غير متطابقة</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>إظهار الأسطر السابقة {} (&amp;P)</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>إظهار الأسطر اللاحقة {} (&amp;S)</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>إخراج التصفية ...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>تحقيق أقصى قدر</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+120" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>العنصر التالي</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>العنصر السابق</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>انتاج (&amp;P)</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>إعادة تعيين إلى الافتراضي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>نوع التمثيل الصامت</translation>
     </message>
@@ -2363,41 +3360,41 @@ provided they were unmodified before the refactoring.</source>
         <translation>معالج</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>إعادة تعيين كافة تعريفات نوع MIME إلى الإعدادات الافتراضية الخاصة بهم.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>إعادة تعيين أنواع MIME</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>أعد تعيين المعالج المعين لجميع تعريفات نوع MIME إلى الإعداد الافتراضي.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>إعادة تعيين معالجات</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>أنماط:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>قائمة مفصولة بفاصلة منقوطة لأسماء الملفات ذات أحرف البدل.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>رأس سحري</translation>
     </message>
@@ -2412,25 +3409,25 @@ provided they were unmodified before the refactoring.</source>
         <translation>أولوية</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>أنواع MIME المسجلة</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>تفاصيل</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>ستصبح التغييرات سارية المفعول بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>أنواع MIME</translation>
     </message>
@@ -2450,7 +3447,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>الإضافات المثبتة</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>ستصبح تغييرات البرنامج المساعد سارية المفعول بعد إعادة التشغيل.</translation>
     </message>
@@ -2459,17 +3456,17 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">تفاصيل البرنامج المساعد لـ%1</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>أخطاء البرنامج المساعد لـ%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>العمليات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-82" />
         <source>&amp;Diff</source>
         <translation>&amp;الفرق</translation>
     </message>
@@ -2479,7 +3476,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>لا تقم بحفظ (&amp;N)</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+79" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;الفرق &amp;&amp;إلغاء</translation>
     </message>
@@ -2510,8 +3507,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-295" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>يحفظ</translation>
     </message>
@@ -2521,7 +3518,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>حفظ المحدد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+343" />
         <source>Click and type the new key sequence.</source>
         <translation>انقر واكتب تسلسل المفاتيح الجديد.</translation>
     </message>
@@ -2532,17 +3529,17 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>سِجِلّ</translation>
     </message>
     <message>
-        <location line="+427" />
+        <location line="+422" />
         <source>Keyboard</source>
         <translation>لوحة المفاتيح</translation>
     </message>
     <message>
-        <location line="-745" />
+        <location line="-761" />
         <source>Invalid key sequence.</source>
         <translation>تسلسل مفاتيح غير صالح.</translation>
     </message>
@@ -2552,13 +3549,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>تسلسل المفاتيح لن يعمل في المحرر.</translation>
     </message>
     <message>
-        <location line="+469" />
+        <location line="+491" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>استيراد مخطط تعيين لوحة المفاتيح</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>مخطط تعيين لوحة المفاتيح (* .kms)</translation>
     </message>
@@ -2568,13 +3565,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>تصدير مخطط تعيين لوحة المفاتيح</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+153" />
+        <location line="-378" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>تسلسل المفتاح:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>استخدم &quot;Cmd&quot; و &quot;Opt&quot; و &quot;Ctrl&quot; و &quot;Shift&quot; لمفاتيح التعديل. استخدم &quot;Escape&quot; و &quot;Backspace&quot; و &quot;Delete&quot; و &quot;Insert&quot; و &quot;Home&quot; وما إلى ذلك ، للمفاتيح الخاصة. ادمج المفاتيح الفردية مع &quot;+&quot; ، واجمع العديد من الاختصارات لتسلسل الاختصارات باستخدام &quot;،&quot;. على سبيل المثال ، إذا كان يجب على المستخدم الضغط على مفتاحي التعديل Ctrl و Shift أثناء الضغط على Escape ، ثم حرر واضغط على A ، فأدخل &quot;Ctrl + Shift + Escape، A&quot;.</translation>
     </message>
@@ -2599,12 +3596,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>بحث عن...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>مصطلح البحث فارغ.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;يبحث</translation>
     </message>
@@ -2614,7 +3611,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>بحث &amp;&amp;&amp; استبدال (&amp;R)</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>بحث عن: (&amp;O)</translation>
     </message>
@@ -2622,6 +3619,16 @@ provided they were unmodified before the refactoring.</source>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
         <translation>الكلمة بالكامل فقط (&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>تجاهل الملفات الثنائية</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>تجاهل الملفات المولّدة</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2634,12 +3641,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>نِطَاق: (&amp;P)</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-15" />
         <source>&amp;Case sensitive</source>
         <translation>&amp;حساسية الموضوع</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;بحث / استبدال</translation>
     </message>
@@ -2656,8 +3663,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>متقدم...</translation>
     </message>
@@ -2696,19 +3703,19 @@ provided they were unmodified before the refactoring.</source>
         <translation>استبدال &amp;&amp; بحث عن السابق</translation>
     </message>
     <message>
-        <location line="-248" />
-        <location line="+261" />
+        <location line="-250" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>استبدل الكل</translation>
     </message>
     <message>
-        <location line="-311" />
+        <location line="-313" />
         <source>Find Flags</source>
         <translation>البحث عن أعلام</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+237" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>استبدال &amp;&amp; بحث</translation>
     </message>
@@ -2762,8 +3769,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-741" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-818" />
         <source>Case Sensitive</source>
         <translation>حساسية الموضوع</translation>
     </message>
@@ -2789,7 +3795,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>استبدل ب...</translation>
     </message>
     <message>
-        <location line="-522" />
+        <location line="-524" />
         <source>Find</source>
         <translation>يجد</translation>
     </message>
@@ -2804,9 +3810,9 @@ provided they were unmodified before the refactoring.</source>
         <translation>استبدل ب:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+138" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+142" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+272" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>إظهار المسارات فيما يتعلق بالمشروع النشط</translation>
     </message>
@@ -2828,7 +3834,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+758" />
         <source>Collapse All</source>
         <translation>انهيار جميع</translation>
     </message>
@@ -2855,7 +3861,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>يستبدل</translation>
     </message>
@@ -2875,7 +3881,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>افتح الملف &quot;%1&quot; باستخدام:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>أظهر الملفات المخفية</translation>
     </message>
@@ -2890,38 +3896,47 @@ provided they were unmodified before the refactoring.</source>
         <translation>إظهار المجلدات في الأعلى</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+47" />
         <source>Synchronize Root Directory with Editor</source>
         <translation>مزامنة دليل الجذر مع المحرر</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>ملف جديد</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>ملف جديد</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>إزالة المجلد...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>ملف جديد...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+199" />
         <source>Open &quot;%1&quot;</source>
         <translation>فتح &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>إزالة المجلد</translation>
+        <translation type="vanished">إزالة المجلد</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-107" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-103" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2954,12 +3969,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>بيت</translation>
     </message>
     <message>
-        <location line="+145" />
         <source>Add New...</source>
-        <translation>اضف جديد...</translation>
+        <translation type="vanished">اضف جديد...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+159" />
         <source>Rename...</source>
         <translation>إعادة تسمية ...</translation>
     </message>
@@ -2969,12 +3983,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>يزيل...</translation>
     </message>
     <message>
-        <location line="-622" />
+        <location line="-643" />
         <source>Synchronize with Editor</source>
         <translation>تزامن مع المحرر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>تكوين المرشح</translation>
     </message>
@@ -3035,14 +4049,16 @@ provided they were unmodified before the refactoring.</source>
         <translation>تحديث عامل التصفية%1: تم إلغاؤه</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+96" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+96" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+34" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+70" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>طريق:</translation>
     </message>
@@ -3093,6 +4109,11 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>حالة التحكم في الإصدارات:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>مقروء:</translation>
     </message>
@@ -3113,18 +4134,18 @@ provided they were unmodified before the refactoring.</source>
         <translation>ارتباط رمزي:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>مجهول</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>نوافذ (CRLF)</translation>
     </message>
@@ -3139,7 +4160,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>ماك (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>مختلط</translation>
@@ -3166,22 +4187,22 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+102" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-397" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+265" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-396" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>يضيف...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>يحرر...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+136" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133" />
         <source>Uncategorized</source>
         <translation>غير مصنف</translation>
     </message>
@@ -3191,12 +4212,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>الأدوات التي ستظهر مباشرة ضمن قائمة الأدوات الخارجية.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>فئة جديدة</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>أداة جديدة</translation>
     </message>
@@ -3212,12 +4233,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>نص مفيد</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>بيئة النظام</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+63" />
         <source>Add tool.</source>
         <translation>إضافة أداة.</translation>
     </message>
@@ -3226,15 +4247,14 @@ provided they were unmodified before the refactoring.</source>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-409" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-399" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>يزيل</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>إزالة الأداة.</translation>
+        <translation type="vanished">إزالة الأداة.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3296,15 +4316,13 @@ provided they were unmodified before the refactoring.</source>
 &lt;/ul&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+126" />
         <source>No changes to apply.</source>
-        <translation>لا توجد تغييرات لتطبيقها.</translation>
+        <translation type="vanished">لا توجد تغييرات لتطبيقها.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-91" />
         <source>Change...</source>
         <translation>يتغير...</translation>
     </message>
@@ -3335,23 +4353,47 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>قابلة للتنفيذ:</translation>
     </message>
     <message>
-        <source>Executable:</source>
-        <translation type="vanished">تنفيذ:</translation>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-28" />
+        <source>Custom Language Models</source>
+        <translation>نماذج لغوية مخصصة</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;نموذج جديد&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>ملف تنفيذي</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
+        <source>Executable:</source>
+        <translation>تنفيذ:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>الوسائط</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>الحجج:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>عمل اخراجي:</translation>
     </message>
@@ -3362,7 +4404,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>بيئة:</translation>
     </message>
@@ -3377,7 +4419,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>إضافة فئة</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH = C: \ dev \ bin؛ $ {PATH}</translation>
     </message>
@@ -3387,7 +4429,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>PATH = / opt / bin: $ {PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>أدوات خارجية</translation>
     </message>
@@ -3404,7 +4446,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
 للقيام بذلك ، اكتب هذا الاختصار ومسافة في حقل إدخال محدد المواقع ، ثم الكلمة المراد البحث عنها.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+121" />
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+139" />
         <source>Files in File System</source>
         <translation>الملفات في نظام الملفات</translation>
     </message>
@@ -3418,7 +4460,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation type="vanished">إنشاء وفتح &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-64" />
         <source>Create File</source>
         <translation>إنشاء ملف</translation>
     </message>
@@ -3453,17 +4495,17 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>إنشاء دليل</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+180" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>إنشاء وفتح ملف &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>إنشاء دليل &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>قم بتضمين الملفات المخفية</translation>
     </message>
@@ -3473,27 +4515,37 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>منقي:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>المرشحات المتاحة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-8" />
         <source>Open as Centered Popup</source>
         <translation>فتح كنافذة منبثقة في المنتصف</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+592" />
         <source>Refresh</source>
         <translation>ينعش</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+101" />
         <source>Type to locate (%1)</source>
         <translation>اكتب لتحديد موقع (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+14" />
+        <source>Ignore Generated Files</source>
+        <translation>تجاهل الملفات المولّدة</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>تجاهل الملفات المولّدة عند استخدام المرشحات المتعلقة بالمشروع.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>البحث في الويب</translation>
     </message>
@@ -3513,12 +4565,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>يؤدي إلى البحث في تعقب الأخطاء QT.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>حدد...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt; &lt;body style = &quot;color: # 909090؛ font-size: 14px&quot;&gt; &lt;div align = &apos;center&apos;&gt; &lt;div style = &quot;font-size: 20px&quot;&gt; فتح مستند &lt;/ div&gt; &lt;table&gt; &lt;tr&gt; &lt;td&gt; &lt;hr /&gt; &lt;div style = &quot;margin-top: 5px&quot;&gt; &amp;bull؛ ملف&gt; فتح ملف (%1) &lt;/div&gt; &lt;div style = &quot;margin-top: 5px&quot;&gt; &amp;bull؛ ملف&gt; أمثلة &lt;/ div&gt; &lt;div style = &quot;margin-top: 5px&quot;&gt; &amp;bull؛ ملف&gt; أحدث الملفات &lt;/ div&gt; &lt;div style = &quot;margin-top: 5px&quot;&gt; &amp;bull؛ سحب الملفات وإفلاتها هنا &lt;/ div&gt; &lt;/td&gt; &lt;/tr&gt; &lt;/table&gt; &lt;/div&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
@@ -3533,7 +4585,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>&lt;div style = &quot;margin-left: 1em&quot;&gt; - اكتب &lt;code&gt;%1 &amp; lt؛ space &amp; gt؛ &amp; lt؛ pattern &amp; gt؛ &lt;/code&gt; للانتقال إلى تعريف دالة &lt;/ div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>تحديث مخابئ محدد المواقع</translation>
     </message>
@@ -3543,15 +4595,15 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>اكتب لتحديد الموقع</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-494" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-513" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+128" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>يضيف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-58" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>الفاصل الزمني للتحديث:</translation>
     </message>
@@ -3561,17 +4613,23 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>عوامل تصفية محدد المواقع التي لا تقوم بتحديث بياناتها المخزنة مؤقتًا على الفور ، مثل عوامل تصفية الدليل المخصصة ، تقوم بتحديثها بعد هذا الفاصل الزمني.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation> دقيقة</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>استخدام إكمال Tab</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>تُظهر مرشحات المحدد مسارات نسبية للمشروع النشط عندما يكون ذلك ممكنًا.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
         <source>Files in Directories</source>
         <translation>الملفات الموجودة في الدلائل</translation>
     </message>
@@ -3582,12 +4640,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>قالب URL</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-12" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>اسم</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>بادئة</translation>
     </message>
@@ -3607,7 +4666,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>مخصص</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-121" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-123" />
         <source>Save Changes</source>
         <translation>حفظ التغييرات</translation>
     </message>
@@ -3622,31 +4681,31 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>حفظ جميع الملفات تلقائيا قبل البناء</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-121" />
         <source>Keyboard Shortcuts</source>
         <translation>اختصارات لوحة المفاتيح</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
-        <location line="+107" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+45" />
+        <location line="+129" />
         <source>Command</source>
         <translation>يأمر</translation>
     </message>
     <message>
-        <location line="-108" />
-        <location line="+108" />
+        <location line="-130" />
+        <location line="+130" />
         <source>Label</source>
         <translation>ملصق</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>الاختصار</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114" />
         <source>Command Mappings</source>
         <translation>تعيينات الأوامر</translation>
     </message>
@@ -3657,7 +4716,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-208" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-201" />
         <source>Reset All</source>
         <translation>إعادة ضبط الجميع</translation>
     </message>
@@ -3668,7 +4727,6 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14" />
         <source>Reset to default.</source>
         <translation>إعادة تعيين إلى الافتراضي.</translation>
     </message>
@@ -3684,97 +4742,164 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="-5" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+5" />
         <source>Reset</source>
         <translation>إعادة ضبط</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>محرر نص عادي</translation>
+        <translation type="vanished">محرر نص عادي</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>إظهار الشريط الجانبي الأيسر</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>إخفاء الشريط الجانبي الأيسر</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>إظهار الشريط الجانبي الأيمن</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>إخفاء الشريط الجانبي الأيمن</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>نسخ إلى الحافظة</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>كيو تي</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>مسح القائمة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>محرر ثنائي</translation>
+        <translation type="vanished">محرر ثنائي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-393" />
         <source>Sort categories</source>
         <translation>فرز الفئات</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>تطبيق جميع التغييرات والعودة إلى الوضع السابق.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>تطبيق جميع التغييرات والبقاء هنا.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>تجاهل جميع التغييرات والبقاء هنا.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>تجاهل جميع التغييرات والعودة إلى الوضع السابق.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>تغييرات غير مطبقة</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>توجد تغييرات لم تُطبَّق. هل تريد تطبيقها؟</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>تطبيق التغييرات</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>تحتوي الصفحة السابقة على تغييرات غير محفوظة.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>تطبيق التغييرات غير المحفوظة</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>تجاهل التغييرات غير المحفوظة</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>العودة إلى الصفحة السابقة</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>توجد تغييرات غير محفوظة.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>البقاء في وضع الإعدادات</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+403" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>التفضيلات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-78" />
         <source>Options</source>
         <translation>خيارات</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>يقوم بإنشاء ملفات ترجمة qm يمكن استخدامها بواسطة تطبيق من ملفات ts الخاصة بالمترجم</translation>
+        <translation type="vanished">يقوم بإنشاء ملفات ترجمة qm يمكن استخدامها بواسطة تطبيق من ملفات ts الخاصة بالمترجم</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>إصدار الترجمات (الإفراج)</translation>
+        <translation type="vanished">إصدار الترجمات (الإفراج)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>لغوي</translation>
+        <translation type="vanished">لغوي</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>يقوم بمزامنة ملفات ts الخاصة بالمترجم مع كود البرنامج</translation>
+        <translation type="vanished">يقوم بمزامنة ملفات ts الخاصة بالمترجم مع كود البرنامج</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>تحديث الترجمات (lupdate)</translation>
+        <translation type="vanished">تحديث الترجمات (lupdate)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>يفتح الملف الحالي في برنامج &quot;المفكرة&quot;</translation>
     </message>
@@ -3784,9 +4909,9 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>تحرير باستخدام المفكرة</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>نص</translation>
     </message>
@@ -3802,7 +4927,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>كيو تي سريع</translation>
     </message>
@@ -3817,19 +4942,19 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Qt Quick 2 Preview (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>يفتح الملف الحالي في vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>تحرير باستخدام vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="-320" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>الإجراءات والإجراءات العامة من القائمة</translation>
     </message>
@@ -3839,7 +4964,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>يطلق إجراء. إذا كان من القائمة ، فإنه يتطابق مع أي جزء من التسلسل الهرمي للقائمة ، مفصولاً بعلامة &quot;&gt;&quot;. على سبيل المثال &quot;sess def&quot; يطابق &quot;File&gt; Sessions&gt; Default&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-112" />
         <source>Proxy Authentication Required</source>
         <translation>مصادقة الوكيل المطلوبة</translation>
     </message>
@@ -3849,12 +4974,32 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>لا تسأل مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>نسخ القيمة الموسّعة</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>الموقع %1 من QStandardPaths على نظام الملفات المحلي.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>لا توجد موضوعات في التثبيت.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>الذكاء الاصطناعي</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>تعليمات</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>التاريخ الحالي (ISO).</translation>
     </message>
@@ -3885,10 +5030,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>الدليل الافتراضي الذي تم تكوينه للمشاريع.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>الدليل الذي تمت زيارته آخر مرة في مربع حوار ملف.</translation>
@@ -3925,26 +5072,33 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat على Windows، وفارغ على جميع المنصات الأخرى.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>المسار إلى الجري %1 نفسه.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>الدليل حيث يعثر%1 على موارده المثبتة مسبقًا.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>الدليل حيث %1 يضع بيانات المستخدم المخصصة.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>التاريخ الحالي (QDate formatstring).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>الوقت الحالي (QTime formatstring).</translation>
     </message>
@@ -3959,22 +5113,37 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>تعليق.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>تحويل السلسلة إلى ASCII النقي.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>تحويل السلسلة إلى شيء يمكن استخدامه بأمان في مسار ملف.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>الطرفية المهيأة في البيئة &gt; النظام.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>الوسائط الممررة إلى أمر الطرفية لتشغيله في الطرفية المهيأة في البيئة &gt; النظام.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1&gt;%2 تفضيلات ...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>أنشئ مجلد</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>خطأ في ملف الإعدادات</translation>
     </message>
@@ -4003,52 +5172,48 @@ You will likely experience further problems using this instance of %3.</source>
 من المحتمل أن تواجه مشاكل أخرى عند استخدام هذا المثيل%3.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>يقوم%1 بتجميع تقارير الأعطال لغرض وحيد هو إصلاح الأخطاء. لتعطيل هذه الميزة ، انتقل إلى%2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>يمكن لـ%1 تجميع تقارير الأعطال لغرض وحيد هو إصلاح الأخطاء. لتمكين هذه الميزة ، انتقل إلى%2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation> &gt; التفضيلات&gt; البيئة&gt; النظام</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>تحرير&gt; التفضيلات&gt; البيئة&gt; النظام</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>يستخدم%1 Google Crashpad لتجميع الأعطال وإرسالها إلى الواجهة الخلفية لدينا للمعالجة. قد يلتقط Crashpad محتويات عشوائية من ذاكرة العملية المعطلة ، بما في ذلك المعلومات الحساسة للمستخدم وعناوين URL وأي محتوى آخر وثق المستخدمون في%1 به. ومع ذلك ، يتم استخدام تقارير الأعطال المجمعة فقط لغرض إصلاح الأخطاء.</translation>
+        <translation type="vanished">يستخدم%1 Google Crashpad لتجميع الأعطال وإرسالها إلى الواجهة الخلفية لدينا للمعالجة. قد يلتقط Crashpad محتويات عشوائية من ذاكرة العملية المعطلة ، بما في ذلك المعلومات الحساسة للمستخدم وعناوين URL وأي محتوى آخر وثق المستخدمون في%1 به. ومع ذلك ، يتم استخدام تقارير الأعطال المجمعة فقط لغرض إصلاح الأخطاء.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>معلومات اكثر:</translation>
+        <translation type="vanished">معلومات اكثر:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>نظرة عامة على Crashpad</translation>
+        <translation type="vanished">نظرة عامة على Crashpad</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>نهج الأمان%1</translation>
+        <translation type="vanished">نهج الأمان%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>تصميم</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>إضافة الملف إلى عنصر التحكم في الإصدار (%1)</translation>
     </message>
@@ -4058,7 +5223,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>إضافة الملفات إلى التحكم في الإصدار (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>ترميز النص</translation>
     </message>
@@ -4073,7 +5238,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>حدد الترميز لـ &quot;%1&quot;.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>إعادة التحميل مع الترميز</translation>
     </message>
@@ -4083,7 +5248,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>حفظ مع الترميز</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>اختر قالبًا:</translation>
     </message>
@@ -4093,8 +5258,8 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>يختار...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+94" />
         <source>Projects</source>
         <translation>المشاريع</translation>
     </message>
@@ -4114,7 +5279,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>قوالب%1</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>منصة مستقلة</translation>
     </message>
@@ -4124,7 +5289,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>المنصات المدعومة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>الكتابة فوق الملفات الموجودة</translation>
     </message>
@@ -4140,7 +5305,7 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-885" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1171" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5" />
         <source>Make Writable</source>
         <translation>اجعلها قابلة للكتابة</translation>
@@ -4252,22 +5417,22 @@ Do you want to check them out now?</source>
 هل تريد التحقق منها الآن؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1093" />
         <source>Restart Required</source>
         <translation>مطلوب إعادة التشغيل</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>لاحقاً</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>اعد البدء الان</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;لا يوجد مستند&gt;</translation>
     </message>
@@ -4277,27 +5442,27 @@ Do you want to check them out now?</source>
         <translation>لم يتم تحديد أي مستند.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>محرر النظام</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>تعذر فتح URL%1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>تعذر العثور على الملف التنفيذي لـ &quot;%1&quot; (تم توسيعه &quot;%2&quot;)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>بدء تشغيل الأداة الخارجية &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>انتهى &quot;%1&quot;</translation>
     </message>
@@ -4307,22 +5472,22 @@ Do you want to check them out now?</source>
         <translation>انتهى &quot;%1&quot; بالخطأ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;خارجي</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>خطأ أثناء تحليل الأداة الخارجية%1:%2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>خطأ: الأداة الخارجية في%1 لها معرّف مكرر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>فشل تشغيل متصفح الملفات</translation>
     </message>
@@ -4357,7 +5522,7 @@ Do you want to check them out now?</source>
         <translation type="vanished">تعذر العثور على explorer.exe في المسار لبدء تشغيل مستكشف Windows.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>لم يتم تعيين الأمر لمستعرض الملفات.</translation>
     </message>
@@ -4387,12 +5552,17 @@ Do you want to check them out now?</source>
         <translation>اظهر في الباحث</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>إظهار في مدير الملفات</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>إظهار المجلد المتضمن</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>افتح موجه الأوامر هنا</translation>
     </message>
@@ -4415,16 +5585,29 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>فشل إزالة الملف &quot;%1&quot;.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>فشل حذف الملف &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>تعذر فك ترميز المحتوى.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>فشل إعادة تسمية حارس التضمين في الملف &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">فشل إزالة الملف &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>فشل في إعادة تسمية حارس التضمين في الملف &quot;%1&quot;.</translation>
+        <translation type="vanished">فشل في إعادة تسمية حارس التضمين في الملف &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>تم استبدال %n تطابق.</numerusform>
@@ -4463,7 +5646,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+2" />
         <source>None</source>
-        <translation>لا أحد</translation>
+        <comment>No find flags</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">لا أحد</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4550,22 +5738,20 @@ Do you want to check them out now?</source>
         <translation>لم يتم العثور على تطابق.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-460" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-422" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>تهيئة...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>افتح مربع حوار التفضيلات.</translation>
+        <translation type="vanished">افتح مربع حوار التفضيلات.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>افتح مربع حوار الخيارات.</translation>
+        <translation type="vanished">افتح مربع حوار الخيارات.</translation>
     </message>
     <message>
         <source> (%1)</source>
@@ -4576,22 +5762,28 @@ Do you want to check them out now?</source>
         <translation type="vanished">%1%2%3</translation>
     </message>
     <message>
-        <location line="+824" />
+        <location line="+873" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>بناءً على Qt%1 (%2،%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>غير منفَّذ</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>تمت استعادة الملف من النسخة المحفوظة تلقائيًا. حدد حفظ للتأكيد أو الرجوع إلى المحفوظة لتجاهل التغييرات.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>المصنع بالمعرف = &quot;%1&quot; مسجل بالفعل. حذف.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>إعادة تحميل كافة المعالجات</translation>
     </message>
@@ -4599,6 +5791,11 @@ Do you want to check them out now?</source>
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>فحص حالة المعالج</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>أخرى</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -4611,12 +5808,12 @@ Do you want to check them out now?</source>
         <translation>لا يمكن تحويل نتيجة &quot;%1&quot; إلى سلسلة.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>قم بتقييم عبارات JavaScript البسيطة. &lt;br&gt; يجب تخطي أحرف &apos;}&apos; كـ &quot;\}&quot; ، ويجب تخطي الأحرف &quot;\&quot; كـ &quot;\\&quot; ، ويجب تخطي &quot;%{&quot; كـ &quot;%\ {&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>تنفيذ الأوامر المخصصة</translation>
     </message>
@@ -4626,7 +5823,7 @@ Do you want to check them out now?</source>
         <translation>يدير أمرًا تعسفيًا مع الوسائط. يتم البحث عن الأمر في متغير البيئة PATH إذا لزم الأمر. لاحظ أنه يتم تشغيل الأمر مباشرة ، وليس في shell.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>لا يزال الأمر السابق قيد التشغيل (&quot;%1&quot;).
@@ -4638,7 +5835,7 @@ Do you want to kill it?</source>
         <translation>قتل العملية السابقة؟</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>تعذر العثور على الملف التنفيذي لـ &quot;%1&quot;.</translation>
     </message>
@@ -4658,7 +5855,7 @@ Do you want to kill it?</source>
         <translation>يقوم بتشغيل أداة خارجية قمت بإعدادها في التفضيلات (البيئة&gt; الأدوات الخارجية).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+360" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+354" />
         <source>Evaluate JavaScript</source>
         <translation>تقييم JavaScript</translation>
     </message>
@@ -4673,7 +5870,7 @@ Do you want to kill it?</source>
         <translation>إعادة تعيين المحرك</translation>
     </message>
     <message>
-        <location line="-58" />
+        <location line="-50" />
         <source>Engine aborted after timeout.</source>
         <translation>تم إحباط المحرك بعد انتهاء المهلة.</translation>
     </message>
@@ -4693,13 +5890,13 @@ Do you want to kill it?</source>
         <translation>لم يعيد المحرك إعادة تهيئة بشكل صحيح.</translation>
     </message>
     <message>
-        <location line="+277" />
-        <location line="+4" />
+        <location line="+272" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>نسخ إلى الحافظة:%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-70" />
         <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>محدد الموقع: حدث خطأ أثناء تشغيل &quot;%1&quot;.</translation>
     </message>
@@ -4734,7 +5931,7 @@ Do you want to kill it?</source>
         <translation>يحدد موقع الملفات من فهرس نظام الملفات العالمي (Spotlight ، تحديد موقع ، كل شيء). قم بإلحاق &quot;+&lt;mumber&gt;&quot; أو &quot;: &lt;number&gt;&quot; للقفز إلى رقم السطر المحدد. قم بإلحاق &quot;+&lt;jort&gt;&quot; أو &quot;: &lt;mumber&gt;&quot; للانتقال إلى رقم العمود أيضًا.</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+109" />
         <source>Sort results</source>
         <translation>فرز النتائج</translation>
     </message>
@@ -4770,12 +5967,12 @@ Double-click to edit item.</source>
         <translation>عناوين URL:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>محطة تسلسلية</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>لف النص</translation>
     </message>
@@ -4909,24 +6106,24 @@ Double-click to edit item.</source>
         <translation>خطأ داخلي: النوع غير صالح</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>قم بالتبديل إلى الوضع &lt;b&gt;%1 &lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>تنشيط عرض%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>output.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>تكبير / تصغير:%1٪</translation>
     </message>
@@ -4935,10 +6132,31 @@ Double-click to edit item.</source>
         <source>Save Contents...</source>
         <translation>حفظ المحتويات ...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>نسخ المحتوى إلى المخزن المؤقت</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>فشل فتح محرر لـ &quot;%1&quot;.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+            <numerusform>تم حذف %n حرف بسبب حد الإعدادات</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>تم حذف %n حرف بسبب إعدادات مُخرَج التطبيق</numerusform>
             <numerusform>تم حذف %n حرف بسبب إعدادات مُخرَج التطبيق</numerusform>
             <numerusform>تم حذف %n حرف بسبب إعدادات مُخرَج التطبيق</numerusform>
@@ -4948,14 +6166,14 @@ Double-click to edit item.</source>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[التخلص من الكمية الزائدة من المخرجات المعلقة.]
 </translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>ملفات نصية (* .txt) ؛؛ كافة الملفات (*)</translation>
     </message>
@@ -5034,7 +6252,7 @@ Double-click to edit item.</source>
         <translation>فشل &quot;%1&quot; (رمز الإنهاء%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>مصدر</translation>
     </message>
@@ -5049,86 +6267,137 @@ Double-click to edit item.</source>
         <translation>الملف غير موجود.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
+        <source>Plugin is already installed.</source>
+        <translation>الإضافة مثبتة بالفعل.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>توجد إضافة بالمعرّف &quot;%1&quot; مثبتة بالفعل.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>لا توجد إضافة مثبتة بالمعرّف &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>فشلت الإضافة في حل التبعيات:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>لم يُعثر على إضافات.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>تم العثور على أكثر من إضافة واحدة.</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Check Archive</source>
         <translation>تحقق من الأرشيف</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+56" />
         <source>Checking archive...</source>
         <translation>جارٍ فحص الأرشيف ...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Archive extracted successfully.</source>
+        <translation>تم استخراج الأرشيف بنجاح.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>حدث خطأ أثناء فك الأرشفة: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>تحميل الإضافة فورًا</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>سيتم تثبيت %1 في %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>قبول الشروط والأحكام</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>تتطلب الإضافة %1 قبولك للشروط والأحكام التالية:</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
         <translation type="vanished">الملف ليس أرشيف.</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-221" />
         <source>Canceled.</source>
         <translation>ألغيت.</translation>
     </message>
     <message>
-        <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>حدث خطأ أثناء إلغاء الأرشفة.</translation>
+        <translation type="vanished">حدث خطأ أثناء إلغاء الأرشفة.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+26" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>الأرشفة على ما يرام.</translation>
     </message>
     <message>
-        <location line="-82" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>يتطلب المكون الإضافي إصدارًا غير متوافق من%1 (%2).</translation>
+        <translation type="vanished">يتطلب المكون الإضافي إصدارًا غير متوافق من%1 (%2).</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>لم يتم العثور على المكون الإضافي%1.</translation>
+        <translation type="vanished">لم يتم العثور على المكون الإضافي%1.</translation>
     </message>
     <message>
-        <location line="+117" />
         <source>Install Location</source>
-        <translation>تثبيت الموقع</translation>
+        <translation type="vanished">تثبيت الموقع</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>اختر موقع التثبيت.</translation>
+        <translation type="vanished">اختر موقع التثبيت.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>إضافات المستخدم</translation>
+        <translation type="vanished">إضافات المستخدم</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>سيكون المكون الإضافي متاحًا لجميع عمليات التثبيت المتوافقة%1 ، ولكن فقط للمستخدم الحالي.</translation>
+        <translation type="vanished">سيكون المكون الإضافي متاحًا لجميع عمليات التثبيت المتوافقة%1 ، ولكن فقط للمستخدم الحالي.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>تثبيت%1</translation>
+        <translation type="vanished">تثبيت%1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>سيكون المكون الإضافي متاحًا فقط لتثبيت%1 هذا ، ولكن لجميع المستخدمين الذين يمكنهم الوصول إليه.</translation>
+        <translation type="vanished">سيكون المكون الإضافي متاحًا فقط لتثبيت%1 هذا ، ولكن لجميع المستخدمين الذين يمكنهم الوصول إليه.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>ملخص</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>سيتم تثبيت &quot;%1&quot; في &quot;%2&quot;.</translation>
+        <translation type="vanished">سيتم تثبيت &quot;%1&quot; في &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+117" />
         <source>Overwrite File</source>
         <translation>ملف الكتابة الفوقية</translation>
     </message>
@@ -5144,46 +6413,76 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>فشل كتابة الملف</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>فشل إنشاء الدليل &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>فشل كتابة الملف &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>تثبيت البرنامج المساعد</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>جارٍ نسخ ملفات الإضافة...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>جارٍ النسخ
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>فشل نسخ ملفات البرنامج المساعد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>إظهار التفاصيل...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>تبديل تفاصيل التقدم</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>تلقائي</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>غير مسمى</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>السمة الحالية:%1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>سيصبح تغيير المظهر ساري المفعول بعد إعادة التشغيل.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+324" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>تم الكشف عن مستودع%1 ولكن لم يتم تكوين%1.</translation>
     </message>
@@ -5197,7 +6496,27 @@ Double-click to edit item.</source>
         <translation type="vanished">هل تريد إزالة الملفات التالية من نظام التحكم في الإصدارات (%2)؟ %1 ملاحظة: قد يؤدي هذا إلى إزالة الملف المحلي.</translation>
     </message>
     <message>
+        <location line="-184" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>تم اكتشاف دليل خاضع لإدارة الإصدارات تدعمه الإضافة %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>تم اكتشاف التحكم في الإصدارات</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>Enable %1</source>
+        <translation>تمكين %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>يبدو أن الدليل &quot;%1&quot; خاضع لتحكم في الإصدارات يمكن التعامل معه بواسطة الإضافة %2 المعطلة.</translation>
+    </message>
+    <message>
+        <location line="+168" />
         <source>Remove the following files from the version control system (%1)?</source>
         <translation>إزالة الملفات التالية من نظام التحكم في الإصدار (%1)؟</translation>
     </message>
@@ -5234,66 +6553,154 @@ to version control (%2)?</source>
         <source>Adding to Version Control Failed</source>
         <translation>إضافة إلى فشل التحكم في الإصدار</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+            <numerusform>تعذرت إضافة الملفات التالية إلى إدارة الإصدارات (%1)
+%2
+... و%n أخرى.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>مضاف</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>معدّل</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>محذوف</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>أُعيدت تسميته</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>غير متتبَّع</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>غير مدمج</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>غير معروف</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>حالة التحكم في الإصدارات: مضاف.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>حالة التحكم في الإصدارات: معدّل.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>حالة التحكم في الإصدارات: محذوف.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>حالة التحكم في الإصدارات: أُعيدت تسميته.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>حالة التحكم في الإصدارات: غير متتبَّع.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>حالة التحكم في الإصدارات: غير مدمج.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>تعذرت إضافة الملف
+        <translation type="vanished">تعذرت إضافة الملف
 %1
 للتحكم في الإصدار (%2)
 </translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>تعذرت إضافة الملفات التالية إلى عنصر التحكم في الإصدار (%1)
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>حول%1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>نسخ وإغلاق</translation>
+        <translation type="vanished">نسخ وإغلاق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+6" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt; من المراجعة%1 &lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt; مبني على%1%2 &lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt; مبني على%1%2 &lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1 &lt;/h3&gt;%2 &lt;br/&gt;%3%4%5 &lt;br/&gt; حقوق الطبع والنشر 2008-%6%7. جميع الحقوق محفوظة. &lt;br/&gt; &lt;br/&gt; البرنامج مقدم كما هو بدون أي ضمان من أي نوع ، بما في ذلك ضمان التصميم وقابلية التسويق والملاءمة لغرض معين. &lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1 &lt;/h3&gt;%2 &lt;br/&gt;%3%4%5 &lt;br/&gt; حقوق الطبع والنشر 2008-%6%7. جميع الحقوق محفوظة. &lt;br/&gt; &lt;br/&gt; البرنامج مقدم كما هو بدون أي ضمان من أي نوع ، بما في ذلك ضمان التصميم وقابلية التسويق والملاءمة لغرض معين. &lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>يعد شعار Qt بالإضافة إلى Qt® و Qt Quick® و Built with Qt® و Boot to Qt® و Qt Quick Compiler® و Qt Enterprise® و Qt Mobile® و Qt Embedded® علامات تجارية مسجلة لشركة Qt Company Ltd.</translation>
+        <translation type="vanished">يعد شعار Qt بالإضافة إلى Qt® و Qt Quick® و Built with Qt® و Boot to Qt® و Qt Quick Compiler® و Qt Enterprise® و Qt Mobile® و Qt Embedded® علامات تجارية مسجلة لشركة Qt Company Ltd.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>العلامات:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>أظهر كل شيء</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>خلف</translation>
     </message>
@@ -5313,20 +6720,227 @@ to version control (%2)
         <translation>يتحول إلى مستند مفتوح.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>محرر بيثون</translation>
+        <translation type="vanished">محرر بيثون</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>محرر تخفيض</translation>
+        <translation type="vanished">محرر تخفيض</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>التنقل إلى المحرر التالي</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>إلغاء التثبيت</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>بالنسبة لمتغيرات البيئة ذات دلالات القائمة التي لا تستخدم فاصل قائمة المسارات
+القياسي، تحتاج إلى إعداد الفواصل الخاصة بها هنا إذا كنت تخطط لتجميعها
+من عدة أماكن (مثلًا من المجموعة ومن المشروع).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>متغير</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>فاصل</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-270" />
+        <source>Add MCP Server From Registry</source>
+        <translation>إضافة خادم MCP من السجل</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>تصفية الخوادم...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>كل الأنواع</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>بعيد</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>المستودع:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>الموقع الإلكتروني:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>الحزم:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>الأجهزة البعيدة:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>الاسم المعروض.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;خادم جديد&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>الأمر لتشغيل عملية خادم MCP. يُستخدم فقط مع نوع الاتصال الإدخال/الإخراج القياسي.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>الوسائط لتشغيل عملية خادم MCP. تُستخدم فقط مع نوع الاتصال الإدخال/الإخراج القياسي.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>عنوان URL للاتصال بخادم MCP. لا يُستخدم مع نوع الاتصال الإدخال/الإخراج القياسي.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>نوع الاتصال:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>نوع الاتصال المستخدم لخادم MCP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>الإدخال/الإخراج القياسي</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>HTTP القابل للبث</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>ترويسات HTTP:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>ترويسات HTTP المضمّنة عند الاتصال بخادم MCP. تُستخدم فقط مع أنواع اتصال HTTP.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>تغييرات متغيرات البيئة المطبقة عند تشغيل عملية خادم MCP. تُستخدم فقط مع نوع الاتصال القياسي IO.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>اختر نوع الاتصال</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>يوفر هذا الخادم عدة طرق للاتصال. يرجى اختيار إحداها:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>إضافة من السجل...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>تمكين خادم توثيق Qt لـ MCP</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>عند التفعيل، سيُستخدم خادم MCP لتوثيق Qt من https://qt-docs-mcp.qt.io/mcp.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>خوادم MCP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>مغادرة وضع التنقيح</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>شريط الأدوات</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>المحرر</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>مخزن الأسرار غير متاح! ستُخزَّن قيمك كنص عادي في الإعدادات!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>يمكنك تثبيت libsecret أو KWallet لتفعيل مخزن الأسرار.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>خطوط السياق:</translation>
     </message>
@@ -5336,13 +6950,18 @@ to version control (%2)
         <translation>تجاهل المسافات</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>طي الكل</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>إعادة تحميل Diff</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] مقابل [%2]%3</translation>
     </message>
@@ -5358,7 +6977,7 @@ to version control (%2)
         <translation>[%1]%2 مقابل [%3]%4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>إخفاء تغيير الوصف</translation>
     </message>
@@ -5368,36 +6987,41 @@ to version control (%2)
         <translation>إظهار وصف التغيير</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>بسط الكل</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>تعذر تحليل ملف التصحيح &quot;%1&quot;. المحتوى ليس بتنسيق فرق موحد.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+236" />
         <source>Diff Editor</source>
         <translation>محرر الفرق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>الفارق</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>أنقذ</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>معدل</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>ملفات الفرق</translation>
     </message>
@@ -5407,7 +7031,7 @@ to version control (%2)
         <translation>تعديل الملفات المختلفة</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;الفرق</translation>
     </message>
@@ -5428,12 +7052,12 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>فرق فتح الملفات</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>ميتا + Shift + H</translation>
     </message>
@@ -5448,27 +7072,32 @@ to version control (%2)
         <translation>تباين الملفات الخارجية ...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>فرق &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>حدد الملف الأول للفرق</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>حدد الملف الثاني للفرق</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>فرق &quot;%1&quot; ، &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>الملف غير موجود: &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>إرسال قطعة إلى CodePaster ...</translation>
     </message>
@@ -5483,7 +7112,7 @@ to version control (%2)
         <translation>عودة القطعة ...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt; خطأ: &lt;/ b&gt; تعذر فك تشفير &quot;%1&quot; باستخدام &quot;%2&quot; -تشفير.</translation>
     </message>
@@ -5493,30 +7122,28 @@ to version control (%2)
         <translation>حدد الترميز</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>قم بالتبديل إلى Unified Diff Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+27" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+29" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>في انتظار البيانات ...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>فشل استرجاع البيانات.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
+        <location line="-569" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>قم بالتبديل إلى محرر الفروق جنبًا إلى جنب</translation>
     </message>
@@ -5526,7 +7153,7 @@ to version control (%2)
         <translation>مزامنة أشرطة التمرير الأفقية</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>تم تخطي %n سطر...</numerusform>
@@ -5553,7 +7180,7 @@ to version control (%2)
         <translation>[%1]%2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>لا فرق.</translation>
@@ -5565,15 +7192,20 @@ to version control (%2)
         <translation>تقديم فرق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>لا يوجد مستند</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>نسخ النص المنظّف</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+68" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
@@ -5583,14 +7215,24 @@ to version control (%2)
         <translation>إصدار:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Vendor:</source>
         <translation>بائع:</translation>
     </message>
     <message>
-        <location line="-1" />
+        <location line="-2" />
         <source>Compatibility version:</source>
         <translation>إصدار التوافق:</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Id:</source>
+        <translation>المعرّف:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Vendor Id:</source>
+        <translation>معرّف المورّد:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5601,6 +7243,11 @@ to version control (%2)
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>التوثيق:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5638,14 +7285,24 @@ to version control (%2)
         <translation>قابل للتحميل دون إعادة التشغيل:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
-        <translation>لا أحد</translation>
+        <comment>No category</comment>
+        <translation>لا شيء</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
-        <translation>الجميع</translation>
+        <comment>Platforms: All</comment>
+        <translation>الكل</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">لا أحد</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">الجميع</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5708,19 +7365,27 @@ to version control (%2)
         <translation>أنهى البرنامج المساعد دورة حياته وتم حذفه.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (تم إهمالها)</translation>
+        <translation type="vanished">%1 (تم إهمالها)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (تجريبي)</translation>
+        <translation type="vanished">%1 (تجريبي)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>مهجور</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>تجريبي</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>المسار:%1
@@ -5734,7 +7399,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 تم تمكين البرنامج المساعد باعتباره تبعية لمكوِّن إضافي ممكّن.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>المسار:%1
@@ -5753,7 +7418,7 @@ Plugin is disabled by command line argument.</source>
         <translation>المسار:%1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>البرنامج المساعد غير متوفر على هذا النظام الأساسي.</translation>
     </message>
@@ -5798,7 +7463,7 @@ Plugin is disabled by command line argument.</source>
         <translation>خدمات</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1604" />
         <source>Enabling Plugins</source>
         <translation>تمكين الإضافات</translation>
     </message>
@@ -5816,7 +7481,7 @@ will also enable the following plugins:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>تعطيل المكونات الإضافية</translation>
     </message>
@@ -5874,12 +7539,12 @@ will also disable the following plugins:
         <translation>تم الحذف</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1072" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-676" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>تم العثور على إصدارات متعددة من نفس البرنامج المساعد.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>تم اكتشاف تبعية دائرية:</translation>
     </message>
@@ -5939,57 +7604,91 @@ Reason: %3</source>
         <translation>تعطيل البرنامج المساعد</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>الشروط والأحكام</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>قبول</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>رفض</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>تتطلب الإضافة %1 قبولك للشروط والأحكام التالية:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>لم تقبل الشروط والأحكام</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>لا يمكن تحميل المكون الإضافي بسبب فشل تحميل التبعية:%1 (%2)
 السبب:%3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>لم يُعثر على الإضافة.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>غير موجود.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>تم تحديد المكون الإضافي &quot;%1&quot; مرتين للاختبار.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>المكون الإضافي &quot;%1&quot; غير موجود.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>لم يتم اختبار المكون الإضافي &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>لا يمكن طلب السيناريو &quot;%1&quot; لأنه تم طلبه بالفعل.</translation>
+        <translation type="vanished">لا يمكن طلب السيناريو &quot;%1&quot; لأنه تم طلبه بالفعل.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>خيار غير معروف%1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>يتطلب الخيار%1 وسيطة.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1275" />
         <source>Resolving dependencies failed because state != Read</source>
         <translation>فشل حل التبعيات بسبب الحالة! = قراءة</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>تعذر حل التبعية &apos;%1 (%2)&apos;</translation>
+        <translation type="vanished">تعذر حل التبعية &apos;%1 (%2)&apos;</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+94" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>تحميل المكتبة فشل بسبب الحالة! = تم الحل</translation>
     </message>
@@ -5999,7 +7698,7 @@ Reason: %3</source>
         <translation>المكون الإضافي غير صالح (لا مشتق من IPlugin)</translation>
     </message>
     <message>
-        <location line="-416" />
+        <location line="-518" />
         <source>&quot;%1&quot; is missing</source>
         <translation>&quot;%1&quot; مفقود</translation>
     </message>
@@ -6049,13 +7748,24 @@ Reason: %3</source>
         <translation>لم يتم العثور على بيانات تعريف البرنامج المساعد</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>يجب أن يكون معرّف الإضافة &quot;%1&quot; بأحرف صغيرة</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>الشروط والأحكام: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>مواصفات النظام الأساسي غير صالحة &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -6081,7 +7791,12 @@ Reason: %3</source>
         <translation>الوسيطة: &quot;%1&quot; فارغ</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+89" />
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>تعذر حل الاعتماد على الإضافة &quot;%1(%2)&quot;</translation>
+    </message>
+    <message>
+        <location line="+115" />
         <source>Initializing the plugin failed because state != Loaded</source>
         <translation>فشلت تهيئة البرنامج المساعد بسبب الحالة!</translation>
     </message>
@@ -6096,7 +7811,17 @@ Reason: %3</source>
         <translation>فشلت تهيئة البرنامج المساعد:%1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>تسببت تهيئة الإضافة في استثناء: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>تسببت تهيئة الإضافة في استثناء غير معروف</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>لا يمكن تنفيذ الامتدادات</translation>
     </message>
@@ -6111,8 +7836,18 @@ Reason: %3</source>
         <translation>خطأ داخلي: لا يوجد مثيل للمكوِّن الإضافي لإجراء delayedInitialize</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-71" />
+        <location line="+97" />
+        <source>Cannot remove system plugins.</source>
+        <translation>لا يمكن إزالة إضافات النظام.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>تعذر تحديد المجلد الجذر.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-391" />
         <source>Continue</source>
         <translation>يكمل</translation>
     </message>
@@ -6330,18 +8065,23 @@ Would you like to overwrite it?</source>
         <translation>عارض الصور</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>الملف غير قابل للقراءة.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>تنسيق الصورة غير مدعوم.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>فشلت قراءة صورة SVG.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>فشل في قراءة الصورة.</translation>
     </message>
@@ -6453,37 +8193,57 @@ Would you like to overwrite them?</source>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>خطأ %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>تم إهماله</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>وارد</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>المنتهية ولايته</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>قواعد</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>مشتق</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>فتح في المحرر</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>فتح تسلسل %1 الهرمي</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>استدعاء</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>النوع</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>استدعاء التسلسل الهرمي</translation>
     </message>
@@ -6493,13 +8253,18 @@ Would you like to overwrite them?</source>
         <translation>إعادة تحميل التسلسل الهرمي للمكالمة للرمز تحت موضع المؤشر.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 لنسبة %2</translation>
+        <translation type="vanished">%1 لنسبة %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1 لـ %2 (%3، %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>غير ضروري</translation>
@@ -6541,14 +8306,20 @@ Would you like to overwrite them?</source>
         <translation>خطأ</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>فشل الإيقاف</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>معلمة غير صالحة في &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>خادم اللغة &quot;%1&quot; خطأ التهيئة</translation>
     </message>
@@ -6558,12 +8329,12 @@ Would you like to overwrite them?</source>
         <translation>خطأ التهيئة: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>تهيئة النتيجة غير صالحة.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>معلومات الخادم غير صالحة.</translation>
     </message>
@@ -6573,12 +8344,11 @@ Would you like to overwrite them?</source>
         <translation>لا تهيئة نتيجة.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>نسخ إلى الحافظة</translation>
+        <translation type="vanished">نسخ إلى الحافظة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>عميل اللغة</translation>
     </message>
@@ -6628,33 +8398,35 @@ Would you like to overwrite them?</source>
         <translation>لا يمكن التعامل مع نوع MIME &quot;%1&quot; من الرسالة.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>لا يمكن إرسال البيانات إلى الخادم غير الموقف %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>انتهى بشكل غير متوقع. إعادة التشغيل في %1 ثوان.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>انتهى بشكل غير متوقع.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>توسيع الكل</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>انهيار كل شيء</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>خادم لغة stdio عام</translation>
     </message>
@@ -6674,7 +8446,7 @@ Would you like to overwrite them?</source>
         <translation>المشكلات التي يقدمها خادم اللغة في المستند الحالي.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;يضيف</translation>
     </message>
@@ -6684,32 +8456,37 @@ Would you like to overwrite them?</source>
         <translation>&amp;يمسح</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>عام</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>دائما على</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>يتطلب ملف مفتوح</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>ابدأ الخادم لكل مشروع</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>ممكّن:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>تعيين أنواع MIME ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>نمط الملف</translation>
     </message>
@@ -6721,67 +8498,87 @@ Example: *.cpp%1*.h</source>
  مثال: *.cpp %1 *.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>فشل في تحليل JSON في %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>Language Server الخاص JSON لتمرير عبر حقل &quot;التهيئة&quot; لطلب &quot;تهيئة&quot; طلب &quot;تهيئة&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>لغة:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>نمط الملف:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>سلوك بدء التشغيل:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>خيارات التهيئة:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>حدد أنواع MIME</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>فلتر</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>قابلة للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>الحجج:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>خطأ json</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>خوادم اللغة الخاصة بالمشروع</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>استخدام الإعدادات العامة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>ممكّن</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>معطل</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>تكوين مساحة العمل</translation>
     </message>
@@ -6793,12 +8590,12 @@ See the documentation of the specific language server for valid settings.</sourc
  راجع وثائق خادم اللغة المحددة لإعدادات صالحة.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>خادم اللغة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>ابحث مرة أخرى لتحديث النتائج واستبدال إعادة تمكينها</translation>
     </message>
@@ -6822,7 +8619,7 @@ See the documentation of the specific language server for valid settings.</sourc
  %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>ابحث عن المراجع مع %1 لـ:</translation>
@@ -6843,12 +8640,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>ابدأ في الكتابة لرؤية البدائل.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>إظهار الإصلاحات السريعة المتاحة</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>إعادة التشغيل %1</translation>
     </message>
@@ -6863,49 +8660,56 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>يدير...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>إعداد خادم اللغة %1 (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>إعداد</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>تثبيت حزمة NPM</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>تشغيل &quot;%1&quot; لتثبيت %2.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>تم إلغاء تثبيت &quot;%1&quot; عن طريق المهلة.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>تم إلغاء تثبيت &quot;%1&quot; من قبل المستخدم.</translation>
+        <translation type="vanished">تم إلغاء تثبيت &quot;%1&quot; من قبل المستخدم.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>فشل تثبيت &quot;%1&quot; مع رمز الخروج %2.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>قم بتثبيت %1 Server Language عبر NPM.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>الإعداد %1 خادم لغة (%2).</translation>
+        <translation type="vanished">الإعداد %1 خادم لغة (%2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>ثَبَّتَ</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>يثبت</translation>
+        <translation type="vanished">يثبت</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6933,12 +8737,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>خيارات:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>قدرات الخادم</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>رسالة العميل</translation>
     </message>
@@ -6958,22 +8762,32 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>ملف السجل</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>لم يتم اختيار عميل</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>مفتش عميل اللغة</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;select&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>خادم اللغة:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>إرسال رسالة</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>سجل</translation>
     </message>
@@ -6983,15 +8797,25 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>القدرات</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>واضح</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>ترتيب أبجدي</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;اختر رمزًا&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>لا يمكن فك تشفير المحتوى مع &quot;%1&quot;. العودة إلى &quot;%2&quot;.</translation>
     </message>
@@ -7001,7 +8825,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>توقع عدد صحيح في &quot;%1&quot; ، ولكن حصلت على &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>لا يمكن تحليل رسالة JSON: &quot;%1&quot;.</translation>
     </message>
@@ -7011,17 +8835,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>توقع كائن JSON ، ولكن حصلت على قيمة JSON &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>لا توجد معلمات في &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>لم يتم تعيين معرف في &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>إنشاء %1</translation>
     </message>
@@ -7037,9 +8861,172 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>لم يُعثر على إجراء بالمعرّف &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>لا يوجد إجراء مرتبط بالأمر &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>الإجراء &quot;%1&quot; معطل.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>توسيع الكل</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>رسالة العميل</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>الرسائل</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>رسالة الخادم</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>ملف السجل</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>مفتش خادم MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;اختر&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>مسح</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>الجلسة:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>غير معروف</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>عام</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>المضيف المحلي (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>أي عنوان (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>مخصص</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>عنوان IP غير صالح.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>خادم MCP</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>فحص خادم MCP...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>فشل بدء خادم MCP على &quot;%1:%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>تمكين خادم MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>العنوان الذي ينبغي لخادم MCP الاستماع عليه للاتصالات الواردة.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>المنفذ:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>تلقائي</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>المنفذ الذي يستمع عليه خادم MCP. اتركه 0 لاختيار منفذ حر تلقائيًا.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>تمكين الوصول عبر الأصول المختلفة:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>تمكين مشاركة الموارد عبر الأصول المختلفة (CORS) لخادم MCP. هذا ضروري إذا أردت الاتصال بالخادم من تطبيق ويب.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>تم نسخ العنوان إلى الحافظة.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>خادم MCP يعمل، ويستمع على: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>خادم MCP لا يعمل.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>الحالة:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>القيمة%L1</translation>
@@ -7101,11 +9088,11 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">الرجاء إدخال شبكة WiFi الخاصة بك هنا</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+148" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7118,68 +9105,68 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
-        <location line="+988" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>محرر مجموعة البيانات</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>الرجاء إدخال اسم فئة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+289" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+285" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+608" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+518" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+231" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+45" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-897" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-883" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+905" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>خطأ:%L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-321" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4202" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7192,24 +9179,24 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>فشل إنشاء &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>فشل في حفظ ملف الصورة لسبب غير معروف!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>يمسح</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>هل أنت متأكد من أنك تريد حذف &quot;%L1&quot; نهائيًا؟</translation>
     </message>
@@ -7236,9 +9223,9 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>فشلت إعادة تسمية الملف لسبب غير معروف!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6304" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+64" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+64" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>تعذر نسخ الملف &quot;%1&quot; إلى &quot;%2&quot;.</translation>
     </message>
@@ -7259,7 +9246,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">الوسيطة مفقودة لـ -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>الوسيطة مفقودة لـ -serial_number_filter</translation>
     </message>
@@ -7272,7 +9259,22 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 الرجاء إغلاق أي برامج تقوم بعرض / تحرير بيانات تطبيق OpenMV IDE ثم إعادة تشغيل OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1311" />
+        <source>No documentation here</source>
+        <translation>لا يوجد توثيق هنا</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>لا يوجد توثيق لـ &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>تعليمات السياق</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>تحرير عتبة تدرج الرمادي باستخدام محرر العتبة</translation>
     </message>
@@ -7282,7 +9284,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>تحرير عتبة LAB باستخدام محرر العتبة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+470" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+471" />
         <source>Missing argument for -form_key</source>
         <translation>دليل مفقود لـ -form_key</translation>
     </message>
@@ -7299,7 +9301,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+101" />
         <source>untitled_$.py</source>
         <translation>بدون عنوان _ $. py</translation>
     </message>
@@ -7312,7 +9314,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">وسيطة مفقودة ل -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-481" />
+        <location line="-542" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>وسيطة غير صالحة (%1) لـ ‎-auto_update</translation>
     </message>
@@ -7322,7 +9324,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>وسيطة مفقودة ل -auto_update</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7335,7 +9337,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">خطأ في قراءة &lt;Ser_resources&gt; /openmvide/firmware/settings.json: %L1.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="+182" />
         <source>Form Key</source>
         <translation>مفتاح النموذج</translation>
     </message>
@@ -7345,7 +9347,12 @@ Check the json file for errors and fix them.</source>
         <translation>الرجاء إدخال مفتاح النموذج</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+67" />
+        <source>Leave Settings</source>
+        <translation>مغادرة الإعدادات</translation>
+    </message>
+    <message>
+        <location line="+79" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7370,7 +9377,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>أمثلة</translation>
     </message>
@@ -7471,33 +9478,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>افتح Terminal</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>رؤية الجهاز</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>محرر العتبة</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>محرر Keypoints</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7506,7 +9513,7 @@ Check the json file for errors and fix them.</source>
         <translation>مولد AprilTag</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>عائلة TAG16H5 (30 علامة)</translation>
     </message>
@@ -7541,18 +9548,18 @@ Check the json file for errors and fix them.</source>
         <translation>مولد كود QRCode</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>فشل في فتح: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1617" />
+        <location line="-1596" />
         <source>DataMatrix Generator</source>
         <translation>مولد داتاماتريكس</translation>
     </message>
@@ -7579,13 +9586,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
         <location line="+374" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1119" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1144" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>الرجاء إضافة امتداد الملف!</translation>
@@ -7600,7 +9607,7 @@ Check the json file for errors and fix them.</source>
         <translation>غير قادر على الكتابة فوق ملف الإخراج!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4571" />
         <source>Video Tools</source>
         <translation>أدوات الفيديو</translation>
     </message>
@@ -7700,37 +9707,37 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-370" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+221" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1979" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+989" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1558" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1583" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>يلغي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4386" />
         <source>Upload to Edge Impulse Project</source>
         <translation>تحميل إلى مشروع Edge Impulse</translation>
     </message>
@@ -7767,7 +9774,7 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV Docs</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <source>OpenMV Forums</source>
         <translation>منتديات OpenMV</translation>
     </message>
@@ -7821,21 +9828,21 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">عارض OpenMV</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-223" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-217" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-354" />
         <location line="+37" />
@@ -7852,7 +9859,7 @@ Check the json file for errors and fix them.</source>
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7866,16 +9873,16 @@ Check the json file for errors and fix them.</source>
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
+        <location line="+12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
         <location line="+101" />
         <location line="+9" />
@@ -7886,38 +9893,38 @@ Check the json file for errors and fix them.</source>
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-133" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1571" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1589" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -7928,7 +9935,7 @@ Check the json file for errors and fix them.</source>
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -7947,11 +9954,11 @@ Check the json file for errors and fix them.</source>
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+765" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>يتصل</translation>
     </message>
@@ -7967,12 +9974,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-933" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-932" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>يتم دعم استرداد البرامج الثابتة فقط باستخدام أدوات SE SE SEMONDUCTOR ALIF.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1217" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1194" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+179" />
         <location line="+26" />
         <location line="+7" />
@@ -7990,8 +9997,8 @@ Check the json file for errors and fix them.</source>
         <translation>توقف (توقف النص)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -7999,9 +10006,9 @@ Check the json file for errors and fix them.</source>
         <translation>الإطار العازلة</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -8014,7 +10021,7 @@ Check the json file for errors and fix them.</source>
         <translation>سجل المخزن المؤقت للإطار</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8136,8 +10143,8 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">الدقة (عرض:%1 ، ح:%2)</translation>
     </message>
     <message>
-        <location line="-1486" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2554" />
+        <location line="-1468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2584" />
         <source>Load Custom Firmware</source>
         <translation>تحميل البرامج الثابتة المخصصة</translation>
     </message>
@@ -8169,7 +10176,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>تحميل ROMFS على كاميرا OpenMV</translation>
@@ -8206,7 +10213,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8265,9 +10272,9 @@ Would you like to choose a different name?</source>
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>نسخ/تحويل ملف Python</translation>
@@ -8289,7 +10296,7 @@ Would you like to choose a different name?</source>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1045" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>تحويل النموذج</translation>
@@ -8355,7 +10362,7 @@ Would you like to choose a different name?</source>
         <translation>الترخيص</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <location line="+8" />
         <source>About %1</source>
         <translation>حول %1</translation>
@@ -8371,25 +10378,25 @@ Would you like to choose a different name?</source>
         <translation>&lt;p&gt;&lt;b&gt;حول %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;بواسطة: إبراهيم عبد القادر وكوابينا دبليو أجيمان&lt;/p&gt;&lt;p&gt;&lt;b&gt;إصدار المصنع&lt;/b&gt;&lt;/p&gt;&lt;p&gt;مخصص للمصنعين المرخصين فقط.&lt;/p&gt;&lt;p&gt;&lt;b&gt;رخصة جنو العامة&lt;/b&gt;&lt;/p&gt;&lt;p&gt;حقوق الطبع والنشر (C) %L2 %L3&lt;/p&gt;&lt;p&gt;يتم توزيع هذا البرنامج في الأمل في أن يكون مفيدًا، ولكن دون أي ضمان؛ دون حتى الضمان الضمني لقابلية التسويق أو الملاءمة لغرض معين. راجع &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;رخصة GNU العامة&lt;/a&gt; لمزيد من التفاصيل.&lt;/p&gt;&lt;p&gt;&lt;b&gt;أسئلة أو تعليقات؟&lt;/b&gt;&lt;/p&gt;&lt;p&gt;اتصل بنا على &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+173" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>حدد مصدر مخزن الإطارات، أو أوقفه للحصول على أقصى أداء</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>إيقاف</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>تشغيل</translation>
     </message>
     <message>
-        <location line="-2071" />
+        <location line="-2085" />
         <source>JPG Mode</source>
         <translation>وضع جبغ</translation>
     </message>
@@ -8404,7 +10411,7 @@ Would you like to choose a different name?</source>
         <translation>إطار في الثانية:%L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+384" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+388" />
         <source>Close</source>
         <translation>يغلق</translation>
     </message>
@@ -8424,8 +10431,8 @@ Would you like to choose a different name?</source>
         <translation>التقاط البيانات</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3774" />
         <source>Board:</source>
         <translation>سبورة:</translation>
     </message>
@@ -8490,7 +10497,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>التحديث متاح</translation>
     </message>
@@ -8499,7 +10506,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">يتوفر إصدار جديد من OpenMV IDE (%L1.%L2.%L3) للتنزيل.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>تحميل</translation>
     </message>
@@ -8512,7 +10519,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">تطبيق آخر يستخدم منفذ اكتشاف البث OpenMV Cam. الرجاء إغلاق هذا التطبيق وإعادة تشغيل OpenMV IDE لتمكين برمجة WiFi.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>خطأ في مجلد المستندات</translation>
     </message>
@@ -8522,7 +10529,7 @@ Would you like to choose a different name?</source>
         <translation>فشل إنشاء مجلد المستندات!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>جيثب copilot</translation>
     </message>
@@ -8582,27 +10589,27 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>المنفذ التسلسلي -%L1 -%L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>جارٍ الاتصال ... (مهلة 30 ثانية)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8655,12 +10662,12 @@ sudo adduser%L1 الطلب الهاتفي
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>اتصال خادم UDP -%1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>وسيطة المنفذ غير صالحة (%1) لـ -open_udp_server_terminal</translation>
     </message>
@@ -8691,12 +10698,12 @@ sudo adduser%L1 الطلب الهاتفي
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>اتصال خادم TCP -%1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>وسيطة المنفذ غير صالحة (%1) لـ -open_tcp_server_terminal</translation>
     </message>
@@ -8725,7 +10732,7 @@ sudo adduser%L1 الطلب الهاتفي
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8886,19 +10893,19 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">تكوين الإعدادات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+425" />
-        <location line="+20" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+424" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>حفظ البرنامج النصي</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>هل تريد تجريد التعليقات وتحويل المسافات إلى علامات تبويب؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+120" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
@@ -8907,14 +10914,14 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>احفظ الصورة</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>ملفات الصور (* .bmp * .jpg * .jpeg * .png * .ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -8947,7 +10954,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>حفظ واصف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+80" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8955,7 +10962,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>ملفات Keypoints (* .lbp * .orb)</translation>
     </message>
     <message>
-        <location line="-1112" />
+        <location line="-1088" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8963,20 +10970,20 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>افتح ملف</translation>
     </message>
     <message>
-        <location line="-4752" />
+        <location line="-4824" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3206" />
         <location line="+9" />
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-769" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8999,7 +11006,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
 إصدارات %2 قبل v4.3.0 لا تحتوي على هذا الملف وكانت ستحذفه عند تثبيت الموارد.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+30" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-424" />
         <location line="+126" />
         <location line="+51" />
@@ -9012,7 +11019,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>مستودعات الطرف الثالث</translation>
     </message>
     <message>
-        <location line="+1496" />
+        <location line="+1564" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;ملاحظات الإصدار&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9042,7 +11049,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>ذاكرة الإطار - الدقة (العرض:%1، الارتفاع:%2) - التركيز (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+714" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+697" />
         <source>Camera serial port -- click to give this camera a friendly name</source>
         <translation>منفذ الكاميرا التسلسلي -- انقر لإعطاء هذه الكاميرا اسمًا وديًا</translation>
     </message>
@@ -9052,7 +11059,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>يتوفر إصدار جديد من %5 (%L1.%L2.%L3) للتنزيل. راجع &lt;a href=&quot;%L4&quot;&gt;ملاحظات الإصدار&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>اتصال (الشبكة متاحة)</translation>
     </message>
@@ -9072,7 +11079,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>يتطلب ‎-auto_run‎ في وضع العرض وسيطة ملف نصي برمجي قابل للقراءة في سطر الأوامر.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9135,7 +11142,7 @@ Would you like to register your OpenMV Cam now?</source>
 هل ترغب في تسجيل كاميرا OpenMV الآن؟</translation>
     </message>
     <message>
-        <location line="+604" />
+        <location line="+613" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9156,12 +11163,12 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-474" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>اختر قيادة</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>لم يتم العثور على محركات أقراص صالحة لربطها بكاميرا OpenMV الخاصة بك!</translation>
     </message>
@@ -9180,7 +11187,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>معدل الإطارات على الكاميرا ومعدل الإطارات المعروض في بيئة التطوير</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>يرجى ربط محرك الأقراص بكاميرا OpenMV الخاصة بك</translation>
     </message>
@@ -9262,14 +11269,14 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>استقصاء منشئ ملفات تعريف التعليمات البرمجية (مللي ثانية)</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+443" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>فشل في مسح &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2858" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>بث صور مضغوطة بتنسيق JPG للحصول على أداء أعلى</translation>
@@ -9311,7 +11318,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>حدد ما يعرضه هذا الجزء</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>مخزن الإطارات (%1)</translation>
     </message>
@@ -9332,19 +11339,19 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+262" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3420" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-640" />
         <source>No Drive</source>
         <translation>لا يوجد محرك أقراص</translation>
     </message>
     <message>
-        <location line="+1966" />
+        <location line="+1980" />
         <source>OpenMV Cam Error</source>
         <translation>خطأ في كاميرا OpenMV</translation>
     </message>
     <message>
-        <location line="+392" />
+        <location line="+398" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9353,14 +11360,14 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9370,7 +11377,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>مبنى جديد</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>الاتصال بالمنفذ التسلسلي</translation>
     </message>
@@ -9391,7 +11398,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>الرجاء تحديد منفذ تسلسلي</translation>
     </message>
@@ -9402,7 +11409,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9418,15 +11425,15 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>سلسلة غير صالحة: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>لم يتم العثور على منافذ تسلسلية!</translation>
     </message>
@@ -9436,41 +11443,41 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>هل تريد الاتصال بخادم UDP كعميل أو بدء تشغيل خادم UDP؟</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation> اتصل بالخادم </translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation> ابدأ خادمًا </translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>الرجاء إدخال عنوان IP (أو اسم المجال) والمنفذ (مثل xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>اتصال عميل UDP -%1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>الرجاء إدخال رقم منفذ (أدخل 0 لأي منفذ حر عشوائي)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>هل تريد الاتصال بخادم TCP كعميل أو بدء تشغيل خادم TCP؟</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>اتصال عميل TCP -%1</translation>
     </message>
@@ -9490,17 +11497,17 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>موقع الصورة المصدر؟</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation> الإطار العازلة </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation> ملف الصورة </translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>سيتم تحديث مجموعة العتبة المحددة عند الإغلاق.</translation>
@@ -9517,22 +11524,22 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+1084" />
         <source>What would you like to do?</source>
         <translation>ماذا تريد ان تفعل؟</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation> تعديل ملف </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation> دمج الملفات </translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9638,36 +11645,36 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">تتوفر موارد OpenMV IDE الجديدة (مثل الأمثلة والبرامج الثابتة والوثائق وما إلى ذلك).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>ثَبَّتَ</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+74" />
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+701" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>جارى التحميل...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>جارٍ التثبيت ...</translation>
     </message>
@@ -9689,13 +11696,13 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>لا يمكن فتح ملف الموارد &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>فشل طلب الشبكة &quot;%L1&quot;!</translation>
     </message>
@@ -9704,49 +11711,49 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">البرامج الثابتة الثنائية ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="-244" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="-255" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>محو نظام ملفات الدهون الداخلية</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>إذا قمت بتمكين هذا الخيار ، فسيتم حذف جميع الملفات على نظام ملفات الدهون الداخلية الخاصة بـ OpenMV CAM. هذا لا يمحو الملفات على أي بطاقة SD قابلة للإزالة (إذا تم إدراجها).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>إعادة تعيين نظام ملفات romfs</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>إذا قمت بتمكين هذا الخيار ، فسيتم إعادة تعيين نظام ملفات ROM على OpenMV Cam إلى الافتراضي.</translation>
     </message>
     <message>
-        <location line="-4302" />
+        <location line="-4315" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>الإقلاع</translation>
@@ -9762,12 +11769,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>قم بالدخول بقوة إلى أداة تحميل التشغيل OpenMV Cam. قد يؤدي ذلك إلى عدم خروج أداة تحميل التشغيل OpenMV Cam تلقائيًا على اللوحات القديمة.</translation>
     </message>
     <message>
-        <location line="+918" />
+        <location line="+922" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>قم بتثبيت أحدث إصدار من البرامج الثابتة (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1098" />
+        <location line="+1113" />
         <location line="+194" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>فشل في نسخ ملفات البرامج الثابتة إلى الدليل المؤقت!</translation>
@@ -9807,7 +11814,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>غير معروف (0x%1)</translation>
     </message>
     <message>
-        <location line="+699" />
+        <location line="+698" />
         <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
 
 To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
@@ -9831,7 +11838,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+89" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>تشغيل النص البرمجي</translation>
@@ -9849,7 +11856,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
         <translation>خطأ: تعذّر فتح &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+229" />
+        <location line="+230" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9858,7 +11865,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 على وجه الخصوص، راجع معالجة الصور -&gt; تتبع الألوان والتعلم الآلي -&gt; أمثلة TensorFlow.</translation>
     </message>
     <message>
-        <location line="-4274" />
+        <location line="-4304" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9883,17 +11890,17 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="+21" />
-        <location line="+310" />
+        <location line="+321" />
         <source>Run</source>
         <translation>يجري</translation>
     </message>
     <message>
-        <location line="-173" />
+        <location line="-167" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; ليس ملفًا!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>تحديث نظام ملفات romfs</translation>
     </message>
@@ -9921,7 +11928,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>لوحة غير معروفة</translation>
     </message>
     <message>
-        <location line="+457" />
+        <location line="+459" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>تم الكشف عن لوحة في وضع DFU. ماذا تريد ان تفعل؟</translation>
     </message>
@@ -9930,7 +11937,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">قم بتثبيت أحدث إصدار من البرامج الثابتة (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Load a specific firmware</source>
         <translation>تحميل برنامج ثابت معين</translation>
     </message>
@@ -9957,7 +11964,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
  يرجى تحديد ملف bootloader.dfu والمحاولة مرة أخرى. لاحظ أن تحميل البرامج الثابتة. dfu أو openmv.dfu (bootloader + firmware) قد لا يعمل على ألواح STM32H7 بسبب وجود خطأ في محمل التمهيد ROM الخاص بـ Chip!</translation>
     </message>
     <message>
-        <location line="+1020" />
+        <location line="+1035" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>يتم دعم ملفات التحميل فقط *.bin و *.IMG لمحمل التمهيد الداخلي!</translation>
     </message>
@@ -9993,10 +12000,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-73" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1471" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>الرجاء تحديد نوع اللوحة</translation>
     </message>
@@ -10005,24 +12012,24 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">هل تريد محو نظام الملفات الداخلي؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2974" />
         <source>No released firmware available for the attached board!</source>
         <translation>لا توجد برامج ثابتة تم إصدارها متاحة للوحة المرفقة!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>الرجاء تحديد جهاز DFU</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+175" />
+        <location line="-100" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>يرجى تحديث أداة تحميل التشغيل إلى أحدث إصدار وتثبيت SoftDevice لتفليش برنامج OpenMV الثابت. يمكن العثور على مزيد من المعلومات على &lt;a href=&quot;https://docs.arduino.cc&quot;&gt; https://docs.arduino.cc &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-2376" />
+        <location line="-2399" />
         <source>Checking development examples...</source>
         <translation>جارٍ فحص أمثلة التطوير...</translation>
     </message>
@@ -10063,7 +12070,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>تتوفر موارد %2 جديدة (مثل الأمثلة والبرامج الثابتة والوثائق وما إلى ذلك). راجع &lt;a href=&quot;%L1&quot;&gt;ملاحظات الإصدار&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>فشل التحقق من المجموع الاختباري لملف الموارد الذي تم تنزيله &quot;%L1&quot;. يرجى المحاولة مرة أخرى لاحقًا.</translation>
     </message>
@@ -10084,7 +12091,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>ملف البرنامج الثابت الثنائي (‎*.bin *.dfu *.img *.zip‎)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>ملف zip &quot;%L1&quot; لا يحتوي على صورة برنامج ثابت!</translation>
     </message>
@@ -10094,13 +12101,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>تعذّر فك ضغط ملف zip للبرنامج الثابت &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+182" />
-        <location line="+4031" />
+        <location line="+176" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>تحذير: يتطلب الترقية إلى إصدار البرامج الثابتة الجديدة محو نظام الملفات الدهنية.</translation>
     </message>
     <message>
-        <location line="-3953" />
+        <location line="-3972" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>تعذّر تنزيل أحدث برنامج ثابت للتطوير!</translation>
@@ -10155,7 +12162,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>المنفذ التسلسلي:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>الاسم:</translation>
     </message>
@@ -10169,7 +12176,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+194" />
         <source>Just erase the internal FAT file system</source>
         <translation>مجرد محو نظام ملفات الدهون الداخلية</translation>
     </message>
@@ -10184,14 +12191,14 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>أعد ضبط نظام ملفات ROM</translation>
     </message>
     <message>
-        <location line="+233" />
-        <location line="+2874" />
+        <location line="+234" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>خيارات الترقية:</translation>
     </message>
     <message>
-        <location line="-2783" />
-        <location line="+174" />
+        <location line="-2797" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>يرجى اختصار REC إلى GND وإعادة ضبط اللوحة الخاصة بك. يمكن العثور على مزيد من المعلومات على &lt;a href=&quot;https://docs.arduino.cc&quot;&gt; https://docs.arduino.cc &lt;/a&gt;</translation>
@@ -10222,7 +12229,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>خطأ مهلة أثناء الحصول على بنية اللوحة!</translation>
@@ -10247,7 +12254,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-547" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>أعد توصيل كاميرا OpenMV الخاصة بك ...</translation>
     </message>
@@ -10286,46 +12293,46 @@ Continue?</source>
         <translation>محو ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-155" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-78" />
+        <location line="+16" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-780" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>خطأ في المهلة!</translation>
     </message>
@@ -10336,12 +12343,12 @@ Continue?</source>
         <translation>برمجة...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+52" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -10387,12 +12394,12 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+100" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
-        <location line="+139" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+188" />
-        <location line="+41" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
         <location line="+27" />
@@ -10432,7 +12439,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1331" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1189" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>جارٍ تحضير أدوات محمّل الإقلاع... (قد يستغرق هذا بضع ثوانٍ)</translation>
     </message>
@@ -10517,8 +12524,8 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-36" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
@@ -10526,13 +12533,13 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>انقر فوق الزر &quot;موافق&quot; بعد تعداد كاميرا OpenMV الخاصة بك والانتهاء من تشغيل الاختبار الذاتي المدمج (وميض LED باللون الأزرق - يستغرق هذا بعض الوقت).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-341" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-323" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>قد لا يكون DFU Util مستقرًا على هذه المنصة. إذا فشل التحميل يرجى استخدام جهاز كمبيوتر عادي.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-417" />
         <source>No DFU settings for the selected board type!</source>
         <translation>لا توجد إعدادات DFU لنوع اللوحة المحدد!</translation>
     </message>
@@ -10545,47 +12552,47 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-70" />
         <source>Erasing Disk</source>
         <translation>مسح القرص</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
+        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+77" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+678" />
         <source>Read ROMFS</source>
         <translation>اقرأ romfs</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>اكتب romfs</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>وامض البرامج الثابتة</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>فشل تحديث البرامج الثابتة DFU!</translation>
     </message>
@@ -10593,7 +12600,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -10625,7 +12632,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>لا يحتوي %1 على نظام ملفات ROM.</translation>
     </message>
@@ -10658,7 +12665,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>لا توجد إعدادات PicoTool للجهاز المحدد!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -10827,13 +12834,13 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>إصدار البرنامج الثابت:%L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>المنفذ التسلسلي:%L1</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [قديم - انقر هنا للتحديث]</translation>
     </message>
@@ -10958,7 +12965,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation type="vanished">يبدأ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+844" />
         <source>More Examples</source>
         <translation>مزيد من الأمثلة</translation>
     </message>
@@ -11134,7 +13141,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 هل ترغب في أن يقوم OpenMV IDE بنسخه إلى OpenMV Cam؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -11153,12 +13160,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5016" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
-        <location line="+352" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-553" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>طراز حديقة الحيوان</translation>
     </message>
@@ -11244,21 +13251,21 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>بوساك</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>احصل على الأجهزة</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-422" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-419" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>فشل الاستعلام!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11273,7 +13280,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>DFU Util</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+151" />
         <source>This may take a while, coffee break?</source>
         <translation>هذا قد يستغرق بعض الوقت ، استراحة القهوة؟</translation>
     </message>
@@ -11330,7 +13337,7 @@ Percentage
 %1٪</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-164" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11462,79 +13469,79 @@ Open a data set to upload it.</source>
         <translation>الرجاء إدخال مفتاح واجهة برمجة تطبيقات مشروع Edge Impluse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>في انتظار تعداد محمّل الفلاش...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>لم يتم تعداد محمّل الفلاش i.MX.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+0" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>أدوات AlIF</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>يرجى تشغيل مفتاح وضع الصيانة الصلب ، ولم يتم تمكينه ، ثم اضغط على زر المستخدم على OpenMV Cam.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-140" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-125" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>هذه الميزة غير مدعومة على هذا الجهاز!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -11543,7 +13550,7 @@ The camera must be power cycled after after recovery.</source>
 يجب أن يتم تدوير طاقة الكاميرا بعد التعافي.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+142" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>يرجى فصل كاميرا OpenMV الخاصة بك عن جهاز الكمبيوتر الخاص بك، وإيقاف تشغيل مفتاح وضع الصيانة الصلبة، إذا كان ممكّنًا. اترك كاميرا OpenMV غير متصلة حتى يُطلب منك إعادة توصيلها.</translation>
     </message>
@@ -11552,7 +13559,7 @@ The camera must be power cycled after after recovery.</source>
         <translation type="vanished">يرجى فصل كاميرا OpenMV من جهاز الكمبيوتر الخاص بك ، وإيقاف تشغيل مفتاح وضع الصيانة الصلب ، إذا تم تمكينه ، وقم بإعادة توصيل كاميرا OpenMV إلى جهاز الكمبيوتر الخاص بك ، ثم اضغط OK.</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="-100" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11561,16 +13568,16 @@ The camera must be power cycled after a system package update.</source>
 يجب أن تكون الكاميرا تدور حول الطاقة بعد تحديث حزمة النظام.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-479" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-445" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>يستغرق تنفيذ هذا الأمر بعض الوقت. يرجى التحلي بالصبر.</translation>
     </message>
@@ -11590,7 +13597,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>منتهي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -11690,7 +13697,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>انسخ الحد أعلاه قبل الإغلاق.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-495" />
         <source>Reading File...</source>
         <translation>جاري قراءة ملف ...</translation>
     </message>
@@ -11722,12 +13729,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>ملف تحويل الشفرة ...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11786,12 +13793,12 @@ The camera must be power cycled after a system package update.</source>
         <translation type="vanished">احصل على تنسيقات الإدخال</translation>
     </message>
     <message>
-        <location line="+288" />
-        <location line="+101" />
+        <location line="+292" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11819,30 +13826,30 @@ The camera must be power cycled after a system package update.</source>
         <translation type="vanished">فشل تشغيل ffmpeg!</translation>
     </message>
     <message>
-        <location line="-1323" />
-        <location line="+85" />
+        <location line="-1340" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg غير مدعوم على هذه المنصة.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>لم يتم العثور على ملف FFmpeg التنفيذي (قد يكون التثبيت غير مكتمل).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>الحصول على التنسيقات</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+95" />
         <source>Converting</source>
         <translation>تحويل</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG غير مدعوم على هذا النظام الأساسي.</translation>
     </message>
@@ -11860,7 +13867,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 قد يكون تثبيت OpenMV IDE لديك غير مكتمل.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>غير قادر على الكتابة لإخراج ملف الفيديو!</translation>
     </message>
@@ -11870,19 +13877,19 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation>غير قادر على فتح ملف إخراج الفيديو!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>شغل الفيديو</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>تشغيل الفيديو غير مدعوم على هذه المنصة.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>فشل تشغيل ffplay!</translation>
     </message>
@@ -11989,7 +13996,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation>حفظ الفيديو</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>مشغول</translation>
     </message>
@@ -12009,7 +14016,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation type="vanished">لا توجد واجهة مطابقة لاسم الملف المحدد!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1129" />
         <source>Please select the target</source>
         <translation>الرجاء تحديد الهدف</translation>
     </message>
@@ -12030,7 +14037,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE سوف ينسخ النموذج كما هو.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -12066,7 +14073,9 @@ OpenMV IDE سوف ينسخ النموذج كما هو.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -12085,7 +14094,7 @@ OpenMV IDE سوف ينسخ النموذج كما هو.</translation>
         <translation>تحرير romfs</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>مجلد مع نفس الاسم موجود بالفعل!</translation>
@@ -12143,29 +14152,29 @@ OpenMV IDE سوف ينسخ النموذج كما هو.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>ملف استخراج</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>عرض/تحرير</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>أضف ملف</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>مجلد جديد</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -12201,7 +14210,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 لا تزال كاميرا OpenMV في وضع محمّل الإقلاع: انقر على اتصال واستخدم خيارات محمّل الإقلاع لتحرير نظام ملفات ROM مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>لم يتم اختيار نوع اللوحة.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -12209,13 +14225,34 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>ROMFS غير مدعوم في هذا المجلس!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>لم يتم اختيار هدف ROMFS.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>فشلت قراءة ROMFS من الكاميرا.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>فشل في فك رومف!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>حجم صورة ROMFS هو %L1 بايت لكن ROMFS الخاص باللوحة يتسع لـ %L2 بايت.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>فشلت كتابة ROMFS إلى الكاميرا.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV romfs</translation>
@@ -12257,12 +14294,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>هل أنت متأكد من أنك تريد إعادة تعيين نظام ملفات ROM الخاصة بكاميرا OpenMV؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>ماذا تريد أن تفعل؟</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>فقط انسخ السيناريو</translation>
     </message>
@@ -12282,40 +14319,40 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>ترجمة إلى Bytecode</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;خيارات سطر أوامر مترجم MPY Cross&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>متقدم</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>برنامج التحويل البرمجي MPY</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>التجميع</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>لم يتم دعم برنامج MPY Cross Compilier على هذا النظام الأساسي.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-867" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-880" />
         <source>Success - Press Ok to close the window</source>
         <translation>النجاح - اضغط على موافق لإغلاق النافذة</translation>
     </message>
@@ -12328,18 +14365,18 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>الفشل - اضغط على إلغاء لإغلاق النافذة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>برنامج التحويل البرمجي</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>فشل في نسخ ملف JSON!</translation>
     </message>
@@ -12350,12 +14387,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>يرجى تحديد إعدادات التحويل البرمجي:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>أقصى تحسين</translation>
     </message>
@@ -12375,7 +14412,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>لا تحسين</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>-Verbosity 2</translation>
     </message>
@@ -12385,7 +14422,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>&lt;a href=&quot;%1&quot;&gt;خيارات سطر أوامر STEdgeAI Core&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>-رسم الخرائط</translation>
     </message>
@@ -12399,7 +14436,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation type="vanished">&lt;a href = &quot;٪ 1&quot;&gt; stedgeai relocation cli reports &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>فشل في فتح ملف JSON!</translation>
@@ -12417,12 +14454,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>برنامج التحويل البرمجي فيلا</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>تحسين للأداء</translation>
     </message>
@@ -12432,7 +14469,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>تحسين الحجم</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>-فيروبز-التقدم</translation>
     </message>
@@ -12442,7 +14479,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-blob/main/options.md&quot;&gt; خيارات Cli Compilier &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>فيلا</translation>
     </message>
@@ -12453,7 +14490,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>مبرمج STM32</translation>
     </message>
@@ -12463,7 +14500,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>لا يتم دعم مبرمج STM32 على هذا النظام الأساسي.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-659" />
         <source>the detected board</source>
         <translation>اللوحة المكتشفة</translation>
     </message>
@@ -12493,12 +14530,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>لتحميل صورة محمّل الإقلاع، يجب أن تكون كاميرا OpenMV في وضع استرداد محمّل الإقلاع. افصل الكاميرا، ووصّل BOOT0/SBL/RECOVERY بـ 3.3V باستخدام سلك توصيل، ثم أعد توصيل الكاميرا قبل المحاولة مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>فشلت قراءة ROMFS عبر DFU!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>فشلت كتابة ROMFS عبر DFU!</translation>
     </message>
@@ -12515,7 +14552,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>إظهار النص</translation>
@@ -12760,7 +14797,7 @@ Fix or clear them before saving.</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12785,7 +14822,7 @@ Fix or clear them before saving.</source>
         <translation>&quot;%L1&quot; - فشل التثبيت: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - فشل تحديث &quot;%L2&quot;: %L3</translation>
     </message>
@@ -13002,7 +15039,7 @@ Install now?</source>
         <translation>&quot;%L1&quot; غير مثبّت</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; اللوحة &quot;%L2&quot; (%L3) تتداخل مع معرّف محمّل الإقلاع الخاص بـ &quot;%L4&quot; (%L5)</translation>
     </message>
@@ -13161,7 +15198,7 @@ This deletes its boards, firmware, and examples.</source>
 سيؤدي هذا إلى حذف لوحاته وبرامجه الثابتة وأمثلته.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -13399,7 +15436,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 عينة (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13513,12 +15550,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>الطيف</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>حساب المتوسط</translation>
     </message>
@@ -13619,7 +15656,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>وصّل كاميرا لعرض القنوات</translation>
     </message>
@@ -14066,6 +16103,16 @@ This deletes its boards, firmware, and examples.</source>
         <source>%L1/s</source>
         <translation>%L1/ث</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>الذكاء الاصطناعي</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>محادثة الذكاء الاصطناعي الوكيلي (إضافة عميل ACP) غير متاحة.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -14074,89 +16121,42 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">يقوم هذا المعالج بإنشاء مشروع اختبار وحدة بسيط.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>موقع المشروع</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -14170,6 +16170,58 @@ This deletes its boards, firmware, and examples.</source>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>موقع</translation>
     </message>
@@ -14178,7 +16230,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">اختبار كيو تي</translation>
     </message>
     <message>
-        <location line="-171" />
+        <location line="-574" />
         <source>Google Test</source>
         <translation>اختبار جوجل</translation>
     </message>
@@ -14198,49 +16250,49 @@ This deletes its boards, firmware, and examples.</source>
         <translation>كاتش 2</translation>
     </message>
     <message>
-        <location line="-192" />
-        <location line="+26" />
+        <location line="-358" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>إطار الاختبار:</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-283" />
         <source>GUI Application</source>
         <translation>تطبيق واجهة المستخدم الرسومية</translation>
     </message>
     <message>
-        <location line="+49" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-75" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>اسم مجموعة الاختبار:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>اسم حالة الاختبار:</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-289" />
         <source>Requires QApplication</source>
         <translation>يتطلب QApplication</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+23" />
         <source>Generate setup code</source>
         <translation>إنشاء رمز الإعداد</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="-21" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>إنشاء رمز التهيئة والتنظيف</translation>
     </message>
@@ -14249,17 +16301,17 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">قم بتمكين C ++ 11</translation>
     </message>
     <message>
-        <location line="-145" />
+        <location line="-311" />
         <source>Googletest source directory (optional):</source>
         <translation>دليل مصدر Googletest (اختياري):</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>يشمل دفعة الدليل (اختياري):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>يتضمن Catch2 الدليل (اختياري):</translation>
     </message>
@@ -14269,257 +16321,262 @@ This deletes its boards, firmware, and examples.</source>
         <translation>استخدم مكتبات Qt</translation>
     </message>
     <message>
-        <location line="-509" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>q اصنع</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>كيو بي اس</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>نظام البناء:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>معلومات المشروع والاختبار</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>تفاصيل</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>اختيار المجموعة</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>أطقم</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>ادارة مشروع</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>ملخص</translation>
     </message>
@@ -14528,10 +16585,9 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">ينشئ مشروع اختبار وحدة جديدة. تسمح لك اختبارات الوحدة بالتحقق من أن الكود مناسب للاستخدام وأنه لا يوجد تراجع.</translation>
     </message>
     <message>
-        <location line="-542" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="-389" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>مشروع آخر</translation>
     </message>
@@ -14540,36 +16596,36 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">مشروع اختبار السيارات</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="-639" />
         <source>Fully qualified name, including namespaces</source>
         <translation>اسم مؤهل بالكامل ، بما في ذلك مساحات الأسماء</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>اسم الفصل:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;مخصص&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>الفئة الأساسية:</translation>
     </message>
@@ -14578,7 +16634,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>تضمين QObject</translation>
     </message>
@@ -14620,10 +16676,10 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName (القيمة (&apos;Class&apos;)، Util.preferredSuffix (&apos;text / x-c ++ hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>الملف الاساسي:</translation>
     </message>
@@ -14632,54 +16688,55 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName (القيمة (&apos;Class&apos;)، Util.preferredSuffix (&apos;text / x-c ++ src&apos;))}</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>مصدر الملف:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>طريق:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>تحديد فئة</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>ينشئ رأس C ++ وملف مصدر لفئة جديدة يمكنك إضافتها إلى مشروع C ++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C / C ++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>فئة C ++</translation>
     </message>
@@ -14720,16 +16777,16 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>كيو تي</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>كيو تي البند النموذجي</translation>
     </message>
@@ -14769,19 +16826,18 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>بايثون</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>فئة بايثون</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>ينشئ مشروعًا اختباريًا يستند إلى CMake يمكن إدخال مقتطف التعليمات البرمجية من أجله.</translation>
+        <translation type="vanished">ينشئ مشروعًا اختباريًا يستند إلى CMake يمكن إدخال مقتطف التعليمات البرمجية من أجله.</translation>
     </message>
     <message>
         <source>int main(int argc, char *argv[])
@@ -14794,47 +16850,39 @@ This deletes its boards, firmware, and examples.</source>
 }</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>شفرة:</translation>
+        <translation type="vanished">شفرة:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore ، QtWidgets</translation>
+        <translation type="vanished">QtCore ، QtWidgets</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>استخدام وحدات كيو تي:</translation>
+        <translation type="vanished">استخدام وحدات كيو تي:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>حزمة التطبيق (macOS)</translation>
+        <translation type="vanished">حزمة التطبيق (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>حدد مقتطف الشفرة</translation>
+        <translation type="vanished">حدد مقتطف الشفرة</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>مقتطف الشفرة</translation>
+        <translation type="vanished">مقتطف الشفرة</translation>
+    </message>
+    <message>
+        <source>Code Snippet</source>
+        <translation type="vanished">مقتطف الرمز</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Code Snippet</source>
-        <translation>مقتطف الرمز</translation>
-    </message>
-    <message>
-        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>ينشئ ملف رأس يمكنك إضافته إلى مشروع C / C ++.</translation>
     </message>
@@ -14844,7 +16892,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف رأس C / C ++</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>يقوم بإنشاء ملف مصدر يمكنك إضافته إلى مشروع C / C ++.</translation>
     </message>
@@ -14854,7 +16902,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف مصدر C / C ++</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>اختر قالب النموذج</translation>
     </message>
@@ -14872,12 +16920,14 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">نموذج Qt Designer</translation>
     </message>
     <message>
-        <location line="-139" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>يُنشئ تظليل أجزاء في لغة تظليل OpenGL لسطح المكتب (GLSL). تولد التظليل الجزئي ألوان البكسل النهائية للمثلثات والنقاط والخطوط المعروضة باستخدام OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14885,7 +16935,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>شادر جزء (OpenGL سطح المكتب)</translation>
     </message>
@@ -14900,7 +16950,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Vertex Shader (سطح المكتب OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>ينشئ تظليل أجزاء في OpenGL / ES 2.0 Shading Language (GLSL / ES). تولد التظليل الجزئي ألوان البكسل النهائية للمثلثات والنقاط والخطوط المعروضة باستخدام OpenGL.</translation>
     </message>
@@ -14920,7 +16970,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Vertex Shader (OpenGL / ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+25" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>ينشئ ملف Java برمز معياري.</translation>
     </message>
@@ -14935,7 +16985,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف جافا</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>مكتبة عديمة الجنسية</translation>
     </message>
@@ -14956,73 +17006,63 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف JS</translation>
     </message>
     <message>
-        <location line="-74" />
         <source>Model name:</source>
-        <translation>اسم النموذج:</translation>
+        <translation type="vanished">اسم النموذج:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+63" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>موقع:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators (value (&apos;TargetPath&apos;))}&quot; موجود في نظام الملفات.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>اسم النموذج والموقع</translation>
+        <translation type="vanished">اسم النموذج والموقع</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>ينشئ نموذجًا جديدًا فارغًا برسم تخطيطي فارغ.</translation>
+        <translation type="vanished">ينشئ نموذجًا جديدًا فارغًا برسم تخطيطي فارغ.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>النمذجة</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>نموذج</translation>
+        <translation type="vanished">نموذج</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>يقوم بإنشاء نموذج خدش باستخدام ملف مؤقت.</translation>
+        <translation type="vanished">يقوم بإنشاء نموذج خدش باستخدام ملف مؤقت.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>نموذج الصفر</translation>
+        <translation type="vanished">نموذج الصفر</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>ينشئ ملف Nim فارغًا باستخدام مجموعة أحرف UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>نيم</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>ملف نيم</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>ينشئ ملف نصي Nim فارغًا باستخدام مجموعة أحرف UTF-8.</translation>
     </message>
@@ -15042,7 +17082,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف بايثون</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>يقوم بإنشاء ملف Qt Resource (.qrc).</translation>
     </message>
@@ -15052,7 +17092,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>كيو تي ملف الموارد</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>ينشئ ملف QML برمز معياري ، يبدأ بـ &quot;import QtQuick&quot;.</translation>
     </message>
@@ -15062,21 +17102,21 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>يقوم بإنشاء مخزن مؤقت للخدش باستخدام ملف مؤقت.</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="-49" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>عام</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-391" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>ينشئ هذا المعالج مشروع اختبار وحدة بسيط باستخدام Boost.</translation>
     </message>
@@ -15101,21 +17141,21 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ينشئ مشروع اختبار وحدة جديد باستخدام Boost. تتيح لك اختبارات الوحدة التحقق من أن الرمز مناسب للاستخدام وأنه لا توجد انحدارات.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>مشروع الاختبار</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>تعزيز مشروع اختبار</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>ينشئ هذا المعالج مشروع اختبار وحدة بسيط باستخدام Catch2.</translation>
     </message>
@@ -15150,7 +17190,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>catch2 مشروع اختبار</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>ينشئ هذا المعالج مشروع اختبار وحدة بسيط باستخدام اختبار Google.</translation>
     </message>
@@ -15180,12 +17220,18 @@ This deletes its boards, firmware, and examples.</source>
         <translation>مشروع اختبار Google</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>ينشئ هذا المعالج مشروع اختبار وحدة بسيط باستخدام اختبار QT.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+8" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake لـ Qt5 وQt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>ينشئ مشروع اختبار وحدة جديد باستخدام اختبار QT. تتيح لك اختبارات الوحدة التحقق من أن الرمز مناسب للاستخدام وأنه لا توجد انحدارات.</translation>
     </message>
@@ -15195,12 +17241,30 @@ This deletes its boards, firmware, and examples.</source>
         <translation>مشروع اختبار QT</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>ينشئ هذا المعالج مشروع اختبار وحدة بسيط باستخدام اختبار QT السريع.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+6" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 وما بعده</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 وما بعده</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>توافق شيفرة Qt:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>ينشئ مشروع اختبار وحدة جديد باستخدام اختبار QT السريع. تتيح لك اختبارات الوحدة التحقق من أن الرمز مناسب للاستخدام وأنه لا توجد انحدارات.</translation>
     </message>
@@ -15215,12 +17279,11 @@ This deletes its boards, firmware, and examples.</source>
         <translation>تشمل Qquickitem</translation>
     </message>
     <message>
-        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>ينشئ مشروع اختبار قائم على CMake حيث يمكنك إدخال مقتطف رمز لتجميعه والتحقق منه.</translation>
+        <translation type="vanished">ينشئ مشروع اختبار قائم على CMake حيث يمكنك إدخال مقتطف رمز لتجميعه والتحقق منه.</translation>
     </message>
     <message>
-        <location line="+350" />
+        <location line="+77" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>يقوم بإنشاء نموذج مصمم أجهزة مصمم QT يمكنك إضافته إلى مشروع عنصر واجهة المستخدم QT. هذا مفيد إذا كان لديك بالفعل فصل دراسي موجود لمنطق أعمال واجهة المستخدم.</translation>
     </message>
@@ -15230,7 +17293,31 @@ This deletes its boards, firmware, and examples.</source>
         <translation>نموذج مصمم الأدوات QT</translation>
     </message>
     <message>
-        <location line="-104" />
+        <location line="+43" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>ينشئ مظلل أجزاء بلغة GLSL المتوافقة مع Vulkan. تولّد مظللات الأجزاء ألوان البكسلات النهائية للمثلثات والنقاط والخطوط المراد عرضها.
+استخدمه عند استهداف Qt6 أو أحدث.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>مظلل أجزاء (متوافق مع Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>ينشئ مظلل رؤوس بلغة GLSL المتوافقة مع Vulkan. تحوّل مظللات الرؤوس مواضع المثلثات والنقاط والخطوط ومتجهاتها العمودية وإحداثيات الملمس المراد عرضها.
+استخدمه عند استهداف Qt6 أو أحدث.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>مظلل الرؤوس (متوافق مع Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>Creates a markdown file.</source>
         <translation>ينشئ ملف تخفيض.</translation>
     </message>
@@ -15240,12 +17327,12 @@ This deletes its boards, firmware, and examples.</source>
         <translation>ملف التخفيض</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Scratch Buffer</source>
         <translation>خدش العازلة</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>اسم مخطط الولاية:</translation>
     </message>
@@ -15265,7 +17352,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>مخطط الدولة</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15289,7 +17376,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>نسخة catch2:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>معلومات اختبار</translation>
     </message>
@@ -15305,7 +17392,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>حالة الاختبار</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>يقوم بإنشاء ملف فارغ.</translation>
     </message>
@@ -15315,7 +17402,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>ملف فارغ</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>ينشئ ملف ترجمة يمكنك إضافته إلى مشروع QT.</translation>
     </message>
@@ -15325,61 +17412,76 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>ملف ترجمة QT</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>يقوم هذا المعالج بإنشاء تطبيق وحدة تحكم بسيط يعتمد على Qt.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake مع توافق Qt 5</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>الميزون</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>تحديد نظام البناء</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>بناء النظام</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>ملف الترجمة</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>ترجمة</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-347" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>يجب أن يستخدم اسم المشروع الأحرف أو الأرقام أو الشرطات السفلية فقط.</translation>
+    </message>
+    <message>
+        <location line="-286" />
         <source>Define Python Interpreter</source>
         <translation>تحديد مترجم بيثون</translation>
     </message>
@@ -15394,22 +17496,26 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>ينشئ QT لتطبيق Python يتضمن عنصر واجهة مستندة إلى مصمم QT (ملف واجهة المستخدم). يتطلب .ui لتحويل بيثون.</translation>
     </message>
     <message>
-        <location line="-52" />
         <source>Qt 6.4</source>
-        <translation>QT 6.4</translation>
+        <translation type="vanished">QT 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+74" />
         <source>Qt 6.5</source>
         <translation>QT 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>ينشئ تطبيق QT سريع يمكن أن يكون لكل من رمز QML و C ++. يمكنك إنشاء التطبيق ونشره على منصات سطح المكتب والمضمنة والهاتف المحمول.</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+37" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>ينشئ مشروعًا ببنية متوافقة مع كل من Qt Design Studio وQt Creator. يحتوي على نموذج .ui.qml يمكنك تحريره بصريًا في Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15418,7 +17524,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  لتطوير تطبيق كامل ، قم بإنشاء مشروع تطبيق QT سريع بدلاً من ذلك.</translation>
     </message>
     <message>
-        <location line="-108" />
+        <location line="+31" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15435,31 +17541,32 @@ Preselects a desktop Qt for building the application if available.</source>
 يحدد مسبقًا سطح مكتب Qt لبناء التطبيق إذا كان متاحًا.</translation>
     </message>
     <message>
-        <location line="-172" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="-371" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>التطبيق (كيو تي)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>تطبيق Qt Console</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>يقوم هذا المعالج بإنشاء مشروع مكتبة C ++.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>حدد المعلومات الأساسية حول الفئات التي تريد إنشاء ملفات التعليمات البرمجية المصدر الهيكلية لها.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>المكتبة المشتركة</translation>
     </message>
@@ -15474,9 +17581,10 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>كيو تي البرنامج المساعد</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>يكتب:</translation>
     </message>
@@ -15485,7 +17593,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: value (&apos;Type&apos;) === &apos;qtplugin&apos;؟ القيمة (&apos;BaseClassName&apos;). شريحة (1): (القيمة (&apos;ProjectName&apos;). charAt (0) .toUpperCase () + value (&apos;ProjectName&apos;). slice (1))}</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15521,12 +17629,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>لا أحد</translation>
     </message>
@@ -15551,14 +17654,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>وحدة كيو تي:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>تحديد تفاصيل المشروع</translation>
     </message>
@@ -15567,38 +17670,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">ينشئ مكتبة C ++. يمكن استخدام هذا لإنشاء: &lt;ul&gt; &lt;li&gt; مكتبة C ++ مشتركة للاستخدام مع &lt;tt&gt; QPluginLoader &lt;/tt&gt; ووقت التشغيل (الإضافات) &lt;/ li&gt; &lt;li&gt; مكتبة C ++ مشتركة أو ثابتة للاستخدام مع أخرى مشروع في linktime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-485" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="-481" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>مكتبة</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>مكتبة C ++</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>يقوم بإنشاء تطبيق Nim بسيط.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>مشروع غير كيو تي</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>تطبيق نيم</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>الثنائية</translation>
     </message>
@@ -15614,12 +17717,12 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>وصف:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15680,18 +17783,20 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>آخر</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>رخصة:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>ج</translation>
     </message>
@@ -15732,21 +17837,21 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>إعدادات</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>ينشئ تطبيق Nim باستخدام Nimble.</translation>
     </message>
@@ -15756,7 +17861,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>تطبيق ذكي</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>يقوم بإنشاء تطبيق C بسيط بدون تبعيات.</translation>
     </message>
@@ -15766,7 +17871,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>تطبيق عادي C</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>يقوم بإنشاء تطبيق C ++ بسيط بدون تبعيات.</translation>
     </message>
@@ -15776,7 +17881,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>تطبيق عادي C ++</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>يقوم هذا المعالج بإنشاء ملف .pro فارغ.</translation>
     </message>
@@ -15795,20 +17900,20 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">نسخة PySide:</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="+12" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>ينشئ Qt لتطبيق Python يحتوي فقط على الكود الرئيسي لتطبيق QApplication.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>التطبيق (Qt for Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>تطبيق فارغ</translation>
     </message>
@@ -15825,13 +17930,11 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: Util.fileName (&apos;%{ProjectName}&apos;، &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>ملف المشروع:</translation>
+        <translation type="vanished">ملف المشروع:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>ينشئ Qt لتطبيق Python يحتوي على نافذة فارغة.</translation>
     </message>
@@ -15841,15 +17944,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>نافذة فارغة</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location line="+21" />
+        <location line="-29" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-259" />
+        <location line="-204" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15858,39 +17961,32 @@ Preselects a desktop Qt for building the application if available.</source>
  Preselects A Desktop QT لبناء التطبيق إذا كان ذلك متاحًا.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>يخلق مكتبة C ++. يمكنك إنشاء: &lt;ul&gt; &lt;li&gt; مكتبة C ++ المشتركة للاستخدام مع &lt;tt&gt; qpluginloader &lt;/tt&gt; ووقت التشغيل (الإضافات) &lt;/li&gt; &lt;li&gt; مكتبة C ++ مشتركة أو ثابتة للاستخدام مع مشروع آخر في Linktime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-137" />
-        <location line="+21" />
-        <location line="+33" />
         <source>PySide 2</source>
-        <translation>بيسايد 2</translation>
+        <translation type="vanished">بيسايد 2</translation>
     </message>
     <message>
-        <location line="-18" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15.0 تحديث</translation>
+        <translation type="vanished">PySide 5.15.0 تحديث</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14.0 تحديث</translation>
+        <translation type="vanished">PySide 5.14.0 تحديث</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13.1 تحديث</translation>
+        <translation type="vanished">PySide 5.13.1 تحديث</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12.0 تحديث</translation>
+        <translation type="vanished">PySide 5.12.0 تحديث</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+148" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>ينشئ تطبيق Qt Quick يحتوي على نافذة فارغة.</translation>
     </message>
@@ -15904,50 +18000,174 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">ينشئ تطبيق Qt for Python يتضمن عنصر واجهة مستخدم Qt Designer (ملف ui) - يتطلب تحويل .ui إلى Python</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+19" />
         <source>Window UI</source>
         <translation>نافذة واجهة المستخدم</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>ينشئ هذا المعالج مشروع Qt Interface Framework.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>إعداد الواجهة التي تصف البيانات المتبادلة بين الواجهة الأمامية والخلفية.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>اسم المشروع المنشأ، يبدأ بحرف كبير.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>اسم الواجهة:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>اسم الواجهة التي تصبح جزءًا من الوحدة المنشأة، يبدأ بحرف كبير.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>إضافة شيفرة نموذجية إلى المشروع</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>يتضمن البنى الأساسية، وإلا فسيُنشأ مشروع فارغ.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>إنشاء واجهة مقسمة إلى مناطق</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>تحتوي الواجهة المقسمة إلى مناطق على عناصر مقابلة لجميع البيانات في عدة مناطق.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>إعداد الواجهة الخلفية:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>إنشاء واجهة خلفية للمحاكاة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>ينشئ واجهة خلفية محاكاة يمكن برمجتها من QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>إنشاء تنفيذ واجهة خلفية للإنتاج</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>ينشئ واجهة خلفية كاملة بتنفيذ أصلي.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>إنشاء واجهة خلفية لـ Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>ينشئ واجهة خلفية يمكنها الاتصال بجانب الخادم باستخدام تقنية Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>إنشاء خادم محاكاة لـ Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>ينشئ خادم محاكاة يمكن لواجهة Qt Remote Objects الخلفية الاتصال به.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>إنشاء خادم إنتاج لـ Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>ينشئ خادمًا بتنفيذ أصلي يمكن لواجهة Qt Remote Objects الخلفية الاتصال به.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>إذا لم يتم اختيار واجهة خلفية تعمل، فلن تعمل الشيفرة النموذجية لواجهة المستخدم الأمامية وقد تُحدث أخطاء.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>إعداد الواجهة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>إعداد</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>ينشئ مشروع Qt Interface Framework بواجهة أمامية مهيأة وواجهات خلفية اختيارية.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>مشروع Qt Interface Framework</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>كيو تي 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>كيو تي 5.15.0</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>كيو تي 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>كيو تي 5.13.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>كيو تي 5.12.0</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>الحد الأدنى من إصدار Qt المطلوب:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>العنصر الخاص بي</translation>
     </message>
@@ -15987,17 +18207,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt Quick 2 Extension Plugin</translation>
     </message>
     <message>
+        <location line="+8" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>تعيين QT_QML_GENERATE_QMLLS_INI إلى ON في CMake</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>Create a project that you can open in Qt Design Studio</source>
-        <translation type="vanished">قم بإنشاء مشروع يمكنك فتحه في Qt Design Studio</translation>
+        <translation>قم بإنشاء مشروع يمكنك فتحه في Qt Design Studio</translation>
     </message>
     <message>
         <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
         <translation type="vanished">أنشئ مشروعًا بهيكل متوافق مع كل من Qt Design Studio (عبر .qmlproject) ومع Qt Creator (عبر CMakeLists.txt). يحتوي على نموذج .ui.qml يمكنك تحريره بصريًا في Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="-48" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>استخدم لوحة المفاتيح الافتراضية Qt</translation>
     </message>
@@ -16010,12 +18246,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">ينشئ تطبيق Qt Quick يحتوي على نافذة فارغة. اختياريًا ، يمكنك إنشاء مشروع Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-36" />
         <source>Qt Quick Application</source>
         <translation>تطبيق سريع كيو تي</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16037,12 +18273,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 استخدم هذا فقط إذا كنت تقوم بعمل نماذج أولية. لا يمكنك إنشاء تطبيق كامل بهذا. ضع في اعتبارك استخدام مشروع Qt Quick Application بدلاً من ذلك.</translation>
     </message>
     <message>
-        <location line="-90" />
+        <location line="+16" />
         <source>Qt Quick UI Prototype</source>
         <translation>نموذج Qt السريع لواجهة المستخدم</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>ينشئ هذا المعالج مشروع Qt Widgets Application. يُشتق التطبيق افتراضيًا من QApplication ويتضمن عنصر واجهة مستخدم فارغًا.</translation>
     </message>
@@ -16051,7 +18287,7 @@ Use this only if you are prototyping. You cannot create a full application with 
         <translation type="vanished">%{JS: القيمة (&apos;BaseClass&apos;)؟ القيمة (&quot;BaseClass&quot;). شريحة (1): &quot;MyClass&quot;}</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>توليد النموذج</translation>
     </message>
@@ -16083,28 +18319,28 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>تطبيق Qt Widgets</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>الرجاء تكوين &lt;b&gt;%{vcsName} &lt;/b&gt; الآن.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>مخزن:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>عنوان URL للمستودع غير صالح</translation>
     </message>
@@ -16113,24 +18349,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>الدليل:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators (&apos;%{TargetPath}&apos;)}&quot; موجود في نظام الملفات.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>استخدم الدليل الموجود</translation>
     </message>
@@ -16205,23 +18441,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>مراجعة:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>حدد عنوان URL للمستودع ودليل السحب والمسار.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>تشغيل فرع البازار ...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>استنساخ</translation>
     </message>
@@ -16231,22 +18466,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>يقوم باستنساخ فرع البازار ويحاول تحميل المشروع المحتوي.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>مشروع استيراد</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>استنساخ البازار (أو فرع)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>وحدة:</translation>
     </message>
@@ -16261,19 +18496,19 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>جارٍ تشغيل الخروج من CVS ...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>الدفع</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>يتحقق من مستودع CVS ويحاول تحميل المشروع المضمن.</translation>
     </message>
@@ -16283,7 +18518,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>الخروج من CVS</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;الفرع الافتراضي&gt;</translation>
     </message>
@@ -16323,7 +18558,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>تشغيل استنساخ Mercurial ...</translation>
     </message>
@@ -16338,7 +18573,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>استنساخ الزئبقي</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>شهادة خادم الثقة</translation>
     </message>
@@ -16358,7 +18593,62 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>التخريب الخروج</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>طلب العرض المباشر للعالم الحقيقي</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>طلب أذونات لوضع العرض المباشر للعالم الحقيقي.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>طلب تتبع اليد</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>طلب أذونات لتتبع اليد.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>طلب المراسي المكانية</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>طلب أذونات لواجهة برمجة تطبيقات المراسي.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>ميزات XR</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>الميزات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>اختيار الطقم: لجهاز Apple Vision Pro، اختر أي طقم.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>ينشئ تطبيق Qt Quick 3D XR بشيفرة QML وC++. يمكنك بناء التطبيق ونشره على منصات VR لسطح المكتب ومنصات XR المستقلة. بالنسبة إلى Apple Vision Pro، يمكنك التطوير في Qt Creator لكن يجب نشر مشروع CMake باستخدام XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>تطبيق XR</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>يقوم هذا المعالج بإنشاء مكون إضافي مخصص لـ Qt Creator.</translation>
     </message>
@@ -16368,11 +18658,16 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>حدد تفاصيل حول المكون الإضافي المخصص لـ Qt Creator.</translation>
     </message>
     <message>
+        <location line="+22" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>إضافة Qt Creator بلغة C++</translation>
+    </message>
+    <message>
         <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
         <translation type="vanished">%{JS: value (&apos;ProjectName&apos;). charAt (0) .toUpperCase () + value (&apos;ProjectName&apos;). slice (1)}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-21" />
         <source>Plugin name:</source>
         <translation>اسم البرنامج المساعد:</translation>
     </message>
@@ -16426,12 +18721,11 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>ينشئ مكونًا إضافيًا مخصصًا لـ Qt Creator.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>كيو تي منشئ البرنامج المساعد</translation>
+        <translation type="vanished">كيو تي منشئ البرنامج المساعد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S &amp;Essions</translation>
     </message>
@@ -16451,7 +18745,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>اسم الجلسة الحالية.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>حذف الجلسة</translation>
     </message>
@@ -16473,7 +18767,7 @@ Preselects a desktop Qt for building the application if available.</source>
  %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>خطأ أثناء استعادة الجلسة</translation>
     </message>
@@ -16483,33 +18777,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>لا يمكن استعادة الجلسة %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>جلسة التحميل</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>خطأ أثناء حفظ الجلسة</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>لا يمكن حفظ الجلسة %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>لا يمكن حفظ الجلسة لتقديم &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>أدخل اسم الجلسة:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>مدير الجلسة</translation>
     </message>
@@ -16549,7 +18843,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>ما هي الجلسة؟</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>حصة</translation>
     </message>
@@ -16559,7 +18853,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>آخر تعديل</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>اسم جلسة جديد</translation>
@@ -16585,7 +18879,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>استنساخ و &amp;Open</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>جلسة إعادة تسمية</translation>
     </message>
@@ -16600,17 +18894,17 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>إعادة تسمية و &amp;open</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;Cument&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>التكوين معيب. تحقق من عرض المشكلات للحصول على التفاصيل.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>لا يمكن إنشاء دليل &quot;%1&quot;</translation>
     </message>
@@ -16620,44 +18914,41 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>البرنامج &quot;%1&quot; غير موجود أو غير قابل للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>بدء: &quot;%1&quot; %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>العملية &quot;%1&quot; خرجت بشكل طبيعي.</translation>
+        <translation type="vanished">العملية &quot;%1&quot; خرجت بشكل طبيعي.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>العملية &quot;%1&quot; خرجت مع الكود %2.</translation>
+        <translation type="vanished">العملية &quot;%1&quot; خرجت مع الكود %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>لا يمكن بدء العملية &quot;%1&quot; %2.</translation>
+        <translation type="vanished">لا يمكن بدء العملية &quot;%1&quot; %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>العملية &quot;%1&quot; تحطمت.</translation>
+        <translation type="vanished">العملية &quot;%1&quot; تحطمت.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[لا أحد]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>اسم</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>مصدر</translation>
     </message>
@@ -16677,7 +18968,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>يخلق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>إزالة إعدادات التشغيل</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>تصفية إعدادات التشغيل حسب الاسم</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>إزالة المحدد</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>الملفات في أي مشروع</translation>
     </message>
@@ -16687,18 +18993,19 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>يحدد موقع جميع المشاريع المفتوحة. قم بإلحاق &quot;+&lt;mumber&gt;&quot; أو &quot;: &lt;number&gt;&quot; للقفز إلى رقم السطر المحدد. قم بإلحاق &quot;+&lt;jort&gt;&quot; أو &quot;: &lt;mumber&gt;&quot; للانتقال إلى رقم العمود أيضًا.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>جميع المشاريع</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>جميع المشاريع:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -16707,7 +19014,7 @@ Excluding: %2
  %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>إرفاق مصحح الأخطاء بهذه العملية</translation>
     </message>
@@ -16717,7 +19024,33 @@ Excluding: %2
         <translation>نعلق مصحح الأخطاء إلى %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>الفئة</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>تصحيح الأخطاء</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>حرج</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>فادح</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>معلومات</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>قف</translation>
     </message>
@@ -16753,12 +19086,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>إخراج التطبيق</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>أعد تشغيل هذا التكوين.</translation>
     </message>
@@ -16768,45 +19101,74 @@ Excluding: %2
         <translation>توقف عن تشغيل البرنامج.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>التطبيق-مخرجات-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>نافذة إخراج التطبيق</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>تصفية فئات سجل Qt الداخلية</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>تصفية الفئات بتعبير نمطي</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>تعبير نمطي غير صالح: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>إلغاء تحديد الكل</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>إلغاء تحديد كل %1</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>تحديد كل %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>غير صالح</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>إخراج Word-Wrap</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>إخراج قديم واضح على تشغيل جديد</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>دمج stderr و stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>دائماً</translation>
     </message>
@@ -16821,45 +19183,64 @@ Excluding: %2
         <translation>على الإخراج الأول فقط</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>تجاهل المخرجات الزائدة</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>استبدال لون الخلفية</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>تخصيص لون خلفية مخرجات التطبيق.
+ملاحظة: لن يُعاد تلوين المخرجات الموجودة.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>الحد من الإخراج إلى %1 أحرف</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>افتح إخراج التطبيق عند التشغيل:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>فتح إخراج التطبيق عند تصحيح الأخطاء:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>بلا عنوان</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>دليل بناء:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>لا يمكن الوصول إلى دليل الإنشاء من جهاز الإنشاء.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>بناء الظل:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>يحتوي الدليل البناء على حرف يحتمل أن يكون مشكلة &quot;%1&quot;.</translation>
     </message>
@@ -16869,15 +19250,16 @@ Excluding: %2
         <translation>يمكن قمع هذا التحذير &lt;a href = &quot;dummy&quot;&gt; هنا &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>معلومات تصحيح منفصلة:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>بناء البيئة</translation>
     </message>
@@ -16887,14 +19269,14 @@ Excluding: %2
         <translation>بيئة نظام واضحة</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>محلات الخرج المخصصة</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>تحليل الإخراج القياسي أثناء الإنشاء</translation>
     </message>
@@ -16904,29 +19286,34 @@ Excluding: %2
         <translation>يجعل محلات الخرج يبحثون عن التشخيص على stdout بدلاً من STDERR.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>بناء الإعدادات</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>الدليل الجذر للمشروع. قد يختلف عن Project:Path في بعض أنظمة البناء.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>بناء الدليل</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>اسم تكوين البناء</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>المتغيرات في بيئة تكوين البناء</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>تلميح الأدوات في المحدد المستهدف:</translation>
     </message>
@@ -16936,8 +19323,9 @@ Excluding: %2
         <translation>يظهر كملالية أدوات عند تحوم تكوين البناء</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>بيئة النظام</translation>
     </message>
@@ -16953,7 +19341,24 @@ Excluding: %2
         <translation>لم يتم تحليل المشروع بنجاح.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>افتراضي</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>إصدار</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>الملف الشخصي</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>الملف الرئيسي للمشروع</translation>
     </message>
@@ -16983,7 +19388,7 @@ Excluding: %2
         <translation>نوع تكوين البناء النشط للمشروع</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>لم يتم تعيين أي جهاز بناء للمجموعة &quot;%1&quot;.</translation>
     </message>
@@ -17003,7 +19408,7 @@ Excluding: %2
         <translation>لا يمكن لجهاز الإنشاء &quot;%1&quot; الوصول إلى دليل الإنشاء.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>اكتمل %1 من %n خطوة</numerusform>
@@ -17015,7 +19420,7 @@ Excluding: %2
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>وقف التطبيقات</translation>
     </message>
@@ -17035,7 +19440,7 @@ Excluding: %2
         <translation>فشل جهاز البناء في التحضير لبناء %1 (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>ترجمة</translation>
@@ -17079,13 +19484,13 @@ Excluding: %2
         <translation>القضايا التي وجدت عند إجراء الاختبارات.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -17095,10 +19500,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -17106,11 +19511,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>نشر</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -17118,7 +19523,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>يبني</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>تم إلغاء بناء/نشر</translation>
     </message>
@@ -17138,34 +19543,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>تخطي الخطوة المعوقة %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>خطأ أثناء بناء/نشر المشروع %1 (مجموعة: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>لدى Kit %1 مشكلات التكوين التي قد تكون السبب الجذري لهذه المشكلة.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>عند تنفيذ الخطوة &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>يُمكَِن</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>إبطال</translation>
@@ -17176,7 +19581,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>استخدام المشروع الافتراضي</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>دليل الإنشاء الافتراضي:</translation>
     </message>
@@ -17186,7 +19591,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>القالب المستخدم لإنشاء دليل الإنشاء الافتراضي. &lt;br&gt; &lt;br&gt; يمكن تعيين القيمة الافتراضية باستخدام متغير البيئة &lt;TT&gt; %1 &lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>دليل العمل الافتراضي:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>قالب يُستخدم لإنشاء دليل العمل الافتراضي لإعدادات التشغيل.&lt;br&gt;&lt;br&gt;يمكن تعيين القيمة الافتراضية باستخدام متغير البيئة &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>QML تصحيح:</translation>
     </message>
@@ -17201,72 +19616,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>خصائص بناء الافتراضية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>لا توجد إعدادات بناء متاحة</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>تحرير تكوين البناء:</translation>
+        <translation type="vanished">تحرير تكوين البناء:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>يضيف</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>يزيل</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>إعادة تسمية ...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>استنساخ ...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>إعداد البناء النشط:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>تكوين جديد</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>اسم التكوين الجديد:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>اسم جديد لتكوين بناء &lt;b&gt; %1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -17275,14 +19692,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>استنساخ التكوين</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>إلغاء إنشاء &amp;&amp; إزالة تكوين البناء</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>لا تزيل</translation>
     </message>
@@ -17327,13 +19744,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>إزالة العنصر</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 خطوات</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>لا توجد خطوات %1</translation>
     </message>
@@ -17358,7 +19775,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>لا يمكن إزالة خطوة البناء أثناء البناء</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>يتم تحليل المشروع حاليًا.</translation>
     </message>
@@ -17383,13 +19800,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>نمط الكود</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>تجميع الإخراج</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>compileTeput.txt</translation>
@@ -17410,9 +19827,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>س</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>تم تجاهل مخرجات التجميع الزائدة.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>افتح إخراج تجميع عند البناء</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>يتجاهل مخرجات التجميع التي ترد باستمرار أسرع من قدرة المعالجة.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -17449,7 +19876,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>نسخ الدليل بشكل متكرر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>خطأ:</translation>
@@ -17461,7 +19888,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>تحذير:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>جارٍ الاستعلام عن %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>الحصول على مساعدة من %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>اطلب من نموذج %1 اللغوي المساعدة في هذه المشكلة.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>الملفات في المشروع الحالي</translation>
     </message>
@@ -17471,44 +19913,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>يحدد موقع الملفات من مشروع المستند الحالي. قم بإلحاق &quot;+&lt;mumber&gt;&quot; أو &quot;: &lt;number&gt;&quot; للقفز إلى رقم السطر المحدد. قم بإلحاق &quot;+&lt;jort&gt;&quot; أو &quot;: &lt;mumber&gt;&quot; للانتقال إلى رقم العمود أيضًا.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>مشروع &quot;%1&quot;</translation>
+        <translation type="vanished">مشروع &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>المشروع الحالي</translation>
+        <translation type="vanished">المشروع الحالي</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>مشروع واحد</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>مشروع &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>المشروع:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>الحالي</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>مخصص قابلة للتنفيذ</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>تشغيل %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>تحتاج إلى تعيين قابلة للتنفيذ في تكوين التشغيل المخصص.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>لم يتم تكوين ملف تنفيذي في إعدادات التشغيل المخصصة.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>انتقل إلى إعداد التشغيل %1 وأعدّ ملفًا تنفيذيًا.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">تحتاج إلى تعيين قابلة للتنفيذ في تكوين التشغيل المخصص.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>فشل قراءة محللات المخرجات المخصصة من &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>إخراج محلات الإخراج المخصصة SCAN SCANROUTER لأنماط الأخطاء المقدمة من المستخدم &lt;br&gt; لإنشاء إدخالات في المشكلات. &lt;br&gt; يمكن تكوين المحللين &lt;a href = &quot;dummy&quot;&gt; هنا &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (الافتراضي للمشروع)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>لا يوجد محللون مخصصون نشطون</translation>
     </message>
@@ -17594,8 +20070,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>امتحان</translation>
     </message>
@@ -17619,19 +20095,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>خطأ</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>تحذير</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>لا ينطبق:</translation>
     </message>
@@ -17651,16 +20127,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>النمط لا يتطابق مع الرسالة.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>البناء الافتراضي</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>التشغيل الافتراضي</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>اسم المحلل المخصص.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>يُستخدم هذا المحلل المخصص افتراضيًا لجميع إعدادات البناء للمشروع.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>يُستخدم هذا المحلل المخصص افتراضيًا لجميع إعدادات التشغيل للمشروع.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>لا يمكن تعديل المحلل لأنه استُورد تلقائيًا.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>يمكن تمكين محلات الإخراج المخصصة المحددة هنا بشكل فردي في إعدادات بناء أو تشغيل المشروع.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>يضيف...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>تصدير...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>استيراد...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17668,37 +20184,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>محلل جديد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>حفظ المحللات</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>تحميل المحللات</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>خطأ في تحميل المحللات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>خطأ في تحميل المحللات: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>مخصص</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>مجلس التعاون الخليجي</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>كلانج</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -17716,11 +20257,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>فارغ</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>الماكرو [= القيمة]</translation>
     </message>
@@ -17745,22 +20287,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>قائمة مفصولة بفاصلة من mkspecs.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>ومسار المترجم: (&amp;C)</translation>
+        <translation type="vanished">ومسار المترجم: (&amp;C)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>وتجعل الطريق: (&amp;M)</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;أبي:</translation>
     </message>
@@ -17805,7 +20343,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>هذا من شأنه أن يخلق تبعية دائرية.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>مزامنة التكوين</translation>
     </message>
@@ -17815,12 +20353,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>مزامنة المجموعة النشطة ، والبناء ، ونشر التكوين بين المشاريع.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>نشر الاعتماديات</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>لا تكتفِ ببناء الاعتماديات، بل انشرها أيضًا.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>التبعيات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>نشر محليا</translation>
@@ -17846,65 +20394,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>تجاوز بيانات النشر من نظام الإنشاء</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>تكوين QT تشغيل</translation>
+        <translation type="vanished">تكوين QT تشغيل</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>كمبيوتر محلي</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>سطح المكتب</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>لا يمكن أن تقتل العملية مع PID %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>لا يمكن مقاطعة العملية مع PID %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>لا يمكن فتح العملية.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>معرف عملية غير صالح.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>لا يمكن فتح العملية: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>فشل تصحيح الأخطاء:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 غير موجود. إذا قمت ببناء %2 بنفسك ، تحقق من https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 غير موجود. يبدو أن تثبيت %2 تالف.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>ستحتاج إلى منفذ واحد على الأقل لتنقيح QML.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>تشغيل الكشف التلقائي الآن</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>نوع الجهاز:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>جهاز فعلي</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>المنافذ الحرة:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>لا يستطيع &quot;%1&quot; التعامل إلا مع الملفات المحلية.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>الجهاز &quot;%1&quot; غير جاهز للاستخدام.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 غير موجود. إذا قمت ببناء %2 بنفسك ، تحقق من https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>لا يمكن أن تبدأ %1. تحقق من SRC \ Tools \ Win64Interrupt \ Win64Interrupt.c لمزيد من المعلومات.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>لا يمكن كسر العملية.</translation>
     </message>
@@ -17926,7 +20513,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>لا يوجد جهاز تم إعداده لهذه المجموعة. هل تريد إضافة جهاز؟</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>تحقق من وجود جهاز تم تكوينه</translation>
     </message>
@@ -17941,23 +20528,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>أنواع الأجهزة المتاحة:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>لا يوجد جهاز للمسار &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>لم يُعثر على جهاز للمسار &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>لا يوجد وصول إلى الملفات للجهاز &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>لم يتم العثور على جهاز للمسار &quot;%1&quot;</translation>
+        <translation type="vanished">لم يتم العثور على جهاز للمسار &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>لا وصول ملف للجهاز &quot;%1&quot;</translation>
+        <translation type="vanished">لا وصول ملف للجهاز &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>الكل</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (الافتراضي لنسبة %2)</translation>
     </message>
@@ -17997,22 +20600,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>خطأ بعيد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;جهاز:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>اكتب محددة</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;يزيل</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>تعيين كما الافتراضي</translation>
     </message>
@@ -18022,7 +20626,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;يضيف...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>وابدأ المعالج لإضافة جهاز ... (&amp;S)</translation>
     </message>
@@ -18033,7 +20637,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>إضافة %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;اسم:</translation>
     </message>
@@ -18048,7 +20652,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>الحالة الحالية:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>استعادة(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>نعم (المعرف &quot;%1&quot;)</translation>
     </message>
@@ -18063,8 +20672,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>عرض عمليات التشغيل ...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>الأجهزة</translation>
     </message>
@@ -18084,12 +20693,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>فشل اختبار الجهاز.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>كان إخراج الخطأ عن بُعد: %1</translation>
+        <translation type="vanished">كان إخراج الخطأ عن بُعد: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>تم العثور على %n منفذ حر.</numerusform>
@@ -18101,12 +20709,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>التحقق من المنافذ المتاحة ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>لم يتم تعيين جهاز لنقل الاختبار.</translation>
     </message>
@@ -18136,7 +20744,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>نسخة ملف عام</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>البحث في PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>البحث في تثبيت Qt</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>البحث في الأدلة</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>قائمة أدلة مفصولة بفواصل منقوطة</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>اختر المسارات على الجهاز التي ينبغي فحصها بحثًا عن الملفات الثنائية.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>إنشاء مجموعات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>إعداد أطقم لسلاسل أدوات هذا الجهاز.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>الجهاز غير متصل.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>اتركه فارغًا للبحث عن الملف التنفيذي في $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>استخدام إعادة توجيه منفذ SSH للتنقيح</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>تمكين تصحيح الأخطاء على الأهداف البعيدة التي لا يمكنها كشف منافذ خادم GDB.
+يُستخدم نفق SSH لربط منفذ خادم GDB البعيد بـ localhost.
+يتم تحديد المنافذ المحلية والبعيدة تلقائيًا.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>الوصول عبر:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>اختر الجهاز للاتصال من خلاله.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>مباشر</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>لا يمكن أن يكون اسم الجهاز فارغًا.</translation>
     </message>
@@ -18146,18 +20828,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>جهاز بهذا الاسم موجود بالفعل.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>أدخل القوائم والنطاقات هكذا: &quot;1024,1026-1028,1030&quot;.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>فتح محطة غير مدعومة.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>لا يمكن للجهاز &quot;%2&quot; التعامل مع الملف &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>تنفيذ سكربت بالمصدر غير مدعوم على هذا النظام الأساسي.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>جهاز</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>لا تتوفر وصفة عملية إشارة لهذا الجهاز.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>جاهز للاستخدام</translation>
     </message>
@@ -18177,22 +20878,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>مجهول</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>تشغيل الأدوات على هذا الجهاز</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>أدوات المصدر والبناء على هذا الجهاز</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>الاكتشاف التلقائي</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>لم يتم تنفيذ Accalsource () لنوع الجهاز هذا.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>لم يتم تحديد مسار لـ SignalOperationData.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>لم يتم تحديد PID صالح لـ SignalOperationData.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>لا يوجد جهاز للمسار المعطى: &quot;%1&quot;.</translation>
+        <translation type="vanished">لا يوجد جهاز للمسار المعطى: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>جهاز المسار &quot;%1&quot; لا يدعم عمليات القتل.</translation>
+        <translation type="vanished">جهاز المسار &quot;%1&quot; لا يدعم عمليات القتل.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>معرف العملية</translation>
     </message>
@@ -18202,53 +20926,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>سطر الأوامر</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>قائمة عملية جلب. هذا قد يستغرق بعض الوقت.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>فشل جلب قائمة العمليات.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>SSH</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>تمكين مشاركة الاتصال:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>مهلة مشاركة الاتصال:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>طريق إلى SSH قابل للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>الطريق إلى SFTP قابل للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>الطريق إلى SSH-asspass قابلة للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>الطريق إلى SSH-Keygen قابل للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>دقائق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>مشروع %1</translation>
@@ -18260,7 +20988,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>مشروع</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>استعادة عالمية</translation>
     </message>
@@ -18270,40 +20999,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>عرض الإعدادات</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>عرض اليمين والهامش في العمود: (&amp;M)</translation>
+        <translation type="vanished">عرض اليمين والهامش في العمود: (&amp;M)</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>استخدم الهامش الخاص بالسياق</translation>
+        <translation type="vanished">استخدم الهامش الخاص بالسياق</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>إذا كان ذلك متاحًا ، استخدم هامشًا مختلفًا. على سبيل المثال ، العمود من المكون الإضافي Clangformat.</translation>
+        <translation type="vanished">إذا كان ذلك متاحًا ، استخدم هامشًا مختلفًا. على سبيل المثال ، العمود من المكون الإضافي Clangformat.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>محرر</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>بيئة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>البيئة الأساسية لهذا التكوين تشغيل:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>عرض في إخراج التطبيق عند التشغيل</translation>
     </message>
@@ -18314,12 +21038,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>اختر الدليل</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>يحرر (&amp;I)</translation>
     </message>
@@ -18359,7 +21083,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>افتح محطة مع هذه البيئة.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt; %1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
@@ -18401,17 +21125,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>استخدم &lt;b&gt; %1 &lt;/b&gt; و</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>الملفات في جميع أدلة المشروع</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>الملفات في جميع أدلة المشروع:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>جلسة</translation>
     </message>
@@ -18421,18 +21145,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>مرئي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>Mingw</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 (%2 ، %3 %4 عند %5)</translation>
+        <translation type="vanished">%1 (%2 ، %3 %4 عند %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3 في &quot;%4&quot;)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>تجاوز نموذج الكود</translation>
     </message>
@@ -18444,7 +21172,7 @@ fails because Clang does not understand the target architecture.</source>
  يفشل لأن Clang لا يفهم الهيكل المستهدف.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>أعلام Codegen منصة:</translation>
     </message>
@@ -18459,7 +21187,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>الهدف الثلاثي:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>أدوات الوالدين:</translation>
     </message>
@@ -18484,22 +21212,22 @@ fails because Clang does not understand the target architecture.</source>
         <translation>تحرير النص إدخال لإصلاح.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>الحقل ليس كائنًا.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>الحقل ليس له اسم.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>الحقل &quot;%1&quot; ليس له نوع.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>الحقل &quot;%1&quot; لديه نوع غير مدعوم &quot;%2&quot;.</translation>
     </message>
@@ -18509,102 +21237,102 @@ fails because Clang does not understand the target architecture.</source>
         <translation>عند تحليل الحقل &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>بيانات التسمية (&quot;%1&quot;) ليست كائن.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>التسمية (&quot;%1&quot;) ليس لها trtext.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>بيانات الفاصل (&quot;%1&quot;) ليست كائن.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>خاصية فاصل (&quot;%1&quot;) &quot;عامل&quot; ليس قيمة عدد صحيح.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>بيانات lineedit (&quot;%1&quot;) ليست كائن.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>يحتوي LineDit (&quot;%1&quot;) على تعبير منتظم غير صالح &quot;%2&quot; في &quot;المدقق&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>يحتوي LineDit (&quot;%1&quot;) على قيمة غير صالحة &quot;%2&quot; في &quot;الانتهاء&quot;.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>بيانات textedit (&quot;%1&quot;) ليست كائن.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>بيانات pathchooser ليست كائن.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>النوع &quot;%1&quot; ليس واحداً من &quot;NervanceDirectory&quot; ، &quot;الدليل&quot; ، &quot;ملف&quot; ، &quot;SaveFile&quot; ، &quot;NerveCromand&quot; ، &quot;Command&quot; ، &quot;any&quot;.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>مربع الاختيار (&quot;%1&quot;) بيانات ليست كائن.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>قيم مربع الاختيار (&quot;%1&quot;) للحالة التي تم فحصها وعدم تحديدها متطابقة.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>لا توجد قوائم JSON المسموح بها داخل عناصر قائمة.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>لا &quot;مفتاح&quot; موجود في عناصر القائمة.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1 (&quot;%2&quot;) بيانات ليست كائن.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;مؤشر&quot; ليس قيمة عدد صحيح.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; ليست قيمة عدد صحيح.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;عناصر&quot; مفقودة.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;العناصر&quot; ليست قائمة JSON.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>ميزة واحدة على الأقل مطلوبة غير موجودة.</translation>
     </message>
@@ -18619,7 +21347,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>ميزة مفضلة واحدة على الأقل غير موجودة.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>تم تعيين قائمة الميزات وليس من قائمة النوع.</translation>
     </message>
@@ -18634,7 +21362,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>عنصر قائمة الميزات ليس سلسلة أو كائن.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>فشل في الالتزام بالسيطرة على الإصدار</translation>
     </message>
@@ -18651,7 +21379,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>فشل في إضافة مشروع فرعي &quot;%1&quot;
@@ -18659,20 +21387,25 @@ to project &quot;%2&quot;.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>فشل في إضافة ملف واحد أو أكثر إلى المشروع
  &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>المشروع الفرعي &quot;%1&quot; خارج &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>ملف المشروع</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>اختر ملف المشروع</translation>
     </message>
@@ -18682,12 +21415,12 @@ to project &quot;%2&quot;.</source>
         <translation>يحتوي المشروع على أكثر من ملف مشروع واحد. حدد الشخص الذي ترغب في استخدامه.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>التحقق مما إذا كان المتغير موجودًا.&lt;br&gt;يُرجع &quot;true&quot; إذا كان موجودًا وسلسلة فارغة إن لم يكن.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>لا يمكن تحديد المسار المستهدف. لم يتم تعيين &quot;TargetPath&quot; على أي صفحة.</translation>
     </message>
@@ -18707,32 +21440,32 @@ to project &quot;%2&quot;.</source>
         <translation>لا &quot;مفتاح&quot; في كائن الخيارات.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>فشل في الكتابة فوق الملفات</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>فشل في تنسيق الملفات</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>فشل في كتابة الملفات</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>فشلت في ملفات ما بعد العملية</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>فشل في تلميع الملفات</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>فشل في فتح الملفات</translation>
     </message>
@@ -18774,66 +21507,65 @@ to project &quot;%2&quot;.</source>
         <translation>لا يمكن فتح المشروع</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>المولد ليس كائنًا.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>المولد ليس لديه مجموعة من النوع.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>نوع &quot;%1&quot; من المولد غير معروف. Typeids المدعومة هي: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>المسار &quot;%1&quot; غير موجود عند التحقق من مسارات البحث معالج JSON.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>التحقق من &quot;%1&quot; لنسبة %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* فشل في تحليل &quot;%1&quot;: %2: %3: %4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* لم يجد كائن JSON في &quot;%1&quot;.</translation>
+        <translation type="vanished">* لم يجد كائن JSON في &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* التكوين الذي تم العثور عليه وتوحل.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>Jsonwizard: &quot;%1&quot; لم يتم العثور عليها.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>الصفحة ليست كائن.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>الصفحة لا تحتوي على مجموعة من النوع.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeID &quot;%1&quot; من الصفحة غير معروف. Typeids المدعومة هي: &quot;%2&quot;.</translation>
     </message>
@@ -18843,7 +21575,8 @@ to project &quot;%2&quot;.</source>
         <translation>صفحة مع typeid &quot;%1&quot; لها &quot;فهرس&quot; غير صالح.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* لم يجد كائن JSON في &quot;%1&quot;.</translation>
     </message>
@@ -18853,22 +21586,22 @@ to project &quot;%2&quot;.</source>
         <translation>* الإصدار %1 غير مدعوم.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* فشل في إنشاء: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>المفتاح غير موجود.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>توقع كائن أو قائمة.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>النظام الأساسي المحدد للمعالج.</translation>
     </message>
@@ -18898,62 +21631,66 @@ to project &quot;%2&quot;.</source>
         <translation>لا مجموعة هوية.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>لم يتم تعيين فئة.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>لم يتم العثور على ملف رمز &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>لم يتم العثور على ملف الصورة &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>لا توجد مجموعة DisplayName.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>لا توجد مجموعة DisplayCategory.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>لا توجد مجموعة وصف.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>عند تحليل &quot;المولدات&quot;: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>عند تحليل &quot;الصفحات&quot;: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>typeId غير صالح.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">عند تحليل &quot;الصفحات&quot;: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>إدخال قائمة بيانات الملفات ليس كائنًا.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>المصدر والهدف كلاهما فارغ.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>عند معالجة &quot;%1&quot;: &lt;br&gt; %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [مجلد]</translation>
     </message>
@@ -18980,7 +21717,12 @@ to project &quot;%2&quot;.</source>
         <translation>عند تحليل حقول الصفحة &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>لم يُعثر على حقول.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>يجب أن تكون صفحة &quot;البيانات&quot; الخاصة بصفحة &quot;ملف&quot; إلغاء ضبطها أو كائنًا فارغًا.</translation>
     </message>
@@ -18990,12 +21732,12 @@ to project &quot;%2&quot;.</source>
         <translation>خطأ في تحليل &quot;%1&quot; في صفحة &quot;مجموعات&quot;: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>يجب أن تكون &quot;البيانات&quot; كائن JSON لصفحات &quot;مجموعات&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>تتطلب صفحة &quot;مجموعات&quot; مجموعة &quot;%1&quot;.</translation>
     </message>
@@ -19005,38 +21747,39 @@ to project &quot;%2&quot;.</source>
         <translation>يجب أن تكون &quot;البيانات&quot; فارغة أو كائن JSON لصفحات &quot;Project&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>تعبير منتظم غير صالح &quot;%1&quot; في &quot;%2&quot;. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>يمكن أن تكون &quot;البيانات&quot; للحصول على صفحة &quot;ملخص&quot; غير محددة أو تحتاج إلى أن تكون كائنًا.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>المفتاح ليس كائنًا.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>نمط &quot;%1&quot; ليس تعبير منتظم صالح.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>الماسح الضوئي: نمط ثنائي &quot;%1&quot; غير صالح.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>لم يكشف عن اسمه</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>عدة</translation>
@@ -19067,13 +21810,14 @@ to project &quot;%2&quot;.</source>
         <translation>معرف المجموعة.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>استنساخ %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>sysroot</translation>
     </message>
@@ -19104,49 +21848,86 @@ to project &quot;%2&quot;.</source>
         <translation>جذر النظام</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;لا برنامج مترجم&gt;</translation>
+        <translation type="vanished">&lt;لا برنامج مترجم&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>المترجم</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>المترجم المستخدم للبناء.&lt;br&gt;تأكد من أن المترجم سينتج ملفات ثنائية متوافقة مع الجهاز المستهدف وإصدار Qt والمكتبات الأخرى المستخدمة.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>ينتج المجمعون رمزًا لمختلف ABIs: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>الطريق إلى المترجم قابل للتنفيذ</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>مترجم للغات المختلفة</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>برنامج التحويل البرمجي قابل للتنفيذ للغات المختلفة</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>تم العثور على سلسلة أدوات: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>جارٍ إزالة سلسلة الأدوات: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>سلسلة الأدوات: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>كان المتوقع كائن JSON لاكتشاف سلسلة الأدوات، لكن تم الحصول على: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>لم يُعثر على سلاسل أدوات في كائن JSON للكشف.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>لغة غير معروفة في كشف سلسلة الأدوات: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>لم يتم تعيين المترجم في مجموعة.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>تشغيل نوع الجهاز</translation>
     </message>
@@ -19156,18 +21937,69 @@ to project &quot;%2&quot;.</source>
         <translation>نوع الجهاز لتشغيل التطبيقات عليها.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>نوع الجهاز غير معروف</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>الجهاز:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>نوع الجهاز</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>لم يتم تعيين جهاز التشغيل.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>جهاز البناء غير متوافق مع هذه المجموعة.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>جهاز التشغيل غير متوافق مع هذا الطقم.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>عنوان المضيف (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>منفذ SSH (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>اسم المستخدم (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>ملف المفتاح الخاص (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>اسم الجهاز (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>الدليل الجذر للجهاز (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>تشغيل الجهاز</translation>
     </message>
@@ -19177,129 +22009,245 @@ to project &quot;%2&quot;.</source>
         <translation>الجهاز لتشغيل التطبيقات.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>نوع جهاز البناء</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>نوع الجهاز الذي يتم البناء عليه.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>لا مجموعة الجهاز.</translation>
+        <translation type="vanished">لا مجموعة الجهاز.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>الجهاز غير متوافق مع هذه المجموعة.</translation>
+        <translation type="vanished">الجهاز غير متوافق مع هذه المجموعة.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>غير متكافئ</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>عنوان المضيف</translation>
+        <translation type="vanished">عنوان المضيف</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>منفذ SSH</translation>
+        <translation type="vanished">منفذ SSH</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>فعّل هذا الخيار لتحديد ملف مفتاح خاص للمصادقة، وإلا فسيُستخدم الأسلوب الافتراضي للمصادقة (كلمة المرور و.sshconfig والمفتاح الخاص الافتراضي).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>استخدام مفتاح محدد:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>وضع التحقق من مفتاح مضيف SSH الخاص بالجهاز.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>التحقق من مفتاح المضيف:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>بدون التحقق من مفتاح المضيف.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>صارم</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>تحقق صارم من مفتاح المضيف.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>السماح بعدم وجود تطابق</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>السماح بالتحقق من مفتاح المضيف.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>اسم المضيف أو عنوان IP</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>اسم مضيف الجهاز أو عنوان IP.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>اسم المضيف:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>اسم المستخدم</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>اسم مستخدم SSH الخاص بالجهاز.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>اسم المستخدم:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>رقم منفذ SSH الخاص بالجهاز.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>منفذ SSH:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>ملف المفتاح الخاص</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>ملف المفتاح الخاص بالجهاز.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>ملف المفتاح الخاص:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>المهلة:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>مهلة اتصال SSH الخاصة بالجهاز.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>اسم الجهاز</translation>
+        <translation type="vanished">اسم الجهاز</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>دليل جذر الجهاز</translation>
+        <translation type="vanished">دليل جذر الجهاز</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>بناء الجهاز</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>الجهاز المستخدم لبناء التطبيقات على.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>لا مجموعة جهاز بناء.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>بناء عنوان المضيف</translation>
+        <translation type="vanished">بناء عنوان المضيف</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>بناء منفذ SSH</translation>
+        <translation type="vanished">بناء منفذ SSH</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>بناء اسم المستخدم</translation>
+        <translation type="vanished">بناء اسم المستخدم</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>بناء ملف مفتاح خاص</translation>
+        <translation type="vanished">بناء ملف مفتاح خاص</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>بناء اسم الجهاز</translation>
+        <translation type="vanished">بناء اسم الجهاز</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>إنشاء دليل جذر الجهاز</translation>
+        <translation type="vanished">إنشاء دليل جذر الجهاز</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>يتغير...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>لا توجد تغييرات للتطبيق.</translation>
+        <translation type="vanished">لا توجد تغييرات للتطبيق.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>إخراج برنامج التحويل البرمجي لـ UTF-8 MSVC</translation>
+        <translation type="vanished">إخراج برنامج التحويل البرمجي لـ UTF-8 MSVC</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>تحرير بيئة البناء...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>تحرير بيئة التشغيل...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>تحرير بيئة البناء</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>تحرير بيئة التشغيل</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>فرض مخرجات MSVC بترميز UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>إما تبديل MSVC إلى اللغة الإنجليزية أو يحتفظ باللغة ويؤدي فقط إلى إخراج UTF-8 (قد يختلف حسب برنامج التحويل البرمجي MSVC المستخدم).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>إعدادات بيئة بناء إضافية عند استخدام هذه المجموعة.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>قيمة إعداد البيئة غير صالحة.</translation>
+        <translation type="vanished">قيمة إعداد البيئة غير صالحة.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -19307,29 +22255,65 @@ to project &quot;%2&quot;.</source>
         <translation>مجموعة المشروع النشط: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 على %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>سطح المكتب (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>مجموعات التحميل</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>علامة كما قابلة للتغيير</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>يدير...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>مصنع جوانب الطقم &quot;%1&quot; لا يدعم إنشاء الجوانب من JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>جارٍ الاكتشاف التلقائي للمجموعات للجهاز: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>تم العثور على مجموعة: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>جارٍ إزالة الأطقم الخاصة بالجهاز: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>جارٍ إزالة الطقم: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>الطقم: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
@@ -19344,12 +22328,12 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;html&gt; &lt;head/&gt; &lt;body&gt; &lt;p&gt; اسم المجموعة المناسبة لإنشاء أسماء الدليل. يتم استخدام هذه القيمة للمتغير &lt;i&gt; %1 &lt;/i&gt; ، والذي يحدد على سبيل المثال اسم دليل بناء الظل. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>اسم نظام الملف:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>أيقونة كيت.</translation>
     </message>
@@ -19364,12 +22348,17 @@ to project &quot;%2&quot;.</source>
         <translation>إعادة ضبط إلى أيقونة الجهاز الافتراضي</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>اسم العرض ليس فريدًا.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>تعيينه كالطقم الافتراضي المستخدم عند إنشاء مشروع جديد.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>الافتراضي لنسبة %1</translation>
     </message>
@@ -19384,18 +22373,16 @@ to project &quot;%2&quot;.</source>
         <translation>الصور ( *.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (افتراضي)</translation>
+        <translation type="vanished">%1 (افتراضي)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>جعل الافتراضي</translation>
+        <translation type="vanished">جعل الافتراضي</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>مرشح الإعدادات ...</translation>
     </message>
@@ -19415,7 +22402,7 @@ to project &quot;%2&quot;.</source>
         <translation>اختر إعدادات المجموعة لعرضها افتراضيًا.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>تقديم الحجج:</translation>
     </message>
@@ -19495,29 +22482,27 @@ to project &quot;%2&quot;.</source>
         <translation>لا تعارض مع &lt;code&gt; Makeflags &lt;/code&gt; متغير البيئة.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>تشغيل دون نشر</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>مشروع</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>يجري</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt; المشروع: &lt;/b&gt; %1</translation>
     </message>
@@ -19552,7 +22537,7 @@ to project &quot;%2&quot;.</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>المشروع: &lt;b&gt; %1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
@@ -19582,49 +22567,54 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;type type = text/css&gt; a: link {color: rgb (128 ، 128 ، 255) ؛} &lt;/style&gt; لم يتم تكوين المشروع &lt;b&gt; %1 &lt;/b&gt; &lt;br/&gt; &lt;br/ &gt; يمكنك تكوينه في وضع المشاريع &lt;a href = &quot;projectMode&quot;&gt; &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>التراجع لاستخدام البيئة المخزنة مؤقتًا لـ &quot;%1&quot; بعد:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>التهيئة:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>لم يُعثر على أي سلاسل أدوات MSVC. يلزمك تثبيت Visual Studio أو Visual Studio Build Tools.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;murner&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>حجج إضافية لمكالمة vcvarsall.bat</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>فشل في استرداد بيئة MSVC من &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>Clang-Cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>لا يمكن للعملية الوصول إلى الملف لأنه يتم استخدامه بواسطة عملية أخرى.
  يرجى إغلاق جميع مثيلات التشغيل الخاصة بك قبل بدء إنشاء.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>تحليل الإخراج</translation>
     </message>
@@ -19674,7 +22664,7 @@ Please close all running instances of your application before starting a build.<
         <translation>استخدم محللات من مجموعة:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>لا يمكن تحليل</translation>
     </message>
@@ -19684,26 +22674,26 @@ Please close all running instances of your application before starting a build.<
         <translation>لا يمكن تحليلها: المجموعة المختارة لا توفر محلل الإخراج.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>يأمر:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>الحجج:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>دليل العمل:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>خطوة العملية المخصصة</translation>
@@ -19714,13 +22704,23 @@ Please close all running instances of your application before starting a build.<
         <translation>اسم المشروع</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>مجموعة غير صالحة.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>ليس لدى الطقم جهاز بناء.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>لا يستطيع جهاز البناء &quot;%2&quot; التعامل مع ملف المشروع &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>مجموعة غير متوافقة</translation>
     </message>
@@ -19755,37 +22755,39 @@ Please close all running instances of your application before starting a build.<
         <translation>لا يمكن نسخ بعض التكوينات.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>لا يمكن تحميل مجموعات في قدر معقول من الوقت.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>حدد دليل الجذر</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>تم تكوين المشروع &quot;%1&quot; للمجموعة &quot;%2&quot; مع المعرف %3 ، والذي لم يعد موجودًا. يمكنك إنشاء مجموعة جديدة أو نسخ خطوات المجموعة التي تختفي إلى مجموعة أخرى في وضع %4.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>المشاريع</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>لا يمكن العثور على أي ملف QML _*. QM في &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: الاسم.</translation>
@@ -19827,13 +22829,13 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: مسار البناء الكامل لتكوين البناء النشط.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: المتغيرات في بيئة البناء النشطة.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: اسم تكوين التشغيل النشط.</translation>
@@ -19845,45 +22847,61 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: قابلة للتنفيذ من تكوين التشغيل النشط.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: المتغيرات في بيئة تكوين التشغيل النشط.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: دليل العمل لتكوين التشغيل النشط.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>تعليقات الوثائق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>غير متاح</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>بيئة المشروع</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>نشر التكوين</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>الملف التنفيذي لـ SSH:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>الملف التنفيذي لـ Ninja:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>حزم SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C ++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>يفتح...</translation>
@@ -19904,7 +22922,12 @@ Please close all running instances of your application before starting a build.<
         <translation>&amp;ابدأ التصحيح</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>تحليل(&amp;A)</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>مفتوح مع</translation>
     </message>
@@ -19914,12 +22937,11 @@ Please close all running instances of your application before starting a build.<
         <translation>مشروع جديد ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>مشروع تحميل ...</translation>
+        <translation type="vanished">مشروع تحميل ...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>مساحة عمل مفتوحة ...</translation>
     </message>
@@ -19929,23 +22951,24 @@ Please close all running instances of your application before starting a build.<
         <translation>فتح الملف</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>تشغيل البيئة</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>P &amp;rojects الحديثة</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>إغلاق المشروع</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>إغلاق المشروع &quot;%1&quot; (&amp;J)</translation>
     </message>
@@ -19956,12 +22979,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>أغلق جميع الملفات في المشروع &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>إغلاق المشروع (&amp;J)</translation>
     </message>
@@ -19990,12 +23013,12 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>إعادة البناء</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>إعادة بناء جميع المشاريع</translation>
     </message>
@@ -20065,12 +23088,11 @@ Please close all running instances of your application before starting a build.<
         <translation>إعادة بناء المشروع لجميع التكوينات</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>مشروع نظيف</translation>
+        <translation type="vanished">مشروع نظيف</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>مشروع نظيف لجميع التكوينات</translation>
     </message>
@@ -20080,7 +23102,7 @@ Please close all running instances of your application before starting a build.<
         <translation>إلغاء الإنشاء</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>بناء بدون تبعيات</translation>
@@ -20134,12 +23156,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>إغلاق المشروع &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>أغلق مشاريع أخرى</translation>
     </message>
@@ -20175,7 +23197,7 @@ Please close all running instances of your application before starting a build.<
         <translation>حذف الملف ...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>تم تعيينه كمشروع نشط</translation>
     </message>
@@ -20210,7 +23232,7 @@ Please close all running instances of your application before starting a build.<
         <translation>محدد مجموعة التبديل السريع</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>بيئة البناء الحالية</translation>
     </message>
@@ -20220,7 +23242,7 @@ Please close all running instances of your application before starting a build.<
         <translation>بيئة التشغيل الحالية</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>بيئة بناء نشطة للمشروع النشط.</translation>
     </message>
@@ -20230,12 +23252,11 @@ Please close all running instances of your application before starting a build.<
         <translation>بيئة تشغيل نشطة للمشروع النشط.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>مشروع تحميل</translation>
+        <translation type="vanished">مشروع تحميل</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>مساحة عمل مفتوحة</translation>
     </message>
@@ -20265,18 +23286,71 @@ Please close all running instances of your application before starting a build.<
         <translation>هل تريد إلغاء عملية الإنشاء وتفريغ المشروع على أي حال؟</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>المطهر</translation>
+        <translation type="vanished">المطهر</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">مشكلات معالجة الذاكرة التي وجدها معقم العنوان.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>فتح مشروع...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>بناء المشروع النشط</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>تنظيف المشروع النشط</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>تشغيل المشروع النشط</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>إنشاء ملف رأس</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>إنشاء ملف مصدر</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>تحرير إعداد البناء النشط</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>مشكلات معالجة الذاكرة التي وجدها معقم العنوان.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>تحرير إعداد التشغيل النشط</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>فتح مشروع</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>مهاماتي</translation>
     </message>
@@ -20286,18 +23360,23 @@ Please close all running instances of your application before starting a build.<
         <translation>المشكلات من ملف قائمة المهام (.Tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>مشاكل غير مشمولة بفئة أكثر تخصصًا.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>تحليل الإخراج ...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>مشروع جديد</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>فشل في فتح المشروع</translation>
     </message>
@@ -20307,12 +23386,37 @@ Please close all running instances of your application before starting a build.<
         <translation>&lt;h3&gt; مشروع مفتوح بالفعل &lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>تعذر فتح المشروع &quot;%1&quot;: الإضافة غير محملة.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>فشل فتح مشروع &quot;%1&quot;: لا يمكن لأي مكون إضافي فتح نوع المشروع &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>تعذرت إعادة تسمية الملفات التالية في نظام الملفات:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>أُعيدت تسمية هذه الملفات في نظام الملفات، لكن ملفات المشروع لم تُحدَّث:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>أُعيدت تسمية هذه الملفات في نظام الملفات، لكن بنية المشروع لم تُحدَّث (فُقد السياق أو غير مدعوم):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>مشكلات إعادة التسمية</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>تجاهل كل الأخطاء؟</translation>
     </message>
@@ -20334,45 +23438,48 @@ Do you want to ignore them?</source>
         <translation>التكوين الذي كان من المفترض تشغيله لم يعد متاحًا.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>احفظ الملفات دائمًا قبل الإنشاء</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>مشروع مفتوح في &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>مشروع مفتوح &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>المشروع مفتوح بالفعل.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>تمت إعادة تسمية الملف &quot;%1&quot; إلى &quot;%2&quot; ، ولكن لا يمكن تغيير المشاريع التالية تلقائيًا: %3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>فشل تحرير المشروع</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>فشل المشروعات التالية في إزالة الملف تلقائيًا: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>تم تعطيل المبنى &quot;%1&quot;: %2 &lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>لم يتم تحميل مشروع.</translation>
@@ -20424,7 +23531,7 @@ Do you want to ignore them?</source>
         <translation>هل تريد إلغاء عملية الإنشاء وإغلاق %1 على أي حال؟</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>لا مشروع نشط.</translation>
     </message>
@@ -20454,23 +23561,23 @@ Do you want to ignore them?</source>
         <translation>لا يمكن تشغيل &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>تم بالفعل جدولة إجراء التشغيل للمشروع النشط.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 في %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>ملف جديد</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>مشروع فرعي جديد</translation>
@@ -20501,15 +23608,28 @@ Do you want to ignore them?</source>
         <translation>فشل إضافة ملفات إلى المشروع</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>فشل فتح الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>تمكين إضافة %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>الإضافة &quot;%1&quot; مطلوبة لفتح المشاريع من النوع &quot;%2&quot;. هل تريد تفعيلها الآن؟</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>فشلت محطة الافتتاح.
+        <translation type="vanished">فشلت محطة الافتتاح.
  %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>إزالة المزيد من الملفات؟</translation>
     </message>
@@ -20533,12 +23653,12 @@ Please try again.</source>
  من فضلك حاول مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>لا يمكن إزالة الملف &quot;%1&quot; من المشروع &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_ينسخ</translation>
     </message>
@@ -20554,17 +23674,17 @@ Please try again.</source>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>فشل ملف التكرار</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>فشل في نسخ الملف &quot;%1&quot; إلى &quot;%2&quot;: %3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>فشل في إضافة ملف جديد &quot;%1&quot; إلى المشروع.</translation>
     </message>
@@ -20589,36 +23709,32 @@ Please try again.</source>
         <translation>لا يمكن حذف الملف %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>لا يمكن تغيير ملف المشروع %1 تلقائيًا.
+        <translation type="vanished">لا يمكن تغيير ملف المشروع %1 تلقائيًا.
 
  إعادة تسمية %2 إلى %3 على أي حال؟</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>تمت إعادة تسمية الملف %1 إلى %2 ، ولكن لا يمكن تغيير ملف المشروع %3 تلقائيًا.</translation>
+        <translation type="vanished">تمت إعادة تسمية الملف %1 إلى %2 ، ولكن لا يمكن تغيير ملف المشروع %3 تلقائيًا.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>لا يمكن إعادة تسمية الملف %1 %2.</translation>
+        <translation type="vanished">لا يمكن إعادة تسمية الملف %1 %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>لا يمكن إعادة تسمية الملف</translation>
+        <translation type="vanished">لا يمكن إعادة تسمية الملف</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>يحدد موقع الملفات من جميع أدلة المشروع. قم بإلحاق &quot;+&lt;mumber&gt;&quot; أو &quot;: &lt;number&gt;&quot; للقفز إلى رقم السطر المحدد. قم بإلحاق &quot;+&lt;jort&gt;&quot; أو &quot;: &lt;mumber&gt;&quot; للانتقال إلى رقم العمود أيضًا.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>تشغيل التكوين</translation>
     </message>
@@ -20655,9 +23771,13 @@ Rename %2 to %3 anyway?</source>
         <translation>يقوم بتبديل التكوين النشط للمشروع النشط.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>المكتشف تلقائيا</translation>
+        <translation type="vanished">المكتشف تلقائيا</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>تُدار تلقائيًا</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20665,110 +23785,177 @@ Rename %2 to %3 anyway?</source>
         <translation>تتم إدارتها تلقائيًا بنسبة %1 أو المثبت.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>يدوي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>ق</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>مقدار الثواني للانتظار بين &quot;القتل الناعم&quot; و &quot;القتل الصعب&quot; لتطبيق الجري.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>الدليل الحالي</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>دليل</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>إغلاق ملفات المصدر جنبا إلى جنب مع المشروع</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>احفظ جميع الملفات قبل الإنشاء</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>قم دائمًا بنشر المشروع قبل تشغيله</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>إضافة مسارات البحث في مكتبة Linker لتشغيل البيئة</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>اسأل دائمًا قبل إيقاف الطلبات</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>قم بإنشاء تكوينات تشغيل مناسبة تلقائيًا</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>إبقاء إعدادات التشغيل متزامنة:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>ما إذا كانت إضافة إعداد تشغيل أو إزالته أو تحريره في إعداد بناء واحد ينبغي أن تحدّث إعدادات البناء الأخرى وفقًا لذلك.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>عدم المزامنة</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>لكل إعداد بناء مجموعته الخاصة من إعدادات التشغيل.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>مزامنة داخل طقم واحد</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>تحافظ إعدادات البناء في المجموعة نفسها على تزامن إعدادات التشغيل الخاصة بها.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>مزامنة عبر جميع الأطقم</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>تحافظ جميع إعدادات البناء في المشروع على تزامن إعدادات التشغيل الخاصة بها، حتى عبر المجموعات.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>قائمة مشكلات واضحة على بناء جديد</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>إحباط على الخطأ عند بناء جميع المشاريع</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>ابدأ عمليات البناء بأولوية منخفضة</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>تحذير من دلائل البناء مع المساحات أو الشخصيات غير ASCII</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>لا تتعامل بعض أدوات البناء القديمة بشكل جيد مع المسارات التي تحتوي على أحرف &quot;خاصة&quot; مثل المساحات ، مما قد يؤدي إلى أخطاء البناء الزائفة. &lt;p&gt; قم بإلغاء تحديد هذا الخيار إذا كنت لا تعمل مع هذه الأدوات.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>إظهار الأطقم المناسبة فقط</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>إظهار الأطقم النشطة فقط</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>الأطقم المعروضة في وضع &quot;المشاريع&quot;:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>لا تبني أي شيء</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>بناء المشروع بأكمله</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>بناء التطبيق فقط ليتم تشغيله</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>البناء والتشغيل</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>الجميع</translation>
+        <translation type="vanished">الجميع</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>نفس المشروع</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>نفس المشروع</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>الكل</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20776,12 +23963,12 @@ Rename %2 to %3 anyway?</source>
         <translation>نفس دليل البناء</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>نفس التطبيق</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>تمكين</translation>
     </message>
@@ -20796,32 +23983,30 @@ Rename %2 to %3 anyway?</source>
         <translation>استنتاج من المشروع</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>استخدم JOM بدلاً من nmake</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>اعرض جميع مجموعات في وضع &quot;Build &amp; Run&quot; في وضع &quot;المشاريع&quot;</translation>
+        <translation type="vanished">اعرض جميع مجموعات في وضع &quot;Build &amp; Run&quot; في وضع &quot;المشاريع&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>أظهر أيضًا مجموعات غير نشطة في &quot;Build &amp; Run&quot; في وضع &quot;المشاريع&quot;.</translation>
+        <translation type="vanished">أظهر أيضًا مجموعات غير نشطة في &quot;Build &amp; Run&quot; في وضع &quot;المشاريع&quot;.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>يتغير البيئة للتطبيق لتشغيل التكوينات ، ولكن لا بناء تكوينات.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>بيئة التطبيق:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>دليل المشاريع</translation>
     </message>
@@ -20836,33 +24021,39 @@ Rename %2 to %3 anyway?</source>
         <translation>بناء وتشغيل</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>بناء قبل النشر:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>وقف الطلبات قبل البناء:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>الافتراضي لـ &quot;Run in Terminal&quot;:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>حان الوقت للانتظار قبل إيقاف القوة:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>بناء وتشغيل</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>فتح المشروع على أي حال؟</translation>
     </message>
@@ -20872,7 +24063,7 @@ Rename %2 to %3 anyway?</source>
         <translation>الإصدار فشل التحكم في الإصدار</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>لم يتم العثور على بناء</translation>
     </message>
@@ -20892,7 +24083,12 @@ Rename %2 to %3 anyway?</source>
         <translation>بناء الاستيراد</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (مستورد)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - مؤقت</translation>
     </message>
@@ -20902,12 +24098,27 @@ Rename %2 to %3 anyway?</source>
         <translation>مجموعة مستوردة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>فشل تحميل الإعدادات من &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>هو دليل، لكن يجب أن يكون ملفًا.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>هو ملف، لكن يجب أن يكون دليلًا.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>بلا عنوان</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>فشل في استعادة ملفات المشروع</translation>
     </message>
@@ -20927,24 +24138,24 @@ Rename %2 to %3 anyway?</source>
         <translation>إزالة المشاريع من الجلسة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>لا يتم تمكين مجموعات لهذا المشروع. تمكين مجموعات في وضع &quot;المشاريع&quot;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>إعادة تسمية المزيد من الملفات؟</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>هل ترغب في إعادة تسمية هذه الملفات أيضًا؟
  %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>اختر قطرة العمل</translation>
     </message>
@@ -21026,17 +24237,22 @@ What should %1 do now?</source>
         <translation>فشل تحديث المشروع</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt; تحذير: &lt;/b&gt; يتم إنشاء هذا الملف.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;تحذير:&lt;/b&gt; هذا الملف داخل دليل البناء.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt; تحذير: &lt;/b&gt; هذا الملف خارج دليل المشروع.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>تبسيط الشجرة</translation>
     </message>
@@ -21081,7 +24297,7 @@ What should %1 do now?</source>
         <translation>مزامنة مع المحرر</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>شجرة التصفية</translation>
     </message>
@@ -21096,7 +24312,7 @@ What should %1 do now?</source>
         <translation>Alt+x</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>فتح الجلسة #%1</translation>
     </message>
@@ -21118,23 +24334,23 @@ What should %1 do now?</source>
         <translation type="vanished">CTRL+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>مفتوح %1 &quot;%2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>مفتوح %1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>حصة</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (الجلسة الأخيرة)</translation>
     </message>
@@ -21144,39 +24360,39 @@ What should %1 do now?</source>
         <translation>%1 (الجلسة الحالية)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>إعادة تسمية</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>يمسح</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>مشروع</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>إزالة المشروع من المشاريع الحديثة</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>واضحة قائمة المشروع الحديثة</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>جلسات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>استخدم التعبيرات العادية</translation>
     </message>
@@ -21191,7 +24407,7 @@ What should %1 do now?</source>
         <translation>إظهار خطوط غير متطابقة</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>تم تكوين المشروع لمجموعات لم تعد موجودة. حدد أحد الخيارات التالية في قائمة السياق لاستعادة إعدادات المشروع:</translation>
     </message>
@@ -21212,7 +24428,7 @@ What should %1 do now?</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>إنشاء مجموعة جديدة</translation>
     </message>
@@ -21232,23 +24448,28 @@ What should %1 do now?</source>
         <translation>إزالة جميع الأهداف التي اختفت</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>انقر لتمكين الهدف، وانقر مرة أخرى لجعله نشطًا</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>أهداف اختفت</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>إعدادات المشروع</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>استيراد البناء الحالي ...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>محدد المشروع</translation>
     </message>
@@ -21258,44 +24479,44 @@ What should %1 do now?</source>
         <translation>مشروع نشط</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>إدارة مجموعات ...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>بناء إخراج النظام</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>دليل الاستيراد</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>تتم إضافة الملفات ضمنيًا إلى المشاريع:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;none&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;إضافة ضمنيًا&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>أضف إلى والتحكم في الإصدار: (&amp;V)</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>أضف كحجم فرعي للمشروع:</translation>
     </message>
@@ -21305,17 +24526,17 @@ What should %1 do now?</source>
         <translation>أضف إلى ومشروع: (&amp;P)</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>لا يمكن إنشاء مستودع نظام التحكم في الإصدار في &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>فشل في إضافة &quot;%1&quot; إلى نظام التحكم في الإصدار.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>الملفات المراد إضافتها:</translation>
     </message>
@@ -21325,7 +24546,7 @@ What should %1 do now?</source>
         <translation>الملفات المراد إضافتها في</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>يزيل</translation>
@@ -21336,40 +24557,60 @@ What should %1 do now?</source>
         <translation>إزالة المهمة من قائمة المهام.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>تشغيل الإعدادات</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>المتغيرات في بيئة التشغيل.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>دليل عمل تكوين التشغيل.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>استخدام &lt;a href=&quot;dummy&quot;&gt;الإعدادات العامة&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>استخدام الإعدادات العامة</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>استخدام الإعدادات العامة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>استخدام الإعدادات المخصصة</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>اسم تكوين التشغيل.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>تكوين التشغيل القابل للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>لا يوجد نظام بناء نشط</translation>
+        <translation type="vanished">لا يوجد نظام بناء نشط</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>تشغيل على ٪ {الجهاز: الاسم}</translation>
     </message>
     <message>
@@ -21379,12 +24620,12 @@ What should %1 do now?</source>
         <translation>%1 (على ٪ {الجهاز: الاسم})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>صالة</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>تشغيل في المحطة</translation>
     </message>
@@ -21394,33 +24635,33 @@ What should %1 do now?</source>
         <translation>دليل العمل</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>حدد دليل العمل</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>إعادة تعيين إلى الافتراضي</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>الحجج</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>وسيطات سطر الأوامر:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>تبديل الوضع متعدد الخط.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>قابلة للتنفيذ</translation>
     </message>
@@ -21431,12 +24672,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>قابلة للتنفيذ:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>بديل قابل للتنفيذ على الجهاز:</translation>
     </message>
@@ -21446,7 +24687,7 @@ What should %1 do now?</source>
         <translation>استخدم هذا الأمر بدلاً من ذلك</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>إضافة مسار البحث عن مكتبة بناء إلى dyld_library_path و dyld_framework_path</translation>
     </message>
@@ -21461,7 +24702,17 @@ What should %1 do now?</source>
         <translation>إضافة مسار البحث المكتبة إلى ld_library_path</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>استخدام منصة Qt VNC للعرض</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>يعيّن QT_QPA_PLATFORM=vnc الذي يوجّه واجهة تطبيق Qt إلى خادم VNC مضمّن. اتصل بواجهة التطبيق باستخدام عميل VNC. راجع ناتج التطبيق للتفاصيل.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>استخدم إصدار تصحيح الأطر (dyld_image_suffix = _debug)</translation>
     </message>
@@ -21471,7 +24722,32 @@ What should %1 do now?</source>
         <translation>تشغيل كمستخدم جذر</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>التشغيل كمستخدم</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>التشغيل كمستخدم:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>الجذر</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>تمكين تصفية فئات السجل</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>يفعّل تصفية فئات السجل (QLoggingCategory) في مخرجات التطبيق. يتطلب Qt 6.11 أو أحدث.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>منافس</translation>
     </message>
@@ -21481,22 +24757,39 @@ What should %1 do now?</source>
         <translation>قاذفة:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>استخدام إعادة توجيه X11:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>X11 إعادة توجيه:</translation>
+        <translation type="vanished">X11 إعادة توجيه:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>توجيه إلى الشاشة المحلية</translation>
+        <translation type="vanished">توجيه إلى الشاشة المحلية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>حالة التحكم غير المتوقعة في التشغيل %1 عندما بدأ العامل %2.</translation>
+        <translation type="vanished">حالة التحكم غير المتوقعة في التشغيل %1 عندما بدأ العامل %2.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>لا يوجد منتج وصفات.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>لا يمكن استخدام مجمّع المنافذ. لم يتم تعيين أي جهاز.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>لم يُعثر على منافذ حرة.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; ما زال قيد التشغيل.&lt;center/&gt;&lt;center&gt;هل تريد إجباره على الإنهاء؟&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -21516,108 +24809,114 @@ What should %1 do now?</source>
         <translation>واصل الركض (&amp;K)</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>جارٍ إيقاف العملية قسرًا...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>لا يمكن استرداد ناتج تصحيح الأخطاء.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>جارٍ طلب إيقاف العملية...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>لم تنتهِ العملية على نحو غير متوقع.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>فُقد الاتصال؟</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>طلب المستخدم توقف. إغلاق ...</translation>
+        <translation type="vanished">طلب المستخدم توقف. إغلاق ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>لم تنته العملية عن بُعد في الوقت المناسب. فقدت الاتصال؟</translation>
+        <translation type="vanished">لم تنته العملية عن بُعد في الوقت المناسب. فقدت الاتصال؟</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>لا يمكن تشغيل: لم يتم إعطاء أمر.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>خرج %1 برمز %2</translation>
+        <translation type="vanished">خرج %1 برمز %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 تحطمت.</translation>
+        <translation type="vanished">%1 تحطمت.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>انتهت العملية بقوة.</translation>
+        <translation type="vanished">انتهت العملية بقوة.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>بدء %1 ...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>بيئة:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>لم يحدد القابل للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>فشلت العملية في البدء.</translation>
+        <translation type="vanished">فشلت العملية في البدء.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>حدث خطأ غير معروف في العملية.</translation>
+        <translation type="vanished">حدث خطأ غير معروف في العملية.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>إما أن يكون البرنامج الذي تم استدعاؤه &quot;%1&quot; مفقودًا ، أو قد يكون لديك أذونات غير كافية لاستدعاء البرنامج.</translation>
+        <translation type="vanished">إما أن يكون البرنامج الذي تم استدعاؤه &quot;%1&quot; مفقودًا ، أو قد يكون لديك أذونات غير كافية لاستدعاء البرنامج.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>تحطمت العملية.</translation>
+        <translation type="vanished">تحطمت العملية.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>حدث خطأ عند محاولة الكتابة إلى العملية. على سبيل المثال ، قد لا يتم تشغيل العملية ، أو قد تكون قد أغلقت قناة الإدخال الخاصة بها.</translation>
+        <translation type="vanished">حدث خطأ عند محاولة الكتابة إلى العملية. على سبيل المثال ، قد لا يتم تشغيل العملية ، أو قد تكون قد أغلقت قناة الإدخال الخاصة بها.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>حدث خطأ عند محاولة القراءة من العملية. على سبيل المثال ، قد لا تعمل العملية.</translation>
+        <translation type="vanished">حدث خطأ عند محاولة القراءة من العملية. على سبيل المثال ، قد لا تعمل العملية.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>إزالة كل شيء</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>النشر</translation>
+        <translation type="vanished">النشر</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>طريقة:</translation>
+        <translation type="vanished">طريقة:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>تكوين التشغيل:</translation>
+        <translation type="vanished">تكوين التشغيل:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>إزالة تكوين التشغيل؟</translation>
     </message>
@@ -21627,7 +24926,7 @@ What should %1 do now?</source>
         <translation>هل تريد حقًا حذف تكوين التشغيل &lt;b&gt; %1 &lt;/b&gt;؟</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>إزالة تكوينات التشغيل؟</translation>
     </message>
@@ -21637,17 +24936,37 @@ What should %1 do now?</source>
         <translation>هل تريد حقًا حذف جميع تكوينات التشغيل؟</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>اسم جديد لتكوين التشغيل &lt;b&gt; %1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>قم بإلغاء Build &amp;&amp; إزالة تكوين النشر</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>استنساخ من إعداد التشغيل</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>لا توجد إعدادات تشغيل أخرى.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>إعدادات النشر</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>إعداد النشر النشط:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>إزالة تكوين النشر %1؟</translation>
     </message>
@@ -21672,12 +24991,27 @@ What should %1 do now?</source>
         <translation>هل تريد حقًا حذف تكوين النشر &lt;B&gt; %1 &lt;/b&gt;؟</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>اسم جديد لنشر التكوين &lt;B&gt; %1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>إزالة جماعية...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>استنساخ إلى هنا...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>إعداد التشغيل النشط:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>دليل المصدر:</translation>
     </message>
@@ -21735,12 +25069,12 @@ These files are preserved.</source>
         <translation>تحرير الملفات</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>إضافة الدليل الحالي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>عرض في المحرر</translation>
     </message>
@@ -21750,12 +25084,14 @@ These files are preserved.</source>
         <translation>عرض موقع المهمة في محرر.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>الملفات</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>استيراد المشروع الحالي</translation>
     </message>
@@ -21765,12 +25101,13 @@ These files are preserved.</source>
         <translation>اسم المشروع والموقع</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>اسم المشروع:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>اختيار الملف</translation>
     </message>
@@ -21785,68 +25122,63 @@ These files are preserved.</source>
         <translation>يستورد المشاريع الحالية التي لا تستخدم Qmake أو Cmake أو QBs أو Meson أو Autotools. &lt;p&gt; هذا ينشئ ملف مشروع يتيح لك استخدام %1 كمحرر رمز وكمرة قاذفة لأدوات تصحيح الأخطاء وتحليلها. إذا كنت ترغب في إنشاء المشروع ، فقد تحتاج إلى تحرير ملف المشروع الذي تم إنشاؤه.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>نظام بناء غير معروف &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>الإعدادات المستهدفة</translation>
+        <translation type="vanished">الإعدادات المستهدفة</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>دليل المصدر</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>بناء نظام</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>اسم المشروع الحالي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>وتكوين المشروع (&amp;C)</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>عرض جميع مجموعات</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>إخفاء مجموعات غير نشطة</translation>
+        <translation type="vanished">إخفاء مجموعات غير نشطة</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>لا توجد مجموعة محددة في هذا المشروع.</translation>
+        <translation type="vanished">لا توجد مجموعة محددة في هذا المشروع.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>تكوين المشروع</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kit غير مناسب للمشروع</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>انقر لتفعيل</translation>
+        <translation type="vanished">انقر لتفعيل</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>تمكين مجموعة المشروع &quot;%1&quot;</translation>
     </message>
@@ -21891,12 +25223,11 @@ These files are preserved.</source>
         <translation>نسخ الخطوات من مجموعة أخرى ...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>طقم تمكين</translation>
+        <translation type="vanished">طقم تمكين</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>لا توجد مجموعات مناسبة.</translation>
     </message>
@@ -21916,18 +25247,23 @@ These files are preserved.</source>
         <translation>اكتب لتصفية مجموعات بالاسم ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>إخفاء المجموعات غير المناسبة</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>حدد مجموعات لمشروعك</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>يمكن استخدام المجموعات التالية للمشروع &lt;b&gt; %1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt; خطأ: &lt;/b&gt;</translation>
@@ -21939,12 +25275,12 @@ These files are preserved.</source>
         <translation>&lt;b&gt; تحذير: &lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 يحتاج إلى برنامج التحويل البرمجي الذي تم إعداده للبناء. تكوين برنامج التحويل البرمجي في خيارات المجموعة.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>خطأ:</translation>
     </message>
@@ -21954,7 +25290,7 @@ These files are preserved.</source>
         <translation>تحذير:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>لا يمكن فتح ملف المهمة %1: %2</translation>
     </message>
@@ -21979,7 +25315,7 @@ These files are preserved.</source>
         <translation>توقف عن مراقبة ملفات المهام.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>خطأ في TaskHub</translation>
     </message>
@@ -21989,42 +25325,46 @@ These files are preserved.</source>
         <translation>تحذير TaskHub</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>بناء القضية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>مشاكل</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>إظهار التحذيرات</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>إنشاء مشاكل من مخرجات البناء الخارجية...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>تصفية حسب الفئات</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>ليس محدثا</translation>
+        <translation type="vanished">ليس محدثا</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>هذه الأدوات غير صالحة.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>إعدادات الكشف التلقائي للأدوات</translation>
     </message>
@@ -22043,43 +25383,59 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
  قم بتمكين هذا إذا كنت تخطط لإنشاء ثنائيات x86 بتات 32 بت دون استخدام برنامج التحويل البرمجي المخصص.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>يكتب</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>اللغة</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>إعادة اكتشاف</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>إعدادات الكشف التلقائي ...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>المترجمين المكتشفين</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>لم يتم إعداد جميع المترجمات بشكل صحيح.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>تم تكوين المترجم التالي بالفعل: &lt;br&gt; &amp; nbsp ؛ %1 &lt;br&gt; لم يتم تكوينه مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>تم تكوين المجمعين التاليين بالفعل: &lt;br&gt; &amp; nbsp ؛ %1 &lt;br&gt; لم يتم تكوينه مرة أخرى.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>المترجمين</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;علق</translation>
     </message>
@@ -22095,6 +25451,9 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>يلغي</translation>
     </message>
@@ -22104,12 +25463,26 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>في انتظار توقف الطلبات.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>يمكنك تحرير هذا التكوين داخل ملف .qtcreator/project.json.</translation>
+        <translation type="vanished">يمكنك تحرير هذا التكوين داخل ملف .qtcreator/project.json.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>استنسخ الإعداد لتغييره. أو أجرِ التغييرات في الملف .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>مدير مساحة العمل</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>نسخة من %1</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>استبعاد من المشروع</translation>
     </message>
@@ -22119,23 +25492,293 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>مساحة عمل ROSCAN</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>استبدال التوقيع</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>فشل Xcodebuild.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>نسخ</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1 في &quot;%2&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>مسار المترجم(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>مسار مترجم %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>توفير يدويًا</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>فشل نسخ إعدادات مستخدم المشروع من &quot;%1&quot; إلى الموقع الافتراضي الجديد &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>تعذر فتح &quot;%1&quot; للكتابة: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>إعدادات Windows</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>تسري جميع التغييرات في هذه الصفحة فورًا.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>اختر مسار تنزيل NuGet وWindows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>اختيار مسار التنزيل</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>اختر مسار NuGet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>اختيار الملف nuget.exe</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>تنزيل NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>تنزيل NuGet تلقائيًا.
+
+يلزم NuGet لتنزيل Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>اختر مسار Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>تنزيل Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>تنزيل Windows App SDK تلقائيًا باستخدام NuGet.
+
+إذا فشل التنزيل التلقائي، يقترح Qt Creator فتح عنوان URL للتنزيل
+في متصفح النظام للتنزيل يدويًا.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>مسار التنزيل موجود.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>مسار NuGet موجود.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>مسار Windows App SDK موجود.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>إعدادات Windows App SDK سليمة.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>إعدادات Windows App SDK تحتوي على أخطاء.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>اختيار مسار Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>مسار التنزيل</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>موقع التنزيل:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>موقع NuGet:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>إعدادات Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>موقع Windows App SDK:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>فشل تنزيل NuGet.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>هل تريد فتح عنوان URL لـ NuGet للتنزيل يدويًا؟</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>فتح عنوان URL للتنزيل</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>جارٍ التنزيل</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>جارٍ تنزيل NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>عنوان URL لتنزيل أدوات SDK فارغ.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>حدثت أخطاء SSL، تم إلغاء التنزيل.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>فشل تنزيل NuGet من العنوان %1: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>أُعيد توجيه التنزيل من %1.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>مسار التنزيل المحدد (%1) لـ NuGet موجود بالفعل.\nاختر مسارًا مختلفًا.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>لم يتم إعداد مسار التنزيل.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>جارٍ تنزيل Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK مهيأ بالفعل.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>جارٍ تنزيل Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>فشل تنزيل Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>هل تريد فتح عنوان URL لـ Windows App SDK للتنزيل يدويًا؟</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>تحديث المتطلبات</translation>
     </message>
@@ -22166,22 +25809,25 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>تثبيت الحزم</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>فشل تثبيت &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>تم إلغاء تثبيت &quot;%1&quot; عن طريق المهلة.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>تم إلغاء تثبيت &quot;%1&quot; من قبل المستخدم.</translation>
+        <translation type="vanished">تم إلغاء تثبيت &quot;%1&quot; من قبل المستخدم.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>فشل تثبيت &quot;%1&quot; مع رمز الخروج %2.</translation>
+        <translation type="vanished">فشل تثبيت &quot;%1&quot; مع رمز الخروج %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>استبدال</translation>
@@ -22217,7 +25863,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>فتح بيثون التفاعلية. إما استيراد لا شيء ، أو استيراد الملف الحالي ، أو استيراد كل شيء (*) من الملف الحالي.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>لم يتم اختيار بيثون</translation>
     </message>
@@ -22232,14 +25878,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>إدارة المترجمين الفوريين بيثون</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>لا أحد</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>محرر Python</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">لا أحد</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>بيثون</translation>
     </message>
@@ -22249,9 +25899,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>المترجم المستخدم في المشاريع القائمة على بيثون.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>لا بيثون الإعداد.</translation>
+        <translation type="vanished">لا بيثون الإعداد.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>لم يتم إعداد Python.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22264,7 +25918,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>بيثون &quot;%1&quot; غير قابل للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python &quot;%1&quot; لا يحتوي على PIP قابل للاستخدام. هناك حاجة إلى PIP لتثبيت حزم Python من فهرس Python Package ، مثل Pyside و Python Language Server. لاستخدام أي من هذه الوظائف ، تأكد من تثبيت PIP لهذا الثعبان.</translation>
     </message>
@@ -22284,12 +25938,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>طريق إلى مترجم بيثون</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>خادم لغة بيثون (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>تثبيت خادم لغة Python‏ (PyLS) لـ %1 ‏(%2). يوفّر خادم اللغة إكمالًا وتعليقات خاصة بلغة Python.</translation>
     </message>
@@ -22304,32 +25958,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>تحديث خادم لغة Python (PYLS) لـ %1 (%2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>تحديث دائما</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>تحديث</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>أبداً</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>قضايا تم تحليلها من إخراج وقت تشغيل Python.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>لا يوجد مترجم بيثون مجموعة للمجموعة &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 انقر هنا لتثبيت %1 (يتطلب pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>الإخراج المخزنة</translation>
     </message>
@@ -22344,8 +26008,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>السيناريو:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>بيثون:</translation>
     </message>
@@ -22355,19 +26018,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>تشغيل %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>قابلة للتنفيذ</translation>
+        <translation type="vanished">قابلة للتنفيذ</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>قابلة للتنفيذ فارغة.</translation>
     </message>
@@ -22382,56 +26043,106 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>&quot;%1&quot; ليس ملفًا قابلًا للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;يضيف</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;يمسح</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>وجعل الافتراضي (&amp;M)</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>وإنشاء مجموعة (&amp;G)</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;تنظيف</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>إزالة جميع المترجمين المترجمين Python دون تنفيذ صالح.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>فشل إنشاء Venv:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>انتهى إنشاء Venv بشكل غير طبيعي:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>تعذر بدء إنشاء Venv:\n%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>أُلغي إنشاء Venv.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>تم العثور على &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>جارٍ إزالة Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>المترجمين الفوريين</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>الإضافات:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>الملف التنفيذي:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>استخدم خادم لغة Python</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>للحصول على قائمة كاملة بالخيارات المتاحة ، راجع وثائق تكوين خادم Python LSP] (%1).</translation>
     </message>
@@ -22441,12 +26152,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>متقدم</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>تكوين خادم اللغة</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>مترجم بيثون:</translation>
     </message>
@@ -22466,46 +26177,67 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>يخلق</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>إنشاء Python Venv</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>البحث عن ثنائيات الثعبان ...</translation>
+        <translation type="vanished">البحث عن ثنائيات الثعبان ...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>وجدت &quot;%1&quot; (%2)</translation>
+        <translation type="vanished">وجدت &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>إزالة بيثون</translation>
+        <translation type="vanished">إزالة بيثون</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>تتوقع &quot;بيانات&quot; صفحة معالج Python خريطة تحتوي على &quot;عناصر&quot; تحتوي على قائمة بالكائنات.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>تتوقع عنصر من بيانات صفحة معالج Python حقل &quot;trkey&quot; الذي يحتوي على سلسلة مرئية واجهة المستخدم لهذا الإصدار Python وحقل &quot;قيمة&quot; يحتوي على كائن مع حقل &quot;Pysideversion&quot; المستخدم في عبارات الاستيراد في ملفات Python.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>نسخة بيسايد:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>خطأ في التحليل: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>خطأ في النوع: يجب أن يكون &quot;%1&quot; من النوع &quot;%2&quot; وليس &quot;%3&quot;.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>خطأ عقدة مفقودة: يجب أن يحتوي الجدول &quot;%1&quot; على العقدة &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>العقدة &quot;%1&quot; فارغة.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>الملف &quot;%1&quot; غير موجود.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>خطأ XML في السطر%1 ، العمود%2:%3</translation>
@@ -22519,7 +26251,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>نقل علامة التبويب إلى اليسار</translation>
     </message>
@@ -22537,20 +26269,402 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>جارٍ الاتصال...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>&quot;%1&quot; غير قابل للتنفيذ.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>فشل بدء الصدفة: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>انتهت عملية الصدفة بالرمز %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>انتهت العملية بالرمز: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>التكبير: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>نسخ</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>لصق</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>مسح الصدفة</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>تحديد الكل</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>اختيار واضح</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>نقل المؤشر كلمة إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>نقل المؤشر كلمة إلى اليمين</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>حذف الكلمة إلى اليسار</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>حذف السطر إلى اليسار</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>إغلاق علامة التبويب</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>إغلاق كل علامات التبويب</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>إغلاق علامات التبويب الأخرى</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>الصدفة</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>إعداد...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>إدراج متغير ماكرو</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>صدفة جديدة</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>إنشاء صدفة جديدة.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>إغلاق الصدفة</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>إغلاق الصدفة الحالية.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>الصدفة التالية</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>الصدفة السابقة</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>الأجهزة</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>القيمة الحالية لـ %{%1}: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>موجه الأوامر</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>اللون المستخدم لـ %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>فشل فتح الملف.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>خطأ في تحليل JSON: &quot;%1&quot;، عند الإزاحة: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>لم يُعثر على ألوان.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>تنسيق لون غير صالح.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>تنسيق مخطط الألوان غير معروف.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>استخدام الطرفية الداخلية</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>يستخدم الطرفية الداخلية عند تفعيل &quot;التشغيل في الطرفية&quot; ولـ &quot;فتح الطرفية هنا&quot;.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>العائلة:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>عائلة الخط المستخدمة في الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>الحجم:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>حجم الخط المستخدم في الطرفية (بالنقاط).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>التكبير:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>يغيّر مقياس حجم الخط. تكبير Ctrl+العجلة يُكبّر صدفة واحدة طوال الجلسة.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>تباعد الأسطر:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>ارتفاع كل سطر، كنسبة مئوية من ارتفاع الخط.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>السماح بوميض المؤشر</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>السماح للمؤشر بالوميض.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>مسار الصدفة:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>الملف التنفيذي للصدفة المراد تشغيله.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>وسائط الصدفة:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>الوسائط التي تُمرَّر إلى الصدفة.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>إرسال مفتاح الإفلات إلى الطرفية</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>يرسل مفتاح الإفلات إلى الطرفية عند الضغط عليه بدلاً من إغلاق الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>يرسل Esc إلى الطرفية بدلاً من %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>اضغط %1 لإرسال Esc إلى الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>حظر الاختصارات في الطرفية</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>يمنع اختصارات Qt Creator من التداخل مع الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>اختصارات %1 محظورة عندما يكون التركيز داخل الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>اختصارات %1 لها الأسبقية.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>جرس مسموع</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>يجعل الطرفية تصدر صفيرًا عند استلام محرف الجرس.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>تمكين تتبع الماوس</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>يفعّل تتبع الماوس في الطرفية.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>تمكين إعادة التدفق المباشر (تجريبي)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>يلتف النص ويعاد تدفقه عند تغيير حجم الطرفية. لاحظ أن ذلك لا يعمل بشكل صحيح مع جميع الأصداف والموجهات.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>عام</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>الخط</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>الصدفة الافتراضية</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>الصدفة التي يفتحها الزر +. يختار &quot;تلقائي&quot; أفضل صدفة مثبتة ويتبع التغييرات في المثبّت.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>تلقائي (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+67" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+35" />
         <source>Full</source>
         <translation>ممتلىء</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>First Letter</source>
         <translation>الرسالة الأولى</translation>
     </message>
@@ -22575,32 +26689,32 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>تفعيل الإكمال:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>المهلة بالمللي ثانية:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>عتبة الحرف:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>البادئة العامة &amp;الإكمال التلقائي</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>يُدرج البادئة المشتركة لعناصر الإكمال المتاحة.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>تقسيم السلاسل تلقائيًا</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22609,57 +26723,57 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 بالإضافة إلى ذلك ، يقوم Shift + Enter بإدراج حرف هروب في موضع المؤشر ونقل بقية السلسلة إلى السطر التالي.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>أدخل أقواس الفتح أو الإغلاق</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>أدخل الاقتباس الختامي</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>تحديد النص المحيط بأقواس</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>عند كتابة قوس مطابق ويوجد تحديد نص ، بدلاً من إزالة التحديد ، يحيطه بالأحرف المقابلة.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>&amp;أدخل مسافة بعد اسم الوظيفة</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>تحديد النص المحيط مع علامات الاقتباس</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>عند كتابة اقتباس مطابق وهناك تحديد نص ، بدلاً من إزالة التحديد ، يحيطه بالأحرف المقابلة.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>تحريك النص المدرج تلقائيًا</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>اعرض تلميحًا مرئيًا عندما يقوم المحرر على سبيل المثال بإدراج قوس أو اقتباس تلقائيًا.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>قم بتمييز النص المدرج تلقائيًا</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>تخطي الحرف المدرج تلقائيًا عند الكتابة</translation>
     </message>
@@ -22669,17 +26783,17 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>تخطي الحرف الذي تم إدراجه تلقائيًا إذا تمت إعادة كتابته يدويًا بعد الإكمال أو بالضغط على علامة التبويب.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>قم بإزالة النص المدرج تلقائيًا على مسافة للخلف</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>قم بإزالة الحرف المدرج تلقائيًا إذا تم حذف المشغل بواسطة مسافة للخلف بعد الإكمال.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>الكتابة فوق علامات الترقيم الختامية</translation>
     </message>
@@ -22689,12 +26803,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>الكتابة تلقائيًا فوق أقواس الإغلاق وعلامات الاقتباس.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>إدراج الأحرف المطابقة تلقائيًا (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+103" />
         <source>Enable Doxygen blocks</source>
         <translation>تفعيل كتل Doxygen</translation>
     </message>
@@ -22742,25 +26856,25 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">&amp; إدراج الأحرف المطابقة تلقائيًا</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>تعليقات التوثيق</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+96" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+48" />
         <source>Completion</source>
         <translation>انتهاء</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+126" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>خطأ</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>ليس مشغلًا صالحًا. يمكن أن يحتوي المشغل الصالح على أحرف أو أرقام أو شرطات سفلية فقط ، حيث يقتصر الحرف الأول على الحرف أو الشرطة السفلية.</translation>
     </message>
@@ -22780,7 +26894,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>خطأ في إرجاع المقتطف.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>العودة المضمنة</translation>
     </message>
@@ -22790,17 +26904,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>مجموعة:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>يضيف</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>استعادة العناصر المضمنة التي تمت إزالتها</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>إعادة ضبط الجميع</translation>
     </message>
@@ -22815,7 +26929,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>لم يتم تحديد مقتطف.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>المقتطفات</translation>
     </message>
@@ -22824,9 +26938,13 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">الخط: 9999 ، العمود: 999</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>المؤشرات: %2</translation>
+        <translation type="vanished">المؤشرات: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+202" />
+        <source>Cursors: %1</source>
+        <translation>المؤشرات: %1</translation>
     </message>
     <message>
         <location line="+8" />
@@ -22860,6 +26978,11 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>الأسطر المحددة:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>الموقف في الوثيقة:</translation>
     </message>
@@ -22869,7 +26992,50 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>مِرسَاة:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>مسافات</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>علامات التبويب</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>إعدادات المسافة البادئة: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>إعدادات المستند</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>إعدادات علامات التبويب</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>حجم المسافة البادئة</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>حجم علامة التبويب</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>الإعدادات العامة...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>نهايات خط يونيكس (LF)</translation>
     </message>
@@ -22879,17 +27045,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>نهايات خط Windows (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>شروح أخرى</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>طباعة المستند</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>خطأ في الملف</translation>
     </message>
@@ -22904,7 +27070,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>النص كبير جدًا بحيث لا يمكن عرضه (%1 ميغا بايت).</translation>
     </message>
@@ -22919,32 +27085,84 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>حدد الترميز</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>خطأ في تحليل المقتطف</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>لم يتم العثور على تعريف تمييز لهذا الملف. هل ترغب في تنزيل ملفات تعريف تمييز إضافية؟</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>تم العثور على أكثر من تعريف تمييز واحد لهذا الملف. أي واحد يجب استخدامه لتسليط الضوء على هذا الملف؟</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>تذكر خياري</translation>
     </message>
     <message>
-        <location line="+3822" />
+        <location line="+762" />
+        <source>Apply</source>
+        <translation>تطبيق</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>تطبيق الاقتراح الحالي.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>تطبيق كلمة واحدة</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>تطبيق كلمة واحدة من الاقتراح الحالي.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>تطبيق السطر</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>تطبيق سطر واحد من الاقتراح الحالي.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-28" />
+        <source>Fold Recursively</source>
+        <translation>طي تعاودي</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>طي الكل</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>بسط تكراريًا</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>بسط الكل</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>تكبير / تصغير:%1٪</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>احذف UTF-8 BOM عند الحفظ</translation>
     </message>
@@ -22954,27 +27172,27 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>أضف UTF-8 BOM عند الحفظ</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>لا يمكن العثور على التعريف.</translation>
     </message>
     <message>
-        <location line="-9882" />
+        <location line="-10575" />
         <source>Line: %1, Col: %2</source>
         <translation>السطر:%1 ، العمود:%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+45" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;تنظيف المسافة البيضاء</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>In entire &amp;document</source>
         <translation>في &amp;الوثيقة بأكملها</translation>
     </message>
     <message>
-        <location line="-4" />
+        <location line="+15" />
         <source>Clean indentation</source>
         <translation>مسافة بادئة نظيفة</translation>
     </message>
@@ -22984,7 +27202,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>&amp;ضمان سطر جديد في نهاية الملف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -23037,22 +27255,48 @@ Influences the indentation of continuation lines.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>حجم المسافة البادئة الافتراضي(&amp;I):</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>محاذاة أسطر المتابعة:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>علامات التبويب والمسافة البادئة</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt; تم تكوين المسافة البادئة للكود في إعدادات &lt;a href=&quot;C++&quot;&gt; C ++ &lt;/a&gt; و &lt;a href=&quot;QtQuick&quot;&gt; Qt Quick &lt;/a&gt;. &lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>يتم استخدام إعداد المسافة البادئة لمحرر النص للملفات غير البرمجية فقط. راجع إعدادات نمط الترميز C ++ و Qt لتكوين المسافة البادئة لملفات التعليمات البرمجية.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158" />
+        <source>Auto detect</source>
+        <translation>اكتشاف تلقائي</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>يحاول %1 اكتشاف إعدادات المسافة البادئة استنادًا إلى محتوى الملف. وسيعود إلى الإعدادات أدناه إذا فشل الاكتشاف.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>سياسة علامة التبويب الافتراضية:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>مساحات فقط</translation>
     </message>
@@ -23062,9 +27306,8 @@ Influences the indentation of continuation lines.
         <translation>علامات التبويب فقط</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>مختلط</translation>
+        <translation type="vanished">مختلط</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23072,12 +27315,11 @@ Influences the indentation of continuation lines.
         <translation>حجم تا &amp;ب:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;حجم المسافة البادئة:</translation>
+        <translation type="vanished">&amp;حجم المسافة البادئة:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>مُطْلَقاً</translation>
     </message>
@@ -23092,44 +27334,41 @@ Influences the indentation of continuation lines.
         <translation>مع مسافة بادئة عادية</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>حجم علامة تبويب المحطة التسلسلية:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>سياسة الجدولة:</translation>
+        <translation type="vanished">سياسة الجدولة:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+24" />
         <source>Enable automatic &amp;indentation</source>
         <translation>تمكين المسافة البادئة التلقائية (&amp;I)</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+4" />
         <source>Never</source>
         <translation>أبداً</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-236" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-148" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>دائماً</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>في قيادة الفضاء الأبيض</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>لا أحد</translation>
+        <translation type="vanished">لا أحد</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>يتبع المسافات البادئة السابقة</translation>
     </message>
@@ -23139,7 +27378,7 @@ Influences the indentation of continuation lines.
         <translation>Unindents</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -23170,28 +27409,39 @@ Specifies how backspace interacts with indentation.
 </translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+22" />
         <source>Prefer single line comments</source>
         <translation>تفضل التعليقات سطر واحد</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-61" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>تلقائي</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-33" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>مفتاح Tab ينفّذ الإزاحة التلقائية:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>لا شيء</translation>
+    </message>
+    <message>
+        <location line="+30" />
         <source>At Line Start</source>
         <translation>في خط البداية</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>بعد المسافة البيضاء</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>يحدد مكان وجود تعليقات سطر واحد.</translation>
     </message>
@@ -23211,12 +27461,12 @@ Specifies how backspace interacts with indentation.
         <translation>%1: يتم وضع التعليق بعد قيادة المساحات البيضاء.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>موقف التعليق المفضل:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+12" />
         <source>Skip clean whitespace for file types:</source>
         <translation>تخطي مسافة بيضاء نظيفة لأنواع الملفات:</translation>
     </message>
@@ -23226,32 +27476,32 @@ Specifies how backspace interacts with indentation.
         <translation>بالنسبة لأنماط الملفات المدرجة ، لا تقم بقص المسافات الزائدة.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>قائمة أنماط الملفات المدركة لأحرف البدل ، مفصولة بفواصل أو فاصلة منقوطة.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-18" />
         <source>Always writes a newline character at the end of the file.</source>
         <translation>يكتب دائمًا حرف سطر جديد في نهاية الملف.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-19" />
         <source>Removes trailing whitespace upon saving.</source>
         <translation>يزيل المسافة البيضاء الزائدة عند الحفظ.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+25" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>يصحح المسافة البيضاء البادئة وفقًا لإعدادات الجدولة.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-15" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>ينظف المسافات البيضاء في المستند بأكمله بدلاً من الأجزاء التي تم تغييرها فقط.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>أضف إذا كان الترميز هو UTF-8</translation>
     </message>
@@ -23266,7 +27516,7 @@ Specifies how backspace interacts with indentation.
         <translation>احذف دائما</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -23283,22 +27533,22 @@ Specifies how backspace interacts with indentation.
 &lt;p&gt; &lt;b&gt; لا &lt;/ b&gt; يؤثر هذا الإعداد في استخدام UTF-16 و UTF-32 BOMs. &lt;/p&gt; &lt;/body&gt; &lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>إخفاء مؤشر الماوس أثناء الكتابة</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+10" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>تفعيل التمرير والتكبير بالعجلة (&amp;W)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>تفعيل حافظة الجمل المدمجة والملاحة (&amp;N)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>تمكين تغيير الاختيار الذكي</translation>
     </message>
@@ -23308,7 +27558,7 @@ Specifies how backspace interacts with indentation.
         <translation>باستخدام إجراءات Select Block Up / Down ، سيوفر الآن تحديدات أكثر ذكاءً.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>إظهار تلميحات المساعدة باستخدام اختصار لوحة المفاتيح (Alt)</translation>
     </message>
@@ -23318,22 +27568,22 @@ Specifies how backspace interacts with indentation.
         <translation>يؤدي الضغط على Alt إلى عرض تعليمات حساسة للسياق أو كتابة المعلومات كتلميحات أدوات.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>على الفأرة فوق</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>عند Shift + Mouseover</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>الكتابة</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>عمليات التنظيف عند الحفظ</translation>
     </message>
@@ -23343,108 +27593,111 @@ Specifies how backspace interacts with indentation.
         <translation>إجراءات التنظيف التي يتم تنفيذها تلقائيًا قبل حفظ الملف على القرص مباشرة.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>ترميزات الملف</translation>
+        <translation type="vanished">ترميزات الملف</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>الماوس ولوحة المفاتيح</translation>
+        <translation type="vanished">الماوس ولوحة المفاتيح</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>مسافة بادئة للخلف:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>التشفير الافتراضي:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>UTF-8 BOM:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>نهايات الأسطر الافتراضية:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>إظهار تلميحات المساعدة باستخدام الماوس:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>يعرض تعليمات حساسة للسياق أو اكتب معلومات عند تمرير الماوس.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>يعرض تعليمات حساسة للسياق أو اكتب معلومات على Shift + Mouseover.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+139" />
-        <location line="+201" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+232" />
+        <location line="+129" />
         <source>Display</source>
         <translation>عرض</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-318" />
         <source>Display line &amp;numbers</source>
         <translation>عرض الخطوط والأرقام (&amp;N)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+49" />
         <source>Mark &amp;text changes</source>
         <translation>ون &amp;نص التغييرات</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>الطي التلقائي أولاً والتعليق (&amp;C)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>علامات العرض والطي (&amp;F)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-17" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;تصور المسافات البيضاء</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="+21" />
         <source>Highlight current &amp;line</source>
         <translation>تسليط الضوء على &amp;الخط الحالي</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-25" />
         <source>Enable text &amp;wrapping</source>
         <translation>تفعيل التفاف النص (&amp;W)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt; عيّن &lt;a href=&quot;font zoom&quot;&gt; تباعد أسطر الخط &lt;/a&gt; على 100%لتمكين خيار التفاف النص. &lt;/ i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>عرض &amp;الهامش الأيمن في العمود:</translation>
+        <translation type="vanished">عرض &amp;الهامش الأيمن في العمود:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>عرض الهامش الأيمن بعد العمود(&amp;M):</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>تلوين منطقة الهامش بالكامل</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>استخدم الهامش الخاص بالسياق</translation>
     </message>
@@ -23454,62 +27707,77 @@ Specifies how backspace interacts with indentation.
         <translation>إذا كان متاحًا ، استخدم هامشًا مختلفًا. على سبيل المثال ، ColumnLimit من البرنامج المساعد ClangFormat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>عرض محتوى المحرر:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% يعني استخدام عرض نافذة المحرر بالكامل لعرض المحتوى النصي (الافتراضي).&lt;br&gt;50% يعني استخدام نصف عرض المحرر لعرض المحتوى النصي.&lt;br&gt;يُقسَّم النصف المتبقي إلى هامشين أيسر وأيمن مع توسيط المحتوى.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;تحريك أقواس المطابقة</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>قم بتمييز نتائج البحث على شريط التمرير</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Animate navigation within file</source>
         <translation>تحريك التنقل داخل الملف</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-78" />
         <source>Highlight &amp;blocks</source>
         <translation>تسليط الضوء والكتل (&amp;B)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+32" />
         <source>Center &amp;cursor on scroll</source>
         <translation>المركز والمؤشر في التمرير (&amp;C)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>تصور المسافة البادئة</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>عرض نهاية سطر الملف</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>عرض ملف الترميز</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>دائما فتح الروابط في تقسيم آخر</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;تسليط الضوء على الأقواس المطابقة</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-36" />
         <source>Shows tabs and spaces.</source>
         <translation>يظهر علامات التبويب والمسافات.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>عرض إعدادات علامات التبويب</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>وتسليط الضوء على الاختيار (&amp;H)</translation>
     </message>
@@ -23519,7 +27787,7 @@ Specifies how backspace interacts with indentation.
         <translation>يضيف خلفية ملونة وعلامة إلى شريط التمرير إلى أحداث النص المحدد.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>بجانب محتوى المحرر</translation>
     </message>
@@ -23534,12 +27802,17 @@ Specifies how backspace interacts with indentation.
         <translation>محاذاة في الجانب الأيمن</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>بين السطور</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>تمكين الخريطة المصغرة</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>التعليقات التوضيحية الخط</translation>
     </message>
@@ -23548,27 +27821,27 @@ Specifies how backspace interacts with indentation.
         <translation type="vanished">التعليقات التوضيحية للسطر</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>هامِش</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>يلف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-220" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-18" />
         <source>Enable &amp;mouse navigation</source>
         <translation>التمكين والتنقل بالماوس (&amp;M)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+571" />
         <source>Copy Color Scheme</source>
         <translation>نسخ نظام الألوان</translation>
     </message>
     <message>
-        <location line="-434" />
+        <location line="-458" />
         <location line="+6" />
         <source>%</source>
         <translation>٪</translation>
@@ -23596,7 +27869,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>نظام ألوان للسمة &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+27" />
         <source>Zoom:</source>
         <translation>تكبير:</translation>
     </message>
@@ -23606,7 +27879,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>تباعد الأسطر:</translation>
     </message>
     <message>
-        <location line="+370" />
+        <location line="+383" />
         <location line="+92" />
         <source>Color scheme name:</source>
         <translation>اسم نظام الألوان:</translation>
@@ -23617,7 +27890,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>%1 (نسخ)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>حذف نظام الألوان</translation>
     </message>
@@ -23627,14 +27900,14 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>هل أنت متأكد أنك تريد حذف نظام الألوان هذا بشكل دائم؟</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>استيراد نظام الألوان</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>نظام الألوان (* .xml) ؛؛ كافة الملفات (*)</translation>
     </message>
@@ -23644,8 +27917,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>نظام ألوان التصدير</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+41" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-233" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+38" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-238" />
         <source>Remove</source>
         <translation>يزيل</translation>
     </message>
@@ -23664,12 +27937,17 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">الاعدادات الحالية:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>الإعداد المحدد للقراءة فقط. انسخ الإعداد لتحريره.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>الإعدادات المخصصة:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>نسخ نمط الكود</translation>
     </message>
@@ -23695,8 +27973,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-534" />
-        <location line="+460" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-557" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>يمسح</translation>
     </message>
@@ -23708,22 +27986,22 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>أنماط التعليمات البرمجية (* .xml) ؛؛ كافة الملفات (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>لا يمكن استيراد نمط التعليمات البرمجية من &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>نمط كود التصدير</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [الوكيل:%2]</translation>
     </message>
@@ -23738,7 +28016,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>%1 [قابل للتخصيص]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+87" />
         <source>Color Scheme Changed</source>
         <translation>تم تغيير نظام الألوان</translation>
     </message>
@@ -23753,7 +28031,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>ينبذ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>الملف الحالي</translation>
     </message>
@@ -23771,19 +28049,19 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>يرجى ملاحظة أن هذا يبحث فقط عن الملفات التي تم حفظها على القرص.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+191" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-526" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-549" />
+        <location line="+651" />
         <source>Font</source>
         <translation>الخط</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-625" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-637" />
         <source>Family:</source>
         <translation>عائلة:</translation>
     </message>
@@ -23866,7 +28144,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>لون:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>لا يوجد تسطير</translation>
     </message>
@@ -23901,18 +28179,18 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>تسطير شرطة نقطية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-67" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-78" />
         <source>Antialias</source>
         <translation>أنتيلياس</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-254" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-265" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+30" />
         <source>Copy...</source>
         <translation>ينسخ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>سطر في المستند الحالي</translation>
     </message>
@@ -23927,7 +28205,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>&lt;سطر&gt;: &lt;عمود&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>السطر%1 ، العمود%2</translation>
     </message>
@@ -23942,7 +28220,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>العمود%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-239" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-208" />
         <source>Trigger Completion</source>
         <translation>الزناد إكمال</translation>
     </message>
@@ -23982,13 +28260,13 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>إظهار قائمة السياق</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-216" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>نص</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>نص محدد داخل المستند الحالي.</translation>
     </message>
@@ -24091,7 +28369,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>&amp;إعادة لف الفقرة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3765" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4031" />
         <source>Go to line number...</source>
         <translation>انتقل إلى رقم السطر ...</translation>
     </message>
@@ -24371,7 +28649,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>فرز الخطوط</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+53" />
         <source>Go to Previous Word (Camel Case)</source>
         <translation>انتقل إلى الكلمة السابقة (حالة الإبل)</translation>
     </message>
@@ -24395,7 +28673,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">&amp; فرز الخطوط المحددة</translation>
     </message>
     <message>
-        <location line="-80" />
+        <location line="-74" />
         <source>Meta+Shift+S</source>
         <translation>ميتا + شيفت + إس</translation>
     </message>
@@ -24405,33 +28683,33 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Alt + Shift + S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3389" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>يطوى</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+4" />
         <source>Unfold</source>
         <translation>تتكشف</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+10" />
         <source>Toggle &amp;Fold All</source>
         <translation>تبديل وطي الكل (&amp;F)</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Reset Font Size</source>
-        <translation>إعادة تعيين حجم الخط</translation>
+        <translation type="vanished">إعادة تعيين حجم الخط</translation>
     </message>
     <message>
         <source>Meta+0</source>
         <translation type="vanished">ميتا + 0</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>السيطرة + 0</translation>
+        <translation type="vanished">السيطرة + 0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24545,7 +28823,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">انتقل إلى Next Word Camel Case with Selection</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-66" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl + &lt;</translation>
     </message>
@@ -24555,27 +28833,23 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Ctrl +&gt;</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Increase Font Size</source>
-        <translation>زيادة حجم الخط</translation>
+        <translation type="vanished">زيادة حجم الخط</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl ++</translation>
+        <translation type="vanished">Ctrl ++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>تصغير حجم الخط</translation>
+        <translation type="vanished">تصغير حجم الخط</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl + -</translation>
+        <translation type="vanished">Ctrl + -</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-167" />
         <source>Ctrl+{</source>
         <translation>Ctrl + {</translation>
     </message>
@@ -24625,7 +28899,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Ctrl + Alt + Down</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>نص</translation>
     </message>
@@ -25138,6 +29412,16 @@ To style user-defined operators, use Overloaded Operator.</source>
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>السمة</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>السمات.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>تعليق</translation>
     </message>
@@ -25384,6 +29668,26 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>ضع خطًا تحت لون سياقات تشخيصات التحذير.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>معلومات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>لون الخط السفلي لتشخيصات المعلومات.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>سياق المعلومات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>لون الخط السفلي لسياقات تشخيصات المعلومات.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>حجة الإخراج</translation>
@@ -25502,29 +29806,23 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>عالمي</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+63" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+247" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+210" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+664" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-279" />
         <source>Text Editor</source>
         <translation>محرر النص</translation>
     </message>
     <message>
-        <location line="-3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-109" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+89" />
         <source>Behavior</source>
         <translation>سلوك</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>ليس ملف نظام ألوان.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>مشتق من QObject</translation>
@@ -25595,7 +29893,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation type="vanished">(اكتب الاسم ، اسم القراءة ، اكتب اسم المجموعة ، إشعار ، الاسم ، تم تغييره)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>مع الأهداف</translation>
@@ -25619,7 +29917,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>مع الهدف</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>حالة اختبار سريعة</translation>
@@ -25673,12 +29971,12 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>مثال</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>داخلي</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>يبحث</translation>
     </message>
@@ -25707,27 +30005,33 @@ Will not be applied to whitespace in comments and strings.</source>
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>إحباط استبدال.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 من %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>تسري جميع التغييرات أدناه فورًا.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>قم بتحرير محتويات المعاينة لمعرفة كيفية تطبيق الإعدادات الحالية على أجزاء التعليمات البرمجية المخصصة. لا تؤثر التغييرات في المعاينة على الإعدادات الحالية.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>يونكس (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>نوافذ (CRLF)</translation>
     </message>
@@ -25786,7 +30090,7 @@ Excluding: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>متغير غير مستخدم</translation>
     </message>
@@ -25801,12 +30105,12 @@ Excluding: %3
         <translation type="vanished">محرر النص</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>لا يمكن قراءة الملف &quot;%1&quot;:%2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>لا يمكن استدعاء%1 أو حدث خطأ آخر. تم الوصول إلى المهلة أثناء تنسيق الملف%2.</translation>
     </message>
@@ -25816,12 +30120,12 @@ Excluding: %3
         <translation type="vanished">محرر النص</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>Failed to format: %1.</source>
         <translation>فشل في التنسيق: %1.</translation>
     </message>
     <message>
-        <location line="+175" />
+        <location line="+174" />
         <source>Error in text formatting: %1</source>
         <translation>خطأ في تنسيق النص: %1</translation>
     </message>
@@ -25841,28 +30145,27 @@ Excluding: %3
         <translation>تم تعديل الملف.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>تحديثات التظليل: تم</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>تحديثات التظليل:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>تحديثات التظليل: البدء</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تُوفَّر تعريفات التمييز بواسطة محرك &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;تُوفَّر تعريفات التمييز بواسطة محرك &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-180" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3735" />
         <source>Download Definitions</source>
         <translation>تحميل التعريفات</translation>
     </message>
@@ -25872,7 +30175,7 @@ Excluding: %3
         <translation>تنزيل ملفات تعريف بناء الجملة المفقودة وتحديثها.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>إعادة تحميل التعريفات</translation>
     </message>
@@ -25882,7 +30185,7 @@ Excluding: %3
         <translation>إعادة تحميل ملفات التعريف المعدلة خارجيًا.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>إعادة تعيين التعريفات المحفوظة</translation>
     </message>
@@ -25892,27 +30195,40 @@ Excluding: %3
         <translation>إعادة تعيين التعريفات التي يتم تذكرها للملفات التي يمكن إقرانها بأكثر من تعريف واحد لأداة التمييز.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>ملفات تعريف تمييز بناء الجملة</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>تخطي التحقق من التحديثات للملفات المطابقة لـ:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>تخطي تمييز الصياغة للملفات المطابقة لـ:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>تعريفات التمييز مقدمة من محرك %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>ملفات تعريف تمييز المستخدم</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>أنماط الملفات التي تم تجاهلها:</translation>
+        <translation type="vanished">أنماط الملفات التي تم تجاهلها:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>انتهى التنزيل</translation>
+        <translation type="vanished">انتهى التنزيل</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>قلم تمييز عام</translation>
     </message>
@@ -25932,23 +30248,22 @@ Excluding: %3
         <translation>شجرة التصفية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
+        <location line="+11" />
         <source>Sort Alphabetically</source>
         <translation>رتب ترتيب أبجدي</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+126" />
+        <location line="+125" />
         <source>Outline</source>
         <translation>الخطوط العريضة</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>لا يمكن تطبيق إعادة بيع ديون.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>المحدد المتوقع بعد معرف mangler.</translation>
     </message>
@@ -25968,17 +30283,16 @@ Excluding: %3
         <translation>لا يمكن إنشاء دليل مقتطف المستخدم%1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>الفرق ضد الملف الحالي</translation>
+        <translation type="vanished">الفرق ضد الملف الحالي</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>فتح ملف</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>إظهار التعليقات التوضيحية المضمنة لـ%1</translation>
     </message>
@@ -25999,9 +30313,9 @@ Excluding: %3
         <translation>إشارة مرجعية</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>مرجعية</translation>
     </message>
@@ -26011,17 +30325,17 @@ Excluding: %3
         <translation>موقع المرجعية. تصفية حسب اسم الملف ، عن طريق النص الموجود على سطر الإشارة المرجعية ، أو بنص ملاحظة الإشارة المرجعية.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>تحرك</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>تحرك لأسفل</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;يحرر</translation>
     </message>
@@ -26036,7 +30350,7 @@ Excluding: %3
         <translation>إزالة كل شيء</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>إزالة جميع الإشارات المرجعية</translation>
     </message>
@@ -26047,14 +30361,14 @@ Excluding: %3
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>تحرير المرجعية</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>تبديل المرجعية</translation>
     </message>
@@ -26084,7 +30398,27 @@ Excluding: %3
         <translation>المرجعية التالية في المستند</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>ترتيب حسب أسماء الملفات</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>لاحظ النص:</translation>
     </message>
@@ -26094,12 +30428,17 @@ Excluding: %3
         <translation>رقم السطر:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>محرر JSON</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>محرر Markdown</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>توكيد</translation>
     </message>
@@ -26143,21 +30482,36 @@ Excluding: %3
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>إعادة تحميل التسلسل الهرمي نوع للرمز تحت المؤشر.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>محرر النص العادي</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>تحديد الاقتراح السابق</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>تحديد الاقتراح التالي</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>يجب ألا يحتوي اسم الفئة على محددات مساحة الاسم.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>الرجاء إدخال اسم فئة.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>اسم الفئة يحتوي على أحرف غير صالحة.</translation>
     </message>
@@ -26197,12 +30551,21 @@ Excluding: %3
         <translation>لا يمكن تنفيذ &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <location line="+109" />
+        <location line="+6" />
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+انتهت العملية برمز الخروج %1.
+اضغط Return لإغلاق هذه النافذة...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>فشل في بدء عملية المحطة الطرفية. كعب خرج قبل بدء السفلي.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>لا يمكن وضع أذونات على الدليل المؤقت &quot;%1&quot;: %2</translation>
     </message>
@@ -26236,9 +30599,8 @@ Excluding: %3
         <translation>لا يمكن إنشاء مأخذ توصيل &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <location line="-171" />
         <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>اضغط على &lt;RETURN&gt; لإغلاق هذه النافذة ...</translation>
+        <translation type="vanished">اضغط على &lt;RETURN&gt; لإغلاق هذه النافذة ...</translation>
     </message>
     <message>
         <source>Cannot obtain a handle to the inferior: %1</source>
@@ -26249,7 +30611,7 @@ Excluding: %3
         <translation type="vanished">لا يمكن الحصول على حالة الخروج من المستوى الأدنى:%1</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: أُلغي. تم العثور على %n تطابق في %2 ملف.</numerusform>
@@ -26273,7 +30635,7 @@ Excluding: %3
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>نمط Fi &amp;le:</translation>
     </message>
@@ -26313,23 +30675,23 @@ Excluding: %3
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>طريق:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+141" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+140" />
         <source>Location</source>
         <translation>موقع</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>اللاحقة الافتراضية إذا لم تحدد بشكل صريح ملحق ملف هي &quot;.%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>محلي</translation>
     </message>
@@ -26339,7 +30701,7 @@ Excluding: %3
         <translation>بعيد</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>يختار...</translation>
     </message>
@@ -26349,29 +30711,34 @@ Excluding: %3
         <translation>تصفح...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>اختر الدليل</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>اختر قابل للتنفيذ</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>اختر ملف</translation>
     </message>
     <message>
-        <location line="+176" />
+        <location line="+180" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>تم توسيع المسار &quot;%1&quot; إلى سلسلة فارغة.</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>البدائل</translation>
+    </message>
+    <message>
+        <location line="-192" />
         <location line="+10" />
         <location line="+20" />
         <source>The path &quot;%1&quot; does not exist.</source>
@@ -26414,13 +30781,13 @@ Excluding: %3
         <translation type="vanished">المسار الكامل: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-58" />
-        <location line="+74" />
+        <location line="-56" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>يجب ألا يكون المسار فارغًا.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>إدراج...</translation>
     </message>
@@ -26435,22 +30802,32 @@ Excluding: %3
         <translation>واضح</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>مقدمة وموقع المشروع</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>استخدم كموقع افتراضي للمشروع</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>أدخل اسم المشروع</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>الإضافة إلى المشروع:</translation>
+    </message>
+    <message>
+        <location line="+104" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>معالج المشروع المختار لا يدعم نظام البناء.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>سيتم إنشاء الدليل &quot;%1&quot;.</translation>
     </message>
@@ -26465,22 +30842,22 @@ Excluding: %3
         <translation>يوجد ملف بهذا الاسم بالفعل.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>اسم المشروع غير صالح.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>حرف غير صالح &quot;.&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>تم العثور على حرف غير صالح &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="-232" />
+        <location line="-250" />
         <source>Name:</source>
         <translation>اسم:</translation>
     </message>
@@ -26490,7 +30867,7 @@ Excluding: %3
         <translation>أنشئ في:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>تم تغيير الملف</translation>
     </message>
@@ -26516,18 +30893,18 @@ Excluding: %3
         <translation>يمكن ضبط السلوك الافتراضي في Edit&gt; Preferences&gt; Environment&gt; System.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;يغلق</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>لا للكل &amp;&amp;&amp; الفرق (&amp;D)</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>تمت إزالة الملف</translation>
     </message>
@@ -26578,9 +30955,8 @@ Excluding: %3
     %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+89" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>خطأ في الملف</translation>
     </message>
@@ -26593,61 +30969,68 @@ Excluding: %3
         <translation type="vanished">تعذرت استعادة مساحة العمل%1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>تنسيق ملف غير معتمد.</translation>
+        <translation type="vanished">تنسيق ملف غير معتمد.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>تعذر العثور على أي ملف تنفيذي غير مؤرشف في PATH (%1).</translation>
+        <translation type="vanished">تعذر العثور على أي ملف تنفيذي غير مؤرشف في PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>لا يوجد مجموعة ملفات مصدر.</translation>
+        <translation type="vanished">لا يوجد مجموعة ملفات مصدر.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>لا توجد مجموعة دليل الوجهة.</translation>
+        <translation type="vanished">لا توجد مجموعة دليل الوجهة.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>فشل في فتح ملف الإخراج.</translation>
+        <translation type="vanished">فشل في فتح ملف الإخراج.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>فشل في كتابة ملف الإخراج.</translation>
+        <translation type="vanished">فشل في كتابة ملف الإخراج.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>فشل الأمر.</translation>
+        <translation type="vanished">فشل الأمر.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>تشغيل %1
+        <translation type="vanished">تشغيل %1
 في &quot;%2&quot;.
 
 </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>إعادة ضبط</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>إعادة إلى الافتراضي.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>إعادة إلى الافتراضي</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>اضغط مع الاستمرار للإعادة إلى الافتراضي.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>يُمكَِن</translation>
     </message>
@@ -26660,6 +31043,11 @@ in &quot;%2&quot;.
         <location line="+1" />
         <source>Default</source>
         <translation>تقصير</translation>
+    </message>
+    <message>
+        <location line="+1774" />
+        <source>Change...</source>
+        <translation>تغيير...</translation>
     </message>
     <message>
         <source>Leave at Default</source>
@@ -26683,7 +31071,7 @@ in &quot;%2&quot;.
         <translation type="vanished">أخف التفاصيل...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>لا تسأل مجددا (&amp;A)</translation>
     </message>
@@ -26693,12 +31081,12 @@ in &quot;%2&quot;.
         <translation>لا تظهر مرة أخرى (&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>لا clangd قابلة للتنفيذ محدد.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>فشل استرداد إصدار clangd: إخراج clangd غير متوقع.</translation>
     </message>
@@ -26725,7 +31113,7 @@ in &quot;%2&quot;.
         <translation type="vanished">لا يمكن نسخ%1 إلى%2 ، فهو ليس دليلاً قابلاً للكتابة.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+273" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>فشل النسخ المتكرر من &quot;%1&quot; إلى &quot;%2&quot; أثناء محاولة إنشاء أرشيف tar من المصدر:%3</translation>
     </message>
@@ -26747,18 +31135,17 @@ in &quot;%2&quot;.
         <translation type="vanished">لم يتم تطبيق createTempFile لـ &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+409" />
+        <location line="-136" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>المسار &quot;%1&quot; موجود ولكن ليس دليلًا قابلًا للكتابة.</translation>
     </message>
     <message>
-        <location line="-356" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>لم يتم تنفيذ CopyFile لـ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>لا يمكن نسخها من &quot;%1&quot; ، فهو ليس دليلًا.</translation>
     </message>
@@ -26768,54 +31155,136 @@ in &quot;%2&quot;.
         <translation>لا يمكن نسخ &quot;%1&quot; إلى &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="+103" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>لا يتم تنفيذ fileContents لـ &quot;%1&quot;.</translation>
+        <translation type="vanished">لا يتم تنفيذ fileContents لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">لا يتم تنفيذ WriteFileContents لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">لا يتم تنفيذ CreateTempFile لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">لم يتم تنفيذ الساعة.</translation>
+    </message>
+    <message>
+        <location line="-173" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>الدالة &quot;%1&quot; غير مُنفَّذة لـ &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>createSymLink غير منفَّذ لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>renameFile غير منفَّذ لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>فشل مراقبة &quot;%1&quot;، فهو غير موجود.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>فشل مراقبة &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>فشل إزالة المراقب لـ &quot;%1&quot;، لم يتم العثور عليه.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>لا يتم تنفيذ WriteFileContents لـ &quot;%1&quot;.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>فشل إزالة المراقب لـ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>لا يتم تنفيذ CreateTempFile لـ &quot;%1&quot;.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>تعذر إنشاء الملف &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>لم يتم تنفيذ الساعة.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>تعذر إنشاء الدليل &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>رفض إزالة الدليل القياسي &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>رفض إزالة الدليل الجذر.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>رفض إزالة الدليل الرئيسي الخاص بك.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>فشل إزالة الدليل &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>فشل إزالة الملف &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+551" />
+        <location line="+140" />
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>تعذر فتح الملف &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>تعذر إنشاء دليل مؤقت في &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>تعذر تغيير الأذونات لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>فشل تحديد ما إذا كان &quot;%1&quot; و&quot;%2&quot; يشيران إلى الملف نفسه: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>فشل الأمر &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>فشل إنشاء رابط رمزي للملف &quot;%1&quot; في &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>فشل إنشاء الدليل المؤقت &quot;%1&quot; (محاولات كثيرة جدًا).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>فشل إنشاء الملفات المؤقتة &quot;%1&quot; (محاولات كثيرة جدًا).</translation>
+    </message>
+    <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>فشل إنشاء ملف مؤقت &quot;%1&quot; (الكثير من المحاولات).</translation>
+        <translation type="vanished">فشل إنشاء ملف مؤقت &quot;%1&quot; (الكثير من المحاولات).</translation>
     </message>
     <message>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -26830,7 +31299,7 @@ in &quot;%2&quot;.
         <translation type="vanished">تعذر فتح الملف &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-449" />
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>لا يمكن قراءة &quot;%1&quot;:%2</translation>
     </message>
@@ -26847,23 +31316,38 @@ in &quot;%2&quot;.
         <translation type="vanished">تعذر إنشاء ملف مؤقت في &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="-87" />
-        <location line="+406" />
+        <location line="-139" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>فشل نسخ الملف &quot;%1&quot; إلى &quot;%2&quot;:%3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>تم استدعاء createSymlinkWindows() بشكل غير متوقع على نظام أساسي غير Windows.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>فشل إنشاء رابط رمزي إلى &quot;%1&quot; في &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>فشل إعادة تسمية الملف &quot;%1&quot; إلى &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>ملف &quot;%1&quot; غير موجود.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Could not open File &quot;%1&quot;.</source>
-        <translation>لا يمكن فتح ملف &quot;%1&quot;.</translation>
+        <translation type="vanished">لا يمكن فتح ملف &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+27" />
         <source>Could not open file &quot;%1&quot; for writing.</source>
         <translation>لا يمكن فتح ملف &quot;%1&quot; للكتابة.</translation>
     </message>
@@ -26885,24 +31369,21 @@ in &quot;%2&quot;.
         <translation>لا يمكن إنشاء ملف مؤقت في &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>الجهاز غير متصل</translation>
+        <translation type="vanished">الجهاز غير متصل</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>فشلت قراءة الملف &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>فشلت كتابة الملف &quot;%1&quot;:%2</translation>
+        <translation type="vanished">فشلت كتابة الملف &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>فشل إنشاء الملف المؤقت &quot;%1&quot;:%2</translation>
+        <translation type="vanished">فشل إنشاء الملف المؤقت &quot;%1&quot;:%2</translation>
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
@@ -26910,6 +31391,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>يمسح</translation>
     </message>
@@ -26971,7 +31453,7 @@ in &quot;%2&quot;.
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>يبدو أن جدول السلسلة يقع عند 0x%1</translation>
     </message>
@@ -26981,7 +31463,7 @@ in &quot;%2&quot;.
         <translation>اسم المقطع%1 من%2 خلف نهاية الملف</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>تحرير البيئة</translation>
     </message>
@@ -27002,7 +31484,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
 لتعطيل متغير ، قم ببادئة السطر بـ &quot;#&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>منقي</translation>
     </message>
@@ -27012,7 +31494,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>نص واضح</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>القطعة المركزية</translation>
     </message>
@@ -27026,34 +31508,34 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">إخفاء أشرطة عناوين العرض تلقائيًا</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+92" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+107" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>الاسم فارغ.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>الاسم يحتوي على مسافة بيضاء.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>حرف غير صالح &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>أحرف غير صالحة &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>يتطابق الاسم مع جهاز MS Windows (CON، AUX، PRN، NUL، COM1، COM2، ...، COM9، LPT1، LPT2، ...، LPT9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>ملحق الملف%1 مطلوب:</translation>
     </message>
@@ -27063,7 +31545,37 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>ملحقات الملفات%1 مطلوبة:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>خطأ داخلي في DeviceFileAccess: لم تُرجع watch() أي نتيجة.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>تعذر العثور على دليل مؤقت على الجهاز %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>تعذر إنشاء ملف مؤقت: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>تعذر إنشاء دليل مؤقت: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>لم يتم تعيين خطاف الجهاز.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>تعذر الوصول إلى المسار البعيد &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 في%2</translation>
@@ -27075,7 +31587,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>%1%2 في%3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>خطأ أثناء محاولة نسخ الملف:%1</translation>
     </message>
@@ -27090,49 +31602,52 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>تعذر تعيين الأذونات على &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>لا يمكن إنشاء رابط رمزي إلى &quot;%1&quot; في &quot;%2&quot;: المسارات لا تشير إلى الجهاز نفسه.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>فشل نقل %1 إلى %2. فشلت إزالة الملف المصدر: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>لم يتم تعيين ربط الجهاز &quot;localSource&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>جهاز الكمبيوتر الخاص بي</translation>
+        <translation type="vanished">جهاز الكمبيوتر الخاص بي</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>حاسوب</translation>
+        <translation type="vanished">حاسوب</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>اسم</translation>
+        <translation type="vanished">اسم</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>مقاس</translation>
+        <translation type="vanished">مقاس</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>عطوف</translation>
+        <translation type="vanished">عطوف</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>يكتب</translation>
+        <translation type="vanished">يكتب</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>التاريخ عدل</translation>
+        <translation type="vanished">التاريخ عدل</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>لا يمكن كتابة الملف%1:%2</translation>
     </message>
@@ -27142,12 +31657,12 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>لا يمكن كتابة الملف%1. القرص ممتلئ؟</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: اسم ملف محجوز في Windows. لا يمكن الحفظ.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>لا يمكن الكتابة فوق الملف%1:%2</translation>
     </message>
@@ -27157,13 +31672,13 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>لا يمكن إنشاء الملف%1:%2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>لا يمكن إنشاء ملف مؤقت في%1:%2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>لا يمكن إنشاء ملف مؤقت %1: %2</translation>
     </message>
@@ -27178,34 +31693,45 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>هل تريد الكتابة فوق الملف الموجود &quot;%1&quot;؟</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>تعذر نسخ الملف &quot;%1&quot; إلى &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>فشل إنشاء الدليل &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>الملف %1 غير موجود.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>فشل إعداد المخزن المؤقت في &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>فشل إنشاء الدليل &quot;%1&quot;.</translation>
+        <translation type="vanished">فشل إنشاء الدليل &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>لا يمكن إنشاء سياق OpenGL.</translation>
+        <translation type="vanished">لا يمكن إنشاء سياق OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;اظهر التفاصيل</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>لا تظهر مرة أخرى</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>يغلق</translation>
     </message>
@@ -27258,52 +31784,49 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>فشل بدء تشغيل المشغل عند &quot;%1&quot;:%2</translation>
+        <translation type="vanished">فشل بدء تشغيل المشغل عند &quot;%1&quot;:%2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>تم إغلاق مشغل العملية بشكل غير متوقع:%1</translation>
+        <translation type="vanished">تم إغلاق مشغل العملية بشكل غير متوقع:%1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>خطأ في مأخذ قاذفة العملية.</translation>
+        <translation type="vanished">خطأ في مأخذ قاذفة العملية.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>خطأ داخلي في مأخذ التوصيل:%1</translation>
+        <translation type="vanished">خطأ داخلي في مأخذ التوصيل:%1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>خطأ في مأخذ التوصيل:%1</translation>
+        <translation type="vanished">خطأ في مأخذ التوصيل:%1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>خطأ بروتوكول داخلي: حجم الحزمة غير صالح%1.</translation>
+        <translation type="vanished">خطأ بروتوكول داخلي: حجم الحزمة غير صالح%1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>خطأ بروتوكول داخلي: نوع حزمة غير صالح%1.</translation>
+        <translation type="vanished">خطأ بروتوكول داخلي: نوع حزمة غير صالح%1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>تم إغلاق مقبس المشغل بشكل غير متوقع.</translation>
+        <translation type="vanished">تم إغلاق مقبس المشغل بشكل غير متوقع.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>خطأ عودي لانهائي</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>فشل توسيع الماكرو في وسائط العملية: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: مسار كامل متضمنًا اسم الملف.</translation>
     </message>
@@ -27333,27 +31856,32 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>%1: اسم قاعدة الملف بدون مسار ولاحقة.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: اسم ملف الدليل الأصل.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>المتغيرات العالمية</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>الوصول إلى متغيرات البيئة.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>تصغير</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;UNSET&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>عامل</translation>
     </message>
@@ -27373,7 +31901,6 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">&lt;VALUE&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -27382,7 +31909,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>أدخل متغير بيئة واحد لكل سطر.
+        <translation type="vanished">أدخل متغير بيئة واحد لكل سطر.
  لتعيين أو تغيير متغير ، استخدم متغير = قيمة.
  لتعطيل متغير ، بادئة هذا الخط مع &quot;#&quot;.
  لإلحاق متغير ، استخدم المتغير+= القيمة.
@@ -27392,7 +31919,39 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
  سيتم التعامل مع الخطوط التي تبدأ بـ &quot;##&quot; كتعليقات.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>يمكن أن يكون الملف ملفًا نصيًا بسيطًا يحتوي على أزواج مفتاح/قيمة،\nأو سكربتًا تقيّمه صدفة النظام.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>أدخل متغير بيئة واحدًا في كل سطر.
+لتعيين متغير أو تغييره، استخدم VARIABLE=VALUE.
+لتعطيل متغير، ابدأ هذا السطر بـ &quot;#&quot;.
+للإلحاق بنهاية متغير، استخدم VARIABLE+=VALUE.
+للإلحاق ببداية متغير، استخدم VARIABLE=+VALUE.
+يمكن الإشارة إلى المتغيرات الموجودة في VALUE باستخدام ${OTHER}.
+لمسح متغير، اكتب اسمه في سطر وحده دون أي شيء آخر.
+تُعامل الأسطر التي تبدأ بـ &quot;##&quot; كتعليقات.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>الحصول على المتغيرات من ملف نصي أو سكربت صدفة:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;نعم</translation>
     </message>
@@ -27402,7 +31961,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&amp;يلغي</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>خطأ في سطر الأوامر.</translation>
     </message>
@@ -27412,17 +31971,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>البرنامج &quot;%1&quot; غير موجود أو غير قابل للتنفيذ.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>لا يمكن العثور على البرنامج &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>لم يتم تحديد ملف تنفيذي.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>فشل في إنشاء واجهة العملية لـ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>العملية لا تستجيب</translation>
     </message>
@@ -27442,7 +32006,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>هل تريد إنهاء العملية؟</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>انتهى الأمر &quot;%1&quot; بنجاح.</translation>
     </message>
@@ -27467,11 +32031,26 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>تم إلغاء الأمر &quot;%1&quot; بعد %2 مللي ثانية.</translation>
     </message>
     <message>
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>كان ناتج الخطأ القياسي:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>كان الناتج القياسي:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>البرنامج المستدعى مفقود، أو قد لا تملك أذونات كافية لاستدعائه.</translation>
+    </message>
+    <message>
         <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
         <translation type="vanished">لم يستجب الأمر &quot;%1&quot; خلال حد المهلة (%2 s).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>إزالة الملف</translation>
     </message>
@@ -27501,7 +32080,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>المجلد المراد إزالته:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>فشل قراءة الملف</translation>
     </message>
@@ -27522,18 +32101,18 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>لم يكن هناك شيء للكتابة.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>لم يتم العثور على إعدادات صالحة</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt; تعذر العثور على ملف إعدادات صالح. &lt;/ p&gt; &lt;p&gt; كانت كافة ملفات الإعدادات الموجودة في الدليل &quot;%1&quot; غير مناسبة للإصدار الحالي من%2 ، على سبيل المثال لأنها تمت كتابتها بواسطة إصدار غير متوافق من%2 ، أو بسبب استخدام مسار إعدادات مختلف. &lt;/ p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt; تعذر العثور على ملف إعدادات صالح. &lt;/ p&gt; &lt;p&gt; كانت كافة ملفات الإعدادات الموجودة في الدليل &quot;%1&quot; إما جديدة جدًا أو قديمة جدًا بحيث يتعذر قراءتها. &lt;/ p&gt;</translation>
     </message>
@@ -27558,7 +32137,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&lt;p&gt; لم يتم العثور على ملف إعدادات تم إنشاؤه بواسطة هذا المثيل%1. &lt;/p&gt; &lt;p&gt; هل عملت مع هذا المشروع على جهاز آخر أو استخدمت مسار إعدادات مختلف من قبل؟ &lt;/ p&gt; &lt;p&gt; هل مازلت هل تريد تحميل ملف الإعدادات &quot;%2&quot;؟ &lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>ملف إعدادات دمج غير مدعوم</translation>
     </message>
@@ -27568,72 +32147,71 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>لا يتم دعم &quot;%1&quot; من قبل%2. هل تريد محاولة تحميله على أي حال؟</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="-1646" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>يضيف</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>يزيل</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>إعادة تسمية</translation>
+        <translation type="vanished">إعادة تسمية</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>هل تريد حقًا حذف التكوين &lt;b&gt;%1 &lt;/b&gt;؟</translation>
+        <translation type="vanished">هل تريد حقًا حذف التكوين &lt;b&gt;%1 &lt;/b&gt;؟</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>اسم جديد للتكوين &lt;b&gt;%1 &lt;/b&gt;:</translation>
+        <translation type="vanished">اسم جديد للتكوين &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>إعادة تسمية ...</translation>
+        <translation type="vanished">إعادة تسمية ...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>الوقت المنقضي:%1.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>خارج الذاكرة.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>تمت مصادفة خطأ في الترميز.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;المتغير&lt;/th&gt;&lt;th&gt;يتوسع إلى&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;مجلد الملف الحالي&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;اسم الملف (بالمسار الكامل)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;اسم الملف (بدون المسار)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;المتغير&lt;/th&gt;&lt;th&gt;يتوسع إلى&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;مجلد الملف الحالي&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;اسم الملف (بالمسار الكامل)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;اسم الملف (بدون المسار)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>أدخل متغير</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>القيمة الحالية:%1</translation>
+        <translation type="vanished">القيمة الحالية:%1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>القيمة الحالية لـ %{%1}: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>أدخل قيمة غير موسعة</translation>
     </message>
@@ -27649,56 +32227,49 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>أدخل قيمة موسعة</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>حدد متغيرًا لإدخاله.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>المتغيرات</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>فشلت العملية في البدء.</translation>
+        <translation type="vanished">فشلت العملية في البدء.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>فشل في تثبيت SHELL SCRIPT: %1
+        <translation type="vanished">فشل في تثبيت SHELL SCRIPT: %1
  %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>مهلة أثناء محاولة التحقق من %1.</translation>
+        <translation type="vanished">مهلة أثناء محاولة التحقق من %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>لم يتم العثور على القيادة &quot;%1&quot;.</translation>
+        <translation type="vanished">لم يتم العثور على القيادة &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>تم إجبار تثبيت البرنامج النصي على الفشل.</translation>
+        <translation type="vanished">تم إجبار تثبيت البرنامج النصي على الفشل.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>مهلة أثناء انتظار تثبيت SHELL SCRIPT.</translation>
+        <translation type="vanished">مهلة أثناء انتظار تثبيت SHELL SCRIPT.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>فشل في تثبيت SHELL SCRIPT: %1</translation>
+        <translation type="vanished">فشل في تثبيت SHELL SCRIPT: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -27707,22 +32278,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>فشل في بدء عملية المحطة الطرفية: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>ملف نسخ فشل.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>فشل قراءة ملف القراءة.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>ملف الكتابة الفاشل.</translation>
     </message>
@@ -27732,12 +32303,12 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>لا توجد مجموعة واجهة لوا</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>عرض/إخفاء كلمة المرور</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>مستخدم:</translation>
     </message>
@@ -27752,9 +32323,269 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>لا يمكن العثور على أي قذيفة.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>أمر غير صالح</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>يستخدم %1 الأداة %2 لجمع تقارير الأعطال وإرسالها إلى Sentry لمعالجتها. قد تلتقط %2 محتوى عشوائيًا من ذاكرة العملية المتعطلة، بما في ذلك معلومات المستخدم الحساسة وعناوين URL وأي محتوى آخر ائتمن المستخدمون %1 عليه. غير أن تقارير الأعطال المجمّعة تُستخدم لغرض إصلاح الأخطاء فقط.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>مزيد من المعلومات:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>نظرة عامة على %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>سياسة أمان %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>لا توجد تغييرات لتطبيقها.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>فشل الحصول على متغيرات البيئة من الجهاز: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>فشل الحصول على متغيرات البيئة من &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>فشل الحصول على متغيرات البيئة من &quot;%1&quot;: مخرجات غير متوقعة</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (افتراضي)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>استنساخ</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>جعله الافتراضي</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>استعادة</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>تراجع(&amp;U)</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>إعادة(&amp;R)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>قص(&amp;T)</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>نسخ(&amp;C)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>نسخ موقع الرابط(&amp;L)</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>لصق(&amp;P)</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>تحديد الكل</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>إدراج محرف تحكم Unicode</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>ناتج الخطأ البعيد كان: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; غير موجود.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>&quot;find&quot; ليس ملفًا تنفيذيًا موجودًا</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>فشل تشغيل %1: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>&quot;ps&quot; ليس ملفًا تنفيذيًا موجودًا.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>&quot;pidin&quot; ليس ملفًا تنفيذيًا موجودًا.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>فشل تشغيل ps: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>فشل تشغيل pidin: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>فشل التحقق من /proc: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>فشل إنشاء اللقطة: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>إلغاء</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>خطأ داخلي: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>خطأ عدم تنفيذ: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>خطأ غير معروف: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>سبب غير معروف.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>فتح موجه الأوامر هنا</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>فتح الطرفية هنا</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>محاكي الطرفية المستخدم لفتح طرفية.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>الأمر:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>وسائط سطر الأوامر المستخدمة لـ &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>وسائط &quot;%1&quot;:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>وسائط سطر الأوامر المستخدمة لـ &quot;Run in terminal&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>وسائط &quot;Run in Terminal&quot;:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>التشغيل في الطرفية</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>تخصيص...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>الإعدادات المسبقة</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>اختيار محاكي الطرفية</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>ليس أرشيفًا.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>تم الإلغاء.</translation>
     </message>
 </context>
 <context>
@@ -27764,6 +32595,14 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>خطأ في حفظ المحللات: %1</translation>
     </message>
 </context>
 </TS>

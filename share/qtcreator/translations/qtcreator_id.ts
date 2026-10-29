@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="id_ID">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Tutup Tab</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Tidak ada</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Menyalin</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>Maks</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>median</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>Mode</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>Minimal</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Berarti</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Mengambang</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Entri kata sandi tidak ditemukan</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Tidak dapat mendekripsi data</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Entri kata sandi tidak ditemukan</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Tidak dapat mendekripsi data</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Tidak dapat mendekripsi data: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Enkripsi gagal: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Ukuran kredensial melebihi ukuran maksimum %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Kunci kredensial melebihi ukuran maksimum %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Penulisan kredensial gagal: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Mengunduh definisi sintaksis baru untuk &apos;%1&apos;...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>Mengunduh definisi sintaks baru untuk &apos;%1&apos;…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Memperbarui definisi sintaksis untuk &apos;%1&apos; ke versi %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>Memperbarui definisi sintaks untuk &apos;%1&apos; ke versi %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">Mengunduh definisi sintaksis baru untuk &apos;%1&apos;...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">Memperbarui definisi sintaksis untuk &apos;%1&apos; ke versi %2...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Salin/Konversi File Python</translation>
     </message>
@@ -245,47 +307,765 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QUnicodeControlCharacterMenu</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>Tidak dapat membuka %1: %2</translation>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Tanda kiri-ke-kanan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Tanda kanan-ke-kiri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Penggabung lebar nol</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Bukan-penggabung lebar nol</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Spasi lebar nol</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Awal penyematan kiri-ke-kanan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Awal penyematan kanan-ke-kiri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Awal penimpaan kiri-ke-kanan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Awal penimpaan kanan-ke-kiri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Akhir pemformatan arah</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Isolat kiri-ke-kanan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Isolat kanan-ke-kiri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI First strong isolate</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Akhir isolat arah</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::AcpClient</name>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Agen ini tidak lagi tersedia. Pilih agen untuk memulai obrolan baru.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Kesalahan sesi: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Kesalahan sesi: respons tidak valid.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>Kesalahan prompt: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Gagal mengatur opsi konfigurasi: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Gagal mencantumkan sesi: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Gagal mencantumkan sesi: respons tidak valid.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Gagal memuat sesi: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Obrolan Baru</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Tidak dapat memuat daftar agen AI. Periksa koneksi internet Anda, lalu coba lagi.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Coba Lagi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Muat ulang daftar agen AI.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Pilih Agen AI</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Autentikasi Diperlukan</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Metode:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>Batal</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Autentikasi</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Permintaan dihentikan oleh pengguna</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Autentikasi gagal: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 siap.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Agen</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Memulai obrolan...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>Menghubungkan ke %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Memuat obrolan...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Tutup</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Ganti Nama Obrolan...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Tutup Obrolan</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>Klien ACP</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Tampilkan Obrolan AI Agentik di Panel Samping</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>Inspeksi Klien ACP...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Luaskan Semua</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>Pesan Klien</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Pesan</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Pesan Server</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>File Log</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>Inspektur ACP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Pilih&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Bersihkan</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>Klien ACP:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Tidak diketahui</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Salin</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>Izinkan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Selalu Izinkan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Tolak</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Selalu Tolak</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>Permintaan Izin</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Terautentikasi</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Tolak</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Ditolak</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 menit</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 detik</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Kustom&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Tentukan secara manual agen yang tidak terdaftar di registry.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Template:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Pilih template dari registry untuk mengisi pengaturan terlebih dahulu.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Nama:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Nama tampilan.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Server Baru&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Executable:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>Executable untuk menjalankan proses server ACP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Argumen:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>Argumen untuk menjalankan proses server ACP.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Perubahan environment:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>Perintah yang akan menjalankan server ACP.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>&quot;%1&quot; diperlukan untuk Agen ini, tetapi tidak ditemukan.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Pastikan Node.js terinstal dan npx tersedia di PATH. Lihat &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; untuk petunjuk instalasi.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Pastikan UV terinstal dan uvx tersedia di PATH. Lihat &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; untuk petunjuk instalasi.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>Server ACP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Penyedia lainnya</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Open source</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Lainnya</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>Tidak ada perintah yang dikonfigurasi untuk server ACP.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Perintah tidak ditemukan: &quot;%1&quot;. Pastikan perintah ada dan dapat dieksekusi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Perintah tidak ditemukan: &quot;%1&quot;. Pastikan perintah dapat dieksekusi dan ada di PATH Anda.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Tidak dapat mengirim data: proses belum dimulai (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Tidak dapat mengirim data: proses &quot;%1&quot; tidak berjalan (kode keluar %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>Kesalahan parsing JSON: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>Objek JSON diharapkan.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter untuk mengirim, Shift+Enter untuk baris baru; tempel atau jatuhkan gambar dan berkas untuk melampirkannya</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Filter perintah...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Hapus Konteks</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Opsi Konfigurasi</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Tampilkan Pemikiran</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Tambah Konteks</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Tambah Berkas...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Tambah Berkas Konteks</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Tambah Berkas Jarak Jauh...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Editor Saat Ini</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Sisipkan Perintah</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Kirim (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Kesalahan Berkas</translation>
+        <source>Stop (Esc)</source>
+        <translation>Hentikan (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Konteks: %1 dari %2 token terpakai (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Biaya sesi: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Klik untuk memadatkan percakapan.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n lampiran</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>Antrean: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Dikirim saat agen selesai.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Edit Pesan Antrean</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Gambar</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>baru saja</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>1 menit yang lalu</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>%1 menit yang lalu</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>1 jam yang lalu</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>%1 jam yang lalu</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>kemarin</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>%1 hari yang lalu</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Obrolan tanpa judul</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Ganti Nama Obrolan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Nama (kosongkan agar otomatis):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Mulai Obrolan</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Obrolan Baru di Folder...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Obrolan Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Filter obrolan...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Memuat obrolan sebelumnya...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Obrolan baru dimulai di %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Pilih Folder untuk Obrolan</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>Tampilkan 1 obrolan yang lebih lama</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>Tampilkan %1 obrolan yang lebih lama</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Obrolan Sebelumnya (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Tidak ada obrolan sebelumnya.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Tidak ada obrolan yang cocok.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Buka di Editor</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 — 1 baris</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 — %2 baris</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Input Mentah</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">Tidak dapat membuka %1: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Kesalahan Berkas</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Editor Biner tidak dapat membuka file kosong.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>File terlalu besar untuk Binary Editor (maks. 32GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Offset berkas terlalu besar.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Alamat Byte</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Membuka</translation>
+        <translation type="vanished">&amp;Membuka</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Mengulangi</translation>
+        <translation type="vanished">&amp;Mengulangi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>Memori pada 0x%1</translation>
     </message>
@@ -345,7 +1125,7 @@
         <translation>Nilai &amp;nbsp;oktal &amp;nbsp; sebelumnya:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;nilai ganda&lt;/i&gt;&amp;nbsp;:</translation>
     </message>
@@ -355,7 +1135,7 @@
         <translation>Nilai &lt;i&gt;ganda&lt;/i&gt;&amp;nbsp; sebelumnya:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;nilai mengambang&lt;/i&gt;&amp;nbsp;:</translation>
     </message>
@@ -365,12 +1145,12 @@
         <translation>Nilai &lt;i&gt;float&lt;/i&gt;&amp;nbsp; sebelumnya:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Perbesar: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Penyalinan Gagal</translation>
     </message>
@@ -380,7 +1160,7 @@
         <translation>Anda tidak dapat menyalin data biner lebih dari 4 MB.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Salin Pilihan sebagai Karakter ASCII</translation>
     </message>
@@ -395,7 +1175,7 @@
         <translation>Tetapkan Breakpoint Data pada Pilihan</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>Salin 0x%1</translation>
@@ -416,12 +1196,26 @@
         <translation>Salin Nilai</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Lompat ke Alamat 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Lompat ke Alamat 0x%1 di Jendela Ini</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>Tidak dapat membuka &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>Editor Biner</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Lompat ke Alamat 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Lompat ke Alamat 0x%1 di Jendela Baru</translation>
     </message>
@@ -429,21 +1223,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Masuk</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Permintaan masuk gagal: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Jendela browser akan terbuka. Masukkan kode %1 ketika ditanya. 
 Kode telah disalin ke clipboard Anda.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Gagal Masuk</translation>
     </message>
@@ -453,48 +1252,40 @@ Kode telah disalin ke clipboard Anda.</translation>
         <translation>Permintaan login gagal: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Kopilot</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Nama pengguna dan kata sandi proxy diperlukan:</translation>
+        <translation type="vanished">Nama pengguna dan kata sandi proxy diperlukan:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Jangan bertanya lagi. Ini akan menonaktifkan Copilot untuk saat ini.</translation>
+        <translation type="vanished">Jangan bertanya lagi. Ini akan menonaktifkan Copilot untuk saat ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Pilih Saran Kopilot Sebelumnya</translation>
+        <translation type="vanished">Pilih Saran Kopilot Sebelumnya</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Pilih Saran Kopilot Berikutnya</translation>
+        <translation type="vanished">Pilih Saran Kopilot Berikutnya</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Terapkan (%1)</translation>
+        <translation type="vanished">Terapkan (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Terapkan Kata (%1)</translation>
+        <translation type="vanished">Terapkan Kata (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 dari %2</translation>
+        <translation type="vanished">%1 dari %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Minta Saran Kopilot</translation>
     </message>
@@ -530,25 +1321,25 @@ Kode telah disalin ke clipboard Anda.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Nonaktifkan Kopilot.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Aktifkan Kopilot</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Aktifkan Kopilot.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Alihkan Kopilot</translation>
     </message>
@@ -558,7 +1349,7 @@ Kode telah disalin ke clipboard Anda.</translation>
         <translation>Mengaktifkan integrasi Copilot.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>Jalur Node.js:</translation>
     </message>
@@ -580,13 +1371,12 @@ Kode telah disalin ke clipboard Anda.</translation>
         <translation>Jalur menuju %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>%1 jalur</translation>
+        <translation type="vanished">%1 jalur</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Pilih jalur ke %2 di plugin Copilot Neovim. Lihat %1 untuk instruksi instalasi.</translation>
@@ -607,97 +1397,100 @@ Kode telah disalin ke clipboard Anda.</translation>
         <translation>Secara otomatis meminta saran untuk posisi kursor teks saat ini setelah perubahan pada dokumen.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Gunakan Proksi</translation>
+        <translation type="vanished">Gunakan Proksi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Gunakan proksi</translation>
+        <translation type="vanished">Gunakan proksi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Gunakan proxy untuk terhubung ke server Copilot.</translation>
+        <translation type="vanished">Gunakan proxy untuk terhubung ke server Copilot.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Tuan Rumah Proksi</translation>
+        <translation type="vanished">Tuan Rumah Proksi</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Tuan rumah proksi:</translation>
+        <translation type="vanished">Tuan rumah proksi:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>Nama host server proksi.</translation>
+        <translation type="vanished">Nama host server proksi.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Pelabuhan Proksi</translation>
+        <translation type="vanished">Pelabuhan Proksi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Pelabuhan proksi:</translation>
+        <translation type="vanished">Pelabuhan proksi:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Port server proksi.</translation>
+        <translation type="vanished">Port server proksi.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Pengguna Proksi</translation>
+        <translation type="vanished">Pengguna Proksi</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Pengguna proksi:</translation>
+        <translation type="vanished">Pengguna proksi:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Nama pengguna untuk mengakses server proxy.</translation>
+        <translation type="vanished">Nama pengguna untuk mengakses server proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Simpan Kata Sandi Proksi</translation>
+        <translation type="vanished">Simpan Kata Sandi Proksi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Simpan kata sandi proksi</translation>
+        <translation type="vanished">Simpan kata sandi proksi</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Simpan kata sandi untuk mengakses server proxy. Kata sandi disimpan dengan tidak aman.</translation>
+        <translation type="vanished">Simpan kata sandi untuk mengakses server proxy. Kata sandi disimpan dengan tidak aman.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Kata Sandi Proksi</translation>
+        <translation type="vanished">Kata Sandi Proksi</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Kata sandi proksi:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">Kata sandi untuk server proxy.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>Path ke %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Proxy</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Kata sandi proksi:</translation>
+        <source>Proxy:</source>
+        <translation>Proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>Kata sandi untuk server proxy.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Server proxy yang digunakan untuk koneksi, sebagai http://host:port, atau http://user:password@host:port jika proxy memerlukan login.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Tolak Tidak Sah</translation>
     </message>
@@ -712,7 +1505,22 @@ Kode telah disalin ke clipboard Anda.</translation>
         <translation>Tolak sertifikat tidak sah dari server proxy. Mematikan ini merupakan risiko keamanan.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>URL GitHub Enterprise</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>URL GitHub Enterprise:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>URL server GitHub Enterprise Anda.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>Mengaktifkan %1 bergantung pada persetujuan dan kepatuhan Anda terhadap ketentuan %1 yang berlaku. Anda bertanggung jawab untuk mengetahui dan menerima persyaratan dan parameter penggunaan alat seperti %1. Hal ini mungkin termasuk, namun tidak terbatas pada, memastikan Anda memiliki hak untuk mengizinkan %1 mengakses kode Anda, serta memahami segala implikasi penggunaan Anda atas %1 dan saran yang dihasilkan (seperti hak cipta, keakuratan, dll.).</translation>
     </message>
@@ -735,33 +1543,27 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Membuat file terjemahan qm yang dapat digunakan oleh aplikasi dari file ts penerjemah</translation>
+        <translation type="vanished">Membuat file terjemahan qm yang dapat digunakan oleh aplikasi dari file ts penerjemah</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Terjemahan Rilis (lrilis)</translation>
+        <translation type="vanished">Terjemahan Rilis (lrilis)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>Ahli bahasa</translation>
+        <translation type="vanished">Ahli bahasa</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Menyinkronkan file ts penerjemah dengan kode program</translation>
+        <translation type="vanished">Menyinkronkan file ts penerjemah dengan kode program</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Perbarui Terjemahan (lupdate)</translation>
+        <translation type="vanished">Perbarui Terjemahan (lupdate)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Membuka file saat ini di Notepad</translation>
     </message>
@@ -771,9 +1573,9 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Edit dengan Notepad</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Teks</translation>
     </message>
@@ -789,7 +1591,7 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt Cepat</translation>
     </message>
@@ -804,42 +1606,41 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Pratinjau Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Membuka file saat ini di vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>Sunting dengan vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>Editor Biner</translation>
+        <translation type="vanished">Editor Biner</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+47" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+43" />
         <source>Target</source>
         <translation>Target</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+108" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Label</translation>
     </message>
     <message>
-        <location line="-107" />
-        <location line="+107" />
+        <location line="-129" />
+        <location line="+129" />
         <source>Command</source>
         <translation>Memerintah</translation>
     </message>
     <message>
-        <location line="-105" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+863" />
+        <location line="-127" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+933" />
         <source>Reset All</source>
         <translation>Atur Ulang Semua</translation>
     </message>
@@ -850,16 +1651,12 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+484" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+486" />
         <source>Reset</source>
         <translation>Mengatur ulang</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-7" />
         <source>Reset to default.</source>
         <translation>Atur ulang ke default.</translation>
     </message>
@@ -879,7 +1676,7 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Pemetaan Perintah</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+83" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Tindakan &amp; Tindakan Global dari Menu</translation>
     </message>
@@ -889,25 +1686,25 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Memicu suatu tindakan. Jika berasal dari menu, maka cocok dengan bagian mana pun dari hierarki menu, dipisahkan dengan &quot;&gt;&quot;. Misalnya &quot;sess def&quot; cocok dengan &quot;File &gt; Sessions &gt; Default&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+65" />
         <source>Existing files</source>
         <translation>File yang ada</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Kegagalan Pembuatan File</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Gagal membuka editor untuk &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[hanya baca]</translation>
     </message>
@@ -922,49 +1719,53 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>[tautan simbolis]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>Direktori proyek %1 berisi file yang tidak dapat ditimpa: 
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Editor Teks Biasa</translation>
+        <translation type="vanished">Editor Teks Biasa</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Tampilkan Bilah Sisi Kiri</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Sembunyikan Bilah Sisi Kiri</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Tampilkan Bilah Sisi Kanan</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Sembunyikan Sidebar Kanan</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Salin ke Papan Klip</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Jumlah</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Hapus Menu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+206" />
         <source>Proxy Authentication Required</source>
         <translation>Diperlukan Otentikasi Proksi</translation>
     </message>
@@ -974,12 +1775,32 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Jangan bertanya lagi.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Salin Nilai yang Diperluas</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>Lokasi QStandardPaths::%1 pada sistem file lokal.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Tidak ada tema yang ditemukan dalam instalasi.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Bantuan</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Tanggal saat ini (ISO).</translation>
     </message>
@@ -1010,10 +1831,12 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Direktori default yang dikonfigurasi untuk proyek.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Direktori yang terakhir dikunjungi dalam dialog file.</translation>
@@ -1050,26 +1873,33 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat pada Windows, kosong pada semua platform lain.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Jalur menuju %1 yang berjalan itu sendiri.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>Direktori tempat %1 menemukan sumber daya pra-instalnya.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>Direktori tempat %1 meletakkan data pengguna khusus.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Tanggal saat ini (string format QDate).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Waktu saat ini (string format QTime).</translation>
     </message>
@@ -1084,22 +1914,37 @@ Jika tidak, Anda perlu menentukan jalur ke file %2 dari plugin Copilot neovim.</
         <translation>Sebuah komentar.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Ubah string menjadi ASCII murni.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Ubah string menjadi sesuatu yang aman digunakan dalam path berkas.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Terminal yang dikonfigurasi di Environment &gt; Sytem.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Argumen yang diteruskan ke perintah terminal untuk dijalankan di terminal yang dikonfigurasi di Environment &gt; System.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1 &gt; %2 Preferensi...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Buat Folder</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Kesalahan File Pengaturan</translation>
     </message>
@@ -1128,52 +1973,48 @@ You will likely experience further problems using this instance of %3.</source>
 Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 ini.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1 mengumpulkan laporan kerusakan dengan tujuan memperbaiki bug. Untuk menonaktifkan fitur ini, buka %2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1 dapat mengumpulkan laporan kerusakan dengan tujuan memperbaiki bug. Untuk mengaktifkan fitur ini, buka %2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation>&gt; Preferensi &gt; Lingkungan &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Edit &gt; Preferensi &gt; Lingkungan &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 menggunakan Google Crashpad untuk mengumpulkan kerusakan dan mengirimkannya ke backend kami untuk diproses. Crashpad dapat menangkap konten sewenang-wenang dari memori proses yang mogok, termasuk informasi sensitif pengguna, URL, dan konten apa pun yang dipercaya oleh %1 pengguna. Namun laporan kerusakan yang dikumpulkan hanya digunakan untuk tujuan memperbaiki bug.</translation>
+        <translation type="vanished">%1 menggunakan Google Crashpad untuk mengumpulkan kerusakan dan mengirimkannya ke backend kami untuk diproses. Crashpad dapat menangkap konten sewenang-wenang dari memori proses yang mogok, termasuk informasi sensitif pengguna, URL, dan konten apa pun yang dipercaya oleh %1 pengguna. Namun laporan kerusakan yang dikumpulkan hanya digunakan untuk tujuan memperbaiki bug.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Informasi lebih lanjut:</translation>
+        <translation type="vanished">Informasi lebih lanjut:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>Ikhtisar Crashpad</translation>
+        <translation type="vanished">Ikhtisar Crashpad</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>%1 kebijakan keamanan</translation>
+        <translation type="vanished">%1 kebijakan keamanan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Desain</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Tambahkan file ke kontrol versi (%1)</translation>
     </message>
@@ -1183,7 +2024,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Tambahkan file ke kontrol versi (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Pengkodean Teks</translation>
     </message>
@@ -1198,7 +2039,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Pilih pengkodean untuk &quot;%1&quot;.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Muat ulang dengan Pengkodean</translation>
     </message>
@@ -1208,7 +2049,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Simpan dengan Pengkodean</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-348" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-353" />
         <source>Uncategorized</source>
         <translation>Tidak dikategorikan</translation>
     </message>
@@ -1218,12 +2059,12 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Tools yang akan muncul langsung di bawah menu External Tools.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Kategori Baru</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Alat Baru</translation>
     </message>
@@ -1239,15 +2080,15 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Teks yang berguna</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Lingkungan Sistem</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+474" />
-        <location line="+72" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+52" />
+        <location line="+62" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+646" />
+        <location line="+71" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+53" />
         <source>Add</source>
         <translation>Menambahkan</translation>
     </message>
@@ -1259,17 +2100,16 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+182" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+316" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+307" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+1" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+396" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+384" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Menghapus</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Hapus alat.</translation>
+        <translation type="vanished">Hapus alat.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1331,15 +2171,13 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+248" />
         <source>No changes to apply.</source>
-        <translation>Tidak ada perubahan untuk diterapkan.</translation>
+        <translation type="vanished">Tidak ada perubahan untuk diterapkan.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+98" />
         <source>Change...</source>
         <translation>Mengubah...</translation>
     </message>
@@ -1370,19 +2208,47 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Dapat dieksekusi:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+68" />
+        <source>Custom Language Models</source>
+        <translation>Model Bahasa Kustom</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Model baru&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Executable</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+656" />
+        <source>Executable:</source>
+        <translation>Executable:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Argumen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Argumen:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Direktori kerja:</translation>
     </message>
@@ -1393,7 +2259,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Lingkungan:</translation>
     </message>
@@ -1408,7 +2274,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Tambahkan Kategori</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>JALUR=C:\dev\bin;${PATH}</translation>
     </message>
@@ -1418,19 +2284,21 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>JALUR=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Alat Eksternal</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-10" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-26" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-20" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-55" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Jalur:</translation>
     </message>
@@ -1481,6 +2349,11 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Status version control:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Dapat dibaca:</translation>
     </message>
@@ -1501,18 +2374,18 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Tautan simbolis:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>Tidak dikenal</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>jendela (CRLF)</translation>
     </message>
@@ -1527,7 +2400,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Mac (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Campur aduk</translation>
@@ -1548,7 +2421,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Belum diartikan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Pilih templat:</translation>
     </message>
@@ -1558,8 +2431,8 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Memilih...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+903" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+955" />
         <source>Projects</source>
         <translation>Proyek</translation>
     </message>
@@ -1579,7 +2452,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>%1 Templat</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Platform independen</translation>
     </message>
@@ -1599,7 +2472,7 @@ Anda mungkin akan mengalami masalah lebih lanjut saat menggunakan instance %3 in
         <translation>Buka file &quot;%1&quot; dengan:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Timpa File yang Ada</translation>
     </message>
@@ -1615,8 +2488,8 @@ Apakah Anda ingin menimpanya?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2079" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+438" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2210" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+447" />
         <source>Make Writable</source>
         <translation>Jadikan Dapat Ditulis</translation>
     </message>
@@ -1727,7 +2600,7 @@ Do you want to check them out now?</source>
 Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+32" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+29" />
         <source>The following files have unsaved changes:</source>
         <translation>File berikut memiliki perubahan yang belum disimpan:</translation>
     </message>
@@ -1752,10 +2625,9 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Ja&amp;ngan Simpan</translation>
     </message>
     <message>
-        <location line="+76" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
+        <location line="+78" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2060" />
         <source>&amp;Save</source>
         <translation>&amp;Menyimpan</translation>
     </message>
@@ -1787,7 +2659,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Menyimpan</translation>
     </message>
@@ -1802,17 +2674,90 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Simpan yang Dipilih</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+561" />
         <source>Sort categories</source>
         <translation>Urutkan kategori</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Terapkan semua perubahan dan kembali ke mode sebelumnya.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Terapkan semua perubahan dan tetap di sini.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Buang semua perubahan dan tetap di sini.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Buang semua perubahan dan kembali ke mode sebelumnya.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Perubahan yang Belum Diterapkan</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Ada perubahan yang belum diterapkan. Terapkan sekarang?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Terapkan Perubahan</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Halaman sebelumnya memuat perubahan yang belum disimpan.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Terapkan Perubahan yang Belum Disimpan</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Buang Perubahan yang Belum Disimpan</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Kembali ke Halaman Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Ada perubahan yang belum disimpan.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Tetap di Mode Pengaturan</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+319" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Preferensi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-392" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-412" />
         <source>Invalid key sequence.</source>
         <translation>Urutan kunci tidak valid.</translation>
     </message>
@@ -1833,18 +2778,18 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Catatan</translation>
     </message>
     <message>
-        <location line="-155" />
-        <location line="+153" />
+        <location line="-176" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Urutan kunci:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Gunakan &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, dan &quot;Shift&quot; untuk tombol pengubah. Gunakan &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, dan seterusnya, untuk kunci khusus. Gabungkan tombol individual dengan &quot;+&quot;, dan gabungkan beberapa pintasan ke urutan pintasan dengan &quot;,&quot;. Misalnya, jika pengguna harus menahan tombol pengubah Ctrl dan Shift sambil menekan Escape, lalu lepaskan dan tekan A, masukkan &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
@@ -1864,25 +2809,25 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Urutan kunci memiliki potensi konflik. &lt;a href=&quot;#conflicts&quot;&gt;Tampilkan.&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+78" />
         <source>Keyboard Shortcuts</source>
         <translation>Pintasan Papan Ketik</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Jalan pintas</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+160" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Impor Skema Pemetaan Keyboard</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Skema Pemetaan Keyboard (*.kms)</translation>
     </message>
@@ -1892,34 +2837,33 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Ekspor Skema Pemetaan Keyboard</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+220" />
         <source>Keyboard</source>
         <translation>papan ketik</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Tidak dapat menyimpan file.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1223" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1301" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Kesalahan Berkas</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Kesalahan saat menyimpan file: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Semua File (*.*)</translation>
@@ -1946,27 +2890,27 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Simpan File Sebagai</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+162" />
         <source>Open File</source>
         <translation>Buka Berkas</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>Tidak dapat memuat ulang %1</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Save A&amp;ll</source>
         <translation>Simpan A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>Sunting</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;tidak ada dokumen&gt;</translation>
     </message>
@@ -1976,77 +2920,76 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Tidak ada dokumen yang dipilih.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2301" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+251" />
         <source>Copy Full Path</source>
         <translation>Salin Jalur Lengkap</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Salin Jalur dan Nomor Baris</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Salin Nama File</translation>
     </message>
     <message>
-        <location line="+2" />
-        <location line="+1737" />
+        <location line="-856" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
         <source>Save &amp;As...</source>
         <translation>Simpan &amp;Sebagai...</translation>
     </message>
     <message>
-        <location line="-1736" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location line="-1796" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Simpan Tanpa Pemformatan</translation>
+    </message>
+    <message>
+        <location line="-1790" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Kembalikan ke Tersimpan</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Menutup</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Tutup Semua</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Tutup Lainnya</translation>
     </message>
     <message>
-        <location line="-1757" />
-        <location line="+124" />
+        <location line="-1738" />
         <source>Close All Except Visible</source>
         <translation>Tutup Semua Kecuali Terlihat</translation>
     </message>
     <message>
-        <location line="-119" />
         <source>Properties...</source>
-        <translation>Properti...</translation>
+        <translation type="vanished">Properti...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>Pin</translation>
+        <translation type="vanished">Pin</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="-77" />
         <source>Revert File to Saved</source>
         <translation>Kembalikan File ke Tersimpan</translation>
     </message>
@@ -2065,7 +3008,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+68" />
         <source>Previous Open Document in History</source>
         <translation>Dokumen Terbuka Sebelumnya dalam Sejarah</translation>
     </message>
@@ -2075,19 +3018,53 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Dokumen Terbuka Berikutnya dalam Sejarah</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-343" />
+        <location line="+11" />
+        <source>Previous Tab</source>
+        <translation>Tab Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Tab Berikutnya</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Tutup Semua Tab</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Tutup Tab Lainnya</translation>
+    </message>
+    <message>
+        <location line="-2583" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-352" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Kembali</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>Maju</translation>
     </message>
     <message>
         <location line="+11" />
+        <source>Open Previous Document</source>
+        <translation>Buka Dokumen Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Buka Dokumen Berikutnya</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Reopen Last Closed Document</source>
         <translation>Buka kembali Dokumen yang Terakhir Ditutup</translation>
     </message>
@@ -2098,7 +3075,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-312" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7" />
@@ -2139,12 +3116,12 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Pergi ke Pemisahan atau Jendela Berikutnya</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-218" />
         <source>Ad&amp;vanced</source>
         <translation>&amp;Canggih</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Dokumen saat ini</translation>
     </message>
@@ -2159,7 +3136,7 @@ Apakah Anda ingin memeriksanya sekarang?</translation>
         <translation>Koordinat Y dari sudut kiri atas editor saat ini, relatif terhadap layar.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Lanjutkan Membuka File Teks Besar?</translation>
     </message>
@@ -2173,22 +3150,21 @@ Continue?</source>
 Melanjutkan?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Tidak dapat membuka &quot;%1&quot;: Tidak dapat membuka file bertipe &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Tidak dapat membuka &quot;%1&quot; untuk membaca. Mungkin file tersebut tidak ada atau Anda tidak memiliki izin untuk membukanya.</translation>
+        <translation type="vanished">Tidak dapat membuka &quot;%1&quot; untuk membaca. Mungkin file tersebut tidak ada atau Anda tidak memiliki izin untuk membukanya.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Tidak dapat membuka &quot;%1&quot;: Kesalahan tidak diketahui.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Peringatan:&lt;/b&gt; File ini belum dibuka di %1.</translation>
     </message>
@@ -2203,7 +3179,7 @@ Melanjutkan?</translation>
         <translation>&lt;b&gt;Peringatan:&lt;/b&gt; Anda mengubah file hanya-baca.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+26" />
         <source>&amp;Save %1</source>
         <translation>&amp;Hemat %1</translation>
     </message>
@@ -2211,6 +3187,11 @@ Melanjutkan?</translation>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>Hemat %1 &amp;Sebagai...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>Simpan %1 Tanpa Pemformatan</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2223,7 +3204,7 @@ Melanjutkan?</translation>
         <translation>Muat ulang %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>Tutup %1</translation>
     </message>
@@ -2233,7 +3214,7 @@ Melanjutkan?</translation>
         <translation>Tutup Semua Kecuali %1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Tidak Dapat Membuka File</translation>
     </message>
@@ -2243,7 +3224,7 @@ Melanjutkan?</translation>
         <translation>Tidak dapat membuka file untuk diedit dengan VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Anda akan kehilangan perubahan saat ini jika Anda melanjutkan mengembalikan %1.</translation>
     </message>
@@ -2254,9 +3235,12 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-212" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>Membatalkan</translation>
     </message>
@@ -2266,7 +3250,7 @@ Melanjutkan?</translation>
         <translation>Batalkan &amp;&amp; &amp;Diff</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>Tutup &quot;%1&quot;</translation>
     </message>
@@ -2276,17 +3260,15 @@ Melanjutkan?</translation>
         <translation>Tutup Penyunting</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Tutup Semua Kecuali &quot;%1&quot;</translation>
+        <translation type="vanished">Tutup Semua Kecuali &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Tutup Editor Lainnya</translation>
+        <translation type="vanished">Tutup Editor Lainnya</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+64" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>Lepas sematan &quot;%1&quot;</translation>
     </message>
@@ -2301,13 +3283,18 @@ Melanjutkan?</translation>
         <translation>Penyunting Pin</translation>
     </message>
     <message>
-        <location line="+363" />
+        <location line="+27" />
+        <source>Diff Against Current File</source>
+        <translation>Diff Terhadap Berkas Saat Ini</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Membuka Berkas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Buka Dokumen</translation>
@@ -2328,22 +3315,26 @@ Melanjutkan?</translation>
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Penyunting Sistem</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>Tidak dapat membuka URL %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Seret untuk menyeret dokumen di antara pemisahan</translation>
+        <translation type="vanished">Seret untuk menyeret dokumen di antara pemisahan</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Seret untuk membuka dokumen di split lain.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Tutup Dokumen</translation>
     </message>
@@ -2358,17 +3349,17 @@ Melanjutkan?</translation>
         <translation>File dapat ditulis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>Tidak dapat menemukan executable untuk &quot;%1&quot; (diperluas &quot;%2&quot;)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>Memulai alat eksternal &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>&quot;%1&quot; selesai</translation>
     </message>
@@ -2378,22 +3369,22 @@ Melanjutkan?</translation>
         <translation>&quot;%1&quot; selesai dengan kesalahan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Luar</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>Kesalahan saat mengurai alat eksternal %1: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Kesalahan: Alat eksternal di %1 memiliki id duplikat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Gagal meluncurkan browser file</translation>
     </message>
@@ -2418,7 +3409,7 @@ Melanjutkan?</translation>
 %2</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Perintah untuk penjelajah file tidak disetel.</translation>
     </message>
@@ -2448,12 +3439,17 @@ Melanjutkan?</translation>
         <translation>Tampilkan di Penemu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Tampilkan di File Manager</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>Tampilkan Folder Berisi</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Buka Prompt Perintah Di Sini</translation>
     </message>
@@ -2476,23 +3472,36 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>Gagal menghapus file &quot;%1&quot;.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>Gagal menghapus berkas &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>Tidak dapat mendekode konten.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>Gagal mengganti nama include guard di berkas &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">Gagal menghapus file &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Gagal mengganti nama penjaga penyertaan dalam file &quot;%1&quot;.</translation>
+        <translation type="vanished">Gagal mengganti nama penjaga penyertaan dalam file &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>%n kejadian diganti.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Temukan/Ganti</translation>
     </message>
@@ -2509,8 +3518,8 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Canggih...</translation>
     </message>
@@ -2520,7 +3529,7 @@ Melanjutkan?</translation>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-174" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-176" />
         <source>Find</source>
         <translation>Menemukan</translation>
     </message>
@@ -2541,19 +3550,19 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Mengganti</translation>
     </message>
     <message>
-        <location line="-222" />
-        <location line="+237" />
+        <location line="-224" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Ganti &amp;&amp; Temukan</translation>
     </message>
     <message>
-        <location line="-232" />
-        <location line="+261" />
+        <location line="-234" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Ganti Semua</translation>
     </message>
@@ -2632,8 +3641,7 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+28" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-214" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+108" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-350" />
         <source>Case Sensitive</source>
         <translation>Peka Huruf Besar-kecil</translation>
     </message>
@@ -2664,12 +3672,12 @@ Melanjutkan?</translation>
         <translation>Ganti dengan...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Istilah pencarian kosong.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Mencari</translation>
     </message>
@@ -2679,7 +3687,7 @@ Melanjutkan?</translation>
         <translation>Cari &amp;&amp; &amp;Ganti</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>&amp;Telusuri untuk:</translation>
     </message>
@@ -2692,6 +3700,16 @@ Melanjutkan?</translation>
         <location line="+3" />
         <source>Whole words o&amp;nly</source>
         <translation>&amp;Seluruh kata saja</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>Abaikan berkas biner</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Abaikan berkas yang dihasilkan</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2731,7 +3749,12 @@ Melanjutkan?</translation>
     <message>
         <location line="+2" />
         <source>None</source>
+        <comment>No find flags</comment>
         <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Tidak ada</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2808,7 +3831,7 @@ Melanjutkan?</translation>
         <translation>Tidak ada kecocokan yang ditemukan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+124" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+128" />
         <location line="+501" />
         <source>Expand All</source>
         <translation>Perluas Semua</translation>
@@ -2816,7 +3839,7 @@ Melanjutkan?</translation>
     <message>
         <location line="-487" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-44" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Tunjukkan Jalur yang Terkait dengan Proyek Aktif</translation>
     </message>
@@ -2843,7 +3866,7 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-194" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-197" />
         <source>Collapse All</source>
         <translation>Ciutkan Semua</translation>
     </message>
@@ -2858,7 +3881,7 @@ Melanjutkan?</translation>
         <translation>Sejarah:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Tampilkan File Tersembunyi</translation>
     </message>
@@ -2873,7 +3896,7 @@ Melanjutkan?</translation>
         <translation>Tampilkan Folder di Atas</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+43" />
         <source>Synchronize with Editor</source>
         <translation>Sinkronisasi dengan Editor</translation>
     </message>
@@ -2883,33 +3906,42 @@ Melanjutkan?</translation>
         <translation>Sinkronisasi Direktori Root dengan Editor</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Berkas Baru</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Folder Baru</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Hapus Folder...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>File Baru...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-386" />
         <source>Open &quot;%1&quot;</source>
         <translation>Buka &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Hapus Folder</translation>
+        <translation type="vanished">Hapus Folder</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+102" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+99" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2943,17 +3975,16 @@ Melanjutkan?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+589" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+613" />
         <source>Options</source>
         <translation>Pilihan</translation>
     </message>
     <message>
-        <location line="+114" />
         <source>Add New...</source>
-        <translation>Tambahkan Baru...</translation>
+        <translation type="vanished">Tambahkan Baru...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+128" />
         <source>Rename...</source>
         <translation>Ganti nama...</translation>
     </message>
@@ -2963,7 +3994,7 @@ Melanjutkan?</translation>
         <translation>Menghapus...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-86" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+210" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Tampilkan pintasan keyboard di menu konteks (default: %1)</translation>
     </message>
@@ -2978,7 +4009,7 @@ Melanjutkan?</translation>
         <translation>mati</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Ganti kursor untuk tampilan</translation>
     </message>
@@ -2990,25 +4021,54 @@ If the system cursors for resizing views are not displayed properly, you can use
 Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar, Anda dapat menggunakan kursor yang disediakan oleh %1.</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="-69" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Atur Ulang Dialog Jangan Tanya/Tampilkan Lagi</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Atur ulang ke default.</translation>
+        <translation type="vanished">Atur ulang ke default.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>Tema:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>Bahasa:</translation>
+    </message>
+    <message>
+        <location line="-121" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>Aktifkan kembali peringatan yang disembunyikan dengan memilih &quot;Jangan Tampilkan Lagi&quot; (misalnya, highlighter hilang).</translation>
+    </message>
+    <message>
+        <location line="+78" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Utamakan info bar bergaya banner daripada pop-up</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Gunakan editor bertab</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Tampilkan tombol OK dan Batal di mode Preferensi</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Codec teks untuk tool:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Warna:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3031,47 +4091,51 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Pembulatan untuk 0,75 ke atas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Jangan Bulat</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>Kebijakan pembulatan DPI:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Variabel lingkungan berikut ditetapkan dan dapat memengaruhi perilaku penskalaan UI %1:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Lingkungan memengaruhi perilaku penskalaan UI.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Ukuran tab Terminal Serial:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>User Interface</source>
-        <translation>Antarmuka Pengguna</translation>
+        <translation type="vanished">Antarmuka Pengguna</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Bahasa Sistem&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+224" />
         <source>The language change will take effect after restart.</source>
         <translation>Perubahan bahasa akan berlaku setelah restart.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Gaya toolbar:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Kompak</translation>
     </message>
@@ -3081,91 +4145,92 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Santai</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>Perubahan kebijakan pembulatan DPI akan berlaku setelah dimulai ulang.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Antarmuka</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+53" />
         <source>Environment</source>
         <translation>Lingkungan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>Gagal mengatur izin.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>Tidak dapat membuat direktori %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1429" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1295" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Konfigurasikan...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Buka dialog Preferensi.</translation>
+        <translation type="vanished">Buka dialog Preferensi.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Buka dialog Opsi.</translation>
+        <translation type="vanished">Buka dialog Opsi.</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+415" />
         <source>Restart Required</source>
         <translation>Diperlukan Mulai Ulang</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>Nanti</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Mulai Ulang Sekarang</translation>
     </message>
     <message>
-        <location line="+378" />
+        <location line="+451" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Berdasarkan Qt %1 (%2, %3)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;Dari revisi %1&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;Dibangun pada %1 %2&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;Dibangun pada %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Hak Cipta 2008-%6 %7. Hak cipta dilindungi undang-undang.&lt;br/&gt;&lt;br/&gt;Program ini disediakan apa adanya tanpa jaminan dalam bentuk apa pun, termasuk jaminan desain, kelayakan untuk diperdagangkan, dan kesesuaian untuk tujuan tertentu.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Hak Cipta 2008-%6 %7. Hak cipta dilindungi undang-undang.&lt;br/&gt;&lt;br/&gt;Program ini disediakan apa adanya tanpa jaminan dalam bentuk apa pun, termasuk jaminan desain, kelayakan untuk diperdagangkan, dan kesesuaian untuk tujuan tertentu.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Logo Qt serta Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® dan Qt Embedded® adalah merek dagang terdaftar dari The Qt Company Ltd.</translation>
+        <translation type="vanished">Logo Qt serta Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® dan Qt Embedded® adalah merek dagang terdaftar dari The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+325" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Keluar dari %1?</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+89" />
         <source>&amp;File</source>
         <translation>&amp;Mengajukan</translation>
     </message>
@@ -3175,12 +4240,12 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>&amp;Sunting</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+29" />
         <source>&amp;View</source>
         <translation>&amp;Melihat</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>&amp;Tools</source>
         <translation>&amp;Peralatan</translation>
     </message>
@@ -3221,7 +4286,12 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>&amp;Buka Berkas...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Buka File...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Buka File &amp;Dengan...</translation>
     </message>
@@ -3301,7 +4371,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Pilih &amp;Semua</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Pergi ke Jalur...</translation>
     </message>
@@ -3321,7 +4391,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Perkecil</translation>
     </message>
@@ -3337,7 +4407,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Ctrl+Shift+-</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Ukuran Asli</translation>
     </message>
@@ -3352,7 +4422,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Tampilkan Log...</translation>
     </message>
@@ -3363,7 +4433,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
     </message>
     <message>
         <location line="+11" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+167" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+207" />
         <source>Minimize</source>
         <translation>Memperkecil</translation>
     </message>
@@ -3379,7 +4449,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Layar Penuh</translation>
     </message>
@@ -3408,7 +4478,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Sembunyikan Bilah Menu</translation>
     </message>
@@ -3418,7 +4488,8 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Ini akan menyembunyikan bilah menu sepenuhnya. Anda dapat menampilkannya lagi dengan mengetik %1.&lt;br&gt;&lt;br&gt;Atau, picu tindakan &quot;%2&quot; dari filter pencari lokasi &quot;%3&quot; (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Tampilan</translation>
     </message>
@@ -3448,42 +4519,85 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Kontak...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Gaya Pemilih Mode Siklus</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Gaya Pemilih Mode</translation>
+        <translation type="vanished">Gaya Pemilih Mode</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Sembunyikan</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Mode</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Ikon dan Teks</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Hanya Ikon</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Tersembunyi</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>Tampilkan %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-70" />
         <source>Version:</source>
         <translation>Versi:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Ubah Log</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="-2309" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Buka Preferensi.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>Tidak dapat menemukan executable %1 di %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>Dibuat pada %1 %2 berdasarkan Qt %3 (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>Logo Qt, logo axivion stopping software erosion, logo Qt Group, serta Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® adalah merek dagang terdaftar milik The Qt Company Ltd. atau anak perusahaannya.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 adalah perangkat lunak bebas, dan Anda dipersilakan mendistribusikannya kembali dengan &lt;a href=&quot;%2&quot;&gt;ketentuan tertentu&lt;/a&gt;. Untuk beberapa komponen, ketentuan yang berbeda mungkin berlaku.</translation>
+    </message>
+    <message>
+        <location line="+1450" />
         <source>Contact</source>
         <translation>Kontak</translation>
     </message>
@@ -3493,22 +4607,42 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>&lt;p&gt;Pengembang Qt Creator dapat dihubungi di milis Qt Creator:&lt;/p&gt;%1&lt;p&gt;atau saluran #qt-creator di Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Pelacak bug kami terletak di %3.&lt;/p&gt;&lt;p&gt;Silakan gunakan %4 untuk potongan teks yang lebih besar.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Belum diimplementasikan</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>File dipulihkan dari salinan yang disimpan otomatis. Pilih Simpan untuk mengonfirmasi atau Kembalikan ke Tersimpan untuk membuang perubahan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>Buka dengan VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diff &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>Log &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>Anotasi &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>Pabrik dengan id=&quot;%1&quot; sudah terdaftar. Menghapus.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Muat Ulang Semua Penyihir</translation>
     </message>
@@ -3516,6 +4650,11 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Periksa Status Penyihir</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Lainnya</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -3528,7 +4667,7 @@ Jika kursor sistem untuk mengubah ukuran tampilan tidak ditampilkan dengan benar
         <translation>Tidak dapat mengonversi hasil &quot;%1&quot; menjadi string.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Evaluasi pernyataan JavaScript sederhana.&lt;br&gt;Karakter literal &apos;}&apos; harus di-escape sebagai &quot;\}&quot;, karakter &apos;\&apos; harus di-escape sebagai &quot;\\&quot;, dan &quot;%{&quot; harus di-escape sebagai &quot;%\{&quot;.</translation>
     </message>
@@ -3568,17 +4707,17 @@ Untuk melakukannya, ketikkan pintasan ini dan spasi di bidang entri Pencari Loka
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-416" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-42" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-406" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Menambahkan...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Sunting...</translation>
     </message>
@@ -3589,7 +4728,7 @@ Untuk melakukannya, ketikkan pintasan ini dan spasi di bidang entri Pencari Loka
         <translation>Pilih Direktori</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Jalankan Perintah Khusus</translation>
     </message>
@@ -3599,7 +4738,7 @@ Untuk melakukannya, ketikkan pintasan ini dan spasi di bidang entri Pencari Loka
         <translation>Menjalankan perintah sewenang-wenang dengan argumen. Perintah tersebut dicari di variabel lingkungan PATH jika diperlukan. Perhatikan bahwa perintah dijalankan secara langsung, bukan di shell.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Perintah sebelumnya masih berjalan (&quot;%1&quot;). 
@@ -3611,7 +4750,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Matikan Proses Sebelumnya?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>Tidak dapat menemukan eksekusi untuk &quot;%1&quot;.</translation>
     </message>
@@ -3666,7 +4805,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Buat Direktori</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+43" />
         <source>Files in File System</source>
         <translation>File dalam Sistem File</translation>
     </message>
@@ -3676,17 +4815,17 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Membuka file yang diberikan oleh jalur relatif ke dokumen saat ini, atau jalur absolut. &quot;~&quot; mengacu pada direktori home Anda. Anda mempunyai pilihan untuk membuat file jika belum ada.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+136" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>Buat dan Buka File &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>Buat Direktori &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Sertakan file tersembunyi</translation>
     </message>
@@ -3696,7 +4835,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Menyaring:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Konfigurasi Filter</translation>
     </message>
@@ -3721,7 +4860,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Sertakan filter saat tidak menggunakan awalan untuk penelusuran.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+133" />
         <source>The evaluation was interrupted.</source>
         <translation>Evaluasi terhenti.</translation>
     </message>
@@ -3741,7 +4880,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Mesin dibatalkan setelah batas waktu habis.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+31" />
         <source>Evaluate JavaScript</source>
         <translation>Evaluasi JavaScript</translation>
     </message>
@@ -3756,13 +4895,23 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Setel Ulang Mesin</translation>
     </message>
     <message>
-        <location line="+40" />
-        <location line="+4" />
+        <location line="+43" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Salin ke papan klip: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+6" />
+        <source>Ignore Generated Files</source>
+        <translation>Abaikan Berkas yang Dihasilkan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Abaikan berkas yang dihasilkan saat menggunakan filter terkait proyek.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>Pencarian Web</translation>
     </message>
@@ -3782,12 +4931,12 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Memicu pencarian di pelacak bug Qt.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>Menemukan...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Buka dokumen&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Buka File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Contoh &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; File Terbaru&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tarik dan letakkan file di sini&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3802,7 +4951,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- ketik &lt;code&gt;%1&amp;lt;spasi&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; untuk melompat ke definisi fungsi&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Memperbarui Cache Pencari Lokasi</translation>
     </message>
@@ -3812,12 +4961,12 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>pencari lokasi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Filter yang tersedia</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-61" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Interval penyegaran:</translation>
     </message>
@@ -3827,17 +4976,23 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Filter pencari lokasi yang tidak segera memperbarui data cache, seperti filter direktori kustom, memperbaruinya setelah interval waktu ini.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation>menit</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Gunakan Tab Completion</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>Filter pencari lokasi menunjukkan jalur relatif ke proyek aktif jika memungkinkan.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+42" />
         <source>Files in Directories</source>
         <translation>File di Direktori</translation>
     </message>
@@ -3848,12 +5003,13 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Templat URL</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-2" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>Nama</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Awalan</translation>
     </message>
@@ -3873,17 +5029,17 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Kebiasaan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-10" />
         <source>Open as Centered Popup</source>
         <translation>Buka sebagai Popup Terpusat</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-21" />
         <source>Refresh</source>
         <translation>Menyegarkan</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+99" />
         <source>Type to locate</source>
         <translation>Ketik untuk mencari lokasi</translation>
     </message>
@@ -3898,7 +5054,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Beralih ke dokumen terbuka.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-145" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-141" />
         <source>Locator query string.</source>
         <translation>String kueri pencari lokasi.</translation>
     </message>
@@ -3933,7 +5089,7 @@ Apakah Anda ingin membunuhnya?</translation>
         <translation>Pencari Lokasi: Terjadi kesalahan saat menjalankan &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+67" />
         <source>Sort results</source>
         <translation>Urutkan hasil</translation>
     </message>
@@ -3965,7 +5121,7 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>URL:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-942" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-982" />
         <source>Entry is missing a logging category name.</source>
         <translation>Entri tidak memiliki nama kategori logging.</translation>
     </message>
@@ -3980,7 +5136,12 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Tingkat tidak valid: %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Kategori logging ini menggunakan pendekatan non-statis yang tidak dianjurkan dan tidak dapat ditangani oleh penampil logging.</translation>
+    </message>
+    <message>
+        <location line="+85" />
         <location line="+88" />
         <source>Category</source>
         <translation>Kategori</translation>
@@ -4022,7 +5183,7 @@ Klik dua kali untuk mengedit item.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-424" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-414" />
         <source>Type</source>
         <translation>Jenis</translation>
     </message>
@@ -4038,7 +5199,7 @@ Klik dua kali untuk mengedit item.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -4046,8 +5207,8 @@ Klik dua kali untuk mengedit item.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>Jernih</translation>
     </message>
@@ -4133,12 +5294,12 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Pembaruan dari Preset...</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Save Logs As</source>
         <translation>Simpan Log Sebagai</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Gagal menulis log ke &quot;%1&quot;.</translation>
     </message>
@@ -4148,17 +5309,17 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Gagal membuka file &quot;%1&quot; untuk menulis log.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Save Enabled Categories As...</source>
         <translation>Simpan Kategori yang Diaktifkan Sebagai...</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Gagal menulis file preset &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Muat Kategori yang Diaktifkan Dari</translation>
     </message>
@@ -4178,12 +5339,12 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Format file prasetel yang tidak terduga.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Terminal Seri</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Bungkus Teks</translation>
     </message>
@@ -4313,7 +5474,7 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Kesalahan internal: Jenis tidak valid</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>Tipe MIME</translation>
     </message>
@@ -4323,41 +5484,41 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Penangan</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Reset semua definisi tipe MIME ke defaultnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>Setel Ulang Jenis MIME</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Setel ulang pengendali yang ditetapkan untuk semua definisi tipe MIME ke default.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>Setel Ulang Penangan</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>Pola:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Daftar nama file wildcard yang dipisahkan titik koma.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Tajuk Ajaib</translation>
     </message>
@@ -4372,51 +5533,63 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Prioritas</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Jenis MIME Terdaftar</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Detail</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Perubahan akan berlaku setelah restart.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>Jenis MIME</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>Beralih ke mode &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>Aktifkan %1 Tampilan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Tampilkan Garis yang Tidak Cocok</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Tampilkan {} baris se&amp;belumnya</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Tampilkan {} baris se&amp;lanjutnya</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Saring keluaran...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Maksimalkan</translation>
     </message>
@@ -4426,33 +5599,35 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Keluaran</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+97" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Barang Berikutnya</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Barang Sebelumnya</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>&amp;Keluaran</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Atur Ulang ke Default</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>keluaran.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Perbesar: %1%</translation>
     </message>
@@ -4461,21 +5636,37 @@ Klik dua kali untuk mengedit item.</translation>
         <source>Save Contents...</source>
         <translation>Simpan Isi...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>Salin Konten ke Scratch Buffer</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>Gagal membuka editor untuk &quot;%1&quot;.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>%n karakter dilewati karena batas pengaturan</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>%n karakter dihilangkan karena pengaturan Output Aplikasi</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Membuang keluaran tertunda dalam jumlah berlebihan.]</translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>File Teks (*.txt);;Semua file (*)</translation>
     </message>
@@ -4561,17 +5752,17 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Plugin yang Terpasang</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Perubahan plugin akan berlaku setelah restart.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>Kesalahan Plugin %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Sumber</translation>
     </message>
@@ -4586,82 +5777,133 @@ Klik dua kali untuk mengedit item.</translation>
         <translation>Berkas tidak ada.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Plugin memerlukan versi %1 (%2) yang tidak kompatibel.</translation>
+        <translation type="vanished">Plugin memerlukan versi %1 (%2) yang tidak kompatibel.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>Tidak menemukan %1 plugin.</translation>
+        <translation type="vanished">Tidak menemukan %1 plugin.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+82" />
         <source>Check Archive</source>
         <translation>Periksa Arsip</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Canceled.</source>
         <translation>Dibatalkan.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+44" />
         <source>Checking archive...</source>
         <translation>Memeriksa arsip...</translation>
     </message>
     <message>
-        <location line="+21" />
         <source>There was an error while unarchiving.</source>
-        <translation>Terjadi kesalahan saat membatalkan pengarsipan.</translation>
+        <translation type="vanished">Terjadi kesalahan saat membatalkan pengarsipan.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-18" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Arsip baik-baik saja.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>Install Location</source>
-        <translation>Instal Lokasi</translation>
+        <translation type="vanished">Instal Lokasi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Pilih lokasi pemasangan.</translation>
+        <translation type="vanished">Pilih lokasi pemasangan.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Plugin pengguna</translation>
+        <translation type="vanished">Plugin pengguna</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Plugin akan tersedia untuk semua instalasi %1 yang kompatibel, namun hanya untuk pengguna saat ini.</translation>
+        <translation type="vanished">Plugin akan tersedia untuk semua instalasi %1 yang kompatibel, namun hanya untuk pengguna saat ini.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>%1 instalasi</translation>
+        <translation type="vanished">%1 instalasi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Plugin hanya akan tersedia untuk instalasi %1 ini, namun untuk semua pengguna yang dapat mengaksesnya.</translation>
+        <translation type="vanished">Plugin hanya akan tersedia untuk instalasi %1 ini, namun untuk semua pengguna yang dapat mengaksesnya.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Ringkasan</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>&quot;%1&quot; akan dipasang ke &quot;%2&quot;.</translation>
+        <translation type="vanished">&quot;%1&quot; akan dipasang ke &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-225" />
+        <source>Plugin is already installed.</source>
+        <translation>Plugin sudah terinstal.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>Plugin dengan ID &quot;%1&quot; sudah terinstal.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>Tidak ada plugin dengan ID &quot;%1&quot; yang terinstal.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Plugin gagal menyelesaikan dependensi:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Plugin tidak ditemukan.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>Ditemukan lebih dari satu plugin.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Archive extracted successfully.</source>
+        <translation>Arsip berhasil diekstrak.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>Terjadi kesalahan saat mengekstrak arsip: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Muat plugin segera</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1 akan diinstal ke %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Terima Syarat dan Ketentuan</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Plugin %1 mengharuskan Anda menerima syarat dan ketentuan berikut:</translation>
+    </message>
+    <message>
+        <location line="+34" />
         <source>Overwrite File</source>
         <translation>Timpa File</translation>
     </message>
@@ -4677,61 +5919,79 @@ Klik dua kali untuk mengedit item.</translation>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Gagal Menulis File</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Gagal membuat direktori &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Gagal menulis file &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Instal Plugin</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Menyalin berkas plugin...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Menyalin
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Gagal Menyalin File Plugin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Tampilkan Detail...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>Alihkan Detail Kemajuan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>Proses</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-271" />
         <source>Bytes</source>
-        <translation>Byte</translation>
+        <translation type="vanished">Byte</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>KiB</source>
-        <translation>KiB</translation>
+        <translation type="vanished">KiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>MiB</translation>
+        <translation type="vanished">MiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>GiB</translation>
+        <translation type="vanished">GiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>TiB</translation>
+        <translation type="vanished">TiB</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+67" />
         <source>Patch command:</source>
         <translation>Perintah tambalan:</translation>
     </message>
@@ -4783,7 +6043,12 @@ asalkan mereka tidak dimodifikasi sebelum pemfaktoran ulang.</translation>
         <translation>Secara otomatis membebaskan sumber daya dokumen lama yang tidak terlihat dan tidak diubah. Mereka tetap terlihat dalam daftar dokumen terbuka.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Laporan crash disimpan di &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Files to keep open:</source>
         <translation>File yang harus tetap dibuka:</translation>
     </message>
@@ -4803,7 +6068,12 @@ asalkan mereka tidak dimodifikasi sebelum pemfaktoran ulang.</translation>
         <translation>MB</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+7" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>Jumlah &quot;File Terbaru&quot;:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Always Ask</source>
         <translation>Selalu Bertanya</translation>
     </message>
@@ -4828,120 +6098,160 @@ asalkan mereka tidak dimodifikasi sebelum pemfaktoran ulang.</translation>
         <translation>Minta konfirmasi sebelum keluar</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-43" />
         <source>Enable crash reporting</source>
         <translation>Aktifkan pelaporan kerusakan</translation>
     </message>
     <message>
+        <location line="-132" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabel&lt;/th&gt;&lt;th&gt;Diperluas menjadi&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;direktori berkas saat ini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nama berkas (dengan path lengkap)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;nama berkas (tanpa path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Pemisah variabel:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>Gunakan antarmuka D-Bus freedesktop.org file manager</translation>
+    </message>
+    <message>
         <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Menggunakan &lt;a href=&quot;%1&quot;&gt;antarmuka D-Bus freedesktop.org&lt;/a&gt; untuk &lt;i&gt;Buka di File Manager&lt;/i&gt;, jika tersedia. Jika tidak, kembali ke &quot;External file browser&quot; di atas.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>Perintah yang digunakan untuk &lt;i&gt;Open in File Manager&lt;/i&gt; jika antarmuka D-Bus freedesktop.org tidak tersedia. Perintah dapat berisi variabel berikut:
+</translation>
+    </message>
+    <message>
+        <location line="+49" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Izinkan kerusakan dilaporkan secara otomatis. Laporan yang dikumpulkan digunakan hanya untuk tujuan memperbaiki bug.</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>Clear Local Crash Reports</source>
-        <translation>Hapus Laporan Kerusakan Lokal</translation>
+        <translation type="vanished">Hapus Laporan Kerusakan Lokal</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>Argumen baris perintah yang digunakan untuk &quot;Jalankan di terminal&quot;.</translation>
+        <translation type="vanished">Argumen baris perintah yang digunakan untuk &quot;Jalankan di terminal&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>Argumen baris perintah yang digunakan untuk &quot;%1&quot;.</translation>
+        <translation type="vanished">Argumen baris perintah yang digunakan untuk &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Atur ulang ke default.</translation>
+        <translation type="vanished">Atur ulang ke default.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-89" />
         <source>Terminal:</source>
         <translation>Terminal:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+38" />
         <source>External file browser:</source>
         <translation>Peramban file eksternal:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>File system case sensitivity:</source>
-        <translation>Sensitivitas huruf sistem file:</translation>
+        <translation type="vanished">Sensitivitas huruf sistem file:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Mempengaruhi bagaimana nama file dicocokkan untuk memutuskan apakah keduanya sama.</translation>
+        <translation type="vanished">Mempengaruhi bagaimana nama file dicocokkan untuk memutuskan apakah keduanya sama.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>Jumlah maksimum entri dalam &quot;File Terbaru&quot;:</translation>
+        <translation type="vanished">Jumlah maksimum entri dalam &quot;File Terbaru&quot;:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+149" />
         <source>System</source>
         <translation>Sistem</translation>
     </message>
     <message>
-        <location line="-217" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Pelaporan Kecelakaan</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Peka Huruf Besar-kecil (Default)</translation>
+        <translation type="vanished">Peka Huruf Besar-kecil (Default)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Tidak Peka Huruf Besar-kecil (Default)</translation>
+        <translation type="vanished">Tidak Peka Huruf Besar-kecil (Default)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Tidak peka huruf besar-kecil</translation>
+        <translation type="vanished">Tidak peka huruf besar-kecil</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Perubahan sensitivitas huruf sistem file akan berlaku setelah restart.</translation>
+        <translation type="vanished">Perubahan sensitivitas huruf sistem file akan berlaku setelah restart.</translation>
     </message>
     <message>
-        <location line="+77" />
         <source>Variables</source>
-        <translation>Variabel</translation>
+        <translation type="vanished">Variabel</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Otomatis</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>tidak disebutkan namanya</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Tema saat ini: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Perubahan tema akan berlaku setelah restart.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+212" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>Direktori di bawah kendali versi terdeteksi dan didukung oleh plugin %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Version Control Terdeteksi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enable %1</source>
+        <translation>Aktifkan %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>Direktori &quot;%1&quot; tampaknya berada di bawah version control yang dapat ditangani oleh plugin %2 yang dinonaktifkan.</translation>
+    </message>
+    <message>
+        <location line="+95" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>Repositori %1 terdeteksi tetapi %1 tidak dikonfigurasi.</translation>
     </message>
@@ -4988,45 +6298,121 @@ ke kontrol versi (%2)?</translation>
         <source>Adding to Version Control Failed</source>
         <translation>Gagal Menambahkan ke Kontrol Versi</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Tidak dapat menambahkan berkas berikut ke kendali versi (%1)
+%2
+... dan %n lagi.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>ditambahkan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>dimodifikasi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>dihapus</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>diganti nama</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>tidak dilacak</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>belum digabung</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>tidak diketahui</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Status version control: ditambahkan.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Status version control: dimodifikasi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Status version control: dihapus.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Status version control: diganti nama.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Status version control: tidak dilacak.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Status version control: belum digabung.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>Tidak dapat menambahkan file 
+        <translation type="vanished">Tidak dapat menambahkan file 
 %1 
 ke kontrol versi (%2)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Tidak dapat menambahkan file berikut ke kontrol versi (%1) 
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>Sekitar %1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Salin dan Tutup</translation>
+        <translation type="vanished">Salin dan Tutup</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>Tag:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Tampilkan Semua</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Kembali</translation>
     </message>
@@ -5041,20 +6427,227 @@ ke kontrol versi (%2)</translation>
         <translation>Masuk ke Layar Penuh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>Editor Python</translation>
+        <translation type="vanished">Editor Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>Editor Penurunan Harga</translation>
+        <translation type="vanished">Editor Penurunan Harga</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Pindah ke Editor Berikutnya</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Lepas Sematan</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>Untuk variabel environment dengan semantik daftar yang tidak menggunakan pemisah daftar path standar,
+Anda perlu mengonfigurasi pemisah masing-masing di sini jika berencana
+menggabungkannya dari beberapa tempat (misalnya dari kit dan dari proyek).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Variabel</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Pemisah</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-145" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Tambah Server MCP Dari Registry</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Filter server...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Semua Tipe</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>Jarak jauh</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Repositori:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Situs web:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Paket:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Remote:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Nama tampilan.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Server Baru&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Perintah untuk menjalankan proses server MCP. Hanya digunakan untuk tipe koneksi standard IO.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Argumen untuk menjalankan proses server MCP. Hanya digunakan untuk tipe koneksi standard IO.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>URL untuk terhubung ke server MCP. Tidak digunakan untuk tipe koneksi standard IO.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Tipe koneksi:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>Tipe koneksi yang digunakan untuk server MCP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Standard IO</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>Streamable HTTP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>Header HTTP:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>Header HTTP yang disertakan saat terhubung ke server MCP. Hanya digunakan untuk tipe koneksi HTTP.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Perubahan variabel environment yang diterapkan saat meluncurkan proses server MCP. Hanya digunakan untuk tipe koneksi IO standar.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Pilih Tipe Koneksi</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Server ini menawarkan beberapa cara untuk terhubung. Silakan pilih salah satu:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Tambah Dari Registry...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Aktifkan Server MCP Dokumentasi Qt</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Jika diaktifkan, server MCP dokumentasi Qt dari https://qt-docs-mcp.qt.io/mcp akan digunakan.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>Server MCP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Keluar dari Mode Debug</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Toolbar</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Editor</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Penyimpanan rahasia tidak tersedia! Nilai Anda akan disimpan sebagai teks biasa di pengaturan!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Anda dapat menginstal libsecret atau KWallet untuk mengaktifkan penyimpanan rahasia.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Baris konteks:</translation>
     </message>
@@ -5064,13 +6657,18 @@ ke kontrol versi (%2)</translation>
         <translation>Abaikan Spasi Putih</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Lipat Semua</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Muat ulang Perbedaan</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] vs. [%2] %3</translation>
     </message>
@@ -5086,7 +6684,7 @@ ke kontrol versi (%2)</translation>
         <translation>[%1] %2 vs. [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Sembunyikan Deskripsi Perubahan</translation>
     </message>
@@ -5096,54 +6694,57 @@ ke kontrol versi (%2)</translation>
         <translation>Tampilkan Deskripsi Perubahan</translation>
     </message>
     <message>
-        <location line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+103" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Buka Semua Lipatan</translation>
+    </message>
+    <message>
+        <location line="-478" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Menunggu data...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Pengambilan data gagal.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Tidak dapat menguraikan file patch &quot;%1&quot;. Kontennya bukan dalam format diff terpadu.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+170" />
         <source>Diff Editor</source>
         <translation>Editor Berbeda</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>Beda</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>Disimpan</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Dimodifikasi</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>File Berbeda</translation>
     </message>
@@ -5153,7 +6754,7 @@ ke kontrol versi (%2)</translation>
         <translation>Diff File yang Dimodifikasi</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp; Berbe&amp;da</translation>
     </message>
@@ -5174,12 +6775,12 @@ ke kontrol versi (%2)</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Diff Buka File</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Meta+Shift+H</translation>
     </message>
@@ -5194,27 +6795,32 @@ ke kontrol versi (%2)</translation>
         <translation>Perbedaan File Eksternal...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Perbedaan &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Pilih File Pertama untuk Diff</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Pilih File Kedua untuk Diff</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Perbedaan &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Berkas tidak ditemukan: &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Kirim Potongan ke CodePaster...</translation>
     </message>
@@ -5229,7 +6835,7 @@ ke kontrol versi (%2)</translation>
         <translation>Kembalikan Potongan...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Kesalahan:&lt;/b&gt; Tidak dapat memecahkan kode &quot;%1&quot; dengan pengkodean &quot;%2&quot;.</translation>
     </message>
@@ -5239,12 +6845,12 @@ ke kontrol versi (%2)</translation>
         <translation>Pilih Pengkodean</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Beralih ke Editor Diff Terpadu</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+4" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Beralih ke Editor Diff Berdampingan</translation>
     </message>
@@ -5254,7 +6860,7 @@ ke kontrol versi (%2)</translation>
         <translation>Sinkronkan Bilah Gulir Horizontal</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>Melewati %n baris...</numerusform>
@@ -5276,7 +6882,7 @@ ke kontrol versi (%2)</translation>
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Tidak ada perbedaan.</translation>
@@ -5288,48 +6894,57 @@ ke kontrol versi (%2)</translation>
         <translation>Perbedaan rendering</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>Tidak ada dokumen</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Salin Teks yang Dibersihkan</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Plugin &quot;%1&quot; ditentukan dua kali untuk pengujian.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Plugin &quot;%1&quot; tidak ada.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Plugin &quot;%1&quot; tidak diuji.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Tidak dapat meminta skenario &quot;%1&quot; karena sudah diminta.</translation>
+        <translation type="vanished">Tidak dapat meminta skenario &quot;%1&quot; karena sudah diminta.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Opsi tidak diketahui %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>Opsi %1 memerlukan argumen.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+67" />
+        <source>Id:</source>
+        <translation>Id:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
@@ -5345,6 +6960,11 @@ ke kontrol versi (%2)</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>Vendor Id:</source>
+        <translation>ID Vendor:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Vendor:</source>
         <translation>Penjual:</translation>
     </message>
@@ -5357,6 +6977,11 @@ ke kontrol versi (%2)</translation>
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Dokumentasi:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5394,14 +7019,24 @@ ke kontrol versi (%2)</translation>
         <translation>Dapat dimuat tanpa memulai ulang:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
+        <comment>No category</comment>
         <translation>Tidak ada</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
+        <comment>Platforms: All</comment>
         <translation>Semua</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Tidak ada</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">Semua</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5414,8 +7049,8 @@ ke kontrol versi (%2)</translation>
         <translation>Detail Plugin %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1633" />
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1532" />
         <source>Continue</source>
         <translation>Melanjutkan</translation>
     </message>
@@ -5525,12 +7160,12 @@ ke kontrol versi (%2)</translation>
         <translation>Plugin mengakhiri siklus hidupnya dan telah dihapus.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-561" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-583" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Beberapa versi dari plugin yang sama telah ditemukan.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Ketergantungan melingkar terdeteksi:</translation>
     </message>
@@ -5582,14 +7217,50 @@ Alasan: %3</translation>
         <translation>Nonaktifkan Plugin</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Syarat dan Ketentuan</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Terima</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Tolak</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Plugin %1 mengharuskan Anda menerima syarat dan ketentuan berikut:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Anda tidak menerima syarat dan ketentuan</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Tidak dapat memuat plugin karena ketergantungan gagal dimuat: %1(%2) 
 Alasan: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+713" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Plugin tidak ditemukan.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Tidak ada.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+837" />
         <source>Cannot open file</source>
         <translation>Tidak dapat membuka file</translation>
     </message>
@@ -5639,13 +7310,24 @@ Alasan: %3</translation>
         <translation>Data meta plugin tidak ditemukan</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>ID plugin &quot;%1&quot; harus huruf kecil</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Syarat dan ketentuan: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Spesifikasi platform &quot;%1&quot; tidak valid: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -5677,11 +7359,25 @@ Alasan: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Tidak dapat menyelesaikan ketergantungan &apos;%1(%2)&apos;</translation>
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>Tidak dapat menyelesaikan dependensi pada plugin &quot;%1(%2)&quot;</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+274" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Plugin sistem tidak dapat dihapus.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Tidak dapat menentukan folder root.</translation>
+    </message>
+    <message>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation type="vanished">Tidak dapat menyelesaikan ketergantungan &apos;%1(%2)&apos;</translation>
+    </message>
+    <message>
+        <location line="-200" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>Gagal memuat perpustakaan karena status != Terselesaikan</translation>
     </message>
@@ -5706,7 +7402,17 @@ Alasan: %3</translation>
         <translation>Inisialisasi plugin gagal: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Inisialisasi plugin menghasilkan pengecualian: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Inisialisasi plugin menghasilkan pengecualian yang tidak dikenal</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>Tidak dapat melakukan extensionsInitialized karena status != Diinisialisasi</translation>
     </message>
@@ -5721,19 +7427,27 @@ Alasan: %3</translation>
         <translation>Kesalahan internal: tidak memiliki instance plugin untuk melakukan inisialisasi tertunda</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (tidak digunakan lagi)</translation>
+        <translation type="vanished">%1 (tidak digunakan lagi)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (eksperimental)</translation>
+        <translation type="vanished">%1 (eksperimental)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>usang</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>eksperimental</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Jalur: %1 
@@ -5747,7 +7461,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Plugin diaktifkan sebagai ketergantungan dari plugin yang diaktifkan.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Jalur: %1 
@@ -5766,7 +7480,7 @@ Plugin dinonaktifkan oleh argumen baris perintah.</translation>
         <translation>Jalur: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Plugin tidak tersedia di platform ini.</translation>
     </message>
@@ -5811,7 +7525,7 @@ Plugin dinonaktifkan oleh argumen baris perintah.</translation>
         <translation>Utilitas</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-319" />
         <source>Enabling Plugins</source>
         <translation>Mengaktifkan Plugin</translation>
     </message>
@@ -5829,7 +7543,7 @@ juga akan mengaktifkan plugin berikut:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Menonaktifkan Plugin</translation>
     </message>
@@ -6015,18 +7729,23 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Salin sebagai URL Data</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Berkas tidak dapat dibaca.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Format gambar tidak didukung.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>Gagal membaca gambar SVG.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Gagal membaca gambar.</translation>
     </message>
@@ -6093,37 +7812,57 @@ Apakah Anda ingin menimpanya?</translation>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Kesalahan %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Tidak digunakan lagi</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Masuk</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Keluar</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>Pangkalan</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>Berasal dari</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Buka di Editor</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>Buka Hierarki %1</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Panggil</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Tipe</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Hubungi Hirarki</translation>
     </message>
@@ -6133,13 +7872,18 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Memuat ulang hierarki panggilan untuk simbol di bawah posisi kursor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 untuk %2</translation>
+        <translation type="vanished">%1 untuk %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1 untuk %2 (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>tidak diinisialisasi</translation>
@@ -6181,14 +7925,20 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>kesalahan</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>gagal dimatikan</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>Parameter tidak valid di &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Kesalahan Inisialisasi Server Bahasa &quot;%1&quot;.</translation>
     </message>
@@ -6198,12 +7948,12 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Kesalahan inisialisasi: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Hasil inisialisasi tidak valid.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Info Server tidak valid.</translation>
     </message>
@@ -6213,12 +7963,11 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Tidak ada hasil inisialisasi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Salin ke Papan Klip</translation>
+        <translation type="vanished">Salin ke Papan Klip</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Klien Bahasa</translation>
     </message>
@@ -6268,33 +8017,35 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Tidak dapat menangani pesan jenis MIME &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Tidak dapat mengirim data ke server yang belum dimulai %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Tiba-tiba selesai. Memulai ulang dalam %1 detik.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Tiba-tiba selesai.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Perluas Semua</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Ciutkan Semua</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Server Bahasa StdIO Generik</translation>
     </message>
@@ -6314,7 +8065,7 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>Masalah yang disediakan oleh Server Bahasa dalam dokumen saat ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Menambahkan</translation>
     </message>
@@ -6324,32 +8075,37 @@ Apakah Anda ingin menimpanya?</translation>
         <translation>&amp;Menghapus</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>Umum</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Selalu Aktif</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Membutuhkan File Terbuka</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Mulai Server per Proyek</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Diaktifkan:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Setel Jenis MIME...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Pola berkas</translation>
     </message>
@@ -6361,67 +8117,87 @@ Example: *.cpp%1*.h</source>
 Contoh: *.cpp%1*.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>Gagal mengurai JSON pada %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>JSON khusus server bahasa untuk diteruskan melalui bidang &quot;initializationOptions&quot; dari permintaan &quot;inisialisasi&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Bahasa:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Pola berkas:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Perilaku permulaan:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Opsi inisialisasi:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>Pilih Jenis MIME</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Menyaring</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Argumen:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>Kesalahan JSON</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Language Server Khusus Proyek</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Gunakan Pengaturan Global</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Diaktifkan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Dinonaktifkan</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Konfigurasi Ruang Kerja</translation>
     </message>
@@ -6433,12 +8209,12 @@ See the documentation of the specific language server for valid settings.</sourc
 Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Server Bahasa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Cari Lagi untuk memperbarui hasil dan mengaktifkan kembali Ganti</translation>
     </message>
@@ -6457,7 +8233,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
 %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>Temukan Referensi dengan %1 untuk:</translation>
@@ -6478,12 +8254,12 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Mulailah mengetik untuk melihat penggantinya.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Tampilkan perbaikan cepat yang tersedia</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>Mulai ulang %1</translation>
     </message>
@@ -6498,49 +8274,56 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Mengelola...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>Siapkan language server %1 (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>Siapkan</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>Instal Paket npm</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>Menjalankan &quot;%1&quot; untuk menginstal %2.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Penginstalan &quot;%1&quot; dibatalkan karena batas waktu habis.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Penginstalan &quot;%1&quot; dibatalkan oleh pengguna.</translation>
+        <translation type="vanished">Penginstalan &quot;%1&quot; dibatalkan oleh pengguna.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>Instalasi &quot;%1&quot; gagal dengan kode keluar %2.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>Instal %1 server bahasa melalui npm.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>Siapkan %1 server bahasa (%2).</translation>
+        <translation type="vanished">Siapkan %1 server bahasa (%2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>Memasang</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Pengaturan</translation>
+        <translation type="vanished">Pengaturan</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6568,12 +8351,12 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Pilihan:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Kemampuan Server</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Pesan Klien</translation>
     </message>
@@ -6593,22 +8376,32 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Berkas Log</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>Tidak ada klien yang dipilih</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Inspektur Klien Bahasa</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;Pilih&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Server Bahasa:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>Kirim pesan</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Catatan</translation>
     </message>
@@ -6618,15 +8411,25 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Kemampuan</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Jernih</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Urutkan Menurut Abjad</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Pilih Simbol&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>Tidak dapat mendekode konten dengan &quot;%1&quot;. Kembali ke &quot;%2&quot;.</translation>
     </message>
@@ -6636,7 +8439,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Mengharapkan bilangan bulat dalam &quot;%1&quot;, tetapi mendapat &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>Tidak dapat menguraikan pesan JSON: &quot;%1&quot;.</translation>
     </message>
@@ -6646,17 +8449,17 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <translation>Mengharapkan objek JSON, tetapi mendapat nilai JSON &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>Tidak ada parameter di &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>Tidak ada ID yang disetel di &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>Buat %1</translation>
     </message>
@@ -6672,25 +8475,188 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>Tidak ditemukan aksi dengan ID &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>Perintah &quot;%1&quot; tidak memiliki aksi terkait.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>Aksi &quot;%1&quot; dinonaktifkan.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Luaskan Semua</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>Pesan Klien</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Pesan</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Pesan Server</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>File Log</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>Inspektur Server MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Pilih&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Bersihkan</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Sesi:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Tidak diketahui</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Global</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Localhost (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Apa saja (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Kustom</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Alamat IP tidak valid.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>Server MCP</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>Inspeksi Server MCP...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>Gagal memulai server MCP di &quot;%1:%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>Aktifkan Server MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>Alamat yang harus didengarkan Server MCP untuk koneksi masuk.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Port:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Otomatis</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>Port untuk didengarkan oleh Server MCP. Biarkan 0 untuk memilih port bebas secara otomatis.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Aktifkan akses Cross Origin:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>Aktifkan Cross-Origin Resource Sharing (CORS) untuk Server MCP. Ini diperlukan jika Anda ingin terhubung ke server dari aplikasi web.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Alamat disalin ke papan klip.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>Server MCP berjalan, mendengarkan di: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>Server MCP tidak berjalan.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Status:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+75" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+77" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+210" />
         <location line="+37" />
         <location line="+164" />
         <location line="+65" />
@@ -6705,7 +8671,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -6714,22 +8680,22 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+288" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+89" />
+        <location line="+12" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+91" />
         <location line="+101" />
         <location line="+9" />
         <location line="+102" />
@@ -6739,38 +8705,38 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+107" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1186" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+589" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1205" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -6781,7 +8747,7 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -6800,21 +8766,21 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+829" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Menghubungkan</translation>
     </message>
     <message>
         <location line="-97" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2298" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2315" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Silakan pilih jenis papan</translation>
     </message>
@@ -6848,8 +8814,8 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-33" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
@@ -6858,13 +8824,13 @@ Lihat dokumentasi server bahasa tertentu untuk pengaturan yang valid.</translati
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-138" />
-        <location line="+139" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-126" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
-        <location line="+188" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-198" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
         <location line="+27" />
@@ -6881,13 +8847,13 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda terpasang (jendela mungkin terbuka atau tidak).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-342" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-324" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util mungkin tidak stabil di platform ini. Jika pemuatan gagal silakan gunakan komputer biasa.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-418" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Tidak ada pengaturan DFU untuk jenis papan yang dipilih!</translation>
     </message>
@@ -6900,7 +8866,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-71" />
         <source>Erasing Disk</source>
         <translation>Menghapus Disk</translation>
     </message>
@@ -6911,50 +8877,50 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
-        <location line="+22" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+821" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
+        <location line="+16" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-154" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+846" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Kesalahan Batas Waktu!</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-63" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -6991,42 +8957,42 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+193" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1569" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1548" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2612" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2642" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Kesalahan: %L1!</translation>
@@ -7034,40 +9000,40 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     <message>
         <location line="+13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+13" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-550" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-511" />
         <source>Read ROMFS</source>
         <translation>Baca ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Tulis ROMFS</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Firmware Berkedip</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+109" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>Pembaruan firmware DFU gagal!</translation>
     </message>
@@ -7075,7 +9041,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -7083,7 +9049,7 @@ Dalam hal ini klik OK ketika Anda melihat flash drive internal OpenMV Cam Anda t
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-548" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Hubungkan kembali Kamera OpenMV Anda...</translation>
     </message>
@@ -7112,30 +9078,30 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
-        <location line="+1979" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4046" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1040" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1053" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>Membatalkan</translation>
     </message>
@@ -7183,7 +9149,7 @@ Lanjutkan?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+193" />
         <location line="+47" />
@@ -7299,7 +9265,7 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1 Anda tidak memiliki sistem file ROM.</translation>
     </message>
@@ -7346,12 +9312,12 @@ Klik tombol Ok setelah DFU Bootloader OpenMV Cam Anda dihitung.</translation>
         <translation>Untuk mem-flash citra bootloader, OpenMV Cam Anda harus berada dalam mode pemulihan bootloader. Cabut kamera, hubungkan BOOT0/SBL/RECOVERY ke 3.3V dengan jumper, lalu pasang kembali kamera sebelum mencoba lagi.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>Pembacaan ROMFS lewat DFU gagal!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>Penulisan ROMFS lewat DFU gagal!</translation>
     </message>
@@ -7379,7 +9345,7 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-783" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-680" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Menyiapkan alat bootloader... (ini bisa memakan waktu beberapa detik)</translation>
     </message>
@@ -7449,7 +9415,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Tidak ada pengaturan PicoTool untuk perangkat yang dipilih!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -7461,7 +9427,7 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Pembaruan firmware PicoTool gagal!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Nilai %L1</translation>
@@ -7523,11 +9489,11 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation type="vanished">Silakan masukkan jaringan WiFi Anda di sini</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-380" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7539,20 +9505,20 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4655" />
-        <location line="+988" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4636" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Editor Kumpulan Data</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Silakan masukkan nama kelas</translation>
     </message>
     <message>
-        <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-945" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-931" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7565,24 +9531,24 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>Gagal membuat &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Gagal menyimpan file gambar karena alasan yang tidak diketahui!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Menghapus</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Apakah Anda yakin ingin menghapus &quot;%L1&quot; secara permanen?</translation>
     </message>
@@ -7610,12 +9576,12 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5017" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4998" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+352" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Kebun Binatang Model</translation>
     </message>
@@ -7636,14 +9602,14 @@ Klik tombol Ok setelah Bootloader SBL OpenMV Cam Anda dihitung.</translation>
         <translation>OKE</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1316" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1278" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1378" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1290" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-305" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Tidak dapat menyalin file &quot;%1&quot; ke &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Argumen untuk -serial_number_filter tidak ada</translation>
     </message>
@@ -7664,7 +9630,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">Silakan tutup semua program yang melihat/mengedit data aplikasi OpenMV IDE dan kemudian restart OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7681,7 +9647,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya saat menginstal sumber daya.</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+167" />
         <source>Missing argument for -form_key</source>
         <translation>Argumen untuk -form_key tidak ada</translation>
     </message>
@@ -7696,12 +9662,12 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Silakan masukkan kunci formulir</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+86" />
         <source>untitled_$.py</source>
         <translation>tanpa judul_$.py</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+60" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7726,7 +9692,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>Contoh</translation>
     </message>
@@ -7742,7 +9708,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1802" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1831" />
         <source>Load Custom Firmware</source>
         <translation>Muat Firmware Khusus</translation>
     </message>
@@ -7872,22 +9838,22 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Salin/Konversi File Python</translation>
     </message>
     <message>
         <location line="+14" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Buka Terminal</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Visi Mesin</translation>
     </message>
@@ -7908,28 +9874,28 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1070" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konversi Model</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Editor Ambang Batas</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor Poin Utama</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7938,7 +9904,7 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Pembuat Tag April</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Keluarga TAG16H5 (30 Tag)</translation>
     </message>
@@ -7973,22 +9939,22 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <translation>Pembuat Kode QR</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Gagal membuka: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-2894" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-161" />
@@ -7996,8 +9962,8 @@ Versi OpenMV IDE sebelum v4.3.0 tidak memiliki file ini dan akan menghapusnya sa
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1801" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+2163" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+38" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8020,8 +9986,8 @@ Harap tutup semua program yang sedang melihat/mengedit data aplikasi %1 lalu mul
 %2 versi sebelum v4.3.0 tidak memiliki berkas ini dan akan menghapusnya saat memasang sumber daya.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+854" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+866" />
         <location line="+126" />
         <location line="+51" />
         <location line="+42" />
@@ -8033,8 +9999,13 @@ Harap tutup semua program yang sedang melihat/mengedit data aplikasi %1 lalu mul
         <translation>Repositori Pihak Ketiga</translation>
     </message>
     <message>
-        <location line="+401" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location line="+210" />
+        <source>Leave Settings</source>
+        <translation>Keluar dari Pengaturan</translation>
+    </message>
+    <message>
+        <location line="+257" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Muat ROMFS ke OpenMV Cam</translation>
@@ -8056,7 +10027,7 @@ Harap tutup semua program yang sedang melihat/mengedit data aplikasi %1 lalu mul
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8130,7 +10101,7 @@ Apakah Anda ingin memilih nama lain?</translation>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+460" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+480" />
         <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Mainkan Aliran RTSP</translation>
@@ -8206,8 +10177,8 @@ Apakah Anda ingin memilih nama lain?</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
@@ -8218,7 +10189,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Silakan tambahkan ekstensi file!</translation>
     </message>
     <message>
-        <location line="-4360" />
+        <location line="-4341" />
         <source>Exporting...</source>
         <translation>Mengekspor...</translation>
     </message>
@@ -8320,7 +10291,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Lisensi</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
         <source>OpenMV Forums</source>
         <translation>Forum OpenMV</translation>
     </message>
@@ -8393,8 +10364,8 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Berhenti (menghentikan skrip)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -8402,9 +10373,9 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Penyangga Bingkai</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -8417,7 +10388,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Rekam Frame Buffer</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8534,7 +10505,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+254" />
         <source>Close</source>
         <translation>Menutup</translation>
     </message>
@@ -8554,8 +10525,8 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Tangkap Data</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3813" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3842" />
         <source>Board:</source>
         <translation>Papan:</translation>
     </message>
@@ -8620,7 +10591,7 @@ Apakah Anda ingin memilih nama lain?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Pembaruan Tersedia</translation>
     </message>
@@ -8629,7 +10600,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation type="vanished">Versi baru OpenMV IDE (%L1.%L2.%L3) tersedia untuk diunduh.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>Unduh</translation>
     </message>
@@ -8642,7 +10613,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation type="vanished">Aplikasi lain menggunakan port penemuan siaran OpenMV Cam. Silakan tutup aplikasi itu dan mulai ulang OpenMV IDE untuk mengaktifkan pemrograman WiFi.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Kesalahan Folder Dokumen</translation>
     </message>
@@ -8652,7 +10623,7 @@ Apakah Anda ingin memilih nama lain?</translation>
         <translation>Gagal membuat folder dokumen!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>Kopilot GitHub</translation>
     </message>
@@ -8710,27 +10681,27 @@ Firmware OpenMV Cam Anda panik karena kegagalan perangkat keras. Harap periksa a
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port Serial - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Menghubungkan... (batas waktu 30 detik)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8781,12 +10752,12 @@ panggilan sudo adduser %L1
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>Koneksi Server UDP - %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argumen port tidak valid (%1) untuk -open_udp_server_terminal</translation>
     </message>
@@ -8817,12 +10788,12 @@ panggilan sudo adduser %L1
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>Koneksi Server TCP - %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argumen port tidak valid (%1) untuk -open_tcp_server_terminal</translation>
     </message>
@@ -8851,7 +10822,7 @@ panggilan sudo adduser %L1
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8964,7 +10935,7 @@ Would you like to register your OpenMV Cam now?</source>
 Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
-        <location line="-2446" />
+        <location line="-2440" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Tentang %1</translation>
@@ -9021,25 +10992,25 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Buffer Bingkai - Res (l:%1, t:%2) - Fokus (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+152" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Pilih sumber Frame Buffer, atau matikan untuk performa maksimal</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Mati</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Aktif</translation>
     </message>
     <message>
-        <location line="-2068" />
+        <location line="-2082" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Alirkan gambar terkompresi JPG untuk performa lebih tinggi</translation>
@@ -9081,7 +11052,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Pilih apa yang ditampilkan panel ini</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Frame Buffer (%1)</translation>
     </message>
@@ -9108,8 +11079,8 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+121" />
         <source>No Drive</source>
         <translation>Tidak Ada Drive</translation>
     </message>
@@ -9119,7 +11090,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Versi baru dari %5 (%L1.%L2.%L3) tersedia untuk diunduh. Lihat &lt;a href=&quot;%L4&quot;&gt;catatan rilis&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Hubungkan (Jaringan tersedia)</translation>
     </message>
@@ -9139,7 +11110,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>-auto_run dalam mode penampil memerlukan argumen berkas skrip teks yang dapat dibaca pada baris perintah.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9242,13 +11213,13 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Kunci Papan yang diformat tidak valid!</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+84" />
         <source>OpenMV Cam Error</source>
         <translation>Kesalahan OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location line="+7" />
+        <location line="+36" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
         <location line="+7" />
@@ -9257,14 +11228,14 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Simpan Gambar</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>File Gambar (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-925" />
+        <location line="-907" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9301,14 +11272,14 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9318,7 +11289,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Terminal Baru</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Hubungkan ke port serial</translation>
     </message>
@@ -9339,7 +11310,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Silakan pilih port serial</translation>
     </message>
@@ -9350,7 +11321,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9364,15 +11335,15 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>String tidak valid: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Tidak ada port serial yang ditemukan!</translation>
     </message>
@@ -9382,41 +11353,41 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Hubungkan ke server UDP sebagai klien atau mulai Server UDP?</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation>Hubungkan ke Server</translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation>Mulai Server</translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Silakan masukkan alamat IP (atau nama domain) dan port (misalnya xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>Koneksi Klien UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Silakan masukkan nomor port (masukkan 0 untuk port bebas acak apa pun)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Hubungkan ke server TCP sebagai klien atau mulai Server TCP?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>Koneksi Klien TCP - %1</translation>
     </message>
@@ -9436,17 +11407,17 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Lokasi sumber gambar?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation>Penyangga Bingkai</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation>Berkas Gambar</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Tupel ambang batas yang dipilih akan diperbarui pada saat penutupan.</translation>
@@ -9468,17 +11439,17 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Apa yang ingin kamu lakukan?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation>Sunting Berkas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation>Gabungkan File</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9488,7 +11459,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+420" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+421" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>File Titik Kunci (*.lbp *.orb)</translation>
     </message>
@@ -9587,16 +11558,16 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation type="vanished">Sumber daya OpenMV IDE baru tersedia (misalnya contoh, firmware, dokumentasi, dll.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Memasang</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
@@ -9604,19 +11575,19 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-162" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Mengunduh...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>Menginstal...</translation>
     </message>
@@ -9638,18 +11609,18 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Tidak dapat membuka file sumber daya &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Permintaan jaringan gagal &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-257" />
+        <location line="-268" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9662,65 +11633,65 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Hapus sistem file FAT internal</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jika Anda mengaktifkan opsi ini, semua file di sistem file FAT internal OpenMV Cam Anda akan dihapus. Ini tidak menghapus file pada kartu SD yang dapat dilepas (jika dimasukkan).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Setel ulang sistem file ROMFS</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jika Anda mengaktifkan opsi ini, sistem file ROM pada OpenMV Cam Anda akan diatur ulang kembali ke default.</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+310" />
+        <location line="-4432" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Berlari</translation>
     </message>
     <message>
-        <location line="-210" />
+        <location line="-204" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Pemuat boot</translation>
     </message>
     <message>
-        <location line="-112" />
+        <location line="-106" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; bukan berkas!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>Perbarui sistem file ROMFS</translation>
     </message>
@@ -9741,7 +11712,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+4031" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Peringatan: Mengupgrade ke versi firmware baru memerlukan penghapusan sistem file FAT.</translation>
     </message>
@@ -9754,7 +11725,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation type="vanished">Tidak dapat mengekstrak firmware!</translation>
     </message>
     <message>
-        <location line="-4979" />
+        <location line="-5003" />
         <source>Checking development examples...</source>
         <translation>Memeriksa contoh pengembangan...</translation>
     </message>
@@ -9795,7 +11766,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Sumber daya %2 baru tersedia (mis. contoh, firmware, dokumentasi, dll.). Lihat &lt;a href=&quot;%L1&quot;&gt;catatan rilis&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>File sumber daya yang diunduh &quot;%L1&quot; gagal pemeriksaan checksum. Silakan coba lagi nanti.</translation>
     </message>
@@ -9816,7 +11787,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Biner Firmware (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>Zip &quot;%L1&quot; tidak berisi citra firmware!</translation>
     </message>
@@ -9826,7 +11797,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Tidak dapat membongkar zip firmware &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+260" />
+        <location line="+254" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Tidak dapat mengunduh firmware pengembangan terbaru!</translation>
@@ -9891,7 +11862,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Port serial:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
@@ -9905,12 +11876,12 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
 %1</translation>
     </message>
     <message>
-        <location line="+185" />
+        <location line="+186" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Papan dalam mode DFU terdeteksi. Apa yang ingin kamu lakukan?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Instal firmware rilis terbaru (v%L1.%L2.%L3)</translation>
     </message>
@@ -9945,37 +11916,37 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
         <translation>Apakah Anda memiliki OpenMV Cam yang terhubung dan apakah sudah di-brick?</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+2874" />
+        <location line="+87" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Opsi peningkatan:</translation>
     </message>
     <message>
-        <location line="-2793" />
-        <location line="+175" />
+        <location line="-2807" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Harap perbarui bootloader ke versi terbaru dan instal SoftDevice untuk mem-flash firmware OpenMV. Informasi lebih lanjut dapat ditemukan di &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-209" />
-        <location line="+174" />
+        <location line="-222" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Singkatkan REC ke GND dan setel ulang board Anda. Informasi lebih lanjut dapat ditemukan di &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-219" />
         <source>No released firmware available for the attached board!</source>
         <translation>Tidak ada firmware yang dirilis tersedia untuk papan yang terpasang!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Silakan pilih Perangkat DFU</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+166" />
         <source>Connecting...
 
 (Hit cancel if this takes more than 5 seconds).</source>
@@ -10000,7 +11971,7 @@ Apakah Anda ingin mendaftarkan OpenMV Cam Anda sekarang?</translation>
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Kesalahan batas waktu saat mendapatkan arsitektur papan!</translation>
@@ -10126,8 +12097,8 @@ OpenMV merekomendasikan hanya memuat bootloader.dfu untuk memperbaiki bootloader
         <translation>Versi Firmware: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Port Seri: %L1</translation>
     </message>
@@ -10136,7 +12107,7 @@ OpenMV merekomendasikan hanya memuat bootloader.dfu untuk memperbaiki bootloader
         <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [ kedaluwarsa - klik di sini untuk meningkatkan ]</translation>
     </message>
@@ -10175,7 +12146,7 @@ Untuk mencegahnya, buka menu Apple, buka Pengaturan Sistem, klik Privasi &amp; K
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+196" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Jalankan Skrip</translation>
@@ -10193,7 +12164,7 @@ Untuk mencegahnya, buka menu Apple, buka Pengaturan Sistem, klik Privasi &amp; K
         <translation>Galat: Tidak dapat membuka &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>More Examples</source>
         <translation>Contoh Lainnya</translation>
     </message>
@@ -10234,7 +12205,22 @@ Secara khusus, periksa contoh Pemrosesan Gambar -&gt; Pelacakan Warna dan Pembel
         <translation>Tidak ditemukan pengaturan papan untuk papan yang terhubung!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-852" />
+        <source>No documentation here</source>
+        <translation>Tidak ada dokumentasi di sini</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>Tidak ada dokumentasi untuk &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Bantuan Konteks</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Edit ambang batas Grayscale dengan Threshold Editor</translation>
     </message>
@@ -10387,17 +12373,17 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
     </message>
     <message>
         <location line="+73" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Pilih Berkendara</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Tidak ada drive valid yang ditemukan untuk dikaitkan dengan OpenMV Cam Anda!</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+36" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Silakan kaitkan drive dengan OpenMV Cam Anda</translation>
     </message>
@@ -10480,17 +12466,17 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
     </message>
     <message>
         <location line="+139" />
-        <location line="+20" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Simpan Skrip</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Hapus komentar dan ubah spasi menjadi tab?</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -10636,7 +12622,7 @@ Apakah Anda ingin OpenMV IDE menyalinnya ke OpenMV Cam Anda?</translation>
         <translation>Fungsi: %1, Total Panggilan: %2, Total μs: %3, Total Siklus: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1170" />
         <source>Please select the target</source>
         <translation>Silakan pilih targetnya</translation>
     </message>
@@ -10657,7 +12643,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE hanya akan menyalin model apa adanya.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -10693,7 +12679,9 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -10712,7 +12700,7 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <translation>Sunting ROMFS</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Folder dengan nama yang sama sudah ada!</translation>
@@ -10770,29 +12758,29 @@ OpenMV IDE hanya akan menyalin model apa adanya.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Ekstrak Berkas</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Lihat/Edit</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Tambahkan Berkas</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Folder Baru</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -10828,7 +12816,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 OpenMV Cam Anda masih dalam mode bootloader: klik Hubungkan dan gunakan opsi bootloader untuk mengedit sistem file ROM lagi.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Tipe board belum dipilih.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -10836,13 +12831,34 @@ OpenMV Cam Anda masih dalam mode bootloader: klik Hubungkan dan gunakan opsi boo
         <translation>ROMFS tidak didukung pada board ini!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Target ROMFS belum dipilih.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>Pembacaan ROMFS dari kamera gagal.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Gagal membongkar ROMFS!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>Image ROMFS berukuran %L1 byte, tetapi ROMFS board hanya menampung %L2 byte.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>Penulisan ROMFS ke kamera gagal.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV ROMFS</translation>
@@ -10884,7 +12900,7 @@ OpenMV Cam Anda masih dalam mode bootloader: klik Hubungkan dan gunakan opsi boo
         <translation>Apakah Anda yakin ingin mereset sistem file ROM OpenMV Cam Anda?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10962,34 +12978,34 @@ OpenMV Cam Anda masih dalam mode bootloader: klik Hubungkan dan gunakan opsi boo
         <translation>Reset lunak</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-298" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-301" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>Alat Alif</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Silakan hidupkan sakelar mode pemeliharaan keras, itu tidak diaktifkan, lalu tekan tombol pengguna di OpenMV Cam Anda.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-924" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-815" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Fitur ini tidak didukung pada mesin ini!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -10998,7 +13014,7 @@ The camera must be power cycled after after recovery.</source>
 Kamera harus didaur ulang dayanya setelah pemulihan.</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+42" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11007,7 +13023,7 @@ The camera must be power cycled after a system package update.</source>
 Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+100" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Harap putuskan sambungan OpenMV Cam Anda dari komputer Anda, matikan sakelar mode pemeliharaan keras, jika diaktifkan. Biarkan OpenMV Cam Anda tidak terhubung sampai diperintahkan untuk menyambungkannya kembali.</translation>
     </message>
@@ -11017,21 +13033,21 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Dapatkan Perangkat</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1247" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1264" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Kueri gagal!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11049,13 +13065,13 @@ Kamera harus didaur ulang dayanya setelah pembaruan paket sistem.</translation>
         <location line="+27" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-101" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-110" />
         <location line="+50" />
         <source>Uploading...</source>
         <translation>Mengunggah...</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+77" />
         <source>This may take a while, coffee break?</source>
         <translation>Ini mungkin memakan waktu cukup lama, rehat kopi?</translation>
     </message>
@@ -11234,61 +13250,61 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Silakan masukkan Kunci API Proyek Edge Impulse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Menunggu flashloader terenumerasi...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>Flashloader i.MX tidak terenumerasi.</translation>
     </message>
     <message>
-        <location line="+356" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location line="+305" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Perintah ini memerlukan waktu untuk dijalankan. Harap bersabar.</translation>
     </message>
@@ -11308,7 +13324,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Selesai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Sibuk</translation>
     </message>
@@ -11324,12 +13340,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Sembunyikan Detail</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Apa yang ingin kamu lakukan?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Salin saja skripnya</translation>
     </message>
@@ -11349,40 +13365,40 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Kompilasi ke bytecode</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;Opsi CLI MPY Cross Compiler&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Canggih</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>Kompiler Lintas MPY</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Kompilasi</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>MPY Cross Compilier tidak didukung pada platform ini.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+294" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+296" />
         <source>Success - Press Ok to close the window</source>
         <translation>Berhasil - Tekan Ok untuk menutup jendela</translation>
     </message>
@@ -11395,13 +13411,13 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Gagal - Tekan Batal untuk menutup jendela</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>alat pico</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>Pemrogram STM32</translation>
     </message>
@@ -11411,18 +13427,18 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Pemrogram STM32 tidak didukung pada platform ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Kompiler STEdge</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>Gagal menyalin file JSON!</translation>
     </message>
@@ -11433,12 +13449,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Silakan tentukan pengaturan kompiler:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Optimasi Maksimal</translation>
     </message>
@@ -11458,7 +13474,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Tidak Ada Optimasi</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>--verbositas 2</translation>
     </message>
@@ -11468,7 +13484,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Opsi CLI Inti STEdgeAI&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>--pemetaan-rekap</translation>
     </message>
@@ -11478,7 +13494,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Opsi CLI Neural-ART STEdgeAI&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Gagal membuka berkas JSON!</translation>
@@ -11591,12 +13607,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Kompiler Vela</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Optimalkan Kinerja</translation>
     </message>
@@ -11606,7 +13622,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Optimalkan Ukuran</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>--verbose-kemajuan</translation>
     </message>
@@ -11616,7 +13632,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Opsi CLI Kompiler Vela&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Vela</translation>
     </message>
@@ -11626,7 +13642,7 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Vela Compiler tidak didukung pada platform ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-796" />
         <source>Reading File...</source>
         <translation>Membaca Berkas...</translation>
     </message>
@@ -11658,12 +13674,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>File Transkode...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11722,30 +13738,30 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation type="vanished">Dapatkan Format Input</translation>
     </message>
     <message>
-        <location line="+97" />
-        <location line="+85" />
+        <location line="+105" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg tidak didukung pada platform ini.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>Berkas eksekusi FFmpeg tidak ditemukan (instalasi mungkin tidak lengkap).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Dapatkan Format</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+101" />
+        <location line="+95" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11769,12 +13785,12 @@ Buka kumpulan data untuk mengunggahnya.</translation>
         <translation>Konversi Video</translation>
     </message>
     <message>
-        <location line="-1132" />
+        <location line="-1153" />
         <source>Converting</source>
         <translation>Konversi</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG tidak didukung pada platform ini.</translation>
     </message>
@@ -11792,7 +13808,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Instalasi OpenMV IDE Anda mungkin tidak lengkap.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Tidak dapat menulis ke file video keluaran!</translation>
     </message>
@@ -11802,19 +13818,19 @@ Instalasi OpenMV IDE Anda mungkin tidak lengkap.</translation>
         <translation>Tidak dapat membuka file video keluaran!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Putar Video</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Pemutaran video tidak didukung pada platform ini.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>Gagal meluncurkan ffplay!</translation>
     </message>
@@ -11942,7 +13958,7 @@ Instalasi OpenMV IDE Anda mungkin tidak lengkap.</translation>
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Tampilkan teks</translation>
@@ -12187,7 +14203,7 @@ Perbaiki atau kosongkan sebelum menyimpan.</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12212,7 +14228,7 @@ Perbaiki atau kosongkan sebelum menyimpan.</translation>
         <translation>&quot;%L1&quot; - gagal dipasang: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - gagal memperbarui &quot;%L2&quot;: %L3</translation>
     </message>
@@ -12429,7 +14445,7 @@ Pasang sekarang?</translation>
         <translation>&quot;%L1&quot; tidak terpasang</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; papan &quot;%L2&quot; (%L3) tumpang tindih dengan id bootloader &quot;%L4&quot; (%L5)</translation>
     </message>
@@ -12588,7 +14604,7 @@ This deletes its boards, firmware, and examples.</source>
 Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -12826,7 +14842,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>%L1 sampel (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12940,12 +14956,12 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Spektrum</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Perataan</translation>
     </message>
@@ -13046,7 +15062,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Hubungkan kamera untuk melihat kanal</translation>
     </message>
@@ -13478,98 +15494,61 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Obrolan agentik (plugin ACP Client) tidak tersedia.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Boost.</translation>
     </message>
     <message>
-        <location line="-568" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="+1" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Lokasi Proyek</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -13583,11 +15562,63 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Lokasi</translation>
     </message>
     <message>
-        <location line="-336" />
+        <location line="-931" />
         <source>Boost Test (header only)</source>
         <translation>Tes Peningkatan (hanya header)</translation>
     </message>
@@ -13597,32 +15628,32 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Boost Test (perpustakaan bersama)</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+26" />
+        <location line="+1" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Kerangka pengujian:</translation>
     </message>
     <message>
-        <location line="-166" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-358" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Nama rangkaian pengujian:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Nama kasus uji:</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-361" />
         <source>Boost include directory (optional):</source>
         <translation>Tingkatkan penyertaan direktori (opsional):</translation>
     </message>
@@ -13632,281 +15663,286 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Direktori pemasangan Boost (opsional):</translation>
     </message>
     <message>
-        <location line="-534" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMembuat</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qb</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Membangun sistem:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informasi Proyek dan Tes</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Detail</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Pemilihan Perlengkapan</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>perlengkapan</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Manajemen Proyek</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Ringkasan</translation>
     </message>
     <message>
-        <location line="-321" />
+        <location line="-934" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Membuat proyek pengujian unit baru menggunakan Boost. Pengujian unit memungkinkan Anda memverifikasi bahwa kode layak digunakan dan tidak ada regresi.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Proyek Uji</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>Tingkatkan Proyek Uji</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Catch2.</translation>
     </message>
@@ -13951,7 +15987,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Catch2</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Google Test.</translation>
     </message>
@@ -13986,7 +16022,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Google</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Qt Test.</translation>
     </message>
@@ -14002,13 +16038,19 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Hasilkan kode inisialisasi dan pembersihan</translation>
     </message>
     <message>
-        <location line="-209" />
+        <location line="-286" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake untuk Qt5 dan Qt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Membuat proyek pengujian unit baru menggunakan Qt Test. Pengujian unit memungkinkan Anda memverifikasi bahwa kode layak digunakan dan tidak ada regresi.</translation>
     </message>
@@ -14018,7 +16060,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Proyek Uji Qt</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Wizard ini membuat proyek pengujian unit sederhana menggunakan Qt Quick Test.</translation>
     </message>
@@ -14028,7 +16070,25 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Hasilkan kode pengaturan</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+2" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 dan yang lebih baru</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 dan yang lebih baru</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Kompatibilitas kode Qt:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Membuat proyek pengujian unit baru menggunakan Qt Quick Test. Pengujian unit memungkinkan Anda memverifikasi bahwa kode layak digunakan dan tidak ada regresi.</translation>
     </message>
@@ -14043,36 +16103,36 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Nama yang sepenuhnya memenuhi syarat, termasuk namespace</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Nama kelas:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Kustom&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Kelas dasar:</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>Sertakan QObject</translation>
     </message>
@@ -14107,62 +16167,63 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Tambahkan QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Berkas tajuk:</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Sumber berkas:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Jalur:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Tentukan Kelas</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Membuat header C++ dan file sumber untuk kelas baru yang dapat Anda tambahkan ke proyek C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>Kelas C++</translation>
     </message>
@@ -14203,16 +16264,16 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Jumlah</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Model Barang Qt</translation>
     </message>
@@ -14248,75 +16309,64 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>ular piton</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Kelas Python</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Membuat proyek pengujian berbasis CMake yang cuplikan kodenya dapat dimasukkan.</translation>
+        <translation type="vanished">Membuat proyek pengujian berbasis CMake yang cuplikan kodenya dapat dimasukkan.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>Kode:</translation>
+        <translation type="vanished">Kode:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidget</translation>
+        <translation type="vanished">QtCore, QtWidget</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Gunakan Modul Qt:</translation>
+        <translation type="vanished">Gunakan Modul Qt:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Paket aplikasi (macOS)</translation>
+        <translation type="vanished">Paket aplikasi (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Tentukan cuplikan Kode</translation>
+        <translation type="vanished">Tentukan cuplikan Kode</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Cuplikan kode</translation>
+        <translation type="vanished">Cuplikan kode</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Membuat proyek pengujian berbasis CMake tempat Anda dapat memasukkan cuplikan kode untuk dikompilasi dan diperiksa.</translation>
+        <translation type="vanished">Membuat proyek pengujian berbasis CMake tempat Anda dapat memasukkan cuplikan kode untuk dikompilasi dan diperiksa.</translation>
     </message>
     <message>
-        <location line="-148" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="+384" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Proyek Lainnya</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code Snippet</source>
-        <translation>Cuplikan Kode</translation>
+        <translation type="vanished">Cuplikan Kode</translation>
     </message>
     <message>
-        <location line="+316" />
+        <location line="-575" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Membuat file header yang dapat Anda tambahkan ke proyek C/C++.</translation>
     </message>
@@ -14326,7 +16376,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Tajuk C/C++</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Membuat file sumber yang dapat Anda tambahkan ke proyek C/C++.</translation>
     </message>
@@ -14336,7 +16386,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Sumber C/C++</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Pilih Templat Formulir</translation>
     </message>
@@ -14356,12 +16406,14 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Formulir Perancang Widget Qt</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="+7" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Membuat shader fragmen di Desktop OpenGL Shading Language (GLSL). Fragment shader menghasilkan warna piksel akhir untuk segitiga, titik, dan garis yang dirender dengan OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14369,7 +16421,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragmen Shader (Desktop OpenGL)</translation>
     </message>
@@ -14384,7 +16436,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Membuat shader fragmen dalam OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shader menghasilkan warna piksel akhir untuk segitiga, titik, dan garis yang dirender dengan OpenGL.</translation>
     </message>
@@ -14404,7 +16456,31 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+7" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Membuat fragment shader dalam GLSL yang kompatibel dengan Vulkan. Fragment shader menghasilkan warna piksel akhir untuk segitiga, titik, dan garis yang akan dirender.
+Gunakan ini saat menargetkan Qt6 atau yang lebih baru.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Fragment Shader (kompatibel dengan Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Membuat vertex shader dalam GLSL yang kompatibel dengan Vulkan. Vertex shader mentransformasi posisi, normal, dan koordinat tekstur dari segitiga, titik, dan garis yang akan dirender.
+Gunakan ini saat menargetkan Qt6 atau yang lebih baru.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Vertex Shader (kompatibel dengan Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Membuat file Java dengan kode boilerplate.</translation>
     </message>
@@ -14419,7 +16495,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas Jawa</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Perpustakaan tanpa kewarganegaraan</translation>
     </message>
@@ -14440,92 +16516,82 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas JS</translation>
     </message>
     <message>
-        <location line="-84" />
+        <location line="+7" />
         <source>Creates a markdown file.</source>
         <translation>Membuat file penurunan harga.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>Umum</translation>
     </message>
     <message>
-        <location line="-119" />
+        <location line="-97" />
         <source>Markdown File</source>
         <translation>File Penurunan Harga</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Model name:</source>
-        <translation>Nama model:</translation>
+        <translation type="vanished">Nama model:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+54" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Lokasi:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; ada di sistem file.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Nama Model dan Lokasi</translation>
+        <translation type="vanished">Nama Model dan Lokasi</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Membuat model kosong baru dengan diagram kosong.</translation>
+        <translation type="vanished">Membuat model kosong baru dengan diagram kosong.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>Pemodelan</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>Model</translation>
+        <translation type="vanished">Model</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Membuat model awal menggunakan file sementara.</translation>
+        <translation type="vanished">Membuat model awal menggunakan file sementara.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Model Goresan</translation>
+        <translation type="vanished">Model Goresan</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Membuat file Nim kosong menggunakan rangkaian karakter UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Berkas Nim</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Membuat file skrip Nim kosong menggunakan rangkaian karakter UTF-8.</translation>
     </message>
@@ -14545,7 +16611,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Berkas Python</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Membuat file Sumber Daya Qt (.qrc).</translation>
     </message>
@@ -14555,7 +16621,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File Sumber Daya Qt</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Membuat file QML dengan kode boilerplate, dimulai dengan &quot;import QtQuick&quot;.</translation>
     </message>
@@ -14565,7 +16631,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>File QML (Qt Cepat 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Membuat buffer awal menggunakan file sementara.</translation>
     </message>
@@ -14575,7 +16641,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Penyangga Goresan</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Nama bagan negara bagian:</translation>
     </message>
@@ -14595,7 +16661,7 @@ Ini akan menghapus papan, firmware, dan contohnya.</translation>
         <translation>Bagan Negara</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14639,7 +16705,7 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>Versi Catch2:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Informasi Tes</translation>
     </message>
@@ -14655,7 +16721,7 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>Kasus Uji</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Membuat file kosong.</translation>
     </message>
@@ -14665,7 +16731,7 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>Berkas Kosong</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Membuat file terjemahan yang dapat Anda tambahkan ke proyek Qt.</translation>
     </message>
@@ -14675,61 +16741,67 @@ Anda tidak boleh menggabungkan beberapa kerangka pengujian dalam sebuah proyek.<
         <translation>File Terjemahan Qt</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Wizard ini membuat aplikasi konsol sederhana berbasis Qt.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake dengan Kompatibilitas Qt 5</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Tentukan Sistem Bangun</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Membangun Sistem</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Berkas Terjemahan</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Terjemahan</translation>
     </message>
     <message>
-        <location line="-406" />
+        <location line="-529" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14739,30 +16811,31 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Aplikasi (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Aplikasi Konsol Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Wizard ini membuat proyek perpustakaan C++.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Tentukan informasi dasar tentang kelas yang ingin Anda buatkan file kode sumber kerangkanya.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Perpustakaan Bersama</translation>
     </message>
@@ -14777,14 +16850,15 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Plugin Qt</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Jenis:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QPlugin yang Dapat Diakses</translation>
     </message>
@@ -14820,12 +16894,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Tidak ada</translation>
     </message>
@@ -14850,55 +16919,55 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Modul Qt:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Tentukan Detail Proyek</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-482" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Membuat perpustakaan C++. Anda dapat membuat:&lt;ul&gt;&lt;li&gt;pustaka C++ bersama untuk digunakan dengan &lt;tt&gt;QPluginLoader&lt;/tt&gt; dan waktu proses (Plugin)&lt;/li&gt;&lt;li&gt;pustaka C++ bersama atau statis untuk digunakan dengan proyek lain pada waktu tautan&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-425" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>Perpustakaan</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>Perpustakaan C++</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Membuat aplikasi Nim sederhana.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Proyek Non-Qt</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Aplikasi Nim</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Biner</translation>
     </message>
@@ -14914,12 +16983,12 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Keterangan:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14980,18 +17049,20 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>Lainnya</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Lisensi:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>C</translation>
     </message>
@@ -15032,21 +17103,21 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfigurasi</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Membuat aplikasi Nim dengan Nimble.</translation>
     </message>
@@ -15056,7 +17127,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cekatan</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Membuat aplikasi C sederhana tanpa ketergantungan.</translation>
     </message>
@@ -15066,7 +17137,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi C Biasa</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Membuat aplikasi C++ sederhana tanpa ketergantungan.</translation>
     </message>
@@ -15076,7 +17147,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi C++ Biasa</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Wizard ini membuat file .pro kosong.</translation>
     </message>
@@ -15091,46 +17162,55 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Proyek qmake kosong</translation>
     </message>
     <message>
-        <location line="-180" />
-        <location line="+21" />
+        <location line="+5" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>Sisi Py 6</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+33" />
-        <source>PySide 2</source>
-        <translation>Sisi Py 2</translation>
+        <location line="-22" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Nama proyek hanya boleh berisi huruf, angka, atau garis bawah.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+45" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>Plugin C++ Qt Creator</translation>
+    </message>
+    <message>
+        <source>PySide 2</source>
+        <translation type="vanished">Sisi Py 2</translation>
+    </message>
+    <message>
+        <location line="-379" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Membuat aplikasi Qt untuk Python yang hanya berisi kode utama untuk QApplication.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Aplikasi (Qt untuk Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Aplikasi Kosong</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Berkas proyek:</translation>
+        <translation type="vanished">Berkas proyek:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Membuat aplikasi Qt untuk Python yang berisi jendela kosong.</translation>
     </message>
@@ -15140,27 +17220,23 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Jendela Kosong</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>PySide 5.15</source>
-        <translation>Sisi Py 5.15</translation>
+        <translation type="vanished">Sisi Py 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>Sisi Py 5.14</translation>
+        <translation type="vanished">Sisi Py 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>Sisi Py 5.13</translation>
+        <translation type="vanished">Sisi Py 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>Sisi Py 5.12</translation>
+        <translation type="vanished">Sisi Py 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+13" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Membuat aplikasi Qt Quick yang berisi jendela kosong.</translation>
     </message>
@@ -15170,7 +17246,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cepat Qt - Kosong</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+11" />
         <source>Define Python Interpreter</source>
         <translation>Definisikan Penerjemah Python</translation>
     </message>
@@ -15190,45 +17266,169 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>UI Jendela</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Wizard ini membuat proyek Qt Interface Framework.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Konfigurasikan antarmuka yang menjelaskan data yang dipertukarkan antara frontend dan backend.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Nama proyek yang dibuat, diawali huruf kapital.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Nama antarmuka:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Nama antarmuka yang menjadi bagian dari modul yang dibuat, diawali huruf kapital.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Tambahkan kode contoh ke proyek</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Mencakup konstruksi dasar; jika tidak, proyek kosong akan dibuat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Buat antarmuka berzona</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>Antarmuka berzona memiliki elemen yang sesuai untuk semua data di beberapa zona.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Penyiapan backend:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Buat backend simulasi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>Membuat backend simulasi yang dapat diskrip dari QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Buat implementasi backend produksi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Membuat backend dengan implementasi native penuh.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Buat backend Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Membuat backend yang dapat terhubung ke sisi server menggunakan teknologi Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Buat server simulasi Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Membuat server simulasi yang dapat dihubungkan oleh backend Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Buat server produksi Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Membuat server dengan implementasi native yang dapat dihubungkan oleh backend Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>Jika tidak ada backend fungsional yang dipilih, kode contoh UI frontend tidak akan berfungsi dan bahkan dapat menimbulkan galat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Konfigurasi Antarmuka</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Konfigurasi</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Membuat proyek Qt Interface Framework dengan frontend yang telah dikonfigurasi dan backend opsional.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>Proyek Qt Interface Framework</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Versi Qt minimum yang diperlukan:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>Barang Saya</translation>
     </message>
@@ -15268,24 +17468,38 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Plugin Ekstensi Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="+6" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Gunakan Papan Ketik Virtual Qt</translation>
     </message>
     <message>
-        <location line="-180" />
         <source>Qt 6.4</source>
-        <translation>Qt 6.4</translation>
+        <translation type="vanished">Qt 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-49" />
         <source>Qt 6.5</source>
         <translation>Qt 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+1" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>Atur QT_QML_GENERATE_QMLLS_INI ke ON di CMake</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Membuat aplikasi Qt Quick yang dapat memiliki kode QML dan C++. Anda dapat membangun aplikasi dan menyebarkannya ke platform target desktop, tertanam, dan seluler.</translation>
     </message>
@@ -15295,7 +17509,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Cepat Qt</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15309,7 +17523,17 @@ Gunakan versi &quot;compat&quot; ini jika Anda ingin menggunakan sistem build la
         <translation>Aplikasi Cepat Qt (kompatibel)</translation>
     </message>
     <message>
-        <location line="-92" />
+        <location line="+5" />
+        <source>Create a project that you can open in Qt Design Studio</source>
+        <translation>Buat proyek yang dapat Anda buka di Qt Design Studio</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Membuat proyek dengan struktur yang kompatibel dengan Qt Design Studio maupun Qt Creator. Proyek ini berisi form .ui.qml yang dapat Anda edit secara visual di Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15323,12 +17547,12 @@ Untuk mengembangkan aplikasi lengkap, buatlah proyek Aplikasi Qt Quick.</transla
         <translation>Prototipe UI Cepat Qt</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Wizard ini menghasilkan proyek Aplikasi Qt Widgets. Aplikasi ini diturunkan secara default dari QApplication dan menyertakan widget kosong.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>Hasilkan formulir</translation>
     </message>
@@ -15357,50 +17581,50 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Aplikasi Widget Qt</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Harap konfigurasikan &lt;b&gt;%{vcsName}&lt;/b&gt; sekarang.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Gudang:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>URL repositori tidak valid</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>Direktori:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; ada di sistem file.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Gunakan direktori yang ada</translation>
     </message>
@@ -15475,23 +17699,22 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Revisi:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Tentukan URL repositori, direktori checkout, dan jalur.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Menjalankan cabang Bazaar...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Klon</translation>
     </message>
@@ -15501,22 +17724,22 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Mengkloning cabang Bazaar dan mencoba memuat proyek yang ada di dalamnya.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Proyek Impor</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Klon Bazaar (Atau Cabang)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -15531,19 +17754,19 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Menjalankan pembayaran CVS...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Check-out</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Memeriksa repositori CVS dan mencoba memuat proyek yang ada di dalamnya.</translation>
     </message>
@@ -15553,7 +17776,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Pembayaran CVS</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;cabang default&gt;</translation>
     </message>
@@ -15593,7 +17816,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Klon Git</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Menjalankan klon Mercurial...</translation>
     </message>
@@ -15608,7 +17831,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Klon Mercurial</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Sertifikat Server Percaya</translation>
     </message>
@@ -15628,7 +17851,62 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Pembayaran Subversi</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Minta passthrough</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Minta izin untuk mode passthrough.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>Minta pelacakan tangan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>Minta izin untuk pelacakan tangan.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Minta spatial anchor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Minta izin untuk API anchor.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>Fitur XR</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Fitur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Pemilihan Kit: Untuk Apple Vision Pro, pilih kit apa pun.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>Membuat aplikasi Qt Quick 3D XR dengan kode QML dan C++. Anda dapat membangun dan men-deploy aplikasi ke platform VR desktop dan XR mandiri. Untuk Apple Vision Pro, Anda dapat mengembangkan di Qt Creator tetapi harus men-deploy proyek CMake dengan XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>Aplikasi XR</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Wizard ini membuat plugin Qt Creator khusus.</translation>
     </message>
@@ -15688,12 +17966,11 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Membuat plugin Qt Creator khusus.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Plugin Pembuat Qt</translation>
+        <translation type="vanished">Plugin Pembuat Qt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S&amp;esi</translation>
     </message>
@@ -15713,7 +17990,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Nama sesi saat ini.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Hapus Sesi</translation>
     </message>
@@ -15735,7 +18012,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
 %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Terjadi kesalahan saat memulihkan sesi</translation>
     </message>
@@ -15745,33 +18022,33 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Tidak dapat memulihkan sesi %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Memuat Sesi</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Terjadi kesalahan saat menyimpan sesi</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>Tidak dapat menyimpan sesi %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Tidak dapat menyimpan sesi ke file &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Masukkan nama sesi:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Manajer Sesi</translation>
     </message>
@@ -15811,7 +18088,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Apa itu Sesi?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Sidang</translation>
     </message>
@@ -15821,7 +18098,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Terakhir Dimodifikasi</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Nama Sesi Baru</translation>
@@ -15847,7 +18124,7 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Kl&amp;on dan &amp; Buka</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Ganti Nama Sesi</translation>
     </message>
@@ -15862,17 +18139,17 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Ganti nama dan &amp;Buka</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;kebiasaan&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Konfigurasi salah. Periksa tampilan Masalah untuk mengetahui detailnya.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>Tidak dapat membuat direktori &quot;%1&quot;</translation>
     </message>
@@ -15882,44 +18159,41 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Program &quot;%1&quot; tidak ada atau tidak dapat dijalankan.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Mulai: &quot;%1&quot; %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>Proses &quot;%1&quot; keluar secara normal.</translation>
+        <translation type="vanished">Proses &quot;%1&quot; keluar secara normal.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>Proses &quot;%1&quot; keluar dengan kode %2.</translation>
+        <translation type="vanished">Proses &quot;%1&quot; keluar dengan kode %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>Tidak dapat memulai proses &quot;%1&quot; %2.</translation>
+        <translation type="vanished">Tidak dapat memulai proses &quot;%1&quot; %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>Proses &quot;%1&quot; terhenti.</translation>
+        <translation type="vanished">Proses &quot;%1&quot; terhenti.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[tidak ada]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>Nama</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Sumber</translation>
     </message>
@@ -15939,7 +18213,22 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Membuat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Hapus Konfigurasi Eksekusi</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Filter konfigurasi run berdasarkan nama</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Hapus yang Dipilih</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>File di Proyek Apa Pun</translation>
     </message>
@@ -15949,18 +18238,19 @@ Memilih Qt desktop untuk membangun aplikasi jika tersedia.</translation>
         <translation>Menemukan file dari semua proyek yang terbuka. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; untuk melompat ke nomor baris tertentu. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; lain untuk melompat ke nomor kolom juga.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Semua Proyek</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Semua Proyek:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -15969,7 +18259,7 @@ Tidak termasuk: %2
 %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Lampirkan debugger ke proses ini</translation>
     </message>
@@ -15979,7 +18269,33 @@ Tidak termasuk: %2
         <translation>Lampirkan debugger ke %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Kategori</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Debug</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Kritis</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Fatal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Berhenti</translation>
     </message>
@@ -16015,12 +18331,12 @@ Tidak termasuk: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Keluaran Aplikasi</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Jalankan kembali konfigurasi proses ini.</translation>
     </message>
@@ -16030,45 +18346,74 @@ Tidak termasuk: %2
         <translation>Berhenti menjalankan program.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>keluaran-aplikasi-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Jendela Keluaran Aplikasi</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Filter Kategori Log Internal Qt</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Filter kategori dengan regular expression</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Regular expression tidak valid: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Hapus Centang Semua</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Hapus Centang Semua %1</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Centang Semua %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID%1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Tidak sah</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Keluaran bungkus kata</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Hapus keluaran lama pada proses baru</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Gabungkan stderr dan stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Selalu</translation>
     </message>
@@ -16083,45 +18428,64 @@ Tidak termasuk: %2
         <translation>Hanya Pada Keluaran Pertama</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Buang output berlebih</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Timpa warna latar belakang</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Sesuaikan warna latar belakang output aplikasi.
+Catatan: output yang sudah ada tidak akan diwarnai ulang.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Batasi keluaran hingga %1 karakter</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Buka Output Aplikasi saat menjalankan:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Buka Output Aplikasi saat melakukan debug:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>tanpa judul</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Bangun direktori:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>Direktori build tidak dapat dijangkau dari perangkat build.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>Membangun bayangan:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>Direktori build berisi karakter &quot;%1&quot; yang berpotensi bermasalah.</translation>
     </message>
@@ -16131,15 +18495,16 @@ Tidak termasuk: %2
         <translation>Peringatan ini dapat disembunyikan &lt;a href=&quot;dummy&quot;&gt;di sini&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Info debug terpisah:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Membangun Lingkungan</translation>
     </message>
@@ -16149,14 +18514,14 @@ Tidak termasuk: %2
         <translation>Lingkungan sistem yang jelas</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Parser Keluaran Kustom</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Parsing keluaran standar selama pembuatan</translation>
     </message>
@@ -16166,29 +18531,34 @@ Tidak termasuk: %2
         <translation>Membuat parser keluaran mencari diagnostik di stdout daripada stderr.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Pengaturan Bangun</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Direktori root proyek. Dapat berbeda dari Project:Path untuk beberapa sistem build.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Bangun direktori</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Nama konfigurasi build</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Variabel di lingkungan konfigurasi build</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Keterangan alat di pemilih target:</translation>
     </message>
@@ -16198,8 +18568,9 @@ Tidak termasuk: %2
         <translation>Muncul sebagai tooltip saat mengarahkan konfigurasi build</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Lingkungan Sistem</translation>
     </message>
@@ -16215,7 +18586,24 @@ Tidak termasuk: %2
         <translation>Proyek ini tidak berhasil diurai.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>Default</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Rilis</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Profil</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>File utama proyek</translation>
     </message>
@@ -16245,7 +18633,7 @@ Tidak termasuk: %2
         <translation>Jenis konfigurasi build aktif proyek</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>Tidak ada perangkat build yang disetel untuk kit &quot;%1&quot;.</translation>
     </message>
@@ -16265,14 +18653,14 @@ Tidak termasuk: %2
         <translation>Perangkat build &quot;%1&quot; tidak dapat mencapai direktori build.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>Menyelesaikan %1 dari %n langkah</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Hentikan Aplikasi</translation>
     </message>
@@ -16292,7 +18680,7 @@ Tidak termasuk: %2
         <translation>Perangkat build gagal mempersiapkan build %1 (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Menyusun</translation>
@@ -16336,13 +18724,13 @@ Tidak termasuk: %2
         <translation>Masalah ditemukan saat menjalankan tes.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -16352,10 +18740,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -16363,11 +18751,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Menyebarkan</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -16375,7 +18763,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Membangun</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>Pembangunan/Penerapan dibatalkan</translation>
     </message>
@@ -16395,34 +18783,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Melewati langkah yang dinonaktifkan %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Kesalahan saat membangun/menyebarkan proyek %1 (kit: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>Kit %1 mempunyai masalah konfigurasi yang mungkin menjadi penyebab utama masalah ini.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>Saat menjalankan langkah &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Memungkinkan</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Cacat</translation>
@@ -16433,7 +18821,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Gunakan Default Proyek</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>Direktori pembuatan default:</translation>
     </message>
@@ -16443,7 +18831,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Templat yang digunakan untuk membuat direktori build default.&lt;br&gt;&lt;br&gt;Nilai default dapat disetel menggunakan variabel lingkungan &lt;tt&gt;%1&lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Direktori kerja default:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Template yang digunakan untuk menyusun direktori kerja default konfigurasi eksekusi.&lt;br&gt;&lt;br&gt;Nilai default dapat diatur menggunakan variabel lingkungan &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>Proses debug QML:</translation>
     </message>
@@ -16458,72 +18856,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Properti Bangun Default</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Tidak ada pengaturan build yang tersedia</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Edit konfigurasi build:</translation>
+        <translation type="vanished">Edit konfigurasi build:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Menambahkan</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Menghapus</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Ganti nama...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Klon...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Konfigurasi build aktif:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Konfigurasi Baru</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Nama konfigurasi baru:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nama baru untuk konfigurasi build &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -16532,14 +18932,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Konfigurasi Klon</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Batalkan Build &amp;&amp; Hapus Konfigurasi Build</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Jangan Hapus</translation>
     </message>
@@ -16584,13 +18984,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Hapus Barang</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 Langkah</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>Tidak ada %1 Langkah</translation>
     </message>
@@ -16615,7 +19015,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tidak dapat menghapus langkah pembangunan saat membangun</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>Proyek ini sedang diurai.</translation>
     </message>
@@ -16640,13 +19040,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Gaya Kode</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Kompilasi Keluaran</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>kompilasi-output.txt</translation>
@@ -16667,9 +19067,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>HAI</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Output kompilasi berlebih dibuang.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>Buka Kompilasi Output saat membangun</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>Membuang output kompilasi yang masuk terus-menerus lebih cepat daripada yang dapat ditangani.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -16706,7 +19116,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Salin direktori secara rekursif</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>kesalahan:</translation>
@@ -16718,7 +19128,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>peringatan:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>Meminta %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>Dapatkan bantuan dari %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Minta LLM %1 membantu menangani masalah ini.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>File dalam Proyek Saat Ini</translation>
     </message>
@@ -16728,44 +19153,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Menemukan file dari proyek dokumen saat ini. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; untuk melompat ke nomor baris tertentu. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; lain untuk melompat ke nomor kolom juga.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>Proyek &quot;%1&quot;</translation>
+        <translation type="vanished">Proyek &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Proyek Saat Ini</translation>
+        <translation type="vanished">Proyek Saat Ini</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Proyek Tunggal</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>Proyek &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Proyek:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Saat Ini</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Eksekusi Kustom</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Jalankan %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Anda perlu mengatur executable dalam konfigurasi custom run.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>Tidak ada executable yang dikonfigurasi pada konfigurasi eksekusi kustom.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>Buka konfigurasi run %1 dan siapkan executable.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Anda perlu mengatur executable dalam konfigurasi custom run.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Gagal membaca parser output kustom dari &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Parser keluaran khusus memindai keluaran baris perintah untuk mencari pola kesalahan yang disediakan pengguna&lt;br&gt;untuk membuat entri di Issues.&lt;br&gt;Parser dapat dikonfigurasi &lt;a href=&quot;dummy&quot;&gt;di sini&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (default proyek)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Tidak ada parser khusus yang aktif</translation>
     </message>
@@ -16846,8 +19305,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Tes</translation>
     </message>
@@ -16871,19 +19330,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Kesalahan</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Peringatan</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Tidak berlaku:</translation>
     </message>
@@ -16903,16 +19362,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Pola tidak sesuai dengan pesan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Build default</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Jalankan default</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Nama parser kustom.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Parser kustom ini digunakan secara default untuk semua konfigurasi build proyek.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Parser kustom ini digunakan secara default untuk semua konfigurasi eksekusi proyek.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Tidak dapat mengubah parser karena diimpor secara otomatis.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Parser keluaran khusus yang ditentukan di sini dapat diaktifkan satu per satu di pengaturan build atau run proyek.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Menambahkan...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Ekspor...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>Impor...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -16920,37 +19419,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Pengurai Baru</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Simpan Parser</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Muat Parser</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Galat Memuat Parser</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Galat memuat parser: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Kebiasaan</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Dentang</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -16963,11 +19487,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Kosong</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>MAKRO[=NILAI]</translation>
     </message>
@@ -16992,22 +19517,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Daftar mkspecs yang dipisahkan koma.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Jalur kompiler:</translation>
+        <translation type="vanished">&amp;Jalur kompiler:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Buat jalur:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;ABI:</translation>
     </message>
@@ -17052,7 +19573,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Hal ini akan menciptakan ketergantungan melingkar.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Sinkronisasi konfigurasi</translation>
     </message>
@@ -17062,12 +19583,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Sinkronkan kit aktif, bangun, dan terapkan konfigurasi antar proyek.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Deploy dependensi</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Jangan hanya membangun dependensi, tetapi deploy juga.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>Ketergantungan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Terapkan secara lokal</translation>
@@ -17093,65 +19624,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ganti data penerapan dari sistem build</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>Konfigurasi Jalankan Qt</translation>
+        <translation type="vanished">Konfigurasi Jalankan Qt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>komputer lokal</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Desktop</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>Tidak dapat menghentikan proses dengan pid %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>Tidak dapat menghentikan proses dengan pid %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Tidak dapat membuka proses.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>Id proses tidak valid.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Tidak dapat membuka proses: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>Proses DebugBreak gagal:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 tidak ada. Jika Anda membuat %2 sendiri, lihat https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 tidak ada. Instalasi %2 Anda tampaknya rusak.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>Anda memerlukan setidaknya satu port untuk debugging QML.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Jalankan Deteksi Otomatis Sekarang</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Tipe mesin:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Perangkat Fisik</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Port bebas:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>&quot;%1&quot; hanya dapat menangani berkas lokal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>Perangkat &quot;%1&quot; belum siap digunakan.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 tidak ada. Jika Anda membuat %2 sendiri, lihat https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>Tidak dapat memulai %1. Periksa src\tools\win64interrupt\win64interrupt.c untuk informasi lebih lanjut.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>tidak dapat menghentikan proses tersebut.</translation>
     </message>
@@ -17173,7 +19743,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tidak ada perangkat yang disiapkan untuk kit ini. Apakah Anda ingin menambahkan perangkat?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Periksa perangkat yang dikonfigurasi</translation>
     </message>
@@ -17188,23 +19758,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Jenis perangkat yang tersedia:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>Tidak ada perangkat untuk jalur &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>Tidak ditemukan perangkat untuk path &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>Tidak ada akses file untuk perangkat &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>Tidak ditemukan perangkat untuk jalur &quot;%1&quot;</translation>
+        <translation type="vanished">Tidak ditemukan perangkat untuk jalur &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>Tidak ada akses file untuk perangkat &quot;%1&quot;</translation>
+        <translation type="vanished">Tidak ada akses file untuk perangkat &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Semua</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (default untuk %2)</translation>
     </message>
@@ -17244,22 +19830,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kesalahan Jarak Jauh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Perangkat:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Jenis Tertentu</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Menghapus</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Tetapkan Sebagai Default</translation>
     </message>
@@ -17269,7 +19856,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Menambahkan...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Mulai Wizard untuk Menambahkan Perangkat...</translation>
     </message>
@@ -17280,7 +19867,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tambahkan %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;Nama:</translation>
     </message>
@@ -17295,7 +19882,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Keadaan saat ini:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Pulihkan</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Ya (idnya adalah &quot;%1&quot;)</translation>
     </message>
@@ -17310,8 +19902,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tampilkan Proses yang Berjalan...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Perangkat</translation>
     </message>
@@ -17331,24 +19923,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Uji perangkat gagal.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Output kesalahan jarak jauh adalah: %1</translation>
+        <translation type="vanished">Output kesalahan jarak jauh adalah: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>Ditemukan %n port gratis.</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Memeriksa port yang tersedia...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Tidak ada perangkat yang disetel untuk transfer uji.</translation>
     </message>
@@ -17378,7 +19969,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>salinan file umum</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>Cari di PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Cari di instalasi Qt</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Cari di direktori</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Daftar direktori yang dipisahkan titik koma</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Pilih path pada perangkat yang akan dipindai untuk mencari binary.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Buat kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Siapkan kit untuk toolchain perangkat ini.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Perangkat tidak terhubung.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Biarkan kosong untuk mencari executable di $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Gunakan penerusan port SSH untuk debugging</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>Aktifkan debugging pada target jarak jauh yang tidak dapat membuka port server GDB.
+Tunneling SSH digunakan untuk memetakan port server GDB jarak jauh ke localhost.
+Port lokal dan jarak jauh ditentukan secara otomatis.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Akses melalui:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Pilih perangkat untuk terhubung.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Langsung</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Nama perangkat tidak boleh kosong.</translation>
     </message>
@@ -17388,18 +20053,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Perangkat dengan nama ini sudah ada.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Masukkan daftar dan rentang seperti ini: &quot;1024,1026-1028,1030&quot;.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Membuka terminal tidak didukung.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>File &quot;%1&quot; tidak dapat ditangani oleh perangkat &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Menjalankan source pada script tidak didukung di platform ini.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Perangkat</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>Tidak tersedia recipe operasi sinyal untuk perangkat ini.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Siap digunakan</translation>
     </message>
@@ -17419,22 +20103,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tidak dikenal</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Jalankan Tool di Perangkat Ini</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Source dan Build Tool di Perangkat Ini</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Deteksi Otomatis</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>localSource() tidak diterapkan untuk jenis perangkat ini.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>Tidak ada path yang ditentukan untuk SignalOperationData.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>Tidak ada PID valid yang ditentukan untuk SignalOperationData.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Tidak ada perangkat untuk jalur tertentu: &quot;%1&quot;.</translation>
+        <translation type="vanished">Tidak ada perangkat untuk jalur tertentu: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>Perangkat untuk jalur &quot;%1&quot; tidak mendukung proses penghentian.</translation>
+        <translation type="vanished">Perangkat untuk jalur &quot;%1&quot; tidak mendukung proses penghentian.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>ID Proses</translation>
     </message>
@@ -17444,53 +20151,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Baris Perintah</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>Mengambil daftar proses. Ini mungkin memakan waktu cukup lama.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>Gagal mengambil daftar proses.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>SSH</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Aktifkan berbagi koneksi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Batas waktu berbagi koneksi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>Jalur ke ssh yang dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>Jalur ke sftp yang dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>Jalur ke ssh-askpass yang dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>Jalur ke ssh-keygen yang dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>menit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Proyek%1</translation>
@@ -17502,7 +20213,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Proyek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Pulihkan Global</translation>
     </message>
@@ -17512,40 +20224,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Pengaturan Tampilan</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Tampilkan kanan &amp;margin di kolom:</translation>
+        <translation type="vanished">Tampilkan kanan &amp;margin di kolom:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Gunakan margin khusus konteks</translation>
+        <translation type="vanished">Gunakan margin khusus konteks</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Jika tersedia, gunakan margin yang berbeda. Misalnya ColumnLimit dari plugin ClangFormat.</translation>
+        <translation type="vanished">Jika tersedia, gunakan margin yang berbeda. Misalnya ColumnLimit dari plugin ClangFormat.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Lingkungan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Lingkungan dasar untuk konfigurasi proses ini:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Tampilkan di Output Aplikasi saat dijalankan</translation>
     </message>
@@ -17556,12 +20263,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Pilih Direktori</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>Sunting&amp;itu</translation>
     </message>
@@ -17601,7 +20308,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Buka terminal dengan pengaturan lingkungan ini.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Batalkan penyetelan &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
@@ -17643,17 +20350,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Gunakan &lt;b&gt;%1&lt;/b&gt; dan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>File di Semua Direktori Proyek</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>File di Semua Direktori Proyek:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Pengaturan</translation>
     </message>
@@ -17663,18 +20370,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bisa dilihat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>MinGW</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 (%2, %3 %4 pada %5)</translation>
+        <translation type="vanished">%1 (%2, %3 %4 pada %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3 di &quot;%4&quot;)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Ganti untuk model kode</translation>
     </message>
@@ -17686,7 +20397,7 @@ fails because Clang does not understand the target architecture.</source>
 gagal karena Dentang tidak memahami arsitektur target.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Tanda kodegen platform:</translation>
     </message>
@@ -17701,7 +20412,7 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
         <translation>Target tiga kali lipat:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Rantai alat induk:</translation>
     </message>
@@ -17726,22 +20437,22 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
         <translation>Input edit teks untuk diperbaiki.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Bidang bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Bidang tidak memiliki nama.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>Bidang &quot;%1&quot; tidak memiliki tipe.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>Bidang &quot;%1&quot; memiliki tipe &quot;%2&quot; yang tidak didukung.</translation>
     </message>
@@ -17751,102 +20462,102 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
         <translation>Saat menguraikan Bidang &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Label (&quot;%1&quot;) data bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Label (&quot;%1&quot;) tidak memiliki trText.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>Data spacer (&quot;%1&quot;) bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>Properti spacer (&quot;%1&quot;) &quot;faktor&quot; bukan nilai integer.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Data LineEdit (&quot;%1&quot;) bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) memiliki ekspresi reguler &quot;%2&quot; yang tidak valid di &quot;validator&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) memiliki nilai &quot;%2&quot; yang tidak valid di &quot;penyelesaian&quot;.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Data TextEdit (&quot;%1&quot;) bukan objek.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>Data PathChooser bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>jenis &quot;%1&quot; bukan salah satu dari &quot;Direktori yang ada&quot;, &quot;direktori&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;ExistingCommand&quot;, &quot;command&quot;, &quot;any&quot; yang didukung.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Data Kotak Centang (&quot;%1&quot;) bukan objek.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Nilai Kotak Centang (&quot;%1&quot;) untuk status yang dicentang dan tidak dicentang adalah sama.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>Tidak ada daftar JSON yang diizinkan di dalam item Daftar.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Tidak ada &quot;kunci&quot; yang ditemukan di item Daftar.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1 (&quot;%2&quot;) data bukan objek.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;indeks&quot; bukan nilai integer.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; bukan nilai integer.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;item&quot; hilang.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;item&quot; bukan daftar JSON.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>Setidaknya satu fitur yang diperlukan tidak ada.</translation>
     </message>
@@ -17861,7 +20572,7 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
         <translation>Setidaknya satu fitur pilihan tidak ada.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Daftar fitur diatur dan bukan dari daftar tipe.</translation>
     </message>
@@ -17876,7 +20587,7 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
         <translation>Elemen daftar fitur bukan string atau objek.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Gagal Berkomitmen pada Kontrol Versi</translation>
     </message>
@@ -17893,7 +20604,7 @@ gagal karena Dentang tidak memahami arsitektur target.</translation>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>Gagal menambahkan subproyek &quot;%1&quot; 
@@ -17901,20 +20612,25 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Gagal menambahkan satu atau lebih file ke proyek 
 &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>Subproyek &quot;%1&quot; berada di luar &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>File Proyek</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Pilih File Proyek</translation>
     </message>
@@ -17924,12 +20640,12 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Proyek ini berisi lebih dari satu file proyek. Pilih salah satu yang ingin Anda gunakan.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Periksa apakah suatu variabel ada.&lt;br&gt;Mengembalikan &quot;benar&quot; jika ada dan string kosong jika tidak.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Tidak dapat menentukan jalur target. &quot;TargetPath&quot; tidak ditetapkan pada halaman mana pun.</translation>
     </message>
@@ -17949,32 +20665,32 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Tidak ada &apos;kunci&apos; di objek opsi.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Gagal Menimpa File</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Gagal Memformat File</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Gagal Menulis File</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>Gagal Memposting File</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Gagal memoles file</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Gagal Membuka File</translation>
     </message>
@@ -18016,66 +20732,65 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Tidak Dapat Membuka Proyek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Generator bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Generator tidak memiliki set typeId.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeId &quot;%1&quot; generator tidak diketahui. TypeId yang didukung adalah: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>Jalur &quot;%1&quot; tidak ada saat memeriksa jalur pencarian wizard JSON.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>Memeriksa &quot;%1&quot; untuk %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* Gagal menguraikan &quot;%1&quot;:%2:%3: %4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Tidak menemukan objek JSON di &quot;%1&quot;.</translation>
+        <translation type="vanished">* Tidak menemukan objek JSON di &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Konfigurasi ditemukan dan diuraikan.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>JsonWizard: &quot;%1&quot; tidak ditemukan.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Halaman bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Halaman tidak memiliki set typeId.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeId &quot;%1&quot; halaman tidak diketahui. TypeId yang didukung adalah: &quot;%2&quot;.</translation>
     </message>
@@ -18085,7 +20800,8 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Halaman dengan typeId &quot;%1&quot; memiliki &quot;indeks&quot; yang tidak valid.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* Tidak menemukan objek JSON di &quot;%1&quot;.</translation>
     </message>
@@ -18095,22 +20811,22 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>* Versi %1 tidak didukung.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Gagal membuat: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>kunci tidak ditemukan.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Diharapkan suatu objek atau daftar.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Platform yang dipilih untuk wizard.</translation>
     </message>
@@ -18140,62 +20856,66 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Tidak ada identitas yang ditetapkan.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Tidak ada kategori yang ditetapkan.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>File ikon &quot;%1&quot; tidak ditemukan.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>File gambar &quot;%1&quot; tidak ditemukan.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>Tidak ada nama tampilan yang disetel.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>Tidak ada set Kategori tampilan.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Tidak ada deskripsi yang ditetapkan.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>Saat menguraikan &quot;generator&quot;: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>Saat mengurai &quot;halaman&quot;: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>typeId tidak valid.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">Saat mengurai &quot;halaman&quot;: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Entri daftar data file bukan merupakan objek.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Sumber dan target keduanya kosong.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>Saat memproses &quot;%1&quot;:&lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [folder]</translation>
     </message>
@@ -18222,7 +20942,12 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Saat menguraikan bidang halaman &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Field tidak ditemukan.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>&quot;data&quot; untuk halaman &quot;File&quot; harus tidak disetel atau objek kosong.</translation>
     </message>
@@ -18232,12 +20957,12 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Kesalahan saat mengurai &quot;%1&quot; di halaman &quot;Kit&quot;: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>&quot;data&quot; harus berupa objek JSON untuk halaman &quot;Kit&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>Halaman &quot;Kit&quot; memerlukan kumpulan &quot;%1&quot;.</translation>
     </message>
@@ -18247,38 +20972,39 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>&quot;data&quot; harus kosong atau berupa objek JSON untuk halaman &quot;Proyek&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Ekspresi reguler &quot;%1&quot; di &quot;%2&quot; tidak valid. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>&quot;data&quot; untuk halaman &quot;Ringkasan&quot; bisa tidak disetel atau harus berupa objek.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Kunci bukanlah sebuah objek.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>Pola &quot;%1&quot; bukanlah ekspresi reguler yang valid.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>ScannerGenerator: Pola biner &quot;%1&quot; tidak valid.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>Tanpa nama</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Perlengkapan</translation>
@@ -18309,13 +21035,14 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>ID kit.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>Klon dari %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -18346,49 +21073,86 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Akar Sis</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Tidak ada kompiler&gt;</translation>
+        <translation type="vanished">&lt;Tidak ada kompiler&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Penyusun</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Kompiler yang akan digunakan untuk membangun.&lt;br&gt;Pastikan kompiler akan menghasilkan biner yang kompatibel dengan perangkat target, versi Qt, dan pustaka lain yang digunakan.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Kompiler menghasilkan kode untuk ABI yang berbeda: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Jalur ke kompiler dapat dieksekusi</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Kompiler untuk berbagai bahasa</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Kompiler dapat dieksekusi untuk berbagai bahasa</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>Toolchain ditemukan: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Menghapus toolchain: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Toolchain: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Objek JSON diharapkan untuk deteksi toolchain, tetapi diterima: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>Tidak ditemukan toolchain pada objek JSON untuk deteksi.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Bahasa tidak dikenal pada deteksi toolchain: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Tidak ada kompiler yang diatur dalam kit.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Jalankan jenis perangkat</translation>
     </message>
@@ -18398,18 +21162,69 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Jenis perangkat untuk menjalankan aplikasi.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Jenis perangkat tidak diketahui</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Perangkat:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Jenis perangkat</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Perangkat eksekusi belum diatur.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Perangkat build tidak kompatibel dengan kit ini.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Perangkat eksekusi tidak kompatibel dengan kit ini.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Alamat host (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>Port SSH (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Nama pengguna (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>File kunci privat (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Nama perangkat (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Direktori root perangkat (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Jalankan perangkat</translation>
     </message>
@@ -18419,129 +21234,245 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Perangkat untuk menjalankan aplikasi.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Tipe perangkat build</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Tipe perangkat tempat build dilakukan.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Tidak ada perangkat yang disetel.</translation>
+        <translation type="vanished">Tidak ada perangkat yang disetel.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Perangkat tidak kompatibel dengan kit ini.</translation>
+        <translation type="vanished">Perangkat tidak kompatibel dengan kit ini.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Tidak dikonfigurasi</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Alamat tuan rumah</translation>
+        <translation type="vanished">Alamat tuan rumah</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>Pelabuhan SSH</translation>
+        <translation type="vanished">Pelabuhan SSH</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Aktifkan untuk menentukan berkas kunci privat yang digunakan untuk autentikasi; jika tidak, mekanisme default digunakan untuk autentikasi (kata sandi, .sshconfig, dan kunci privat default).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Gunakan kunci tertentu:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Mode pemeriksaan host key SSH perangkat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Pemeriksaan kunci host:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Tanpa pemeriksaan host key.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Ketat</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Pemeriksaan host key ketat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Izinkan Tanpa Kecocokan</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Izinkan pemeriksaan kunci host.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Nama host atau alamat IP</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Nama host atau alamat IP perangkat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Nama host:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Nama belakang</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Nama pengguna SSH perangkat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Nama pengguna:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Nomor port SSH perangkat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>Port SSH:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>File kunci pribadi</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>File kunci privat perangkat.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>File kunci privat:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Batas waktu:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Batas waktu koneksi SSH perangkat.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Nama perangkat</translation>
+        <translation type="vanished">Nama perangkat</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Direktori root perangkat</translation>
+        <translation type="vanished">Direktori root perangkat</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Bangun perangkat</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Perangkat yang digunakan untuk membangun aplikasi.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Tidak ada perangkat build yang disetel.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Bangun alamat host</translation>
+        <translation type="vanished">Bangun alamat host</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>Bangun port SSH</translation>
+        <translation type="vanished">Bangun port SSH</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Bangun nama pengguna</translation>
+        <translation type="vanished">Bangun nama pengguna</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Buat file kunci pribadi</translation>
+        <translation type="vanished">Buat file kunci pribadi</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Bangun nama perangkat</translation>
+        <translation type="vanished">Bangun nama perangkat</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Bangun direktori root perangkat</translation>
+        <translation type="vanished">Bangun direktori root perangkat</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Mengubah...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Tidak ada perubahan untuk diterapkan.</translation>
+        <translation type="vanished">Tidak ada perubahan untuk diterapkan.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>Paksa keluaran kompiler MSVC UTF-8</translation>
+        <translation type="vanished">Paksa keluaran kompiler MSVC UTF-8</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Edit Environment Build...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Edit Environment Run...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Edit Environment Build</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Edit Environment Run</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>Paksa output MSVC UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>Mengalihkan MSVC ke Bahasa Inggris atau mempertahankan bahasanya dan hanya memaksakan keluaran UTF-8 (dapat bervariasi tergantung pada kompiler MSVC yang digunakan).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Pengaturan lingkungan build tambahan saat menggunakan kit ini.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Nilai pengaturan lingkungan tidak valid.</translation>
+        <translation type="vanished">Nilai pengaturan lingkungan tidak valid.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -18549,29 +21480,65 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Kit Proyek Aktif: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 pada %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Desktop (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Memuat Kit</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Tandai sebagai Dapat Diubah</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Mengelola...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>Pabrik aspek kit &quot;%1&quot; tidak mendukung pembuatan aspek dari JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Mendeteksi kit untuk perangkat secara otomatis: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>Kit ditemukan: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Menghapus kit untuk perangkat: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Menghapus kit: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Kit: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
@@ -18586,12 +21553,12 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Nama kit yang cocok untuk menghasilkan nama direktori. Nilai ini digunakan untuk variabel &lt;i&gt;%1&lt;/i&gt;, yang misalnya menentukan nama direktori build bayangan.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Nama sistem file:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Ikon perlengkapan.</translation>
     </message>
@@ -18606,12 +21573,17 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Reset ke Ikon Default Perangkat</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Nama tampilan tidak unik.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Atur sebagai kit default yang digunakan saat membuat proyek baru.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>Bawaan untuk %1</translation>
     </message>
@@ -18626,18 +21598,16 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Gambar (*.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (standar)</translation>
+        <translation type="vanished">%1 (standar)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Jadikan Default</translation>
+        <translation type="vanished">Jadikan Default</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Filter Pengaturan...</translation>
     </message>
@@ -18657,7 +21627,7 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Pilih pengaturan kit mana yang akan ditampilkan secara default.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Buat argumen:</translation>
     </message>
@@ -18737,29 +21707,27 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>Tidak ada konflik dengan variabel lingkungan &lt;code&gt;MAKEFLAGS&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Jalankan Tanpa Penerapan</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Proyek</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Berlari</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Proyek:&lt;/b&gt; %1</translation>
     </message>
@@ -18794,7 +21762,7 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Proyek: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</translation>
     </message>
@@ -18824,49 +21792,54 @@ untuk memproyeksikan &quot;%2&quot;.</translation>
         <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;Proyek &lt;b&gt;%1&lt;/b&gt; belum dikonfigurasi&lt;br/&gt;&lt;br/&gt;Anda dapat mengonfigurasinya dalam &lt;a href=&quot;projectmode&quot;&gt;mode Proyek&lt;/a&gt;&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Kembali menggunakan lingkungan cache untuk &quot;%1&quot; setelah:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Inisialisasi:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>Tidak ditemukan toolchain MSVC. Anda perlu menginstal Visual Studio atau Visual Studio Build Tools.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;kosong&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Argumen tambahan untuk panggilan vcvarsall.bat</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>Gagal mengambil Lingkungan MSVC dari &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>dentang-cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>Proses tidak dapat mengakses file karena sedang digunakan oleh proses lain. 
 Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pembangunan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Parsing Keluaran Pembangunan</translation>
     </message>
@@ -18916,7 +21889,7 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Gunakan parser dari kit:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Tidak Dapat Mengurai</translation>
     </message>
@@ -18926,26 +21899,26 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Tidak dapat menguraikan: Kit yang dipilih tidak menyediakan pengurai keluaran.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Memerintah:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Argumen:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Direktori kerja:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Langkah Proses Kustom</translation>
@@ -18956,13 +21929,23 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Nama Proyek</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Paket tidak valid.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Kit tidak memiliki perangkat build.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>Perangkat build &quot;%2&quot; tidak dapat menangani berkas proyek &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Paket Tidak Kompatibel</translation>
     </message>
@@ -18997,37 +21980,39 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Beberapa konfigurasi tidak dapat disalin.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Tidak dapat memuat kit dalam jangka waktu yang wajar.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Pilih Direktori Root</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>Proyek &quot;%1&quot; dikonfigurasi untuk kit &quot;%2&quot; dengan id %3, yang sudah tidak ada lagi. Anda dapat membuat kit baru atau menyalin langkah-langkah dari kit yang hilang ke kit lain dalam mode %4.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Proyek</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>Tidak dapat menemukan file qml_*.qm di &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nama.</translation>
@@ -19069,13 +22054,13 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>%1: Jalur build lengkap dari konfigurasi build aktif.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabel dalam lingkungan build aktif.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nama konfigurasi proses yang aktif.</translation>
@@ -19087,45 +22072,61 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>%1: Dapat dieksekusi dari konfigurasi proses aktif.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabel di lingkungan konfigurasi proses aktif.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Direktori kerja konfigurasi proses aktif.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Komentar Dokumentasi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>tidak tersedia</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Lingkungan Proyek</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Terapkan Konfigurasi</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>Executable SSH:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>Executable Ninja:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Membuka...</translation>
@@ -19146,7 +22147,12 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>&amp;Mulai Men-debug</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>&amp;Analisis</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Buka Dengan</translation>
     </message>
@@ -19156,12 +22162,11 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Proyek Baru...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Muat Proyek...</translation>
+        <translation type="vanished">Muat Proyek...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Buka Ruang Kerja...</translation>
     </message>
@@ -19171,23 +22176,24 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Buka Berkas</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Jalankan Lingkungan</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>P&amp;proyek terkini</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Tutup Proyek</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>&amp;Tutup Proyek &quot;%1&quot;</translation>
     </message>
@@ -19198,12 +22204,12 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>Tutup Semua File di Proyek &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>&amp;Tutup Proyek</translation>
     </message>
@@ -19232,12 +22238,12 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Membangun kembali</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Bangun Kembali Semua Proyek</translation>
     </message>
@@ -19307,12 +22313,11 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Bangun Kembali Proyek untuk Semua Konfigurasi</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Proyek Bersih</translation>
+        <translation type="vanished">Proyek Bersih</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Proyek Bersih untuk Semua Konfigurasi</translation>
     </message>
@@ -19322,7 +22327,7 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Batalkan Pembuatan</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Bangun Tanpa Ketergantungan</translation>
@@ -19376,12 +22381,12 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>Tutup Proyek &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Tutup Proyek Lainnya</translation>
     </message>
@@ -19417,7 +22422,7 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Hapus Berkas...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Tetapkan sebagai Proyek Aktif</translation>
     </message>
@@ -19452,7 +22457,7 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Pemilih Kit Saklar Cepat</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Lingkungan Pembangunan Saat Ini</translation>
     </message>
@@ -19462,7 +22467,7 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Lingkungan Jalankan Saat Ini</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Lingkungan build aktif dari proyek aktif.</translation>
     </message>
@@ -19472,12 +22477,11 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Lingkungan berjalan aktif dari proyek aktif.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Memuat Proyek</translation>
+        <translation type="vanished">Memuat Proyek</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Buka Ruang Kerja</translation>
     </message>
@@ -19507,18 +22511,71 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Apakah Anda ingin membatalkan proses pembangunan dan tetap membongkar proyek?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>pembersih</translation>
+        <translation type="vanished">pembersih</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Masalah penanganan memori yang ditemukan oleh pembersih alamat.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Buka Proyek...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Build Proyek Aktif</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Bersihkan Proyek Aktif</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Jalankan Proyek Aktif</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Buat Berkas Header</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Buat Berkas Sumber</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Edit Konfigurasi Build Aktif</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Masalah penanganan memori yang ditemukan oleh pembersih alamat.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Edit Konfigurasi Run Aktif</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Buka Proyek</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Tugas Saya</translation>
     </message>
@@ -19528,18 +22585,23 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>Masalah dari file daftar tugas (.tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Masalah yang tidak tercakup dalam kategori yang lebih khusus.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Parsing Keluaran Pembangunan...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Proyek Baru</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Gagal Membuka Proyek</translation>
     </message>
@@ -19549,12 +22611,37 @@ Harap tutup semua contoh aplikasi Anda yang sedang berjalan sebelum memulai pemb
         <translation>&lt;h3&gt;Proyek sudah terbuka&lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>Tidak dapat membuka proyek &quot;%1&quot;: Plugin tidak dimuat.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Gagal membuka proyek &quot;%1&quot;: Tidak ada plugin yang dapat membuka jenis proyek &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>File berikut tidak dapat diganti namanya di sistem file:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>File ini diganti namanya di sistem file, tetapi file proyek tidak diperbarui:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>File ini diganti namanya di sistem file, tetapi struktur proyek tidak diperbarui (konteks hilang atau tidak didukung):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Masalah Penggantian Nama</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Abaikan Semua Kesalahan?</translation>
     </message>
@@ -19576,45 +22663,48 @@ Apakah Anda ingin mengabaikannya?</translation>
         <translation>Konfigurasi yang seharusnya dijalankan tidak lagi tersedia.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Selalu simpan file sebelum membangun</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>Buka Proyek di &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>Buka Proyek &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Proyek sudah terbuka.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>File &quot;%1&quot; diubah namanya menjadi &quot;%2&quot;, tetapi proyek berikut tidak dapat diubah secara otomatis: %3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Pengeditan Proyek Gagal</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Proyek berikut gagal menghapus file secara otomatis: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>Gedung &quot;%1&quot; dinonaktifkan: %2&lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Tidak ada proyek yang dimuat.</translation>
@@ -19666,7 +22756,7 @@ Apakah Anda ingin mengabaikannya?</translation>
         <translation>Apakah Anda ingin membatalkan proses pembangunan dan tetap menutup %1?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Tidak ada proyek aktif.</translation>
     </message>
@@ -19696,23 +22786,23 @@ Apakah Anda ingin mengabaikannya?</translation>
         <translation>Tidak dapat menjalankan &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>Tindakan eksekusi sudah dijadwalkan untuk proyek yang aktif.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 dalam %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Berkas Baru</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Subproyek Baru</translation>
@@ -19743,15 +22833,28 @@ Apakah Anda ingin mengabaikannya?</translation>
         <translation>Menambahkan File ke Proyek Gagal</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Gagal membuka terminal.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>Aktifkan Plugin %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>Plugin &quot;%1&quot; diperlukan untuk membuka proyek bertipe &quot;%2&quot;. Aktifkan sekarang?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Terminal gagal dibuka. 
+        <translation type="vanished">Terminal gagal dibuka. 
 %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Hapus Lebih Banyak File?</translation>
     </message>
@@ -19775,12 +22878,12 @@ Please try again.</source>
 Silakan coba lagi.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>Tidak dapat menghapus file &quot;%1&quot; dari proyek &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_menyalin</translation>
     </message>
@@ -19796,17 +22899,17 @@ Silakan coba lagi.</translation>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Gagal Menggandakan File</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>Gagal menyalin file &quot;%1&quot; ke &quot;%2&quot;: %3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Gagal menambahkan file baru &quot;%1&quot; ke proyek.</translation>
     </message>
@@ -19831,36 +22934,32 @@ Silakan coba lagi.</translation>
         <translation>Tidak dapat menghapus berkas %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>File proyek %1 tidak dapat diubah secara otomatis. 
+        <translation type="vanished">File proyek %1 tidak dapat diubah secara otomatis. 
 
 Tetap ganti nama %2 menjadi %3?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>File %1 diubah namanya menjadi %2, tetapi file proyek %3 tidak dapat diubah secara otomatis.</translation>
+        <translation type="vanished">File %1 diubah namanya menjadi %2, tetapi file proyek %3 tidak dapat diubah secara otomatis.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>File %1 tidak dapat diganti namanya menjadi %2.</translation>
+        <translation type="vanished">File %1 tidak dapat diganti namanya menjadi %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Tidak Dapat Mengganti Nama File</translation>
+        <translation type="vanished">Tidak Dapat Mengganti Nama File</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Menemukan file dari semua direktori proyek. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; untuk melompat ke nomor baris tertentu. Tambahkan &quot;+&lt;number&gt;&quot; atau &quot;:&lt;number&gt;&quot; lain untuk melompat ke nomor kolom juga.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Jalankan Jalankan Konfigurasi</translation>
     </message>
@@ -19897,9 +22996,13 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Mengalihkan konfigurasi proses aktif dari proyek aktif.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Terdeteksi secara otomatis</translation>
+        <translation type="vanished">Terdeteksi secara otomatis</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Dikelola Otomatis</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19907,110 +23010,177 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Dikelola secara otomatis oleh %1 atau penginstal.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>petunjuk</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>S</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>Jumlah detik yang harus menunggu antara &quot;soft kill&quot; dan &quot;hard kill&quot; dari aplikasi yang sedang berjalan.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Direktori saat ini</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Direktori</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Tutup file sumber bersama dengan proyek</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Simpan semua file sebelum dibuat</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Selalu terapkan proyek sebelum menjalankannya</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Tambahkan jalur pencarian perpustakaan linker untuk menjalankan lingkungan</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Selalu bertanya sebelum menghentikan aplikasi</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Buat konfigurasi proses yang sesuai secara otomatis</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Sinkronkan konfigurasi eksekusi:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Apakah menambah, menghapus, atau mengedit konfigurasi eksekusi di satu konfigurasi build harus memperbarui konfigurasi build lainnya secara sesuai.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Jangan Sinkronkan</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Semua konfigurasi build memiliki kumpulan konfigurasi run masing-masing.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Sinkronkan dalam Satu Kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>Konfigurasi build dalam kit yang sama menjaga konfigurasi run-nya tetap sinkron.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Sinkronkan di Semua Kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Semua konfigurasi build dalam proyek menjaga konfigurasi run-nya tetap sinkron, bahkan lintas kit.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Hapus daftar masalah pada versi baru</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Batalkan kesalahan saat membangun semua proyek</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Mulai proses pembangunan dengan prioritas rendah</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Peringatkan agar tidak membangun direktori dengan spasi atau karakter non-ASCII</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Beberapa alat pembangunan lama tidak menangani dengan baik jalur yang berisi karakter &quot;khusus&quot; seperti spasi, sehingga berpotensi mengakibatkan kesalahan pembangunan palsu.&lt;p&gt;Hapus centang opsi ini jika Anda tidak bekerja dengan alat tersebut.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Tampilkan Hanya Kit yang Sesuai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Tampilkan Hanya Kit Aktif</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>Kit yang tercantum di mode &quot;Proyek&quot;:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Jangan Membangun Apa Pun</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Bangun Seluruh Proyek</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Bangun Hanya Aplikasi yang Akan Dijalankan</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Build dan Run</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Semua</translation>
+        <translation type="vanished">Semua</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Proyek yang Sama</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Proyek yang Sama</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Semua</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20018,12 +23188,12 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Direktori Pembuatan yang Sama</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Aplikasi yang Sama</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Diaktifkan</translation>
     </message>
@@ -20038,32 +23208,30 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Disimpulkan dari Proyek</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Gunakan jom daripada nmake</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>Tampilkan semua kit dalam &quot;Bangun &amp; Jalankan&quot; dalam mode &quot;Proyek&quot;.</translation>
+        <translation type="vanished">Tampilkan semua kit dalam &quot;Bangun &amp; Jalankan&quot; dalam mode &quot;Proyek&quot;.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Tampilkan juga kit yang tidak aktif dalam &quot;Bangun &amp; Jalankan&quot; dalam mode &quot;Proyek&quot;.</translation>
+        <translation type="vanished">Tampilkan juga kit yang tidak aktif dalam &quot;Bangun &amp; Jalankan&quot; dalam mode &quot;Proyek&quot;.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Perubahan lingkungan berlaku untuk menjalankan konfigurasi, tetapi tidak untuk konfigurasi build.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Lingkungan aplikasi:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Direktori Proyek</translation>
     </message>
@@ -20078,33 +23246,39 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Bangun dan Jalankan</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Bangun sebelum diterapkan:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Hentikan aplikasi sebelum membangun:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>Default untuk &quot;Jalankan di terminal&quot;:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Saatnya menunggu sebelum menghentikan paksa aplikasi:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>Bangun &amp; Jalankan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Tetap buka proyek?</translation>
     </message>
@@ -20114,7 +23288,7 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Kegagalan Kontrol Versi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Tidak Ada Bangunan yang Ditemukan</translation>
     </message>
@@ -20134,7 +23308,12 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Impor Bangun</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (diimpor)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - sementara</translation>
     </message>
@@ -20144,12 +23323,27 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Paket Impor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Gagal memuat pengaturan dari &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Adalah direktori, tetapi harus berkas.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Adalah berkas, tetapi harus direktori.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Tanpa judul</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Gagal memulihkan file proyek</translation>
     </message>
@@ -20169,24 +23363,24 @@ Tetap ganti nama %2 menjadi %3?</translation>
         <translation>Hapus proyek dari Sesi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Tidak ada kit yang diaktifkan untuk proyek ini. Aktifkan kit dalam mode &quot;Proyek&quot;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Ganti Nama File Lainnya?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Apakah Anda ingin mengganti nama file ini juga? 
 %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Pilih Tindakan Jatuhkan</translation>
     </message>
@@ -20268,17 +23462,22 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Proyek Pembaruan Kegagalan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt;Peringatan:&lt;/b&gt; File ini dibuat.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Peringatan:&lt;/b&gt; Berkas ini berada di dalam direktori build.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt;Peringatan:&lt;/b&gt; File ini berada di luar direktori proyek.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Sederhanakan Pohon</translation>
     </message>
@@ -20323,7 +23522,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Sinkronisasi dengan Editor</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Saring Pohon</translation>
     </message>
@@ -20338,7 +23537,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Sesi Terbuka #%1</translation>
     </message>
@@ -20360,23 +23559,23 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Buka %1 &quot;%2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>Buka %1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sidang</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (sesi terakhir)</translation>
     </message>
@@ -20386,39 +23585,39 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>%1 (sesi saat ini)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Ganti nama</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Menghapus</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>proyek</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Hapus Proyek dari Proyek Terbaru</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Hapus Daftar Proyek Terbaru</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Sesi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Gunakan Ekspresi Reguler</translation>
     </message>
@@ -20433,7 +23632,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Tampilkan Garis yang Tidak Cocok</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Proyek ini dikonfigurasi untuk kit yang sudah tidak ada lagi. Pilih salah satu opsi berikut di menu konteks untuk memulihkan pengaturan proyek:</translation>
     </message>
@@ -20454,7 +23653,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Buat Perangkat Baru</translation>
     </message>
@@ -20474,23 +23673,28 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Hapus Semua Target yang Hilang</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Klik untuk mengaktifkan target, klik lagi untuk menjadikannya aktif</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Target yang Hilang</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Pengaturan Proyek</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Impor Bangunan yang Ada...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Pemilih Proyek</translation>
     </message>
@@ -20500,44 +23704,44 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Proyek Aktif</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Kelola Kit...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Bangun Keluaran Sistem</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>Impor Direktori</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>File-file tersebut secara implisit ditambahkan ke proyek:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Tidak ada&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Tambahkan Secara Implisit&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>Tambahkan ke kontrol &amp;versi:</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Tambahkan sebagai subproyek ke proyek:</translation>
     </message>
@@ -20547,17 +23751,17 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Tambahkan ke &amp;proyek:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>Repositori sistem kontrol versi tidak dapat dibuat di &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Gagal menambahkan &quot;%1&quot; ke sistem kontrol versi.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>File yang akan ditambahkan:</translation>
     </message>
@@ -20567,7 +23771,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>File yang akan ditambahkan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Menghapus</translation>
@@ -20578,40 +23782,60 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Hapus tugas dari daftar tugas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Jalankan Pengaturan</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Variabel di lingkungan yang dijalankan.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Direktori kerja konfigurasi yang dijalankan.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>Gunakan &lt;a href=&quot;dummy&quot;&gt;pengaturan global&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Gunakan pengaturan global</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Gunakan Pengaturan Global</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Gunakan Pengaturan Kustom</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Nama konfigurasi yang dijalankan.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>Konfigurasi proses dapat dieksekusi.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Tidak ada sistem build yang aktif</translation>
+        <translation type="vanished">Tidak ada sistem build yang aktif</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>Jalankan di %{Perangkat:Nama}</translation>
     </message>
     <message>
@@ -20621,12 +23845,12 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>%1 (di %{Perangkat:Nama})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Jalankan di terminal</translation>
     </message>
@@ -20636,33 +23860,33 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Direktori Kerja</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Pilih Direktori Kerja</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Atur Ulang ke Default</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Argumen</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Argumen baris perintah:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Alihkan mode multi-baris.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Dapat dieksekusi</translation>
     </message>
@@ -20673,12 +23897,12 @@ Apa yang harus dilakukan %1 sekarang?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Dapat dieksekusi:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Alternatif yang dapat dieksekusi di perangkat:</translation>
     </message>
@@ -20688,7 +23912,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Gunakan perintah ini sebagai gantinya</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Tambahkan jalur pencarian perpustakaan build ke DYLD_LIBRARY_PATH dan DYLD_FRAMEWORK_PATH</translation>
     </message>
@@ -20703,7 +23927,17 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Tambahkan jalur pencarian perpustakaan build ke LD_LIBRARY_PATH</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Gunakan platform Qt VNC untuk tampilan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>Mengatur QT_QPA_PLATFORM=vnc yang meneruskan UI aplikasi Qt ke server VNC bawaan. Hubungkan ke UI aplikasi dengan klien VNC. Lihat output aplikasi untuk detailnya.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Gunakan kerangka kerja versi debug (DYLD_IMAGE_SUFFIX=_debug)</translation>
     </message>
@@ -20713,7 +23947,32 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Jalankan sebagai pengguna root</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Jalankan sebagai Pengguna</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Jalankan sebagai pengguna:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>root</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Aktifkan pemfilteran kategori logging</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Mengaktifkan pemfilteran kategori logging (QLoggingCategory) di Output Aplikasi. Memerlukan Qt 6.11 atau yang lebih baru.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Emulator</translation>
     </message>
@@ -20723,22 +23982,39 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Peluncur:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>Gunakan penerusan X11:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>Penerusan X11:</translation>
+        <translation type="vanished">Penerusan X11:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Teruskan ke tampilan lokal</translation>
+        <translation type="vanished">Teruskan ke tampilan lokal</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Status kontrol eksekusi tak terduga %1 saat pekerja %2 dimulai.</translation>
+        <translation type="vanished">Status kontrol eksekusi tak terduga %1 saat pekerja %2 dimulai.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Tidak ada recipe producer.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Tidak dapat menggunakan pengumpul port. Perangkat belum diatur.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Tidak ditemukan port yang bebas.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; masih berjalan.&lt;center/&gt;&lt;center&gt;Paksa berhenti?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -20758,108 +24034,114 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>&amp;Terus Berlari</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>Menghentikan proses secara paksa...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Tidak dapat mengambil keluaran debug.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>Meminta proses berhenti...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>Proses berakhir tanpa diduga sebelum selesai.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Koneksi terputus?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Pengguna meminta berhenti. Mematikan...</translation>
+        <translation type="vanished">Pengguna meminta berhenti. Mematikan...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Proses jarak jauh tidak selesai tepat waktu. Konektivitas hilang?</translation>
+        <translation type="vanished">Proses jarak jauh tidak selesai tepat waktu. Konektivitas hilang?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Tidak dapat berjalan: Tidak ada perintah yang diberikan.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1 keluar dengan kode %2</translation>
+        <translation type="vanished">%1 keluar dengan kode %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 mogok.</translation>
+        <translation type="vanished">%1 mogok.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Prosesnya diakhiri dengan paksa.</translation>
+        <translation type="vanished">Prosesnya diakhiri dengan paksa.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Mulai %1...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Lingkungan:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Tidak ada executable yang ditentukan.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Proses gagal dimulai.</translation>
+        <translation type="vanished">Proses gagal dimulai.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>Terjadi kesalahan yang tidak diketahui dalam proses tersebut.</translation>
+        <translation type="vanished">Terjadi kesalahan yang tidak diketahui dalam proses tersebut.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Mungkin program &quot;%1&quot; yang dipanggil tidak ada, atau Anda mungkin tidak memiliki izin yang cukup untuk menjalankan program tersebut.</translation>
+        <translation type="vanished">Mungkin program &quot;%1&quot; yang dipanggil tidak ada, atau Anda mungkin tidak memiliki izin yang cukup untuk menjalankan program tersebut.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Prosesnya terhenti.</translation>
+        <translation type="vanished">Prosesnya terhenti.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Terjadi kesalahan saat mencoba menulis ke proses. Misalnya, proses mungkin tidak berjalan, atau saluran masukannya mungkin tertutup.</translation>
+        <translation type="vanished">Terjadi kesalahan saat mencoba menulis ke proses. Misalnya, proses mungkin tidak berjalan, atau saluran masukannya mungkin tertutup.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Terjadi kesalahan saat mencoba membaca dari proses. Misalnya, prosesnya mungkin tidak berjalan.</translation>
+        <translation type="vanished">Terjadi kesalahan saat mencoba membaca dari proses. Misalnya, prosesnya mungkin tidak berjalan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Hapus semua</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Penyebaran</translation>
+        <translation type="vanished">Penyebaran</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Metode:</translation>
+        <translation type="vanished">Metode:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Jalankan konfigurasi:</translation>
+        <translation type="vanished">Jalankan konfigurasi:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Hapus Jalankan Konfigurasi?</translation>
     </message>
@@ -20869,7 +24151,7 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Apakah Anda benar-benar ingin menghapus konfigurasi proses &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Hapus Jalankan Konfigurasi?</translation>
     </message>
@@ -20879,17 +24161,37 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Apakah Anda benar-benar ingin menghapus semua konfigurasi yang dijalankan?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nama baru untuk konfigurasi proses &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Batalkan Build &amp;&amp; Hapus Konfigurasi Deploy</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Klon Dari Konfigurasi Run</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Tidak ada konfigurasi eksekusi lain.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Pengaturan Deploy</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Konfigurasi deployment aktif:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Hapus Konfigurasi Penerapan %1?</translation>
     </message>
@@ -20914,12 +24216,27 @@ Apa yang harus dilakukan %1 sekarang?</translation>
         <translation>Apakah Anda benar-benar ingin menghapus konfigurasi penerapan &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nama baru untuk konfigurasi penerapan &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Hapus Massal...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Klon ke Sini...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Konfigurasi run aktif:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Direktori sumber:</translation>
     </message>
@@ -20967,12 +24284,12 @@ File-file ini disimpan.</numerusform>
         <translation>Sunting File</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Tambahkan Direktori yang Ada</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Tampilkan di Editor</translation>
     </message>
@@ -20982,12 +24299,14 @@ File-file ini disimpan.</numerusform>
         <translation>Tampilkan lokasi tugas di editor.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>File</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Impor Proyek yang Ada</translation>
     </message>
@@ -20997,12 +24316,13 @@ File-file ini disimpan.</numerusform>
         <translation>Nama Proyek dan Lokasi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Nama proyek:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Pemilihan Berkas</translation>
     </message>
@@ -21017,68 +24337,63 @@ File-file ini disimpan.</numerusform>
         <translation>Mengimpor proyek yang sudah ada yang tidak menggunakan qmake, CMake, Qbs, Meson, atau Autotools.&lt;p&gt;Ini akan membuat file proyek yang memungkinkan Anda menggunakan %1 sebagai editor kode dan sebagai peluncur untuk alat debugging dan analisis. Jika Anda ingin membangun proyek, Anda mungkin perlu mengedit file proyek yang dihasilkan.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Sistem pembangunan tidak diketahui &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Pengaturan Sasaran</translation>
+        <translation type="vanished">Pengaturan Sasaran</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Direktori sumber</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Membangun sistem</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Nama proyek saat ini</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Konfigurasi Proyek</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Tampilkan Semua Kit</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Sembunyikan Kit Tidak Aktif</translation>
+        <translation type="vanished">Sembunyikan Kit Tidak Aktif</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>Tidak ada kit yang ditentukan dalam proyek ini.</translation>
+        <translation type="vanished">Tidak ada kit yang ditentukan dalam proyek ini.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Konfigurasikan Proyek</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kit tidak cocok untuk proyek</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Klik untuk mengaktifkan</translation>
+        <translation type="vanished">Klik untuk mengaktifkan</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>Aktifkan Kit untuk Proyek &quot;%1&quot;</translation>
     </message>
@@ -21123,12 +24438,11 @@ File-file ini disimpan.</numerusform>
         <translation>Salin Langkah Dari Kit Lain...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Aktifkan Kit</translation>
+        <translation type="vanished">Aktifkan Kit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Tidak ditemukan kit yang cocok.</translation>
     </message>
@@ -21148,18 +24462,23 @@ File-file ini disimpan.</numerusform>
         <translation>Ketik untuk memfilter kit berdasarkan nama...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Sembunyikan kit yang tidak sesuai</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Pilih Kit untuk Proyek Anda</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Kit berikut dapat digunakan untuk proyek &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt;Kesalahan:&lt;/b&gt;</translation>
@@ -21171,12 +24490,12 @@ File-file ini disimpan.</numerusform>
         <translation>&lt;b&gt;Peringatan:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 membutuhkan kompiler yang disiapkan untuk membangun. Konfigurasikan kompiler dalam opsi kit.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Kesalahan:</translation>
     </message>
@@ -21186,7 +24505,7 @@ File-file ini disimpan.</numerusform>
         <translation>Peringatan:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Tidak dapat membuka file tugas %1: %2</translation>
     </message>
@@ -21211,7 +24530,7 @@ File-file ini disimpan.</numerusform>
         <translation>Berhenti memantau file tugas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>Kesalahan Taskhub</translation>
     </message>
@@ -21221,42 +24540,46 @@ File-file ini disimpan.</numerusform>
         <translation>Peringatan Taskhub</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Membangun Masalah</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Masalah</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Tampilkan Peringatan</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Buat Masalah Dari Output Build Eksternal...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Filter berdasarkan kategori</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>tidak mutakhir</translation>
+        <translation type="vanished">tidak mutakhir</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Rantai alat ini tidak valid.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>Pengaturan Deteksi Otomatis Toolchain</translation>
     </message>
@@ -21275,43 +24598,59 @@ Satu untuk target x86_64 asli, dan satu lagi untuk target x86 biasa.
 Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan kompiler silang khusus.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Jenis</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Bahasa</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Deteksi ulang</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Pengaturan deteksi otomatis...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Kompiler Duplikat Terdeteksi</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Tidak semua compiler disiapkan dengan benar.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Kompiler berikut telah dikonfigurasi:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Tidak dikonfigurasi lagi.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Kompiler berikut telah dikonfigurasi:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Kompiler tersebut tidak dikonfigurasi lagi.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Kompiler</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Membubuhi keterangan</translation>
     </message>
@@ -21327,6 +24666,9 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>Membatalkan</translation>
     </message>
@@ -21336,12 +24678,26 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Menunggu aplikasi berhenti.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Anda dapat mengedit konfigurasi ini di dalam file .qtcreator/project.json.</translation>
+        <translation type="vanished">Anda dapat mengedit konfigurasi ini di dalam file .qtcreator/project.json.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Klon konfigurasi untuk mengubahnya. Atau, buat perubahan di berkas .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Manajer Workspace</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>Salinan %1</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Kecualikan dari Proyek</translation>
     </message>
@@ -21351,23 +24707,293 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Pindai Ulang Ruang Kerja</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>Mengganti tanda tangan</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>Xcodebuild gagal.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Salin</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1 di &quot;%2&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>Path &amp;kompiler</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>Path kompiler %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Sediakan secara manual</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Gagal menyalin pengaturan pengguna proyek dari &quot;%1&quot; ke lokasi default baru &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>Tidak dapat membuka &quot;%1&quot; untuk penulisan: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>Konfigurasi Windows</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Semua perubahan di halaman ini langsung berlaku.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>Pilih path unduhan NuGet dan Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>Pilih Path Unduhan</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>Pilih path NuGet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>Pilih File nuget.exe</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>Unduh NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>Unduh NuGet secara otomatis.
+
+NuGet diperlukan untuk mengunduh Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Pilih path Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Unduh Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Unduh Windows App SDK dengan NuGet secara otomatis.
+
+Jika pengunduhan otomatis gagal, Qt Creator menawarkan untuk membuka URL unduhan
+di browser sistem agar dapat diunduh secara manual.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>Path unduhan sudah ada.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>Path NuGet sudah ada.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>Path Windows App SDK sudah ada.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>Pengaturan Windows App SDK sudah benar.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>Pengaturan Windows App SDK mengandung kesalahan.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Pilih Path Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>Path Unduhan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>Lokasi unduhan:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>Lokasi NuGet:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>Pengaturan Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>Lokasi Windows App SDK:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>Unduhan NuGet gagal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Buka URL NuGet untuk unduhan manual?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>Buka URL Unduhan</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>Mengunduh</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>Mengunduh NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>URL unduhan SDK Tools kosong.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>Terjadi galat SSL, pengunduhan dibatalkan.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>Pengunduhan NuGet dari URL %1 gagal: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>Unduhan dari %1 dialihkan.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>Path unduhan NuGet yang dipilih (%1) sudah ada.\nPilih path lain.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>Path unduhan belum dikonfigurasi.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Mengunduh Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK sudah dikonfigurasi.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Mengunduh Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>Unduhan Windows App SDK gagal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Buka URL Windows App SDK untuk unduhan manual?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Persyaratan Pembaruan</translation>
     </message>
@@ -21398,22 +25024,25 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Instal Paket</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>Penginstalan &quot;%1&quot; gagal: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Penginstalan &quot;%1&quot; dibatalkan karena batas waktu habis.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Penginstalan &quot;%1&quot; dibatalkan oleh pengguna.</translation>
+        <translation type="vanished">Penginstalan &quot;%1&quot; dibatalkan oleh pengguna.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Instalasi &quot;%1&quot; gagal dengan kode keluar %2.</translation>
+        <translation type="vanished">Instalasi &quot;%1&quot; gagal dengan kode keluar %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>REPL</translation>
@@ -21449,7 +25078,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Buka Python interaktif. Entah tidak mengimpor apa pun, mengimpor file saat ini, atau mengimpor semuanya (*) dari file saat ini.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Tidak Ada Python yang Dipilih</translation>
     </message>
@@ -21464,14 +25093,18 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Kelola Penerjemah Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Tidak ada</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Editor Python</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Tidak ada</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>ular piton</translation>
     </message>
@@ -21481,9 +25114,13 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Penerjemah yang digunakan untuk proyek berbasis Python.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Tidak ada pengaturan Python.</translation>
+        <translation type="vanished">Tidak ada pengaturan Python.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Python belum disiapkan.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -21496,7 +25133,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Python &quot;%1&quot; tidak dapat dieksekusi.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python &quot;%1&quot; tidak berisi pip yang dapat digunakan. pip diperlukan untuk menginstal paket Python dari Indeks Paket Python, seperti PySide dan server bahasa Python. Untuk menggunakan fungsi apa pun, pastikan pip diinstal untuk Python tersebut.</translation>
     </message>
@@ -21516,12 +25153,12 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Jalur ke Penerjemah Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>Server Bahasa Python (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Instal server bahasa Python (PyLS) untuk %1 (%2). Server bahasa menyediakan penyelesaian dan anotasi khusus Python.</translation>
     </message>
@@ -21536,32 +25173,42 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Perbarui server bahasa Python (PyLS) untuk %1 (%2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Selalu Perbarui</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Memperbarui</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Tidak pernah</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Masalah diuraikan dari keluaran waktu proses Python.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>Tidak ada juru bahasa Python yang disetel untuk kit &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 Klik di sini untuk menginstal %1 (memerlukan pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Keluaran yang disangga</translation>
     </message>
@@ -21576,8 +25223,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Naskah:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>ular piton:</translation>
     </message>
@@ -21587,19 +25233,17 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Jalankan %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Dapat dieksekusi</translation>
+        <translation type="vanished">Dapat dieksekusi</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Eksekusi kosong.</translation>
     </message>
@@ -21614,56 +25258,106 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>&quot;%1&quot; bukan file yang dapat dieksekusi.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Menambahkan</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Menghapus</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Jadikan Default</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp; &amp;Hasilkan Kit</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Membersihkan</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Hapus semua juru bahasa Python tanpa executable yang valid.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Pembuatan venv gagal:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Pembuatan venv berakhir secara tidak normal:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Pembuatan venv tidak dapat dimulai:\n%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Pembuatan venv dibatalkan.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>Ditemukan &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Menghapus Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Penerjemah</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Executable:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Gunakan Server Bahasa Python</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>Untuk daftar lengkap opsi yang tersedia, lihat [dokumentasi konfigurasi Server LSP Python](%1).</translation>
     </message>
@@ -21673,12 +25367,12 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Canggih</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Konfigurasi Server Bahasa</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>Penerjemah python:</translation>
     </message>
@@ -21698,46 +25392,67 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Membuat</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Buat Venv Python</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Mencari biner Python...</translation>
+        <translation type="vanished">Mencari biner Python...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>Ditemukan &quot;%1&quot; (%2)</translation>
+        <translation type="vanished">Ditemukan &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Menghapus Python</translation>
+        <translation type="vanished">Menghapus Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>&quot;data&quot; dari halaman panduan Python mengharapkan peta dengan &quot;item&quot; yang berisi daftar objek.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Item data halaman panduan Python mengharapkan bidang &quot;trKey&quot; yang berisi string UI yang terlihat untuk versi Python tersebut dan bidang &quot;nilai&quot; yang berisi objek dengan bidang &quot;PySideVersion&quot; yang digunakan untuk pernyataan impor dalam file Python.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>Versi PySide:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Kesalahan parsing: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Kesalahan tipe: &quot;%1&quot; harus berupa &quot;%2&quot;, bukan &quot;%3&quot;.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Kesalahan node hilang: tabel &quot;%1&quot; harus memuat node &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>Node &quot;%1&quot; kosong.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Berkas &quot;%1&quot; tidak ada.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>Kesalahan XML pada baris %1, kolom %2: %3</translation>
@@ -21751,7 +25466,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Pindahkan tab ke kiri</translation>
     </message>
@@ -21769,15 +25484,391 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Menghubungkan...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>&quot;%1&quot; tidak dapat dieksekusi.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Gagal memulai shell: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Proses shell berakhir dengan kode %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>Proses berakhir dengan kode: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Zoom: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Salin</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Tempel</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Bersihkan Shell</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Pilih Semua</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Hapus Pilihan</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>Pindahkan Kursor Satu Kata ke Kiri</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>Pindahkan Kursor Satu Kata ke Kanan</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Hapus Kata ke Kiri</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Hapus Baris ke Kiri</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Tutup Tab</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Tutup Semua Tab</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Tutup Tab Lainnya</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Shell</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Konfigurasi...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Sisipkan Variabel Makro</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Shell Baru</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Buat shell baru.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Tutup Shell</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Tutup shell saat ini.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Shell Berikutnya</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Shell Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Perangkat</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Nilai Saat Ini dari %{%1}: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Command Prompt</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>Warna yang digunakan untuk %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Gagal membuka berkas.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>Kesalahan parsing JSON: &quot;%1&quot;, pada offset: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Warna tidak ditemukan.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Format warna tidak valid.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Format skema warna tidak dikenal.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Gunakan terminal internal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>Menggunakan terminal internal saat &quot;Run In Terminal&quot; diaktifkan dan untuk &quot;Open Terminal here&quot;.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Famili:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Famili font yang digunakan di terminal.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Ukuran:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Ukuran font yang digunakan di terminal (dalam point).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Zoom:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Menskalakan ukuran font. Ctrl+roda mouse memperbesar satu shell selama sesi.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Spasi baris:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Tinggi setiap baris, sebagai persentase dari font.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Izinkan kursor berkedip</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>Izinkan kursor berkedip.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Path shell:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Executable shell yang akan dijalankan.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Argumen shell:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Argumen yang diteruskan ke shell.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Kirim tombol escape ke terminal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>Mengirim tombol escape ke terminal saat ditekan, bukan menutup terminal.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>Mengirim Esc ke terminal, bukan %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Tekan %1 untuk mengirim Esc ke terminal.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Blokir pintasan di terminal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Mencegah pintasan Qt Creator mengganggu terminal.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>Pintasan %1 diblokir saat fokus berada di dalam terminal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>Pintasan %1 diprioritaskan.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Bel suara</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Membuat terminal berbunyi bip saat karakter bell diterima.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Aktifkan pelacakan mouse</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Mengaktifkan pelacakan mouse di terminal.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Aktifkan live reflow (eksperimental)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Membungkus dan menata ulang teks saat ukuran terminal diubah. Perlu diketahui bahwa ini tidak berfungsi dengan baik pada semua shell dan prompt.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>Umum</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Font</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Shell Default</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>Shell yang dibuka tombol +. Otomatis memilih yang terbaik yang terinstal dan mengikuti perubahan pada yang terinstal.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Otomatis (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>berasal dari QObject</translation>
@@ -21843,7 +25934,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>(ketik nama BACA nama TULIS setName PEMBERITAHUAN nama BERUBAH FINAL)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>dengan target</translation>
@@ -21867,7 +25958,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>dengan sasaran</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Kasus Uji Tes Cepat</translation>
@@ -21921,18 +26012,17 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>contoh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+148" />
         <source>Sort Alphabetically</source>
         <translation>Urutkan Berdasarkan Abjad</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Intern</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Mencari</translation>
     </message>
@@ -21951,7 +26041,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Membatalkan penggantian.</translation>
     </message>
@@ -21962,46 +26052,38 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Global</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+206" />
+        <location line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+134" />
         <source>Behavior</source>
         <translation>Perilaku</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+175" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+109" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+342" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+803" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+556" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-462" />
         <source>Text Editor</source>
         <translation>Penyunting Teks</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+75" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+28" />
         <source>Never</source>
         <translation>Tidak pernah</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-238" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Selalu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>Di Ruang Putih Terkemuka</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Tidak ada</translation>
+        <translation type="vanished">Tidak ada</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Mengikuti Indentasi Sebelumnya</translation>
     </message>
@@ -22011,7 +26093,7 @@ Aktifkan ini jika Anda berencana membuat biner x86 32-bit tanpa menggunakan komp
         <translation>Tidak ada indentasi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -22042,33 +26124,44 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
 </translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-17" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Aktifkan &amp;indentasi otomatis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Tombol Tab melakukan indentasi otomatis:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+27" />
         <source>Prefer single line comments</source>
         <translation>Lebih suka komentar satu baris</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+124" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Otomatis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>At Line Start</source>
         <translation>Di Garis Mulai</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>Setelah Spasi Putih</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Menentukan di mana komentar satu baris harus diposisikan.</translation>
     </message>
@@ -22088,12 +26181,12 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>%1: Komentar ditempatkan setelah spasi di depan.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Posisi komentar yang disukai:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+76" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Lewati spasi kosong untuk jenis file:</translation>
     </message>
@@ -22103,12 +26196,12 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Untuk pola file yang terdaftar, jangan potong spasi di belakangnya.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Daftar pola file wildcard, dipisahkan dengan koma atau titik koma.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-19" />
         <source>&amp;Ensure newline at end of file</source>
         <translation>&amp;Pastikan baris baru di akhir file</translation>
     </message>
@@ -22118,7 +26211,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Selalu menulis karakter baris baru di akhir file.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-20" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Bersihkan spasi</translation>
     </message>
@@ -22128,27 +26221,27 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Menghapus spasi tambahan saat menyimpan.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+24" />
         <source>Clean indentation</source>
         <translation>Lekukan bersih</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Memperbaiki spasi di depan sesuai dengan pengaturan tab.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-16" />
         <source>In entire &amp;document</source>
         <translation>Secara keseluruhan &amp;dokumen</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Membersihkan spasi di seluruh dokumen, bukan hanya pada bagian yang diubah.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Tambahkan Jika Pengkodean Adalah UTF-8</translation>
     </message>
@@ -22163,7 +26256,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Selalu Hapus</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -22180,27 +26273,27 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
 &lt;p&gt;Pengaturan ini &lt;b&gt;tidak&lt;/b&gt; memengaruhi penggunaan BOM UTF-16 dan UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Sembunyikan kursor mouse saat mengetik</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable &amp;mouse navigation</source>
         <translation>Aktifkan navigasi &amp;mouse</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>&amp;Aktifkan zoom roda gulir</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Aktifka&amp;n navigasi &amp; casing unta bawaan</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Aktifkan perubahan pilihan cerdas</translation>
     </message>
@@ -22210,7 +26303,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Menggunakan tindakan Select Block Up / Down sekarang akan memberikan pilihan yang lebih cerdas.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Tampilkan keterangan alat bantuan menggunakan pintasan keyboard (Alt)</translation>
     </message>
@@ -22220,22 +26313,22 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Menekan Alt akan menampilkan bantuan peka konteks atau mengetik informasi sebagai keterangan alat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>Saat mengarahkan mouse</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>Pada Shift+Mouseover</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>Mengetik</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Pembersihan Setelah Menyimpan</translation>
     </message>
@@ -22245,47 +26338,46 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Tindakan pembersihan yang secara otomatis dilakukan tepat sebelum file disimpan ke disk.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Pengkodean File</translation>
+        <translation type="vanished">Pengkodean File</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>Tetikus dan Papan Ketik</translation>
+        <translation type="vanished">Tetikus dan Papan Ketik</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Indentasi spasi mundur:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Pengkodean bawaan:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>BOM UTF-8:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Akhiran baris default:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Tampilkan tooltip bantuan menggunakan mouse:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Menampilkan bantuan peka konteks atau mengetik informasi saat mouseover.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Menampilkan bantuan peka konteks atau mengetik informasi pada Shift+Mouseover.</translation>
     </message>
@@ -22296,9 +26388,9 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Penanda buku</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Bookmark</translation>
     </message>
@@ -22308,17 +26400,17 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Menemukan bookmark. Filter berdasarkan nama file, berdasarkan teks pada baris penanda, atau berdasarkan teks catatan penanda.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Pindah ke Atas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Pindah ke Bawah</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Sunting</translation>
     </message>
@@ -22333,7 +26425,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Hapus semua</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Hapus Semua Bookmark</translation>
     </message>
@@ -22344,14 +26436,14 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Sunting Penanda</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Alihkan Bookmark</translation>
     </message>
@@ -22381,7 +26473,27 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Bookmark Berikutnya di Dokumen</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Urutkan Menurut Nama File</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Teks catatan:</translation>
     </message>
@@ -22392,23 +26504,29 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 dari %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Semua perubahan di bawah ini langsung berlaku.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Edit konten pratinjau untuk melihat bagaimana pengaturan saat ini diterapkan pada cuplikan kode khusus. Perubahan pada pratinjau tidak mempengaruhi pengaturan saat ini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+39" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-664" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+36" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+139" />
         <source>Copy...</source>
         <translation>Menyalin...</translation>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-235" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+326" />
         <source>Remove</source>
         <translation>Menghapus</translation>
     </message>
@@ -22423,12 +26541,17 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Impor...</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Konfigurasi yang dipilih bersifat hanya-baca. Salin konfigurasi untuk mengeditnya.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Pengaturan khusus:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Salin Gaya Kode</translation>
     </message>
@@ -22455,7 +26578,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
     <message>
         <location line="+6" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+2" />
-        <location line="+460" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Menghapus</translation>
     </message>
@@ -22467,22 +26590,22 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Gaya kode (*.xml);;Semua file (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Tidak dapat mengimpor gaya kode dari &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Ekspor Gaya Kode</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [proksi: %2]</translation>
     </message>
@@ -22497,7 +26620,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>%1 [dapat disesuaikan]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Bukan file skema warna.</translation>
     </message>
@@ -22556,8 +26679,8 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-429" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-454" />
+        <location line="+651" />
         <source>Font</source>
         <translation>huruf</translation>
     </message>
@@ -22582,7 +26705,7 @@ Menentukan bagaimana backspace berinteraksi dengan indentasi.
         <translation>Warna:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Tanpa Garis Bawah</translation>
     </message>
@@ -22661,12 +26784,12 @@ Secara default, &quot;@&quot; digunakan jika komentar di sekitarnya dimulai deng
 jika komentar dimulai dengan &quot;/*!&quot; atau &quot;//!&quot;.</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Komentar Dokumentasi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-10" />
         <source>Full</source>
         <translation>Penuh</translation>
     </message>
@@ -22696,32 +26819,32 @@ jika komentar dimulai dengan &quot;/*!&quot; atau &quot;//!&quot;.</translation>
         <translation>Aktifkan penyelesaian:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>Batas waktu dalam ms:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Ambang batas karakter:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>&amp;Pelengkapan otomatis &amp; awalan umum</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Menyisipkan awalan umum dari item penyelesaian yang tersedia.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Memisahkan string secara otomatis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22730,57 +26853,63 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memindahkan sisa string ke baris berikutnya.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Sisipkan tanda kurung buka atau tutup</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Sisipkan kutipan penutup</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Kelilingi pilihan teks dengan tanda kurung</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Saat mengetik tanda kurung yang cocok dan ada pilihan teks, alih-alih menghapus pilihan, kelilingi dengan karakter yang sesuai.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>Sisipkan &amp;spasi setelah nama fungsi</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Kelilingi pilihan teks dengan tanda kutip</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-41" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Tidak ada</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Saat mengetikkan kutipan yang cocok dan ada pilihan teks, alih-alih menghapus pilihan, kelilingi dengan karakter yang sesuai.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Menganimasikan teks yang disisipkan secara otomatis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Tampilkan petunjuk visual ketika misalnya kurung kurawal atau kutipan disisipkan secara otomatis oleh editor.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Sorot teks yang disisipkan secara otomatis</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Lewati karakter yang disisipkan secara otomatis saat mengetik</translation>
     </message>
@@ -22790,17 +26919,17 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Lewati karakter yang disisipkan secara otomatis jika diketik ulang secara manual setelah selesai atau dengan menekan tab.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Hapus teks yang disisipkan secara otomatis di backspace</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Hapus karakter yang dimasukkan secara otomatis jika pemicu dihapus dengan backspace setelah selesai.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Timpa tanda baca penutup</translation>
     </message>
@@ -22810,37 +26939,41 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Secara otomatis menimpa tanda kurung tutup dan tanda kutip.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>Sec&amp;ara Otomatis Menyisipkan Karakter yang Cocok</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+48" />
         <source>Completion</source>
         <translation>Penyelesaian</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="-295" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+47" />
         <source>Enable text &amp;wrapping</source>
         <translation>&amp;Aktifkan pembungkusan teks</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Setel &lt;a href=&quot;font zoom&quot;&gt;penspasian baris font&lt;/a&gt; ke 100% untuk mengaktifkan opsi pembungkusan teks.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Tampilkan kanan &amp;margin di kolom:</translation>
+        <translation type="vanished">Tampilkan kanan &amp;margin di kolom:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Tampilkan &amp;margin kanan setelah kolom:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Warnai seluruh area margin</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Gunakan margin khusus konteks</translation>
     </message>
@@ -22850,82 +26983,92 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Jika tersedia, gunakan margin yang berbeda. Misalnya ColumnLimit dari plugin ClangFormat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Lebar konten editor:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% berarti seluruh lebar jendela editor digunakan untuk menampilkan konten teks (default).&lt;br&gt;50% berarti setengah lebar editor digunakan untuk menampilkan konten teks.&lt;br&gt;Sisa 50% dibagi sebagai margin kiri dan kanan sambil memusatkan konten.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Menghidupkan tanda kurung yang cocok</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Sorot hasil pencarian pada scrollbar</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-107" />
         <source>Display line &amp;numbers</source>
         <translation>Me&amp;nampilkan nomor baris</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+115" />
         <source>Animate navigation within file</source>
         <translation>Menganimasikan navigasi dalam file</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-86" />
         <source>Highlight current &amp;line</source>
         <translation>&amp;Sorot baris saat ini</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+8" />
         <source>Highlight &amp;blocks</source>
         <translation>Sorot &amp;blok</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Mark &amp;text changes</source>
         <translation>Tandai &amp;perubahan teks</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>&amp;Lipat otomatis dulu &amp; beri komentar</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>&amp;Tampilan &amp; penanda lipat</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+44" />
         <source>Center &amp;cursor on scroll</source>
         <translation>&amp;Pusatkan kursor pada gulir</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Visualisasikan indentasi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Menampilkan akhir baris file</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Menampilkan pengkodean file</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Selalu buka tautan di perpecahan lain</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Sorot tanda kurung yang cocok</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-37" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Visualisasikan spasi putih</translation>
     </message>
@@ -22935,7 +27078,12 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Menampilkan tab dan spasi.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Tampilkan pengaturan tab</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Sorot pilihan</translation>
     </message>
@@ -22945,7 +27093,7 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Menambahkan latar belakang berwarna dan penanda ke bilah gulir ke kemunculan teks yang dipilih.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>Di sebelah konten editor</translation>
     </message>
@@ -22960,43 +27108,48 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
         <translation>Sejajar di sisi kanan</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>Yang tersirat</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Aktifkan minimap</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Anotasi Garis</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>Batas</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>Pembungkus</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+201" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Menampilkan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>jendela (CRLF)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Berkas Saat Ini</translation>
     </message>
@@ -23014,7 +27167,7 @@ Selain itu, Shift+Enter menyisipkan karakter escape pada posisi kursor dan memin
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Harap dicatat bahwa ini hanya mencari file yang telah disimpan ke disk.</translation>
     </message>
@@ -23073,12 +27226,12 @@ Tidak termasuk: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>Variabel yang tidak digunakan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-691" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-714" />
         <source>Antialias</source>
         <translation>Antialias</translation>
     </message>
@@ -23111,7 +27264,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Skema Warna untuk Tema &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+25" />
         <source>Family:</source>
         <translation>Keluarga:</translation>
     </message>
@@ -23131,7 +27284,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Spasi baris:</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+382" />
         <source>Copy Color Scheme</source>
         <translation>Salin Skema Warna</translation>
     </message>
@@ -23147,7 +27300,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>%1 (salinan)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Hapus Skema Warna</translation>
     </message>
@@ -23157,14 +27310,14 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Apakah Anda yakin ingin menghapus skema warna ini secara permanen?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Impor Skema Warna</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Skema warna (*.xml);;Semua file (*)</translation>
     </message>
@@ -23194,7 +27347,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Tidak dapat membuat file sementara &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Failed to format: %1.</source>
         <translation>Gagal memformat: %1.</translation>
     </message>
@@ -23204,12 +27357,12 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Tidak dapat membaca file &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>Tidak dapat memanggil %1 atau terjadi kesalahan lainnya. Batas waktu tercapai saat memformat file %2.</translation>
     </message>
     <message>
-        <location line="+150" />
+        <location line="+148" />
         <source>Error in text formatting: %1</source>
         <translation>Kesalahan dalam pemformatan teks: %1</translation>
     </message>
@@ -23229,28 +27382,27 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>File telah diubah.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Pembaruan penyorot: selesai</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Pembaruan penyorot:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Pembaruan penyorot: dimulai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definisi highlight disediakan oleh mesin &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definisi highlight disediakan oleh mesin &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3787" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4055" />
         <source>Download Definitions</source>
         <translation>Unduh Definisi</translation>
     </message>
@@ -23260,7 +27412,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Unduh file definisi sintaksis yang hilang dan perbarui.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Muat Ulang Definisi</translation>
     </message>
@@ -23270,7 +27422,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Muat ulang file definisi yang dimodifikasi secara eksternal.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Atur Ulang Definisi yang Diingat</translation>
     </message>
@@ -23280,37 +27432,50 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Setel ulang definisi yang diingat untuk file yang dapat dikaitkan dengan lebih dari satu definisi penyorot.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>File Definisi Sorotan Sintaks</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Lewati pemeriksaan pembaruan untuk file yang cocok dengan:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Lewati penyorotan sintaks untuk file yang cocok dengan:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Definisi penyorotan disediakan oleh engine %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>File Definisi Sorotan Pengguna</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Pola file yang diabaikan:</translation>
+        <translation type="vanished">Pola file yang diabaikan:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>Pengunduhan selesai</translation>
+        <translation type="vanished">Pengunduhan selesai</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Penyorot Generik</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>Penyunting JSON</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Baris dalam Dokumen Saat Ini</translation>
     </message>
@@ -23325,7 +27490,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>&lt;baris&gt;:&lt;kolom&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>Baris %1, Kolom %2</translation>
     </message>
@@ -23340,7 +27505,12 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Kolom %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Editor Markdown</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Tekanan</translation>
     </message>
@@ -23385,17 +27555,17 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Saring pohon</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location line="+136" />
         <source>Outline</source>
         <translation>Garis besar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Refactoring tidak dapat diterapkan.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Pembatas yang diharapkan setelah ID Mangler.</translation>
     </message>
@@ -23415,15 +27585,15 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Tidak dapat membuat direktori cuplikan pengguna %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-195" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-200" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Kesalahan</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Bukan pemicu yang valid. Pemicu yang valid hanya boleh berisi huruf, angka, atau garis bawah, dengan karakter pertama dibatasi hanya huruf atau garis bawah.</translation>
     </message>
@@ -23443,7 +27613,7 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Terjadi kesalahan saat mengembalikan cuplikan.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Kembalikan Bawaan</translation>
     </message>
@@ -23453,17 +27623,17 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Kelompok:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Menambahkan</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Pulihkan Bawaan yang Dihapus</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Atur Ulang Semua</translation>
     </message>
@@ -23478,12 +27648,12 @@ Nilai yang kurang dari 100% dapat mengakibatkan grafik tumpang tindih dan tidak 
         <translation>Tidak ada cuplikan yang dipilih.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Cuplikan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -23536,22 +27706,48 @@ Memengaruhi indentasi baris lanjutan.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>Ukuran &amp;indentasi default:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Ratakan baris lanjutan:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>Tab Dan Indentasi</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Indentasi kode dikonfigurasi dalam pengaturan &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; dan &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Pengaturan indentasi editor teks hanya digunakan untuk file non-kode. Lihat pengaturan gaya pengkodean C++ dan Qt Quick untuk mengonfigurasi indentasi file kode.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3688" />
+        <source>Auto detect</source>
+        <translation>Deteksi otomatis</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1 mencoba mendeteksi pengaturan indentasi berdasarkan isi berkas. Jika deteksi gagal, pengaturan di bawah ini akan digunakan.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Kebijakan tab default:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Hanya Spasi</translation>
     </message>
@@ -23561,9 +27757,8 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Hanya Tab</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Campur aduk</translation>
+        <translation type="vanished">Campur aduk</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23571,12 +27766,11 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Ukuran ta&amp;b:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Ukuran indentasi:</translation>
+        <translation type="vanished">&amp;Ukuran indentasi:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Sama sekali tidak</translation>
     </message>
@@ -23591,29 +27785,31 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Dengan Indentasi Biasa</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Ukuran Tab Terminal Serial:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Kebijakan tab:</translation>
+        <translation type="vanished">Kebijakan tab:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Perbedaan Dengan File Saat Ini</translation>
+        <translation type="vanished">Perbedaan Dengan File Saat Ini</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Membuka Berkas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3592" />
         <source>Cursors: %2</source>
-        <translation>Kursor: %2</translation>
+        <translation type="vanished">Kursor: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-165" />
+        <source>Cursors: %1</source>
+        <translation>Kursor: %1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -23652,6 +27848,11 @@ Memengaruhi indentasi baris lanjutan.
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Baris terpilih:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Posisi dalam dokumen:</translation>
     </message>
@@ -23661,7 +27862,50 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Jangkar:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Spasi</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>Tab</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Pengaturan indentasi: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Pengaturan Dokumen</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Pengaturan Tab</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Ukuran Indentasi</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Ukuran Tab</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Pengaturan Global...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>Akhiran Garis Unix (LF)</translation>
     </message>
@@ -23671,17 +27915,17 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Akhiran Garis Windows (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Anotasi lainnya</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>Cetak Dokumen</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Kesalahan Berkas</translation>
     </message>
@@ -23696,7 +27940,7 @@ Memengaruhi indentasi baris lanjutan.
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Teks terlalu besar untuk ditampilkan (%1 MB).</translation>
     </message>
@@ -23711,37 +27955,89 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Pilih Pengkodean</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Kesalahan Parse Cuplikan</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>Definisi sorotan tidak ditemukan untuk file ini. Apakah Anda ingin mengunduh file definisi sorotan tambahan?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>Lebih dari satu definisi sorotan ditemukan untuk file ini. Yang mana yang harus digunakan untuk menyorot file ini?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Ingat Pilihan Saya</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+318" />
         <source>Go to line number...</source>
         <translation>Pergi ke nomor baris...</translation>
     </message>
     <message>
-        <location line="+3660" />
+        <location line="+444" />
+        <source>Apply</source>
+        <translation>Terapkan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Terapkan saran saat ini.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Terapkan Satu Kata</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Terapkan satu kata dari saran saat ini.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Terapkan Baris</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Terapkan satu baris dari saran saat ini.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+434" />
+        <source>Fold Recursively</source>
+        <translation>Lipat Secara Rekursif</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Lipat Semua</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Buka Lipatan Secara Rekursif</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Buka Semua Lipatan</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Perbesar: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Hapus UTF-8 BOM di Simpan</translation>
     </message>
@@ -23751,18 +28047,18 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Tambahkan UTF-8 BOM pada Simpan</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Tidak dapat menemukan definisi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-434" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-404" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Teks</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Teks yang dipilih dalam dokumen saat ini.</translation>
     </message>
@@ -24212,59 +28508,55 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-2997" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Melipat</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Unfold</source>
         <translation>Berkembang</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&gt;</source>
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+9" />
         <source>Toggle &amp;Fold All</source>
         <translation>&amp;Alihkan &amp; Lipat Semua</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Increase Font Size</source>
-        <translation>Tingkatkan Ukuran Font</translation>
+        <translation type="vanished">Tingkatkan Ukuran Font</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Kurangi Ukuran Font</translation>
+        <translation type="vanished">Kurangi Ukuran Font</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset Font Size</source>
-        <translation>Atur Ulang Ukuran Font</translation>
+        <translation type="vanished">Atur Ulang Ukuran Font</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
+        <translation type="vanished">Ctrl+0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24382,7 +28674,7 @@ Memengaruhi indentasi baris lanjutan.
         <translation>Pergi ke Kata Berikutnya (Kasus Unta) dengan Pilihan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Teks</translation>
     </message>
@@ -24895,6 +29187,16 @@ Untuk mengatur gaya operator yang ditentukan pengguna, gunakan Operator Kelebiha
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Atribut</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Atribut.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>Komentar</translation>
     </message>
@@ -25141,6 +29443,26 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Garis bawahi warna konteks diagnostik peringatan.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Info</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Warna garis bawah diagnostik info.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Konteks Info</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Warna garis bawah konteks diagnostik info.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Argumen Keluaran</translation>
@@ -25253,7 +29575,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Validasi Cakupan Manual Implisit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>Tampilkan anotasi sebaris untuk %1</translation>
     </message>
@@ -25282,16 +29604,48 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>Memuat ulang hierarki tipe untuk simbol di bawah kursor.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Editor Teks Biasa</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Pilih Saran Sebelumnya</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Pilih Saran Berikutnya</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Mengatur ulang</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Atur ulang ke default.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Atur Ulang ke Default</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Tekan dan tahan untuk mengatur ulang ke default.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Memungkinkan</translation>
     </message>
@@ -25306,18 +29660,23 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Bawaan</translation>
     </message>
     <message>
-        <location line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location line="+128" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Menambahkan</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Menghapus</translation>
+    </message>
+    <message>
+        <location line="+602" />
+        <source>Change...</source>
+        <translation>Ubah...</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/basetreeview.cpp" line="+559" />
@@ -25325,7 +29684,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tampilkan %1 Kolom</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>Jangan &amp;bertanya lagi</translation>
     </message>
@@ -25335,12 +29694,12 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Jangan &amp;tampilkan lagi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Tidak ada executable clangd yang ditentukan.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Gagal mengambil versi clangd: Keluaran clangd tak terduga.</translation>
     </message>
@@ -25350,17 +29709,17 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Versi clangd adalah %1, tetapi diperlukan %2 atau lebih tinggi.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Nama kelas tidak boleh mengandung pembatas namespace.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Silakan masukkan nama kelas.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Nama kelas berisi karakter yang tidak valid.</translation>
     </message>
@@ -25370,25 +29729,21 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Detail</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+124" />
-        <location line="+409" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+145" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>Jalur &quot;%1&quot; ada tetapi bukan direktori yang dapat ditulisi.</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+706" />
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>Gagal membuat direktori &quot;%1&quot;.</translation>
+        <translation type="vanished">Gagal membuat direktori &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="-365" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>copyFile tidak diterapkan untuk &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>Tidak dapat menyalin dari &quot;%1&quot;, ini bukan direktori.</translation>
     </message>
@@ -25398,7 +29753,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak dapat menyalin &quot;%1&quot; ke &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+46" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Gagal menyalin secara rekursif dari &quot;%1&quot; ke &quot;%2&quot; ketika mencoba membuat arsip tar dari sumber: %3</translation>
     </message>
@@ -25408,68 +29763,166 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Gagal menyalin secara rekursif dari &quot;%1&quot; ke &quot;%2&quot; ketika mencoba mengekstrak arsip tar ke target: %3</translation>
     </message>
     <message>
-        <location line="+51" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>fileContents tidak diterapkan untuk &quot;%1&quot;.</translation>
+        <translation type="vanished">fileContents tidak diterapkan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">writeFileContents tidak diterapkan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">createTempFile tidak diterapkan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">arloji tidak diterapkan.</translation>
+    </message>
+    <message>
+        <location line="-227" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>Fungsi &quot;%1&quot; tidak diimplementasikan untuk &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>createSymLink belum diimplementasikan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>renameFile belum diimplementasikan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>Gagal memantau &quot;%1&quot;, tidak ada.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>Gagal memantau &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>Gagal menghapus watcher untuk &quot;%1&quot;, tidak ditemukan.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>writeFileContents tidak diterapkan untuk &quot;%1&quot;.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>Gagal menghapus watcher untuk &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>createTempFile tidak diterapkan untuk &quot;%1&quot;.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>Tidak dapat membuat berkas &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>arloji tidak diterapkan.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>Tidak dapat membuat direktori &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>Menolak untuk menghapus direktori standar &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Menolak untuk menghapus direktori root.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Menolak untuk menghapus direktori home Anda.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Gagal menghapus direktori &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Gagal menghapus file &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+406" />
+        <location line="+12" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Gagal menyalin file &quot;%1&quot; ke &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() dipanggil secara tak terduga pada platform non-Windows.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Gagal membuat symbolic link ke &quot;%1&quot; di &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Gagal mengganti nama berkas &quot;%1&quot; menjadi &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>Berkas &quot;%1&quot; tidak ada.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File &quot;%1&quot;.</source>
-        <translation>Tidak dapat membuka File &quot;%1&quot;.</translation>
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>Tidak dapat membuka berkas &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>Tidak dapat membuat direktori sementara di &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>Tidak dapat mengubah izin untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>Gagal menentukan apakah &quot;%1&quot; dan &quot;%2&quot; merujuk ke berkas yang sama: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>Perintah &quot;%1&quot; gagal: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Gagal membuat symbolic link untuk berkas &quot;%1&quot; di &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>Gagal membuat direktori sementara &quot;%1&quot; (terlalu banyak percobaan).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>Gagal membuat berkas sementara &quot;%1&quot; (terlalu banyak percobaan).</translation>
+    </message>
+    <message>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation type="vanished">Tidak dapat membuka File &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Tidak dapat membaca &quot;%1&quot;: %2</translation>
     </message>
@@ -25491,69 +29944,59 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak dapat membuat file sementara di &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Perangkat tidak terhubung</translation>
+        <translation type="vanished">Perangkat tidak terhubung</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>Gagal membaca file &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>Gagal menulis file &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Gagal menulis file &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>Gagal membuat file sementara &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Gagal membuat file sementara &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Gagal membuat file sementara &quot;%1&quot; (terlalu banyak percobaan).</translation>
+        <translation type="vanished">Gagal membuat file sementara &quot;%1&quot; (terlalu banyak percobaan).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Proses gagal dimulai.</translation>
+        <translation type="vanished">Proses gagal dimulai.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Gagal memasang skrip shell: %1 
+        <translation type="vanished">Gagal memasang skrip shell: %1 
 %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Batas waktu saat mencoba memeriksa %1.</translation>
+        <translation type="vanished">Batas waktu saat mencoba memeriksa %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>Perintah &quot;%1&quot; tidak ditemukan.</translation>
+        <translation type="vanished">Perintah &quot;%1&quot; tidak ditemukan.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Instalasi skrip terpaksa gagal.</translation>
+        <translation type="vanished">Instalasi skrip terpaksa gagal.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Batas waktu saat menunggu instalasi skrip shell.</translation>
+        <translation type="vanished">Batas waktu saat menunggu instalasi skrip shell.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Gagal memasang skrip shell: %1</translation>
+        <translation type="vanished">Gagal memasang skrip shell: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Menghapus</translation>
     </message>
@@ -25610,7 +30053,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>tabel string tampaknya berada di 0x%1</translation>
     </message>
@@ -25620,17 +30063,17 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>nama bagian %1 dari %2 di belakang akhir file</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Sunting Lingkungan</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;belum disetel&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Variabel</translation>
     </message>
@@ -25646,12 +30089,12 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Gagal memulai proses terminal: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>Menyaring</translation>
     </message>
@@ -25661,7 +30104,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Hapus teks</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Widget Pusat</translation>
     </message>
@@ -25671,34 +30114,34 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Atur Ulang ke Tata Letak Default</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+209" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+223" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>Nama kosong.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Nama mengandung spasi.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Karakter &quot;%1&quot; tidak valid.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Karakter &quot;%1&quot; tidak valid.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Nama cocok dengan perangkat MS Windows (COM, AU, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT 9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>Ekstensi file %1 diperlukan:</translation>
     </message>
@@ -25708,7 +30151,37 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Ekstensi file %1 diperlukan:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Galat DeviceFileAccess internal: watch() tidak mengembalikan hasil.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>Tidak dapat menemukan direktori sementara pada perangkat %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Tidak dapat membuat berkas sementara: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Tidak dapat membuat direktori sementara: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Device hook belum diatur.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>Tidak dapat menjangkau path jarak jauh &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 pada %2</translation>
@@ -25720,7 +30193,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>%1 %2 pada %3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Kesalahan saat mencoba menyalin file: %1</translation>
     </message>
@@ -25735,12 +30208,22 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak dapat menyetel izin pada &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>Tidak dapat membuat symbolic link ke &quot;%1&quot; di &quot;%2&quot;: Path tidak merujuk ke perangkat yang sama.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>Gagal memindahkan %1 ke %2. Penghapusan berkas sumber gagal: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Tidak ada kumpulan kait perangkat &quot;localSource&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: dibatalkan. %n kejadian ditemukan di %2 file.</numerusform>
@@ -25754,7 +30237,7 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>Po&amp;la file:</translation>
     </message>
@@ -25779,66 +30262,58 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>File dengan nama file atau jalur file lengkap yang cocok dengan filter apa pun tidak termasuk.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Gagal menyalin file.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Gagal membaca file.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Gagal menulis file.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Komputer Saya</translation>
+        <translation type="vanished">Komputer Saya</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>Komputer</translation>
+        <translation type="vanished">Komputer</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>Nama</translation>
+        <translation type="vanished">Nama</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Ukuran</translation>
+        <translation type="vanished">Ukuran</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Baik</translation>
+        <translation type="vanished">Baik</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Jenis</translation>
+        <translation type="vanished">Jenis</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Tanggal Dimodifikasi</translation>
+        <translation type="vanished">Tanggal Dimodifikasi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="-617" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Kesalahan Berkas</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>Tidak dapat menulis file %1: %2</translation>
     </message>
@@ -25848,12 +30323,12 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak dapat menulis file %1. Disknya penuh?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: Adalah nama file yang dicadangkan di Windows. Tidak dapat menyimpan.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>Tidak dapat menimpa file %1: %2</translation>
     </message>
@@ -25863,13 +30338,13 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak dapat membuat file %1: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>Tidak dapat membuat file sementara di %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Tidak dapat membuat file sementara %1: %2</translation>
     </message>
@@ -25884,9 +30359,24 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Timpa file yang ada &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Tidak dapat menyalin file &quot;%1&quot; ke &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>Gagal membuat direktori &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>Berkas %1 tidak ada.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>Gagal menyiapkan scratch buffer di &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+48" />
@@ -25900,38 +30390,37 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Jalur:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-173" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-199" />
         <source>Location</source>
         <translation>Lokasi</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Akhiran default jika Anda tidak menentukan ekstensi file secara eksplisit adalah &quot;.%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>Tidak dapat membuat konteks OpenGL.</translation>
+        <translation type="vanished">Tidak dapat membuat konteks OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Tampilkan Detail</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Jangan Tampilkan Lagi</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Menutup</translation>
     </message>
@@ -25979,44 +30468,36 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>Gagal memulai proses peluncur di &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Gagal memulai proses peluncur di &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Peluncur proses ditutup secara tidak terduga: %1</translation>
+        <translation type="vanished">Peluncur proses ditutup secara tidak terduga: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>Kesalahan soket peluncur proses.</translation>
+        <translation type="vanished">Kesalahan soket peluncur proses.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Kesalahan soket internal: %1</translation>
+        <translation type="vanished">Kesalahan soket internal: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Kesalahan soket: %1</translation>
+        <translation type="vanished">Kesalahan soket: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Kesalahan protokol internal: ukuran paket tidak valid %1.</translation>
+        <translation type="vanished">Kesalahan protokol internal: ukuran paket tidak valid %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Kesalahan protokol internal: jenis paket tidak valid %1.</translation>
+        <translation type="vanished">Kesalahan protokol internal: jenis paket tidak valid %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Soket peluncur tiba-tiba tertutup.</translation>
+        <translation type="vanished">Soket peluncur tiba-tiba tertutup.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/lua.cpp" line="+25" />
@@ -26024,12 +30505,17 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>Tidak ada antarmuka Lua yang disetel</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Kesalahan rekursi tak terbatas</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>Gagal memperluas makro dalam argumen proses: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Jalur lengkap termasuk nama file.</translation>
     </message>
@@ -26059,22 +30545,26 @@ Tidak akan diterapkan pada spasi putih di komentar dan string.</translation>
         <translation>%1: Nama dasar file tanpa jalur dan akhiran.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: Nama berkas dari direktori induk.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Variabel global</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Akses variabel lingkungan.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>Memperkecil</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -26083,7 +30573,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Masukkan satu variabel lingkungan per baris. 
+        <translation type="vanished">Masukkan satu variabel lingkungan per baris. 
 Untuk menyetel atau mengubah variabel, gunakan VARIABLE=VALUE. 
 Untuk menonaktifkan variabel, awali baris ini dengan &quot;#&quot;. 
 Untuk menambahkan ke variabel, gunakan VARIABLE+=VALUE. 
@@ -26093,7 +30583,39 @@ Untuk menghapus variabel, letakkan namanya pada baris tanpa nama lain di dalamny
 Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>File dapat berupa file teks sederhana berisi pasangan key/value,\natau script yang dievaluasi oleh shell sistem.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Masukkan satu variabel environment per baris.
+Untuk mengatur atau mengubah variabel, gunakan VARIABLE=VALUE.
+Untuk menonaktifkan variabel, awali baris ini dengan &quot;#&quot;.
+Untuk menambahkan ke akhir variabel, gunakan VARIABLE+=VALUE.
+Untuk menambahkan ke awal variabel, gunakan VARIABLE=+VALUE.
+Variabel yang sudah ada dapat dirujuk dalam VALUE dengan ${OTHER}.
+Untuk menghapus variabel, tulis namanya pada satu baris tanpa isi lain.
+Baris yang diawali &quot;##&quot; akan diperlakukan sebagai komentar.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Ambil variabel dari berkas teks atau skrip shell:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;OKE</translation>
     </message>
@@ -26103,12 +30625,12 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>&amp;Membatalkan</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Tampilkan/Sembunyikan Kata Sandi</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Pengguna:</translation>
     </message>
@@ -26118,7 +30640,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Kata sandi:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Lokal</translation>
     </message>
@@ -26128,7 +30650,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Terpencil</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Memilih...</translation>
     </message>
@@ -26138,25 +30660,25 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Jelajahi...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Pilih Direktori</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Pilih Dapat Dieksekusi</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Pilih File</translation>
     </message>
     <message>
-        <location line="+95" />
-        <location line="+74" />
+        <location line="+100" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Jalannya tidak boleh kosong.</translation>
     </message>
@@ -26200,12 +30722,17 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Tidak dapat menjalankan &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Jalur &quot;%1&quot; diperluas ke string kosong.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Alternatif</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Menyisipkan...</translation>
     </message>
@@ -26220,22 +30747,27 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Jernih</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Pendahuluan dan Lokasi Proyek</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Gunakan sebagai lokasi proyek default</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>Masukkan nama proyek</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Tambahkan ke proyek:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Name:</source>
         <translation>Nama:</translation>
     </message>
@@ -26245,7 +30777,12 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Buat di:</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+94" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Wizard proyek yang dipilih tidak mendukung sistem build.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>Direktori &quot;%1&quot; akan dibuat.</translation>
     </message>
@@ -26260,22 +30797,22 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>File dengan nama tersebut sudah ada.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Nama proyek tidak valid.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Karakter &quot;.&quot; tidak valid.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Ditemukan karakter &quot;%1&quot; yang tidak valid.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Kesalahan di baris perintah.</translation>
     </message>
@@ -26285,17 +30822,22 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Program &quot;%1&quot; tidak ada atau tidak dapat dijalankan.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>Program &quot;%1&quot; tidak dapat ditemukan.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Executable tidak ditentukan.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>Gagal membuat antarmuka proses untuk &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>Proses Tidak Merespons</translation>
     </message>
@@ -26315,7 +30857,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Hentikan prosesnya?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Perintah &quot;%1&quot; berhasil diselesaikan.</translation>
     </message>
@@ -26340,7 +30882,22 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Perintah &quot;%1&quot; dibatalkan setelah %2 ms.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Output kesalahan standar:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Output standar:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Program yang dipanggil tidak ada, atau Anda mungkin tidak memiliki izin yang cukup untuk memanggil program tersebut.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Berkas Berubah</translation>
     </message>
@@ -26366,18 +30923,18 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Perilaku default dapat diatur di Edit &gt; Preferensi &gt; Lingkungan &gt; Sistem.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Menutup</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Tidak untuk Semua &amp;&amp; &amp;Diff</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>File Telah Dihapus</translation>
     </message>
@@ -26402,7 +30959,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>&amp;Menyimpan</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Hapus Berkas</translation>
     </message>
@@ -26432,7 +30989,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Folder yang akan dihapus:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Gagal Membaca File</translation>
     </message>
@@ -26453,18 +31010,18 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Tidak ada yang perlu ditulis.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Tidak Ditemukan Pengaturan Valid</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tidak ditemukan file pengaturan yang valid.&lt;/p&gt;&lt;p&gt;Semua file pengaturan yang ditemukan di direktori &quot;%1&quot; tidak cocok untuk versi %2 saat ini, misalnya karena ditulis oleh versi %2 yang tidak kompatibel, atau karena jalur pengaturan yang berbeda digunakan.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Tidak ditemukan file pengaturan yang valid.&lt;/p&gt;&lt;p&gt;Semua file pengaturan yang ditemukan di direktori &quot;%1&quot; terlalu baru atau terlalu lama untuk dibaca.&lt;/p&gt;</translation>
     </message>
@@ -26489,7 +31046,7 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>&lt;p&gt;Tidak ditemukan file pengaturan yang dibuat oleh instance %1 ini.&lt;/p&gt;&lt;p&gt;Apakah Anda pernah mengerjakan proyek ini di komputer lain atau menggunakan jalur pengaturan yang berbeda sebelumnya?&lt;/p&gt;&lt;p&gt;Apakah Anda masih ingin memuat file pengaturan &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>File Pengaturan Penggabungan Tidak Didukung</translation>
     </message>
@@ -26499,27 +31056,23 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>&quot;%1&quot; tidak didukung oleh %2. Apakah Anda tetap ingin mencoba memuatnya?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Ganti nama</translation>
+        <translation type="vanished">Ganti nama</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>Apakah Anda benar-benar ingin menghapus konfigurasi &lt;b&gt;%1&lt;/b&gt;?</translation>
+        <translation type="vanished">Apakah Anda benar-benar ingin menghapus konfigurasi &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Nama baru untuk konfigurasi &lt;b&gt;%1&lt;/b&gt;:</translation>
+        <translation type="vanished">Nama baru untuk konfigurasi &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Ganti nama...</translation>
+        <translation type="vanished">Ganti nama...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Waktu yang berlalu: %1.</translation>
     </message>
@@ -26565,16 +31118,24 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
     </message>
     <message>
         <location line="+6" />
-        <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Tekan &lt;RETURN&gt; untuk menutup jendela ini...</translation>
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+Proses keluar dengan kode %1.
+Tekan Return untuk menutup jendela ini...</translation>
     </message>
     <message>
-        <location line="+103" />
+        <source>Press &lt;RETURN&gt; to close this window...</source>
+        <translation type="vanished">Tekan &lt;RETURN&gt; untuk menutup jendela ini...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Gagal memulai proses terminal. Rintisan itu keluar sebelum inferior dimulai.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Tidak dapat menetapkan izin pada direktori sementara &quot;%1&quot;: %2</translation>
     </message>
@@ -26584,80 +31145,73 @@ Baris yang dimulai dengan &quot;##&quot; akan dianggap sebagai komentar.</transl
         <translation>Tidak dapat membuat soket &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Kehabisan ingatan.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>Terjadi kesalahan pengkodean.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Format file tidak didukung.</translation>
+        <translation type="vanished">Format file tidak didukung.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Tidak dapat menemukan eksekusi pembatalan pengarsipan apa pun di PATH (%1).</translation>
+        <translation type="vanished">Tidak dapat menemukan eksekusi pembatalan pengarsipan apa pun di PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Tidak ada kumpulan file sumber.</translation>
+        <translation type="vanished">Tidak ada kumpulan file sumber.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Tidak ada direktori tujuan yang ditetapkan.</translation>
+        <translation type="vanished">Tidak ada direktori tujuan yang ditetapkan.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Gagal membuka file keluaran.</translation>
+        <translation type="vanished">Gagal membuka file keluaran.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Gagal menulis file keluaran.</translation>
+        <translation type="vanished">Gagal menulis file keluaran.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Perintah gagal.</translation>
+        <translation type="vanished">Perintah gagal.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Menjalankan %1 
+        <translation type="vanished">Menjalankan %1 
 di &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 Cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabel&lt;/th&gt;&lt;th&gt;Diperluas ke&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;direktori file saat ini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nama file (dengan path lengkap)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;nama file (tanpa jalur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 Cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabel&lt;/th&gt;&lt;th&gt;Diperluas ke&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;direktori file saat ini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;nama file (dengan path lengkap)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;nama file (tanpa jalur)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Masukkan Variabel</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Nilai Saat Ini: %1</translation>
+        <translation type="vanished">Nilai Saat Ini: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Nilai Saat Ini dari %{%1}: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Masukkan Nilai yang Tidak Diperluas</translation>
     </message>
@@ -26673,17 +31227,17 @@ di &quot;%2&quot;.</translation>
         <translation>Masukkan Nilai yang Diperluas</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Pilih variabel yang akan dimasukkan.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Variabel</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -26693,9 +31247,269 @@ di &quot;%2&quot;.</translation>
         <translation>&lt;VARIABEL&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Perintah tidak valid</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1 menggunakan %2 untuk mengumpulkan crash dan mengirimkannya ke Sentry untuk diproses. %2 dapat menangkap isi sembarang dari memori proses yang crash, termasuk informasi sensitif pengguna, URL, dan konten lain yang dipercayakan pengguna kepada %1. Laporan crash yang terkumpul hanya digunakan untuk tujuan memperbaiki bug.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Informasi lebih lanjut:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>Ikhtisar %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>Kebijakan keamanan %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Tidak ada perubahan untuk diterapkan.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Gagal mengambil variabel environment dari perangkat: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>Gagal mengambil variabel environment dari &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>Gagal mengambil variabel environment dari &quot;%1&quot;: Output tidak terduga</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (Default)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Klon</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Jadikan Default</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Pulihkan</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Urungkan</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>&amp;Ulangi</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>&amp;Potong</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>&amp;Salin</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Salin Lokasi &amp;Tautan</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Tempel</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Pilih Semua</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Sisipkan Karakter Kontrol Unicode</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Output kesalahan jarak jauh: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; tidak ada.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>&quot;find&quot; bukan executable yang ada</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>Gagal menjalankan %1: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>&quot;ps&quot; bukan executable yang ada.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>&quot;pidin&quot; bukan executable yang ada.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>Gagal menjalankan ps: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>Gagal menjalankan pidin: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>Gagal memeriksa /proc: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Gagal membuat snapshot: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>Batal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Galat internal: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Kesalahan belum diimplementasikan: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Kesalahan tidak diketahui: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Alasan tidak diketahui.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Buka Command Prompt di Sini</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Buka Terminal di Sini</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Emulator terminal yang digunakan untuk membuka terminal.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Perintah:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Argumen baris perintah yang digunakan untuk &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>Argumen &quot;%1&quot;:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Argumen baris perintah yang digunakan untuk &quot;Run in terminal&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>Argumen &quot;Run in Terminal&quot;:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Jalankan di Terminal</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Sesuaikan...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Preset</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Pilih Emulator Terminal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Bukan arsip.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>Dibatalkan.</translation>
     </message>
 </context>
 <context>
@@ -26705,6 +31519,14 @@ di &quot;%2&quot;.</translation>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Galat menyimpan parser: %1</translation>
     </message>
 </context>
 </TS>

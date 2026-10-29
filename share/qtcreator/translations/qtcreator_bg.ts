@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="bg_BG">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Затваряне на раздела</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Нито един</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>копие</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>Макс</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>Медиана</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>Режим</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>Мин</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Означава</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Поплавък</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Записът за парола не е намерен</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Данните не можаха да бъдат дешифрирани</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Записът за парола не е намерен</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Данните не можаха да бъдат дешифрирани</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Данните не можаха да бъдат дешифрирани: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Шифроването е неуспешно: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Размерът на идентификационните данни надвишава максималния размер от %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Ключът на идентификационните данни надвишава максималния размер от %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Записването на идентификационните данни е неуспешно: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Изтегля се нова дефиниция на синтаксис за „%1“...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>Изтегляне на нова дефиниция на синтаксиса за „%1“…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Актуализиране на дефиницията на синтаксис за „%1“ до версия %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>Актуализиране на определението за синтаксис за „%1“ до версия %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">Изтегля се нова дефиниция на синтаксис за „%1“...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">Актуализиране на дефиницията на синтаксис за „%1“ до версия %2...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Копиране/конвертиране на Python файл</translation>
     </message>
@@ -242,6 +304,79 @@
         <location line="+19" />
         <source>Convert Model</source>
         <translation>Конвертирайте модел</translation>
+    </message>
+</context>
+<context>
+    <name>QUnicodeControlCharacterMenu</name>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Маркер отляво надясно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Маркер отдясно наляво</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Съединител с нулева ширина</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Разделител с нулева ширина</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Интервал с нулева ширина</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Начало на вграждане отляво надясно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Начало на вграждане отдясно наляво</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Начало на замяна отляво надясно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Начало на замяна отдясно наляво</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Край на насоченото форматиране</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Изолиране отляво надясно</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Изолиране отдясно наляво</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI Първа силна изолация</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Край на насочената изолация</translation>
     </message>
 </context>
 <context>
@@ -384,47 +519,693 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QtC::AcpClient</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>Не може да се отвори %1: %2</translation>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Този агент вече не е наличен. Изберете агент, за да започнете нов чат.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Грешка в сесията: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Грешка в сесията: невалиден отговор.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>Грешка в подканата: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Неуспешно задаване на опция на конфигурацията: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Неуспешно изброяване на сесиите: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Неуспешно изброяване на сесиите: невалиден отговор.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Неуспешно зареждане на сесията: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Нов чат</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Списъкът с ИИ агенти не можа да се зареди. Проверете интернет връзката си и опитайте отново.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Опитайте отново</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Презареждане на списъка с AI агенти.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Избор на ИИ агент</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Необходимо е удостоверяване</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Метод:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>Отказ</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Удостоверяване</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Заявката е прекъсната от потребителя</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Удостоверяването е неуспешно: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 е готов.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Агентът</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Стартиране на чата...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>Свързване с %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Зареждане на чата...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Затваряне</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Преименуване на чата...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Затваряне на чата</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>ACP клиент</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Показване на агентния AI чат в страничния панел</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>Инспектиране на ACP клиента...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Разгъване на всички</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>Съобщение от клиента</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Съобщения</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Съобщение от сървъра</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>Файл на журнала</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>ACP инспектор</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Изберете&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Изчистване</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>ACP клиент:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Неизвестен</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Копиране</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>Разрешаване</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Разрешаване винаги</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Отхвърляне</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Отхвърляне винаги</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>Заявка за разрешение</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Удостоверен</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Отказване</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Отказано</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 минути</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 секунди</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Персонализиран&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Ръчно задаване на агент, който не е в регистъра.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Шаблон:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Изберете шаблон от регистъра, за да попълните настройките предварително.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Име:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Показваното име.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Нов сървър&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Изпълним файл:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>Изпълнимият файл за стартиране на процеса на ACP сървъра.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Аргументи:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>Аргументите за стартиране на процеса на ACP сървъра.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Промени в средата:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>Командата, която ще стартира ACP сървъра.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>„%1“ е необходим за този агент, но не беше намерен.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Уверете се, че Node.js е инсталиран и npx е наличен в PATH. Вижте &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; за инструкции за инсталиране.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Уверете се, че UV е инсталиран и uvx е наличен в PATH. Вижте &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; за инструкции за инсталиране.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>ACP сървъри</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Още доставчици</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Отворен код</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Всичко останало</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>Не е конфигурирана команда за ACP сървъра.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Командата не е намерена: „%1“. Проверете дали съществува и дали е изпълнима.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Командата не е намерена: „%1“. Проверете дали е изпълнима и дали е в PATH.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Данните не могат да се изпратят: процесът не е стартиран (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Данните не могат да се изпратят: процесът „%1“ не работи (код на изход %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>Грешка при анализ на JSON: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>Очакваше се JSON обект.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter за изпращане, Shift+Enter за нов ред; поставете или пуснете изображения и файлове, за да ги прикачите</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Филтриране на команди...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Премахване на контекста</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Опции на конфигурацията</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Показване на мислите</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Добавяне на контекст</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Добавяне на файл...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Добавяне на контекстен файл</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Добавяне на отдалечен файл...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Текущ редактор</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Вмъкване на команда</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Изпращане (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Файлова грешка</translation>
+        <source>Stop (Esc)</source>
+        <translation>Спиране (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Контекст: използвани %1 от %2 токена (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Цена на сесията: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Щракнете, за да компактирате разговора.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n прикачен файл (прикачени файлове)</numerusform>
+            <numerusform>%n прикачен файл (прикачени файлове)</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>На опашка: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Изпраща се, когато агентът приключи.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Редактиране на съобщението в опашката</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Изображение</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>току-що</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>преди 1 минута</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>преди %1 минути</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>преди 1 час</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>преди %1 часа</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>вчера</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>преди %1 дни</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Чат без заглавие</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Преименуване на чата</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Име (оставете празно за автоматично):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Започване на чат</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Нов чат в папка...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Предишни чатове</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Филтриране на чатове...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Зареждане на предишните чатове...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Нови чатове започват в %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Изберете папка за чата</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>Показване на 1 по-стар чат</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>Показване на %1 по-стари чата</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Предишни чатове (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Няма предишни чатове.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Няма съвпадащи чатове.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Отваряне в редактора</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 – 1 ред</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 – %2 реда</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Суров вход</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">Не може да се отвори %1: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Файлова грешка</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Двоичният редактор не може да отваря празни файлове.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>Файлът е твърде голям за двоичния редактор (макс. 32 GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Отместването във файла е твърде голямо.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Байтов адрес</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Отмяна</translation>
+        <translation type="vanished">&amp;Отмяна</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Повторно</translation>
+        <translation type="vanished">&amp;Повторно</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>Памет при 0x%1</translation>
     </message>
@@ -484,7 +1265,7 @@
         <translation>Предишна&amp;nbsp;осмична&amp;nbsp;стойност:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;двойна&lt;/i&gt;&amp;nbsp;стойност:</translation>
     </message>
@@ -494,7 +1275,7 @@
         <translation>Предишна &lt;i&gt;двойна&lt;/i&gt;&amp;nbsp;стойност:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;стойност:</translation>
     </message>
@@ -504,12 +1285,12 @@
         <translation>Предишна &lt;i&gt;float&lt;/i&gt;&amp;nbsp;стойност:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Мащабиране: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Неуспешно копиране</translation>
     </message>
@@ -519,7 +1300,7 @@
         <translation>Не можете да копирате повече от 4 MB двоични данни.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Копиране на селекцията като ASCII знаци</translation>
     </message>
@@ -534,7 +1315,7 @@
         <translation>Задайте точка на прекъсване на данните при избор</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>Копирайте 0x%1</translation>
@@ -555,12 +1336,26 @@
         <translation>Копиране на стойност</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Преминете към адрес 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Преход към адрес 0x%1 в този прозорец</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>„%1“ не може да се отвори.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>Двоичен редактор</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Преминете към адрес 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Преминете към адрес 0x%1 в нов прозорец</translation>
     </message>
@@ -568,21 +1363,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Влезте</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Заявката за вход е неуспешна: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Ще се отвори прозорец на браузъра. Въведете кода %1, когато попитате.
  Кодът е копиран във вашия клипборд.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Входът не успя</translation>
     </message>
@@ -592,48 +1392,40 @@ The code has been copied to your clipboard.</source>
         <translation>Заявката за вход не успя: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Копилот</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Необходимо е прокси потребителско име и парола:</translation>
+        <translation type="vanished">Необходимо е прокси потребителско име и парола:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Не питайте отново. Това засега ще деактивира Copilot.</translation>
+        <translation type="vanished">Не питайте отново. Това засега ще деактивира Copilot.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Изберете предишно предложение за Copilot</translation>
+        <translation type="vanished">Изберете предишно предложение за Copilot</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Изберете следващо предложение за Copilot</translation>
+        <translation type="vanished">Изберете следващо предложение за Copilot</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Прилагайте (%1)</translation>
+        <translation type="vanished">Прилагайте (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Прилагайте дума (%1)</translation>
+        <translation type="vanished">Прилагайте дума (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 от %2</translation>
+        <translation type="vanished">%1 от %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Заявете предложение за копилот</translation>
     </message>
@@ -669,25 +1461,25 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Деактивирайте Copilot.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Активирайте Copilot</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Активирайте Copilot.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Toggle Copilot</translation>
     </message>
@@ -697,7 +1489,7 @@ The code has been copied to your clipboard.</source>
         <translation>Активира интеграцията на Copilot.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>PATH NODE.JS:</translation>
     </message>
@@ -719,13 +1511,12 @@ The code has been copied to your clipboard.</source>
         <translation>Път към %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>%1 път</translation>
+        <translation type="vanished">%1 път</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Изберете Path to %2 в Plugin Copilot Neovim. Вижте %1 за инструкции за инсталиране.</translation>
@@ -746,97 +1537,100 @@ The code has been copied to your clipboard.</source>
         <translation>Автоматично поискайте предложения за текущата позиция на текстовия курсор след промени в документа.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Използвайте прокси</translation>
+        <translation type="vanished">Използвайте прокси</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Използвайте прокси</translation>
+        <translation type="vanished">Използвайте прокси</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Използвайте прокси, за да се свържете със сървърите на Copilot.</translation>
+        <translation type="vanished">Използвайте прокси, за да се свържете със сървърите на Copilot.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Прокси хост</translation>
+        <translation type="vanished">Прокси хост</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Прокси хост:</translation>
+        <translation type="vanished">Прокси хост:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>Името на хоста на прокси сървъра.</translation>
+        <translation type="vanished">Името на хоста на прокси сървъра.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Порт на прокси</translation>
+        <translation type="vanished">Порт на прокси</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Прокси порт:</translation>
+        <translation type="vanished">Прокси порт:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Порта на прокси сървъра.</translation>
+        <translation type="vanished">Порта на прокси сървъра.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Потребител на прокси</translation>
+        <translation type="vanished">Потребител на прокси</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Прокси потребител:</translation>
+        <translation type="vanished">Прокси потребител:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Потребителското име за достъп до прокси сървъра.</translation>
+        <translation type="vanished">Потребителското име за достъп до прокси сървъра.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Запазване на парола за прокси</translation>
+        <translation type="vanished">Запазване на парола за прокси</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Запазване на парола за прокси</translation>
+        <translation type="vanished">Запазване на парола за прокси</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Запазете паролата за достъп до прокси сървъра. Паролата се съхранява несигурно.</translation>
+        <translation type="vanished">Запазете паролата за достъп до прокси сървъра. Паролата се съхранява несигурно.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Прокси парола</translation>
+        <translation type="vanished">Прокси парола</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Прокси парола:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">Паролата за прокси сървъра.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>Път до %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Прокси</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Прокси парола:</translation>
+        <source>Proxy:</source>
+        <translation>Прокси:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>Паролата за прокси сървъра.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Прокси сървърът за връзките, във вида http://host:port, или http://user:password@host:port, ако проксито изисква вход.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Отхвърлете неоторизиран</translation>
     </message>
@@ -851,7 +1645,22 @@ The code has been copied to your clipboard.</source>
         <translation>Отхвърлете неоторизирани сертификати от прокси сървъра. Изключването на това е риск за сигурността.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>URL адрес на GitHub Enterprise</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>URL адрес на GitHub Enterprise:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>URL адресът на вашия сървър GitHub Enterprise.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>Активирането на %1 подлежи на вашето споразумение и спазване на вашите приложими %1 Условия. Ваша отговорност е да знаете и приемате изискванията и параметрите на използването на инструменти като %1. Това може да включва, но не се ограничава до, гарантирайки, че имате права да разрешавате %1 достъп до вашия код, както и да разберете всички последици от използването на %1 и произведени предложения (като авторски права, точност и т.н.).</translation>
     </message>
@@ -874,30 +1683,35 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+86" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+83" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Неуспешно генериране на файл</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="-63" />
         <source>Existing files</source>
         <translation>Съществуващи файлове</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>Неуспешно задаване на права.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>Не може да се създаде директорията %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Неуспешно отваряне на редактор за „%1“.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[Само за четене]</translation>
     </message>
@@ -912,56 +1726,91 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>[символна връзка]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>Проектната директория %1 съдържа файлове, които не могат да бъдат презаписани:
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+455" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Връщане към Запазени</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Близо</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Затвори всички</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Затворете Други</translation>
     </message>
     <message>
-        <location line="-1710" />
+        <location line="-1815" />
         <source>Revert File to Saved</source>
         <translation>Връщане на файла към Записан</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-12" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Запазване без форматиране</translation>
+    </message>
+    <message>
+        <location line="-1755" />
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+104" />
+        <source>Previous Tab</source>
+        <translation>Предишен раздел</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Следващ раздел</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Затваряне на всички раздели</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Затваряне на другите раздели</translation>
+    </message>
+    <message>
+        <location line="-2560" />
+        <source>Open Previous Document</source>
+        <translation>Отваряне на предишния документ</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Отваряне на следващия документ</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -987,34 +1836,38 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Премахване на всички разделяния</translation>
     </message>
     <message>
-        <location line="+2669" />
+        <location line="+2529" />
+        <source>Diff Against Current File</source>
+        <translation>Сравняване с текущия файл</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Отваряне на файл</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Файловете не можаха да бъдат запазени.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2471" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2825" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Файлова грешка</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Грешка при запазване на файл: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Всички файлове (*.*)</translation>
@@ -1031,27 +1884,42 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Елемент с име &quot;%1&quot; вече съществува на това място. Искате ли да го презапишете?</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+229" />
         <source>Open File</source>
         <translation>Отворете файла</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>Не може да се презареди %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>Отваряне с VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Разлики за „%1“</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>Журнал „%1“</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>Анотиране на „%1“</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-619" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
         <translation>&lt;b&gt;Предупреждение:&lt;/b&gt; Вие променяте файл само за четене.</translation>
     </message>
     <message>
-        <location line="-1490" />
+        <location line="-1626" />
         <source>Next Open Document in History</source>
         <translation>Следващ отворен документ в историята</translation>
     </message>
@@ -1061,59 +1929,58 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Предишен отворен документ в историята</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Върни се</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>Върви напред</translation>
     </message>
     <message>
-        <location line="-238" />
-        <location line="+124" />
+        <location line="-118" />
         <source>Close All Except Visible</source>
         <translation>Затваряне на всички освен видими</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+159" />
         <source>Go to Last Edit</source>
         <translation>Отидете на Последна редакция</translation>
     </message>
     <message>
-        <location line="-268" />
+        <location line="+2383" />
         <source>Copy Full Path</source>
         <translation>Копиране на пълния път</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Копирайте пътя и номера на реда</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Копиране на името на файла</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Properties...</source>
-        <translation>Имоти...</translation>
+        <translation type="vanished">Имоти...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>ПИН</translation>
+        <translation type="vanished">ПИН</translation>
     </message>
     <message>
         <source>Alternative Close</source>
         <translation type="vanished">Алтернативно затваряне</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="-2596" />
         <source>Ctrl+F4</source>
         <translation>Ctrl+F4</translation>
     </message>
@@ -1122,13 +1989,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation type="vanished">Ctrl+Shift+W.</translation>
     </message>
     <message>
-        <location line="+158" />
+        <location line="+182" />
         <source>Reopen Last Closed Document</source>
         <translation>Отворете последния затворен документ</translation>
     </message>
     <message>
         <location line="+41" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-309" />
         <source>Open in New Window</source>
         <translation>Отвори в нов прозорец</translation>
     </message>
@@ -1143,12 +2010,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Отидете на Next Split или Window</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1852" />
         <source>Ad&amp;vanced</source>
         <translation>Разширен&amp;разширен</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Актуален документ</translation>
     </message>
@@ -1163,7 +2030,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Y-координата на горния ляв ъгъл на текущия редактор спрямо екрана.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Продължете ли да отваряте огромен текстов файл?</translation>
     </message>
@@ -1177,22 +2044,21 @@ Continue?</source>
 Продължи?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Не може да се отвори &quot;%1&quot;: Не могат да се отворят файлове от тип &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Не може да се отвори &quot;%1&quot; за четене. Файлът или не съществува, или нямате правата да го отворите.</translation>
+        <translation type="vanished">Не може да се отвори &quot;%1&quot; за четене. Файлът или не съществува, или нямате правата да го отворите.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Не може да се отвори &quot;%1&quot;: Неизвестна грешка.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Предупреждение:&lt;/b&gt; Този файл все още не е отворен в %1.</translation>
     </message>
@@ -1202,7 +2068,7 @@ Continue?</source>
         <translation>Отворете</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+30" />
         <source>&amp;Save %1</source>
         <translation>&amp;Запазване на %1</translation>
     </message>
@@ -1210,6 +2076,11 @@ Continue?</source>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>Запазване на %1 &amp;като...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>Запазване на %1 без форматиране</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1222,7 +2093,7 @@ Continue?</source>
         <translation>Презареди %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>Затваряне на %1</translation>
     </message>
@@ -1232,7 +2103,7 @@ Continue?</source>
         <translation>Затваряне на всички освен %1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Файлът не може да бъде отворен</translation>
     </message>
@@ -1242,7 +2113,7 @@ Continue?</source>
         <translation>Не може да се отвори файлът за редактиране с VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Ще загубите текущите си промени, ако продължите с връщането на %1.</translation>
     </message>
@@ -1253,9 +2124,12 @@ Continue?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+887" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>Отказ</translation>
     </message>
@@ -1265,12 +2139,12 @@ Continue?</source>
         <translation>Отказ &amp;&amp; &amp;Разл</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>Затваряне на „%1“</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+65" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>Откачване на „%1“</translation>
     </message>
@@ -1285,7 +2159,7 @@ Continue?</source>
         <translation>Pin Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-489" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-482" />
         <source>Overwrite?</source>
         <translation>Презаписване?</translation>
     </message>
@@ -1295,17 +2169,21 @@ Continue?</source>
         <translation>Запазване на файла като</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>редактиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Плъзнете, за да плъзнете документи между разделянията</translation>
+        <translation type="vanished">Плъзнете, за да плъзнете документи между разделянията</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Плъзнете, за да отворите документа в друго разделение.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Затваряне на документа</translation>
     </message>
@@ -1320,23 +2198,22 @@ Continue?</source>
         <translation>Файлът може да се записва</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+152" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Нулирайте диалоговите прозорци „Не питай/показвай отново“.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Обновявам до първоначалното.</translation>
+        <translation type="vanished">Обновявам до първоначалното.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>Тема:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>език:</translation>
     </message>
@@ -1349,12 +2226,11 @@ Continue?</source>
         <translation type="vanished">Настройките за високи DPI ще влязат в сила след рестартиране.</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>User Interface</source>
-        <translation>Потребителски интерфейс</translation>
+        <translation type="vanished">Потребителски интерфейс</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="-66" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Показване на клавишни комбинации в контекстните менюта (по подразбиране: %1)</translation>
     </message>
@@ -1369,7 +2245,7 @@ Continue?</source>
         <translation>изключено</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Отменете курсорите за изгледи</translation>
     </message>
@@ -1381,7 +2257,32 @@ If the system cursors for resizing views are not displayed properly, you can use
  Ако системните курсори за преоразмеряване на изгледите не се показват правилно, можете да използвате курсорите, предоставени от %1.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+12" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Предпочитане на информационни ленти пред изскачащи прозорци</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Използване на редактори с раздели</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Показване на бутоните „OK“ и „Отказ“ в режим на предпочитания</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Кодировка на текста за инструментите:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Цвят:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Round Up for .5 and Above</source>
         <translation>Закръглете за .5 и по -горе</translation>
     </message>
@@ -1401,42 +2302,52 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Закръглете за .75 и по -горе</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Не се закръгляйте</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>Политика за закръгляне на DPI:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Следните променливи на околната среда са зададени и могат да повлияят на поведението на мащабиране на потребителския интерфейс от %1:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Околната среда влияе върху поведението на мащабиране на потребителския интерфейс.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Размер на табулацията на серийния терминал:</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Системен език&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>Повторно включване на предупрежденията, потиснати чрез „Не показвай отново“ (например липсващ маркер за синтаксис).</translation>
+    </message>
+    <message>
+        <location line="+126" />
         <source>The language change will take effect after restart.</source>
         <translation>Промяната на езика ще влезе в сила след рестартиране.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Стил на лентата с инструменти:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Компактен</translation>
     </message>
@@ -1446,41 +2357,39 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Спокойно</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>Промяната на политиката за закръгляне на DPI ще влезе в сила след рестартиране.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Интерфейс</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+356" />
         <source>Environment</source>
         <translation>Заобикаляща среда</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+480" />
         <source>Variables</source>
-        <translation>Променливи</translation>
+        <translation type="vanished">Променливи</translation>
     </message>
     <message>
-        <location line="-271" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+116" />
         <source>Terminal:</source>
         <translation>Терминал:</translation>
     </message>
     <message>
-        <location line="-166" />
         <source>Bytes</source>
-        <translation>Байтове</translation>
+        <translation type="vanished">Байтове</translation>
     </message>
     <message>
         <source>KB</source>
         <translation type="vanished">KB</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+111" />
         <source>MB</source>
         <translation>MB</translation>
     </message>
@@ -1493,77 +2402,81 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation type="vanished">туберкулоза</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-33" />
         <source>Auto-suspend unmodified files</source>
         <translation>Автоматично спиране на непроменени файлове</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+8" />
         <source>Enable crash reporting</source>
         <translation>Активирайте докладването за сривове</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+7" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Отчетите за сривове се записват в „%1“.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Warn before opening text files greater than</source>
         <translation>Предупреждавайте преди отваряне на текстови файлове, по-големи от</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+10" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>Брой на „Скорошните файлове“:</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Ask for confirmation before exiting</source>
         <translation>Поискайте потвърждение преди да излезете</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-75" />
         <source>Auto-save modified files</source>
         <translation>Автоматично запазване на променени файлове</translation>
     </message>
     <message>
-        <location line="+96" />
         <source>Clear Local Crash Reports</source>
-        <translation>Изчистване на локални отчети за сривове</translation>
+        <translation type="vanished">Изчистване на локални отчети за сривове</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+17" />
         <source>Auto-save files after refactoring</source>
         <translation>Автоматично запазване на файлове след рефакторинг</translation>
     </message>
     <message>
-        <location line="-49" />
         <source>KiB</source>
-        <translation>Kib</translation>
+        <translation type="vanished">Kib</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>Миб</translation>
+        <translation type="vanished">Миб</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>Гиб</translation>
+        <translation type="vanished">Гиб</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>Тиб</translation>
+        <translation type="vanished">Тиб</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+10" />
         <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
         <translation>Автоматично освобождаване на ресурси от стари документи, които не се виждат и не се променят. Те остават видими в списъка с отворени документи.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+8" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Позволете сривовете да бъдат докладвани автоматично. Събраните доклади се използват единствено с цел коригиране на грешки.</translation>
     </message>
     <message>
-        <location line="+35" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>Аргументи на командния ред, използвани за „Изпълнение в терминал“.</translation>
+        <translation type="vanished">Аргументи на командния ред, използвани за „Изпълнение в терминал“.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+33" />
         <source>Always Ask</source>
         <translation>Винаги питай</translation>
     </message>
@@ -1578,27 +2491,24 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Игнориране на модификациите</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-61" />
         <source>min</source>
         <translation>мин</translation>
     </message>
     <message>
-        <location line="+105" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>Аргументите на командния ред, използвани за &quot;%1&quot;.</translation>
+        <translation type="vanished">Аргументите на командния ред, използвани за &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>File system case sensitivity:</source>
-        <translation>Чувствителност към главни и малки букви на файловата система:</translation>
+        <translation type="vanished">Чувствителност към главни и малки букви на файловата система:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Влияе върху съпоставянето на имената на файловете, за да реши дали са еднакви.</translation>
+        <translation type="vanished">Влияе върху съпоставянето на имената на файловете, за да реши дали са еднакви.</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="+37" />
         <source>Files to keep open:</source>
         <translation>Файлове, които да държите отворени:</translation>
     </message>
@@ -1608,55 +2518,77 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Минимален брой отворени документи, които трябва да се съхраняват в паметта. Увеличаването на този брой ще доведе до по-голямо използване на ресурсите, когато не се затварят ръчно документи.</translation>
     </message>
     <message>
-        <location line="+84" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Обновявам до първоначалното.</translation>
+        <translation type="vanished">Обновявам до първоначалното.</translation>
     </message>
     <message>
-        <location line="-130" />
+        <location line="-53" />
         <source>Patch command:</source>
         <translation>Команда за корекция:</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="-11" />
         <source>External file browser:</source>
         <translation>Външен файлов браузър:</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="+88" />
         <source>When files are externally modified:</source>
         <translation>Когато файловете са външно модифицирани:</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-60" />
         <source>Interval:</source>
         <translation>Интервал:</translation>
     </message>
     <message>
-        <location line="+147" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>Максимален брой записи в &quot;Последни файлове&quot;:</translation>
+        <translation type="vanished">Максимален брой записи в &quot;Последни файлове&quot;:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+121" />
         <source>System</source>
         <translation>Система</translation>
     </message>
     <message>
-        <location line="-423" />
+        <location line="-137" />
         <source>Command used for reverting diff chunks.</source>
         <translation>Команда, използвана за връщане на разл.</translation>
     </message>
     <message>
+        <location line="-96" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Променлива&lt;/th&gt;&lt;th&gt;Разширява се до&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;директория на текущия файл&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;име на файла (с пълния път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;име на файла (без път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Разделители на променливи:</translation>
+    </message>
+    <message>
         <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>Използване на D-Bus интерфейса на freedesktop.org за файловия мениджър</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Използва &lt;a href=&quot;%1&quot;&gt;D-Bus интерфейса на freedesktop.org&lt;/a&gt; за &lt;i&gt;Отваряне във файловия мениджър&lt;/i&gt;, ако е наличен. В противен случай се използва „Външен файлов браузър“ по-горе.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>Команда, използвана за &lt;i&gt;Отваряне във файлов мениджър&lt;/i&gt;, ако интерфейсът freedesktop.org D-Bus не е наличен. Командата може да съдържа следните променливи:
+</translation>
+    </message>
+    <message>
+        <location line="+17" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
         <translation>Автоматично създава временни копия на променени файлове. Ако %1 се рестартира след срив или прекъсване на захранването, той пита дали да възстанови автоматично запазеното съдържание.</translation>
     </message>
@@ -1668,7 +2600,8 @@ provided they were unmodified before the refactoring.</source>
 при условие, че не са били модифицирани преди преработването.</translation>
     </message>
     <message>
-        <location line="+183" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Докладване за сривове</translation>
     </message>
@@ -1677,32 +2610,28 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">Промяната ще влезе в сила след рестартиране.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Чувствителни към малки и малки букви (по подразбиране)</translation>
+        <translation type="vanished">Чувствителни към малки и малки букви (по подразбиране)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Нечувствителен към регистър (по подразбиране)</translation>
+        <translation type="vanished">Нечувствителен към регистър (по подразбиране)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Регистърът не е чувствителен</translation>
+        <translation type="vanished">Регистърът не е чувствителен</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Промяната в чувствителността към главни и малки букви на файловата система ще влезе в сила след рестартиране.</translation>
+        <translation type="vanished">Промяната в чувствителността към главни и малки букви на файловата система ще влезе в сила след рестартиране.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-25" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-121" />
         <source>Output</source>
         <translation>Изход</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-27" />
         <source>&amp;File</source>
         <translation>&amp;Файл</translation>
     </message>
@@ -1712,7 +2641,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;Редактиране</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+41" />
         <source>&amp;Tools</source>
         <translation>&amp;Инструменти</translation>
     </message>
@@ -1727,16 +2656,14 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;Помогне</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+133" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+132" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1006" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+162" />
         <source>&amp;Save</source>
         <translation>&amp;Запази</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
-        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>Запази като... (&amp;A)</translation>
@@ -1747,23 +2674,23 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+695" />
         <source>Save A&amp;ll</source>
         <translation>Запази всичко (&amp;L)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-338" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Изход от %1?</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+135" />
         <source>&amp;View</source>
         <translation>&amp;Преглед</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+74" />
         <source>Return to Editor</source>
         <translation>Върнете се към редактора</translation>
     </message>
@@ -1789,7 +2716,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>&amp;Отворете файла...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Отваряне на файл...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Отваряне на файл &amp;с...</translation>
     </message>
@@ -1864,7 +2796,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Избери всички (&amp;A)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Отиди на ред...</translation>
     </message>
@@ -1879,7 +2811,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Отдалечавам</translation>
     </message>
@@ -1895,7 +2827,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl+Shift+-</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Оригинален размер</translation>
     </message>
@@ -1910,7 +2842,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Показване на регистрационни файлове...</translation>
     </message>
@@ -1944,7 +2876,7 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">Ctrl+alt+m</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Скриване на лентата на менюто</translation>
     </message>
@@ -1954,7 +2886,8 @@ provided they were unmodified before the refactoring.</source>
         <translation>Това ще скрие лентата с менюта напълно. Можете да го покажете отново, като напишете%1. &lt;br&gt; &lt;br&gt; или, задействайте действието &quot;%2&quot; от филтъра &quot;%3&quot; (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Изгледи</translation>
     </message>
@@ -1979,42 +2912,58 @@ provided they were unmodified before the refactoring.</source>
         <translation>Контакт...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Стилове за избор на режим на цикъл</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Стил за избор на режим</translation>
+        <translation type="vanished">Стил за избор на режим</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Скриване</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Режими</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Икони и текст</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Само икони</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Скрити</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>Показване на %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+578" />
         <source>Version:</source>
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Дневник на промените</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+61" />
         <source>Contact</source>
         <translation>Контакт</translation>
     </message>
@@ -2024,12 +2973,39 @@ provided they were unmodified before the refactoring.</source>
         <translation>&lt;p&gt;До разработчиците на Qt Creator можете да се свържете в пощенския списък на Qt Creator:&lt;/p&gt;%1&lt;p&gt;или канала #qt-creator на Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Нашият инструмент за проследяване на грешки се намира на %3.&lt;/p&gt;&lt;p&gt;Моля, използвайте %4 за по-големи части от текст.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-819" />
+        <location line="-780" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="-1591" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Отваряне на предпочитанията.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>Изпълнимият файл %1 не беше намерен в %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>Компилирано на %1 %2 на базата на Qt %3 (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 е свободен софтуер и можете да го разпространявате при &lt;a href=&quot;%2&quot;&gt;определени условия&lt;/a&gt;. За някои компоненти обаче може да важат други условия.</translation>
+    </message>
+    <message>
+        <location line="+733" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-27" />
         <source>Minimize</source>
         <translation>Минимизиране</translation>
@@ -2046,18 +3022,18 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Цял екран</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+125" />
         <source>About &amp;Plugins...</source>
         <translation>Относно &amp;добавките...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Отворени документи</translation>
@@ -2073,19 +3049,17 @@ provided they were unmodified before the refactoring.</source>
         <translation>Alt+O</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+855" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+938" />
         <source>Close Editor</source>
         <translation>Затваряне на редактора</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Затваряне на всички с изключение на &quot;%1&quot;</translation>
+        <translation type="vanished">Затваряне на всички с изключение на &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Затворете Други редактори</translation>
+        <translation type="vanished">Затворете Други редактори</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+55" />
@@ -2093,14 +3067,14 @@ provided they were unmodified before the refactoring.</source>
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+522" />
         <location line="+88" />
         <source>Category</source>
         <translation>Категория</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+369" />
         <source>Type</source>
         <translation>Тип</translation>
     </message>
@@ -2116,7 +3090,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2124,8 +3098,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>ясно</translation>
     </message>
@@ -2160,7 +3134,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Времево клеймо</translation>
     </message>
     <message>
-        <location line="-411" />
+        <location line="-458" />
         <source>Entry is missing a logging category name.</source>
         <translation>В записа липсва име на категория за регистриране.</translation>
     </message>
@@ -2175,7 +3149,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Невалидно ниво: %1</translation>
     </message>
     <message>
-        <location line="+312" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Тази категория на журнала използва непрепоръчван нестатичен подход и не може да бъде обработена от прегледа на журнала.</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Debug</source>
         <translation>Отстраняване на грешки</translation>
     </message>
@@ -2260,27 +3239,27 @@ provided they were unmodified before the refactoring.</source>
         <translation>Актуализиране от предварително зададени...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+47" />
         <source>Save Enabled Categories As...</source>
         <translation>Запазете активирани категории като ...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+48" />
         <source>Failed to open preset file &quot;%1&quot; for reading.</source>
         <translation>Неуспешно отваряне на предварително зададен файл &quot;%1&quot; за четене.</translation>
     </message>
     <message>
-        <location line="-172" />
+        <location line="-165" />
         <source>Uncheck All</source>
         <translation>Премахнете отметката от всички</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+87" />
         <source>Save Logs As</source>
         <translation>Запазване на регистрационни файлове като</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Неуспешно записване на регистрационни файлове в &quot;%1&quot;.</translation>
     </message>
@@ -2294,12 +3273,12 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">Запазване на активираните категории като</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Неуспешно записване на предварително зададен файл &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Зареждане на разрешени категории от</translation>
     </message>
@@ -2318,42 +3297,56 @@ provided they were unmodified before the refactoring.</source>
         <translation>Неочакван предварително зададен файлов формат.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Показване на несъвпадащи линии</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Показване на {} &amp;предходни реда</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Показване на {} &amp;следващи реда</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Филтърен изход...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Увеличете максимално</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+120" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Следващ елемент</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Предишен елемент</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>Изход&amp;изход</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Нулирайте по подразбиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>Тип MIME</translation>
     </message>
@@ -2363,41 +3356,41 @@ provided they were unmodified before the refactoring.</source>
         <translation>Манипулатор</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Нулирайте всички дефиниции на MIME типове към техните настройки по подразбиране.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>Нулирайте MIME типовете</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Нулирайте присвоения манипулатор за всички дефиниции на MIME тип до стойността по подразбиране.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>Нулиране на манипулатори</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>Модели:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Разделен с точка и запетая списък с имена на файлове със заместващи знаци.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Магическа заглавка</translation>
     </message>
@@ -2412,25 +3405,25 @@ provided they were unmodified before the refactoring.</source>
         <translation>Приоритет</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Регистрирани MIME типове</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Подробности</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Промените ще влязат в сила след рестартиране.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>Типове MIME</translation>
     </message>
@@ -2450,7 +3443,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Инсталирани плъгини</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Промените в приставката ще влязат в сила след рестартиране.</translation>
     </message>
@@ -2459,17 +3452,17 @@ provided they were unmodified before the refactoring.</source>
         <translation type="vanished">Подробности за приставката на %1</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>Грешки на приставката от %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>процеси</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-82" />
         <source>&amp;Diff</source>
         <translation>&amp;разл</translation>
     </message>
@@ -2479,7 +3472,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Не запазвай (&amp;N)</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+79" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Разлика &amp;&amp; Отказ</translation>
     </message>
@@ -2510,8 +3503,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-295" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Запазване</translation>
     </message>
@@ -2521,7 +3514,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Запазване на избраното</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+343" />
         <source>Click and type the new key sequence.</source>
         <translation>Щракнете и въведете новата последователност от клавиши.</translation>
     </message>
@@ -2532,17 +3525,17 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Записвайте</translation>
     </message>
     <message>
-        <location line="+427" />
+        <location line="+422" />
         <source>Keyboard</source>
         <translation>Клавиатура</translation>
     </message>
     <message>
-        <location line="-745" />
+        <location line="-761" />
         <source>Invalid key sequence.</source>
         <translation>Невалидна последователност от ключове.</translation>
     </message>
@@ -2552,13 +3545,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>Ключовата последователност няма да работи в редактора.</translation>
     </message>
     <message>
-        <location line="+469" />
+        <location line="+491" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Импортиране на схема за съпоставяне на клавиатурата</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Схема за съпоставяне на клавиатурата (*.kms)</translation>
     </message>
@@ -2568,13 +3561,13 @@ provided they were unmodified before the refactoring.</source>
         <translation>Експортиране на схема за съпоставяне на клавиатурата</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+153" />
+        <location line="-378" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Ключова последователност:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Използвайте &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; и &quot;Shift&quot; за модифициращи клавиши. Използвайте &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; и т.н. за специални клавиши. Комбинирайте отделни клавиши с „+“ и комбинирайте множество преки пътища към последователност от преки пътища с „,“. Например, ако потребителят трябва да задържи клавишите-модификатори Ctrl и Shift, докато натиска Escape, след което отпусне и натиснете A, въведете „Ctrl+Shift+Escape,A“.</translation>
     </message>
@@ -2599,12 +3592,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Търся...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Празна дума за търсене.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Търсене</translation>
     </message>
@@ -2614,7 +3607,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Търсене &amp;&amp; &amp;Замяна</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>Търся: (&amp;O)</translation>
     </message>
@@ -2622,6 +3615,16 @@ provided they were unmodified before the refactoring.</source>
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
         <translation>Само цели думи (&amp;N)</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>Игнориране на двоичните файлове</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Игнориране на генерираните файлове</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2634,12 +3637,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Обхват: (&amp;P)</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-15" />
         <source>&amp;Case sensitive</source>
         <translation>&amp;Различаващ главни от малки букви</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Намиране/замяна</translation>
     </message>
@@ -2656,8 +3659,8 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Разширено...</translation>
     </message>
@@ -2696,19 +3699,19 @@ provided they were unmodified before the refactoring.</source>
         <translation>Замяна &amp;&amp; Намиране на предишен</translation>
     </message>
     <message>
-        <location line="-248" />
-        <location line="+261" />
+        <location line="-250" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Замени всички</translation>
     </message>
     <message>
-        <location line="-311" />
+        <location line="-313" />
         <source>Find Flags</source>
         <translation>Намерете знамена</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+237" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Замени &amp;&amp; Намери</translation>
     </message>
@@ -2762,8 +3765,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-741" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-818" />
         <source>Case Sensitive</source>
         <translation>Различаващ главни от малки букви</translation>
     </message>
@@ -2789,7 +3791,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Замени с...</translation>
     </message>
     <message>
-        <location line="-522" />
+        <location line="-524" />
         <source>Find</source>
         <translation>намирам</translation>
     </message>
@@ -2804,9 +3806,9 @@ provided they were unmodified before the refactoring.</source>
         <translation>Замени с:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+138" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+142" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+272" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Показвайте пътища във връзка с активен проект</translation>
     </message>
@@ -2828,7 +3830,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+758" />
         <source>Collapse All</source>
         <translation>Свиване на всички</translation>
     </message>
@@ -2855,7 +3857,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Сменете</translation>
     </message>
@@ -2875,7 +3877,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Отворете файл &quot;%1&quot; с:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Показване на скрити файлове</translation>
     </message>
@@ -2890,38 +3892,47 @@ provided they were unmodified before the refactoring.</source>
         <translation>Показване на папки отгоре</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+47" />
         <source>Synchronize Root Directory with Editor</source>
         <translation>Синхронизирайте основната директория с редактора</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Нов файл</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Нова папка</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Премахване на папка...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>Нов файл...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+199" />
         <source>Open &quot;%1&quot;</source>
         <translation>Отворете „%1“</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Премахване на папка</translation>
+        <translation type="vanished">Премахване на папка</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-107" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-103" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2954,12 +3965,11 @@ provided they were unmodified before the refactoring.</source>
         <translation>У дома</translation>
     </message>
     <message>
-        <location line="+145" />
         <source>Add New...</source>
-        <translation>Добави нов...</translation>
+        <translation type="vanished">Добави нов...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+159" />
         <source>Rename...</source>
         <translation>Преименуване...</translation>
     </message>
@@ -2969,12 +3979,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Премахване...</translation>
     </message>
     <message>
-        <location line="-622" />
+        <location line="-643" />
         <source>Synchronize with Editor</source>
         <translation>Синхронизирайте с редактора</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Конфигурация на филтъра</translation>
     </message>
@@ -3031,14 +4041,16 @@ provided they were unmodified before the refactoring.</source>
         <translation>%1 актуализация на филтъра: анулирана</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+96" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+96" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+34" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+70" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Път:</translation>
     </message>
@@ -3089,6 +4101,11 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Състояние на контрола на версиите:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Четимо:</translation>
     </message>
@@ -3109,18 +4126,18 @@ provided they were unmodified before the refactoring.</source>
         <translation>Символична връзка:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>неизвестен</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
@@ -3135,7 +4152,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Mac (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Смесени</translation>
@@ -3162,22 +4179,22 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+102" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-397" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+265" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-396" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Добавяне...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Редактиране...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+136" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133" />
         <source>Uncategorized</source>
         <translation>Некатегоризиран</translation>
     </message>
@@ -3187,12 +4204,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Инструменти, които ще се покажат директно под менюто Външни инструменти.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Нова категория</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Нов инструмент</translation>
     </message>
@@ -3208,12 +4225,12 @@ provided they were unmodified before the refactoring.</source>
         <translation>Полезен текст</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Системна среда</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+63" />
         <source>Add tool.</source>
         <translation>Добавете инструмент.</translation>
     </message>
@@ -3222,15 +4239,14 @@ provided they were unmodified before the refactoring.</source>
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-409" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-399" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Премахване</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Отстранете инструмента.</translation>
+        <translation type="vanished">Отстранете инструмента.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3292,15 +4308,13 @@ provided they were unmodified before the refactoring.</source>
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+126" />
         <source>No changes to apply.</source>
-        <translation>Няма промени за прилагане.</translation>
+        <translation type="vanished">Няма промени за прилагане.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-91" />
         <source>Change...</source>
         <translation>промяна...</translation>
     </message>
@@ -3331,23 +4345,47 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Изпълним:</translation>
     </message>
     <message>
-        <source>Executable:</source>
-        <translation type="vanished">изпълним файл:</translation>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-28" />
+        <source>Custom Language Models</source>
+        <translation>Персонализирани езикови модели</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Нов модел&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Изпълним файл</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
+        <source>Executable:</source>
+        <translation>изпълним файл:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Аргументи</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Аргументи:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Работна директория:</translation>
     </message>
@@ -3358,7 +4396,7 @@ provided they were unmodified before the refactoring.</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Заобикаляща среда:</translation>
     </message>
@@ -3373,7 +4411,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>Добавяне на категория</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -3383,7 +4421,7 @@ provided they were unmodified before the refactoring.</source>
         <translation>PATH=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Външни инструменти</translation>
     </message>
@@ -3400,7 +4438,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
 За да направите това, въвеждате този пряк път и интервал в полето за въвеждане на локатор и след това думата, която да търсите.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+121" />
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+139" />
         <source>Files in File System</source>
         <translation>Файлове във файловата система</translation>
     </message>
@@ -3414,7 +4452,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation type="vanished">Създайте и отворете „%1“</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-64" />
         <source>Create File</source>
         <translation>Създаване на файл</translation>
     </message>
@@ -3449,17 +4487,17 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Създайте директория</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+180" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>Създайте и отворете файл &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>Създайте директория &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Включете скрити файлове</translation>
     </message>
@@ -3469,27 +4507,37 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>филтър:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Налични филтри</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-8" />
         <source>Open as Centered Popup</source>
         <translation>Отворете като центриран изскачащ прозорец</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+592" />
         <source>Refresh</source>
         <translation>Опресняване</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+101" />
         <source>Type to locate (%1)</source>
         <translation>Въведете, за да намерите (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+14" />
+        <source>Ignore Generated Files</source>
+        <translation>Игнориране на генерираните файлове</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Игнорира генерираните файлове при използване на филтри, свързани с проекта.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>Търсене в мрежата</translation>
     </message>
@@ -3509,12 +4557,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Задейства търсене в QT Tracker.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>Намерете...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Отваряне на документ&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Файл &gt; Отваряне на файл (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Файл &gt; Примери &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Файл &gt; Скорошни файлове&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Плъзнете и пуснете файлове тук&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3529,7 +4577,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- въведете &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;, за да преминете към дефиниция на функция&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Актуализиране на кеша на локатора</translation>
     </message>
@@ -3539,15 +4587,15 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Въведете, за да намерите</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-494" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-513" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+128" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>Добавете</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-58" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Интервал на опресняване:</translation>
     </message>
@@ -3557,17 +4605,23 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Филтрите за локатор, които не актуализират незабавно кешираните си данни, като персонализираните филтри за директории, ги актуализират след този интервал от време.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation> мин</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Използване на допълване с Tab</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>Филтрите на локаторите показват относителни пътища към активния проект, когато е възможно.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
         <source>Files in Directories</source>
         <translation>Файлове в директории</translation>
     </message>
@@ -3578,12 +4632,13 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>URL шаблон</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-12" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>Име</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Префикс</translation>
     </message>
@@ -3603,7 +4658,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Персонализиран</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-121" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-123" />
         <source>Save Changes</source>
         <translation>Запазите промените</translation>
     </message>
@@ -3618,31 +4673,31 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Автоматично запазване на всички файлове преди изграждане</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-121" />
         <source>Keyboard Shortcuts</source>
         <translation>Комбинация от клавиши</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
-        <location line="+107" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+45" />
+        <location line="+129" />
         <source>Command</source>
         <translation>командване</translation>
     </message>
     <message>
-        <location line="-108" />
-        <location line="+108" />
+        <location line="-130" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Етикет</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Пряк път</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114" />
         <source>Command Mappings</source>
         <translation>Съпоставяне на команди</translation>
     </message>
@@ -3653,7 +4708,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-208" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-201" />
         <source>Reset All</source>
         <translation>Нулиране на всички</translation>
     </message>
@@ -3664,7 +4719,6 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14" />
         <source>Reset to default.</source>
         <translation>Обновявам до първоначалното.</translation>
     </message>
@@ -3680,97 +4734,164 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="-5" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+5" />
         <source>Reset</source>
         <translation>Нулиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Редактор на обикновен текст</translation>
+        <translation type="vanished">Редактор на обикновен текст</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Показване на лявата странична лента</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Скриване на лявата странична лента</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Показване на дясната странична лента</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Скриване на дясната странична лента</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Копиране в клипборда</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Изчистване на менюто</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>Двоичен редактор</translation>
+        <translation type="vanished">Двоичен редактор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-393" />
         <source>Sort categories</source>
         <translation>Сортирайте категории</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Прилагане на всички промени и връщане към предишния режим.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Прилагане на всички промени и оставане тук.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Отхвърляне на всички промени и оставане тук.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Отхвърляне на всички промени и връщане към предишния режим.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Неприложени промени</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Има неприложени промени. Искате ли да ги приложите?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Прилагане на промените</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Предишната страница съдържа незапазени промени.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Прилагане на незаписаните промени</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Отхвърляне на незаписаните промени</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Връщане към предишната страница</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Има незапазени промени.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Оставане в режим на настройки</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+403" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Предпочитания</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-78" />
         <source>Options</source>
         <translation>Настроики</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Създава qm файлове за превод, които могат да се използват от приложение от ts файловете на преводача</translation>
+        <translation type="vanished">Създава qm файлове за превод, които могат да се използват от приложение от ts файловете на преводача</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Преводи на издание (lrelease)</translation>
+        <translation type="vanished">Преводи на издание (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>езиковед</translation>
+        <translation type="vanished">езиковед</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Синхронизира ts файловете на преводача с програмния код</translation>
+        <translation type="vanished">Синхронизира ts файловете на преводача с програмния код</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Актуализиране на преводи (lupdate)</translation>
+        <translation type="vanished">Актуализиране на преводи (lupdate)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Отваря текущия файл в Notepad</translation>
     </message>
@@ -3780,9 +4901,9 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Редактирайте с Notepad</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Текст</translation>
     </message>
@@ -3798,7 +4919,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt Quick</translation>
     </message>
@@ -3813,19 +4934,19 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Преглед на Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Отваря текущия файл във vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>Редактирайте с vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="-320" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Глобални действия и действия от менюто</translation>
     </message>
@@ -3835,7 +4956,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Задейства действие. Ако е от менюто, то съответства на всяка част от йерархията на менюто, разделена с &quot;&gt;&quot;. Например &quot;sess def&quot; съвпада с &quot;Файл &gt; Сесии &gt; По подразбиране&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-112" />
         <source>Proxy Authentication Required</source>
         <translation>Необходимо е прокси удостоверяване</translation>
     </message>
@@ -3845,12 +4966,32 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Не питайте отново.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Копиране на разгънатата стойност</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>Местоположение %1 на QStandardPaths във файловата система.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Няма намерени теми в инсталацията.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>ИИ</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Помощ</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Текущата дата (ISO).</translation>
     </message>
@@ -3881,10 +5022,12 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Конфигурираната директория по подразбиране за проекти.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Последно посетената директория в диалогов прозорец за файлове.</translation>
@@ -3921,26 +5064,33 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat под Windows, празно на всички други платформи.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Пътят към самия %1.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>Директорията, където %1 намира своите предварително инсталирани ресурси.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>Директорията, където %1 поставя потребителски потребителски данни.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Текущата дата (QDate formatstring).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Текущият час (форматиран низ на QTime).</translation>
     </message>
@@ -3955,22 +5105,37 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Коментар.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Преобразуване на низ в чист ASCII.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Преобразува низ във вид, който може безопасно да се използва във файлов път.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Терминалът, конфигуриран в Среда &gt; Система.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Аргументите, подавани на терминалната команда за изпълнение в терминала, конфигуриран в Среда &gt; Система.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1 &gt; %2 Предпочитания...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Създай папка</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Грешка във файла с настройки</translation>
     </message>
@@ -3999,52 +5164,48 @@ You will likely experience further problems using this instance of %3.</source>
 Вероятно ще срещнете допълнителни проблеми, като използвате този екземпляр на %3.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1 събира доклади за сривове с единствената цел да коригира грешки. За да деактивирате тази функция, отидете на %2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1 може да събира доклади за сривове с единствената цел да коригира грешки. За да активирате тази функция, отидете на %2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation> &gt; Предпочитания &gt; Околна среда &gt; Система</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Редактиране &gt; Предпочитания &gt; Околна среда &gt; Система</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 използва Google Crashpad за събиране на сривове и изпращането им до нашия бекенд за обработка. Crashpad може да улавя произволно съдържание от паметта на сривения процес, включително чувствителна информация за потребителя, URL адреси и каквото друго съдържание потребителите са доверили на %1. Събраните доклади за сривове обаче се използват само с единствената цел да коригират грешки.</translation>
+        <translation type="vanished">%1 използва Google Crashpad за събиране на сривове и изпращането им до нашия бекенд за обработка. Crashpad може да улавя произволно съдържание от паметта на сривения процес, включително чувствителна информация за потребителя, URL адреси и каквото друго съдържание потребителите са доверили на %1. Събраните доклади за сривове обаче се използват само с единствената цел да коригират грешки.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Повече информация:</translation>
+        <translation type="vanished">Повече информация:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>Общ преглед на Crashpad</translation>
+        <translation type="vanished">Общ преглед на Crashpad</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>%1 политика за сигурност</translation>
+        <translation type="vanished">%1 политика за сигурност</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Дизайн</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Добавете файла към контрола на версиите (%1)</translation>
     </message>
@@ -4054,7 +5215,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>Добавете файловете към контрола на версиите (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Кодиране на текст</translation>
     </message>
@@ -4069,7 +5230,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>Изберете кодиране за &quot;%1&quot;.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Презареждане с кодиране</translation>
     </message>
@@ -4079,7 +5240,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>Запазване с кодиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Изберете шаблон:</translation>
     </message>
@@ -4089,8 +5250,8 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>Избирам...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+94" />
         <source>Projects</source>
         <translation>проекти</translation>
     </message>
@@ -4110,7 +5271,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>%1 шаблони</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Независимо от платформата</translation>
     </message>
@@ -4120,7 +5281,7 @@ You will likely experience further problems using this instance of %3.</source>
         <translation>Поддържани платформи</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Презаписване на съществуващи файлове</translation>
     </message>
@@ -4136,7 +5297,7 @@ Would you like to overwrite them?</source>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-885" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1171" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5" />
         <source>Make Writable</source>
         <translation>Направете записваем</translation>
@@ -4248,22 +5409,22 @@ Do you want to check them out now?</source>
 Искате ли да ги проверите сега?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1093" />
         <source>Restart Required</source>
         <translation>Изисква се рестартиране</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>По късно</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Рестартирай сега</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;няма документ&gt;</translation>
     </message>
@@ -4273,27 +5434,27 @@ Do you want to check them out now?</source>
         <translation>Няма избран документ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Системен редактор</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>URL адресът %1 не можа да се отвори.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>Не може да се намери изпълним файл за &quot;%1&quot; (разширен &quot;%2&quot;)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>Стартиране на външен инструмент &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>„%1“ завърши</translation>
     </message>
@@ -4303,22 +5464,22 @@ Do you want to check them out now?</source>
         <translation>„%1“ завърши с грешка</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Външен</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>Грешка при анализиране на външен инструмент %1: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Грешка: Външен инструмент в %1 има дублиран идентификатор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Неуспешно стартиране на файлов браузър</translation>
     </message>
@@ -4353,7 +5514,7 @@ Do you want to check them out now?</source>
         <translation type="vanished">Не може да се намери explorer.exe в пътя за стартиране на Windows Explorer.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Командата за файлов браузър не е зададена.</translation>
     </message>
@@ -4383,12 +5544,17 @@ Do you want to check them out now?</source>
         <translation>Показване във Finder</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Показване във файловия мениджър</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>Показване на съдържаща папка</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Отворете командния ред тук</translation>
     </message>
@@ -4411,16 +5577,29 @@ Do you want to check them out now?</source>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>Неуспешно премахване на файл &quot;%1&quot;.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>Неуспешно премахване на файла „%1“: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>Съдържанието не може да бъде декодирано.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>Неуспешно преименуване на защитата от многократно включване във файла „%1“: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">Неуспешно премахване на файл &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Неуспешно преименуване на защитата за включване във файл „%1“.</translation>
+        <translation type="vanished">Неуспешно преименуване на защитата за включване във файл „%1“.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>Заменени са %n съвпадения.</numerusform>
@@ -4455,7 +5634,12 @@ Do you want to check them out now?</source>
     <message>
         <location line="+2" />
         <source>None</source>
-        <translation>Нито един</translation>
+        <comment>No find flags</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Нито един</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4534,22 +5718,20 @@ Do you want to check them out now?</source>
         <translation>Няма намерени съвпадения.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-460" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-422" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Конфигуриране...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Отворете диалоговия прозорец Предпочитания.</translation>
+        <translation type="vanished">Отворете диалоговия прозорец Предпочитания.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Отворете диалоговия прозорец с опции.</translation>
+        <translation type="vanished">Отворете диалоговия прозорец с опции.</translation>
     </message>
     <message>
         <source> (%1)</source>
@@ -4560,22 +5742,28 @@ Do you want to check them out now?</source>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+824" />
+        <location line="+873" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Въз основа на Qt %1 (%2, %3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Не е реализирано</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>Файлът е възстановен от автоматично запазено копие. Изберете Запазване, за да потвърдите, или Връщане към Запазено, за да отхвърлите промените.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>Фабрика с id=&quot;%1&quot; вече е регистрирана. Изтриване.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Презареди всички съветници</translation>
     </message>
@@ -4583,6 +5771,11 @@ Do you want to check them out now?</source>
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Проверете състоянието на съветника</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Друго</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -4595,12 +5788,12 @@ Do you want to check them out now?</source>
         <translation>Не може да се преобразува резултатът от &quot;%1&quot; в низ.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Оценявайте прости оператори на JavaScript.&lt;br&gt;Символите на литерала &apos;}&apos; трябва да бъдат екранирани като &quot;\}&quot;, знаците &apos;\&apos; трябва да бъдат екранирани като &quot;\\&quot;, а &quot;%{&quot; трябва да бъдат екранирани като &quot;%\{&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Изпълнение на персонализирани команди</translation>
     </message>
@@ -4610,7 +5803,7 @@ Do you want to check them out now?</source>
         <translation>Изпълнява произволна команда с аргументи. Командата се търси в променливата на средата PATH, ако е необходимо. Имайте предвид, че командата се изпълнява директно, а не в обвивка.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Предишната команда все още се изпълнява (&quot;%1&quot;).
@@ -4622,7 +5815,7 @@ Do you want to kill it?</source>
         <translation>Прекратяване на предишния процес?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>Не може да се намери изпълним файл за &quot;%1&quot;.</translation>
     </message>
@@ -4642,7 +5835,7 @@ Do you want to kill it?</source>
         <translation>Изпълнява външен инструмент, който сте настроили в предпочитанията (Среда &gt; Външни инструменти).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+360" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+354" />
         <source>Evaluate JavaScript</source>
         <translation>Оценете JavaScript</translation>
     </message>
@@ -4657,7 +5850,7 @@ Do you want to kill it?</source>
         <translation>Нулиране на двигателя</translation>
     </message>
     <message>
-        <location line="-58" />
+        <location line="-50" />
         <source>Engine aborted after timeout.</source>
         <translation>Двигателят прекъсна след изчакване.</translation>
     </message>
@@ -4677,13 +5870,13 @@ Do you want to kill it?</source>
         <translation>Двигателят не се повторно реитиализира правилно.</translation>
     </message>
     <message>
-        <location line="+277" />
-        <location line="+4" />
+        <location line="+272" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Копиране в клипборда: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-70" />
         <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>Локатор: Възникна грешка при изпълнение на &quot;%1&quot;.</translation>
     </message>
@@ -4718,7 +5911,7 @@ Do you want to kill it?</source>
         <translation>Локализира файлове от глобален индекс на файловата система (прожектор, локализирайте, всичко). Добавете &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;номер&gt;&quot;, за да скочите към дадения номер на реда. Добавете друг &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;sumber&gt;&quot;, за да скочите и към номера на колоната.</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+109" />
         <source>Sort results</source>
         <translation>Резултати от сортиране</translation>
     </message>
@@ -4754,12 +5947,12 @@ Double-click to edit item.</source>
         <translation>URL адреси:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Сериен терминал</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Увиване на текст</translation>
     </message>
@@ -4893,24 +6086,24 @@ Double-click to edit item.</source>
         <translation>Вътрешна грешка: Типът е невалиден</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>Превключете към режим &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>Активиране на %1 изглед</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>output.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Мащабиране: %1%</translation>
     </message>
@@ -4919,23 +6112,40 @@ Double-click to edit item.</source>
         <source>Save Contents...</source>
         <translation>Спестете съдържанието ...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>Копиране на съдържанието в буфер за чернови</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>Неуспешно отваряне на редактора за „%1“.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>Пропуснати са %n знака поради ограничение в настройките</numerusform>
+            <numerusform>Пропуснати са %n знака поради ограничение в настройките</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>Пропуснати са %n знака поради настройките за изход на приложението</numerusform>
             <numerusform>Пропуснати са %n знака поради настройките за изход на приложението</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Изхвърляне на прекомерно количество чакащ резултат.]
 </translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Текстови файлове (*.txt);;Всички файлове (*)</translation>
     </message>
@@ -5014,7 +6224,7 @@ Double-click to edit item.</source>
         <translation>„%1“ се провали (код за изход %2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Източник</translation>
     </message>
@@ -5029,86 +6239,137 @@ Double-click to edit item.</source>
         <translation>Файлът не съществува.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
+        <source>Plugin is already installed.</source>
+        <translation>Приставката вече е инсталирана.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>Приставка с ID „%1“ вече е инсталирана.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>Не е инсталирана приставка с ID „%1“.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Приставката не успя да разреши зависимостите:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Не са намерени приставки.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>Намерена е повече от една приставка.</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Check Archive</source>
         <translation>Проверете архива</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+56" />
         <source>Checking archive...</source>
         <translation>Проверява се архивът...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Archive extracted successfully.</source>
+        <translation>Архивът е извлечен успешно.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>Грешка при разархивиране: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Незабавно зареждане на приставката</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1 ще бъде инсталиран в %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Приемане на условията</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Приставката %1 изисква да приемете следните правила и условия:</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
         <translation type="vanished">Файлът не е архивен.</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-221" />
         <source>Canceled.</source>
         <translation>Отменен.</translation>
     </message>
     <message>
-        <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>Възникна грешка при разархивирането.</translation>
+        <translation type="vanished">Възникна грешка при разархивирането.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+26" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Архивът е ОК.</translation>
     </message>
     <message>
-        <location line="-82" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Приставката изисква несъвместима версия на %1 (%2).</translation>
+        <translation type="vanished">Приставката изисква несъвместима версия на %1 (%2).</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>Не намерих плъгин %1.</translation>
+        <translation type="vanished">Не намерих плъгин %1.</translation>
     </message>
     <message>
-        <location line="+117" />
         <source>Install Location</source>
-        <translation>Инсталиране на местоположение</translation>
+        <translation type="vanished">Инсталиране на местоположение</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Изберете място за инсталиране.</translation>
+        <translation type="vanished">Изберете място за инсталиране.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Потребителски добавки</translation>
+        <translation type="vanished">Потребителски добавки</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Добавката ще бъде достъпна за всички съвместими %1 инсталации, но само за текущия потребител.</translation>
+        <translation type="vanished">Добавката ще бъде достъпна за всички съвместими %1 инсталации, но само за текущия потребител.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>%1 инсталация</translation>
+        <translation type="vanished">%1 инсталация</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Добавката ще бъде достъпна само за тази инсталация %1, но за всички потребители, които имат достъп до нея.</translation>
+        <translation type="vanished">Добавката ще бъде достъпна само за тази инсталация %1, но за всички потребители, които имат достъп до нея.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Резюме</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>„%1“ ще бъде инсталиран в „%2“.</translation>
+        <translation type="vanished">„%1“ ще бъде инсталиран в „%2“.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+117" />
         <source>Overwrite File</source>
         <translation>Презаписване на файл</translation>
     </message>
@@ -5124,46 +6385,76 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Неуспешно записване на файл</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Неуспешно създаване на директорията „%1“.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Неуспешно записване на файл &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Инсталирайте приставката</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Копиране на файловете на приставката...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Копиране
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Неуспешно копиране на файлове с добавки</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Показване на подробности...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>Превключване на подробностите за напредъка</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Автоматично</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>без име</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Текуща тема: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Промяната на темата ще влезе в сила след рестартиране.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+324" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>%1 хранилище беше открито, но %1 не е конфигуриран.</translation>
     </message>
@@ -5177,7 +6468,27 @@ Double-click to edit item.</source>
         <translation type="vanished">Да се премахнат ли следните файлове от системата за контрол на версиите (%2)? %1Забележка: Това може да премахне локалния файл.</translation>
     </message>
     <message>
+        <location line="-184" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>Открита е директория под контрол на версиите, която се поддържа от приставката %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Открит е контрол на версиите</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>Enable %1</source>
+        <translation>Включване на %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>Директорията „%1“ изглежда е под контрол на версиите, който може да се обработва от изключената приставка %2.</translation>
+    </message>
+    <message>
+        <location line="+168" />
         <source>Remove the following files from the version control system (%1)?</source>
         <translation>Премахнете следните файлове от системата за контрол на версиите (%1)?</translation>
     </message>
@@ -5214,66 +6525,142 @@ to version control (%2)?</source>
         <source>Adding to Version Control Failed</source>
         <translation>Неуспешно добавяне към контрола на версиите</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Следните файлове не можаха да бъдат добавени към контрола на версиите (%1)
+%2
+... и още %n.</numerusform>
+            <numerusform>Следните файлове не можаха да бъдат добавени към контрола на версиите (%1)
+%2
+... и още %n.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>добавен</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>променен</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>изтрит</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>преименуван</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>непроследен</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>неслят</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>неизвестен</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Състояние на контрола на версиите: добавен.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Състояние на контрола на версиите: променен.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Състояние на контрола на версиите: изтрит.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Състояние на контрола на версиите: преименуван.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Състояние на контрола на версиите: непроследен.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Състояние на контрола на версиите: неслят.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>Файлът не можа да се добави
+        <translation type="vanished">Файлът не можа да се добави
 %1
 към контрол на версиите (%2)
 </translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Следните файлове не можаха да се добавят към контрола на версиите (%1)
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>Около %1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Копиране и затваряне</translation>
+        <translation type="vanished">Копиране и затваряне</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+6" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;От версия %1&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;Създаден на %1 %2&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;Създаден на %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Авторско право 2008-%6 %7. Всички права запазени.&lt;br/&gt;&lt;br/&gt;Програмата се предоставя КАКВАТО Е, БЕЗ НИКАКВА ГАРАНЦИЯ, ВКЛЮЧИТЕЛНО ГАРАНЦИЯТА ЗА ДИЗАЙН, ПРОДАВАЕМОСТ И ГОДНОСТ ЗА ОПРЕДЕЛЕНА ЦЕЛ.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Авторско право 2008-%6 %7. Всички права запазени.&lt;br/&gt;&lt;br/&gt;Програмата се предоставя КАКВАТО Е, БЕЗ НИКАКВА ГАРАНЦИЯ, ВКЛЮЧИТЕЛНО ГАРАНЦИЯТА ЗА ДИЗАЙН, ПРОДАВАЕМОСТ И ГОДНОСТ ЗА ОПРЕДЕЛЕНА ЦЕЛ.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Логото на Qt, както и Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® и Qt Embedded® са регистрирани търговски марки на The Qt Company Ltd.</translation>
+        <translation type="vanished">Логото на Qt, както и Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® и Qt Embedded® са регистрирани търговски марки на The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>Тагове:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Покажете всички</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Назад</translation>
     </message>
@@ -5293,20 +6680,225 @@ to version control (%2)
         <translation>Превключва към отворен документ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>Python Editor</translation>
+        <translation type="vanished">Python Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>Редактор на Markdown</translation>
+        <translation type="vanished">Редактор на Markdown</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Преминаване към следващия редактор</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Откачане</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>За променливи на средата със списъчна семантика, които не използват стандартния разделител на списъци с пътища, трябва да конфигурирате съответните разделители тук, ако планирате да ги обединявате от няколко места (например от комплекта и от проекта).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Променлива</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Разделител</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-270" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Добавяне на MCP сървър от регистъра</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Филтриране на сървъри...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Всички типове</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>Отдалечен</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Хранилище:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Уебсайт:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Пакети:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Отдалечени:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Показваното име.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Нов сървър&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Командата за стартиране на процеса на MCP сървъра. Използва се само при тип връзка „стандартен вход/изход“.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Аргументите за стартиране на процеса на MCP сървъра. Използват се само при тип връзка „стандартен вход/изход“.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>URL адресът за свързване към MCP сървъра. Не се използва при тип връзка „стандартен вход/изход“.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Тип връзка:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>Типът връзка, който да се използва за MCP сървъра.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Стандартен вход/изход</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>Streamable HTTP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>HTTP заглавки:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>HTTP заглавки, които да се включват при свързване с MCP сървъра. Използват се само при HTTP типове връзка.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Промени в променливите на средата, прилагани при стартиране на процеса на MCP сървъра. Използват се само при тип връзка със стандартен вход/изход.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Избор на тип връзка</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Този сървър предлага няколко начина за свързване. Моля, изберете един:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Добавяне от регистъра...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Включване на MCP сървъра за документацията на Qt</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Когато е включено, ще се използва MCP сървърът за документацията на Qt от https://qt-docs-mcp.qt.io/mcp.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>MCP сървъри</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Изход от режим на отстраняване на грешки</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Лента с инструменти</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Редактор</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Хранилището за тайни не е налично! Стойностите ви ще бъдат съхранени като обикновен текст в настройките!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Можете да инсталирате libsecret или KWallet, за да включите хранилището за тайни.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Контекстни редове:</translation>
     </message>
@@ -5316,13 +6908,18 @@ to version control (%2)
         <translation>Игнорирайте интервалите</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Свиване на всички</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Презареди разл</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] срещу [%2] %3</translation>
     </message>
@@ -5338,7 +6935,7 @@ to version control (%2)
         <translation>[%1] %2 срещу [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Скриване на описанието на промяната</translation>
     </message>
@@ -5348,36 +6945,41 @@ to version control (%2)
         <translation>Показване на описанието на промяната</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Разгъване на всичко</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Файлът с корекцията „%1“ не можа да бъде анализиран синтактично. Съдържанието не е в унифициран разл.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+236" />
         <source>Diff Editor</source>
         <translation>Редактор на разл</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>разл</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>Запазено</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Променен</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>Разл. файлове</translation>
     </message>
@@ -5387,7 +6989,7 @@ to version control (%2)
         <translation>Разл. модифицирани файлове</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;разл</translation>
     </message>
@@ -5408,12 +7010,12 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Разл. отворени файлове</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Мета+Shift+H</translation>
     </message>
@@ -5428,27 +7030,32 @@ to version control (%2)
         <translation>Разл. външни файлове...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Разлика &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Изберете Първи файл за Разл</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Изберете Втори файл за Разл</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Разл. &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Файлът не е намерен: „%1“.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Изпратете парче до CodePaster...</translation>
     </message>
@@ -5463,7 +7070,7 @@ to version control (%2)
         <translation>Връщане на парче...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Грешка:&lt;/b&gt; Не може да се декодира &quot;%1&quot; с &quot;%2&quot;-кодиране.</translation>
     </message>
@@ -5473,30 +7080,28 @@ to version control (%2)
         <translation>Изберете Кодиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Превключете към Unified Diff Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+27" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+29" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Изчакване на данни...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Извличането на данни не бе успешно.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
+        <location line="-569" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Превключете към редактиране на разлики един до друг</translation>
     </message>
@@ -5506,7 +7111,7 @@ to version control (%2)
         <translation>Синхронизиране на хоризонтални ленти за превъртане</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>Пропуснати са %n реда...</numerusform>
@@ -5529,7 +7134,7 @@ to version control (%2)
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Няма разлика.</translation>
@@ -5541,15 +7146,20 @@ to version control (%2)
         <translation>Рендиране разл</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>Няма документ</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Копиране на почистения текст</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+68" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
@@ -5559,14 +7169,24 @@ to version control (%2)
         <translation>Версия:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Vendor:</source>
         <translation>Доставчик:</translation>
     </message>
     <message>
-        <location line="-1" />
+        <location line="-2" />
         <source>Compatibility version:</source>
         <translation>Версия за съвместимост:</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Id:</source>
+        <translation>Id:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Vendor Id:</source>
+        <translation>ID на доставчика:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5577,6 +7197,11 @@ to version control (%2)
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Документация:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5614,14 +7239,24 @@ to version control (%2)
         <translation>Зареждане без рестартиране:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
-        <translation>Нито един</translation>
+        <comment>No category</comment>
+        <translation>Няма</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
-        <translation>всичко</translation>
+        <comment>Platforms: All</comment>
+        <translation>Всички</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Нито един</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">всичко</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5684,19 +7319,27 @@ to version control (%2)
         <translation>Приставката приключи своя жизнен цикъл и беше изтрита.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (оттеглен)</translation>
+        <translation type="vanished">%1 (оттеглен)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (експериментално)</translation>
+        <translation type="vanished">%1 (експериментално)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>остарял</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>експериментален</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Път: %1
@@ -5710,7 +7353,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Приставката е активирана като зависимост от активирана приставка.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Път: %1
@@ -5729,7 +7372,7 @@ Plugin is disabled by command line argument.</source>
         <translation>Път: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Приставката не е налична на тази платформа.</translation>
     </message>
@@ -5774,7 +7417,7 @@ Plugin is disabled by command line argument.</source>
         <translation>Помощни програми</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1604" />
         <source>Enabling Plugins</source>
         <translation>Активиране на добавки</translation>
     </message>
@@ -5792,7 +7435,7 @@ will also enable the following plugins:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Деактивиране на приставки</translation>
     </message>
@@ -5850,12 +7493,12 @@ will also disable the following plugins:
         <translation>Изтрито</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1072" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-676" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Открити са множество версии на един и същ плъгин.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Открита кръгова зависимост:</translation>
     </message>
@@ -5915,57 +7558,91 @@ Reason: %3</source>
         <translation>Деактивиране на приставката</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Правила и условия</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Приемане</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Отказ</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Приставката %1 изисква да приемете следните правила и условия:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Не приехте правилата и условията</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Плъгинът не може да се зареди, тъй като зависимостта не успя да се зареди: %1(%2)
 Причина: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Приставката не е намерена.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Не съществува.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Приставката &quot;%1&quot; е указана два пъти за тестване.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Приставката &quot;%1&quot; не съществува.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Приставката &quot;%1&quot; не е тествана.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Не може да се поиска сценарий &quot;%1&quot;, тъй като вече беше заявен.</translation>
+        <translation type="vanished">Не може да се поиска сценарий &quot;%1&quot;, тъй като вече беше заявен.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Неизвестна опция %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>Опцията %1 изисква аргумент.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1275" />
         <source>Resolving dependencies failed because state != Read</source>
         <translation>Разрешаването на зависимости не бе успешно, защото състояние != Прочетено</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Не можа да се разреши зависимостта „%1(%2)“</translation>
+        <translation type="vanished">Не можа да се разреши зависимостта „%1(%2)“</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+94" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>Зареждането на библиотеката не бе успешно, защото състояние != Разрешено</translation>
     </message>
@@ -5975,7 +7652,7 @@ Reason: %3</source>
         <translation>Приставката не е валидна (не произлиза от IPlugin)</translation>
     </message>
     <message>
-        <location line="-416" />
+        <location line="-518" />
         <source>&quot;%1&quot; is missing</source>
         <translation>„%1“ липсва</translation>
     </message>
@@ -6025,13 +7702,24 @@ Reason: %3</source>
         <translation>Мета данните на приставката не са намерени</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>ID на приставката „%1“ трябва да е с малки букви</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Правила и условия: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Невалидна спецификация на платформата &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -6057,7 +7745,12 @@ Reason: %3</source>
         <translation>Аргумент: &quot;%1&quot; е празен</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+89" />
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>Зависимостта от приставката „%1(%2)“ не можа да бъде разрешена</translation>
+    </message>
+    <message>
+        <location line="+115" />
         <source>Initializing the plugin failed because state != Loaded</source>
         <translation>Инициализирането на приставката не бе успешно, защото състояние != Заредено</translation>
     </message>
@@ -6072,7 +7765,17 @@ Reason: %3</source>
         <translation>Неуспешна инициализация на приставката: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Инициализацията на приставката предизвика изключение: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Инициализацията на приставката предизвика неизвестно изключение</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>Не може да изпълни extensionsInitialized, защото състояние != Initialized</translation>
     </message>
@@ -6087,8 +7790,18 @@ Reason: %3</source>
         <translation>Вътрешна грешка: няма екземпляр на плъгина, който да изпълни delayedInitialize</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-71" />
+        <location line="+97" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Системните приставки не могат да се премахват.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Коренната папка не можа да бъде определена.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-391" />
         <source>Continue</source>
         <translation>продължи</translation>
     </message>
@@ -6306,18 +8019,23 @@ Would you like to overwrite it?</source>
         <translation>Преглед на изображения</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Файлът не може да се чете.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Форматът на изображението не се поддържа.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>Неуспешно четене на SVG изображение.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Неуспешно четене на изображението.</translation>
     </message>
@@ -6429,37 +8147,57 @@ Would you like to overwrite them?</source>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Грешка %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Остарял</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Входящи</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Изходящи</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>Бази</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>Получени</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Отваряне в редактора</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>Отваряне на йерархията на %1</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Извикване</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Тип</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Обадете се на йерархия</translation>
     </message>
@@ -6469,13 +8207,18 @@ Would you like to overwrite them?</source>
         <translation>Презарежда йерархията на повикването за символа под позиция на курсора.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 за %2</translation>
+        <translation type="vanished">%1 за %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1 за %2 (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>неинициализиран</translation>
@@ -6517,14 +8260,20 @@ Would you like to overwrite them?</source>
         <translation>Грешка</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>спирането е неуспешно</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>Невалиден параметър в &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Грешка в инициализацията на езиковия сървър &quot;%1&quot;</translation>
     </message>
@@ -6534,12 +8283,12 @@ Would you like to overwrite them?</source>
         <translation>Грешка в инициализацията: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Инициализира резултата е невалиден.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Информацията за сървъра е невалидна.</translation>
     </message>
@@ -6549,12 +8298,11 @@ Would you like to overwrite them?</source>
         <translation>Без инициализиран резултат.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Копиране в клипборда</translation>
+        <translation type="vanished">Копиране в клипборда</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Езиков клиент</translation>
     </message>
@@ -6604,33 +8352,35 @@ Would you like to overwrite them?</source>
         <translation>Не може да се справи с типа MIME &quot;%1&quot; на съобщението.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Не може да изпраща данни на нестартиран сървър %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Неочаквано завърши. Рестартиране за %1 секунди.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Неочаквано завърши.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Разширете всички</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Срутват всички</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Генеричен stdio езиков сървър</translation>
     </message>
@@ -6650,7 +8400,7 @@ Would you like to overwrite them?</source>
         <translation>Проблеми, предоставени от езиковия сървър в текущия документ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Добавяне</translation>
     </message>
@@ -6660,32 +8410,37 @@ Would you like to overwrite them?</source>
         <translation>&amp;Изтриване</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>Общи</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Винаги на</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Изисква отворен файл</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Старт сървър за проект</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Включено:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Задайте типове MIME ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Модел на файла</translation>
     </message>
@@ -6697,67 +8452,87 @@ Example: *.cpp%1*.h</source>
  Пример: *.cpp%1 *.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>Неуспешно анализиране на JSON при %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>Език-специфичен JSON, за да премине през полето „Инициализация“ на заявката „Инициализиране“.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Език:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Файл модел:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Стартово поведение:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Опции за инициализация:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>Изберете типове MIME</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Филтър</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Изпълним:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Аргументи:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>Json грешка</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Езикови сървъри за конкретен проект</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Използване на глобалните настройки</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Включено</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Изключено</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Конфигурация на работното пространство</translation>
     </message>
@@ -6769,12 +8544,12 @@ See the documentation of the specific language server for valid settings.</sourc
  Вижте документацията на специфичния езиков сървър за валидни настройки.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Езиков сървър</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Потърсете отново, за да актуализирате резултатите и да се активира отново замяна</translation>
     </message>
@@ -6794,7 +8569,7 @@ See the documentation of the specific language server for valid settings.</sourc
  %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>Намерете препратки с %1 за:</translation>
@@ -6815,12 +8590,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Започнете да пишете, за да видите замествания.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Показване на налични бързи корекции</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>Рестартирайте %1</translation>
     </message>
@@ -6835,49 +8610,56 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Управление ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>Настройване на езиковия сървър %1 (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>Настройване</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>Инсталирайте NPM пакет</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>Изпълнение на &quot; %1&quot; за инсталиране на %2.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Инсталирането на &quot;%1&quot; беше отменена чрез тайм -аут.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Инсталирането на &quot;%1&quot; беше анулирана от потребителя.</translation>
+        <translation type="vanished">Инсталирането на &quot;%1&quot; беше анулирана от потребителя.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>Инсталирането на &quot; %1&quot; не успя с изходния код %2.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>Инсталиране на %1 Езиков сървър чрез NPM.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>Настройка %1 Езиков сървър ( %2).</translation>
+        <translation type="vanished">Настройка %1 Езиков сървър ( %2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>Инсталиране</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Настройка</translation>
+        <translation type="vanished">Настройка</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6905,12 +8687,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Опции:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Възможности на сървъра</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Клиентно съобщение</translation>
     </message>
@@ -6930,22 +8712,32 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Лог файл</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>Не е избран клиент</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Езиков клиентски инспектор</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;select&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Езиков сървър:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>Изпращане на съобщение</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Log</translation>
     </message>
@@ -6955,15 +8747,25 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Възможности</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Ясно</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Подреждане по азбучен ред</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Изберете символ&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>Не може да декодира съдържанието с &quot;%1&quot;. Падане обратно към &quot;%2&quot;.</translation>
     </message>
@@ -6973,7 +8775,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Очакваше цяло число в &quot;%1&quot;, но получи &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>Не можах да разбера JSON съобщение: &quot;%1&quot;.</translation>
     </message>
@@ -6983,17 +8785,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Очакваше обект на JSON, но получи JSON &quot;%1&quot; стойност.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>Няма параметри в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>Няма ID, зададен в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>Създайте %1</translation>
     </message>
@@ -7009,9 +8811,172 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>Не е намерено действие с ID „%1“.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>Командата „%1“ няма свързано действие.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>Действието „%1“ е изключено.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Разгъване на всички</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>Съобщение от клиента</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Съобщения</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Съобщение от сървъра</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>Файл на журнала</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>Инспектор на MCP сървър</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Изберете&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Изчистване</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Сесия:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Неизвестен</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Глобални</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Localhost (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Всеки (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Персонализиран</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Невалиден IP адрес.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>MCP сървър</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>Инспектиране на MCP сървъра...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>Неуспешно стартиране на MCP сървъра на „%1:%2“.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>Включване на MCP сървъра</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>Адресът, на който MCP сървърът трябва да слуша за входящи връзки.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Порт:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Автоматично</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>Портът, на който MCP сървърът да слуша. Оставете 0 за автоматичен избор на свободен порт.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Разрешаване на достъп между различни източници:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>Включва споделянето на ресурси между различни източници (CORS) за MCP сървъра. Това е необходимо, ако искате да се свързвате със сървъра от уеб приложение.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Адресът е копиран в клипборда.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>MCP сървърът работи и слуша на: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>MCP сървърът не работи.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Състояние:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Стойност %L1</translation>
@@ -7073,11 +9038,11 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Моля, въведете своята WiFi мрежа тук</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+148" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7090,68 +9055,68 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
-        <location line="+988" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Редактор на набор от данни</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Моля, въведете име на клас</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+289" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+285" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+608" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+518" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+231" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+45" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-897" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-883" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+905" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Грешка: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-321" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4202" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7164,24 +9129,24 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Неуспешно създаване на &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Неуспешно запазване на файла с изображение по неизвестна причина!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Изтрий</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Сигурни ли сте, че искате да изтриете завинаги „%L1“?</translation>
     </message>
@@ -7208,9 +9173,9 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Неуспешно преименуване на файла поради неизвестна причина!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6304" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+64" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+64" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Файлът &quot;%1&quot; не можа да се копира в &quot;%2&quot;.</translation>
     </message>
@@ -7231,7 +9196,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Липсващ аргумент за -override_read_stall_timeout</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Липсващ аргумент за -serial_number_filter</translation>
     </message>
@@ -7244,7 +9209,22 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Моля, затворете всички програми, които преглеждат/редактират данните на приложението на OpenMV IDE и след това рестартирайте OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1311" />
+        <source>No documentation here</source>
+        <translation>Тук няма документация</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>Няма документация за „%1“</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Контекстна помощ</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Редактирайте прага на скала на сивото с Threshold Editor</translation>
     </message>
@@ -7254,7 +9234,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>Редактирайте LAB прага с Threshold Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+470" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+471" />
         <source>Missing argument for -form_key</source>
         <translation>Липсващ аргумент за -form_key</translation>
     </message>
@@ -7271,7 +9251,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+101" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7284,7 +9264,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">Липсващ аргумент за -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-481" />
+        <location line="-542" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Невалиден аргумент (%1) за -auto_update</translation>
     </message>
@@ -7294,7 +9274,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation>Липсващ аргумент за -auto_update</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7307,7 +9287,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Грешка при &lt;user_resources&gt;четене на /openmvide/firmware/settings.json: %L1.\n\nOpenMV IDE версиите преди v4.3.0 нямат този файл и биха го изтрили при инсталиране на ресурси.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="+182" />
         <source>Form Key</source>
         <translation>Ключ за формуляр</translation>
     </message>
@@ -7317,7 +9297,12 @@ Check the json file for errors and fix them.</source>
         <translation>Моля, въведете ключа на формуляра</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+67" />
+        <source>Leave Settings</source>
+        <translation>Изход от настройките</translation>
+    </message>
+    <message>
+        <location line="+79" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7342,7 +9327,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>Примери</translation>
     </message>
@@ -7443,33 +9428,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Отворете терминала</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Машинно зрение</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Редактор на прагове</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Редактор на ключови точки</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7478,7 +9463,7 @@ Check the json file for errors and fix them.</source>
         <translation>Генератор на априлски маркери</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Семейство TAG16H5 (30 етикета)</translation>
     </message>
@@ -7513,18 +9498,18 @@ Check the json file for errors and fix them.</source>
         <translation>Генератор на QRCode</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Неуспешно отваряне: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1617" />
+        <location line="-1596" />
         <source>DataMatrix Generator</source>
         <translation>Генератор на DataMatrix</translation>
     </message>
@@ -7551,13 +9536,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
         <location line="+374" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1119" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1144" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Моля, добавете файлово разширение!</translation>
@@ -7572,7 +9557,7 @@ Check the json file for errors and fix them.</source>
         <translation>Не може да се презапише изходният файл!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4571" />
         <source>Video Tools</source>
         <translation>Видео инструменти</translation>
     </message>
@@ -7672,37 +9657,37 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-370" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+221" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1979" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+989" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1558" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1583" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>Отказ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4386" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Качете в Edge Impulse Project</translation>
     </message>
@@ -7739,7 +9724,7 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV документи</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <source>OpenMV Forums</source>
         <translation>OpenMV форуми</translation>
     </message>
@@ -7793,21 +9778,21 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">OpenMV визуализатор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-223" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-217" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-354" />
         <location line="+37" />
@@ -7824,7 +9809,7 @@ Check the json file for errors and fix them.</source>
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7838,16 +9823,16 @@ Check the json file for errors and fix them.</source>
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
+        <location line="+12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
         <location line="+101" />
         <location line="+9" />
@@ -7858,38 +9843,38 @@ Check the json file for errors and fix them.</source>
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-133" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1571" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1589" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -7900,7 +9885,7 @@ Check the json file for errors and fix them.</source>
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -7919,11 +9904,11 @@ Check the json file for errors and fix them.</source>
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+765" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Свържете се</translation>
     </message>
@@ -7939,12 +9924,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-933" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-932" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Поддържа се само възстановяване на фърмуера с помощта на инструментите SE на Alif Semiconductor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1217" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1194" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+179" />
         <location line="+26" />
         <location line="+7" />
@@ -7962,8 +9947,8 @@ Check the json file for errors and fix them.</source>
         <translation>Стоп (спиране на скрипт)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -7971,9 +9956,9 @@ Check the json file for errors and fix them.</source>
         <translation>Рамков буфер</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -7986,7 +9971,7 @@ Check the json file for errors and fix them.</source>
         <translation>Запишете буфера на кадрите</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8108,8 +10093,8 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Res (w:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1486" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2554" />
+        <location line="-1468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2584" />
         <source>Load Custom Firmware</source>
         <translation>Заредете персонализиран фърмуер</translation>
     </message>
@@ -8141,7 +10126,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Зареждане на ROMFS в OpenMV Cam</translation>
@@ -8178,7 +10163,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8237,9 +10222,9 @@ Would you like to choose a different name?</source>
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Копиране/конвертиране на Python файл</translation>
@@ -8261,7 +10246,7 @@ Would you like to choose a different name?</source>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1045" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Конвертирайте модел</translation>
@@ -8327,7 +10312,7 @@ Would you like to choose a different name?</source>
         <translation>Лиценз</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Относно %1</translation>
@@ -8343,25 +10328,25 @@ Would you like to choose a different name?</source>
         <translation>&lt;p&gt;&lt;b&gt;Относно %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;От: Ibrahim Abdelkader &amp; Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;ФАБРИЧНА ВЕРСИЯ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Предназначена само за лицензирани производители.&lt;/p&gt;&lt;p&gt;&lt;b&gt;ОБЩ ОБЩЕСТВЕН ЛИЦЕНЗ НА GNU&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Авторско право (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Тази програма се разпространява с надеждата, че ще бъде полезна, но БЕЗ НИКАКВА ГАРАНЦИЯ; дори без подразбиращата се гаранция за ПРОДАВАЕМОСТ или ГОДНОСТ ЗА ОПРЕДЕЛЕНА ЦЕЛ. Вижте &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;общия публичен лиценз на GNU&lt;/a&gt; за повече подробности.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Въпроси или коментари?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Свържете се с нас на &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+173" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Изберете източника на кадровия буфер или го изключете за максимална производителност</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Изключено</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Вкл.</translation>
     </message>
     <message>
-        <location line="-2071" />
+        <location line="-2085" />
         <source>JPG Mode</source>
         <translation>JPG режим</translation>
     </message>
@@ -8384,7 +10369,7 @@ Would you like to choose a different name?</source>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+384" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+388" />
         <source>Close</source>
         <translation>Близо</translation>
     </message>
@@ -8404,8 +10389,8 @@ Would you like to choose a different name?</source>
         <translation>Заснемане на данни</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3774" />
         <source>Board:</source>
         <translation>борд:</translation>
     </message>
@@ -8470,7 +10455,7 @@ Would you like to choose a different name?</source>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Налична актуализация</translation>
     </message>
@@ -8479,7 +10464,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">Нова версия на OpenMV IDE (%L1.%L2.%L3) е достъпна за изтегляне.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>Изтегли</translation>
     </message>
@@ -8492,7 +10477,7 @@ Would you like to choose a different name?</source>
         <translation type="vanished">Друго приложение използва порта за откриване на излъчване на OpenMV Cam. Моля, затворете това приложение и рестартирайте OpenMV IDE, за да активирате WiFi програмирането.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Грешка в папката с документи</translation>
     </message>
@@ -8502,7 +10487,7 @@ Would you like to choose a different name?</source>
         <translation>Неуспешно създаване на папка с документи!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>GitHub Copilot</translation>
     </message>
@@ -8562,27 +10547,27 @@ Your OpenMV Cam&apos;s firmware is panicking because of a hardware failure. Plea
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Сериен порт - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Свързване... (30 секунди изчакване)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8635,12 +10620,12 @@ sudo adduser %L1 набиране
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP сървърна връзка - %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Невалиден аргумент за порт (%1) за -open_udp_server_terminal</translation>
     </message>
@@ -8671,12 +10656,12 @@ sudo adduser %L1 набиране
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>Връзка към TCP сървър - %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Невалиден аргумент за порт (%1) за -open_tcp_server_terminal</translation>
     </message>
@@ -8705,7 +10690,7 @@ sudo adduser %L1 набиране
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8866,19 +10851,19 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">Конфигуриране на настройки</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+425" />
-        <location line="+20" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+424" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Запазване на скрипта</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Премахване на коментари и преобразуване на интервали в раздели?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+120" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
@@ -8887,14 +10872,14 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Запазването на изображението</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Файлове с изображения (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -8927,7 +10912,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Запазване на дескриптора</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+80" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8935,7 +10920,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Файлове с ключови точки (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1112" />
+        <location line="-1088" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8943,20 +10928,20 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Отворете файла</translation>
     </message>
     <message>
-        <location line="-4752" />
+        <location line="-4824" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3206" />
         <location line="+9" />
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-769" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8979,7 +10964,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
 Версиите на %2 преди v4.3.0 нямат този файл и биха го изтрили при инсталиране на ресурси.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+30" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-424" />
         <location line="+126" />
         <location line="+51" />
@@ -8992,7 +10977,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>Хранилища на трети страни</translation>
     </message>
     <message>
-        <location line="+1496" />
+        <location line="+1564" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Бележки към изданието&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9022,7 +11007,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>Кадров буфер - Разд. (ш:%1, в:%2) - Фокус (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+714" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+697" />
         <source>Camera serial port -- click to give this camera a friendly name</source>
         <translation>Сериен порт на камерата -- щракнете, за да дадете на камерата приятелско име</translation>
     </message>
@@ -9032,7 +11017,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>Налична е нова версия на %5 (%L1.%L2.%L3) за изтегляне. Вижте &lt;a href=&quot;%L4&quot;&gt;бележките към изданието&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Свързване (Налична мрежа)</translation>
     </message>
@@ -9052,7 +11037,7 @@ Please close any programs that are viewing/editing %1&apos;s application data an
         <translation>-auto_run в режим на преглед изисква аргумент с четим текстов скрипт файл в командния ред.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9115,7 +11100,7 @@ Would you like to register your OpenMV Cam now?</source>
 Искате ли да регистрирате OpenMV Cam сега?</translation>
     </message>
     <message>
-        <location line="+604" />
+        <location line="+613" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9136,12 +11121,12 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-474" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Изберете Диск</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Не бяха намерени валидни устройства, които да се асоциират с вашата OpenMV Cam!</translation>
     </message>
@@ -9160,7 +11145,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>FPS на камерата и FPS на дисплея на IDE</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Моля, свържете устройство с вашата OpenMV Cam</translation>
     </message>
@@ -9242,14 +11227,14 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Запитване на Code Profiler (ms)</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+443" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>Неуспешно изчистване на &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2858" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Поточно предаване на JPG-компресирани изображения за по-висока производителност</translation>
@@ -9291,7 +11276,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Изберете какво показва този панел</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Кадров буфер (%1)</translation>
     </message>
@@ -9312,19 +11297,19 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+262" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3420" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-640" />
         <source>No Drive</source>
         <translation>Няма устройство</translation>
     </message>
     <message>
-        <location line="+1966" />
+        <location line="+1980" />
         <source>OpenMV Cam Error</source>
         <translation>Грешка на OpenMV камерата</translation>
     </message>
     <message>
-        <location line="+392" />
+        <location line="+398" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9333,14 +11318,14 @@ Would you like to register your OpenMV Cam now?</source>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9350,7 +11335,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Нов терминал</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Свържете се към сериен порт</translation>
     </message>
@@ -9371,7 +11356,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Моля, изберете сериен порт</translation>
     </message>
@@ -9382,7 +11367,7 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9398,15 +11383,15 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>Невалиден низ: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Няма намерени серийни портове!</translation>
     </message>
@@ -9416,41 +11401,41 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Свързване към UDP сървър като клиент или стартиране на UDP сървър?</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation> Свържете се със сървър </translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation> Стартирайте сървър </translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Моля, въведете IP адрес (или име на домейн) и порт (напр. xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP клиентска връзка - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Моля, въведете номер на порт (въведете 0 за произволен свободен порт)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Свързване към TCP сървър като клиент или стартиране на TCP сървър?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP клиентска връзка - %1</translation>
     </message>
@@ -9470,17 +11455,17 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Местоположение на изходното изображение?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation> Рамков буфер </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation> Файл с изображение </translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Избраният прагов кортеж ще бъде актуализиран при затваряне.</translation>
@@ -9497,22 +11482,22 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+1084" />
         <source>What would you like to do?</source>
         <translation>Какво искаш да правиш?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation> Редактиране на файл </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation> Обединяване на файлове </translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9614,36 +11599,36 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">Налични са нови OpenMV IDE ресурси (напр. примери, фърмуер, документация и др.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Инсталирай</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+74" />
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+701" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Изтегля се...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>Инсталира се...</translation>
     </message>
@@ -9665,13 +11650,13 @@ Would you like to register your OpenMV Cam now?</source>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Не може да се отвори файлът с ресурси &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Неуспешна мрежова заявка &quot;%L1&quot;!</translation>
     </message>
@@ -9680,49 +11665,49 @@ Would you like to register your OpenMV Cam now?</source>
         <translation type="vanished">Фърмуер двоичен ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="-244" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="-255" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Изтрийте вътрешната файлова система за мазнини</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Ако активирате тази опция, всички файлове във вътрешната файлова система за мазнини на вашия OpenMV CAM ще бъдат изтрити. Това не изтрива файлове на всяка подвижна SD карта (ако е поставена).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Нулирайте файловата система ROMFS</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Ако активирате тази опция, ROM файловата система на вашата OpenMV Cam ще бъде нулирана обратно по подразбиране.</translation>
     </message>
     <message>
-        <location line="-4302" />
+        <location line="-4315" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Буутлоудър</translation>
@@ -9738,12 +11723,12 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Принудително влезте в буутлоудъра на OpenMV Cam. Може да доведе до това, че буутлоудърът на OpenMV Cam не излиза автоматично на по-стари платки.</translation>
     </message>
     <message>
-        <location line="+918" />
+        <location line="+922" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Инсталирайте най-новата версия на фърмуера (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1098" />
+        <location line="+1113" />
         <location line="+194" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Неуспешно копиране на файлове на фърмуера във временна директория!</translation>
@@ -9783,7 +11768,7 @@ Would you like to register your OpenMV Cam now?</source>
         <translation>Неизвестно (0x%1)</translation>
     </message>
     <message>
-        <location line="+699" />
+        <location line="+698" />
         <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
 
 To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
@@ -9807,7 +11792,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+89" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Стартиране на скрипт</translation>
@@ -9825,7 +11810,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
         <translation>Грешка: Не може да се отвори &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+229" />
+        <location line="+230" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9834,7 +11819,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 По-специално разгледайте примерите за обработка на изображения -&gt; проследяване на цветовете и машинно обучение -&gt; TensorFlow.</translation>
     </message>
     <message>
-        <location line="-4274" />
+        <location line="-4304" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9859,17 +11844,17 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="+21" />
-        <location line="+310" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Бягай</translation>
     </message>
     <message>
-        <location line="-173" />
+        <location line="-167" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; не е файл!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>Актуализирайте файловата система на ROMFS</translation>
     </message>
@@ -9897,7 +11882,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>Неизвестен борд</translation>
     </message>
     <message>
-        <location line="+457" />
+        <location line="+459" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Беше открита платка в режим DFU. Какво искаш да правиш?</translation>
     </message>
@@ -9906,7 +11891,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">Инсталирайте най-новата версия на фърмуера (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Load a specific firmware</source>
         <translation>Заредете конкретен фърмуер</translation>
     </message>
@@ -9933,7 +11918,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
 Моля, изберете файл bootloader.dfu и опитайте отново. Имайте предвид, че зареждането на firmware.dfu или openmv.dfu (bootloader + фърмуер) може да не работи на STM32H7 платки поради грешка в ROM буутлоудъра на чипа!</translation>
     </message>
     <message>
-        <location line="+1020" />
+        <location line="+1035" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Само зареждане *.bin и *.img файлове се поддържат за вътрешния зареждащ механизъм!</translation>
     </message>
@@ -9969,10 +11954,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-73" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1471" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Моля, изберете типа платка</translation>
     </message>
@@ -9981,24 +11966,24 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Изтриване на вътрешната файлова система?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2974" />
         <source>No released firmware available for the attached board!</source>
         <translation>Няма издаден фърмуер за прикрепената платка!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Моля, изберете DFU устройство</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+175" />
+        <location line="-100" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Моля, актуализирайте буутлоудъра до най-новата версия и инсталирайте SoftDevice, за да флашнете OpenMV фърмуера. Повече информация можете да намерите на &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-2376" />
+        <location line="-2399" />
         <source>Checking development examples...</source>
         <translation>Проверка на примерите за разработка...</translation>
     </message>
@@ -10039,7 +12024,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Налични са нови ресурси за %2 (напр. примери, фърмуер, документация и др.). Вижте &lt;a href=&quot;%L1&quot;&gt;бележките към изданието&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>Изтегленият файл с ресурси &quot;%L1&quot; не премина проверката на контролната сума. Моля, опитайте отново по-късно.</translation>
     </message>
@@ -10060,7 +12045,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Двоичен файл на фърмуера (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>Zip архивът &quot;%L1&quot; не съдържа образ на фърмуер!</translation>
     </message>
@@ -10070,13 +12055,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Не може да се разархивира zip файлът на фърмуера &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+182" />
-        <location line="+4031" />
+        <location line="+176" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Предупреждение: Надстройването до новата версия на фърмуера изисква да бъде изтрита мастната файлова система.</translation>
     </message>
     <message>
-        <location line="-3953" />
+        <location line="-3972" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Не може да се изтегли най-новият фърмуер за разработка!</translation>
@@ -10131,7 +12116,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Сериен порт:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
@@ -10145,7 +12130,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+194" />
         <source>Just erase the internal FAT file system</source>
         <translation>Просто изтрийте вътрешната файлова система за мазнини</translation>
     </message>
@@ -10160,14 +12145,14 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Нулирайте ROM файловата система</translation>
     </message>
     <message>
-        <location line="+233" />
-        <location line="+2874" />
+        <location line="+234" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Опции за надстройка:</translation>
     </message>
     <message>
-        <location line="-2783" />
-        <location line="+174" />
+        <location line="-2797" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Моля, съкратете REC към GND и нулирайте вашата платка. Повече информация можете да намерите на &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -10198,7 +12183,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Грешка при изчакване при получаване на архитектурата на платката!</translation>
@@ -10223,7 +12208,7 @@ Hit cancel to skip to DFU reprogramming.</source>
     </message>
     <message>
         <location line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-547" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Свържете отново вашата OpenMV камера...</translation>
     </message>
@@ -10262,46 +12247,46 @@ Continue?</source>
         <translation>Изтриване...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-155" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-78" />
+        <location line="+16" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-780" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Грешка при изчакване!</translation>
     </message>
@@ -10312,12 +12297,12 @@ Continue?</source>
         <translation>Програмиране...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+52" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -10363,12 +12348,12 @@ Continue?</source>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+100" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
-        <location line="+139" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+188" />
-        <location line="+41" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
         <location line="+27" />
@@ -10408,7 +12393,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1331" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1189" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Подготовка на инструментите за буутлоудъра... (може да отнеме няколко секунди)</translation>
     </message>
@@ -10495,8 +12480,8 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-36" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
@@ -10504,13 +12489,13 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>Щракнете върху бутона Ok, след като вашият OpenMV Cam е изброил и е завършил изпълнението на вградения си самотест (мигащ син светодиод - това отнема известно време).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-341" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-323" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util може да не е стабилен на тази платформа. Ако зареждането не успее, моля, използвайте обикновен компютър.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-417" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Няма DFU настройки за избрания тип платка!</translation>
     </message>
@@ -10523,47 +12508,47 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-70" />
         <source>Erasing Disk</source>
         <translation>Изтриващ диск</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
+        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+77" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+678" />
         <source>Read ROMFS</source>
         <translation>Прочетете Romfs</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Напишете Romfs</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Мигащ фърмуер</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>Неуспешна актуализация на фърмуера на DFU!</translation>
     </message>
@@ -10571,7 +12556,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -10603,7 +12588,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Вашият %1 няма ROM файлова система.</translation>
     </message>
@@ -10636,7 +12621,7 @@ Click the Ok button after your OpenMV Cam&apos;s SBL Bootloader has enumerated.<
         <translation>Няма настройки на PicoTool за избраното устройство!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -10805,13 +12790,13 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation>Версия на фърмуера: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Сериен порт: %L1</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ неактуален - щракнете тук, за да надстроите ]</translation>
     </message>
@@ -10936,7 +12921,7 @@ Click the Ok button after your OpenMV Cam&apos;s DFU Bootloader has enumerated.<
         <translation type="vanished">Започнете</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+844" />
         <source>More Examples</source>
         <translation>Още примери</translation>
     </message>
@@ -11112,7 +13097,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 Искате ли OpenMV IDE да го копира във вашата OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -11131,12 +13116,12 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5016" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
-        <location line="+352" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-553" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Модел зоопарк</translation>
     </message>
@@ -11222,21 +13207,21 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>БОССАК</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Вземете устройства</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-422" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-419" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Неуспешна заявка!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11251,7 +13236,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
         <translation>DFU Util</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+151" />
         <source>This may take a while, coffee break?</source>
         <translation>Това може да отнеме известно време, кафене за кафе?</translation>
     </message>
@@ -11308,7 +13293,7 @@ Percentage
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-164" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11440,79 +13425,79 @@ Open a data set to upload it.</source>
         <translation>Моля, въведете API ключ на Edge Impluse Project</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Изчакване флашлоудърът да се енумерира...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>Флашлоудърът на i.MX не се енумерира.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+0" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>Инструменти на Алиф</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Моля, включете превключвателя за режим на твърда поддръжка, той не е активиран, и след това натиснете потребителския бутон на вашата OpenMV камера.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-140" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-125" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Тази функция не се поддържа от тази машина!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -11521,7 +13506,7 @@ The camera must be power cycled after after recovery.</source>
 Камерата трябва да бъде включена след възстановяване.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+142" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Моля, изключете вашия OpenMV Cam от вашия компютър, изключете превключвателя за режим на твърда поддръжка, ако е активиран. Оставете вашия OpenMV Cam несвързан, докато не бъдете инструктирани да го свържете отново.</translation>
     </message>
@@ -11530,7 +13515,7 @@ The camera must be power cycled after after recovery.</source>
         <translation type="vanished">Моля, изключете вашата OpenMV Cam от вашия компютър, изключете превключвателя за режим на твърда поддръжка, ако е активиран, свържете отново вашата OpenMV Cam към вашия компютър и след това натиснете OK.</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="-100" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11539,16 +13524,16 @@ The camera must be power cycled after a system package update.</source>
 Камерата трябва да е циклична за захранване след актуализация на системния пакет.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-479" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-445" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Тази команда отнема известно време за изпълнение. Моля, бъдете търпеливи.</translation>
     </message>
@@ -11568,7 +13553,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>Свършен</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -11668,7 +13653,7 @@ The camera must be power cycled after a system package update.</source>
         <translation>Копирайте горния праг преди затваряне.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-495" />
         <source>Reading File...</source>
         <translation>Файлът се чете...</translation>
     </message>
@@ -11700,12 +13685,12 @@ The camera must be power cycled after a system package update.</source>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>Транскодиране на файл...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11764,12 +13749,12 @@ The camera must be power cycled after a system package update.</source>
         <translation type="vanished">Вземете входни формати</translation>
     </message>
     <message>
-        <location line="+288" />
-        <location line="+101" />
+        <location line="+292" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11797,30 +13782,30 @@ The camera must be power cycled after a system package update.</source>
         <translation type="vanished">Неуспешно стартиране на ffmpeg!</translation>
     </message>
     <message>
-        <location line="-1323" />
-        <location line="+85" />
+        <location line="-1340" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg не се поддържа на тази платформа.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>Изпълнимият файл на FFmpeg не беше намерен (инсталацията може да е непълна).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Получаване на формати</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+95" />
         <source>Converting</source>
         <translation>Преобразуване</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG не се поддържа на тази платформа.</translation>
     </message>
@@ -11838,7 +13823,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Вашата инсталация на OpenMV IDE може да е непълна.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Не може да се записва в изходен видео файл!</translation>
     </message>
@@ -11848,19 +13833,19 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation>Не може да се отвори изходен видео файл!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Възпроизвеждане на видео</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Възпроизвеждането на видео не се поддържа на тази платформа.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>Неуспешно стартиране на ffplay!</translation>
     </message>
@@ -11967,7 +13952,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation>Запазване на видео</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Зает</translation>
     </message>
@@ -11987,7 +13972,7 @@ Your OpenMV IDE installation may be incomplete.</source>
         <translation type="vanished">Няма съответстващ интерфейс за избраното име на файла!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1129" />
         <source>Please select the target</source>
         <translation>Моля, изберете целта</translation>
     </message>
@@ -12008,7 +13993,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE просто ще копира модела такъв, какъвто е.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -12044,7 +14029,9 @@ OpenMV IDE просто ще копира модела такъв, какъвт�
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -12063,7 +14050,7 @@ OpenMV IDE просто ще копира модела такъв, какъвт�
         <translation>Редактиране на Romfs</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Папка със същото име вече съществува!</translation>
@@ -12121,29 +14108,29 @@ OpenMV IDE просто ще копира модела такъв, какъвт�
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Извличане на файл</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Преглед/Редактиране</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Добавяне на файл</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Нова папка</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -12179,7 +14166,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 Вашата OpenMV камера все още е в режим на буутлоудър: натиснете Свързване и използвайте опциите на буутлоудъра, за да редактирате ROM файловата система отново.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Не е избран тип платка.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -12187,13 +14181,34 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>ROMFS не се поддържа на тази дъска!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Не е избрана цел за ROMFS.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>Четенето на ROMFS от камерата е неуспешно.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Неуспешно разопаковане на ROMF!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>Образът на ROMFS е %L1 байта, но ROMFS на платката побира %L2 байта.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>Записването на ROMFS в камерата е неуспешно.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV Romfs</translation>
@@ -12235,12 +14250,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>Сигурни ли сте, че искате да нулирате ROM файловата система на OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Какво искате да направите?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Просто копирайте скрипта</translation>
     </message>
@@ -12260,40 +14275,40 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>Компилирайте до Bytecode</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; mpy cross compilier cli опции &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Напреднал</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>MPY Cross Compiler</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Компилиране</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>MPY Cross Compilier не се поддържа на тази платформа.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-867" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-880" />
         <source>Success - Press Ok to close the window</source>
         <translation>Успех - Натиснете OK, за да затворите прозореца</translation>
     </message>
@@ -12306,18 +14321,18 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>Неуспех - Натиснете Отказ, за ​​да затворите прозореца</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Стедж компилатор</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>Неуспешно копиране на JSON файл!</translation>
     </message>
@@ -12328,12 +14343,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Моля, посочете настройките на компилатора:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Максимална оптимизация</translation>
     </message>
@@ -12353,7 +14368,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>Без оптимизация</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>-ВРЪЗКА 2</translation>
     </message>
@@ -12363,7 +14378,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai основни CLI опции &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>-MA-MAPPE-RECAP</translation>
     </message>
@@ -12377,7 +14392,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; Опции за преместване на stedgeai &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Неуспешно отваряне на JSON файл!</translation>
@@ -12395,12 +14410,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Вела компилатор</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Оптимизирайте за производителност</translation>
     </message>
@@ -12410,7 +14425,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>Оптимизирайте за размер</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>-Вербозна прогреса</translation>
     </message>
@@ -12420,7 +14435,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; vela compilier cli опции &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Вела</translation>
     </message>
@@ -12431,7 +14446,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>STM32 програмист</translation>
     </message>
@@ -12441,7 +14456,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>STM32 програмист не се поддържа на тази платформа.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-659" />
         <source>the detected board</source>
         <translation>откритата платка</translation>
     </message>
@@ -12471,12 +14486,12 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
         <translation>За да флашнете образ на буутлоудър, вашата OpenMV Cam трябва да е в режим на възстановяване на буутлоудъра. Изключете камерата, свържете BOOT0/SBL/RECOVERY към 3.3V с джъмпер, след което включете камерата отново, преди да опитате пак.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>Неуспешно четене на ROMFS през DFU!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>Неуспешен запис на ROMFS през DFU!</translation>
     </message>
@@ -12493,7 +14508,7 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Показване на текст</translation>
@@ -12738,7 +14753,7 @@ Fix or clear them before saving.</source>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12763,7 +14778,7 @@ Fix or clear them before saving.</source>
         <translation>&quot;%L1&quot; - неуспешно инсталиране: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - неуспешно обновяване на &quot;%L2&quot;: %L3</translation>
     </message>
@@ -12980,7 +14995,7 @@ Install now?</source>
         <translation>&quot;%L1&quot; не е инсталирано</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; платка &quot;%L2&quot; (%L3) се припокрива с идентификатора на буутлоудъра на &quot;%L4&quot; (%L5)</translation>
     </message>
@@ -13139,7 +15154,7 @@ This deletes its boards, firmware, and examples.</source>
 Това изтрива неговите платки, фърмуер и примери.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -13377,7 +15392,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%L1 семпла (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13491,12 +15506,12 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Спектър</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Осредняване</translation>
     </message>
@@ -13597,7 +15612,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Свържете камера, за да видите каналите</translation>
     </message>
@@ -14032,6 +16047,16 @@ This deletes its boards, firmware, and examples.</source>
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>ИИ</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Агентният чат (приставката ACP Client) не е наличен.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -14040,89 +16065,42 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Този съветник създава прост проект за модулен тест.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Местоположение на проекта</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -14136,6 +16114,58 @@ This deletes its boards, firmware, and examples.</source>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Местоположение</translation>
     </message>
@@ -14144,7 +16174,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Qt тест</translation>
     </message>
     <message>
-        <location line="-171" />
+        <location line="-574" />
         <source>Google Test</source>
         <translation>Google Тест</translation>
     </message>
@@ -14164,49 +16194,49 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Catch2</translation>
     </message>
     <message>
-        <location line="-192" />
-        <location line="+26" />
+        <location line="-358" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Тестова рамка:</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-283" />
         <source>GUI Application</source>
         <translation>GUI приложение</translation>
     </message>
     <message>
-        <location line="+49" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-75" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Име на тестовия пакет:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Име на тестов случай:</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-289" />
         <source>Requires QApplication</source>
         <translation>Изисква QApplication</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+23" />
         <source>Generate setup code</source>
         <translation>Генериране на код за настройка</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="-21" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Генерирайте код за инициализация и почистване</translation>
     </message>
@@ -14215,17 +16245,17 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Активирайте C++11</translation>
     </message>
     <message>
-        <location line="-145" />
+        <location line="-311" />
         <source>Googletest source directory (optional):</source>
         <translation>Изходна директория на Googletest (по избор):</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Директория за включване на Boost (по избор):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 включва директория (по избор):</translation>
     </message>
@@ -14235,257 +16265,262 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Използвайте Qt библиотеки</translation>
     </message>
     <message>
-        <location line="-509" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Система за изграждане:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Информация за проекта и теста</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Подробности</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Избор на комплект</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>Комплекти</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Управление на проекти</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Резюме</translation>
     </message>
@@ -14494,10 +16529,9 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Създава нов проект за модулен тест. Единичните тестове ви позволяват да проверите дали кодът е годен за употреба и че няма регресии.</translation>
     </message>
     <message>
-        <location line="-542" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="-389" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Друг проект</translation>
     </message>
@@ -14506,36 +16540,36 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Проект за автоматично тестване</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="-639" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Напълно квалифицирано име, включително пространства от имена</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Име на класа:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;По избор&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Базов клас:</translation>
     </message>
@@ -14544,7 +16578,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>Включете QObject</translation>
     </message>
@@ -14586,10 +16620,10 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Заглавен файл:</translation>
     </message>
@@ -14598,54 +16632,55 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Изходен файл:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Път:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Дефиниране на клас</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Създава C++ хедър и изходен файл за нов клас, който можете да добавите към C++ проект.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>C++ клас</translation>
     </message>
@@ -14686,16 +16721,16 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Модел на Qt елемент</translation>
     </message>
@@ -14735,19 +16770,18 @@ This deletes its boards, firmware, and examples.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Python клас</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Създава базиран на CMake тестов проект, за който може да се въведе кодов фрагмент.</translation>
+        <translation type="vanished">Създава базиран на CMake тестов проект, за който може да се въведе кодов фрагмент.</translation>
     </message>
     <message>
         <source>int main(int argc, char *argv[])
@@ -14760,47 +16794,39 @@ This deletes its boards, firmware, and examples.</source>
 }</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>Код:</translation>
+        <translation type="vanished">Код:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidgets</translation>
+        <translation type="vanished">QtCore, QtWidgets</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Използвайте Qt модули:</translation>
+        <translation type="vanished">Използвайте Qt модули:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Пакет приложения (macOS)</translation>
+        <translation type="vanished">Пакет приложения (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Дефиниране на кодов фрагмент</translation>
+        <translation type="vanished">Дефиниране на кодов фрагмент</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Кодов фрагмент</translation>
+        <translation type="vanished">Кодов фрагмент</translation>
+    </message>
+    <message>
+        <source>Code Snippet</source>
+        <translation type="vanished">Кодов фрагмент</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Code Snippet</source>
-        <translation>Кодов фрагмент</translation>
-    </message>
-    <message>
-        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Създава заглавен файл, който можете да добавите към C/C++ проект.</translation>
     </message>
@@ -14810,7 +16836,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>C/C++ заглавен файл</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Създава изходен файл, който можете да добавите към C/C++ проект.</translation>
     </message>
@@ -14820,7 +16846,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Файл с изходен код на C/C++</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Изберете шаблон на формуляр</translation>
     </message>
@@ -14838,12 +16864,14 @@ This deletes its boards, firmware, and examples.</source>
         <translation type="vanished">Формуляр на Qt Designer</translation>
     </message>
     <message>
-        <location line="-139" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Създава фрагментен шейдър в Desktop OpenGL Shading Language (GLSL). Фрагментните шейдъри генерират крайните пикселни цветове за триъгълници, точки и линии, изобразени с OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14851,7 +16879,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Фрагментен шейдър (Desktop OpenGL)</translation>
     </message>
@@ -14866,7 +16894,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Създава фрагментен шейдър в OpenGL/ES 2.0 Shading Language (GLSL/ES). Фрагментните шейдъри генерират крайните пикселни цветове за триъгълници, точки и линии, изобразени с OpenGL.</translation>
     </message>
@@ -14886,7 +16914,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+25" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Създава Java файл с шаблонен код.</translation>
     </message>
@@ -14901,7 +16929,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Java файл</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Библиотека без състояние</translation>
     </message>
@@ -14922,73 +16950,63 @@ This deletes its boards, firmware, and examples.</source>
         <translation>JS файл</translation>
     </message>
     <message>
-        <location line="-74" />
         <source>Model name:</source>
-        <translation>Име на модела:</translation>
+        <translation type="vanished">Име на модела:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+63" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>местоположение:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}“ съществува във файловата система.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Име на модела и местоположение</translation>
+        <translation type="vanished">Име на модела и местоположение</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Създава нов празен модел с празна диаграма.</translation>
+        <translation type="vanished">Създава нов празен модел с празна диаграма.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>Моделиране</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>Модел</translation>
+        <translation type="vanished">Модел</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Създава скреч модел с помощта на временен файл.</translation>
+        <translation type="vanished">Създава скреч модел с помощта на временен файл.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Скреч модел</translation>
+        <translation type="vanished">Скреч модел</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Създава празен Nim файл, използвайки UTF-8 набор от знаци.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Ним</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim файл</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Създава празен файл със скрипт Nim, като използва UTF-8 набор от знаци.</translation>
     </message>
@@ -15008,7 +17026,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Python файл</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Създава Qt ресурсен файл (.qrc).</translation>
     </message>
@@ -15018,7 +17036,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Файл с ресурси на Qt</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Създава QML файл с шаблонен код, започващ с „import QtQuick“.</translation>
     </message>
@@ -15028,21 +17046,21 @@ This deletes its boards, firmware, and examples.</source>
         <translation>QML файл (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Създава скреч буфер с помощта на временен файл.</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="-49" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>Общ</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-391" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Този съветник създава прост тестов проект за единица, използвайки Boost.</translation>
     </message>
@@ -15067,21 +17085,21 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Създава нов тестов проект за единица, използвайки Boost. Тестовете на единицата ви позволяват да проверите дали кодът е подходящ за употреба и че няма регресии.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Тестов проект</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>Проект за повишаване на теста</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Този съветник създава прост тестов проект за единица, използвайки Catch2.</translation>
     </message>
@@ -15116,7 +17134,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Тестов проект Catch2</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Този съветник създава прост тестов проект на единица с помощта на Google Test.</translation>
     </message>
@@ -15146,12 +17164,18 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Тестов проект на Google</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Този съветник създава прост тестов проект за единица, използвайки QT тест.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+8" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake за Qt5 и Qt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Създава нов тестов проект за единица с помощта на QT тест. Тестовете на единицата ви позволяват да проверите дали кодът е подходящ за употреба и че няма регресии.</translation>
     </message>
@@ -15161,12 +17185,30 @@ This deletes its boards, firmware, and examples.</source>
         <translation>QT тестов проект</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Този съветник създава прост тестов проект за единица, използвайки QT бърз тест.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+6" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 и по-нова</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 и по-нова</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Съвместимост с кода на Qt:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Създава нов тестов проект за единица, използвайки QT Quick Test. Тестовете на единицата ви позволяват да проверите дали кодът е подходящ за употреба и че няма регресии.</translation>
     </message>
@@ -15181,12 +17223,11 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Включете qquickitem</translation>
     </message>
     <message>
-        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Създава тестов проект, базиран на CMAKE, където можете да въведете кодов фрагмент, за да го компилирате и проверите.</translation>
+        <translation type="vanished">Създава тестов проект, базиран на CMAKE, където можете да въведете кодов фрагмент, за да го компилирате и проверите.</translation>
     </message>
     <message>
-        <location line="+350" />
+        <location line="+77" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Създава формуляр за дизайнер на QT Widgets, който можете да добавите към проект QT Widget. Това е полезно, ако вече имате съществуващ клас за бизнес логиката на потребителския интерфейс.</translation>
     </message>
@@ -15196,7 +17237,31 @@ This deletes its boards, firmware, and examples.</source>
         <translation>QT Widgets дизайнерски формуляр</translation>
     </message>
     <message>
-        <location line="-104" />
+        <location line="+43" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Създава фрагментен шейдър в GLSL, съвместим с Vulkan. Фрагментните шейдъри генерират крайните цветове на пикселите за триъгълници, точки и линии, които ще бъдат изобразени.
+Използвайте го при насочване към Qt6 или по-нова версия.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Фрагментен шейдър (съвместим с Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Създава вертексен шейдър в GLSL, съвместим с Vulkan. Вертексните шейдъри преобразуват позициите, нормалите и текстурните координати на триъгълници, точки и линии, които ще бъдат изобразени.
+Използвайте го при насочване към Qt6 или по-нова версия.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Върхов шейдър (съвместим с Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>Creates a markdown file.</source>
         <translation>Създава файл за маркиране.</translation>
     </message>
@@ -15206,12 +17271,12 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Файл с маркиране</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Scratch Buffer</source>
         <translation>Буфер за надраскване</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Име на диаграмата на състоянието:</translation>
     </message>
@@ -15231,7 +17296,7 @@ This deletes its boards, firmware, and examples.</source>
         <translation>Държавна диаграма</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15255,7 +17320,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Версия Catch2:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Информация за тест</translation>
     </message>
@@ -15271,7 +17336,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Тестов случай</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Създава празен файл.</translation>
     </message>
@@ -15281,7 +17346,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Празен файл</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Създава файл за превод, който можете да добавите към QT проект.</translation>
     </message>
@@ -15291,61 +17356,76 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT файл за превод</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Този съветник създава просто конзолно приложение, базирано на Qt.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake със съвместимост с Qt 5</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Мезон</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Дефиниране на система за изграждане</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Система за изграждане</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Файл за превод</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Превод</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-347" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Името на проекта трябва да съдържа само букви, цифри или долни черти.</translation>
+    </message>
+    <message>
+        <location line="-286" />
         <source>Define Python Interpreter</source>
         <translation>Определете Python Interprater</translation>
     </message>
@@ -15360,22 +17440,26 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Създава QT за приложение Python, което включва джаджа, базирана на QT Widgets Designer (UI файл). Изисква .ui към преобразуване на python.</translation>
     </message>
     <message>
-        <location line="-52" />
         <source>Qt 6.4</source>
-        <translation>QT 6.4</translation>
+        <translation type="vanished">QT 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+74" />
         <source>Qt 6.5</source>
         <translation>QT 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Създава QT бързо приложение, което може да има както QML, така и C ++ код. Можете да изградите приложението и да го внедрите на настолни, вградени и мобилни целеви платформи.</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+37" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Създава проект със структура, съвместима както с Qt Design Studio, така и с Qt Creator. Съдържа .ui.qml форма, която можете да редактирате визуално в Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15384,7 +17468,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  За да разработите пълно приложение, вместо това създайте проект за бързо приложение QT.</translation>
     </message>
     <message>
-        <location line="-108" />
+        <location line="+31" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15401,31 +17485,32 @@ Preselects a desktop Qt for building the application if available.</source>
 Предварително избира десктоп Qt за изграждане на приложението, ако е наличен.</translation>
     </message>
     <message>
-        <location line="-172" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="-371" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Приложение (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Конзолно приложение Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Този съветник създава проект на C++ библиотека.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Посочете основна информация за класовете, за които искате да генерирате скелетни файлове с изходен код.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Споделена библиотека</translation>
     </message>
@@ -15440,9 +17525,10 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt плъгин</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Тип:</translation>
     </message>
@@ -15451,7 +17537,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: value(&apos;Type&apos;) === &apos;qtplugin&apos;? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15487,12 +17573,7 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Нито един</translation>
     </message>
@@ -15517,14 +17598,14 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt модул:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Дефиниране на подробности за проекта</translation>
     </message>
@@ -15533,38 +17614,38 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Създава C++ библиотека. Това може да се използва за създаване на:&lt;ul&gt;&lt;li&gt;споделена C++ библиотека за използване с &lt;tt&gt;QPluginLoader&lt;/tt&gt; и среда за изпълнение (Plugins)&lt;/li&gt;&lt;li&gt;споделена или статична C++ библиотека за използване с друг проект във време на свързване&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-485" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="-481" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>Библиотека</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>C++ библиотека</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Създава просто приложение Nim.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Проект извън Qt</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Приложение Nim</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Двоичен</translation>
     </message>
@@ -15580,12 +17661,12 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Описание:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15646,18 +17727,20 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>други</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Разрешително:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>° С</translation>
     </message>
@@ -15698,21 +17781,21 @@ Preselects a desktop Qt for building the application if available.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Конфигурация</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Създава приложение Nim с Nimble.</translation>
     </message>
@@ -15722,7 +17805,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Пъргаво приложение</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Създава просто C приложение без зависимости.</translation>
     </message>
@@ -15732,7 +17815,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Обикновено C приложение</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Създава просто C++ приложение без зависимости.</translation>
     </message>
@@ -15742,7 +17825,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Обикновено C++ приложение</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Този съветник създава празен .pro файл.</translation>
     </message>
@@ -15761,20 +17844,20 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Версия на PySide:</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="+12" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Създава приложение Qt за Python, което съдържа само основния код за QApplication.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Приложение (Qt за Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Празно приложение</translation>
     </message>
@@ -15791,13 +17874,11 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Файл на проекта:</translation>
+        <translation type="vanished">Файл на проекта:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Създава приложение Qt за Python, което съдържа празен прозорец.</translation>
     </message>
@@ -15807,15 +17888,15 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Празен прозорец</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location line="+21" />
+        <location line="-29" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-259" />
+        <location line="-204" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15824,39 +17905,32 @@ Preselects a desktop Qt for building the application if available.</source>
  Препоръчва настолен QT за изграждане на приложението, ако е налично.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Създава библиотека C ++. Можете да създадете: &lt;ul&gt; &lt;li&gt; Споделена библиотека C ++ за използване с &lt;tt&gt; qpluginloader &lt;/tt&gt; и време за изпълнение (плъгини) &lt;/li&gt; &lt;li&gt; споделена или статична библиотека C ++ за използване с друг проект в LinkTime &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-137" />
-        <location line="+21" />
-        <location line="+33" />
         <source>PySide 2</source>
-        <translation>Pyside 2</translation>
+        <translation type="vanished">Pyside 2</translation>
     </message>
     <message>
-        <location line="-18" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15</translation>
+        <translation type="vanished">PySide 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14</translation>
+        <translation type="vanished">PySide 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13</translation>
+        <translation type="vanished">PySide 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12</translation>
+        <translation type="vanished">PySide 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+148" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Създава Qt Quick приложение, което съдържа празен прозорец.</translation>
     </message>
@@ -15870,50 +17944,174 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Създава Qt за приложение на Python, което включва изпълним модул, базиран на Qt Designer (ui файл) - Изисква преобразуване от .ui в Python</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+19" />
         <source>Window UI</source>
         <translation>Потребителски интерфейс на прозореца</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Този съветник създава проект на Qt Interface Framework.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Конфигурирайте интерфейса, който описва данните, обменяни между фронтенда и бекенда.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Име на създадения проект, започващо с главна буква.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Име на интерфейса:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Име на интерфейса, който става част от създадения модул, започващо с главна буква.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Добавяне на примерен код към проекта</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Включва основни конструкции, в противен случай се създава празен проект.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Генериране на зониран интерфейс</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>Зонираният интерфейс има съответни елементи за всички данни в множество зони.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Настройка на бекенда:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Генериране на симулационен бекенд</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>Създава симулационен бекенд, който може да се управлява чрез скриптове от QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Генериране на производствена реализация на бекенд</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Създава пълна, нативна реализация на бекенд.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Генериране на бекенд на Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Генерира бекенд, който може да се свързва със сървърната страна чрез технологията Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Генериране на симулационен сървър на Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Генерира симулационен сървър, към който може да се свързва бекендът на Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Генериране на производствен сървър на Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Генерира нативно реализиран сървър, към който може да се свързва бекендът на Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>Ако не е избран работещ бекенд, примерният код на фронтенд интерфейса няма да работи и може дори да предизвика грешки.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Конфигуриране на интерфейса</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Конфигуриране</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Създава проект на Qt Interface Framework с конфигуриран фронтенд и по избор бекенди.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>Проект на Qt Interface Framework</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Минимално необходима версия на Qt:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -15953,17 +18151,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Приставка за разширение Qt Quick 2</translation>
     </message>
     <message>
+        <location line="+8" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>Задайте QT_QML_GENERATE_QMLLS_INI на ON в CMake</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>Create a project that you can open in Qt Design Studio</source>
-        <translation type="vanished">Създайте проект, който можете да отворите в Qt Design Studio</translation>
+        <translation>Създайте проект, който можете да отворите в Qt Design Studio</translation>
     </message>
     <message>
         <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
         <translation type="vanished">Създайте проект със структура, която е съвместима както с Qt Design Studio (чрез .qmlproject), така и с Qt Creator (чрез CMakeLists.txt). Той съдържа .ui.qml формуляр, който можете да редактирате визуално в Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="-48" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Използвайте Qt виртуална клавиатура</translation>
     </message>
@@ -15976,12 +18190,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Създава Qt Quick приложение, което съдържа празен прозорец. По желание можете да създадете проект на Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-36" />
         <source>Qt Quick Application</source>
         <translation>Бързо приложение Qt</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16003,12 +18217,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Използвайте това само ако създавате прототипи. Не можете да създадете пълно приложение с това. Помислете вместо това да използвате проект за Qt Quick Application.</translation>
     </message>
     <message>
-        <location line="-90" />
+        <location line="+16" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Quick UI прототип</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Този съветник генерира проект за приложение на Qt Widgets. Приложението произлиза по подразбиране от QApplication и включва празна джаджа.</translation>
     </message>
@@ -16017,7 +18231,7 @@ Use this only if you are prototyping. You cannot create a full application with 
         <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>Генериране на формуляр</translation>
     </message>
@@ -16049,28 +18263,28 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Приложение Qt Widgets</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Моля, конфигурирайте &lt;b&gt;%{vcsName}&lt;/b&gt; сега.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Хранилище:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>URL адресът на хранилището не е валиден</translation>
     </message>
@@ -16079,24 +18293,24 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>указател:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}“ съществува във файловата система.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Използвайте съществуваща директория</translation>
     </message>
@@ -16171,23 +18385,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Ревизия:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Посочете URL адрес на хранилище, директория за плащане и път.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Клон на Running Bazaar...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Клонинг</translation>
     </message>
@@ -16197,22 +18410,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Клонира базар клон и се опитва да зареди съдържащия се проект.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Импортиране на проект</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Базар клонинг (или клон)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Модул:</translation>
     </message>
@@ -16227,19 +18440,19 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Изпълнява се проверка на CVS...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Разгледайте</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Проверява CVS хранилище и се опитва да зареди съдържащия се проект.</translation>
     </message>
@@ -16249,7 +18462,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>CVS плащане</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;клон по подразбиране&gt;</translation>
     </message>
@@ -16289,7 +18502,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Изпълнява се Mercurial clone...</translation>
     </message>
@@ -16304,7 +18517,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Mercurial Clone</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Сертификат на Trust Server</translation>
     </message>
@@ -16324,7 +18537,62 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Заявка за пасивно преминаване (passthrough)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Заявка за разрешения за режим passthrough.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>Заявка за проследяване на ръце</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>Заявка за разрешения за проследяване на ръце.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Заявка за пространствени котви</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Заявка за разрешения за API на котвите.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>XR функции</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Функции</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Избор на комплект: за Apple Vision Pro изберете произволен комплект.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>Създава приложение Qt Quick 3D XR с QML и C++ код. Можете да компилирате и внедрите приложението на настолни VR и самостоятелни XR платформи. За Apple Vision Pro можете да разработвате в Qt Creator, но трябва да внедрите CMake проекта чрез XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>XR приложение</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Този съветник създава персонализиран плъгин Qt Creator.</translation>
     </message>
@@ -16334,11 +18602,16 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Посочете подробности за вашия персонализиран плъгин Qt Creator.</translation>
     </message>
     <message>
+        <location line="+22" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>Приставка на Qt Creator за C++</translation>
+    </message>
+    <message>
         <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
         <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-21" />
         <source>Plugin name:</source>
         <translation>Име на приставката:</translation>
     </message>
@@ -16392,12 +18665,11 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Създава персонализиран плъгин Qt Creator.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Qt Creator Plugin</translation>
+        <translation type="vanished">Qt Creator Plugin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S &amp;Essions</translation>
     </message>
@@ -16417,7 +18689,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Име на текущата сесия.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Изтриване на сесия</translation>
     </message>
@@ -16439,7 +18711,7 @@ Preselects a desktop Qt for building the application if available.</source>
  %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Грешка при възстановяване на сесията</translation>
     </message>
@@ -16449,33 +18721,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Не можах да възстановя сесията %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Сесия за зареждане</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Грешка при запазване на сесията</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>Не можах да спестите сесия %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Не можах да запазите сесия, за да подадете &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Въведете името на сесията:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Мениджър на сесии</translation>
     </message>
@@ -16515,7 +18787,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Какво е сесия?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Сесия</translation>
     </message>
@@ -16525,7 +18797,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Последна модифицирана</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Ново име на сесията</translation>
@@ -16551,7 +18823,7 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Клонинг и и отворен (&amp;O)</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Преименуване на сесия</translation>
     </message>
@@ -16566,17 +18838,17 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Преименувайте и и отворете (&amp;O)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;custm&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Конфигурацията е дефектна. Проверете изгледа на проблемите за подробности.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>Не можах да създам директория &quot;%1&quot;</translation>
     </message>
@@ -16586,44 +18858,41 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Програмата &quot;%1&quot; не съществува или не е изпълнима.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Започва: &quot; %1&quot; %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>Процесът &quot;%1&quot; излиза нормално.</translation>
+        <translation type="vanished">Процесът &quot;%1&quot; излиза нормално.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>Процесът &quot; %1&quot;, излязъл с код %2.</translation>
+        <translation type="vanished">Процесът &quot; %1&quot;, излязъл с код %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>Не може да започне процес &quot; %1&quot; %2.</translation>
+        <translation type="vanished">Не може да започне процес &quot; %1&quot; %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>Процесът &quot;%1&quot; се срина.</translation>
+        <translation type="vanished">Процесът &quot;%1&quot; се срина.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[Няма]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>Име</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Източник</translation>
     </message>
@@ -16643,7 +18912,22 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Създаване</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Премахване на конфигурациите за изпълнение</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Филтриране на конфигурациите за изпълнение по име</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Премахване на избраното</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>Файлове във всеки проект</translation>
     </message>
@@ -16653,18 +18937,19 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Намира файлове на всички отворени проекти. Добавете &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;номер&gt;&quot;, за да скочите към дадения номер на реда. Добавете друг &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;sumber&gt;&quot;, за да скочите и към номера на колоната.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Всички проекти</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Всички проекти:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -16673,7 +18958,7 @@ Excluding: %2
  %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Прикачете отстраняването на грешки към този процес</translation>
     </message>
@@ -16683,7 +18968,33 @@ Excluding: %2
         <translation>Прикачете отстраняване на грешки към %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Категория</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Отстраняване на грешки</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Критично</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Фатално</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Информация</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Спрете</translation>
     </message>
@@ -16719,12 +19030,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Изход на приложение</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Изпълнете тази конфигурация на изпълнение.</translation>
     </message>
@@ -16734,45 +19045,74 @@ Excluding: %2
         <translation>Спрете програмата за работа.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>Приложение-изход-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Изходният прозорец на приложението</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Филтриране на вътрешните категории на журнала на Qt</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Филтриране на категориите по регулярен израз</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Невалиден регулярен израз: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Размаркиране на всички</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Размаркиране на всички %1</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Отметване на всички %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Невалиден</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Изход на Word-WRAP</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Ясен стар изход при нов цикъл</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Сливат stderr и stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Винаги</translation>
     </message>
@@ -16787,45 +19127,64 @@ Excluding: %2
         <translation>Само на първия изход</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Отхвърляне на прекомерния изход</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Замяна на цвета на фона</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Персонализиране на цвета на фона на изхода на приложението.
+Забележка: съществуващият изход няма да бъде преоцветен.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Ограничете изхода до %1 знака</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Отворете изхода на приложението при изпълнение:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Отворете изхода на приложението при отстраняване на грешки:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>Без заглавие</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Изграждане на директория:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>Директорията за изграждане не е достъпна от устройството за изграждане.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>СЕБЕЛА НА СЕНДА:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>Справочник за изграждане съдържа потенциално проблематичен символ &quot;%1&quot;.</translation>
     </message>
@@ -16835,15 +19194,16 @@ Excluding: %2
         <translation>Това предупреждение може да бъде потиснато &lt;a href = &quot;манекен&quot;&gt; тук &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Отделна информация за отстраняване на грешки:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Изграждане на среда</translation>
     </message>
@@ -16853,14 +19213,14 @@ Excluding: %2
         <translation>Ясна системна среда</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Персонализирани изходни парсери</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Разбор на стандартния изход по време на изграждане</translation>
     </message>
@@ -16870,29 +19230,34 @@ Excluding: %2
         <translation>Кара изходните парсери да търсят диагностика на stdout, а не на stderr.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Настройки за изграждане</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Коренната директория на проекта. При някои системи за компилиране може да се различава от Project:Path.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Изградете директория</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Име на конфигурацията на изграждане</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Променливи в средата на конфигурацията на изграждането</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Подсказка в селектора на целта:</translation>
     </message>
@@ -16902,8 +19267,9 @@ Excluding: %2
         <translation>Се появява като подсказка при задържане на конфигурацията на изграждане</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Системна среда</translation>
     </message>
@@ -16919,7 +19285,24 @@ Excluding: %2
         <translation>Проектът не беше анализиран успешно.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>По подразбиране</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Издание</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Профил</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>Основен файл на проекта</translation>
     </message>
@@ -16949,7 +19332,7 @@ Excluding: %2
         <translation>Тип на активната конфигурация на проекта за изграждане</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>Не е зададено устройство за изграждане за комплекта &quot;%1&quot;.</translation>
     </message>
@@ -16969,7 +19352,7 @@ Excluding: %2
         <translation>Устройството за изграждане &quot;%1&quot; не може да достигне до директорията за изграждане.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>Завършен %1 от %n стъпки</numerusform>
@@ -16977,7 +19360,7 @@ Excluding: %2
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Спрете заявленията</translation>
     </message>
@@ -16997,7 +19380,7 @@ Excluding: %2
         <translation>Устройството за изграждане не успя да се подготви за изграждането на %1 ( %2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Компилиране</translation>
@@ -17041,13 +19424,13 @@ Excluding: %2
         <translation>Проблеми, открити при провеждане на тестове.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -17057,10 +19440,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -17068,11 +19451,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Разгръщане</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -17080,7 +19463,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Изграждане</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>Изграждане/разгръщане отменено</translation>
     </message>
@@ -17100,34 +19483,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Пропускане на деактивирана стъпка %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Грешка при изграждане/разгръщане на проект %1 (KIT: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>Kit %1 има проблеми с конфигурацията, които могат да бъдат основната причина за този проблем.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>При изпълнение на стъпка &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Активиране</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Деактивиране</translation>
@@ -17138,7 +19521,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Използвайте проекта по подразбиране</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>По подразбиране директория за изграждане:</translation>
     </message>
@@ -17148,7 +19531,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Шаблон, използван за конструиране на директорията за изграждане по подразбиране. &lt;br&gt; &lt;br&gt; Стойността по подразбиране може да бъде зададена с помощта на променливата на околната среда &lt;Tt&gt;%1 &lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Работна директория по подразбиране:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Шаблон за създаване на работната директория по подразбиране на конфигурация за изпълнение.&lt;br&gt;&lt;br&gt;Стойността по подразбиране може да се зададе чрез променливата на средата &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>QML отстраняване на грешки:</translation>
     </message>
@@ -17163,72 +19556,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Свойства за изграждане по подразбиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Няма налични настройки за изграждане</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Редактиране на конфигурация на изграждане:</translation>
+        <translation type="vanished">Редактиране на конфигурация на изграждане:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Добавяне</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Премахване</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Преименуване ...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Клон ...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Активна конфигурация за компилиране:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Нова конфигурация</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Ново име на конфигурация:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Ново име за конфигурация на изграждане &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -17237,14 +19632,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Конфигурация на клониране</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Отказ Build &amp;&amp; Премахване на конфигурацията на изграждането</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Не премахвайте</translation>
     </message>
@@ -17289,13 +19684,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Премахнете елемента</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 стъпки</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>Без %1 стъпки</translation>
     </message>
@@ -17320,7 +19715,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Не може да премахне стъпката на изграждане по време на изграждането</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>В момента проектът се анализира.</translation>
     </message>
@@ -17345,13 +19740,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Код стил</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Компилирайте изход</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>Compile-Output.txt</translation>
@@ -17372,9 +19767,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>O</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Прекомерният изход от компилирането е отхвърлен.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>Отворете изход на компилиране при изграждане</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>Отхвърля изхода от компилирането, който непрекъснато постъпва по-бързо, отколкото може да бъде обработен.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -17411,7 +19816,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Копира директория рекурсивно</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>Грешка:</translation>
@@ -17423,7 +19828,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>предупреждение:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>Заявка към %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>Помощ от %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Поискайте от LLM модела %1 помощ за този проблем.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>Файлове в текущия проект</translation>
     </message>
@@ -17433,44 +19853,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Намира файлове от проекта на текущия документ. Добавете &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;номер&gt;&quot;, за да скочите към дадения номер на реда. Добавете друг &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;sumber&gt;&quot;, за да скочите и към номера на колоната.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>Проект &quot;%1&quot;</translation>
+        <translation type="vanished">Проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Текущ проект</translation>
+        <translation type="vanished">Текущ проект</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Един проект</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>Проект &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Проект:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Текущ</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Персонализиран изпълним</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Изпълнете %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Трябва да зададете изпълним файл в персонализираната конфигурация на изпълнение.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>В персонализираната конфигурация за изпълнение не е зададен изпълним файл.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>Отидете в конфигурацията за изпълнение %1 и задайте изпълним файл.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Трябва да зададете изпълним файл в персонализираната конфигурация на изпълнение.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Неуспешно прочитане на персонализираните анализатори на изхода от „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Персонализирани изходни парсери Сканирайте команден ред Изход за модели на грешки, предоставени от потребителя &lt;br&gt; За създаване на записи в проблеми. &lt;br&gt; Парсетите могат да бъдат конфигурирани &lt;a href = &quot;medumy&quot;&gt; тук &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (по подразбиране за проекта)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Няма активни персонализирани парсери</translation>
     </message>
@@ -17552,8 +20006,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Тест</translation>
     </message>
@@ -17577,19 +20031,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Грешка</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Предупреждение</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Не е приложимо:</translation>
     </message>
@@ -17609,16 +20063,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Моделът не съвпада с съобщението.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Компилиране по подразбиране</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Изпълнение по подразбиране</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Името на персонализирания анализатор.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Този персонализиран анализатор се използва по подразбиране за всички конфигурации за компилиране на проекта.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Този персонализиран анализатор се използва по подразбиране за всички конфигурации за изпълнение на проекта.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Анализаторът не може да бъде променен, защото е импортиран автоматично.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Персонализираните изходни парсери, дефинирани тук, могат да бъдат активирани индивидуално в настройките за изграждане или изпълнение на проекта.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Добавете ...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Експортиране...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>Импортиране...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17626,37 +20120,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Нов анализатор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Запазване на анализаторите</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Зареждане на анализаторите</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Грешка при зареждане на анализаторите</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Грешка при зареждане на анализаторите: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Обичай</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Clang</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -17670,11 +20189,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Празен</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>Макро [= стойност]</translation>
     </message>
@@ -17699,22 +20219,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Списък на запетая на MKSPEC.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Пътят на компилатора:</translation>
+        <translation type="vanished">&amp;Пътят на компилатора:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Направете път:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;ABI:</translation>
     </message>
@@ -17759,7 +20275,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Това би създало кръгова зависимост.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Синхронизиране на конфигурацията</translation>
     </message>
@@ -17769,12 +20285,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Синхронизирайте активен комплект, изградете и разгърнете конфигурация между проектите.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Внедряване на зависимостите</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Не компилирайте само зависимостите, а ги внедрявайте също.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>Зависимости</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Разгърнете локално</translation>
@@ -17800,65 +20326,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Отменете данните за внедряване от системата за изграждане</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>QT изпълнение на конфигурация</translation>
+        <translation type="vanished">QT изпълнение на конфигурация</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>Локален компютър</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Десктоп</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>Не може да убие процеса с PID %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>Не може да прекъсне процеса с PID %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Не може да отвори процес.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>Невалиден идентификатор на процеса.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Не може да отвори процес: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>DebugBreakProcess не успя:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 не съществува. Ако сами сте изградили %2, вижте https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 не съществува. Инсталацията на %2 изглежда повредена.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>Ще ви трябва поне един порт за отстраняване на грешки в QML.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Стартиране на автоматичното откриване сега</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Тип машина:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Физическо устройство</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Свободни портове:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>„%1“ може да работи само с локални файлове.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>Устройството „%1“ не е готово за използване.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 не съществува. Ако сами сте изградили %2, вижте https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>Не може да започне %1. Проверете src \ tools \ win64interrupt \ win64interrupt.c за повече информация.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>не можа да наруши процеса.</translation>
     </message>
@@ -17880,7 +20445,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>За този комплект няма устройство. Искате ли да добавите устройство?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Проверете за конфигурирано устройство</translation>
     </message>
@@ -17895,23 +20460,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Налични видове устройства:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>Няма устройство за път &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>Не е намерено устройство за пътя „%1“.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>Няма достъп до файлове за устройство „%1“.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>Не е намерено устройство за път &quot;%1&quot;</translation>
+        <translation type="vanished">Не е намерено устройство за път &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>Няма достъп до файлове за устройство &quot;%1&quot;</translation>
+        <translation type="vanished">Няма достъп до файлове за устройство &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Всички</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (По подразбиране за %2)</translation>
     </message>
@@ -17951,22 +20532,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Отдалечена грешка</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Устройство:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Тип специфичен</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Извадете</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Задайте по подразбиране</translation>
     </message>
@@ -17976,7 +20558,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Добавете ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Стартирайте съветника за добавяне на устройство ...</translation>
     </message>
@@ -17987,7 +20569,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Добавяне %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;Име:</translation>
     </message>
@@ -18002,7 +20584,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Текущо състояние:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Възстановяване</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Да (id е &quot;%1&quot;)</translation>
     </message>
@@ -18017,8 +20604,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Показване на работещи процеси ...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Устройства</translation>
     </message>
@@ -18038,12 +20625,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Тестът на устройството не успя.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Изходът на отдалечена грешка беше: %1</translation>
+        <translation type="vanished">Изходът на отдалечена грешка беше: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>Намерени %n безплатни портове.</numerusform>
@@ -18051,12 +20637,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Проверка на наличните портове ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Няма зададено устройство за тестов трансфер.</translation>
     </message>
@@ -18086,7 +20672,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>генерично копие на файлове</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>Търсене в PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Търсене в инсталацията на Qt</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Търсене в директории</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Списък с директории, разделени с точка и запетая</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Изберете пътищата на устройството, които да се сканират за двоични файлове.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Създаване на комплекти</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Настройване на комплекти за наборите инструменти на това устройство.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Устройството не е свързано.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Оставете празно, за да се търси изпълнимият файл в $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Използване на пренасочване на SSH портове за отстраняване на грешки</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>Включва отстраняване на грешки на отдалечени цели, които не могат да предоставят портове на GDB сървър.
+Използва се SSH тунелиране за пренасочване на отдалечения порт на GDB сървъра към localhost.
+Локалният и отдалеченият порт се определят автоматично.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Достъп чрез:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Изберете устройството, през което да се свържете.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Директно</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Името на устройството не може да бъде празно.</translation>
     </message>
@@ -18096,18 +20756,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Устройство с това име вече съществува.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Въведете списъци и диапазони по следния начин: „1024,1026-1028,1030“.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Отварянето на терминал не се поддържа.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>Файлът „%1“ не може да бъде обработен от устройството „%2“.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Изпълнението на скрипт чрез source не се поддържа на тази платформа.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Устройство</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>За това устройство няма налична рецепта за сигнална операция.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Готов за използване</translation>
     </message>
@@ -18127,22 +20806,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Неизвестно</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Изпълнение на инструменти на това устройство</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Инструменти за изходния код и компилиране на това устройство</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Автоматично откриване</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>localsource () не е реализиран за този тип устройство.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>Не е зададен път за SignalOperationData.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>Не е зададен валиден PID за SignalOperationData.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Няма устройство за даден път: &quot;%1&quot;.</translation>
+        <translation type="vanished">Няма устройство за даден път: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>Устройството за път &quot;%1&quot; не поддържа процеси на убиване.</translation>
+        <translation type="vanished">Устройството за път &quot;%1&quot; не поддържа процеси на убиване.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>ID на процеса</translation>
     </message>
@@ -18152,53 +20854,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Команден ред</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>Списък на процесите на извличане. Това може да отнеме известно време.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>Неуспешно извличане на списъка с процеси.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>Ssh</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Активиране на споделяне на връзка:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Тайм -аут за споделяне на връзки:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>Път към SSH изпълним:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>Път към SFTP изпълним файл:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>Път към SSH-AskPass изпълним:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>Път към SSH-Keygen изпълним:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>минути</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Проект %1</translation>
@@ -18210,7 +20916,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Проект</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Възстановяване на глобални</translation>
     </message>
@@ -18220,40 +20927,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Настройки на дисплея</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Показване надясно и марж на колона: (&amp;M)</translation>
+        <translation type="vanished">Показване надясно и марж на колона: (&amp;M)</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Използвайте специфичен за контекста марж</translation>
+        <translation type="vanished">Използвайте специфичен за контекста марж</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Ако е налично, използвайте различен марж. Например, колоната от плъгина Clangformat.</translation>
+        <translation type="vanished">Ако е налично, използвайте различен марж. Например, колоната от плъгина Clangformat.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Редактор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Околна среда</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Основна среда за тази конфигурация на изпълнение:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Покажете в изхода на приложението при стартиране</translation>
     </message>
@@ -18264,12 +20966,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Изберете директория</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>Ed &amp;it</translation>
     </message>
@@ -18309,7 +21011,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Отворете терминал с тази среда.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Unset &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
@@ -18351,17 +21053,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Използвайте &lt;b&gt;%1 &lt;/b&gt; и</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>Файлове във всички директории на проекта</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>Файлове във всички директории на проекта:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Настройка</translation>
     </message>
@@ -18371,18 +21073,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Видимо</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>Mingw</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 ( %2, %3 %4 при %5)</translation>
+        <translation type="vanished">%1 ( %2, %3 %4 при %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3 в „%4“)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Отменете за кодовия модел</translation>
     </message>
@@ -18394,7 +21100,7 @@ fails because Clang does not understand the target architecture.</source>
  се проваля, защото Clang не разбира целевата архитектура.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Платформа CodeGen знамена:</translation>
     </message>
@@ -18409,7 +21115,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Target Triple:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Родителска машина за инструменти:</translation>
     </message>
@@ -18434,22 +21140,22 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Входът за редактиране на текст, за да се поправи.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Полето не е обект.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Полето няма име.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>Полето &quot;%1&quot; няма тип.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>Полето &quot;%1&quot; има неподдържан тип &quot;%2&quot;.</translation>
     </message>
@@ -18459,102 +21165,102 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Когато анализиране на полето &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Данните с етикет (&quot;%1&quot;) не са обект.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Етикетът (&quot;%1&quot;) няма TrText.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>Данните от Spacer (&quot;%1&quot;) не са обект.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>Свойството на специалност (&quot;%1&quot;) Фактор &quot;не е целочислено.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Данните LineEdit (&quot;%1&quot;) не са обект.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) има невалиден редовен израз &quot;%2&quot; в &quot;валидатор&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) има невалидна стойност &quot;%2&quot; при &quot;завършване&quot;.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Данните TextEdit (&quot;%1&quot;) не са обект.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>Данните от PathChooser не са обект.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>вид &quot;%1&quot; не е един от поддържаните &quot;съществуващия Directory&quot;, &quot;директория&quot;, &quot;файл&quot;, &quot;saveFile&quot;, &quot;съществуващ команд&quot;, &quot;команда&quot;, &quot;всеки&quot;.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Данните от квадратчето (&quot;%1&quot;) не са обект.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Стойностите на квадратчето (&quot;%1&quot;) за проверено и непроверено състояние са идентични.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>Не са разрешени JSON изброени елементи от списъка.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Няма „ключ“, намерен в елементите на списъка.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1 (&quot;%2&quot;) Данните не са обект.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;индексът&quot; не е целочислена стойност.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;DisabledIndex&quot; не е цяло число.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;елементи&quot; липсват.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;Елементи&quot; не е списък на JSON.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>Поне една необходима функция не присъства.</translation>
     </message>
@@ -18569,7 +21275,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Поне една предпочитана функция не присъства.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Списъкът с функции е зададен, а не от списъка с типове.</translation>
     </message>
@@ -18584,7 +21290,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Елементът на списъка с функции не е низ или обект.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Не успя да се ангажира с контрола на версиите</translation>
     </message>
@@ -18601,7 +21307,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>Неуспешно добавяне на подпроект &quot;%1&quot;
@@ -18609,20 +21315,25 @@ to project &quot;%2&quot;.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Не успя да добави един или повече файлове за проектиране
  &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>Подпроектът „%1“ е извън „%2“.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>Файл на проекта</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Изберете файл на проекта</translation>
     </message>
@@ -18632,12 +21343,12 @@ to project &quot;%2&quot;.</source>
         <translation>Проектът съдържа повече от един файл на проекта. Изберете този, който бихте искали да използвате.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Проверете дали съществува променлива. &lt;br&gt; Връща &quot;вярно&quot;, ако го направи и празен низ, ако не.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Не може да определи целевия път. &quot;TargetPath&quot; не беше зададен на нито една страница.</translation>
     </message>
@@ -18657,32 +21368,32 @@ to project &quot;%2&quot;.</source>
         <translation>Няма „ключ“ в обекта на опции.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Неуспешно презаписване на файлове</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Неуспешно форматиране на файлове</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Неуспешно пишете файлове</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>Неуспешно публикуване на файлове за обработка</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Неуспешно полиране на файлове</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Неуспешно отваряне на файлове</translation>
     </message>
@@ -18724,66 +21435,65 @@ to project &quot;%2&quot;.</source>
         <translation>Не може да отвори проект</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Генераторът не е обект.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Генераторът няма тип TypeID.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>Тип &quot;%1&quot; на генератора не е известен. Поддържаните типове са: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>Път &quot;%1&quot; не съществува при проверка на пътеките за търсене на Wizard на JSON.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>Проверка на &quot; %1&quot; за %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* Неуспешно анализиране на &quot;%1&quot;:%2:%3:%4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Не намери JSON обект в &quot;%1&quot;.</translation>
+        <translation type="vanished">* Не намери JSON обект в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Конфигурация Намерена и анализирана.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>Jsonwizard: &quot;%1&quot; не е намерен.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Страницата не е обект.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Page няма тип TypeID.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>Тип &quot;%1&quot; на страницата е неизвестен. Поддържаните типове са: &quot;%2&quot;.</translation>
     </message>
@@ -18793,7 +21503,8 @@ to project &quot;%2&quot;.</source>
         <translation>Страница с тип „%1“ има невалиден „индекс“.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* Не намери JSON обект в &quot;%1&quot;.</translation>
     </message>
@@ -18803,22 +21514,22 @@ to project &quot;%2&quot;.</source>
         <translation>* Версия %1 не се поддържа.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Неуспешно създаване: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>ключ не е намерен.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Очаква се обект или списък.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Платформата, избрана за съветника.</translation>
     </message>
@@ -18848,62 +21559,66 @@ to project &quot;%2&quot;.</source>
         <translation>Няма набор от ID.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Не е зададена категория.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>ICON файл &quot;%1&quot; не е намерен.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>Файл с изображение &quot;%1&quot; не е намерен.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>Без набор от име на DisplayName.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>Няма набор от дисплей.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Няма набор от описание.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>При анализиране на &quot;генератори&quot;: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>Когато анализирате &quot;страници&quot;: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>Невалиден typeId.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">Когато анализирате &quot;страници&quot;: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Записът на списъка с данни за файлове не е обект.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Източникът и целта са празни.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>При обработка &quot;%1&quot;: &lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [папка]</translation>
     </message>
@@ -18930,7 +21645,12 @@ to project &quot;%2&quot;.</source>
         <translation>Когато анализира полета на страница &quot; %1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Не са намерени полета.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>„Данни“ за страница „Файл“ трябва да е несечен или празен обект.</translation>
     </message>
@@ -18940,12 +21660,12 @@ to project &quot;%2&quot;.</source>
         <translation>Грешка Парка &quot; %1&quot; в &quot;комплекти&quot; страница: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>&quot;Данните&quot; трябва да са JSON обект за страници &quot;комплекти&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>Страницата &quot;комплекти&quot; изисква комплект &quot;%1&quot;.</translation>
     </message>
@@ -18955,38 +21675,39 @@ to project &quot;%2&quot;.</source>
         <translation>„Данните“ трябва да са празни или JSON обект за страници „Проект“.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Невалидна редовна експресия &quot;%1&quot; в &quot;%2&quot;. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>„Данни“ за страница „Обобщено“ може да бъде несериозен или трябва да бъде обект.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Ключът не е обект.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>Модел &quot;%1&quot; не е валиден редовен израз.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>Scannergenerator: Бинарен модел &quot;%1&quot; не е валиден.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>Неназован</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Комплект</translation>
@@ -19017,13 +21738,14 @@ to project &quot;%2&quot;.</source>
         <translation>Идентификаторът на комплекта.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>Клон на %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -19054,49 +21776,86 @@ to project &quot;%2&quot;.</source>
         <translation>Sys корен</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Без компилатор&gt;</translation>
+        <translation type="vanished">&lt;Без компилатор&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Компилатор</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Компилаторът, който трябва да се използва за изграждане. &lt;br&gt; Уверете се, че компилаторът ще произвежда двоични файлове, съвместими с целевото устройство, QT версия и други използвани библиотеки.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Компилаторите произвеждат код за различни ABI: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Път към изпълнимия компилатор</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Компилатор за различни езици</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Компилатор изпълним за различни езици</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>Намерена инструментална верига: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Премахване на набор инструменти: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Набор инструменти: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Очакваше се JSON обект за откриване на инструментална верига, получено: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>В JSON обекта не са намерени набори инструменти за откриване.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Неизвестен език при откриване на набор инструменти: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Няма компилатор, зададен в комплект.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Изпълнете тип устройство</translation>
     </message>
@@ -19106,18 +21865,69 @@ to project &quot;%2&quot;.</source>
         <translation>Типът устройство за стартиране на приложения.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Неизвестен тип устройство</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Устройство:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Тип на устройството</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Не е зададено устройство за изпълнение.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Устройството за компилиране не е съвместимо с този комплект.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Устройството за изпълнение е несъвместимо с този комплект.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Адрес на хоста (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>SSH порт (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Потребителско име (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>Файл с частен ключ (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Име на устройството (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Коренна директория на устройството (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Изпълнете устройство</translation>
     </message>
@@ -19127,129 +21937,245 @@ to project &quot;%2&quot;.</source>
         <translation>Устройството за стартиране на приложенията.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Тип на устройството за компилиране</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Типът устройство, върху което да се компилира.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Няма набор от устройства.</translation>
+        <translation type="vanished">Няма набор от устройства.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Устройството е несъвместимо с този комплект.</translation>
+        <translation type="vanished">Устройството е несъвместимо с този комплект.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Несъздаден</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Адрес на хоста</translation>
+        <translation type="vanished">Адрес на хоста</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>SSH порт</translation>
+        <translation type="vanished">SSH порт</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Включете, за да зададете файл с частен ключ за удостоверяване; в противен случай се използва механизмът по подразбиране (парола, .sshconfig и частен ключ по подразбиране).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Използване на конкретен ключ:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Режимът на проверка на SSH ключа на хоста на устройството.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Проверка на ключа на хоста:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Без проверка на ключа на хоста.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Строг</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Строга проверка на ключа на хоста.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Разрешаване без съвпадение</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Разрешаване на проверка на ключа на хоста.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Име на хоста или IP адрес</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Името на хоста или IP адресът на устройството.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Име на хоста:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Потребителско име</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Потребителското име за SSH на устройството.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Потребителско име:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Номерът на SSH порта на устройството.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>SSH порт:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>Файл с частен ключ</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>Файлът с частен ключ на устройството.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>Файл с частен ключ:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Време за изчакване:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Времето за изчакване на SSH връзката на устройството.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Име на устройството</translation>
+        <translation type="vanished">Име на устройството</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Коренна директория на устройството</translation>
+        <translation type="vanished">Коренна директория на устройството</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Изграждане на устройство</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Устройството, използвано за изграждане на приложения.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Без набор от устройства за изграждане.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Изградете адреса на хоста</translation>
+        <translation type="vanished">Изградете адреса на хоста</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>Изградете SSH порт</translation>
+        <translation type="vanished">Изградете SSH порт</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Изградете потребителско име</translation>
+        <translation type="vanished">Изградете потребителско име</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Изграждане на файл с частен ключ</translation>
+        <translation type="vanished">Изграждане на файл с частен ключ</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Изграждане на име на устройство</translation>
+        <translation type="vanished">Изграждане на име на устройство</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Изградете коренната директория на устройството</translation>
+        <translation type="vanished">Изградете коренната директория на устройството</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Промяна ...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Няма промени в прилагането.</translation>
+        <translation type="vanished">Няма промени в прилагането.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>Force UTF-8 MSVC изход на компилатор</translation>
+        <translation type="vanished">Force UTF-8 MSVC изход на компилатор</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Редактиране на средата за компилиране...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Редактиране на средата за изпълнение...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Редактиране на средата за компилиране</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Редактиране на средата за изпълнение</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>Принудителен изход на MSVC в UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>Или превключва MSVC на английски или запазва езика и просто принуждава UTF-8 изход (може да варира в зависимост от използвания компилатор на MSVC).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Допълнителни настройки за изграждане на среда при използване на този комплект.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Стойността за настройка на околната среда е невалидна.</translation>
+        <translation type="vanished">Стойността за настройка на околната среда е невалидна.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -19257,29 +22183,65 @@ to project &quot;%2&quot;.</source>
         <translation>Комплект от активен проект: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 на %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Десктоп (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Зареждащи комплекти</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Маркирайте като изменяем</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Управление ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>Фабриката за аспекти на комплект „%1“ не поддържа създаване на аспекти от JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Автоматично откриване на комплекти за устройство: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>Намерен комплект: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Премахване на комплектите за устройство: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Премахване на комплект: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Комплект: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
@@ -19294,12 +22256,12 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Името на комплекта, подходящо за генериране на имена на директории. Тази стойност се използва за променливата &lt;i&gt;%1&lt;/i&gt;, която например определя името на директорията за скрито компилиране.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Име на файловата система:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Икона на комплекта.</translation>
     </message>
@@ -19314,12 +22276,17 @@ to project &quot;%2&quot;.</source>
         <translation>Нулиране на иконата по подразбиране на устройството по подразбиране</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Името на дисплея не е уникално.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Задава се като комплект по подразбиране при създаване на нов проект.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>По подразбиране за %1</translation>
     </message>
@@ -19334,18 +22301,16 @@ to project &quot;%2&quot;.</source>
         <translation>Изображения ( *.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (По подразбиране)</translation>
+        <translation type="vanished">%1 (По подразбиране)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Направете по подразбиране</translation>
+        <translation type="vanished">Направете по подразбиране</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Настройки филтър ...</translation>
     </message>
@@ -19365,7 +22330,7 @@ to project &quot;%2&quot;.</source>
         <translation>Изберете кои настройки на комплекта да се покажат по подразбиране.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Направете аргументи:</translation>
     </message>
@@ -19445,29 +22410,27 @@ to project &quot;%2&quot;.</source>
         <translation>Няма конфликт с &lt;code&gt; Makeflags &lt;/code&gt; Променлива среда.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Изпълнете без разгръщане</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Проект</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Изпълнете</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt; Проект: &lt;/b&gt; %1</translation>
     </message>
@@ -19502,7 +22465,7 @@ to project &quot;%2&quot;.</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Проект: &lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
@@ -19532,49 +22495,54 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;style type = text/css&gt; a: link {color: rgb (128, 128, 255);} &lt;/style&gt; Проектът &lt;b&gt;%1 &lt;/b&gt; все още не е конфигуриран &lt;br/&gt; &lt;BR/ &gt; Можете да го конфигурирате в режим &lt;a href = &quot;projectmode&quot;&gt; проекти &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Падане назад, за да използвате кешираната среда за &quot;%1&quot; след:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Инициализация:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>Не са намерени MSVC набори инструменти. Трябва да инсталирате Visual Studio или Visual Studio Build Tools.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;mezft&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Допълнителни аргументи за VCVARSALL.BAT CALL</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>Неуспешно извличане на MSVC среда от &quot;%1&quot;:
  %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>Clang-Cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>Процесът не може да получи достъп до файла, тъй като се използва от друг процес.
  Моля, затворете всички работещи случаи на вашето приложение, преди да започнете изграждане.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Изход за изграждане на изграждане</translation>
     </message>
@@ -19624,7 +22592,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Използвайте парсери от Kit:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Не може да анализира</translation>
     </message>
@@ -19634,26 +22602,26 @@ Please close all running instances of your application before starting a build.<
         <translation>Не може да се разбере: Избраният комплект не предоставя изходен анализатор.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Команда:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Аргументи:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Работна директория:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Персонализирана стъпка на процеса</translation>
@@ -19664,13 +22632,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Име на проекта</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Комплектът не е валиден.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Комплектът няма устройство за компилиране.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>Устройството за компилиране „%2“ не може да обработи проектния файл „%1“.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Несъвместим комплект</translation>
     </message>
@@ -19705,37 +22683,39 @@ Please close all running instances of your application before starting a build.<
         <translation>Някои конфигурации не могат да бъдат копирани.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Не може да зарежда комплекти за разумен период от време.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Изберете Root Directory</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>Проектът &quot;%1&quot; беше конфигуриран за комплект &quot;%2&quot; с ID%3, което вече не съществува. Можете да създадете нов комплект или да копирате стъпките на изчезналия комплект в друг комплект в режим %4.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Проекти</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>Не можах да намеря QML _*. QM файл на &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Име.</translation>
@@ -19777,13 +22757,13 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Пълен път на изграждане на конфигурация на активно изграждане.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: променливи в активната среда за изграждане.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Име на конфигурацията на активното изпълнение.</translation>
@@ -19795,45 +22775,61 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Изпълнение на конфигурацията на активното изпълнение.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Променливи в средата на конфигурацията на активния цикъл.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Работна директория на конфигурацията на активното изпълнение.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Коментари за документация</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>недостъпни</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Проектна среда</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Разгърнете конфигурация</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>Изпълним файл на SSH:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>Изпълним файл на Ninja:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C ++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Отворено ...</translation>
@@ -19854,7 +22850,12 @@ Please close all running instances of your application before starting a build.<
         <translation>&amp;Започнете да отстранявате грешки</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>&amp;Анализ</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Отворете с</translation>
     </message>
@@ -19864,12 +22865,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Нов проект ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Проект за зареждане ...</translation>
+        <translation type="vanished">Проект за зареждане ...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Отворено работно пространство ...</translation>
     </message>
@@ -19879,23 +22879,24 @@ Please close all running instances of your application before starting a build.<
         <translation>Отворен файл</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Изпълнете среда</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>Скорошни P &amp;rojects</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Затворен проект</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>Затворен проект &quot;%1&quot; (&amp;J)</translation>
     </message>
@@ -19906,12 +22907,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>Затворете всички файлове в проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>Затворен проект (&amp;J)</translation>
     </message>
@@ -19940,12 +22941,12 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Възстановяване</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Възстановяване на всички проекти</translation>
     </message>
@@ -20015,12 +23016,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Проект за възстановяване на всички конфигурации</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Чист проект</translation>
+        <translation type="vanished">Чист проект</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Чисто проект за всички конфигурации</translation>
     </message>
@@ -20030,7 +23030,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Отказ на изграждане</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Изграждане без зависимости</translation>
@@ -20084,12 +23084,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>Затворен проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Затворете други проекти</translation>
     </message>
@@ -20125,7 +23125,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Изтриване на файл ...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Зададен като активен проект</translation>
     </message>
@@ -20160,7 +23160,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Селектор за бърз превключвател</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Текуща среда за изграждане</translation>
     </message>
@@ -20170,7 +23170,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Текуща среда за изпълнение</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Активна среда за изграждане на активния проект.</translation>
     </message>
@@ -20180,12 +23180,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Активна среда за изпълнение на активния проект.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Проект за зареждане</translation>
+        <translation type="vanished">Проект за зареждане</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Отворете работното пространство</translation>
     </message>
@@ -20215,18 +23214,71 @@ Please close all running instances of your application before starting a build.<
         <translation>Искате ли да отмените процеса на изграждане и да разтоварите проекта така или иначе?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>Дезинфектант</translation>
+        <translation type="vanished">Дезинфектант</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Проблеми с обработката на паметта, които е намерил дезинфектант за адреса.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Отваряне на проект...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Компилиране на активния проект</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Почистване на активния проект</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Изпълнение на активния проект</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Създаване на заглавен файл</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Създаване на изходен файл</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Редактиране на активната конфигурация за компилиране</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Проблеми с обработката на паметта, които е намерил дезинфектант за адреса.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Редактиране на активната конфигурация за изпълнение</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Отваряне на проект</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Моите задачи</translation>
     </message>
@@ -20236,18 +23288,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Въпроси от файл с списък със задачи (.Tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Проблеми, които не се покриват от по-специализирана категория.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Изход за изграждане на изграждане ...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Нов проект</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Не успя да отвори проект</translation>
     </message>
@@ -20257,12 +23314,37 @@ Please close all running instances of your application before starting a build.<
         <translation>&lt;h3&gt; Проектът вече е отворен &lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>Проектът „%1“ не може да се отвори: Приставката не е заредена.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Неуспешен проект за отваряне &quot;%1&quot;: Никой плъгин не може да отвори тип проект &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>Следните файлове не можаха да бъдат преименувани във файловата система:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>Тези файлове бяха преименувани във файловата система, но проектните файлове не бяха актуализирани:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>Тези файлове бяха преименувани във файловата система, но структурата на проекта не беше актуализирана (контекстът е изгубен или не се поддържа):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Проблеми с преименуването</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Игнорирайте всички грешки?</translation>
     </message>
@@ -20284,45 +23366,48 @@ Do you want to ignore them?</source>
         <translation>Конфигурацията, която трябваше да работи, вече не е налична.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Винаги запазвайте файлове преди изграждане</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>Отворен проект в &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>Отворен проект &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Проектът вече е отворен.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>Файлът &quot;%1&quot; е преименуван на &quot;%2&quot;, но следните проекти не могат да бъдат автоматично променени:%3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Редактирането на проекти не успя</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Следните проекти не успяха автоматично да премахнат файла: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>Изграждането &quot; %1&quot; е деактивирано: %2 &lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Не се зарежда проект.</translation>
@@ -20374,7 +23459,7 @@ Do you want to ignore them?</source>
         <translation>Искате ли да анулирате процеса на изграждане и да затворите %1 така или иначе?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Няма активен проект.</translation>
     </message>
@@ -20404,23 +23489,23 @@ Do you want to ignore them?</source>
         <translation>Не може да стартира &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>За активния проект вече е насрочено изпълнение.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 в %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Нов файл</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Нов подпроект</translation>
@@ -20451,15 +23536,28 @@ Do you want to ignore them?</source>
         <translation>Добавянето на файлове към проекта не е успешно</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Неуспешно отваряне на терминала.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>Включване на приставката %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>Приставката „%1“ е необходима за отваряне на проекти от тип „%2“. Искате ли да я включите сега?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Неуспешен терминал за отваряне.
+        <translation type="vanished">Неуспешен терминал за отваряне.
  %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Премахване на още файлове?</translation>
     </message>
@@ -20483,12 +23581,12 @@ Please try again.</source>
  Моля, опитайте отново.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>Не можах да премахнем файл &quot;%1&quot; от проект &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_copy</translation>
     </message>
@@ -20504,17 +23602,17 @@ Please try again.</source>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Дублиращият файл не успя</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>Неуспешно копиране на файл &quot;%1&quot; на &quot;%2&quot;:%3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Неуспешно добавяне на нов файл &quot;%1&quot; към проекта.</translation>
     </message>
@@ -20539,36 +23637,32 @@ Please try again.</source>
         <translation>Не може да изтрие файл %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>Файлът на проекта %1 не може да бъде променен автоматично.
+        <translation type="vanished">Файлът на проекта %1 не може да бъде променен автоматично.
 
 Да се преименува ли %2 на %3 въпреки това?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>Файлът %1 е преименуван на %2, но файл на проекта %3 не може да бъде променен автоматично.</translation>
+        <translation type="vanished">Файлът %1 е преименуван на %2, но файл на проекта %3 не може да бъде променен автоматично.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>Файлът %1 не може да бъде преименуван на %2.</translation>
+        <translation type="vanished">Файлът %1 не може да бъде преименуван на %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Не може да преименува файл</translation>
+        <translation type="vanished">Не може да преименува файл</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Намира файлове от всички директории на проекта. Добавете &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;номер&gt;&quot;, за да скочите към дадения номер на реда. Добавете друг &quot;+&lt;sumber&gt;&quot; или &quot;: &lt;sumber&gt;&quot;, за да скочите и към номера на колоната.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Изпълнете конфигурация</translation>
     </message>
@@ -20605,9 +23699,13 @@ Rename %2 to %3 anyway?</source>
         <translation>Превключва активния конфигурация на изпълнение на активния проект.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Автоматично открити</translation>
+        <translation type="vanished">Автоматично открити</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Управлява се автоматично</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20615,110 +23713,177 @@ Rename %2 to %3 anyway?</source>
         <translation>Автоматично се управлява с %1 или инсталатора.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>Ръководство</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>Количеството секунди за изчакване между &quot;меко убийство&quot; и &quot;трудно убиване&quot; на работещо приложение.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Текуща директория</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Директория</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Затворете изходните файлове заедно с проекта</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Запазете всички файлове преди изграждане</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Винаги разгръщайте проекта, преди да го стартирате</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Добавете пътища за търсене на библиотека за линкери, за да стартирате среда</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Винаги питайте, преди да спрете приложенията</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Създайте подходящи конфигурации за изпълнение автоматично</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Синхронизиране на конфигурациите за изпълнение:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Дали добавянето, премахването или редактирането на конфигурация за изпълнение в една конфигурация за компилиране да актуализира съответно и останалите.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Без синхронизиране</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Всяка конфигурация за компилиране има собствен набор от конфигурации за изпълнение.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Синхронизиране в рамките на един комплект</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>Конфигурациите за компилиране в един и същ комплект поддържат конфигурациите си за изпълнение синхронизирани.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Синхронизиране във всички комплекти</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Всички конфигурации за компилиране в проекта поддържат конфигурациите си за изпълнение синхронизирани, дори между комплекти.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Списък с ясни проблеми при новото изграждане</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Абортирайте грешки при изграждането на всички проекти</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Започнете процесите на изграждане с нисък приоритет</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Предупреждавайте срещу изграждането на директории с пространства или символи, които не са ASCII</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Някои инструменти за изграждане на наследство не се справят добре с пътеки, които съдържат „специални“ герои като пространства, потенциално водещи до фалшиви грешки в изграждането. &lt;p&gt; Премахнете отметката от тази опция, ако не работите с такива инструменти.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Показване само на подходящите комплекти</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Показване само на активните комплекти</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>Комплекти, изброени в режим „Проекти“:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Не изграждайте нищо</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Изградете целия проект</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Изградете само приложението, което трябва да се изпълнява</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Компилиране и изпълнение</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Всички</translation>
+        <translation type="vanished">Всички</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Същият проект</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Същият проект</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Всички</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20726,12 +23891,12 @@ Rename %2 to %3 anyway?</source>
         <translation>Същата директория за изграждане</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Същото приложение</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Активиран</translation>
     </message>
@@ -20746,32 +23911,30 @@ Rename %2 to %3 anyway?</source>
         <translation>Изведено от Project</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Използвайте jom вместо nmake</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>Покажете всички комплекти в режим „Build &amp; Run“ в „проекти“</translation>
+        <translation type="vanished">Покажете всички комплекти в режим „Build &amp; Run“ в „проекти“</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Покажете и неактивни комплекти в режим &quot;Build &amp; Run&quot; в &quot;проекти&quot;.</translation>
+        <translation type="vanished">Покажете и неактивни комплекти в режим &quot;Build &amp; Run&quot; в &quot;проекти&quot;.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Промените в околната среда, които се прилагат за стартиране на конфигурации, но не и изграждане на конфигурации.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Приложна среда:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Директория на проекти</translation>
     </message>
@@ -20786,33 +23949,39 @@ Rename %2 to %3 anyway?</source>
         <translation>Изградете и бягайте</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Изградете преди разгръщане:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Спрете заявленията преди изграждането:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>По подразбиране за &quot;Изпълнение в терминал&quot;:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Време е да изчакате преди приложения за спиране на силата:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>Build &amp; Run</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Отворен проект така или иначе?</translation>
     </message>
@@ -20822,7 +23991,7 @@ Rename %2 to %3 anyway?</source>
         <translation>Повреда в контрола на версията</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Не е намерена конструкция</translation>
     </message>
@@ -20842,7 +24011,12 @@ Rename %2 to %3 anyway?</source>
         <translation>Внос на изграждане</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (импортиран)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - Временно</translation>
     </message>
@@ -20852,12 +24026,27 @@ Rename %2 to %3 anyway?</source>
         <translation>Импортиран комплект</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Неуспешно зареждане на настройките от „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Е директория, но трябва да е файл.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Е файл, но трябва да е директория.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Без заглавие</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Неуспешно възстановяване на файловете на проекта</translation>
     </message>
@@ -20877,24 +24066,24 @@ Rename %2 to %3 anyway?</source>
         <translation>Премахване на проекти от сесия</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Не са активирани комплекти за този проект. Активирайте комплекти в режим &quot;проекти&quot;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Преименувайте повече файлове?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Искате ли да преименувате и тези файлове?
  %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Изберете Drop Action</translation>
     </message>
@@ -20976,17 +24165,22 @@ What should %1 do now?</source>
         <translation>Проект за актуализиране на отказ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt; Предупреждение: &lt;/b&gt; Този файл се генерира.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Предупреждение:&lt;/b&gt; Този файл е вътре в директорията за компилиране.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt; Предупреждение: &lt;/b&gt; Този файл е извън директорията на проекта.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Опростете дървото</translation>
     </message>
@@ -21031,7 +24225,7 @@ What should %1 do now?</source>
         <translation>Синхронизирайте с редактор</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Филтърно дърво</translation>
     </message>
@@ -21046,7 +24240,7 @@ What should %1 do now?</source>
         <translation>Alt+x</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Отворена сесия #%1</translation>
     </message>
@@ -21068,23 +24262,23 @@ What should %1 do now?</source>
         <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Отворен %1 &quot; %2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>Отворен%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>сесия</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (последна сесия)</translation>
     </message>
@@ -21094,39 +24288,39 @@ What should %1 do now?</source>
         <translation>%1 (текуща сесия)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Преименуване</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Изтриване</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>Проект</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Премахване на проекта от последните проекти</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Ясно скорошен списък на проекти</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Сесии</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Използвайте редовни изрази</translation>
     </message>
@@ -21141,7 +24335,7 @@ What should %1 do now?</source>
         <translation>Покажете линии за не-съвпадение</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Проектът беше конфигуриран за комплекти, които вече не съществуват. Изберете една от следните опции в контекстното меню, за да възстановите настройките на проекта:</translation>
     </message>
@@ -21162,7 +24356,7 @@ What should %1 do now?</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Създайте нов комплект</translation>
     </message>
@@ -21182,23 +24376,28 @@ What should %1 do now?</source>
         <translation>Премахнете всички изчезнали цели</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Щракнете, за да включите целта; щракнете отново, за да я направите активна</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Изчезнали цели</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Настройки на проекта</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Импортирайте съществуваща конструкция ...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Избор на проекта</translation>
     </message>
@@ -21208,44 +24407,44 @@ What should %1 do now?</source>
         <translation>Активен проект</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Управление на комплекти ...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Изход на изграждане на система</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>Директория за импортиране</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>Файловете се добавят имплицитно към проектите:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Nose&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Имплицитно добавяне&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>Добавете към и контрола на версиите: (&amp;V)</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Добавете като подпроект към Project:</translation>
     </message>
@@ -21255,17 +24454,17 @@ What should %1 do now?</source>
         <translation>Добавете към &amp;Project:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>Основателно хранилище за контрол на версиите не може да бъде създадено в &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Неуспешно добавяне на &quot;%1&quot; към системата за контрол на версиите.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>Файлове, които трябва да се добавят:</translation>
     </message>
@@ -21275,7 +24474,7 @@ What should %1 do now?</source>
         <translation>Файлове, които да бъдат добавени в</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Премахване</translation>
@@ -21286,40 +24485,60 @@ What should %1 do now?</source>
         <translation>Премахнете задачата от списъка със задачи.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Изпълнете настройки</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Променливи в средата на работа.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Работната директория на конфигурацията на изпълнение.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>Използване на &lt;a href=&quot;dummy&quot;&gt;глобалните настройки&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Използване на глобалните настройки</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Използване на глобалните настройки</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Използване на персонализирани настройки</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Името на конфигурацията на изпълнение.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>Изпълнимото изпълнимо конфигурация на Run.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Няма активна система за изграждане</translation>
+        <translation type="vanished">Няма активна система за изграждане</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>Изпълнете на %{устройство: име}</translation>
     </message>
     <message>
@@ -21329,12 +24548,12 @@ What should %1 do now?</source>
         <translation>%1 (ON %{устройство: име})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>Терминал</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Работи в терминал</translation>
     </message>
@@ -21344,33 +24563,33 @@ What should %1 do now?</source>
         <translation>Работна директория</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Изберете Работна директория</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Нулирайте по подразбиране</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Аргументи</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Аргументи на командния ред:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Превключване на многоетапен режим.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Изпълним</translation>
     </message>
@@ -21381,12 +24600,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Изпълним:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Алтернативен изпълним файл на устройство:</translation>
     </message>
@@ -21396,7 +24615,7 @@ What should %1 do now?</source>
         <translation>Използвайте тази команда вместо това</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Добавете пътя за търсене на библиотека Build към dyld_library_path и dyld_framework_path</translation>
     </message>
@@ -21411,7 +24630,17 @@ What should %1 do now?</source>
         <translation>Добавете пътя за търсене на библиотека Build към ld_library_path</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Използване на платформата Qt VNC за показване</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>Задава QT_QPA_PLATFORM=vnc, което пренасочва потребителския интерфейс на приложението на Qt към вграден VNC сървър. Свържете се с интерфейса на приложението с VNC клиент. Вижте изхода на приложението за подробности.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Използвайте версия за отстраняване на грешки на рамките (dyld_image_suffix = _debug)</translation>
     </message>
@@ -21421,7 +24650,32 @@ What should %1 do now?</source>
         <translation>Изпълнете като Root потребител</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Изпълнение като потребител</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Изпълнение като потребител:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>root</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Включване на филтриране по категории на журнала</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Включва филтриране по категории на журнала (QLoggingCategory) в изхода на приложението. Изисква Qt 6.11 или по-нова версия.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Емулатор</translation>
     </message>
@@ -21431,22 +24685,39 @@ What should %1 do now?</source>
         <translation>Стартер:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>Използване на пренасочване на X11:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>X11 Пренасочване:</translation>
+        <translation type="vanished">X11 Пренасочване:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Напред към локален дисплей</translation>
+        <translation type="vanished">Напред към локален дисплей</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Неочаквано състояние на управление на контрола %1, когато започна работник %2.</translation>
+        <translation type="vanished">Неочаквано състояние на управление на контрола %1, когато започна работник %2.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Няма производител на рецепта.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Събирането на портове не може да се използва. Не е зададено устройство.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Не са намерени свободни портове.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; все още работи.&lt;center/&gt;&lt;center&gt;Да се принуди ли да спре?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -21466,108 +24737,114 @@ What should %1 do now?</source>
         <translation>&amp;Продължете да бягате</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>Принудително спиране на процеса...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Не може да извлече изход за отстраняване на грешки.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>Искане към процеса да спре...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>Процесът неочаквано не завърши.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Загубена ли е връзката?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Потребителят поиска спиране. Изключване ...</translation>
+        <translation type="vanished">Потребителят поиска спиране. Изключване ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Дистанционният процес не приключи навреме. Загубена връзка?</translation>
+        <translation type="vanished">Дистанционният процес не приключи навреме. Загубена връзка?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Не може да се изпълни: Не е дадена команда.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1, излязъл с код %2</translation>
+        <translation type="vanished">%1, излязъл с код %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 катастрофира.</translation>
+        <translation type="vanished">%1 катастрофира.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Процесът приключи насила.</translation>
+        <translation type="vanished">Процесът приключи насила.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Стартиране %1 ...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Околна среда:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Не е посочено изпълним.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Процесът не успя да започне.</translation>
+        <translation type="vanished">Процесът не успя да започне.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>Възникна неизвестна грешка в процеса.</translation>
+        <translation type="vanished">Възникна неизвестна грешка в процеса.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Или призованата програма &quot;%1&quot; липсва, или може да нямате достатъчно разрешения, за да се позовете на програмата.</translation>
+        <translation type="vanished">Или призованата програма &quot;%1&quot; липсва, или може да нямате достатъчно разрешения, за да се позовете на програмата.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Процесът се срина.</translation>
+        <translation type="vanished">Процесът се срина.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Възникна грешка при опит за писане на процеса. Например, процесът може да не работи или може да е затворил входния си канал.</translation>
+        <translation type="vanished">Възникна грешка при опит за писане на процеса. Например, процесът може да не работи или може да е затворил входния си канал.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Възникна грешка при опит да се чете от процеса. Например, процесът може да не работи.</translation>
+        <translation type="vanished">Възникна грешка при опит да се чете от процеса. Например, процесът може да не работи.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Премахнете всички</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Разгръщане</translation>
+        <translation type="vanished">Разгръщане</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Метод:</translation>
+        <translation type="vanished">Метод:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Изпълнете конфигурация:</translation>
+        <translation type="vanished">Изпълнете конфигурация:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Премахване на конфигурацията на изпълнение?</translation>
     </message>
@@ -21577,7 +24854,7 @@ What should %1 do now?</source>
         <translation>Наистина ли искате да изтриете конфигурацията за изпълнение &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Премахване на конфигурациите за изпълнение?</translation>
     </message>
@@ -21587,17 +24864,37 @@ What should %1 do now?</source>
         <translation>Наистина ли искате да изтриете всички конфигурации за изпълнение?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Ново име за конфигурация на изпълнение &lt;B&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Отказ Build &amp;&amp; премахване на конфигурацията за внедряване</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Клониране от конфигурация за изпълнение</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Няма други конфигурации за изпълнение.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Настройки за внедряване</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Активна конфигурация за внедряване:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Премахване на конфигурацията на разгръщане %1?</translation>
     </message>
@@ -21622,12 +24919,27 @@ What should %1 do now?</source>
         <translation>Наистина ли искате да изтриете конфигурация за внедряване &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Ново име за конфигурация на внедряване &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Масово премахване...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Клониране тук...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Активна конфигурация за изпълнение:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Източна директория:</translation>
     </message>
@@ -21677,12 +24989,12 @@ These files are preserved.</source>
         <translation>Редактиране на файлове</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Добавете съществуващата директория</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Шоу в редактор</translation>
     </message>
@@ -21692,12 +25004,14 @@ These files are preserved.</source>
         <translation>Показване на местоположението на задачата в редактор.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Файлове</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Импортирайте съществуващ проект</translation>
     </message>
@@ -21707,12 +25021,13 @@ These files are preserved.</source>
         <translation>Име и местоположение на проекта</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Име на проекта:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Избор на файл</translation>
     </message>
@@ -21727,68 +25042,63 @@ These files are preserved.</source>
         <translation>Импортира съществуващи проекти, които не използват Qmake, Cmake, QBS, Meson или AutoTools. &lt;p&gt; Това създава файл на проекта, който ви позволява да използвате %1 като редактор на кодове и като стартер за отстраняване на грешки и анализиране на инструменти. Ако искате да изградите проекта, може да се наложи да редактирате генерирания файл на проекта.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Неизвестна система за изграждане &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Целеви настройки</translation>
+        <translation type="vanished">Целеви настройки</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Източна директория</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Система за изграждане</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Име на текущия проект</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Конфигуриране на проект</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Покажете всички комплекти</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Скриване на неактивни комплекти</translation>
+        <translation type="vanished">Скриване на неактивни комплекти</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>В този проект не е дефиниран комплект.</translation>
+        <translation type="vanished">В този проект не е дефиниран комплект.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Конфигуриране на проект</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kit не е подходящ за проект</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Щракнете, за да активирате</translation>
+        <translation type="vanished">Щракнете, за да активирате</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>Активирайте комплект за проект &quot;%1&quot;</translation>
     </message>
@@ -21833,12 +25143,11 @@ These files are preserved.</source>
         <translation>Копирайте стъпки от друг комплект ...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Активирайте комплект</translation>
+        <translation type="vanished">Активирайте комплект</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Не са намерени подходящи комплекти.</translation>
     </message>
@@ -21858,18 +25167,23 @@ These files are preserved.</source>
         <translation>Въведете за филтриране на комплекти по име ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Скриване на неподходящите комплекти</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Изберете комплекти за вашия проект</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Следните комплекти могат да се използват за проект &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt; Грешка: &lt;/b&gt;</translation>
@@ -21881,12 +25195,12 @@ These files are preserved.</source>
         <translation>&lt;b&gt; Предупреждение: &lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 се нуждае от компилатор, настроен за изграждане. Конфигурирайте компилатор в опциите на комплекта.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Грешка:</translation>
     </message>
@@ -21896,7 +25210,7 @@ These files are preserved.</source>
         <translation>Предупреждение:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Не може да отвори файл със задачи %1: %2</translation>
     </message>
@@ -21921,7 +25235,7 @@ These files are preserved.</source>
         <translation>Спрете да наблюдавате файловете с задачи.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>Грешка в TaskHub</translation>
     </message>
@@ -21931,42 +25245,46 @@ These files are preserved.</source>
         <translation>ПРЕДУПРЕЖДЕНИЕ НА TASPHUB</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Проблем с изграждането</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Проблеми</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Показват предупреждения</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Създаване на проблеми от външен изход на компилирането...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Филтриране по категории</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>не актуални</translation>
+        <translation type="vanished">не актуални</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Тази верига за инструменти е невалидна.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>Настройки за автоматично откриване на инструменти</translation>
     </message>
@@ -21985,43 +25303,59 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
  Активирайте това, ако планирате да създадете 32-битови X86 двоични файлове, без да използвате специален кръстосан компилатор.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Тип</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Език</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Отново открийте</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Настройки за автоматично откриване ...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Открити дублиращи компилатори</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Не всички компилатори са настроени правилно.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Следният компилатор вече беше конфигуриран: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; Той не беше конфигуриран отново.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Следните компилатори вече бяха конфигурирани: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; Те не бяха конфигурирани отново.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Компилатори</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Анотира</translation>
     </message>
@@ -22037,6 +25371,9 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>Отказ</translation>
     </message>
@@ -22046,12 +25383,26 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Изчаква се приложенията да спрат.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Можете да редактирате тази конфигурация във файла .qtcreator/project.json.</translation>
+        <translation type="vanished">Можете да редактирате тази конфигурация във файла .qtcreator/project.json.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Клонирайте конфигурацията, за да я промените. Или направете промените във файла .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Мениджър на работни пространства</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>Копие на %1</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Изключете от проекта</translation>
     </message>
@@ -22061,23 +25412,294 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Rescan Workspace</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>Подмяна на подпис</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>Xcodebuild не успя.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Копиране</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1 в „%2“</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>&amp;Път до компилатора</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>Път до компилатора %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Задаване ръчно</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Неуспешно копиране на потребителските настройки на проекта от „%1“ в новото местоположение по подразбиране „%2“: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>„%1“ не можа да се отвори за запис: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>Конфигурация на Windows</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Всички промени на тази страница влизат в сила незабавно.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>Изберете пътя за изтегляне на NuGet и Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>Избор на път за изтегляне</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>Изберете пътя до NuGet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>Избор на файла nuget.exe</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>Изтегляне на NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>Автоматично изтегляне на NuGet.
+
+NuGet е необходим за изтегляне на Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Изберете пътя до Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Изтегляне на Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Автоматично изтегляне на Windows App SDK чрез NuGet.
+
+Ако автоматичното изтегляне е неуспешно, Qt Creator предлага да отвори URL адреса за изтегляне
+в системния браузър за ръчно изтегляне.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>Пътят за изтегляне съществува.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>Пътят до NuGet съществува.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>Пътят до Windows App SDK съществува.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>Настройките на Windows App SDK са наред.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>Настройките на Windows App SDK съдържат грешки.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Избор на път до Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>Път за изтегляне</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>Местоположение за изтегляне:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>Местоположение на NuGet:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>Настройки на Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>Местоположение на Windows App SDK:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>Изтеглянето на NuGet е неуспешно.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Да се отвори ли URL адресът на NuGet за ръчно изтегляне?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>Отваряне на URL адреса за изтегляне</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>Изтегляне</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>Изтегляне на NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>URL адресът за изтегляне на SDK Tools е празен.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>Възникнаха SSL грешки, изтеглянето е прекъснато.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>Изтеглянето на NuGet от URL адрес %1 е неуспешно: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>Изтеглянето от %1 беше пренасочено.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>Избраният път за изтегляне (%1) на NuGet вече съществува.
+Изберете друг път.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>Пътят за изтегляне не е конфигуриран.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Изтегляне на Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK вече е конфигуриран.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Изтегляне на Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>Изтеглянето на Windows App SDK е неуспешно.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Да се отвори ли URL адресът на Windows App SDK за ръчно изтегляне?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Изисквания за актуализиране</translation>
     </message>
@@ -22108,22 +25730,25 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Инсталирайте пакети</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>Инсталирането на „%1“ е неуспешно: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Инсталирането на &quot;%1&quot; беше отменена чрез тайм -аут.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Инсталирането на &quot;%1&quot; беше анулирана от потребителя.</translation>
+        <translation type="vanished">Инсталирането на &quot;%1&quot; беше анулирана от потребителя.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Инсталирането на &quot; %1&quot; не успя с изходния код %2.</translation>
+        <translation type="vanished">Инсталирането на &quot; %1&quot; не успя с изходния код %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>Repl</translation>
@@ -22159,7 +25784,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Отворен интерактивен Python. Или импортиране на нищо, импортиране на текущия файл, или импортиране на всичко (*) от текущия файл.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Не е избран Python</translation>
     </message>
@@ -22174,14 +25799,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Управление на интерпретаторите на Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Няма</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Редактор за Python</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Няма</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
@@ -22191,9 +25820,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Преводачът използва за проекти, базирани на Python.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Без настройка на Python.</translation>
+        <translation type="vanished">Без настройка на Python.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Не е настроен Python.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22206,7 +25839,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python &quot;%1&quot; не е изпълним.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python &quot;%1&quot; не съдържа използваем PIP. PIP е необходим за инсталиране на пакети Python от индекса на пакета Python, като Pyside и Python Language Server. За да използвате някоя от тази функционалност, уверете се, че PIP е инсталиран за този python.</translation>
     </message>
@@ -22226,12 +25859,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Път към интерпретатора на Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>Python Language Server (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Инсталирайте Python Language Server (PYLS) за %1 ( %2). Езиковият сървър осигурява специфично завършване и пояснение на Python.</translation>
     </message>
@@ -22246,32 +25879,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Актуализирайте Python Language Server (PYLS) за %1 ( %2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Винаги актуализирайте</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Актуализация</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Никога</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Проблеми, анализирани от изхода на Python Runtime.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>Няма зададен интерпретатор на Python за комплект &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 Щракнете тук, за да инсталирате %1 (изисква pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Буфериран изход</translation>
     </message>
@@ -22286,8 +25929,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Скрипт:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -22297,19 +25939,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Изпълнете %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Изпълним</translation>
+        <translation type="vanished">Изпълним</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Изпълнителният е празен.</translation>
     </message>
@@ -22324,56 +25964,109 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>&quot;%1&quot; не е изпълним файл.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Добавяне</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Изтриване</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Направете по подразбиране</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp;Генериране на комплект</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Почистете</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Премахнете всички интерпретатори на Python без валиден изпълним файл.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Създаването на виртуална среда е неуспешно:
+%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Създаването на виртуална среда завърши ненормално:
+%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Създаването на виртуална среда не можа да започне:
+%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Създаването на виртуална среда е отменено.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>Намерен „%1“ (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Премахване на Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Преводачи</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Приставки:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Изпълним файл:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Използвайте Python Language Server</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>За пълен списък с налични опции се консултирайте с документацията за конфигуриране на сървъра на Python LSP] (%1).</translation>
     </message>
@@ -22383,12 +26076,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Напреднал</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Конфигурация на езиковия сървър</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>Python интерпретатор:</translation>
     </message>
@@ -22408,46 +26101,67 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Създаване</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Създайте Python Venv</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Търсене на двоични файлове на Python ...</translation>
+        <translation type="vanished">Търсене на двоични файлове на Python ...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>Намерено &quot;%1&quot; (%2)</translation>
+        <translation type="vanished">Намерено &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Премахване на Python</translation>
+        <translation type="vanished">Премахване на Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>„Данни“ на страница на Python Wizard очаква карта с „елементи“, съдържаща списък с обекти.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Данните от страницата на Python Wizard Fage очакват полето „TRKEY“, съдържащо видимия низ от потребителски интерфейс за тази версия на Python и поле „стойност“, съдържащо обект с поле „Pysideversion“, използвано за оператори за импортиране във файловете на Python.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>Версия на Pyside:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Грешка при анализ: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Грешка в типа: „%1“ трябва да е „%2“, а не „%3“.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Грешка: липсващ възел – таблицата „%1“ трябва да съдържа възел „%2“.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>Възелът „%1“ е празен.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Файлът „%1“ не съществува.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>XML грешка на ред %1, колона %2: %3</translation>
@@ -22461,7 +26175,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Преместване на раздела наляво</translation>
     </message>
@@ -22479,20 +26193,402 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Свързване...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>„%1“ не е изпълним файл.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Неуспешно стартиране на обвивката: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Процесът на обвивката завърши с код %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>Процесът завърши с код: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Мащаб: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Копиране</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Поставяне</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Изчистване на обвивката</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Избор на всичко</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Ясен избор</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>Преместване на курсора една дума наляво</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>Преместване на курсора една дума надясно</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Изтриване на думата отляво</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Изтриване на реда отляво</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Затваряне на раздела</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Затваряне на всички раздели</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Затваряне на другите раздели</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Обвивка</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Конфигуриране...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Вмъкване на макропроменлива</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Нова обвивка</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Създаване на нова обвивка.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Затваряне на обвивката</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Затваряне на текущата обвивка.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Следваща обвивка</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Предишна обвивка</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Устройства</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Текуща стойност на %{%1}: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Команден ред</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>Цветът, използван за %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Неуспешно отваряне на файла.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>Грешка при анализ на JSON: „%1“, при отместване: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Не са намерени цветове.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Невалиден формат на цвят.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Неизвестен формат на цветова схема.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Използване на вътрешния терминал</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>Използва вътрешния терминал, когато е включено „Изпълнение в терминал“, и за „Отваряне на терминал тук“.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Семейство:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Шрифтовото семейство, използвано в терминала.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Размер:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Размерът на шрифта, използван в терминала (в пунктове).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Мащаб:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Мащабира размера на шрифта. Ctrl+колелце увеличава една обвивка за сесията.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Междуредие:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Височината на всеки ред, като процент от тази на шрифта.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Разрешаване на мигащ курсор</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>Позволява на курсора да мига.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Път до обвивката:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Изпълнимият файл на обвивката, който да се стартира.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Аргументи на обвивката:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Аргументите, които да се подадат на обвивката.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Изпращане на клавиша Escape към терминала</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>При натискане изпраща клавиша Escape към терминала, вместо да затвори терминала.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>Изпраща Esc към терминала вместо %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Натиснете %1, за да изпратите Esc към терминала.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Блокиране на клавишни комбинации в терминала</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Предотвратява намесата на клавишните комбинации на Qt Creator в терминала.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>Клавишните комбинации на %1 са блокирани, когато фокусът е в терминала.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>Клавишните комбинации на %1 имат предимство.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Звуков сигнал</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Кара терминала да издава звуков сигнал при получаване на звънец.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Включване на проследяване на мишката</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Включва проследяване на мишката в терминала.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Включване на динамично пренареждане на текста (експериментално)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Пренарежда текста при преоразмеряване на терминала. Имайте предвид, че това не работи правилно с всички обвивки и подканы.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>Общи</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Шрифт</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Обвивка по подразбиране</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>Обвивката, която се отваря с бутона +. „Автоматично“ избира най-добрата инсталирана и следва промените в инсталираните.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Автоматично (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+67" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+35" />
         <source>Full</source>
         <translation>Пълна</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>First Letter</source>
         <translation>Първа буква</translation>
     </message>
@@ -22517,32 +26613,32 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Активиране на завършването:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>Време за изчакване в ms:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Праг на знаците:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>Общ &amp;префикс за автоматично довършване</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Вмъква общия префикс на наличните елементи за завършване.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Автоматично разделяне на низове</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22551,57 +26647,57 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 Освен това Shift+Enter вмъква екраниращ знак в позицията на курсора и премества останалата част от низа на следващия ред.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Поставете отварящи или затварящи скоби</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Вмъкване на затварящ цитат</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Оградете избрания текст със скоби</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Когато въвеждате съвпадаща скоба и има селекция на текст, вместо да премахва селекцията, я огражда със съответните знаци.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>Вмъкнете &amp;интервал след името на функцията</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Оградете избрания текст с кавички</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Когато въвеждате съответстващ цитат и има избор на текст, вместо да премахне селекцията, го заобикаля със съответните знаци.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Анимирайте автоматично вмъкнатия текст</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Показвайте визуална подсказка, когато например скоба или цитат се вмъкват автоматично от редактора.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Маркирайте автоматично вмъкнатия текст</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Пропускане на автоматично вмъкнат знак при въвеждане</translation>
     </message>
@@ -22611,17 +26707,17 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Пропуснете автоматично вмъкнатия знак, ако бъде въведен отново ръчно след завършване или чрез натискане на tab.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Премахване на автоматично вмъкнат текст при връщане назад</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Премахнете автоматично вмъкнатия знак, ако тригерът бъде изтрит с връщане след завършване.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Презапишете затварящата пунктуация</translation>
     </message>
@@ -22631,12 +26727,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Автоматично презаписване на затварящи скоби и кавички.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>Автоматично поставете съвпадащи знаци (&amp;A)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+103" />
         <source>Enable Doxygen blocks</source>
         <translation>Активиране на блоковете Doxygen</translation>
     </message>
@@ -22684,25 +26780,25 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">&amp;Автоматично вмъкване на съответстващи знаци</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Коментари към документацията</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+96" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+48" />
         <source>Completion</source>
         <translation>Завършване</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+126" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Грешка</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Не е валиден тригер. Валиден тригер може да съдържа само букви, цифри или долна черта, като първият знак е ограничен до буква или долна черта.</translation>
     </message>
@@ -22722,7 +26818,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Грешка при връщането на фрагмента.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Възстановяване на вграденото</translation>
     </message>
@@ -22732,17 +26828,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>група:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Добавете</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Възстановяване на премахнати вградени елементи</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Нулиране на всички</translation>
     </message>
@@ -22757,7 +26853,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Няма избран фрагмент.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Откъси</translation>
     </message>
@@ -22766,9 +26862,13 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">Ред: 9999, Col: 999</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>Курсори: %2</translation>
+        <translation type="vanished">Курсори: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+202" />
+        <source>Cursors: %1</source>
+        <translation>Курсори: %1</translation>
     </message>
     <message>
         <location line="+8" />
@@ -22802,6 +26902,11 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Избрани редове:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Позиция в документ:</translation>
     </message>
@@ -22811,7 +26916,50 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Котва:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Интервали</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>Табулации</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Настройки за отстъпи: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Настройки на документа</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Настройки на табулацията</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Размер на отстъпа</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Размер на табулацията</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Глобални настройки...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>Unix Line Endings (LF)</translation>
     </message>
@@ -22821,17 +26969,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Краи на Windows Line (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Други анотации</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>Печат на документ</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Файлова грешка</translation>
     </message>
@@ -22846,7 +26994,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Текстът е твърде голям, за да бъде показан (%1 MB).</translation>
     </message>
@@ -22861,32 +27009,84 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Изберете Кодиране</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Грешка при синтактичния анализ на фрагмента</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>За този файл не беше намерена дефиниция на подчертаване. Искате ли да изтеглите допълнителни файлове с дефиниция на акцентите?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>За този файл беше намерена повече от една дефиниция на подчертаване. Кое трябва да се използва за маркиране на този файл?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Запомни моя избор</translation>
     </message>
     <message>
-        <location line="+3822" />
+        <location line="+762" />
+        <source>Apply</source>
+        <translation>Прилагане</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Прилагане на текущото предложение.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Прилагане на една дума</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Прилагане на една дума от текущото предложение.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Прилагане на реда</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Прилагане на един ред от текущото предложение.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-28" />
+        <source>Fold Recursively</source>
+        <translation>Рекурсивно свиване</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Свиване на всички</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Рекурсивно разгъване</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Разгъване на всичко</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Мащабиране: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Изтриване на UTF-8 BOM при запазване</translation>
     </message>
@@ -22896,27 +27096,27 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Добавете UTF-8 BOM при запазване</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Не може да намери определение.</translation>
     </message>
     <message>
-        <location line="-9882" />
+        <location line="-10575" />
         <source>Line: %1, Col: %2</source>
         <translation>Ред: %1, колона: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+45" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Изчистване на празното пространство</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>In entire &amp;document</source>
         <translation>В целия &amp;документ</translation>
     </message>
     <message>
-        <location line="-4" />
+        <location line="+15" />
         <source>Clean indentation</source>
         <translation>Чиста вдлъбнатина</translation>
     </message>
@@ -22926,7 +27126,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>&amp;Осигурете нов ред в края на файла</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -22979,22 +27179,48 @@ Influences the indentation of continuation lines.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>Размер на &amp;отстъпа по подразбиране:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Подравняване на продължаващите редове:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>Раздели и отстъпи</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Отстъпът на кода се конфигурира в настройките на &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; и &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Настройката за отстъп на текстовия редактор се използва само за файлове без код. Вижте настройките за стил на кодиране на C++ и Qt Quick, за да конфигурирате отстъп за кодови файлове.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158" />
+        <source>Auto detect</source>
+        <translation>Автоматично откриване</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1 се опитва да открие настройките за отстъпите въз основа на съдържанието на файла. Ако откриването не успее, се използват настройките по-долу.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Политика за табулации по подразбиране:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Само интервали</translation>
     </message>
@@ -23004,9 +27230,8 @@ Influences the indentation of continuation lines.
         <translation>Само раздели</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Смесени</translation>
+        <translation type="vanished">Смесени</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23014,12 +27239,11 @@ Influences the indentation of continuation lines.
         <translation>Размер на раздела: (&amp;B)</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Размер на отстъпа:</translation>
+        <translation type="vanished">&amp;Размер на отстъпа:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Въобще не</translation>
     </message>
@@ -23034,44 +27258,41 @@ Influences the indentation of continuation lines.
         <translation>С нормален отстъп</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Размер на раздела на сериен терминал:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Правила за раздели:</translation>
+        <translation type="vanished">Правила за раздели:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+24" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Активиране на автоматично &amp;отстъп</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+4" />
         <source>Never</source>
         <translation>Никога</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-236" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-148" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Винаги</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>Във водещо бяло пространство</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Нито един</translation>
+        <translation type="vanished">Нито един</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Следва предишните отстъпи</translation>
     </message>
@@ -23081,7 +27302,7 @@ Influences the indentation of continuation lines.
         <translation>Премахване на отстъпи</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -23112,28 +27333,39 @@ Specifies how backspace interacts with indentation.
 </translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+22" />
         <source>Prefer single line comments</source>
         <translation>Предпочитайте едноредови коментари</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-61" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Автоматично</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-33" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Клавишът Tab извършва автоматично отстъпване:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Няма</translation>
+    </message>
+    <message>
+        <location line="+30" />
         <source>At Line Start</source>
         <translation>На линия старт</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>След бяло пространство</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Посочва къде трябва да се позиционират коментарите на един ред.</translation>
     </message>
@@ -23153,12 +27385,12 @@ Specifies how backspace interacts with indentation.
         <translation>%1: Коментарът се поставя след водещи бели пространства.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Предпочитана позиция за коментар:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+12" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Пропуснете празно пространство за типове файлове:</translation>
     </message>
@@ -23168,32 +27400,32 @@ Specifies how backspace interacts with indentation.
         <translation>За изброените шаблони на файлове не изрязвайте празното пространство в края.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Списък на шаблони на файлове, поддържащи заместващи знаци, разделени със запетаи или точка и запетая.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-18" />
         <source>Always writes a newline character at the end of the file.</source>
         <translation>Винаги записва знак за нов ред в края на файла.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-19" />
         <source>Removes trailing whitespace upon saving.</source>
         <translation>Премахва празното пространство в края при записване.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+25" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Коригира празното пространство в началото според настройките на раздела.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-15" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Изчиства празното пространство в целия документ вместо само за променени части.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Добавете, ако кодирането е UTF-8</translation>
     </message>
@@ -23208,7 +27440,7 @@ Specifies how backspace interacts with indentation.
         <translation>Винаги изтривай</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -23225,22 +27457,22 @@ Specifies how backspace interacts with indentation.
 &lt;p&gt;Тази настройка &lt;b&gt;не&lt;/b&gt; влияе върху използването на спецификации на UTF-16 и UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Скриване на курсора на мишката, докато пишете</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+10" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>Активиране на мащабирането с колелото за превъртане (&amp;W)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Активирайте вградения камилски калъф и навигация (&amp;N)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Активирайте интелигентната промяна на избора</translation>
     </message>
@@ -23250,7 +27482,7 @@ Specifies how backspace interacts with indentation.
         <translation>Използването на действия Избор на блок нагоре/надолу вече ще осигури по-интелигентни селекции.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Показване на подсказки за помощ чрез клавишна комбинация (Alt)</translation>
     </message>
@@ -23260,22 +27492,22 @@ Specifies how backspace interacts with indentation.
         <translation>Натискането на Alt показва чувствителна към контекста помощ или информация за въвеждане като подсказки.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>При задържане на мишката</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>При Shift+поставяне на мишката</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>Въвеждане</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Почиствания при запазване</translation>
     </message>
@@ -23285,108 +27517,111 @@ Specifies how backspace interacts with indentation.
         <translation>Действия за почистване, които се извършват автоматично точно преди файлът да бъде записан на диск.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Файлови кодировки</translation>
+        <translation type="vanished">Файлови кодировки</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>Мишка и клавиатура</translation>
+        <translation type="vanished">Мишка и клавиатура</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Отстъп назад:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Кодиране по подразбиране:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>UTF-8 BOM:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Краища на редове по подразбиране:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Показване на подсказки за помощ с помощта на мишката:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Показва чувствителна към контекста помощ или информация за въвеждане при задържане на мишката.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Показва контекстно-зависима помощ или информация за въвеждане на Shift+Mouseover.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+139" />
-        <location line="+201" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+232" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Дисплей</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-318" />
         <source>Display line &amp;numbers</source>
         <translation>Показване на ред &amp;номера</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+49" />
         <source>Mark &amp;text changes</source>
         <translation>Маркиране на промени в текста (&amp;T)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>Автоматично сгъване на първия &amp;коментар</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>Маркери за показване и сгъване (&amp;F)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-17" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Визуализирайте празното пространство</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="+21" />
         <source>Highlight current &amp;line</source>
         <translation>Маркирайте текущия &amp;ред</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-25" />
         <source>Enable text &amp;wrapping</source>
         <translation>Активиране на обвиване на текст (&amp;W)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Задайте &lt;a href=&quot;font zoom&quot;&gt;редовото разстояние на шрифта&lt;/a&gt; на 100%, за да активирате опцията за обвиване на текст.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Показване на дясно &amp;поле в колона:</translation>
+        <translation type="vanished">Показване на дясно &amp;поле в колона:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Показване на десен &amp;ръб след колона:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Оцветете цялата област на полето</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Използвайте поле, специфично за контекста</translation>
     </message>
@@ -23396,62 +27631,77 @@ Specifies how backspace interacts with indentation.
         <translation>Ако е налично, използвайте различно поле. Например ColumnLimit от плъгина ClangFormat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Ширина на съдържанието на редактора:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% означава, че се използва цялата ширина на прозореца на редактора за показване на текста (по подразбиране).&lt;br&gt;50% означава, че половината от ширината на редактора се използва за показване на текста.&lt;br&gt;Останалите 50% се разделят на ляв и десен ръб, като съдържанието се центрира.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Анимиране на съответстващи скоби</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Маркирайте резултатите от търсенето в лентата за превъртане</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Animate navigation within file</source>
         <translation>Анимирайте навигацията във файла</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-78" />
         <source>Highlight &amp;blocks</source>
         <translation>Маркирайте &amp;блокове</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+32" />
         <source>Center &amp;cursor on scroll</source>
         <translation>Центрирайте &amp;курсора при превъртане</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Визуализирайте отстъп</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Показване на края на реда на файла</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Показване на кодиране на файла</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Винаги отваряйте връзки в друго разделение</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Маркирайте съвпадащите скоби</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-36" />
         <source>Shows tabs and spaces.</source>
         <translation>Показва раздели и интервали.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Показване на настройките за табулации</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Маркирайте избора</translation>
     </message>
@@ -23461,7 +27711,7 @@ Specifies how backspace interacts with indentation.
         <translation>Добавя цветен фон и маркер към лентата за превъртане към появата на избрания текст.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>До съдържанието на редактора</translation>
     </message>
@@ -23476,12 +27726,17 @@ Specifies how backspace interacts with indentation.
         <translation>Подравнено от дясната страна</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>Между редовете</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Включване на миникарта</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Линейни пояснения</translation>
     </message>
@@ -23490,27 +27745,27 @@ Specifies how backspace interacts with indentation.
         <translation type="vanished">Анотации на редове</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>Марж</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>Опаковане</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-220" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-18" />
         <source>Enable &amp;mouse navigation</source>
         <translation>Активиране на &amp;навигация с мишка</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+571" />
         <source>Copy Color Scheme</source>
         <translation>Копиране на цветова схема</translation>
     </message>
     <message>
-        <location line="-434" />
+        <location line="-458" />
         <location line="+6" />
         <source>%</source>
         <translation>%</translation>
@@ -23538,7 +27793,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Цветова схема за тема &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+27" />
         <source>Zoom:</source>
         <translation>мащабиране:</translation>
     </message>
@@ -23548,7 +27803,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Разстояние между редовете:</translation>
     </message>
     <message>
-        <location line="+370" />
+        <location line="+383" />
         <location line="+92" />
         <source>Color scheme name:</source>
         <translation>Име на цветовата схема:</translation>
@@ -23559,7 +27814,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>%1 (копие)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Изтриване на цветова схема</translation>
     </message>
@@ -23569,14 +27824,14 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Сигурни ли сте, че искате да изтриете тази цветова схема за постоянно?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Импортиране на цветова схема</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Цветова схема (*.xml);;Всички файлове (*)</translation>
     </message>
@@ -23586,8 +27841,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Експортиране на цветова схема</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+41" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-233" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+38" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-238" />
         <source>Remove</source>
         <translation>Премахване</translation>
     </message>
@@ -23606,12 +27861,17 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">Текущи настройки:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Избраната конфигурация е само за четене. Копирайте конфигурацията, за да я редактирате.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Персонализирани настройки:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Копиране на стил на код</translation>
     </message>
@@ -23637,8 +27897,8 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-534" />
-        <location line="+460" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-557" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Изтрий</translation>
     </message>
@@ -23650,22 +27910,22 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Стилове на код (*.xml);;Всички файлове (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Не може да се импортира кодов стил от &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Стил на кода за експортиране</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [прокси: %2]</translation>
     </message>
@@ -23680,7 +27940,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>%1 [Персонализирано]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+87" />
         <source>Color Scheme Changed</source>
         <translation>Цветовата схема е променена</translation>
     </message>
@@ -23695,7 +27955,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Изхвърлете</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Текущ файл</translation>
     </message>
@@ -23713,19 +27973,19 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Моля, обърнете внимание, че това търси само файлове, които са били записани на диск.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+191" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-526" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-549" />
+        <location line="+651" />
         <source>Font</source>
         <translation>Шрифт</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-625" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-637" />
         <source>Family:</source>
         <translation>семейство:</translation>
     </message>
@@ -23808,7 +28068,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>цвят:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Без подчертаване</translation>
     </message>
@@ -23843,18 +28103,18 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Тире-точка-точка подчертаване</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-67" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-78" />
         <source>Antialias</source>
         <translation>Антиалиас</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-254" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-265" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+30" />
         <source>Copy...</source>
         <translation>Копие...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Ред в текущия документ</translation>
     </message>
@@ -23869,7 +28129,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>&lt;ред&gt;:&lt;колона&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>Ред %1, колона %2</translation>
     </message>
@@ -23884,7 +28144,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Колона %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-239" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-208" />
         <source>Trigger Completion</source>
         <translation>Завършване на тригера</translation>
     </message>
@@ -23924,13 +28184,13 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Показване на контекстното меню</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-216" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Текст</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Избран текст в текущия документ.</translation>
     </message>
@@ -24033,7 +28293,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>&amp;Пренавиване на абзац</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3765" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4031" />
         <source>Go to line number...</source>
         <translation>Отидете на номер на ред...</translation>
     </message>
@@ -24313,7 +28573,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Сортиране на линии</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+53" />
         <source>Go to Previous Word (Camel Case)</source>
         <translation>Отидете на предишната дума (случай на камила)</translation>
     </message>
@@ -24337,7 +28597,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">&amp;Сортиране на избраните редове</translation>
     </message>
     <message>
-        <location line="-80" />
+        <location line="-74" />
         <source>Meta+Shift+S</source>
         <translation>Мета+Shift+S</translation>
     </message>
@@ -24347,33 +28607,33 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3389" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Сгънете</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+4" />
         <source>Unfold</source>
         <translation>Разгънете</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+10" />
         <source>Toggle &amp;Fold All</source>
         <translation>Превключване и сгъване на всички (&amp;F)</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Reset Font Size</source>
-        <translation>Нулиране на размера на шрифта</translation>
+        <translation type="vanished">Нулиране на размера на шрифта</translation>
     </message>
     <message>
         <source>Meta+0</source>
         <translation type="vanished">Мета+0</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
+        <translation type="vanished">Ctrl+0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24487,7 +28747,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation type="vanished">Отидете на следващата дума Camel Case с избор</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-66" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
@@ -24497,27 +28757,23 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Increase Font Size</source>
-        <translation>Увеличете размера на шрифта</translation>
+        <translation type="vanished">Увеличете размера на шрифта</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Намалете размера на шрифта</translation>
+        <translation type="vanished">Намалете размера на шрифта</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-167" />
         <source>Ctrl+{</source>
         <translation>Ctrl+{</translation>
     </message>
@@ -24567,7 +28823,7 @@ A value less than 100% can result in overlapping and misaligned graphics.</sourc
         <translation>Ctrl+Alt+надолу</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Текст</translation>
     </message>
@@ -25080,6 +29336,16 @@ To style user-defined operators, use Overloaded Operator.</source>
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Атрибут</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Атрибути.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>Коментирайте</translation>
     </message>
@@ -25326,6 +29592,26 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>Подчертайте цвета на контекстите на предупредителната диагностика.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Информация</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Цвят на подчертаване на информационните диагностики.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Информационен контекст</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Цвят на подчертаване на контекстите на информационните диагностики.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Изходен аргумент</translation>
@@ -25444,29 +29730,23 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>Глобален</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+63" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+247" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+210" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+664" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-279" />
         <source>Text Editor</source>
         <translation>Текстов редактор</translation>
     </message>
     <message>
-        <location line="-3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-109" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+89" />
         <source>Behavior</source>
         <translation>Поведение</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Не е файл с цветова схема.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>получен от QObject</translation>
@@ -25537,7 +29817,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation type="vanished">(тип име READ име WRITE setName NOTIFY nameChanged)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>с цели</translation>
@@ -25561,7 +29841,7 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>с цел</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Случай за тест за QuickTest</translation>
@@ -25615,12 +29895,12 @@ Will not be applied to whitespace in comments and strings.</source>
         <translation>пример</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Вътрешен</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Търсене</translation>
     </message>
@@ -25641,27 +29921,33 @@ Will not be applied to whitespace in comments and strings.</source>
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Прекъсване на замяната.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 от %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Всички промени по-долу влизат в сила незабавно.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Редактирайте съдържанието за предварителен преглед, за да видите как текущите настройки се прилагат към персонализирани кодови фрагменти. Промените във визуализацията не засягат текущите настройки.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
@@ -25720,7 +30006,7 @@ Excluding: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>Неизползвана променлива</translation>
     </message>
@@ -25735,12 +30021,12 @@ Excluding: %3
         <translation type="vanished">Текстов редактор</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>Не може да се прочете файлът &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>Не може да се извика %1 или е възникнала друга грешка. Времето за изчакване е достигнато при форматиране на файл %2.</translation>
     </message>
@@ -25750,12 +30036,12 @@ Excluding: %3
         <translation type="vanished">Текстов редактор</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>Failed to format: %1.</source>
         <translation>Неуспешно форматиране: %1.</translation>
     </message>
     <message>
-        <location line="+175" />
+        <location line="+174" />
         <source>Error in text formatting: %1</source>
         <translation>Грешка във форматирането на текста: %1</translation>
     </message>
@@ -25775,28 +30061,27 @@ Excluding: %3
         <translation>Файлът беше променен.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Актуализации на маркера: готово</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Актуализации на маркера:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Актуализации на маркера: започват</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дефинициите за осветяване се предоставят от &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; двигател.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Дефинициите за осветяване се предоставят от &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/ a&gt; двигател.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-180" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3735" />
         <source>Download Definitions</source>
         <translation>Изтегляне на дефиниции</translation>
     </message>
@@ -25806,7 +30091,7 @@ Excluding: %3
         <translation>Изтеглете липсващите и актуализирайте съществуващите файлове с дефиниция на синтаксис.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Презареждане на дефиниции</translation>
     </message>
@@ -25816,7 +30101,7 @@ Excluding: %3
         <translation>Презаредете външно модифицирани дефиниционни файлове.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Нулирайте запомнените дефиниции</translation>
     </message>
@@ -25826,27 +30111,40 @@ Excluding: %3
         <translation>Нулирайте дефинициите, запомнени за файлове, които могат да бъдат свързани с повече от една дефиниция на маркера.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>Файлове с дефиниция на подчертаване на синтаксиса</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Пропускане на проверката за актуализации за файлове, съвпадащи с:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Пропускане на оцветяването на синтаксиса за файлове, съвпадащи с:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Дефинициите за осветяване се предоставят от машината %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>Файлове за дефиниране на потребителски акценти</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Игнорирани файлови модели:</translation>
+        <translation type="vanished">Игнорирани файлови модели:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>Изтеглянето приключи</translation>
+        <translation type="vanished">Изтеглянето приключи</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Общ хайлайтър</translation>
     </message>
@@ -25866,23 +30164,22 @@ Excluding: %3
         <translation>Филтърно дърво</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
+        <location line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Сортиране по азбучен ред</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+126" />
+        <location line="+125" />
         <source>Outline</source>
         <translation>Контур</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Рефакторингът не може да бъде приложен.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Очакван разделител след ID на mangler.</translation>
     </message>
@@ -25902,17 +30199,16 @@ Excluding: %3
         <translation>Не може да се създаде директория с потребителски фрагменти %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Разлика спрямо текущия файл</translation>
+        <translation type="vanished">Разлика спрямо текущия файл</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Отваряне на файл</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>Показване на вградени анотации за %1</translation>
     </message>
@@ -25933,9 +30229,9 @@ Excluding: %3
         <translation>Отметка</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Отметки</translation>
     </message>
@@ -25945,17 +30241,17 @@ Excluding: %3
         <translation>Намира отметки. Филтрирайте по име на файл, от текста на реда на отметката или от текста на бележката на отметката.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Преместване нагоре</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Преместване надолу</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Редактиране</translation>
     </message>
@@ -25970,7 +30266,7 @@ Excluding: %3
         <translation>Премахнете всички</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Извадете всички отметки</translation>
     </message>
@@ -25981,14 +30277,14 @@ Excluding: %3
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Редактиране на отметка</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Toggle Bookmark</translation>
     </message>
@@ -26018,7 +30314,27 @@ Excluding: %3
         <translation>Следваща отметка в документ</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Подреждане по имена на файлове</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Забележка Текст:</translation>
     </message>
@@ -26028,12 +30344,17 @@ Excluding: %3
         <translation>Номер на линията:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>JSON редактор</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Редактор за Markdown</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Акцент</translation>
     </message>
@@ -26077,21 +30398,36 @@ Excluding: %3
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>Презарежда типа йерархия за символа под курсора.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Редактор за обикновен текст</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Избор на предишното предложение</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Избор на следващото предложение</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Името на класа не трябва да съдържа разделители на пространство от имена.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Моля, въведете име на клас.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Името на класа съдържа невалидни знаци.</translation>
     </message>
@@ -26131,12 +30467,21 @@ Excluding: %3
         <translation>Не може да се изпълни &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+109" />
+        <location line="+6" />
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+Процесът завърши с код %1.
+Натиснете Return, за да затворите този прозорец...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Не успя да стартира терминалния процес. Стъбилото излезе преди стартирането на долния.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Не може да зададе разрешения във временната директория &quot; %1&quot;: %2</translation>
     </message>
@@ -26170,9 +30515,8 @@ Excluding: %3
         <translation>Не може да се създаде сокет &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="-171" />
         <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Натиснете &lt;RETURN&gt;, за да затворите този прозорец...</translation>
+        <translation type="vanished">Натиснете &lt;RETURN&gt;, за да затворите този прозорец...</translation>
     </message>
     <message>
         <source>Cannot obtain a handle to the inferior: %1</source>
@@ -26183,7 +30527,7 @@ Excluding: %3
         <translation type="vanished">Не може да се получи състояние на изход от по-нисък: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: отменено. Намерени са %n съвпадения в %2 файла.</numerusform>
@@ -26199,7 +30543,7 @@ Excluding: %3
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>Шаблон на файл: (&amp;L)</translation>
     </message>
@@ -26239,23 +30583,23 @@ Excluding: %3
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Път:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+141" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+140" />
         <source>Location</source>
         <translation>Местоположение</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Суфиксът по подразбиране, ако не посочите изрично файлово разширение, е &quot;.%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Местен</translation>
     </message>
@@ -26265,7 +30609,7 @@ Excluding: %3
         <translation>Дистанционно</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Избирам...</translation>
     </message>
@@ -26275,29 +30619,34 @@ Excluding: %3
         <translation>Преглед...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Изберете Директория</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Изберете Изпълним файл</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Изберете файл</translation>
     </message>
     <message>
-        <location line="+176" />
+        <location line="+180" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Пътят &quot;%1&quot; се разшири до празен низ.</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Алтернативи</translation>
+    </message>
+    <message>
+        <location line="-192" />
         <location line="+10" />
         <location line="+20" />
         <source>The path &quot;%1&quot; does not exist.</source>
@@ -26340,13 +30689,13 @@ Excluding: %3
         <translation type="vanished">Пълен път: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-58" />
-        <location line="+74" />
+        <location line="-56" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Пътеката не трябва да е празна.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Вмъкване...</translation>
     </message>
@@ -26361,22 +30710,32 @@ Excluding: %3
         <translation>ясно</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Въведение и местоположение на проекта</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Използвайте като местоположение на проекта по подразбиране</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>Въведете името на проекта</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Добавяне към проекта:</translation>
+    </message>
+    <message>
+        <location line="+104" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Избраният съветник за проекти не поддържа системата за компилиране.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>Ще бъде създадена директория &quot;%1&quot;.</translation>
     </message>
@@ -26391,22 +30750,22 @@ Excluding: %3
         <translation>Файл с това име вече съществува.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Името на проекта е невалидно.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Невалиден знак &quot;.&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Намерен е невалиден символ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="-232" />
+        <location line="-250" />
         <source>Name:</source>
         <translation>Име:</translation>
     </message>
@@ -26416,7 +30775,7 @@ Excluding: %3
         <translation>Създаване в:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Файлът е променен</translation>
     </message>
@@ -26442,18 +30801,18 @@ Excluding: %3
         <translation>Поведението по подразбиране може да се зададе в Редактиране &gt; Предпочитания &gt; Околна среда &gt; Система.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Близо</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Не на всички &amp;&amp; &amp;разл</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>Файлът е премахнат</translation>
     </message>
@@ -26504,9 +30863,8 @@ Excluding: %3
     %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+89" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Файлова грешка</translation>
     </message>
@@ -26519,61 +30877,68 @@ Excluding: %3
         <translation type="vanished">Не може да се възстанови работното пространство %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Файловият формат не се поддържа.</translation>
+        <translation type="vanished">Файловият формат не се поддържа.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Не може да се намери изпълним файл за деархивиране в PATH (%1).</translation>
+        <translation type="vanished">Не може да се намери изпълним файл за деархивиране в PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Няма набор от изходни файлове.</translation>
+        <translation type="vanished">Няма набор от изходни файлове.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Няма набор от директория на местоназначение.</translation>
+        <translation type="vanished">Няма набор от директория на местоназначение.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Неуспешно отваряне на изходен файл.</translation>
+        <translation type="vanished">Неуспешно отваряне на изходен файл.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Не успя да напише изходен файл.</translation>
+        <translation type="vanished">Не успя да напише изходен файл.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Командата е неуспешна.</translation>
+        <translation type="vanished">Командата е неуспешна.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Изпълнява се %1
+        <translation type="vanished">Изпълнява се %1
 в &quot;%2&quot;.
 
 </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Нулиране</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Възстановяване по подразбиране.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Възстановяване по подразбиране</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Натиснете и задръжте, за да възстановите стойността по подразбиране.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Активирайте</translation>
     </message>
@@ -26586,6 +30951,11 @@ in &quot;%2&quot;.
         <location line="+1" />
         <source>Default</source>
         <translation>По подразбиране</translation>
+    </message>
+    <message>
+        <location line="+1774" />
+        <source>Change...</source>
+        <translation>Промяна...</translation>
     </message>
     <message>
         <source>Leave at Default</source>
@@ -26609,7 +30979,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Скриване на подробностите...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>Не питай отново (&amp;A)</translation>
     </message>
@@ -26619,12 +30989,12 @@ in &quot;%2&quot;.
         <translation>Не показвай отново (&amp;S)</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Не е посочено изпълнимо изпълними изпълними.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Неуспешно извличане на версията на clangd: Неочакван изход на clangd.</translation>
     </message>
@@ -26651,7 +31021,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Не може да се копира %1 в %2, това не е директория с възможност за запис.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+273" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Неуспешно рекурсивно копиране от &quot;%1&quot; в &quot;%2&quot; при опит за създаване на tar архив от източник: %3</translation>
     </message>
@@ -26673,18 +31043,17 @@ in &quot;%2&quot;.
         <translation type="vanished">createTempFile не е внедрен за &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+409" />
+        <location line="-136" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>Път &quot;%1&quot; съществува, но не е директория за писане.</translation>
     </message>
     <message>
-        <location line="-356" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>CopyFile не се реализира за &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>Не може да се копира от &quot;%1&quot;, това не е директория.</translation>
     </message>
@@ -26694,54 +31063,136 @@ in &quot;%2&quot;.
         <translation>Не може да копира &quot;%1&quot; в &quot;%2&quot;:%3</translation>
     </message>
     <message>
-        <location line="+103" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>FileContents не се прилага за &quot;%1&quot;.</translation>
+        <translation type="vanished">FileContents не се прилага за &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">WriteFileContents не се реализира за &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">Createtempfile не се реализира за &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">часовникът не е реализиран.</translation>
+    </message>
+    <message>
+        <location line="-173" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>Функцията „%1“ не е реализирана за „%2“.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>createSymLink не е реализиран за „%1“.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>renameFile не е реализиран за „%1“.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>Неуспешно наблюдение на „%1“, не съществува.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>Неуспешно наблюдение на „%1“.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>Неуспешно премахване на наблюдателя за „%1“, не беше намерен.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>WriteFileContents не се реализира за &quot;%1&quot;.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>Неуспешно премахване на наблюдателя за „%1“.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>Createtempfile не се реализира за &quot;%1&quot;.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>Файлът „%1“ не можа да бъде създаден.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>часовникът не е реализиран.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>Директорията „%1“ не можа да бъде създадена.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>Отказ да премахне стандартната директория &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Отказ за премахване на основната директория.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Отказва да премахне началната ви директория.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Неуспешно премахване на директория &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Неуспешно премахване на файл &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+551" />
+        <location line="+140" />
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>Файлът „%1“ не можа да се отвори.</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>Временната директория в „%1“ не можа да бъде създадена (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>Правата за „%1“ не можаха да бъдат променени.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>Неуспешно определяне дали „%1“ и „%2“ сочат към един и същ файл: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>Командата „%1“ е неуспешна: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Неуспешно създаване на символна връзка за файла „%1“ в „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>Неуспешно създаване на временната директория „%1“ (твърде много опити).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>Неуспешно създаване на временните файлове „%1“ (твърде много опити).</translation>
+    </message>
+    <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Неуспешно създаване на временен файл &quot;%1&quot; (твърде много опити).</translation>
+        <translation type="vanished">Неуспешно създаване на временен файл &quot;%1&quot; (твърде много опити).</translation>
     </message>
     <message>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -26756,7 +31207,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Файлът &quot;%1&quot; не можа да се отвори</translation>
     </message>
     <message>
-        <location line="-449" />
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Не може да се прочете &quot;%1&quot;: %2</translation>
     </message>
@@ -26773,23 +31224,38 @@ in &quot;%2&quot;.
         <translation type="vanished">Не можа да се създаде временен файл в &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="-87" />
-        <location line="+406" />
+        <location line="-139" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Неуспешно копиране на файл &quot;%1&quot; в &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() е извикана неочаквано на платформа, различна от Windows.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Неуспешно създаване на символна връзка към „%1“ в „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Неуспешно преименуване на файла „%1“ на „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>Файл &quot;%1&quot; не съществува.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Could not open File &quot;%1&quot;.</source>
-        <translation>Не може да отвори файл &quot;%1&quot;.</translation>
+        <translation type="vanished">Не може да отвори файл &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+27" />
         <source>Could not open file &quot;%1&quot; for writing.</source>
         <translation>Не може да отвори файл &quot;%1&quot; за писане.</translation>
     </message>
@@ -26807,24 +31273,21 @@ in &quot;%2&quot;.
         <translation>Не може да създаде временен файл в &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Устройството не е свързано</translation>
+        <translation type="vanished">Устройството не е свързано</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>Неуспешно четене на файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>Неуспешно записване на файл &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Неуспешно записване на файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>Неуспешно създаване на временен файл &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Неуспешно създаване на временен файл &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
@@ -26832,6 +31295,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Изтрий</translation>
     </message>
@@ -26889,7 +31353,7 @@ in &quot;%2&quot;.
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>таблицата с низове изглежда е 0x%1</translation>
     </message>
@@ -26899,7 +31363,7 @@ in &quot;%2&quot;.
         <translation>име на раздел %1 от %2 зад края на файла</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Редактиране на среда</translation>
     </message>
@@ -26920,7 +31384,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
 За да деактивирате променлива, добавете пред реда &quot;#&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>Филтър</translation>
     </message>
@@ -26930,7 +31394,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Ясен текст</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Централна джаджа</translation>
     </message>
@@ -26944,34 +31408,34 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">Автоматично скриване на заглавните ленти на изгледа</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+92" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+107" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>Името е празно.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Името съдържа интервал.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Невалиден знак &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Невалидни знаци &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Името съответства на MS Windows устройство (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>Изисква се файлово разширение %1:</translation>
     </message>
@@ -26981,7 +31445,37 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Изискват се файлови разширения %1:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Вътрешна грешка на DeviceFileAccess: watch() не върна резултат.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>Временната директория на устройство %1 не беше намерена</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Временният файл не можа да бъде създаден: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Временната директория не можа да бъде създадена: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Не е зададена кука за устройство.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>Отдалеченият път „%1“ е недостъпен.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 на %2</translation>
@@ -26993,7 +31487,7 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>%1 %2 на %3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Грешка при опит за копиране на файл: %1</translation>
     </message>
@@ -27008,49 +31502,52 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Не можах да задам разрешения за „%1“</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>Не може да се създаде символна връзка към „%1“ в „%2“: Пътищата не сочат към едно и също устройство.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>Неуспешно преместване на %1 в %2. Премахването на изходния файл е неуспешно: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Няма зададена кука за устройство &quot;localSource&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Моя компютър</translation>
+        <translation type="vanished">Моя компютър</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>компютър</translation>
+        <translation type="vanished">компютър</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>Име</translation>
+        <translation type="vanished">Име</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Размер</translation>
+        <translation type="vanished">Размер</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Мил</translation>
+        <translation type="vanished">Мил</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Тип</translation>
+        <translation type="vanished">Тип</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Дата на промяна</translation>
+        <translation type="vanished">Дата на промяна</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>Не може да се запише файл %1: %2</translation>
     </message>
@@ -27060,12 +31557,12 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Не може да се запише файл %1. Дискът е пълен?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: е запазено име на файл в Windows. Не може да се запази.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>Не може да презапише файл %1: %2</translation>
     </message>
@@ -27075,13 +31572,13 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Не може да се създаде файл %1: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>Не може да се създаде временен файл в %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Не може да създаде временен файл %1: %2</translation>
     </message>
@@ -27096,34 +31593,45 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>Презаписване на съществуващ файл „%1“?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Файлът &quot;%1&quot; не можа да се копира в &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>Неуспешно създаване на директорията „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>Файлът %1 не съществува.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>Неуспешна настройка на буфер за чернови в „%1“.</translation>
+    </message>
+    <message>
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>Неуспешно създаване на директория &quot;%1&quot;.</translation>
+        <translation type="vanished">Неуспешно създаване на директория &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>Не може да се създаде OpenGL контекст.</translation>
+        <translation type="vanished">Не може да се създаде OpenGL контекст.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Покажи детайли</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Не показвай отново</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Близо</translation>
     </message>
@@ -27172,52 +31680,49 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>Неуспешно стартиране на програмата за стартиране на процеси в &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Неуспешно стартиране на програмата за стартиране на процеси в &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Инструментът за стартиране на процеси се затвори неочаквано: %1</translation>
+        <translation type="vanished">Инструментът за стартиране на процеси се затвори неочаквано: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>Грешка в гнездото за стартиране на процеса.</translation>
+        <translation type="vanished">Грешка в гнездото за стартиране на процеса.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Вътрешна грешка на сокета: %1</translation>
+        <translation type="vanished">Вътрешна грешка на сокета: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Грешка в сокета: %1</translation>
+        <translation type="vanished">Грешка в сокета: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Вътрешна грешка на протокола: невалиден размер на пакета %1.</translation>
+        <translation type="vanished">Вътрешна грешка на протокола: невалиден размер на пакета %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Вътрешна грешка на протокола: невалиден тип пакет %1.</translation>
+        <translation type="vanished">Вътрешна грешка на протокола: невалиден тип пакет %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Гнездото на стартера се затвори неочаквано.</translation>
+        <translation type="vanished">Гнездото на стартера се затвори неочаквано.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Грешка при безкрайна рекурсия</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>Неуспешно разширяване на макросите в аргументите на процеса: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Пълен път, включително име на файл.</translation>
     </message>
@@ -27247,27 +31752,32 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation>%1: Базово име на файл без път и суфикс.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: Име на файла на родителската директория.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Глобални променливи</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Променливи на средата за достъп.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>Минимизиране</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;ИЗКЛЮЧВАНЕ&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Променлива</translation>
     </message>
@@ -27287,7 +31797,6 @@ To disable a variable, prefix the line with &quot;#&quot;.</source>
         <translation type="vanished">&lt;СТОЙНОСТ&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -27296,7 +31805,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Въведете една променлива среда на ред.
+        <translation type="vanished">Въведете една променлива среда на ред.
  За да зададете или промените променлива, използвайте променлива = стойност.
  За да деактивирате променлива, префиксирайте този ред с &quot;#&quot;.
  За да добавите към променлива, използвайте променлива+= стойност.
@@ -27306,7 +31815,40 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
  Линиите, започващи с &quot;##&quot;, ще бъдат третирани като коментари.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>Файлът може да е прост текстов файл с двойки ключ/стойност
+или скрипт, който да се изпълни от системната обвивка.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Въведете по една променлива на средата на ред.
+За да зададете или промените променлива, използвайте VARIABLE=VALUE.
+За да изключите променлива, добавете „#“ в началото на реда.
+За да добавите към края на променлива, използвайте VARIABLE+=VALUE.
+За да добавите в началото на променлива, използвайте VARIABLE=+VALUE.
+Съществуващи променливи могат да се ползват във VALUE чрез ${OTHER}.
+За да изчистите променлива, напишете само името ѝ на ред.
+Редовете, започващи с „##“, се третират като коментари.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Получаване на променливи от текстов файл или shell скрипт:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;ДОБРЕ</translation>
     </message>
@@ -27316,7 +31858,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&amp;Отказ</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Грешка в командния ред.</translation>
     </message>
@@ -27326,17 +31868,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Програмата &quot;%1&quot; не съществува или не е изпълнима.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>Програмата &quot;%1&quot; не може да бъде намерена.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Не е зададен изпълним файл.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>Неуспешно създаване на процесен интерфейс за &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>Процесът не отговаря</translation>
     </message>
@@ -27356,7 +31903,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Прекратяване на процеса?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Командата &quot;%1&quot; завърши успешно.</translation>
     </message>
@@ -27381,11 +31928,26 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Командата &quot; %1&quot; беше отменена след %2 ms.</translation>
     </message>
     <message>
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Стандартният изход за грешки беше:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Стандартният изход беше:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Или извиканата програма липсва, или може да нямате достатъчно права да я извикате.</translation>
+    </message>
+    <message>
         <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
         <translation type="vanished">Командата &quot;%1&quot; не отговори в рамките на ограничението за изчакване (%2 s).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Премахване на файл</translation>
     </message>
@@ -27415,7 +31977,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Папка за премахване:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Неуспешно четене на файла</translation>
     </message>
@@ -27436,18 +31998,18 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Нямаше какво да пиша.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Няма намерени валидни настройки</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не е намерен валиден файл с настройки.&lt;/p&gt;&lt;p&gt;Всички файлове с настройки, намерени в директорията „%1“, бяха неподходящи за текущата версия на %2, например защото са записани от несъвместима версия на %2 или защото е използван различен път за настройки.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Не може да бъде намерен валиден файл с настройки.&lt;/p&gt;&lt;p&gt;Всички файлове с настройки, намерени в директория „%1“, бяха или твърде нови, или твърде стари, за да бъдат прочетени.&lt;/p&gt;</translation>
     </message>
@@ -27472,7 +32034,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&lt;p&gt;Не беше намерен файл с настройки, създаден от този екземпляр на %1.&lt;/p&gt;&lt;p&gt;Работили ли сте с този проект на друга машина или използвали друг път за настройки преди?&lt;/p&gt;&lt;p&gt;Все още ли искате да заредите файла с настройки &quot;%2&quot;?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>Неподдържан файл с настройки за сливане</translation>
     </message>
@@ -27482,72 +32044,71 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>„%1“ не се поддържа от %2. Искате ли все пак да опитате да го заредите?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="-1646" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Добавете</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Премахване</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Преименуване</translation>
+        <translation type="vanished">Преименуване</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>Наистина ли искате да изтриете конфигурацията &lt;b&gt;%1&lt;/b&gt;?</translation>
+        <translation type="vanished">Наистина ли искате да изтриете конфигурацията &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Ново име за конфигурация &lt;b&gt;%1&lt;/b&gt;:</translation>
+        <translation type="vanished">Ново име за конфигурация &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Преименуване...</translation>
+        <translation type="vanished">Преименуване...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Изминало време: %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Недостатъчна памет.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>Възникна грешка в кодирането.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Променлива&lt;/th&gt;&lt;th&gt;Разширява се до&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;директория на текущия файл&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;име на файл (с пълен път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;име на файл (без път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Променлива&lt;/th&gt;&lt;th&gt;Разширява се до&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;директория на текущия файл&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;име на файл (с пълен път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;име на файл (без път)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Вмъкване на променлива</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Текуща стойност: %1</translation>
+        <translation type="vanished">Текуща стойност: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Текуща стойност на %{%1}: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Вмъкване на неразширена стойност</translation>
     </message>
@@ -27563,56 +32124,49 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Вмъкване на разширена стойност</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Изберете променлива за вмъкване.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Променливи</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Процесът не успя да започне.</translation>
+        <translation type="vanished">Процесът не успя да започне.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Неуспешно инсталиране на скрипт на Shell: %1
+        <translation type="vanished">Неуспешно инсталиране на скрипт на Shell: %1
  %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Време за изчакване, докато се опитвате да проверите за %1.</translation>
+        <translation type="vanished">Време за изчакване, докато се опитвате да проверите за %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>Команда &quot;%1&quot; не е намерена.</translation>
+        <translation type="vanished">Команда &quot;%1&quot; не е намерена.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Инсталирането на скриптове беше принудена да се провали.</translation>
+        <translation type="vanished">Инсталирането на скриптове беше принудена да се провали.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Време за изчакване, докато чакате инсталация на скрипт на черупката.</translation>
+        <translation type="vanished">Време за изчакване, докато чакате инсталация на скрипт на черупката.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Неуспешно инсталиране на скрипт на Shell: %1</translation>
+        <translation type="vanished">Неуспешно инсталиране на скрипт на Shell: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -27621,22 +32175,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Неуспешно стартиране на терминалния процес: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Неуспешно копиране на файл.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Неуспешен файл за четене.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Неуспешен файл за писане.</translation>
     </message>
@@ -27646,12 +32200,12 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Без набор от интерфейс LUA</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Показване/скриване на парола</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Потребител:</translation>
     </message>
@@ -27666,9 +32220,269 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Не можах да намеря черупка.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Невалидна команда</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1 използва %2 за събиране на сривове и изпращането им до Sentry за обработка. %2 може да запише произволно съдържание от паметта на срутилия се процес, включително чувствителна информация за потребителя, URL адреси и всякакво друго съдържание, на което потребителите са се доверили чрез %1. Събраните отчети за сривове се използват единствено за отстраняване на грешки.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Повече информация:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>Общ преглед на %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>Политика за сигурност на %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Няма промени за прилагане.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Неуспешно получаване на променливите на средата от устройството: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>Неуспешно получаване на променливите на средата от „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>Неуспешно получаване на променливите на средата от „%1“: Неочакван изход</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (по подразбиране)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Клониране</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Задаване по подразбиране</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Възстановяване</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Отмяна</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>&amp;Повторение</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>Из&amp;рязване</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>&amp;Копиране</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Копиране на &amp;връзката</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Поставяне</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Избор на всичко</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Вмъкване на управляващ символ на Unicode</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Изход от отдалечената грешка: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>„%1“ не съществува.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>„find“ не е съществуващ изпълним файл</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>Неуспешно изпълнение на %1: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>„ps“ не е съществуващ изпълним файл.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>„pidin“ не е съществуващ изпълним файл.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>Неуспешно изпълнение на ps: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>Неуспешно изпълнение на pidin: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>Неуспешна проверка на /proc: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Неуспешно създаване на моментна снимка: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>Отказ</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Вътрешна грешка: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Грешка „не е реализирано“: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Неизвестна грешка: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Неизвестна причина.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Отваряне на командния ред тук</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Отваряне на терминал тук</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Терминалният емулатор, който да се използва за отваряне на терминал.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Команда:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Аргументи на командния ред, използвани за „%1“.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>Аргументи на „%1“:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Аргументи на командния ред, използвани за „Изпълнение в терминал“.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>Аргументи на „Изпълнение в терминал“:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Изпълнение в терминал</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Персонализиране...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Предварителни настройки</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Избор на терминален емулатор</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Не е архив.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>Отменено.</translation>
     </message>
 </context>
 <context>
@@ -27678,6 +32492,14 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Грешка при записване на анализаторите: %1</translation>
     </message>
 </context>
 </TS>

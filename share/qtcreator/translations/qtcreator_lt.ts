@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="lt_LT">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Uždaryti skirtuką</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Nė vienas</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Kopijuoti</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>Maks</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>Mediana</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>Režimas</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Vidutiniškai</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Plūdė</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Slaptažodžio įrašas nerastas</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Nepavyko iššifruoti duomenų</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Slaptažodžio įrašas nerastas</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Nepavyko iššifruoti duomenų</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Nepavyko iššifruoti duomenų: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Šifravimas nepavyko: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Kredencialo dydis viršija didžiausią dydį %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Kredencialo raktas viršija didžiausią dydį: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Nepavyko įrašyti kredencialų: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Atsisiunčiamas naujas &apos;%1&apos; sintaksės apibrėžimas...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>Atsisiunčiamas naujas „%1“ sintaksės apibrėžimas…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Atnaujinamas &apos;%1&apos; sintaksės apibrėžimas į %2 versiją...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>Atnaujinama „%1“ sintaksės apibrėžtis į versiją %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">Atsisiunčiamas naujas &apos;%1&apos; sintaksės apibrėžimas...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">Atnaujinamas &apos;%1&apos; sintaksės apibrėžimas į %2 versiją...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Nukopijuokite/konvertuokite „Python“ failą</translation>
     </message>
@@ -242,6 +304,79 @@
         <location line="+19" />
         <source>Convert Model</source>
         <translation>Konvertuoti modelį</translation>
+    </message>
+</context>
+<context>
+    <name>QUnicodeControlCharacterMenu</name>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Kairės į dešinę žymė</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Dešinės į kairę žymė</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Nulinio pločio jungtukas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Nulinio pločio nejungtukas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Nulinio pločio tarpas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Kairės į dešinę įterpimo pradžia</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Dešinės į kairę įterpimo pradžia</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Kairės į dešinę perrašymo pradžia</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Dešinės į kairę perrašymo pradžia</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Krypties formatavimo pabaiga</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Kairės į dešinę izoliacija</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Dešinės į kairę izoliacija</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI pirmasis stipriai nukreiptas izoliatorius</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Krypties izoliacijos pabaiga</translation>
     </message>
 </context>
 <context>
@@ -384,47 +519,694 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QtC::AcpClient</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>Neįmanoma atidaryti %1: %2</translation>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Šis agentas nebepasiekiamas. Pasirinkite agentą, kad pradėtumėte naują pokalbį.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Seanso klaida: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Seanso klaida: netinkamas atsakas.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>Raginimo klaida: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Nepavyko nustatyti konfigūracijos parinkties: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Nepavyko gauti seansų sąrašo: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Nepavyko gauti seansų sąrašo: neteisingas atsakas.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Nepavyko įkelti seanso: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Naujas pokalbis</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Nepavyko įkelti DI agentų sąrašo. Patikrinkite interneto ryšį ir bandykite dar kartą.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Bandyti dar kartą</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Iš naujo įkelti dirbtinio intelekto agentų sąrašą.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Pasirinkite DI agentą</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Reikalingas autentifikavimas</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Metodas:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>Atšaukti</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Autentifikuoti</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Naudotojas pertraukė užklausą</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Autentifikavimas nepavyko: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 paruoštas.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Agentas</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Pradedamas pokalbis...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>Jungiamasi prie %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Įkeliamas pokalbis...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Uždaryti</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Pervadinti pokalbį...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Uždaryti pokalbį</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>ACP klientas</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Rodyti agentinį DI pokalbį šoninėje srityje</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>Tikrinti ACP klientą...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Išskleisti viską</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>Kliento pranešimas</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Pranešimai</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Serverio pranešimas</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>Žurnalo failas</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>ACP inspektorius</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Pasirinkite&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Išvalyti</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>ACP klientas:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Nežinoma</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Kopijuoti</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>Leisti</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Visada leisti</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Atmesti</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Visada atmesti</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>Leidimo užklausa</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Autentifikuota</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Drausti</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Uždrausta</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 min.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 s</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Pasirinktinis&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Nurodyti registre neįtrauktą agentą rankiniu būdu.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Šablonas:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Pasirinkite šabloną iš registro, kad iš anksto užpildytumėte nustatymus.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Pavadinimas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Rodomas pavadinimas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Naujas serveris&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Vykdomasis failas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>Vykdomasis failas ACP serverio procesui paleisti.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Argumentai:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>Argumentai ACP serverio procesui paleisti.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Aplinkos pakeitimai:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>Komanda, kuri paleis ACP serverį.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>„%1“ reikalingas šiam agentui, bet nerastas.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Įsitikinkite, kad įdiegta „Node.js“ ir kad „npx“ pasiekiamas per PATH. Diegimo nurodymų ieškokite &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Įsitikinkite, kad įdiegta UV ir kad „uvx“ pasiekiamas per PATH. Diegimo nurodymų ieškokite &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt;.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>ACP serveriai</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Daugiau teikėjų</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Atvirasis kodas</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Visa kita</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>ACP serveriui nesukonfigūruota jokia komanda.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Komanda nerasta: „%1“. Patikrinkite, ar ji egzistuoja ir ar yra vykdomoji.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Komanda nerasta: „%1“. Patikrinkite, ar ji vykdomoji ir ar yra jūsų PATH.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Nepavyksta siųsti duomenų: procesas nebuvo paleistas (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Nepavyksta siųsti duomenų: procesas „%1“ nevykdomas (išėjimo kodas %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>JSON analizės klaida: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>Tikėtasi JSON objekto.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter siunčia, Shift+Enter – nauja eilutė; įklijuokite arba nuvilkite paveikslus ir failus, kad juos pridėtumėte</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Filtruoti komandas...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Pašalinti kontekstą</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Konfigūracijos parinktys</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Rodyti mintis</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Pridėti kontekstą</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Pridėti failą...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Pridėti konteksto failą</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Pridėti nuotolinį failą...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Dabartinis redaktorius</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Įterpti komandą</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Siųsti (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Failo klaida</translation>
+        <source>Stop (Esc)</source>
+        <translation>Stabdyti (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Kontekstas: panaudota %1 iš %2 žetonų (%3 %)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Seanso kaina: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Spustelėkite, kad suglaustumėte pokalbį.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>Priedų: %n</numerusform>
+            <numerusform>Priedų: %n</numerusform>
+            <numerusform>Priedų: %n</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>Eilėje: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Siunčiama, kai agentas baigia darbą.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Redaguoti eilėje esantį pranešimą</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Paveikslas</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>ką tik</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>Prieš 1 minutę</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>Prieš %1 min.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>Prieš 1 valandą</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>Prieš %1 val.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>vakar</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>Prieš %1 d.</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Pokalbis be pavadinimo</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Pervadinti pokalbį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Pavadinimas (palikite tuščią, jei norite automatinio):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Pradėti pokalbį</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Naujas pokalbis aplanke...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Ankstesni pokalbiai</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Filtruoti pokalbius...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Įkeliami ankstesni pokalbiai...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Nauji pokalbiai prasideda aplanke %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Pasirinkite pokalbio aplanką</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>Rodyti 1 senesnį pokalbį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>Rodyti %1 senesnius pokalbius</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Ankstesni pokalbiai (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Ankstesnių pokalbių nėra.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Nėra atitinkančių pokalbių.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Atidaryti rengyklėje</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 · 1 eilutė</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 · %2 eilutės</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Neapdorota įvestis</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">Neįmanoma atidaryti %1: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Failo klaida</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Dvejetainis redaktorius negali atidaryti tuščių failų.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>Failas per didelis dvejetainei redaktoriui (maks. 32 GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Failo poslinkis per didelis.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Baito adresas</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Anuliuoti</translation>
+        <translation type="vanished">&amp;Anuliuoti</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Perdaryti</translation>
+        <translation type="vanished">&amp;Perdaryti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>Atmintis esant 0x%1</translation>
     </message>
@@ -484,7 +1266,7 @@
         <translation>Ankstesnė&amp;nbsp;oktalinė&amp;nbsp;reikšmė:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;dviguba&lt;/i&gt;&amp;nbsp;reikšmė:</translation>
     </message>
@@ -494,7 +1276,7 @@
         <translation>Ankstesnė &lt;i&gt;dviguba&lt;/i&gt;&amp;nbsp;reikšmė:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;plaukiojanti&lt;/i&gt;&amp;nbsp;vertė:</translation>
     </message>
@@ -504,12 +1286,12 @@
         <translation>Ankstesnė &lt;i&gt;slankioji&lt;/i&gt;&amp;nbsp;vertė:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Mastelio keitimas: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Kopijuoti nepavyko</translation>
     </message>
@@ -519,7 +1301,7 @@
         <translation>Negalite nukopijuoti daugiau nei 4 MB dvejetainių duomenų.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Nukopijuokite pasirinkimą kaip ASCII simbolius</translation>
     </message>
@@ -534,7 +1316,7 @@
         <translation>Pasirinkus nustatykite duomenų lūžio tašką</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>Kopijuoti 0x%1</translation>
@@ -555,12 +1337,26 @@
         <translation>Kopijuoti vertę</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Pereiti prie 0x%1 adreso</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Šiame lange pereiti į adresą 0x%1</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>Nepavyksta atidaryti „%1“.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>Dvejetainis redaktorius</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Pereiti prie 0x%1 adreso</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Naujame lange pereikite prie 0x%1 adreso</translation>
     </message>
@@ -568,21 +1364,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Prisijunkite</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Prisijungimo užklausa nepavyko: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Atidarys naršyklės langą. Įveskite kodą %1, kai paprašys.
  Kodas buvo nukopijuotas į jūsų mainų sritį.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Prisijungimas nepavyko</translation>
     </message>
@@ -592,48 +1393,40 @@ The code has been copied to your clipboard.</source>
         <translation>Prisijungimo užklausa nepavyko: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Kopilotas</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Reikalingas įgaliotinis vartotojo vardas ir slaptažodis:</translation>
+        <translation type="vanished">Reikalingas įgaliotinis vartotojo vardas ir slaptažodis:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Neklauskite dar kartą. Šiuo metu tai išjungs kopilotą.</translation>
+        <translation type="vanished">Neklauskite dar kartą. Šiuo metu tai išjungs kopilotą.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Pasirinkite ankstesnį „Copilot“ pasiūlymą</translation>
+        <translation type="vanished">Pasirinkite ankstesnį „Copilot“ pasiūlymą</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Pasirinkite kitą „Copilot“ pasiūlymą</translation>
+        <translation type="vanished">Pasirinkite kitą „Copilot“ pasiūlymą</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Taikyti (%1)</translation>
+        <translation type="vanished">Taikyti (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Taikyti žodį (%1)</translation>
+        <translation type="vanished">Taikyti žodį (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 iš %2</translation>
+        <translation type="vanished">%1 iš %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Paprašykite „Copilot“ pasiūlymo</translation>
     </message>
@@ -669,25 +1462,25 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Išjungti kopilotą.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Įgalinti kopilotą</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Įgalinti kopilotą.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Perjunkite kopilotą</translation>
     </message>
@@ -697,7 +1490,7 @@ The code has been copied to your clipboard.</source>
         <translation>Įgalina „Copilot“ integraciją.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>Node.js kelias:</translation>
     </message>
@@ -719,13 +1512,12 @@ The code has been copied to your clipboard.</source>
         <translation>Kelias į %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>%1 kelias</translation>
+        <translation type="vanished">%1 kelias</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Pasirinkite %2 kelią Copilot Neovim papildinyje. Diegimo instrukcijas rasite %1.</translation>
@@ -746,97 +1538,100 @@ The code has been copied to your clipboard.</source>
         <translation>Automatiškai paprašykite dabartinės teksto žymeklio padėties pasiūlymų pakeitus dokumentą.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Naudokite tarpinį serverį</translation>
+        <translation type="vanished">Naudokite tarpinį serverį</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Naudokite tarpinį serverį</translation>
+        <translation type="vanished">Naudokite tarpinį serverį</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Norėdami prisijungti prie „Copilot“ serverių, naudokite tarpinį serverį.</translation>
+        <translation type="vanished">Norėdami prisijungti prie „Copilot“ serverių, naudokite tarpinį serverį.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Įgaliotinis šeimininkas</translation>
+        <translation type="vanished">Įgaliotinis šeimininkas</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Įgaliotinis šeimininkas:</translation>
+        <translation type="vanished">Įgaliotinis šeimininkas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>„Proxy Server“ pagrindinio kompiuterio vardas.</translation>
+        <translation type="vanished">„Proxy Server“ pagrindinio kompiuterio vardas.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Įgaliotinis uostas</translation>
+        <translation type="vanished">Įgaliotinis uostas</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Proxy prievadas:</translation>
+        <translation type="vanished">Proxy prievadas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Serverio serverio prievadas.</translation>
+        <translation type="vanished">Serverio serverio prievadas.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Įgaliotinis vartotojas</translation>
+        <translation type="vanished">Įgaliotinis vartotojas</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Įgaliotinis vartotojas:</translation>
+        <translation type="vanished">Įgaliotinis vartotojas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Vartotojo vardas, norint pasiekti tarpinį serverį.</translation>
+        <translation type="vanished">Vartotojo vardas, norint pasiekti tarpinį serverį.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Išsaugokite tarpinio serverio slaptažodį</translation>
+        <translation type="vanished">Išsaugokite tarpinio serverio slaptažodį</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Išsaugokite tarpinio serverio slaptažodį</translation>
+        <translation type="vanished">Išsaugokite tarpinio serverio slaptažodį</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Išsaugokite slaptažodį, kad pasiektumėte tarpinį serverį. Slaptažodis saugomas nesaugiai.</translation>
+        <translation type="vanished">Išsaugokite slaptažodį, kad pasiektumėte tarpinį serverį. Slaptažodis saugomas nesaugiai.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Tarpinio serverio slaptažodis</translation>
+        <translation type="vanished">Tarpinio serverio slaptažodis</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Tarpinio serverio slaptažodis:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">PROGRESY SERER SWREEST slaptažodis.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>Kelias į %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Tarpinis serveris</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Tarpinio serverio slaptažodis:</translation>
+        <source>Proxy:</source>
+        <translation>Tarpinis serveris:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>PROGRESY SERER SWREEST slaptažodis.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Ryšiams naudojamas tarpinis serveris, formatu http://host:port arba http://user:password@host:port, jei tarpiniam serveriui reikia prisijungti.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Atmeskite neteisėtą</translation>
     </message>
@@ -851,7 +1646,22 @@ The code has been copied to your clipboard.</source>
         <translation>Atmeskite neteisėtus sertifikatus iš tarpinio serverio. Išjungti tai yra saugumo rizika.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>GitHub Enterprise URL</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>GitHub Enterprise URL:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>Jūsų „GitHub Enterprise“ serverio URL.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>Įgalinus %1 yra jūsų susitarimas, o panaikinimas yra jūsų taikytinų %1 sąlygos. Jūs esate atsakingi už tai, kad žinotumėte ir priimtumėte tokių įrankių kaip %1 naudojimo reikalavimus ir parametrus. Tai gali apimti, bet tuo neapsiribojant, užtikrinant, kad turite teisę leisti 1 %1 prieigą prie savo kodekso, taip pat suprasti bet kokius jūsų 1 %1 ir pasiūlymų (pvz.</translation>
     </message>
@@ -874,30 +1684,35 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+86" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+83" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Failų generavimo gedimas</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="-63" />
         <source>Existing files</source>
         <translation>Esami failai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>Nepavyko nustatyti leidimų.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>Nepavyko sukurti katalogo %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Nepavyko atidaryti &quot;%1&quot; redaktoriaus.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[Tik skaitymui]</translation>
     </message>
@@ -912,56 +1727,91 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>[simbolinė nuoroda]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>Projekto kataloge %1 yra failų, kurių negalima perrašyti:
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+455" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Grįžti į Išsaugota</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Uždaryti</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Uždaryti viską</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Uždaryti kitus</translation>
     </message>
     <message>
-        <location line="-1710" />
+        <location line="-1815" />
         <source>Revert File to Saved</source>
         <translation>Grąžinti failą į Išsaugotą</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-12" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Įrašyti be formatavimo</translation>
+    </message>
+    <message>
+        <location line="-1755" />
         <source>Ctrl+W</source>
         <translation>Ctrl + W</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+104" />
+        <source>Previous Tab</source>
+        <translation>Ankstesnis skirtukas</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Kitas skirtukas</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Uždaryti visus skirtukus</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Uždaryti kitus skirtukus</translation>
+    </message>
+    <message>
+        <location line="-2560" />
+        <source>Open Previous Document</source>
+        <translation>Atidaryti ankstesnį dokumentą</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Atidaryti kitą dokumentą</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -987,34 +1837,38 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Pašalinti visus padalijimus</translation>
     </message>
     <message>
-        <location line="+2669" />
+        <location line="+2529" />
+        <source>Diff Against Current File</source>
+        <translation>Palyginti su dabartiniu failu</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Atidaromas failas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Nepavyko išsaugoti failų.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2471" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2825" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Failo klaida</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Klaida išsaugant failą: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Visi failai (*.*)</translation>
@@ -1031,27 +1885,42 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Elementas pavadinimu „%1“ jau yra šioje vietoje. Ar norite jį perrašyti?</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+229" />
         <source>Open File</source>
         <translation>Atidaryti failą</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>Nepavyko iš naujo įkelti %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>Atidaryti naudojant VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Skirtumai „%1“</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>Žurnalas „%1“</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>Anotuoti „%1“</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-619" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
         <translation>&lt;b&gt;Įspėjimas:&lt;/b&gt; keičiate tik skaitomą failą.</translation>
     </message>
     <message>
-        <location line="-1490" />
+        <location line="-1626" />
         <source>Next Open Document in History</source>
         <translation>Kitas atidarytas dokumentas istorijoje</translation>
     </message>
@@ -1061,59 +1930,58 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ankstesnis atviras dokumentas istorijoje</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Eik atgal</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>Eiti pirmyn</translation>
     </message>
     <message>
-        <location line="-238" />
-        <location line="+124" />
+        <location line="-118" />
         <source>Close All Except Visible</source>
         <translation>Uždaryti viską, išskyrus matomus</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+159" />
         <source>Go to Last Edit</source>
         <translation>Eikite į paskutinį redagavimą</translation>
     </message>
     <message>
-        <location line="-268" />
+        <location line="+2383" />
         <source>Copy Full Path</source>
         <translation>Kopijuoti visą kelią</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Nukopijuokite kelią ir eilutės numerį</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Nukopijuokite failo pavadinimą</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Properties...</source>
-        <translation>Savybės...</translation>
+        <translation type="vanished">Savybės...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>Smeigtukas</translation>
+        <translation type="vanished">Smeigtukas</translation>
     </message>
     <message>
         <source>Alternative Close</source>
         <translation type="vanished">Alternatyva Uždaryti</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="-2596" />
         <source>Ctrl+F4</source>
         <translation>Ctrl + F4</translation>
     </message>
@@ -1122,13 +1990,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation type="vanished">Ctrl+shift+w</translation>
     </message>
     <message>
-        <location line="+158" />
+        <location line="+182" />
         <source>Reopen Last Closed Document</source>
         <translation>Vėl atidaryti paskutinį uždarą dokumentą</translation>
     </message>
     <message>
         <location line="+41" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-309" />
         <source>Open in New Window</source>
         <translation>Atidaryti naujame lange</translation>
     </message>
@@ -1143,12 +2011,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Eikite į kitą padalijimą arba langą</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1852" />
         <source>Ad&amp;vanced</source>
         <translation>&amp;Išplėstiniai</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Dabartinis dokumentas</translation>
     </message>
@@ -1163,7 +2031,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Dabartinio redaktoriaus viršutinio kairiojo kampo Y koordinatė ekrano atžvilgiu.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Tęsti didžiulio teksto failo atidarymą?</translation>
     </message>
@@ -1177,22 +2045,21 @@ Continue?</source>
 Tęsti?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Nepavyko atidaryti „%1“: negalima atidaryti „%2“ tipo failų.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Nepavyko atidaryti „%1“ skaitymui. Arba failo nėra, arba jūs neturite leidimų jį atidaryti.</translation>
+        <translation type="vanished">Nepavyko atidaryti „%1“ skaitymui. Arba failo nėra, arba jūs neturite leidimų jį atidaryti.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Nepavyko atidaryti „%1“: nežinoma klaida.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Įspėjimas:&lt;/b&gt; šis failas dar nebuvo atidarytas %1.</translation>
     </message>
@@ -1202,7 +2069,7 @@ Tęsti?</translation>
         <translation>Atviras</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+30" />
         <source>&amp;Save %1</source>
         <translation>&amp;Išsaugoti %1</translation>
     </message>
@@ -1210,6 +2077,11 @@ Tęsti?</translation>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>Išsaugoti %1 &amp;kaip...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>Įrašyti %1 be formatavimo</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1222,7 +2094,7 @@ Tęsti?</translation>
         <translation>Iš naujo įkelti %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>Uždaryti %1</translation>
     </message>
@@ -1232,7 +2104,7 @@ Tęsti?</translation>
         <translation>Uždaryti viską, išskyrus %1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Negalima atidaryti failo</translation>
     </message>
@@ -1242,7 +2114,7 @@ Tęsti?</translation>
         <translation>Negalima atidaryti failo redaguoti naudojant VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Prarasite dabartinius pakeitimus, jei grąžinsite %1.</translation>
     </message>
@@ -1253,9 +2125,12 @@ Tęsti?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+887" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
@@ -1265,12 +2140,12 @@ Tęsti?</translation>
         <translation>Atšaukti &amp;&amp; &amp;Diff</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>Uždaryti &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+65" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>Atsegti „%1“</translation>
     </message>
@@ -1285,7 +2160,7 @@ Tęsti?</translation>
         <translation>Pin redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-489" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-482" />
         <source>Overwrite?</source>
         <translation>Perrašyti?</translation>
     </message>
@@ -1295,17 +2170,21 @@ Tęsti?</translation>
         <translation>Išsaugoti failą kaip</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>Redaguoti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Vilkite, jei norite vilkti dokumentus tarp padalijimo</translation>
+        <translation type="vanished">Vilkite, jei norite vilkti dokumentus tarp padalijimo</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Vilkite, kad atidarytumėte dokumentą kitame skirsnyje.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Uždaryti dokumentą</translation>
     </message>
@@ -1320,23 +2199,22 @@ Tęsti?</translation>
         <translation>Failas yra rašomas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+152" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Iš naujo nustatykite dialogo langus Neklausti / nerodyti</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Iš naujo nustatyti numatytuosius.</translation>
+        <translation type="vanished">Iš naujo nustatyti numatytuosius.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>Tema:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>Kalba:</translation>
     </message>
@@ -1349,12 +2227,11 @@ Tęsti?</translation>
         <translation type="vanished">Dideli DPI nustatymai įsigalios po paleidimo iš naujo.</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>User Interface</source>
-        <translation>Vartotojo sąsaja</translation>
+        <translation type="vanished">Vartotojo sąsaja</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="-66" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Rodyti sparčiuosius klavišus kontekstiniuose meniu (numatytasis: %1)</translation>
     </message>
@@ -1369,7 +2246,7 @@ Tęsti?</translation>
         <translation>išjungti</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Nepaisykite peržiūrų žymeklių</translation>
     </message>
@@ -1381,7 +2258,32 @@ If the system cursors for resizing views are not displayed properly, you can use
  Jei sistemos žymekliai, skirti pakeisti vaizdą, nėra tinkamai rodomi, galite naudoti žymeklius, pateiktus %1.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+12" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Teikti pirmenybę juostos stiliaus informaciniams pranešimams, o ne iššokantiesiems langams</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Naudoti skirtukines rengykles</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Nuostatų režime rodyti mygtukus Gerai ir Atšaukti</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Įrankių teksto koduotė:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Spalva:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Round Up for .5 and Above</source>
         <translation>Suapvalinkite .5 ir daugiau</translation>
     </message>
@@ -1401,42 +2303,52 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Suapvalinkite .75 ir daugiau</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Neapiburk</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>DPI apvalinimo politika:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Nustatyti šie aplinkos kintamieji ir gali įtakoti %1 %UI mastelio keitimo elgseną:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Aplinka daro įtaką UI mastelio keitimo elgesiui.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Nuosekliojo terminalo tabuliacijos dydis:</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Sistemos kalba&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>Vėl įjungti įspėjimus, kurie buvo nuslėpti pasirinkus „Daugiau nerodyti“ (pavyzdžiui, trūkstamas paryškintuvas).</translation>
+    </message>
+    <message>
+        <location line="+126" />
         <source>The language change will take effect after restart.</source>
         <translation>Kalbos pakeitimas įsigalios paleidus iš naujo.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Įrankių juostos stilius:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Kompaktiškas</translation>
     </message>
@@ -1446,41 +2358,39 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Atsipalaidavęs</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>DPI apvalinimo politikos pakeitimas įsigalios po paleidimo iš naujo.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Sąsaja</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+356" />
         <source>Environment</source>
         <translation>Aplinka</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+480" />
         <source>Variables</source>
-        <translation>Kintamieji</translation>
+        <translation type="vanished">Kintamieji</translation>
     </message>
     <message>
-        <location line="-271" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+116" />
         <source>Terminal:</source>
         <translation>Terminalas:</translation>
     </message>
     <message>
-        <location line="-166" />
         <source>Bytes</source>
-        <translation>Baitai</translation>
+        <translation type="vanished">Baitai</translation>
     </message>
     <message>
         <source>KB</source>
         <translation type="vanished">KB</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+111" />
         <source>MB</source>
         <translation>MB</translation>
     </message>
@@ -1493,77 +2403,81 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation type="vanished">TB</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-33" />
         <source>Auto-suspend unmodified files</source>
         <translation>Automatiškai sustabdyti nepakeistus failus</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+8" />
         <source>Enable crash reporting</source>
         <translation>Įgalinti avarijų ataskaitų teikimą</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+7" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Strigčių ataskaitos išsaugomos „%1“.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Warn before opening text files greater than</source>
         <translation>Įspėti prieš atidarant tekstinius failus, didesnius nei</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+10" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>„Neseniai atidarytų failų“ skaičius:</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Ask for confirmation before exiting</source>
         <translation>Prieš išeidami paprašykite patvirtinimo</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-75" />
         <source>Auto-save modified files</source>
         <translation>Automatiškai išsaugokite pakeistus failus</translation>
     </message>
     <message>
-        <location line="+96" />
         <source>Clear Local Crash Reports</source>
-        <translation>Išvalykite vietines avarijų ataskaitas</translation>
+        <translation type="vanished">Išvalykite vietines avarijų ataskaitas</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+17" />
         <source>Auto-save files after refactoring</source>
         <translation>Automatiškai išsaugokite failus po pertvarkymo</translation>
     </message>
     <message>
-        <location line="-49" />
         <source>KiB</source>
-        <translation>Kib</translation>
+        <translation type="vanished">Kib</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>MIB</translation>
+        <translation type="vanished">MIB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>Gibas</translation>
+        <translation type="vanished">Gibas</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>Tibas</translation>
+        <translation type="vanished">Tibas</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+10" />
         <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
         <translation>Automatiškai atlaisvinkite senų nematomų ir nepakeistų dokumentų išteklius. Jie lieka matomi atidarytų dokumentų sąraše.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+8" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Leisti automatiškai pranešti apie gedimus. Surinktos ataskaitos naudojamos tik klaidoms ištaisyti.</translation>
     </message>
     <message>
-        <location line="+35" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>Komandinės eilutės argumentai, naudojami „Vykdyti terminale“.</translation>
+        <translation type="vanished">Komandinės eilutės argumentai, naudojami „Vykdyti terminale“.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+33" />
         <source>Always Ask</source>
         <translation>Visada klausk</translation>
     </message>
@@ -1578,27 +2492,24 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Ignoruoti modifikacijas</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-61" />
         <source>min</source>
         <translation>min</translation>
     </message>
     <message>
-        <location line="+105" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>„%1“ naudojami komandų eilutės argumentai.</translation>
+        <translation type="vanished">„%1“ naudojami komandų eilutės argumentai.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>File system case sensitivity:</source>
-        <translation>Failų sistemos didžiųjų ir mažųjų raidžių jautrumas:</translation>
+        <translation type="vanished">Failų sistemos didžiųjų ir mažųjų raidžių jautrumas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Įtakoja, kaip derinami failų pavadinimai, siekiant nuspręsti, ar jie yra vienodi.</translation>
+        <translation type="vanished">Įtakoja, kaip derinami failų pavadinimai, siekiant nuspręsti, ar jie yra vienodi.</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="+37" />
         <source>Files to keep open:</source>
         <translation>Failai, kuriuos reikia palikti atidarytus:</translation>
     </message>
@@ -1608,55 +2519,77 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Minimalus atidarytų dokumentų skaičius, kurį reikia saugoti atmintyje. Padidinus šį skaičių, ištekliai bus naudojami daugiau, kai dokumentai neuždaromi rankiniu būdu.</translation>
     </message>
     <message>
-        <location line="+84" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Iš naujo nustatyti numatytuosius.</translation>
+        <translation type="vanished">Iš naujo nustatyti numatytuosius.</translation>
     </message>
     <message>
-        <location line="-130" />
+        <location line="-53" />
         <source>Patch command:</source>
         <translation>Patch komanda:</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="-11" />
         <source>External file browser:</source>
         <translation>Išorinė failų naršyklė:</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="+88" />
         <source>When files are externally modified:</source>
         <translation>Kai failai yra modifikuojami išoriškai:</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-60" />
         <source>Interval:</source>
         <translation>Intervalas:</translation>
     </message>
     <message>
-        <location line="+147" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>Didžiausias įrašų skaičius „Naujausiuose failuose“:</translation>
+        <translation type="vanished">Didžiausias įrašų skaičius „Naujausiuose failuose“:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+121" />
         <source>System</source>
         <translation>Sistema</translation>
     </message>
     <message>
-        <location line="-423" />
+        <location line="-137" />
         <source>Command used for reverting diff chunks.</source>
         <translation>Komanda naudojama skirtingų dalių grąžinimui.</translation>
     </message>
     <message>
+        <location line="-96" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Kintamasis&lt;/th&gt;&lt;th&gt;Išskleidžiamas į&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;dabartinio failo katalogas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;failo vardas (su visu keliu)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;failo vardas (be kelio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Kintamųjų skirtukai:</translation>
+    </message>
+    <message>
         <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>Naudoti freedesktop.org failų tvarkytuvės D-Bus sąsają</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Jei galima, funkcijai &lt;i&gt;Atidaryti failų tvarkytuvėje&lt;/i&gt; naudoja &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus sąsają&lt;/a&gt;. Priešingu atveju grįžta prie aukščiau nurodytos „išorinės failų naršyklės“.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>Komanda, naudojama &lt;i&gt;Atidaryti failų tvarkyklėje&lt;/i&gt;, jei freedesktop.org D-Bus sąsaja nepasiekiama. Komandoje gali būti šie kintamieji:
+</translation>
+    </message>
+    <message>
+        <location line="+17" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
         <translation>Automatiškai sukuria laikinas modifikuotų failų kopijas. Jei %1 paleidžiamas iš naujo po gedimo ar elektros energijos tiekimo sutrikimo, jis klausia, ar atkurti automatiškai išsaugotą turinį.</translation>
     </message>
@@ -1668,7 +2601,8 @@ provided they were unmodified before the refactoring.</source>
 su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translation>
     </message>
     <message>
-        <location line="+183" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Avarijų ataskaita</translation>
     </message>
@@ -1677,32 +2611,28 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation type="vanished">Pakeitimas įsigalios paleidus iš naujo.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Skiriamos didžiosios ir mažosios raidės (numatytasis)</translation>
+        <translation type="vanished">Skiriamos didžiosios ir mažosios raidės (numatytasis)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Didžiosios ir mažosios raidės neskiriamos (numatytasis)</translation>
+        <translation type="vanished">Didžiosios ir mažosios raidės neskiriamos (numatytasis)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Neskiriamas didžiosioms ir mažosioms raidėms</translation>
+        <translation type="vanished">Neskiriamas didžiosioms ir mažosioms raidėms</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Failų sistemos didžiųjų ir mažųjų raidžių jautrumo pakeitimas įsigalios paleidus iš naujo.</translation>
+        <translation type="vanished">Failų sistemos didžiųjų ir mažųjų raidžių jautrumo pakeitimas įsigalios paleidus iš naujo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-25" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-121" />
         <source>Output</source>
         <translation>Išvestis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-27" />
         <source>&amp;File</source>
         <translation>&amp;Failas</translation>
     </message>
@@ -1712,7 +2642,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&amp;Redaguoti</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+41" />
         <source>&amp;Tools</source>
         <translation>&amp;Įrankiai</translation>
     </message>
@@ -1727,16 +2657,14 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&amp;Pagalba</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+133" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+132" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1006" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+162" />
         <source>&amp;Save</source>
         <translation>&amp;Sutaupyti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
-        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>Išs&amp;augoti kaip...</translation>
@@ -1747,23 +2675,23 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ctrl + Shift + S</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+695" />
         <source>Save A&amp;ll</source>
         <translation>&amp;Išsaugoti viską</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-338" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Išeiti iš %1?</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+135" />
         <source>&amp;View</source>
         <translation>&amp;Žiūrėti</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+74" />
         <source>Return to Editor</source>
         <translation>Grįžti į redaktorių</translation>
     </message>
@@ -1789,7 +2717,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&amp;Atidaryti failą...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Atidaryti failą...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Atidaryti failą &amp;su...</translation>
     </message>
@@ -1864,7 +2797,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>P&amp;asirinkti viską</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Eiti į eilutę...</translation>
     </message>
@@ -1879,7 +2812,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Nutolinti</translation>
     </message>
@@ -1895,7 +2828,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ctrl + Shift + -</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Originalus dydis</translation>
     </message>
@@ -1910,7 +2843,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ctrl + 0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Rodyti žurnalus...</translation>
     </message>
@@ -1944,7 +2877,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation type="vanished">Ctrl+Alt+m</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Slėpti meniu juostą</translation>
     </message>
@@ -1954,7 +2887,8 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Tai visiškai paslėps meniu juostą. Galite dar kartą parodyti įvesdami%1. &lt;br&gt; &lt;br&gt; arba suaktyvinti „%2“ veiksmą iš „%3“ lokatoriaus filtro (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Peržiūros</translation>
     </message>
@@ -1979,42 +2913,58 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Kontaktas...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Ciklo režimo pasirinkimo stiliai</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Režimo pasirinkimo stilius</translation>
+        <translation type="vanished">Režimo pasirinkimo stilius</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Slėpti</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Režimai</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Piktogramos ir tekstas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Tik piktogramos</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Paslėpta</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>Rodyti %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+578" />
         <source>Version:</source>
         <translation>Versija:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Pakeitimų žurnalas</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+61" />
         <source>Contact</source>
         <translation>kontaktas</translation>
     </message>
@@ -2024,12 +2974,39 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&lt;p&gt;Su Qt Creator kūrėjais galite susisiekti per Qt Creator adresų sąrašą:&lt;/p&gt;%1&lt;p&gt;arba #qt-creator kanalą Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Mūsų klaidų sekimo priemonė yra %3.&lt;/p&gt;&lt;p&gt;Jei norite didesnių teksto dalių, naudokite %4.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-819" />
+        <location line="-780" />
         <source>Ctrl+L</source>
         <translation>Ctrl + L</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="-1591" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Atidaryti nuostatas.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>Nepavyko rasti vykdomojo failo %1 vietoje %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>Sukurta %1 %2 pagal Qt %3 (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>„Qt“ logotipas, „axivion stopping software erosion“ logotipas, „Qt Group“ logotipas, taip pat Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® yra registruotieji „The Qt Company Ltd.“ ar jos dukterinių įmonių prekių ženklai.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 yra laisvoji programinė įranga, ir ją galite platinti &lt;a href=&quot;%2&quot;&gt;tam tikromis sąlygomis&lt;/a&gt;. Kai kuriems komponentams gali galioti kitos sąlygos.</translation>
+    </message>
+    <message>
+        <location line="+733" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-27" />
         <source>Minimize</source>
         <translation>Sumažinti</translation>
@@ -2046,18 +3023,18 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Per visą ekraną</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+125" />
         <source>About &amp;Plugins...</source>
         <translation>Apie &amp;įskiepius...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Atidarykite dokumentus</translation>
@@ -2073,19 +3050,17 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Alt + O</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+855" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+938" />
         <source>Close Editor</source>
         <translation>Uždaryti redaktorių</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Uždaryti viską, išskyrus &quot;%1&quot;</translation>
+        <translation type="vanished">Uždaryti viską, išskyrus &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Uždaryti kitus redaktorius</translation>
+        <translation type="vanished">Uždaryti kitus redaktorius</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+55" />
@@ -2093,14 +3068,14 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+522" />
         <location line="+88" />
         <source>Category</source>
         <translation>Kategorija</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+369" />
         <source>Type</source>
         <translation>Tipas</translation>
     </message>
@@ -2116,7 +3091,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2124,8 +3099,8 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>Aišku</translation>
     </message>
@@ -2160,7 +3135,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Laiko žyma</translation>
     </message>
     <message>
-        <location line="-411" />
+        <location line="-458" />
         <source>Entry is missing a logging category name.</source>
         <translation>Įraše trūksta registravimo kategorijos pavadinimo.</translation>
     </message>
@@ -2175,7 +3150,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Neteisingas lygis: %1</translation>
     </message>
     <message>
-        <location line="+312" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Ši žurnalo kategorija naudoja nepageidaujamą nestatinį metodą, todėl žurnalo peržiūros priemonė jos tvarkyti negali.</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Debug</source>
         <translation>Derinimas</translation>
     </message>
@@ -2260,27 +3240,27 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Atnaujinti iš išankstinio nustatymo...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+47" />
         <source>Save Enabled Categories As...</source>
         <translation>Išsaugokite įgalintas kategorijas kaip ...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+48" />
         <source>Failed to open preset file &quot;%1&quot; for reading.</source>
         <translation>Nepavyko atidaryti iš anksto nustatyto failo „%1“ skaitymui.</translation>
     </message>
     <message>
-        <location line="-172" />
+        <location line="-165" />
         <source>Uncheck All</source>
         <translation>Atžymėk visus</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+87" />
         <source>Save Logs As</source>
         <translation>Išsaugoti žurnalus kaip</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Nepavyko įrašyti žurnalų į &quot;%1&quot;.</translation>
     </message>
@@ -2294,12 +3274,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation type="vanished">Išsaugoti įgalintas kategorijas kaip</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Nepavyko įrašyti iš anksto nustatyto failo „%1“.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Įkelti įgalintas kategorijas iš</translation>
     </message>
@@ -2318,42 +3298,56 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Netikėtas iš anksto nustatytas failo formatas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Rodyti neatitinkančias linijas</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Rodyti {} a&amp;nkstesnes eilutes</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Rodyti {} &amp;tolesnes eilutes</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Filtruoti išvestį...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Maksimaliai</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+120" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Kitas elementas</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Ankstesnis elementas</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>Išvesti&amp;išvesti</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Iš naujo nustatykite iki numatytojo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>MIME tipas</translation>
     </message>
@@ -2363,41 +3357,41 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Prižiūrėtojas</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Iš naujo nustatykite visus MIME tipo apibrėžimus į numatytuosius nustatymus.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>Iš naujo nustatykite MIME tipus</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Iš naujo nustatykite visų MIME tipo apibrėžimų priskirtą tvarkyklę į numatytuosius nustatymus.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>Iš naujo nustatyti tvarkykles</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>Šablonai:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Kabliataškiais atskirtas pakaitos simbolių failų pavadinimų sąrašas.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Magiška antraštė</translation>
     </message>
@@ -2412,25 +3406,25 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pirmenybė</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Registruoti MIME tipai</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Detalės</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Pakeitimai įsigalios paleidus iš naujo.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>MIME tipai</translation>
     </message>
@@ -2450,7 +3444,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Įdiegti papildiniai</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Papildinio pakeitimai įsigalios paleidus iš naujo.</translation>
     </message>
@@ -2459,17 +3453,17 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation type="vanished">Papildinio informacija apie %1</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>%1 papildinio klaidos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>Procesai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-82" />
         <source>&amp;Diff</source>
         <translation>&amp;Skirt</translation>
     </message>
@@ -2479,7 +3473,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&amp;Nesaugok</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+79" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Skirtumas &amp;&amp; Atšaukti</translation>
     </message>
@@ -2510,8 +3504,8 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-295" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Sutaupyti</translation>
     </message>
@@ -2521,7 +3515,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Išsaugoti pasirinktus</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+343" />
         <source>Click and type the new key sequence.</source>
         <translation>Spustelėkite ir įveskite naują klavišų seką.</translation>
     </message>
@@ -2532,17 +3526,17 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Įrašas</translation>
     </message>
     <message>
-        <location line="+427" />
+        <location line="+422" />
         <source>Keyboard</source>
         <translation>Klaviatūra</translation>
     </message>
     <message>
-        <location line="-745" />
+        <location line="-761" />
         <source>Invalid key sequence.</source>
         <translation>Netinkama klavišų seka.</translation>
     </message>
@@ -2552,13 +3546,13 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Raktų seka neveiks redaktoriuje.</translation>
     </message>
     <message>
-        <location line="+469" />
+        <location line="+491" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Importuokite klaviatūros atvaizdavimo schemą</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Klaviatūros atvaizdavimo schema (*.kms)</translation>
     </message>
@@ -2568,13 +3562,13 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Eksportuoti klaviatūros atvaizdavimo schemą</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+153" />
+        <location line="-378" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Raktų seka:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Modifikatoriaus klavišams naudokite „Cmd“, „Opt“, „Ctrl“ ir „Shift“. Specialiems klavišams naudokite „Escape“, „Backspace“, „Delete“, „Insert“, „Home“ ir pan. Sujunkite atskirus klavišus su „+“ ir su „,“ sujunkite kelis sparčiuosius klavišus į sparčiųjų klavišų seką. Pavyzdžiui, jei vartotojas turi laikyti Ctrl ir Shift modifikavimo klavišus, kol paspausdami Escape, tada atleiskite ir paspauskite A, įveskite „Ctrl+Shift+Escape,A“.</translation>
     </message>
@@ -2599,12 +3593,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ieškoti...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Tuščias paieškos terminas.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Paieška</translation>
     </message>
@@ -2614,7 +3608,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Ieškoti &amp;&amp; &amp;Pakeisti</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>Iešk&amp;oti:</translation>
     </message>
@@ -2622,6 +3616,16 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
         <translation>&amp;Tik ištisi žodžiai</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>Ignoruoti dvejetainius failus</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Ignoruoti sugeneruotus failus</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2634,12 +3638,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>&amp;Taikymo sritis:</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-15" />
         <source>&amp;Case sensitive</source>
         <translation>&amp;Skirkite didžiąsias ir mažąsias raides</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Rasti/pakeisti</translation>
     </message>
@@ -2656,8 +3660,8 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Išplėstinė...</translation>
     </message>
@@ -2696,19 +3700,19 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pakeisti ir rasti ankstesnį</translation>
     </message>
     <message>
-        <location line="-248" />
-        <location line="+261" />
+        <location line="-250" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Pakeisti viską</translation>
     </message>
     <message>
-        <location line="-311" />
+        <location line="-313" />
         <source>Find Flags</source>
         <translation>Rasti vėliavas</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+237" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Pakeisti &amp;&amp;Rasti</translation>
     </message>
@@ -2762,8 +3766,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-741" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-818" />
         <source>Case Sensitive</source>
         <translation>Skiriamos didžiosios ir mažosios raidės</translation>
     </message>
@@ -2789,7 +3792,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pakeisti...</translation>
     </message>
     <message>
-        <location line="-522" />
+        <location line="-524" />
         <source>Find</source>
         <translation>Rasti</translation>
     </message>
@@ -2804,9 +3807,9 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pakeisti:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+138" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+142" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+272" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Rodyti kelius, susijusius su aktyviu projektu</translation>
     </message>
@@ -2828,7 +3831,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+758" />
         <source>Collapse All</source>
         <translation>Sutraukti viską</translation>
     </message>
@@ -2855,7 +3858,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Pakeiskite</translation>
     </message>
@@ -2875,7 +3878,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Atidaryti failą „%1“ su:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Rodyti paslėptus failus</translation>
     </message>
@@ -2890,38 +3893,47 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Rodyti aplankus viršuje</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+47" />
         <source>Synchronize Root Directory with Editor</source>
         <translation>Sinchronizuokite šakninį katalogą su redaktoriumi</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Naujas failas</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Naujas aplankas</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Pašalinti aplanką...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>Naujas failas...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+199" />
         <source>Open &quot;%1&quot;</source>
         <translation>Atidaryti &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Pašalinti aplanką</translation>
+        <translation type="vanished">Pašalinti aplanką</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-107" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-103" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2954,12 +3966,11 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Namai</translation>
     </message>
     <message>
-        <location line="+145" />
         <source>Add New...</source>
-        <translation>Pridėti naują...</translation>
+        <translation type="vanished">Pridėti naują...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+159" />
         <source>Rename...</source>
         <translation>Pervardyti...</translation>
     </message>
@@ -2969,12 +3980,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pašalinti...</translation>
     </message>
     <message>
-        <location line="-622" />
+        <location line="-643" />
         <source>Synchronize with Editor</source>
         <translation>Sinchronizuoti su redaktoriumi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Filtro konfigūracija</translation>
     </message>
@@ -3032,14 +4043,16 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>%1 filtro atnaujinimas: atšauktas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+96" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+96" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+34" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+70" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Kelias:</translation>
     </message>
@@ -3090,6 +4103,11 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Versijų valdymo būsena:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Skaitoma:</translation>
     </message>
@@ -3110,18 +4128,18 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Simbolinė nuoroda:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>Nežinoma</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>„Windows“ (CRLF)</translation>
     </message>
@@ -3136,7 +4154,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>„Mac“ (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Mišrus</translation>
@@ -3163,22 +4181,22 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+102" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-397" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+265" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-396" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Papildyti...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Redaguoti...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+136" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133" />
         <source>Uncategorized</source>
         <translation>Neįtraukta į kategorijas</translation>
     </message>
@@ -3188,12 +4206,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Įrankiai, kurie bus rodomi tiesiai meniu Išoriniai įrankiai.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Nauja kategorija</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Naujas įrankis</translation>
     </message>
@@ -3209,12 +4227,12 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Naudingas tekstas</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Sistemos aplinka</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+63" />
         <source>Add tool.</source>
         <translation>Pridėti įrankį.</translation>
     </message>
@@ -3223,15 +4241,14 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-409" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-399" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Pašalinti</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Pašalinti įrankį.</translation>
+        <translation type="vanished">Pašalinti įrankį.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3293,15 +4310,13 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+126" />
         <source>No changes to apply.</source>
-        <translation>Nereikia taikyti jokių pakeitimų.</translation>
+        <translation type="vanished">Nereikia taikyti jokių pakeitimų.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-91" />
         <source>Change...</source>
         <translation>Keisti...</translation>
     </message>
@@ -3332,23 +4347,47 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Vykdoma:</translation>
     </message>
     <message>
-        <source>Executable:</source>
-        <translation type="vanished">Vykdomas:</translation>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-28" />
+        <source>Custom Language Models</source>
+        <translation>Pasirinktiniai kalbos modeliai</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Naujas modelis&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Vykdomasis failas</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
+        <source>Executable:</source>
+        <translation>Vykdomas:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Argumentai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Argumentai:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Darbinis katalogas:</translation>
     </message>
@@ -3359,7 +4398,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Aplinka:</translation>
     </message>
@@ -3374,7 +4413,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>Pridėti kategoriją</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -3384,7 +4423,7 @@ su sąlyga, kad jie buvo nepakeisti prieš atliekant refaktorizavimą.</translat
         <translation>PATH=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Išoriniai įrankiai</translation>
     </message>
@@ -3401,7 +4440,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
 Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos įvesties lauke, o tada – ieškomą žodį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+121" />
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+139" />
         <source>Files in File System</source>
         <translation>Failai failų sistemoje</translation>
     </message>
@@ -3415,7 +4454,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation type="vanished">Sukurti ir atidaryti &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-64" />
         <source>Create File</source>
         <translation>Sukurti failą</translation>
     </message>
@@ -3450,17 +4489,17 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Sukurti katalogą</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+180" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>Sukurkite ir atidarykite failą „%1“</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>Sukurkite katalogą „%1“</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Įtraukti paslėptus failus</translation>
     </message>
@@ -3470,27 +4509,37 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Filtras:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Galimi filtrai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-8" />
         <source>Open as Centered Popup</source>
         <translation>Atidaryti kaip centre esantis iššokantis langas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+592" />
         <source>Refresh</source>
         <translation>Atnaujinti</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+101" />
         <source>Type to locate (%1)</source>
         <translation>Įveskite norėdami rasti (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+14" />
+        <source>Ignore Generated Files</source>
+        <translation>Ignoruoti sugeneruotus failus</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Ignoruoti sugeneruotus failus naudojant su projektu susijusius filtrus.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>Interneto paieška</translation>
     </message>
@@ -3510,12 +4559,12 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Sukelia paiešką QT klaidų stebėjimo priemonėje.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>Raskite...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Atidaryti dokumentą&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Failas &gt; Atidaryti failą (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Failas &gt; Pavyzdžiai &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Failas &gt; Naujausi failai&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Nuvilkite failus čia&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3530,7 +4579,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;– įveskite &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt;, kad pereitumėte prie funkcijos apibrėžimo&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Atnaujinkite lokatoriaus talpyklas</translation>
     </message>
@@ -3540,15 +4589,15 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Įveskite, kad surastumėte</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-494" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-513" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+128" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>Papildyti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-58" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Atnaujinimo intervalas:</translation>
     </message>
@@ -3558,17 +4607,23 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Vietos nustatymo filtrai, kurie neatnaujina talpyklos duomenų iš karto, pvz., pasirinktiniai katalogų filtrai, atnaujina juos po šio laiko intervalo.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation> min</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Naudoti užbaigimą Tab klavišu</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>„Locator“ filtrai, kai įmanoma, rodo santykinius aktyvaus projekto kelius.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
         <source>Files in Directories</source>
         <translation>Failai kataloguose</translation>
     </message>
@@ -3579,12 +4634,13 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>URL šablonas</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-12" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>vardas</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Priešdėlis</translation>
     </message>
@@ -3604,7 +4660,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Pasirinktinis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-121" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-123" />
         <source>Save Changes</source>
         <translation>Išsaugoti pakeitimus</translation>
     </message>
@@ -3619,31 +4675,31 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Prieš kurdami automatiškai išsaugokite visus failus</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-121" />
         <source>Keyboard Shortcuts</source>
         <translation>Klaviatūros nuorodos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
-        <location line="+107" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+45" />
+        <location line="+129" />
         <source>Command</source>
         <translation>komandą</translation>
     </message>
     <message>
-        <location line="-108" />
-        <location line="+108" />
+        <location line="-130" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Etiketė</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Trumpesnis kelias</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114" />
         <source>Command Mappings</source>
         <translation>Komandų atvaizdai</translation>
     </message>
@@ -3654,7 +4710,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-208" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-201" />
         <source>Reset All</source>
         <translation>Atstatyti viską</translation>
     </message>
@@ -3665,7 +4721,6 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14" />
         <source>Reset to default.</source>
         <translation>Iš naujo nustatyti numatytuosius.</translation>
     </message>
@@ -3681,97 +4736,164 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="-5" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+5" />
         <source>Reset</source>
         <translation>Nustatyti iš naujo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Paprasto teksto redaktorius</translation>
+        <translation type="vanished">Paprasto teksto redaktorius</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Rodyti kairiąją šoninę juostą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Slėpti kairiąją šoninę juostą</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Rodyti dešinę šoninę juostą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Slėpti dešinę šoninę juostą</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Kopijuoti į iškarpinę</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Išvalyti meniu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>Dvejetainis redaktorius</translation>
+        <translation type="vanished">Dvejetainis redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-393" />
         <source>Sort categories</source>
         <translation>Rūšiuoti kategorijos</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Taikyti visus pakeitimus ir grįžti į ankstesnį režimą.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Taikyti visus pakeitimus ir likti čia.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Atmesti visus pakeitimus ir likti čia.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Atmesti visus pakeitimus ir grįžti į ankstesnį režimą.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Netaikyti pakeitimai</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Yra netaikytų pakeitimų. Ar norite juos pritaikyti?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Taikyti pakeitimus</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Ankstesniame puslapyje yra neįrašytų pakeitimų.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Taikyti neišsaugotus pakeitimus</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Atsisakyti neišsaugotų pakeitimų</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Grįžti į ankstesnį puslapį</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Yra neįrašytų pakeitimų.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Likti nustatymų režime</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+403" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Parinktys</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-78" />
         <source>Options</source>
         <translation>Galimybės</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Sukuria qm vertimo failus, kuriuos gali naudoti programa iš vertėjo ts failų</translation>
+        <translation type="vanished">Sukuria qm vertimo failus, kuriuos gali naudoti programa iš vertėjo ts failų</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Išleisk vertimus (lrelease)</translation>
+        <translation type="vanished">Išleisk vertimus (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>Kalbininkas</translation>
+        <translation type="vanished">Kalbininkas</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Sinchronizuoja vertėjo ts failus su programos kodu</translation>
+        <translation type="vanished">Sinchronizuoja vertėjo ts failus su programos kodu</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Atnaujinti vertimus (atnaujinti)</translation>
+        <translation type="vanished">Atnaujinti vertimus (atnaujinti)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Atidaro dabartinį failą Notepad</translation>
     </message>
@@ -3781,9 +4903,9 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Redaguoti su Notepad</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Tekstas</translation>
     </message>
@@ -3799,7 +4921,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt Greitas</translation>
     </message>
@@ -3814,19 +4936,19 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Qt Quick 2 peržiūra (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Atidaro dabartinį failą vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>Redaguoti naudojant vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="-320" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Visuotiniai veiksmai ir veiksmai iš meniu</translation>
     </message>
@@ -3836,7 +4958,7 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Suaktyvina veiksmą. Jei jis yra iš meniu, jis atitinka bet kurią meniu hierarchijos dalį, atskirtą &quot;&gt;&quot;. Pavyzdžiui, „sess def“ atitinka „Failas &gt; Seansai &gt; Numatytasis“.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-112" />
         <source>Proxy Authentication Required</source>
         <translation>Reikalingas tarpinio serverio autentifikavimas</translation>
     </message>
@@ -3846,12 +4968,32 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Neklauskite dar kartą.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Kopijuoti išskleistą reikšmę</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>QStandardPaths::%1 vieta vietinėje failų sistemoje.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Diegiant temų nerasta.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>DI</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Žinynas</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Dabartinė data (ISO).</translation>
     </message>
@@ -3882,10 +5024,12 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Sukonfigūruotas numatytasis projektų katalogas.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Katalogas, kurį paskutinį kartą aplankėte failo dialogo lange.</translation>
@@ -3922,26 +5066,33 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat sistemoje Windows, tuščia visose kitose platformose.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Kelias į pačią bėgimo %1.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>Katalogas, kuriame %1 randa iš anksto įdiegtus išteklius.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>Katalogas, kuriame %1 pateikia pasirinktinius vartotojo duomenis.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Dabartinė data (QDate formatstring).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Dabartinis laikas (QTime formato eilutė).</translation>
     </message>
@@ -3956,22 +5107,37 @@ Norėdami tai padaryti, įveskite šį spartųjį klavišą ir tarpą paieškos 
         <translation>Komentaras.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Konvertuoti eilutę į gryną ASCII.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Konvertuoti eilutę į tokią, kurią galima saugiai naudoti failo kelyje.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Terminalas, sukonfigūruotas skiltyje Aplinka &gt; Sistema.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Argumentai, perduodami terminalo komandai, kad ji būtų vykdoma terminale, sukonfigūruotame skiltyje Aplinka &gt; Sistema.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1 &gt; %2 Parinktys...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Sukurti aplanką</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Nustatymų failo klaida</translation>
     </message>
@@ -4000,52 +5166,48 @@ You will likely experience further problems using this instance of %3.</source>
 Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1 renka strigčių ataskaitas tik tam, kad ištaisytų klaidas. Norėdami išjungti šią funkciją, eikite į %2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1 gali rinkti gedimų ataskaitas tik tam, kad ištaisytų klaidas. Norėdami įjungti šią funkciją, eikite į %2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation> &gt; Parinktys &gt; Aplinka &gt; Sistema</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Redaguoti &gt; Nuostatos &gt; Aplinka &gt; Sistema</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 naudoja Google Crashpad, kad surinktų strigtis ir siųstų jas į mūsų užpakalinę programą apdoroti. „Cashpad“ gali užfiksuoti bet kokį turinį iš sudužusio proceso atminties, įskaitant neskelbtiną vartotojo informaciją, URL adresus ir bet kokį kitą turinį, kuriuo naudotojai patikėjo %1. Tačiau surinktos strigčių ataskaitos naudojamos tik siekiant ištaisyti klaidas.</translation>
+        <translation type="vanished">%1 naudoja Google Crashpad, kad surinktų strigtis ir siųstų jas į mūsų užpakalinę programą apdoroti. „Cashpad“ gali užfiksuoti bet kokį turinį iš sudužusio proceso atminties, įskaitant neskelbtiną vartotojo informaciją, URL adresus ir bet kokį kitą turinį, kuriuo naudotojai patikėjo %1. Tačiau surinktos strigčių ataskaitos naudojamos tik siekiant ištaisyti klaidas.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Daugiau informacijos:</translation>
+        <translation type="vanished">Daugiau informacijos:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>„Crashpad“ apžvalga</translation>
+        <translation type="vanished">„Crashpad“ apžvalga</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>%1 saugos politika</translation>
+        <translation type="vanished">%1 saugos politika</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Dizainas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Pridėti failą prie versijos valdymo (%1)</translation>
     </message>
@@ -4055,7 +5217,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>Pridėkite failus prie versijos valdymo (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Teksto kodavimas</translation>
     </message>
@@ -4070,7 +5232,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>Pasirinkite „%1“ kodavimą.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Iš naujo įkelti su kodavimu</translation>
     </message>
@@ -4080,7 +5242,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>Išsaugoti naudojant kodavimą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Pasirinkite šabloną:</translation>
     </message>
@@ -4090,8 +5252,8 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>Pasirinkite...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+94" />
         <source>Projects</source>
         <translation>Projektai</translation>
     </message>
@@ -4111,7 +5273,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>%1 šablonai</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Nepriklausoma nuo platformos</translation>
     </message>
@@ -4121,7 +5283,7 @@ Tikėtina, kad naudodami šį %3 egzempliorių susidursite su daugiau problemų.
         <translation>Palaikomos platformos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Perrašyti esamus failus</translation>
     </message>
@@ -4137,7 +5299,7 @@ Ar norėtumėte juos perrašyti?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-885" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1171" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5" />
         <source>Make Writable</source>
         <translation>Padaryti rašoma</translation>
@@ -4249,22 +5411,22 @@ Do you want to check them out now?</source>
 Ar norite juos patikrinti dabar?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1093" />
         <source>Restart Required</source>
         <translation>Reikalingas paleidimas iš naujo</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>Vėliau</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Paleiskite iš naujo dabar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;nėra dokumento&gt;</translation>
     </message>
@@ -4274,27 +5436,27 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>Nepasirinktas joks dokumentas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Sistemos redaktorius</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>Nepavyko atidaryti URL %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>Nepavyko rasti vykdomojo failo „%1“ (išplėstas „%2“)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>Paleidžiamas išorinis įrankis &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>„%1“ baigtas</translation>
     </message>
@@ -4304,22 +5466,22 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>„%1“ baigtas su klaida</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Išorinis</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>Klaida analizuojant išorinį įrankį %1: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Klaida: %1 išorinis įrankis turi pasikartojančius ID</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Nepavyko paleisti failų naršyklės</translation>
     </message>
@@ -4354,7 +5516,7 @@ Ar norite juos patikrinti dabar?</translation>
         <translation type="vanished">Nepavyko rasti explorer.exe kelyje, norint paleisti „Windows Explorer“.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Failų naršyklės komanda nenustatyta.</translation>
     </message>
@@ -4384,12 +5546,17 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>Rodyti „Finder“.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Rodyti failų tvarkytuvėje</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>Rodyti aplanką, kuriame yra</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Atidarykite komandų eilutę čia</translation>
     </message>
@@ -4412,16 +5579,29 @@ Ar norite juos patikrinti dabar?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>Nepavyko pašalinti failo „%1“.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>Nepavyko pašalinti failo „%1“: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>Nepavyksta iškoduoti turinio.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>Nepavyko pervadinti include guard faile „%1“: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">Nepavyko pašalinti failo „%1“.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Nepavyko pervardyti įtraukimo apsaugos faile &quot;%1&quot;.</translation>
+        <translation type="vanished">Nepavyko pervardyti įtraukimo apsaugos faile &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>pakeista %n pasitaikymų.</numerusform>
@@ -4457,7 +5637,12 @@ Ar norite juos patikrinti dabar?</translation>
     <message>
         <location line="+2" />
         <source>None</source>
-        <translation>Nė vienas</translation>
+        <comment>No find flags</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Nė vienas</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4538,22 +5723,20 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>Atitikčių nerasta.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-460" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-422" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Konfigūruoti...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Atidarykite dialogo langą Parinktys.</translation>
+        <translation type="vanished">Atidarykite dialogo langą Parinktys.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Atidarykite dialogo langą Parinktys.</translation>
+        <translation type="vanished">Atidarykite dialogo langą Parinktys.</translation>
     </message>
     <message>
         <source> (%1)</source>
@@ -4564,22 +5747,28 @@ Ar norite juos patikrinti dabar?</translation>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+824" />
+        <location line="+873" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Remiantis Qt %1 (%2, %3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Neįgyvendinta</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>Failas atkurtas iš automatiškai išsaugotos kopijos. Pasirinkite Išsaugoti, kad patvirtintumėte, arba Grįžti į išsaugotą, kad atmestumėte pakeitimus.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>Gamykla su id=&quot;%1&quot; jau užregistruota. Ištrynimas.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Iš naujo įkelti visus vedlius</translation>
     </message>
@@ -4587,6 +5776,11 @@ Ar norite juos patikrinti dabar?</translation>
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Patikrinkite vedlio būseną</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Kita</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -4599,12 +5793,12 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>Nepavyko konvertuoti „%1“ rezultato į eilutę.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Įvertinkite paprastus „JavaScript“ teiginius.&lt;br&gt;Pažodiniai „}“ simboliai turi būti naudojami kaip „\}“, „\“ simboliai turi būti naudojami kaip „\\“, o „%{“ – kaip „%\{“.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Vykdykite pasirinktines komandas</translation>
     </message>
@@ -4614,7 +5808,7 @@ Ar norite juos patikrinti dabar?</translation>
         <translation>Vykdo savavališką komandą su argumentais. Jei reikia, komandos ieškoma PATH aplinkos kintamajame. Atminkite, kad komanda vykdoma tiesiogiai, o ne apvalkale.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Ankstesnė komanda vis dar veikia (&quot;%1&quot;).
@@ -4626,7 +5820,7 @@ Ar nori jį nužudyti?</translation>
         <translation>Nužudyti ankstesnį procesą?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>Nepavyko rasti vykdomojo failo „%1“.</translation>
     </message>
@@ -4646,7 +5840,7 @@ Ar nori jį nužudyti?</translation>
         <translation>Paleidžia išorinį įrankį, kurį nustatėte nuostatose (Aplinka &gt; Išoriniai įrankiai).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+360" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+354" />
         <source>Evaluate JavaScript</source>
         <translation>Įvertinkite JavaScript</translation>
     </message>
@@ -4661,7 +5855,7 @@ Ar nori jį nužudyti?</translation>
         <translation>Iš naujo nustatyti variklį</translation>
     </message>
     <message>
-        <location line="-58" />
+        <location line="-50" />
         <source>Engine aborted after timeout.</source>
         <translation>Variklis išjungtas pasibaigus laikui.</translation>
     </message>
@@ -4681,13 +5875,13 @@ Ar nori jį nužudyti?</translation>
         <translation>Variklis tinkamai nejudėjo.</translation>
     </message>
     <message>
-        <location line="+277" />
-        <location line="+4" />
+        <location line="+272" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Kopijuoti į mainų sritį: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-70" />
         <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>Lokalis: Vykdant „%1“ įvyko klaida.</translation>
     </message>
@@ -4722,7 +5916,7 @@ Ar nori jį nužudyti?</translation>
         <translation>Raskite failus iš pasaulinės failų sistemos rodyklės („Spotlight“, „Rase“, viskas). Pridėkite &quot;+&lt;sumeris&gt;&quot; arba &quot;: &lt;pale&gt;&quot;, kad pereitumėte į nurodytą eilutės numerį. Pridėkite dar vieną „+&lt;sumeris&gt;“ arba „: &lt;pale&gt;“, kad pereikite ir į stulpelio numerį.</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+109" />
         <source>Sort results</source>
         <translation>Rūšiuokite rezultatus</translation>
     </message>
@@ -4758,12 +5952,12 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation>URL:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Serijinis terminalas</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Apvyniokite tekstą</translation>
     </message>
@@ -4897,24 +6091,24 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation>Vidinė klaida: tipas netinkamas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>Perjungti į &lt;b&gt;%1&lt;/b&gt; režimą</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>Suaktyvinti %1 rodinį</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>output.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Mastelio keitimas: %1%</translation>
     </message>
@@ -4923,24 +6117,42 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <source>Save Contents...</source>
         <translation>Išsaugokite turinį ...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>Kopijuoti turinį į juodraščio buferį</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>Nepavyko atidaryti „%1“ redaktoriaus.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>Praleista simbolių dėl nustatymų ribos: %n</numerusform>
+            <numerusform>Praleista simbolių dėl nustatymų ribos: %n</numerusform>
+            <numerusform>Praleista simbolių dėl nustatymų ribos: %n</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>Praleista %n simbolių dėl programos išvesties nustatymų</numerusform>
             <numerusform>Praleista %n simbolių dėl programos išvesties nustatymų</numerusform>
             <numerusform>Praleista %n simbolių dėl programos išvesties nustatymų</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Atmetama per daug laukiamos išvesties.]
 </translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Tekstiniai failai (*.txt);;Visi failai (*)</translation>
     </message>
@@ -5019,7 +6231,7 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation>„%1“ nepavyko (išėjimo kodas %2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Šaltinis</translation>
     </message>
@@ -5034,86 +6246,137 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation>Failas neegzistuoja.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
+        <source>Plugin is already installed.</source>
+        <translation>Papildinys jau įdiegtas.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>Įskiepis, kurio ID „%1“, jau įdiegtas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>Papildinys, kurio ID „%1“, neįdiegtas.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Papildiniui nepavyko išspręsti priklausomybių:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Papildinių nerasta.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>Rastas daugiau nei vienas papildinys.</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Check Archive</source>
         <translation>Patikrinkite archyvą</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+56" />
         <source>Checking archive...</source>
         <translation>Tikrinamas archyvas...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Archive extracted successfully.</source>
+        <translation>Archyvas sėkmingai išskleistas.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>Išpakuojant įvyko klaida: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Įkelti papildinį nedelsiant</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1 bus įdiegtas į %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Priimti sąlygas ir nuostatas</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Papildiniui %1 reikia, kad sutiktumėte su šiomis sąlygomis ir nuostatomis:</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
         <translation type="vanished">Failas nėra archyvas.</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-221" />
         <source>Canceled.</source>
         <translation>Atšauktas.</translation>
     </message>
     <message>
-        <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>Išarchyvuojant įvyko klaida.</translation>
+        <translation type="vanished">Išarchyvuojant įvyko klaida.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+26" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Su archyvu viskas gerai.</translation>
     </message>
     <message>
-        <location line="-82" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Papildiniui reikalinga nesuderinama %1 versija (%2).</translation>
+        <translation type="vanished">Papildiniui reikalinga nesuderinama %1 versija (%2).</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>Nerasta %1 papildinio.</translation>
+        <translation type="vanished">Nerasta %1 papildinio.</translation>
     </message>
     <message>
-        <location line="+117" />
         <source>Install Location</source>
-        <translation>Įdiegimo vieta</translation>
+        <translation type="vanished">Įdiegimo vieta</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Pasirinkite diegimo vietą.</translation>
+        <translation type="vanished">Pasirinkite diegimo vietą.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Vartotojo įskiepiai</translation>
+        <translation type="vanished">Vartotojo įskiepiai</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Papildinys bus prieinamas visoms suderinamoms %1 instalijoms, bet tik dabartiniam vartotojui.</translation>
+        <translation type="vanished">Papildinys bus prieinamas visoms suderinamoms %1 instalijoms, bet tik dabartiniam vartotojui.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>%1 diegimas</translation>
+        <translation type="vanished">%1 diegimas</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Papildinys bus prieinamas tik šiam %1 diegimui, bet visiems vartotojams, kurie gali jį pasiekti.</translation>
+        <translation type="vanished">Papildinys bus prieinamas tik šiam %1 diegimui, bet visiems vartotojams, kurie gali jį pasiekti.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Santrauka</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>„%1“ bus įdiegta į „%2“.</translation>
+        <translation type="vanished">„%1“ bus įdiegta į „%2“.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+117" />
         <source>Overwrite File</source>
         <translation>Perrašyti failą</translation>
     </message>
@@ -5129,46 +6392,76 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Nepavyko įrašyti failo</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Nepavyko sukurti katalogo „%1“.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Nepavyko įrašyti failo „%1“.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Įdiegti papildinį</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Kopijuojami įskiepio failai...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Kopijuojama
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Nepavyko nukopijuoti papildinių failų</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Rodyti išsamiau...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>Perjungti pažangos informaciją</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Auto</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>bevardis</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Dabartinė tema: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Temos pakeitimas įsigalios paleidus iš naujo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+324" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>Aptikta %1 saugykla, bet %1 nesukonfigūruotas.</translation>
     </message>
@@ -5182,7 +6475,27 @@ Dukart spustelėkite norėdami redaguoti elementą.</translation>
         <translation type="vanished">Pašalinti šiuos failus iš versijos valdymo sistemos (%2)? %1Pastaba: tai gali pašalinti vietinį failą.</translation>
     </message>
     <message>
+        <location line="-184" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>Aptiktas versijų kontrolės katalogas, kurį palaiko įskiepis %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Aptikta versijų valdymo sistema</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>Enable %1</source>
+        <translation>Įjungti %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>Atrodo, kad katalogas „%1“ yra versijų valdomas, o tai gali tvarkyti išjungtas papildinys %2.</translation>
+    </message>
+    <message>
+        <location line="+168" />
         <source>Remove the following files from the version control system (%1)?</source>
         <translation>Pašalinti šiuos failus iš versijos valdymo sistemos (%1)?</translation>
     </message>
@@ -5219,66 +6532,145 @@ to version control (%2)?</source>
         <source>Adding to Version Control Failed</source>
         <translation>Nepavyko pridėti prie versijos valdymo</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Nepavyko pridėti šių failų į versijų kontrolę (%1)
+%2
+... ir dar %n.</numerusform>
+            <numerusform>Nepavyko pridėti šių failų į versijų kontrolę (%1)
+%2
+... ir dar %n.</numerusform>
+            <numerusform>Nepavyko pridėti šių failų į versijų kontrolę (%1)
+%2
+... ir dar %n.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>pridėta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>pakeista</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>ištrinta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>pervadinta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>nesekama</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>nesujungta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>nežinoma</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Versijų valdymo būsena: pridėta.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Versijų valdymo būsena: pakeista.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Versijų valdymo būsena: ištrinta.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Versijų valdymo būsena: pervadinta.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Versijų valdymo būsena: nesekama.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Versijų valdymo būsena: nesujungta.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>Nepavyko pridėti failo
+        <translation type="vanished">Nepavyko pridėti failo
 %1
 versijos valdymui (%2)
 </translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Nepavyko pridėti šių failų prie versijos valdymo (%1)
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>Apie %1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Kopijuoti ir uždaryti</translation>
+        <translation type="vanished">Kopijuoti ir uždaryti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+6" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;Iš peržiūros %1&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;Sukurta ant %1 %2&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;Sukurta ant %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Autorių teisės 2008-%6 %7. Visos teisės saugomos.&lt;br/&gt;&lt;br/&gt;Programa teikiama TOKIA, KOKIA YRA, JOKIŲ RŪŠIŲ GARANTIJŲ, ĮSKAITANT PROJEKTO, TINKAMUMO PARDUOTI IR TINKAMUMO KONKREČIAM TIKSLU GARANTIJĄ.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Autorių teisės 2008-%6 %7. Visos teisės saugomos.&lt;br/&gt;&lt;br/&gt;Programa teikiama TOKIA, KOKIA YRA, JOKIŲ RŪŠIŲ GARANTIJŲ, ĮSKAITANT PROJEKTO, TINKAMUMO PARDUOTI IR TINKAMUMO KONKREČIAM TIKSLU GARANTIJĄ.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Qt logotipas, taip pat Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® ir Qt Embedded® yra registruotieji The Qt Company Ltd. prekių ženklai.</translation>
+        <translation type="vanished">Qt logotipas, taip pat Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® ir Qt Embedded® yra registruotieji The Qt Company Ltd. prekių ženklai.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>Žymos:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Parodyk viską</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Atgal</translation>
     </message>
@@ -5298,20 +6690,227 @@ versijos valdymui (%2)
         <translation>Perjungiama į atvirą dokumentą.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>„Python“ redaktorius</translation>
+        <translation type="vanished">„Python“ redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>„Markdown“ redaktorius</translation>
+        <translation type="vanished">„Markdown“ redaktorius</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Pereiti prie kito redaktoriaus</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Atsegti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>Aplinkos kintamiesiems su sąrašo semantika, kurie nenaudoja standartinio kelių sąrašo
+skirtuko, čia reikia sukonfigūruoti atitinkamus skirtukus, jei planuojate
+juos sujungti iš kelių šaltinių (pavyzdžiui, iš rinkinio ir iš projekto).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Kintamasis</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Skirtukas</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-270" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Pridėti MCP serverį iš registro</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Filtruoti serverius...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Visi tipai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>Nuotolinis</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Saugykla:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Svetainė:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Paketai:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Nuotoliniai šaltiniai:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Rodomas pavadinimas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Naujas serveris&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Komanda MCP serverio procesui paleisti. Naudojama tik standartinės įvesties/išvesties ryšio tipui.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Argumentai MCP serverio procesui paleisti. Naudojami tik standartinės įvesties/išvesties ryšio tipui.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>URL, kuriuo jungiamasi prie MCP serverio. Nenaudojamas standartinės įvesties/išvesties ryšio tipui.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Ryšio tipas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>Ryšio su MCP serveriu tipas.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Standartinė įvestis/išvestis</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>Srautinis HTTP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>HTTP antraštės:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>HTTP antraštės, įtraukiamos jungiantis prie MCP serverio. Naudojama tik HTTP ryšio tipams.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Aplinkos kintamųjų pakeitimai, taikomi paleidžiant MCP serverio procesą. Naudojama tik standartinio įvesties/išvesties ryšio tipui.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Pasirinkite ryšio tipą</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Šis serveris siūlo kelis prisijungimo būdus. Pasirinkite vieną:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Pridėti iš registro...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Įjungti Qt dokumentacijos MCP serverį</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Kai įjungta, bus naudojamas „Qt“ dokumentacijos MCP serveris iš https://qt-docs-mcp.qt.io/mcp.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>MCP serveriai</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Išeiti iš derinimo režimo</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Įrankių juosta</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Redaktorius</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Paslapčių saugykla nepasiekiama! Jūsų reikšmės nustatymuose bus saugomos kaip paprastasis tekstas!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Galite įdiegti libsecret arba KWallet, kad įjungtumėte paslapčių saugyklą.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Konteksto eilutės:</translation>
     </message>
@@ -5321,13 +6920,18 @@ versijos valdymui (%2)
         <translation>Ignoruoti tarpą</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Suskleisti viską</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Iš naujo įkelti skirtumą</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] prieš [%2] %3</translation>
     </message>
@@ -5343,7 +6947,7 @@ versijos valdymui (%2)
         <translation>[%1] %2 prieš [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Slėpti keitimo aprašymą</translation>
     </message>
@@ -5353,36 +6957,41 @@ versijos valdymui (%2)
         <translation>Rodyti pakeitimo aprašymą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Išskleisti viską</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Nepavyko išanalizuoti pataisos failo &quot;%1&quot;. Turinys nėra vienodo skirtumo formato.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+236" />
         <source>Diff Editor</source>
         <translation>Diff redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>Skirt</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>Išsaugota</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Modifikuota</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>Diff failai</translation>
     </message>
@@ -5392,7 +7001,7 @@ versijos valdymui (%2)
         <translation>Diff modifikuoti failai</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;Skirt</translation>
     </message>
@@ -5413,12 +7022,12 @@ versijos valdymui (%2)
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Diff Atidaryti failus</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Meta + Shift + H</translation>
     </message>
@@ -5433,27 +7042,32 @@ versijos valdymui (%2)
         <translation>Skirstyti išorinius failus...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Skirtumas &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Pasirinkite pirmąjį failą skirtumui</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Pasirinkite antrąjį failą skirtumui</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Skirtumas „%1“, „%2“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Failas nerastas: „%1“.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Siųsti dalį į CodePaster...</translation>
     </message>
@@ -5468,7 +7082,7 @@ versijos valdymui (%2)
         <translation>Grąžinti dalį...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Klaida:&lt;/b&gt; nepavyko iššifruoti „%1“ naudojant „%2“ koduotę.</translation>
     </message>
@@ -5478,30 +7092,28 @@ versijos valdymui (%2)
         <translation>Pasirinkite Kodavimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Perjunkite į Unified Diff redaktorių</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+27" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+29" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Laukiama duomenų...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Duomenų nuskaityti nepavyko.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
+        <location line="-569" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Perjunkite į „Side By Side Diff“ redaktorių</translation>
     </message>
@@ -5511,7 +7123,7 @@ versijos valdymui (%2)
         <translation>Sinchronizuoti horizontalias slinkties juostas</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>Praleista %n eilučių...</numerusform>
@@ -5535,7 +7147,7 @@ versijos valdymui (%2)
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Nėra skirtumo.</translation>
@@ -5547,15 +7159,20 @@ versijos valdymui (%2)
         <translation>Atvaizdavimo skirtumas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>Jokio dokumento</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Kopijuoti išvalytą tekstą</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+68" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
@@ -5565,14 +7182,24 @@ versijos valdymui (%2)
         <translation>Versija:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Vendor:</source>
         <translation>Pardavėjas:</translation>
     </message>
     <message>
-        <location line="-1" />
+        <location line="-2" />
         <source>Compatibility version:</source>
         <translation>Suderinamumo versija:</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Id:</source>
+        <translation>ID:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Vendor Id:</source>
+        <translation>Tiekėjo ID:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5583,6 +7210,11 @@ versijos valdymui (%2)
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Dokumentacija:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5620,14 +7252,24 @@ versijos valdymui (%2)
         <translation>Įkeliama be paleidimo:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
-        <translation>Nė vienas</translation>
+        <comment>No category</comment>
+        <translation>Nėra</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
+        <comment>Platforms: All</comment>
         <translation>Visi</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Nė vienas</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">Visi</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5690,19 +7332,27 @@ versijos valdymui (%2)
         <translation>Papildinys baigė savo gyvavimo ciklą ir buvo ištrintas.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (nebenaudojamas)</translation>
+        <translation type="vanished">%1 (nebenaudojamas)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (eksperimentinis)</translation>
+        <translation type="vanished">%1 (eksperimentinis)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>nerekomenduojama</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>eksperimentinė</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Kelias: %1
@@ -5716,7 +7366,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Papildinys įjungtas kaip įjungto papildinio priklausomybė.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Kelias: %1
@@ -5735,7 +7385,7 @@ Papildinys išjungtas komandinės eilutės argumentu.</translation>
         <translation>Kelias: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Papildinys nepasiekiamas šioje platformoje.</translation>
     </message>
@@ -5780,7 +7430,7 @@ Papildinys išjungtas komandinės eilutės argumentu.</translation>
         <translation>Komunalinės paslaugos</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1604" />
         <source>Enabling Plugins</source>
         <translation>Papildinių įjungimas</translation>
     </message>
@@ -5798,7 +7448,7 @@ taip pat įjungs šiuos papildinius:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Papildinių išjungimas</translation>
     </message>
@@ -5856,12 +7506,12 @@ taip pat išjungs šiuos papildinius:
         <translation>Ištrinta</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1072" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-676" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Rasta kelios to paties papildinio versijos.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Aptikta cirkuliacinė priklausomybė:</translation>
     </message>
@@ -5921,57 +7571,91 @@ Priežastis: %3</translation>
         <translation>Išjungti papildinį</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Sąlygos ir nuostatos</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Priimti</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Atmesti</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Papildiniui %1 reikia, kad sutiktumėte su šiomis sąlygomis ir nuostatomis:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Nesutikote su sąlygomis ir nuostatomis</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Nepavyko įkelti papildinio, nes nepavyko įkelti priklausomybės: %1(%2)
 Priežastis: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Papildinys nerastas.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Jo nėra.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Papildinys &quot;%1&quot; yra nurodytas du kartus testavimui.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Papildinys „%1“ neegzistuoja.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Papildinys &quot;%1&quot; nėra išbandytas.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Negalima prašyti scenarijaus „%1“, nes jo jau buvo prašoma.</translation>
+        <translation type="vanished">Negalima prašyti scenarijaus „%1“, nes jo jau buvo prašoma.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Nežinoma parinktis %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>Parinktis %1 reikalauja argumento.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1275" />
         <source>Resolving dependencies failed because state != Read</source>
         <translation>Nepavyko išspręsti priklausomybių, nes būsena != Skaityti</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Nepavyko išspręsti priklausomybės &apos;%1(%2)&apos;</translation>
+        <translation type="vanished">Nepavyko išspręsti priklausomybės &apos;%1(%2)&apos;</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+94" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>Įkelti biblioteką nepavyko, nes būsena != Išspręsta</translation>
     </message>
@@ -5981,7 +7665,7 @@ Priežastis: %3</translation>
         <translation>Papildinys netinkamas (nekilęs iš IPplugin)</translation>
     </message>
     <message>
-        <location line="-416" />
+        <location line="-518" />
         <source>&quot;%1&quot; is missing</source>
         <translation>Trūksta „%1“.</translation>
     </message>
@@ -6031,13 +7715,24 @@ Priežastis: %3</translation>
         <translation>Papildinio metaduomenys nerasta</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>Papildinio id „%1“ turi būti rašomas mažosiomis raidėmis</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Sąlygos ir nuostatos: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Neteisinga platformos specifikacija „%1“: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -6063,7 +7758,12 @@ Priežastis: %3</translation>
         <translation>Argumentas: „%1“ tuščias</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+89" />
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>Nepavyko išspręsti priklausomybės nuo įskiepio „%1(%2)“</translation>
+    </message>
+    <message>
+        <location line="+115" />
         <source>Initializing the plugin failed because state != Loaded</source>
         <translation>Nepavyko inicijuoti papildinio, nes būsena != Įkelta</translation>
     </message>
@@ -6078,7 +7778,17 @@ Priežastis: %3</translation>
         <translation>Nepavyko inicijuoti papildinio: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Papildinio inicializavimas sukėlė išimtį: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Papildinio inicializavimas sukėlė nežinomą išimtį</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>Neįmanoma atlikti plėtinių Inicijuota, nes būsena != Inicijuota</translation>
     </message>
@@ -6093,8 +7803,18 @@ Priežastis: %3</translation>
         <translation>Vidinė klaida: nėra papildinio egzemplioriaus, kuris galėtų atlikti delayedInitialize</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-71" />
+        <location line="+97" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Sistemos įskiepių pašalinti negalima.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Nepavyko nustatyti šakninio aplanko.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-391" />
         <source>Continue</source>
         <translation>Tęsti</translation>
     </message>
@@ -6312,18 +8032,23 @@ Ar norėtumėte jį perrašyti?</translation>
         <translation>Vaizdų peržiūros priemonė</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Failo negalima perskaityti.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Vaizdo formatas nepalaikomas.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>Nepavyko nuskaityti SVG vaizdo.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Nepavyko perskaityti vaizdo.</translation>
     </message>
@@ -6435,37 +8160,57 @@ Ar norėtumėte juos perrašyti?</translation>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Klaida %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Nenutrūkstamas</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Gaunamas</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Išeinantis</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>Bazės</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>Išvestas</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Atidaryti rengyklėje</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>Atidaryti %1 hierarchiją</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Kvietimas</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Tipas</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Skambinkite hierarchija</translation>
     </message>
@@ -6475,13 +8220,18 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Perkraukite simbolio skambučio hierarchiją, esančią žymeklio padėtyje.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 %2</translation>
+        <translation type="vanished">%1 %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1, skirtas %2 (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>neinicijuotas</translation>
@@ -6523,14 +8273,20 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>klaida</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>nepavyko išjungti</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>Neteisingas parametras „%1“:
  %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Kalbos serverio „%1“ inicijavimo klaida</translation>
     </message>
@@ -6540,12 +8296,12 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Inicijavimo klaida: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Inicijuoti rezultatą neteisingas.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Informacija apie serverį neteisinga.</translation>
     </message>
@@ -6555,12 +8311,11 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Nėra inicijuoti rezultato.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Nukopijuokite į mainų sritį</translation>
+        <translation type="vanished">Nukopijuokite į mainų sritį</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Kalbos klientas</translation>
     </message>
@@ -6610,33 +8365,35 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Nepavyksta apdoroti pranešimo MIME tipo „%1“.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Negalima siųsti duomenų į nesutvarkytą serverį %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Netikėtai baigta. Iš naujo paleidžiant %1 sekundę.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Netikėtai baigta.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Išplėskite visus</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Sugriūti visus</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Bendrasis stdio kalbos serveris</translation>
     </message>
@@ -6656,7 +8413,7 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>Kalbos serverio problemos dabartiniame dokumente.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Pridėti</translation>
     </message>
@@ -6666,32 +8423,37 @@ Ar norėtumėte juos perrašyti?</translation>
         <translation>&amp;Ištrinti</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>Bendrasis</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Visada įjungta</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Reikia atviro failo</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Pradėkite serverį kiekvienam projektui</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Įjungta:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Nustatykite mime tipus ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Failo modelis</translation>
     </message>
@@ -6703,67 +8465,87 @@ Example: *.cpp%1*.h</source>
  Pavyzdys: *.cpp%1 *.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>Nepavyko išanalizuoti JSON 1 %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>Kalbos serveriui skirtas JSON perduoti per „InitivationOptions“ lauką „Inicijuoti“ užklausą.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Kalba:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Failo modelis:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Paleidimo elgesys:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Inicijavimo parinktys:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>Pasirinkite MIME tipus</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Filtruoti</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Vykdoma:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Argumentai:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>JSON klaida</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Projektui specifiniai kalbos serveriai</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Naudoti visuotinius nustatymus</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Įjungta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Išjungta</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Darbo vietos konfigūracija</translation>
     </message>
@@ -6775,12 +8557,12 @@ See the documentation of the specific language server for valid settings.</sourc
  Norėdami gauti galiojančius nustatymus, žiūrėkite konkretaus kalbos serverio dokumentaciją.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Kalbos serveris</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Dar kartą ieškokite, kad atnaujintumėte rezultatus ir pakartotinai pakeistumėte</translation>
     </message>
@@ -6801,7 +8583,7 @@ See the documentation of the specific language server for valid settings.</sourc
  %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>Raskite nuorodas su %1:</translation>
@@ -6822,12 +8604,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Pradėkite rašyti, kad pamatytumėte pakeitimus.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Rodyti galimas greitas pataisas</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>Iš naujo paleiskite %1</translation>
     </message>
@@ -6842,49 +8624,56 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Tvarkykite ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>Nustatyti %1 kalbos serverį (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>Nustatyti</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>Įdiekite NPM paketą</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>Paleisti „ %1“, kad įdiegtumėte %2.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Diegimas „%1“ buvo atšauktas per „TimeOut“.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Vartotojas panaikino „%1“ diegimą.</translation>
+        <translation type="vanished">Vartotojas panaikino „%1“ diegimą.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>Įdiegti „ %1“ nepavyko su išėjimo kodu %2.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>Įdiekite %1 kalbos serverį per NPM.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>Sąranka %1 kalbos serveris ( %2).</translation>
+        <translation type="vanished">Sąranka %1 kalbos serveris ( %2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>Įdiegti</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Sąranka</translation>
+        <translation type="vanished">Sąranka</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6912,12 +8701,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Parinktys:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Serverio galimybės</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Kliento pranešimas</translation>
     </message>
@@ -6937,22 +8726,32 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Žurnalo failas</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>Nepasirinktas klientas</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Kalbos kliento inspektorius</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;Ilpti&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Kalbos serveris:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>Siųsti pranešimą</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Žurnalas</translation>
     </message>
@@ -6962,15 +8761,25 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Galimybės</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Aišku</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Rūšiuoti abėcėlės tvarka</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Pasirinkite simbolį&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>Negalima iššifruoti turinio „%1“. Grįžtant prie „%2“.</translation>
     </message>
@@ -6980,7 +8789,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Tikimasi sveiko skaičiaus „%1“, bet gavo „%2“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>Nepavyko analizuoti JSON pranešimo: „%1“.</translation>
     </message>
@@ -6990,17 +8799,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Tikimasi JSON objekto, bet gavo JSON „%1“ vertę.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>Nėra parametrų „%1“.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>Nėra ID, nustatyto „%1“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>Sukurkite %1</translation>
     </message>
@@ -7016,9 +8825,172 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>Veiksmas su ID „%1“ nerastas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>Komanda „%1“ neturi susieto veiksmo.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>Veiksmas „%1“ išjungtas.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Išskleisti viską</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>Kliento pranešimas</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Pranešimai</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Serverio pranešimas</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>Žurnalo failas</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>MCP serverio tikrintuvas</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Pasirinkite&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Išvalyti</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Seansas:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Nežinoma</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Visuotinis</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Vietinis kompiuteris (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Bet kuris (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Pasirinktinis</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Neteisingas IP adresas.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>MCP serveris</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>Tikrinti MCP serverį...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>Nepavyko paleisti MCP serverio „%1:%2“.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>Įjungti MCP serverį</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>Adresas, kuriuo MCP serveris turėtų klausytis gaunamų ryšių.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Prievadas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Automatinis</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>Prievadas, kuriuo MCP serveris klausysis. Palikite 0, kad laisvas prievadas būtų parinktas automatiškai.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Įjungti kryžminės kilmės prieigą:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>Įjungti kryžminės kilmės išteklių bendrinimą (CORS) MCP serveriui. Tai būtina, jei norite jungtis prie serverio iš žiniatinklio programos.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Adresas nukopijuotas į iškarpinę.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>MCP serveris veikia, klausosi adresu: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>MCP serveris neveikia.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Būsena:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Reikšmė %L1</translation>
@@ -7080,11 +9052,11 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Čia įveskite savo WiFi tinklą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+148" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7097,68 +9069,68 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
-        <location line="+988" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Duomenų rinkinio redaktorius</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Įveskite klasės pavadinimą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+289" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+285" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+608" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+518" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+231" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+45" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-897" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-883" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+905" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Klaida: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-321" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4202" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7171,24 +9143,24 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Nepavyko sukurti „%L1“!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nepavyko išsaugoti vaizdo failo dėl nežinomos priežasties!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Ar tikrai norite visam laikui ištrinti „%L1“?</translation>
     </message>
@@ -7215,9 +9187,9 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Nepavyko pervardyti failo dėl nežinomos priežasties!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6304" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+64" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+64" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“.</translation>
     </message>
@@ -7238,7 +9210,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Trūksta -override_read_stall_timeout argumento</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Trūksta -serijos_numerio_filtro argumento</translation>
     </message>
@@ -7251,7 +9223,22 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos duomenis, tada iš naujo paleiskite OpenMV IDE!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1311" />
+        <source>No documentation here</source>
+        <translation>Čia dokumentacijos nėra</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>„%1“ dokumentacijos nėra</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Kontekstinė pagalba</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Redaguokite pilkos spalvos slenkstį naudodami slenksčio rengyklę</translation>
     </message>
@@ -7261,7 +9248,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Redaguokite LAB slenkstį naudodami slenksčio rengyklę</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+470" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+471" />
         <source>Missing argument for -form_key</source>
         <translation>Trūksta -form_key argumento</translation>
     </message>
@@ -7278,7 +9265,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation type="vanished">OpenMV IDE</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+101" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7291,7 +9278,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation type="vanished">Trūksta argumento už -override_per_command_wait</translation>
     </message>
     <message>
-        <location line="-481" />
+        <location line="-542" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>Neteisingas argumentas (%1), skirtas -auto_update</translation>
     </message>
@@ -7301,7 +9288,7 @@ Uždarykite visas programas, kurios peržiūri / redaguoja OpenMV IDE programos 
         <translation>Trūksta argumento už -auto_update</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7314,7 +9301,7 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">Klaidų skaitymas &lt;Sere_resources&gt; /openmvide/firmware/settings.json: %L1.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="+182" />
         <source>Form Key</source>
         <translation>Formos raktas</translation>
     </message>
@@ -7324,7 +9311,12 @@ Check the json file for errors and fix them.</source>
         <translation>Įveskite formos raktą</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+67" />
+        <source>Leave Settings</source>
+        <translation>Išeiti iš nustatymų</translation>
+    </message>
+    <message>
+        <location line="+79" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7349,7 +9341,7 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>Pavyzdžiai</translation>
     </message>
@@ -7450,33 +9442,33 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Atidarykite terminalą</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Mašinos vizija</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Slenksčio redaktorius</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Pagrindinių taškų redaktorius</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7485,7 +9477,7 @@ Check the json file for errors and fix them.</source>
         <translation>AprilTag generatorius</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 šeima (30 žymų)</translation>
     </message>
@@ -7520,18 +9512,18 @@ Check the json file for errors and fix them.</source>
         <translation>QR kodo generatorius</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Nepavyko atidaryti: „%L1“</translation>
     </message>
     <message>
-        <location line="-1617" />
+        <location line="-1596" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix generatorius</translation>
     </message>
@@ -7558,13 +9550,13 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
         <location line="+374" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1119" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1144" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Pridėkite failo plėtinį!</translation>
@@ -7579,7 +9571,7 @@ Check the json file for errors and fix them.</source>
         <translation>Nepavyko perrašyti išvesties failo!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4571" />
         <source>Video Tools</source>
         <translation>Vaizdo įrašų įrankiai</translation>
     </message>
@@ -7679,37 +9671,37 @@ Check the json file for errors and fix them.</source>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-370" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+221" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1979" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+989" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1558" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1583" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4386" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Įkelkite į Edge Impulse projektą</translation>
     </message>
@@ -7746,7 +9738,7 @@ Check the json file for errors and fix them.</source>
         <translation>OpenMV dokumentai</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <source>OpenMV Forums</source>
         <translation>OpenMV forumai</translation>
     </message>
@@ -7800,21 +9792,21 @@ Check the json file for errors and fix them.</source>
         <translation type="vanished">OpenMV peržiūros programa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-223" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-217" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-354" />
         <location line="+37" />
@@ -7831,7 +9823,7 @@ Check the json file for errors and fix them.</source>
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7845,16 +9837,16 @@ Check the json file for errors and fix them.</source>
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
+        <location line="+12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
         <location line="+101" />
         <location line="+9" />
@@ -7865,38 +9857,38 @@ Check the json file for errors and fix them.</source>
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-133" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1571" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1589" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -7907,7 +9899,7 @@ Check the json file for errors and fix them.</source>
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -7926,11 +9918,11 @@ Check the json file for errors and fix them.</source>
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+765" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Prisijungti</translation>
     </message>
@@ -7946,12 +9938,12 @@ Check the json file for errors and fix them.</source>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-933" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-932" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>Tik programinės įrangos atkūrimas palaikomas naudojant ALIF puslaidininkio SE įrankius.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1217" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1194" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+179" />
         <location line="+26" />
         <location line="+7" />
@@ -7969,8 +9961,8 @@ Check the json file for errors and fix them.</source>
         <translation>Sustabdyti (sustabdymo scenarijus)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -7978,9 +9970,9 @@ Check the json file for errors and fix them.</source>
         <translation>Kadrų buferis</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -7993,7 +9985,7 @@ Check the json file for errors and fix them.</source>
         <translation>Įrašykite kadrų buferį</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8123,8 +10115,8 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 „OpenMV IDE“ versijos prieš v4.3.0 neturi šio failo ir būtų ištrynusi jį įdiegdami išteklius.</translation>
     </message>
     <message>
-        <location line="-1486" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2554" />
+        <location line="-1468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2584" />
         <source>Load Custom Firmware</source>
         <translation>Įkelkite pasirinktinę programinę -aparatinę įrangą</translation>
     </message>
@@ -8156,7 +10148,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Įkelti ROMFS į OpenMV Cam</translation>
@@ -8193,7 +10185,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8252,9 +10244,9 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Nukopijuokite/konvertuokite „Python“ failą</translation>
@@ -8276,7 +10268,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1045" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Konvertuoti modelį</translation>
@@ -8342,7 +10334,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation>Licencija</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Apie %1</translation>
@@ -8358,25 +10350,25 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation>&lt;p&gt;&lt;b&gt;Apie %L4 %L1&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autoriai: Ibrahim Abdelkader ir Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;GAMYKLINĖ VERSIJA&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Skirta tik licencijuotiems gamintojams.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENERAL PUBLIC LICENSE&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Autorių teisės (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Ši programa platinama tikintis, kad ji bus naudinga, tačiau BE JOKIŲ GARANTIJŲ; net be numanomos PERKAMUMO ar TINKAMUMO KONKREČIAM TIKSLUI garantijos. Daugiau informacijos rasite &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU General Public License&lt;/a&gt;.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Klausimai ar komentarai?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Susisiekite su mumis adresu &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt;.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+173" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Pasirinkite kadrų buferio šaltinį arba išjunkite jį, kad našumas būtų didžiausias</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Išjungta</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Įjungta</translation>
     </message>
     <message>
-        <location line="-2071" />
+        <location line="-2085" />
         <source>JPG Mode</source>
         <translation>JPG režimas</translation>
     </message>
@@ -8399,7 +10391,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+384" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+388" />
         <source>Close</source>
         <translation>Uždaryti</translation>
     </message>
@@ -8419,8 +10411,8 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation>Užfiksuoti duomenis</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3774" />
         <source>Board:</source>
         <translation>Lenta:</translation>
     </message>
@@ -8485,7 +10477,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Galimas atnaujinimas</translation>
     </message>
@@ -8494,7 +10486,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation type="vanished">Galima atsisiųsti naują OpenMV IDE versiją (%L1.%L2.%L3).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>parsisiųsti</translation>
     </message>
@@ -8507,7 +10499,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation type="vanished">Kita programa naudoja „OpenMV Cam“ transliacijos aptikimo prievadą. Uždarykite programą ir iš naujo paleiskite „OpenMV IDE“, kad įgalintumėte „WiFi“ programavimą.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Dokumentų aplanko klaida</translation>
     </message>
@@ -8517,7 +10509,7 @@ Ar norėtumėte pasirinkti kitą pavadinimą?</translation>
         <translation>Nepavyko sukurti dokumentų aplanko!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>„GitHub Copilot“</translation>
     </message>
@@ -8577,27 +10569,27 @@ Jūsų OpenMV Cam programinė įranga panikuoja dėl aparatinės įrangos gedimo
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Nuoseklus prievadas – %L1 – %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Jungiamasi... (30 sekundžių skirtasis laikas)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8650,12 +10642,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_udp_server_terminal</translation>
     </message>
@@ -8686,12 +10678,12 @@ sudo adduser %L1 skambutis
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP serverio ryšys – %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Neteisingas prievado argumentas (%1), skirtas -open_tcp_server_terminal</translation>
     </message>
@@ -8720,7 +10712,7 @@ sudo adduser %L1 skambutis
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8881,19 +10873,19 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation type="vanished">Konfigūruoti nustatymus</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+425" />
-        <location line="+20" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+424" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Išsaugoti scenarijų</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Pašalinti komentarus ir konvertuoti tarpus į skirtukus?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+120" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
@@ -8902,14 +10894,14 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Išsaugoti paveikslėlį</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Vaizdo failai (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -8942,7 +10934,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Išsaugoti aprašą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+80" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8950,7 +10942,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Keypoints failai (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1112" />
+        <location line="-1088" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8958,20 +10950,20 @@ Ar norėtumėte dabar užregistruoti savo OpenMV kamerą?</translation>
         <translation>Atidaryti failą</translation>
     </message>
     <message>
-        <location line="-4752" />
+        <location line="-4824" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3206" />
         <location line="+9" />
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-769" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8994,7 +10986,7 @@ Uždarykite visas programas, kurios peržiūri arba redaguoja „%1“ programos
 %2 versijos iki v4.3.0 neturi šio failo ir būtų jį ištrynusios diegiant išteklius.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+30" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-424" />
         <location line="+126" />
         <location line="+51" />
@@ -9007,7 +10999,7 @@ Uždarykite visas programas, kurios peržiūri arba redaguoja „%1“ programos
         <translation>Trečiųjų šalių saugyklos</translation>
     </message>
     <message>
-        <location line="+1496" />
+        <location line="+1564" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Laidos pastabos&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9037,7 +11029,7 @@ Uždarykite visas programas, kurios peržiūri arba redaguoja „%1“ programos
         <translation>Kadro buferis – rezoliucija (w:%1, h:%2) – fokusas (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+714" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+697" />
         <source>Camera serial port -- click to give this camera a friendly name</source>
         <translation>Kameros nuoseklusis prievadas – spustelėkite, kad suteiktumėte šiai kamerai patogų pavadinimą</translation>
     </message>
@@ -9047,7 +11039,7 @@ Uždarykite visas programas, kurios peržiūri arba redaguoja „%1“ programos
         <translation>Nauja %5 versija (%L1.%L2.%L3) prieinama atsisiuntimui. Žr. &lt;a href=&quot;%L4&quot;&gt;laidos pastabas&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Prisijungti (tinklas prieinamas)</translation>
     </message>
@@ -9067,7 +11059,7 @@ Uždarykite visas programas, kurios peržiūri arba redaguoja „%1“ programos
         <translation>-auto_run peržiūros režimu komandinėje eilutėje reikalauja skaitomo teksto scenarijaus failo argumento.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9130,7 +11122,7 @@ Would you like to register your OpenMV Cam now?</source>
 Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
-        <location line="+604" />
+        <location line="+613" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9151,12 +11143,12 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-474" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Pasirinkite Diskas</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Nerasta tinkamų diskų, kuriuos būtų galima susieti su jūsų „OpenMV Cam“!</translation>
     </message>
@@ -9175,7 +11167,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Kameros FPS ir IDE ekrano FPS</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Susiekite diską su savo „OpenMV Cam“.</translation>
     </message>
@@ -9257,14 +11249,14 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Kodo profiliavimo apklausa (ms)</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+443" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>Nepavyko nuplauti „%L1“!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2858" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Transliuoti JPG suspaustus vaizdus didesniam našumui</translation>
@@ -9306,7 +11298,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Pasirinkite, ką rodo ši sritis</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Kadrų buferis (%1)</translation>
     </message>
@@ -9327,19 +11319,19 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+262" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3420" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-640" />
         <source>No Drive</source>
         <translation>Nėra disko</translation>
     </message>
     <message>
-        <location line="+1966" />
+        <location line="+1980" />
         <source>OpenMV Cam Error</source>
         <translation>OpenMV Cam klaida</translation>
     </message>
     <message>
-        <location line="+392" />
+        <location line="+398" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9348,14 +11340,14 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9365,7 +11357,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Naujas terminalas</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Prijunkite prie nuosekliojo prievado</translation>
     </message>
@@ -9386,7 +11378,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Pasirinkite nuoseklųjį prievadą</translation>
     </message>
@@ -9397,7 +11389,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9413,15 +11405,15 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>Neteisinga eilutė: „%L1“!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Nė vienas nuoseklusis prievadas nerastas!</translation>
     </message>
@@ -9431,41 +11423,41 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Prisijunkite prie UDP serverio kaip kliento arba paleiskite UDP serverį?</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation> Prisijunkite prie serverio </translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation> Paleiskite serverį </translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Įveskite IP adresą (arba domeno pavadinimą) ir prievadą (pvz., xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP kliento ryšys – %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Įveskite prievado numerį (įveskite 0 bet kuriam atsitiktiniam nemokamam prievadui)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Prisijunkite prie TCP serverio kaip kliento arba paleiskite TCP serverį?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP kliento ryšys – %1</translation>
     </message>
@@ -9485,17 +11477,17 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Šaltinio vaizdo vieta?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation> Kadrų buferis </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation> Vaizdo failas </translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Pasirinkta slenksčio eilutė bus atnaujinta uždarant.</translation>
@@ -9512,22 +11504,22 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+1084" />
         <source>What would you like to do?</source>
         <translation>Ką tu norėtum veikti?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation> Redaguoti failą </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation> Sujungti failus </translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9630,36 +11622,36 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation type="vanished">Galimi nauji OpenMV IDE ištekliai (pvz., pavyzdžiai, programinė įranga, dokumentacija ir kt.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Diegti</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+74" />
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+701" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Atsisiunčiama...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>Diegiama...</translation>
     </message>
@@ -9681,13 +11673,13 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Nepavyko atidaryti išteklių failo „%L1“!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Tinklo užklausa nepavyko „%L1“!</translation>
     </message>
@@ -9696,49 +11688,49 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation type="vanished">Firmware dvejetainė ( *.Bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="-244" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="-255" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Ištrinti vidinę riebalų failų sistemą</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Jei įgalinsite šią parinktį, visi „OpenMV Cam“ vidinės riebalų failų sistemos failai bus ištrinti. Tai neištrina failų iš nuimamos SD kortelės (jei įdėta).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Iš naujo nustatykite ROMFS failų sistemą</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Jei įgalinsite šią parinktį, „OpenMv Cam“ ROM failų sistema bus iš naujo nustatyta iki numatytųjų.</translation>
     </message>
     <message>
-        <location line="-4302" />
+        <location line="-4315" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
@@ -9754,12 +11746,12 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Priverskite įvesti „OpenMV Cam“ įkrovos įkroviklį. Gali lemti, kad senesnėse plokštėse „OpenMV Cam“ įkrovos programa automatiškai neišeis.</translation>
     </message>
     <message>
-        <location line="+918" />
+        <location line="+922" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Įdiekite naujausią programinę-aparatinę įrangą (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1098" />
+        <location line="+1113" />
         <location line="+194" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Nepavyko nukopijuoti programinės įrangos failų į laikinąjį katalogą!</translation>
@@ -9799,7 +11791,7 @@ Ar norėtumėte dabar užregistruoti savo OpenMV Cam?</translation>
         <translation>Nežinoma (0x%1)</translation>
     </message>
     <message>
-        <location line="+699" />
+        <location line="+698" />
         <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
 
 To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
@@ -9823,7 +11815,7 @@ Kad to išvengtumėte, atverkite Apple meniu, eikite į &quot;System Settings&qu
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+89" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Vykdyti scenarijų</translation>
@@ -9841,7 +11833,7 @@ Kad to išvengtumėte, atverkite Apple meniu, eikite į &quot;System Settings&qu
         <translation>Klaida: nepavyksta atverti „%L1“!</translation>
     </message>
     <message>
-        <location line="+229" />
+        <location line="+230" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9850,7 +11842,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Visų pirma, patikrinkite Vaizdo apdorojimas -&gt; Spalvų sekimas ir mašininis mokymasis -&gt; TensorFlow pavyzdžiai.</translation>
     </message>
     <message>
-        <location line="-4274" />
+        <location line="-4304" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9875,17 +11867,17 @@ Visų pirma, patikrinkite Vaizdo apdorojimas -&gt; Spalvų sekimas ir mašininis
     </message>
     <message>
         <location line="+21" />
-        <location line="+310" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Bėk</translation>
     </message>
     <message>
-        <location line="-173" />
+        <location line="-167" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>„%L1“ nėra failas!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>Atnaujinkite ROMFS failų sistemą</translation>
     </message>
@@ -9913,7 +11905,7 @@ Visų pirma, patikrinkite Vaizdo apdorojimas -&gt; Spalvų sekimas ir mašininis
         <translation>Nežinoma lenta</translation>
     </message>
     <message>
-        <location line="+457" />
+        <location line="+459" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Aptikta DFU režimu veikianti plokštė. Ką tu norėtum veikti?</translation>
     </message>
@@ -9922,7 +11914,7 @@ Visų pirma, patikrinkite Vaizdo apdorojimas -&gt; Spalvų sekimas ir mašininis
         <translation type="vanished">Įdiekite naujausią programinę-aparatinę įrangą (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Load a specific firmware</source>
         <translation>Įkelkite konkrečią programinę-aparatinę įrangą</translation>
     </message>
@@ -9949,7 +11941,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
  Pasirinkite failą „Bootloader.DFU“ ir bandykite dar kartą. Atminkite, kad įkeliant programinę -aparatinę įrangą.dfu arba openMv.dfu (įkrovos krautuvas + programinė įranga), gali neveikti STM32H7 lentomis dėl klaidos „Chip“ ROM įkrovos krautuve!</translation>
     </message>
     <message>
-        <location line="+1020" />
+        <location line="+1035" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Vidiniam įkrovos krautuvui palaikomi tik krovimo *.Bin ir *.img failai!</translation>
     </message>
@@ -9985,10 +11977,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-73" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1471" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Pasirinkite lentos tipą</translation>
     </message>
@@ -9997,24 +11989,24 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Ištrinti vidinę failų sistemą?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2974" />
         <source>No released firmware available for the attached board!</source>
         <translation>Pridėtai plokštei nėra išleistos programinės įrangos!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Pasirinkite DFU įrenginį</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+175" />
+        <location line="-100" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Atnaujinkite įkrovos įkroviklį į naujausią versiją ir įdiekite „SoftDevice“, kad suaktyvintumėte OpenMV programinę-aparatinę įrangą. Daugiau informacijos rasite adresu &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-2376" />
+        <location line="-2399" />
         <source>Checking development examples...</source>
         <translation>Tikrinami kūrimo pavyzdžiai...</translation>
     </message>
@@ -10055,7 +12047,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Prieinami nauji %2 ištekliai (pvz., pavyzdžiai, mikroprograma, dokumentacija ir kt.). Žr. &lt;a href=&quot;%L1&quot;&gt;laidos pastabas&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>Atsiųstas išteklių failas &quot;%L1&quot; neatitiko kontrolinės sumos. Bandykite dar kartą vėliau.</translation>
     </message>
@@ -10076,7 +12068,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Mikroprogramos dvejetainis failas (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>Zip faile &quot;%L1&quot; nėra programinės aparatinės įrangos atvaizdo!</translation>
     </message>
@@ -10086,13 +12078,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Nepavyksta išpakuoti mikroprogramos zip „%L1“!</translation>
     </message>
     <message>
-        <location line="+182" />
-        <location line="+4031" />
+        <location line="+176" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Įspėjimas: atnaujinus naują programinės įrangos versiją, reikia ištrinti riebalų failų sistemą.</translation>
     </message>
     <message>
-        <location line="-3953" />
+        <location line="-3972" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Nepavyksta atsisiųsti naujausios kūrimo mikroprogramos!</translation>
@@ -10147,7 +12139,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Nuoseklusis prievadas:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Pavadinimas:</translation>
     </message>
@@ -10161,7 +12153,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+194" />
         <source>Just erase the internal FAT file system</source>
         <translation>Tiesiog ištrinkite vidinę riebalų failų sistemą</translation>
     </message>
@@ -10176,14 +12168,14 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Iš naujo nustatykite ROM failų sistemą</translation>
     </message>
     <message>
-        <location line="+233" />
-        <location line="+2874" />
+        <location line="+234" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Atnaujinimo parinktys:</translation>
     </message>
     <message>
-        <location line="-2783" />
-        <location line="+174" />
+        <location line="-2797" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Sutrumpinkite REC iki GND ir iš naujo nustatykite plokštę. Daugiau informacijos rasite adresu &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
@@ -10214,7 +12206,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Laiko pabaigos klaida gaunant plokštės architektūrą!</translation>
@@ -10239,7 +12231,7 @@ Norėdami pereiti prie DFU perprogramavimo, paspauskite atšaukti.</translation>
     </message>
     <message>
         <location line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-547" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Iš naujo prijunkite OpenMV kamerą...</translation>
     </message>
@@ -10278,46 +12270,46 @@ Tęsti?</translation>
         <translation>Ištrinama...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-155" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-78" />
+        <location line="+16" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-780" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Laiko pabaigos klaida!</translation>
     </message>
@@ -10328,12 +12320,12 @@ Tęsti?</translation>
         <translation>Programavimas...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+52" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -10379,12 +12371,12 @@ Tęsti?</translation>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+100" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
-        <location line="+139" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+188" />
-        <location line="+41" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
         <location line="+27" />
@@ -10424,7 +12416,7 @@ Tokiu atveju spustelėkite Gerai, kai pamatysite „OpenMV Cam“ vidinį „fla
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1331" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1189" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Ruošiami įkrovos programos įrankiai... (tai gali užtrukti kelias sekundes)</translation>
     </message>
@@ -10509,8 +12501,8 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-36" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
@@ -10518,13 +12510,13 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <translation>Spustelėkite mygtuką Gerai, kai „OpenMV Cam“ suskaičiavo ir baigė vykdyti įtaisytąjį savęs patikrinimą (mirksi mėlyna lemputė – tai užtrunka).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-341" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-323" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util gali būti nestabili šioje platformoje. Jei nepavyksta įkelti, naudokite įprastą kompiuterį.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-417" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Pasirinktam plokštės tipui nėra DFU nustatymų!</translation>
     </message>
@@ -10537,47 +12529,47 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-70" />
         <source>Erasing Disk</source>
         <translation>Disko trynimas</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
+        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+77" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+678" />
         <source>Read ROMFS</source>
         <translation>Perskaitykite ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Rašykite romfus</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Mirksi programinė įranga</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>Nepavyko atnaujinti DFU programinės įrangos!</translation>
     </message>
@@ -10585,7 +12577,7 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -10617,7 +12609,7 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>Jūsų %1 neturi ROM failų sistemos.</translation>
     </message>
@@ -10650,7 +12642,7 @@ Spustelėkite mygtuką Gerai, kai išvardija „OpenMV Cam“ SBL įkrovos progr
         <translation>Pasirinktam įrenginiui nėra PicoTool nustatymų!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -10819,13 +12811,13 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation>Programinės aparatinės įrangos versija: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Serijos prievadas: %L1</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ pasenusi – spustelėkite čia norėdami atnaujinti ]</translation>
     </message>
@@ -10950,7 +12942,7 @@ Spustelėkite mygtuką Gerai, kai išvardijo „OpenMV Cam“ DFU įkrovos progr
         <translation type="vanished">Pradėti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+844" />
         <source>More Examples</source>
         <translation>Daugiau pavyzdžių</translation>
     </message>
@@ -11126,7 +13118,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam“?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -11145,12 +13137,12 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5016" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
-        <location line="+352" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-553" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Modelio zoologijos sodas</translation>
     </message>
@@ -11236,21 +13228,21 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Gaukite įrenginius</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-422" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-419" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Užklausa nepavyko!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11265,7 +13257,7 @@ Ar norėtumėte, kad „OpenMV IDE“ nukopijuotų jį į jūsų „OpenMV Cam�
         <translation>DFU Util</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+151" />
         <source>This may take a while, coffee break?</source>
         <translation>Tai gali užtrukti, kavos pertrauka?</translation>
     </message>
@@ -11322,7 +13314,7 @@ Procentas
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-164" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11454,79 +13446,79 @@ Atidarykite duomenų rinkinį, kad jį įkeltumėte.</translation>
         <translation>Įveskite Edge Impluse Project API raktą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Laukiama, kol flashloader bus aptiktas...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>i.MX flashloader nebuvo aptiktas USB magistralėje.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+0" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>ALIF įrankiai</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Įjunkite sunkaus priežiūros režimo jungiklį, jis neįgalintas, tada paspauskite mygtuką Vartotojo mygtukas „OpenMV Cam“.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-140" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-125" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Ši funkcija šiame įrenginyje nepalaikoma!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -11535,7 +13527,7 @@ The camera must be power cycled after after recovery.</source>
 Po atkūrimo fotoaparatas turi būti išjungtas.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+142" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Atjunkite OpenMV kamerą nuo kompiuterio, išjunkite techninės priežiūros režimo jungiklį, jei jis įjungtas. Palikite „OpenMV Cam“ neprijungtą, kol bus nurodyta vėl prijungti.</translation>
     </message>
@@ -11544,7 +13536,7 @@ Po atkūrimo fotoaparatas turi būti išjungtas.</translation>
         <translation type="vanished">Atjunkite savo „OpenMV“ kamerą nuo kompiuterio, išjunkite kietojo priežiūros režimo jungiklį, jei įjungta, iš naujo prijunkite savo „OpenMV“ kamerą prie kompiuterio, tada paspauskite gerai.</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="-100" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11553,16 +13545,16 @@ The camera must be power cycled after a system package update.</source>
 Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-479" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-445" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Šios komandos vykdymas užtrunka šiek tiek laiko. Būkite kantrūs.</translation>
     </message>
@@ -11582,7 +13574,7 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation>padaryta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
@@ -11682,7 +13674,7 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation>Prieš uždarydami nukopijuokite aukščiau nurodytą slenkstį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-495" />
         <source>Reading File...</source>
         <translation>Skaitomas failas...</translation>
     </message>
@@ -11714,12 +13706,12 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>Perkoduojamas failas...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11778,12 +13770,12 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation type="vanished">Gaukite įvesties formatus</translation>
     </message>
     <message>
-        <location line="+288" />
-        <location line="+101" />
+        <location line="+292" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11811,30 +13803,30 @@ Po sistemos paketo atnaujinimo fotoaparatas turi būti maitinamas.</translation>
         <translation type="vanished">Nepavyko paleisti ffmpeg!</translation>
     </message>
     <message>
-        <location line="-1323" />
-        <location line="+85" />
+        <location line="-1340" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg šioje platformoje nepalaikoma.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>FFmpeg vykdomasis failas nerastas (diegimas gali būti nebaigtas).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Gauti formatus</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+95" />
         <source>Converting</source>
         <translation>Konvertavimas</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG šioje platformoje nepalaikomas.</translation>
     </message>
@@ -11852,7 +13844,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Jūsų OpenMV IDE diegimas gali būti nebaigtas.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Nepavyko įrašyti į išvesties vaizdo failą!</translation>
     </message>
@@ -11862,19 +13854,19 @@ Jūsų OpenMV IDE diegimas gali būti nebaigtas.</translation>
         <translation>Nepavyko atidaryti išvesties vaizdo failo!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Leisti vaizdo įrašą</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Vaizdo įrašų atkūrimas šioje platformoje nepalaikomas.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>Nepavyko paleisti ffplay!</translation>
     </message>
@@ -11981,7 +13973,7 @@ Jūsų OpenMV IDE diegimas gali būti nebaigtas.</translation>
         <translation>Išsaugoti vaizdo įrašą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Užsiėmes</translation>
     </message>
@@ -12001,7 +13993,7 @@ Jūsų OpenMV IDE diegimas gali būti nebaigtas.</translation>
         <translation type="vanished">Nėra tinkamos pasirinkto failo pavadinimo sąsajos!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1129" />
         <source>Please select the target</source>
         <translation>Pasirinkite tikslą</translation>
     </message>
@@ -12022,7 +14014,7 @@ OpenMV IDE will just copy the model as is.</source>
 „OpenMV IDE“ tiesiog nukopijuos modelį tokį, koks yra.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -12058,7 +14050,9 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -12077,7 +14071,7 @@ OpenMV IDE will just copy the model as is.</source>
         <translation>Redaguoti ROMF</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Aplankas su tuo pačiu pavadinimu jau egzistuoja!</translation>
@@ -12135,29 +14129,29 @@ OpenMV IDE will just copy the model as is.</source>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Ištraukimo failas</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Peržiūrėti/redaguoti</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Pridėti failą</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Naujas aplankas</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -12193,7 +14187,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungti ir naudokite įkrovos tvarkyklės parinktis, kad vėl redaguotumėte ROM failų sistemą.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Nepasirinktas plokštės tipas.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -12201,13 +14202,34 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>ROMFS nepalaiko šioje lentoje!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Nepasirinktas ROMFS tikslas.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>Nepavyko nuskaityti ROMFS iš kameros.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nepavyko išpakuoti ROMFS!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>ROMFS vaizdas yra %L1 baitų, bet plokštės ROMFS talpina %L2 baitų.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>Nepavyko įrašyti ROMFS į kamerą.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>„OpenMv ROMFS“</translation>
@@ -12249,12 +14271,12 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Ar tikrai norite iš naujo nustatyti savo „OpenMv Cam“ ROM failų sistemą?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Ką norite daryti?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Tiesiog nukopijuokite scenarijų</translation>
     </message>
@@ -12274,40 +14296,40 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Kompiliuokite į baitų kodą</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; Mpy Cross Compilier CLI parinktys &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Išplėstinė</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>MPY kryžiaus kompiliatorius</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Sudarymas</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>Šioje platformoje „Mpy Cross Compilier“ nepalaikomas.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-867" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-880" />
         <source>Success - Press Ok to close the window</source>
         <translation>Sėkmė - paspauskite Gerai, kad uždarytumėte langą</translation>
     </message>
@@ -12320,18 +14342,18 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Gedimas - paspauskite Atšaukti, kad uždarytumėte langą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>„Stedge“ kompiliatorius</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>Nepavyko nukopijuoti JSON failo!</translation>
     </message>
@@ -12342,12 +14364,12 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Nurodykite kompiliatoriaus nustatymus:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Maksimalus optimizavimas</translation>
     </message>
@@ -12367,7 +14389,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Nėra optimizavimo</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>-VERBSONAS 2</translation>
     </message>
@@ -12377,7 +14399,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>&lt;a href = &quot;%1&quot;&gt; stedgeai core cli parinktys &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>-Žemėlapių sudarymas</translation>
     </message>
@@ -12391,7 +14413,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; Stedgeai perkėlimo CLI parinktys &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Nepavyko atidaryti JSON failo!</translation>
@@ -12409,12 +14431,12 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Vela kompiliatorius</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Optimizuokite našumą</translation>
     </message>
@@ -12424,7 +14446,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Optimizuokite dydį</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>-VERBSE-PROGRESS</translation>
     </message>
@@ -12434,7 +14456,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>&lt;a href = &quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/options.md&quot;&gt; „Vela Compilier Cli“ parinktys &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Vela</translation>
     </message>
@@ -12445,7 +14467,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>STM32 programuotojas</translation>
     </message>
@@ -12455,7 +14477,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>STM32 programuotojas nepalaikomas šioje platformoje.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-659" />
         <source>the detected board</source>
         <translation>aptikta lenta</translation>
     </message>
@@ -12485,12 +14507,12 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
         <translation>Norint įrašyti įkėliklio atvaizdą, jūsų OpenMV Cam turi būti įkėliklio atkūrimo režime. Atjunkite kamerą, jungtimi sujunkite BOOT0/SBL/RECOVERY su 3.3V, tada vėl prijunkite kamerą prieš bandydami dar kartą.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>Nepavyko nuskaityti ROMFS per DFU!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>Nepavyko įrašyti ROMFS per DFU!</translation>
     </message>
@@ -12507,7 +14529,7 @@ Jūsų OpenMV Cam vis dar įkrovos tvarkyklės režime: spustelėkite Prisijungt
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Rodyti tekstą</translation>
@@ -12752,7 +14774,7 @@ Prieš įrašydami juos pataisykite arba išvalykite.</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12777,7 +14799,7 @@ Prieš įrašydami juos pataisykite arba išvalykite.</translation>
         <translation>&quot;%L1&quot; - nepavyko įdiegti: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - nepavyko atnaujinti &quot;%L2&quot;: %L3</translation>
     </message>
@@ -12994,7 +15016,7 @@ Install now?</source>
         <translation>&quot;%L1&quot; neįdiegta</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; plokštė &quot;%L2&quot; (%L3) persidengia su &quot;%L4&quot; (%L5) įkrovos programos id</translation>
     </message>
@@ -13153,7 +15175,7 @@ This deletes its boards, firmware, and examples.</source>
 Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -13391,7 +15413,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>%L1 atskaitų (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13505,12 +15527,12 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Spektras</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Vidurkinimas</translation>
     </message>
@@ -13611,7 +15633,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Prijunkite kamerą, kad matytumėte kanalus</translation>
     </message>
@@ -14049,6 +16071,16 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>DI</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Agentinis pokalbis („ACP Client“ papildinys) nepasiekiamas.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -14057,89 +16089,42 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Šis vedlys sukuria paprastą vieneto bandymo projektą.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Projekto vieta</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -14153,6 +16138,58 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Vieta</translation>
     </message>
@@ -14161,7 +16198,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Qt testas</translation>
     </message>
     <message>
-        <location line="-171" />
+        <location line="-574" />
         <source>Google Test</source>
         <translation>Google testas</translation>
     </message>
@@ -14181,49 +16218,49 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Sugauti2</translation>
     </message>
     <message>
-        <location line="-192" />
-        <location line="+26" />
+        <location line="-358" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Bandymo sistema:</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-283" />
         <source>GUI Application</source>
         <translation>GUI programa</translation>
     </message>
     <message>
-        <location line="+49" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-75" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Bandymo rinkinio pavadinimas:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Bandomojo atvejo pavadinimas:</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-289" />
         <source>Requires QApplication</source>
         <translation>Reikia QApplication</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+23" />
         <source>Generate setup code</source>
         <translation>Sugeneruokite sąrankos kodą</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="-21" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generuokite inicijavimo ir valymo kodą</translation>
     </message>
@@ -14232,17 +16269,17 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Įgalinti C++11</translation>
     </message>
     <message>
-        <location line="-145" />
+        <location line="-311" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest šaltinio katalogas (neprivaloma):</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>„Boost include“ katalogas (neprivaloma):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 apima katalogą (neprivaloma):</translation>
     </message>
@@ -14252,257 +16289,262 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Naudokite Qt bibliotekas</translation>
     </message>
     <message>
-        <location line="-509" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Sukurkite sistemą:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informacija apie projektą ir bandymus</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Detalės</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Komplekto pasirinkimas</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>Rinkiniai</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Projektų valdymas</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Santrauka</translation>
     </message>
@@ -14511,10 +16553,9 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Sukuria naują vieneto bandymo projektą. Vienetų testai leidžia patikrinti, ar kodas tinkamas naudoti ir ar nėra regresijų.</translation>
     </message>
     <message>
-        <location line="-542" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="-389" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Kitas projektas</translation>
     </message>
@@ -14523,36 +16564,36 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Automatinio bandymo projektas</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="-639" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Visiškai tinkamas vardas, įskaitant vardų sritis</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Klasės pavadinimas:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Tinkintas&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Bazinė klasė:</translation>
     </message>
@@ -14561,7 +16602,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">%{BaseCB}</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>Įtraukti QObject</translation>
     </message>
@@ -14603,10 +16644,10 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;klasė&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Antraštės failas:</translation>
     </message>
@@ -14615,54 +16656,55 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;klasė&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Šaltinio failas:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Kelias:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Apibrėžkite klasę</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Sukuria C++ antraštę ir šaltinio failą naujai klasei, kurią galite įtraukti į C++ projektą.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>C++ klasė</translation>
     </message>
@@ -14703,16 +16745,16 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Qt prekės modelis</translation>
     </message>
@@ -14752,19 +16794,18 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Python klasė</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Sukuria CMake pagrįstą bandomąjį projektą, kuriam galima įvesti kodo fragmentą.</translation>
+        <translation type="vanished">Sukuria CMake pagrįstą bandomąjį projektą, kuriam galima įvesti kodo fragmentą.</translation>
     </message>
     <message>
         <source>int main(int argc, char *argv[])
@@ -14777,47 +16818,39 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
 }</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>Kodas:</translation>
+        <translation type="vanished">Kodas:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidgets</translation>
+        <translation type="vanished">QtCore, QtWidgets</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Naudokite Qt modulius:</translation>
+        <translation type="vanished">Naudokite Qt modulius:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Programų rinkinys („macOS“)</translation>
+        <translation type="vanished">Programų rinkinys („macOS“)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Apibrėžkite kodo fragmentą</translation>
+        <translation type="vanished">Apibrėžkite kodo fragmentą</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Kodo fragmentas</translation>
+        <translation type="vanished">Kodo fragmentas</translation>
+    </message>
+    <message>
+        <source>Code Snippet</source>
+        <translation type="vanished">Kodo fragmentas</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Code Snippet</source>
-        <translation>Kodo fragmentas</translation>
-    </message>
-    <message>
-        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Sukuria antraštės failą, kurį galite įtraukti į C/C++ projektą.</translation>
     </message>
@@ -14827,7 +16860,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>C/C++ antraštės failas</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Sukuria šaltinio failą, kurį galite įtraukti į C/C++ projektą.</translation>
     </message>
@@ -14837,7 +16870,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>C/C++ šaltinio failas</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Pasirinkite formos šabloną</translation>
     </message>
@@ -14855,12 +16888,14 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation type="vanished">Qt dizainerio forma</translation>
     </message>
     <message>
-        <location line="-139" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria fragmentų atspalvį darbalaukio OpenGL šešėlių kalboje (GLSL). Fragmentų šešėliuotojai sukuria galutines pikselių spalvas trikampiams, taškams ir linijoms, pateiktoms naudojant OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14868,7 +16903,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
@@ -14883,7 +16918,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Vertex Shader (darbalaukio OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Sukuria fragmentų atspalvį naudojant OpenGL/ES 2.0 šešėliavimo kalbą (GLSL/ES). Fragmentų šešėliuotojai sukuria galutines pikselių spalvas trikampiams, taškams ir linijoms, pateiktoms naudojant OpenGL.</translation>
     </message>
@@ -14903,7 +16938,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>„Vertex Shader“ („OpenGL“ / ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+25" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Sukuria Java failą su pagrindiniu kodu.</translation>
     </message>
@@ -14918,7 +16953,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Java failas</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Biblioteka be pilietybės</translation>
     </message>
@@ -14939,73 +16974,63 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>JS failas</translation>
     </message>
     <message>
-        <location line="-74" />
         <source>Model name:</source>
-        <translation>Modelio vardas:</translation>
+        <translation type="vanished">Modelio vardas:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+63" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Vieta:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}“ egzistuoja failų sistemoje.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Modelio pavadinimas ir vieta</translation>
+        <translation type="vanished">Modelio pavadinimas ir vieta</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Sukuria naują tuščią modelį su tuščia diagrama.</translation>
+        <translation type="vanished">Sukuria naują tuščią modelį su tuščia diagrama.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>Modeliavimas</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>Modelis</translation>
+        <translation type="vanished">Modelis</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Sukuria įbrėžimų modelį naudodama laikiną failą.</translation>
+        <translation type="vanished">Sukuria įbrėžimų modelį naudodama laikiną failą.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Scratch modelis</translation>
+        <translation type="vanished">Scratch modelis</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Sukuria tuščią Nim failą naudojant UTF-8 simbolių rinkinį.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim failas</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Sukuria tuščią Nim scenarijaus failą naudojant UTF-8 simbolių rinkinį.</translation>
     </message>
@@ -15025,7 +17050,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Python failas</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Sukuria Qt išteklių failą (.qrc).</translation>
     </message>
@@ -15035,7 +17060,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Qt išteklių failas</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Sukuria QML failą su pagrindiniu kodu, pradedant nuo &quot;import QtQuick&quot;.</translation>
     </message>
@@ -15045,21 +17070,21 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>QML failas (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Sukuria įbrėžimų buferį naudodama laikiną failą.</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="-49" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>Generolas</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-391" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Boost“.</translation>
     </message>
@@ -15084,21 +17109,21 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Sukuria naują vieneto bandymo projektą naudojant „Boost“. Vienetų testai leidžia patikrinti, ar kodas yra tinkamas naudoti ir kad nėra regresijų.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Bandymo projektas</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>„Boost“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Catch2“.</translation>
     </message>
@@ -15133,7 +17158,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>„Catch2“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas „Google Test“.</translation>
     </message>
@@ -15163,12 +17188,18 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>„Google“ bandymo projektas</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas QT testą.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+8" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake, skirtas Qt5 ir Qt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Sukuria naują vieneto bandymo projektą naudojant QT testą. Vienetų testai leidžia patikrinti, ar kodas yra tinkamas naudoti ir kad nėra regresijų.</translation>
     </message>
@@ -15178,12 +17209,30 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>QT bandymo projektas</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Šis vedlys sukuria paprastą vieneto bandymo projektą, naudodamas QT greitą testą.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+6" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 ir naujesnė</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 ir naujesnė</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Qt kodo suderinamumas:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Sukuria naują vieneto bandymo projektą, naudojant QT greitą testą. Vienetų testai leidžia patikrinti, ar kodas yra tinkamas naudoti ir kad nėra regresijų.</translation>
     </message>
@@ -15198,12 +17247,11 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Įtraukite „Qquickitem“</translation>
     </message>
     <message>
-        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Sukuria CMAKE pagrįstą bandymo projektą, kuriame galite įvesti kodo fragmentą, kad jį sudarytumėte ir patikrintumėte.</translation>
+        <translation type="vanished">Sukuria CMAKE pagrįstą bandymo projektą, kuriame galite įvesti kodo fragmentą, kad jį sudarytumėte ir patikrintumėte.</translation>
     </message>
     <message>
-        <location line="+350" />
+        <location line="+77" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Sukuria QT valdiklių dizainerio formą, kurią galite pridėti prie QT valdiklio projekto. Tai naudinga, jei jau turite UI verslo logikos klasę.</translation>
     </message>
@@ -15213,7 +17261,31 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>QT valdiklių dizainerio forma</translation>
     </message>
     <message>
-        <location line="-104" />
+        <location line="+43" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Sukuria fragmentų šešėliuoklę Vulkan suderinamu GLSL. Fragmentų šešėliuoklės generuoja galutines spalvas trikampiams, taškams ir linijoms, kurie bus atvaizduojami.
+Naudokite, kai taikote Qt6 ar naujesnę versiją.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Fragmentų šešėliuoklė (suderinama su Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Sukuria viršūnių šešėliuoklę Vulkan suderinamu GLSL. Viršūnių šešėliuoklės transformuoja trikampių, taškų ir linijų, kurie bus atvaizduojami, pozicijas, normales ir tekstūros koordinates.
+Naudokite, kai taikote Qt6 ar naujesnę versiją.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Viršūnių šešėliuoklis („Vulkan“ suderinamas)</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>Creates a markdown file.</source>
         <translation>Sukuria žymėjimo failą.</translation>
     </message>
@@ -15223,12 +17295,12 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>„Markdown“ failas</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Scratch Buffer</source>
         <translation>Įbrėžimų buferis</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Valstybės diagramos pavadinimas:</translation>
     </message>
@@ -15248,7 +17320,7 @@ Tai ištrins jos plokštes, programinę aparatinę įrangą ir pavyzdžius.</tra
         <translation>Valstybės diagrama</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15272,7 +17344,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>„Catch2“ versija:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Testo informacija</translation>
     </message>
@@ -15288,7 +17360,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Bandymo atvejis</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Sukuria tuščią failą.</translation>
     </message>
@@ -15298,7 +17370,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Tuščias failas</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Sukuria vertimo failą, kurį galite pridėti prie QT projekto.</translation>
     </message>
@@ -15308,61 +17380,76 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Qt vertimo failas</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Šis vedlys sukuria paprastą Qt pagrindu veikiančią konsolės programą.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake su Qt 5 suderinamumu</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Mesonas</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Apibrėžkite kūrimo sistemą</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Sukurti sistemą</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Vertimo failas</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Vertimas</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-347" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Projekto pavadinime galima naudoti tik raides, skaitmenis ar pabraukimo brūkšnius.</translation>
+    </message>
+    <message>
+        <location line="-286" />
         <source>Define Python Interpreter</source>
         <translation>Apibrėžkite „Python“ vertėją</translation>
     </message>
@@ -15377,22 +17464,26 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Sukuria „Python“ programos QT, į kurį įeina QT valdiklių dizainerių pagrindu sukurtas valdiklis (UI failas). Reikalauja .UI į Python konvertavimą.</translation>
     </message>
     <message>
-        <location line="-52" />
         <source>Qt 6.4</source>
-        <translation>QT 6.4</translation>
+        <translation type="vanished">QT 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+74" />
         <source>Qt 6.5</source>
         <translation>QT 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Sukuria QT greitą programą, kurioje gali būti ir QML, ir C ++ kodas. Galite sukurti programą ir įdiegti ją į darbalaukio, įterptas ir mobiliųjų tikslinių platformų.</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+37" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Sukuria projektą, kurio struktūra suderinama ir su Qt Design Studio, ir su Qt Creator. Jame yra .ui.qml forma, kurią galite vizualiai redaguoti Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15401,7 +17492,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Norėdami sukurti visą programą, vietoj to sukurkite QT greito programos projektą.</translation>
     </message>
     <message>
-        <location line="-108" />
+        <location line="+31" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15418,31 +17509,32 @@ Preselects a desktop Qt for building the application if available.</source>
 Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
-        <location line="-172" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="-371" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Programa (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Qt konsolės programa</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Šis vedlys sukuria C++ bibliotekos projektą.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Nurodykite pagrindinę informaciją apie klases, kurioms norite generuoti skeleto šaltinio kodo failus.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Bendrinama biblioteka</translation>
     </message>
@@ -15457,9 +17549,10 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Qt įskiepis</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Tipas:</translation>
     </message>
@@ -15468,7 +17561,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{JS: value(&apos;Tipas&apos;) === &apos;qtplugin&apos; ? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -15504,12 +17597,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Nė vienas</translation>
     </message>
@@ -15534,14 +17622,14 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Qt modulis:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Apibrėžkite projekto detales</translation>
     </message>
@@ -15550,38 +17638,38 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">Sukuria C++ biblioteką. Tai gali būti naudojama norint sukurti:&lt;ul&gt;&lt;li&gt;bendrinama C++ biblioteka, skirta naudoti su &lt;tt&gt;QPluginLoader&lt;/tt&gt; ir vykdymo laiku (įskiepiai)&lt;/li&gt;&lt;li&gt;bendrinama arba statinė C++ biblioteka, skirta naudoti su kitu projektas linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-485" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="-481" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>biblioteka</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>C++ biblioteka</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Sukuria paprastą Nim programą.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Ne Qt projektas</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>„Nim“ programa</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Dvejetainis</translation>
     </message>
@@ -15597,12 +17685,12 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Apibūdinimas:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15663,18 +17751,20 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>Kita</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Licencija:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>C</translation>
     </message>
@@ -15715,21 +17805,21 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Konfigūracija</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Sukuria „Nim“ programą su „Nimble“.</translation>
     </message>
@@ -15739,7 +17829,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Mikli taikymas</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Sukuria paprastą C programą be priklausomybių.</translation>
     </message>
@@ -15749,7 +17839,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Paprasta C programa</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Sukuria paprastą C++ programą be priklausomybių.</translation>
     </message>
@@ -15759,7 +17849,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Paprasta C++ programa</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Šis vedlys sukuria tuščią .pro failą.</translation>
     </message>
@@ -15778,20 +17868,20 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">PySide versija:</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="+12" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Sukuria Qt Python programai, kurioje yra tik pagrindinis QApplication kodas.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Programa (Qt, skirta Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Tuščia programa</translation>
     </message>
@@ -15808,13 +17898,11 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Projekto failas:</translation>
+        <translation type="vanished">Projekto failas:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Sukuria Qt programą Python, kurioje yra tuščias langas.</translation>
     </message>
@@ -15824,15 +17912,15 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Tuščias langas</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location line="+21" />
+        <location line="-29" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-259" />
+        <location line="-204" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15841,39 +17929,32 @@ Preselects a desktop Qt for building the application if available.</source>
  Iš anksto pasirenka darbalaukį QT, kad būtų galima sukurti programą, jei įmanoma.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Sukuria C ++ biblioteką. Galite sukurti: &lt;ul&gt; &lt;li&gt; Bendra C ++ biblioteka, skirta naudoti su &lt;Tt&gt; qpluginloader &lt;/tt&gt; ir runtime (papildiniai) &lt;/li&gt; &lt;li&gt; Bendra arba statinė C ++ biblioteka, skirta naudoti su kitu projektu „LinkTime“ &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-137" />
-        <location line="+21" />
-        <location line="+33" />
         <source>PySide 2</source>
-        <translation>PYSIDE 2</translation>
+        <translation type="vanished">PYSIDE 2</translation>
     </message>
     <message>
-        <location line="-18" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15</translation>
+        <translation type="vanished">PySide 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14</translation>
+        <translation type="vanished">PySide 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13</translation>
+        <translation type="vanished">PySide 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12</translation>
+        <translation type="vanished">PySide 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+148" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Sukuria Qt Quick programą, kurioje yra tuščias langas.</translation>
     </message>
@@ -15887,50 +17968,174 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Sukuria „Qt“, skirtą „Python“ programai, kurioje yra „Qt Designer“ pagrindu sukurtas valdiklis (ui failas) – reikalingas .ui konvertavimas į Python</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+19" />
         <source>Window UI</source>
         <translation>Lango vartotojo sąsaja</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Šis vedlys sukuria „Qt Interface Framework“ projektą.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Sukonfigūruokite sąsają, apibūdinančią duomenis, kuriais keičiasi sąsaja ir vidinė dalis.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Sukurto projekto pavadinimas, prasidedantis didžiąja raide.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Sąsajos pavadinimas:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Sąsajos, kuri tampa sukurto modulio dalimi, pavadinimas, prasidedantis didžiąja raide.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Pridėti pavyzdinį kodą į projektą</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Apima pagrindines konstrukcijas, kitu atveju sukuriamas tuščias projektas.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Generuoti zoninę sąsają</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>Zoninė sąsaja turi atitinkamus elementus visiems duomenims keliose zonose.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Vidinės dalies sąranka:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Generuoti imitacinę vidinę dalį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>Sukuria imitacinę vidinę dalį, valdomą skriptais iš QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Generuoti gamybinę vidinės dalies realizaciją</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Sukuria visavertę, natūralią vidinės dalies realizaciją.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Generuoti Qt Remote Objects vidinę dalį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Sugeneruoja vidinę dalį, kuri gali jungtis prie serverio pusės naudodama Qt Remote Objects technologiją.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Generuoti Qt Remote Objects imitacinį serverį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Sugeneruoja imitacinį serverį, prie kurio gali jungtis Qt Remote Objects vidinė dalis.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Generuoti Qt Remote Objects gamybinį serverį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Sugeneruoja natūraliai realizuotą serverį, prie kurio gali jungtis Qt Remote Objects vidinė dalis.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>Jei nepasirinkta veikianti vidinė dalis, sąsajos pavyzdinis kodas neveiks ir gali netgi sukelti klaidų.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Konfigūruoti sąsają</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Konfigūruoti</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Sukuria Qt Interface Framework projektą su sukonfigūruota sąsaja ir pasirinktinėmis vidinėmis dalimis.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>„Qt Interface Framework“ projektas</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Minimali reikalinga Qt versija:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>Mano prekė</translation>
     </message>
@@ -15970,17 +18175,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt Quick 2 plėtinio papildinys</translation>
     </message>
     <message>
+        <location line="+8" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>Nustatyti QT_QML_GENERATE_QMLLS_INI į ON naudojant CMake</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>Create a project that you can open in Qt Design Studio</source>
-        <translation type="vanished">Sukurkite projektą, kurį galite atidaryti naudodami Qt Design Studio</translation>
+        <translation>Sukurkite projektą, kurį galite atidaryti naudodami Qt Design Studio</translation>
     </message>
     <message>
         <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
         <translation type="vanished">Sukurkite projektą, kurio struktūra yra suderinama ir su Qt Design Studio (per .qmlproject), ir su Qt Creator (per CMakeLists.txt). Jame yra .ui.qml forma, kurią galite vizualiai redaguoti naudodami Qt Design Studio.</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="-48" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Naudokite Qt virtualią klaviatūrą</translation>
     </message>
@@ -15993,12 +18214,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Sukuria Qt Quick programą, kurioje yra tuščias langas. Pasirinktinai galite sukurti Qt Design Studio projektą.</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-36" />
         <source>Qt Quick Application</source>
         <translation>Qt greitoji programa</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -16020,12 +18241,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Naudokite tai tik tuo atveju, jei kuriate prototipą. Naudodami tai negalite sukurti visos programos. Vietoj to apsvarstykite galimybę naudoti Qt greitosios programos projektą.</translation>
     </message>
     <message>
-        <location line="-90" />
+        <location line="+16" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt greito vartotojo sąsajos prototipas</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Šis vedlys sukuria Qt Widgets programos projektą. Programa pagal numatytuosius nustatymus gaunama iš QApplication ir apima tuščią valdiklį.</translation>
     </message>
@@ -16034,7 +18255,7 @@ Naudokite tai tik tuo atveju, jei kuriate prototipą. Naudodami tai negalite suk
         <translation type="vanished">%{JS: value(&apos;BaseClass&apos;) ? value(&apos;BaseClass&apos;).slice(1) : &apos;MyClass&apos;}</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>Sukurti formą</translation>
     </message>
@@ -16066,28 +18287,28 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Qt valdiklių programa</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Sukonfigūruokite &lt;b&gt;%{vcsName}&lt;/b&gt; dabar.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Saugykla:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Saugyklos URL neteisingas</translation>
     </message>
@@ -16096,24 +18317,24 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>Katalogas:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}“ yra failų sistemoje.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Naudokite esamą katalogą</translation>
     </message>
@@ -16188,23 +18409,22 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Peržiūra:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Nurodykite saugyklos URL, patikros katalogą ir kelią.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Veikia turgaus filialas...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Klonuoti</translation>
     </message>
@@ -16214,22 +18434,22 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Klonuoja turgaus filialą ir bando įkelti esantį projektą.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Importo projektas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Turgaus klonas (arba filialas)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modulis:</translation>
     </message>
@@ -16244,19 +18464,19 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Vykdoma CVS patikra...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Patikra</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Patikrina CVS saugyklą ir bando įkelti esantį projektą.</translation>
     </message>
@@ -16266,7 +18486,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>CVS patikra</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;numatytasis filialas&gt;</translation>
     </message>
@@ -16306,7 +18526,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Git Clone</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Veikia Mercurial klonas...</translation>
     </message>
@@ -16321,7 +18541,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Merkurialinis klonas</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Pasitikėjimo serverio sertifikatas</translation>
     </message>
@@ -16341,7 +18561,62 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>„Subversion Checkout“.</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Prašyti perdavimo (passthrough)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Prašyti leidimų perdavimo režimui.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>Prašyti rankų sekimo</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>Prašyti leidimų rankų sekimui.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Prašyti erdvinių inkarų</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Prašyti leidimų erdvių inkarų API.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>XR funkcijos</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Funkcijos</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Rinkinio pasirinkimas: „Apple Vision Pro“ pasirinkite bet kurį rinkinį.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>Sukuria Qt Quick 3D XR programą su QML ir C++ kodu. Programą galite sukurti ir diegti į kompiuterio VR ir atskiras XR platformas. Norėdami kurti Apple Vision Pro, galite dirbti su Qt Creator, bet CMake projektą reikia diegti naudojant XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>XR programa</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Šis vedlys sukuria pasirinktinį Qt Creator papildinį.</translation>
     </message>
@@ -16351,11 +18626,16 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Nurodykite išsamią informaciją apie pasirinktinį Qt Creator papildinį.</translation>
     </message>
     <message>
+        <location line="+22" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>„Qt Creator“ C++ papildinys</translation>
+    </message>
+    <message>
         <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
         <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-21" />
         <source>Plugin name:</source>
         <translation>Papildinio pavadinimas:</translation>
     </message>
@@ -16409,12 +18689,11 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Sukuria pasirinktinį Qt Creator papildinį.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Qt kūrėjo įskiepis</translation>
+        <translation type="vanished">Qt kūrėjo įskiepis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S &amp;Essions</translation>
     </message>
@@ -16434,7 +18713,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Dabartinės sesijos pavadinimas.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Ištrinti sesiją</translation>
     </message>
@@ -16456,7 +18735,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
  %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Klaida atkuriant sesiją</translation>
     </message>
@@ -16466,33 +18745,33 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Nepavyko atkurti sesijos %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Įkėlimo sesija</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Klaida taupant sesiją</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>Nepavyko išsaugoti sesijos %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Nepavyko išsaugoti sesijos, kad būtų pateiktas „%1“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Įveskite sesijos pavadinimą:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Sesijos vadovas</translation>
     </message>
@@ -16532,7 +18811,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Kas yra sesija?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Sesija</translation>
     </message>
@@ -16542,7 +18821,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Paskutinis modifikuotas</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Naujo sesijos pavadinimas</translation>
@@ -16568,7 +18847,7 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Kl&amp;onas ir atviras</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Pervardyti sesiją</translation>
     </message>
@@ -16583,17 +18862,17 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>&amp;Pervardykite ir atvirai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;ick Custom&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Konfigūracija yra klaidinga. Norėdami gauti išsamesnės informacijos, patikrinkite klausimų rodinį.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>Nepavyko sukurti katalogo „%1“</translation>
     </message>
@@ -16603,44 +18882,41 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Programos „%1“ neegzistuoja arba nėra vykdoma.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Pradžia: „ %1“ %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>Procesas „%1“ išėjo normaliai.</translation>
+        <translation type="vanished">Procesas „%1“ išėjo normaliai.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>Procesas „ %1“ išėjo su kodu %2.</translation>
+        <translation type="vanished">Procesas „ %1“ išėjo su kodu %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>Nepavyko pradėti proceso „ %1“ %2.</translation>
+        <translation type="vanished">Nepavyko pradėti proceso „ %1“ %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>Procesas „%1“ sudužo.</translation>
+        <translation type="vanished">Procesas „%1“ sudužo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[nėra]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>Vardas</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Šaltinis</translation>
     </message>
@@ -16660,7 +18936,22 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Sukurti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Pašalinti paleidimo konfigūracijas</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Filtruoti vykdymo konfigūracijas pagal pavadinimą</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Pašalinti pasirinktus</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>Failai bet kuriame projekte</translation>
     </message>
@@ -16670,18 +18961,19 @@ Iš anksto pasirenkamas darbalaukio Qt programai kurti, jei yra.</translation>
         <translation>Suranda visų atvirų projektų failus. Pridėkite &quot;+&lt;sumeris&gt;&quot; arba &quot;: &lt;pale&gt;&quot;, kad pereitumėte į nurodytą eilutės numerį. Pridėkite dar vieną „+&lt;sumeris&gt;“ arba „: &lt;pale&gt;“, kad pereikite ir į stulpelio numerį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Visi projektai</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Visi projektai:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -16690,7 +18982,7 @@ Excluding: %2
  %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Pridėkite derinimo įrenginį prie šio proceso</translation>
     </message>
@@ -16700,7 +18992,33 @@ Excluding: %2
         <translation>Pridėkite derinimo įrenginį iki %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Kategorija</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Derinti</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Kritinė</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Lemtinga</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Informacija</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Sustoti</translation>
     </message>
@@ -16736,12 +19054,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Programos išvestis</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Pakartotinai paleiskite šią veikimo konfigūraciją.</translation>
     </message>
@@ -16751,45 +19069,74 @@ Excluding: %2
         <translation>Nustokite bėgimo programą.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>Application-Output-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Programos išvesties langas</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Filtruoti vidines Qt žurnalo kategorijas</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Filtruoti kategorijas pagal reguliarųjį reiškinį</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Neteisingas reguliarusis reiškinys: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Panaikinti visų žymėjimą</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Panaikinti visų %1 žymėjimą</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Pažymėti visus %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Negaliojantis</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Word-rašymo išvestis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Išvalyti seną išėjimą naujame bėgime</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Sujungti stderr ir stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Visada</translation>
     </message>
@@ -16804,45 +19151,64 @@ Excluding: %2
         <translation>Tik pirmame išėjime</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Atmesti perteklinę išvestį</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Perrašyti fono spalvą</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Pritaikykite programos išvesties fono spalvą.
+Pastaba: esama išvestis nebus perspalvinta.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Apriboti išėjimą iki %1 simbolių</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Atidarykite programos išvestį paleidžiant:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Atidarykite programos išvestį derinant:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>be pavadinimo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Sukurkite katalogą:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>„Build“ katalogas nepasiekiamas iš „Build“ įrenginio.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>„Shadow Build“:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>„Build“ kataloge yra potencialiai probleminis simbolis „%1“.</translation>
     </message>
@@ -16852,15 +19218,16 @@ Excluding: %2
         <translation>Šį įspėjimą galima užgniaužti &lt;a href = &quot;manekenė&quot;&gt; čia &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Atskira derinimo informacija:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Kurti aplinką</translation>
     </message>
@@ -16870,14 +19237,14 @@ Excluding: %2
         <translation>Aiški sistemos aplinka</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Pasirinktiniai išvesties analizatoriai</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Parse standartinė išvestis statybos metu</translation>
     </message>
@@ -16887,29 +19254,34 @@ Excluding: %2
         <translation>Priverčia išvesties analizatorius ieškoti diagnostikos „stdout“, o ne stderr.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Sukurkite nustatymus</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Projekto šakninis katalogas. Kai kurioms kūrimo sistemoms gali skirtis nuo Project:Path.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Sukurkite katalogą</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Sukurto konfigūracijos pavadinimas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Kintamieji kūrimo konfigūracijos aplinkoje</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Patarimas tiksliniame selektoriuje:</translation>
     </message>
@@ -16919,8 +19291,9 @@ Excluding: %2
         <translation>Pasirodo kaip patarimas</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Sistemos aplinka</translation>
     </message>
@@ -16936,7 +19309,24 @@ Excluding: %2
         <translation>Projektas nebuvo sėkmingai analizuotas.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>Numatytasis</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Laida</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Profilis</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>Pagrindinė projekto byla</translation>
     </message>
@@ -16966,7 +19356,7 @@ Excluding: %2
         <translation>Aktyvios projekto kūrimo konfigūracijos tipas</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>Nenustatytas jokio kūrimo įrenginio, skirto rinkiniui „%1“.</translation>
     </message>
@@ -16986,7 +19376,7 @@ Excluding: %2
         <translation>„Build“ įrenginys „%1“ negali pasiekti pastatymo katalogo.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>Užbaigta %1 iš %n žingsnių</numerusform>
@@ -16995,7 +19385,7 @@ Excluding: %2
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Sustabdykite programas</translation>
     </message>
@@ -17015,7 +19405,7 @@ Excluding: %2
         <translation>Sukurto įrenginio nepavyko paruošti 1 %1 ( %2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Kompiliuoti</translation>
@@ -17059,13 +19449,13 @@ Excluding: %2
         <translation>Klausimai, rasti atliekant testus.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -17075,10 +19465,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -17086,11 +19476,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Diegti</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -17098,7 +19488,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Pastatyti</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>Sukurtas/diegimas atšauktas</translation>
     </message>
@@ -17118,34 +19508,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Praleiskite išjungtą žingsnį %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Klaida kuriant/diegant projektą %1 (rinkinys: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>„Kit %1“ turi konfigūracijos problemas, kurios gali būti pagrindinė šios problemos priežastis.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>Vykdant veiksmą „%1“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Įgalinti</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Išjungti</translation>
@@ -17156,7 +19546,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Naudokite projekto numatytąjį</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>Numatytasis kūrimo katalogas:</translation>
     </message>
@@ -17166,7 +19556,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Šablonas, naudojamas sukonstruoti numatytąjį kūrimo katalogą. &lt;br&gt; &lt;br&gt; Numatytąją vertę galima nustatyti naudojant aplinkos kintamąjį &lt;Tt&gt;%1 &lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Numatytasis darbo katalogas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Šablonas, naudojamas sudaryti numatytąjį paleidimo konfigūracijos darbo katalogą.&lt;br&gt;&lt;br&gt;Numatytąją reikšmę galima nustatyti naudojant aplinkos kintamąjį &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>QML derinimas:</translation>
     </message>
@@ -17181,72 +19581,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Numatytosios pastatymo ypatybės</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Nėra statybos nustatymų</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Redaguoti kūrimo konfigūraciją:</translation>
+        <translation type="vanished">Redaguoti kūrimo konfigūraciją:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Pridėti</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Pašalinti</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Pervardykite ...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Klonas ...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Aktyvi kūrimo konfigūracija:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Nauja konfigūracija</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Naujas konfigūracijos pavadinimas:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Naujas kūrimo konfigūracijos pavadinimas &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -17255,14 +19657,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Klono konfigūracija</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Atšaukti „Build &amp;&amp;“ pašalinti statybos konfigūraciją</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Neišimkite</translation>
     </message>
@@ -17307,13 +19709,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Pašalinkite elementą</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 žingsniai</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>Nėra %1 žingsniai</translation>
     </message>
@@ -17338,7 +19740,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Negalima pašalinti statybos žingsnio statydamas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>Šiuo metu projektas yra analizuojamas.</translation>
     </message>
@@ -17363,13 +19765,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kodo stilius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Kompiliavimo išvestis</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>Compile-Output.txt</translation>
@@ -17390,9 +19792,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>O</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Perteklinė kompiliavimo išvestis atmesta.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>Kompilio išvestis statant</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>Atmeta kompiliavimo išvestį, kuri nuolat gaunama greičiau, nei gali būti apdorota.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -17429,7 +19841,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kopijuoti katalogą rekursyviai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>klaida:</translation>
@@ -17441,7 +19853,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Įspėjimas:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>Užklausiama %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>Gauti pagalbos iš %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Paprašykite %1 DLM pagalbos sprendžiant šią problemą.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>Dabartinio projekto failai</translation>
     </message>
@@ -17451,44 +19878,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Raskite failus iš dabartinio dokumento projekto. Pridėkite &quot;+&lt;sumeris&gt;&quot; arba &quot;: &lt;pale&gt;&quot;, kad pereitumėte į nurodytą eilutės numerį. Pridėkite dar vieną „+&lt;sumeris&gt;“ arba „: &lt;pale&gt;“, kad pereikite ir į stulpelio numerį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>Projektas „%1“</translation>
+        <translation type="vanished">Projektas „%1“</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Dabartinis projektas</translation>
+        <translation type="vanished">Dabartinis projektas</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Vienas projektas</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>Projektas „%1“:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Projektas:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Dabartinis</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Individualizuotas vykdomasis dalykas</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Paleisti %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Turite nustatyti vykdomąjį failą pagal pasirinktinę paleidimo konfigūraciją.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>Pasirinktoje paleidimo konfigūracijoje nenurodytas vykdomasis failas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>Eikite į %1 vykdymo konfigūraciją ir nustatykite vykdomąjį failą.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Turite nustatyti vykdomąjį failą pagal pasirinktinę paleidimo konfigūraciją.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Nepavyko perskaityti pasirinktinių išvesties analizatorių iš „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Individualizuoti išvesties analizatoriai nuskaitykite komandų eilutės išvestį vartotojui pateiktoms klaidų modeliams &lt;br&gt; Norėdami sukurti įrašus leidiniuose. &lt;br&gt; Parsers galima sukonfigūruoti &lt;a href = &quot;manekeną&quot;&gt; čia &lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (numatytasis projekto)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Nėra aktyvių pasirinktinių analizatorių</translation>
     </message>
@@ -17571,8 +20032,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Testas</translation>
     </message>
@@ -17596,19 +20057,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Įspėjimas</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Netaikoma:</translation>
     </message>
@@ -17628,16 +20089,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Modelis neatitinka pranešimo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Kurti numatytąjį</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Vykdyti numatytąjį</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Pasirinktinio analizatoriaus pavadinimas.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Šis pasirinktinis analizatorius pagal numatytuosius nustatymus naudojamas visoms projekto kūrimo konfigūracijoms.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Šis pasirinktinis analizatorius pagal numatytuosius nustatymus naudojamas visoms projekto paleidimo konfigūracijoms.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Nepavyksta keisti analizatoriaus, nes jis buvo importuotas automatiškai.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Pasirinktiniai išvesties analizatoriai, apibrėžti čia, gali būti įjungti atskirai projekto kūrimo ar vykdymo nustatymuose.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Pridėti ...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Eksportuoti...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>Importuoti...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17645,37 +20146,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Naujas analizatorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Įrašyti analizatorius</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Įkelti analizatorius</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Klaida įkeliant analizatorius</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Klaida įkeliant analizatorius: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Paprotys</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Clang</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -17690,11 +20216,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Tuščia</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>Makro [= reikšmė]</translation>
     </message>
@@ -17719,22 +20246,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kableliais atskirtas MKSPEC sąrašas.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Kompiliatoriaus kelias:</translation>
+        <translation type="vanished">&amp;Kompiliatoriaus kelias:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Eikite keliu:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;Abi:</translation>
     </message>
@@ -17779,7 +20302,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tai sukurtų apskritą priklausomybę.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Sinchronizuokite konfigūraciją</translation>
     </message>
@@ -17789,12 +20312,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Sinchronizuokite aktyvų rinkinį, kurkite ir diegkite konfigūraciją tarp projektų.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Diegti priklausomybes</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Ne tik kurti priklausomybes, bet ir jas diegti.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>Priklausomybės</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Dislokuoti vietoje</translation>
@@ -17820,65 +20353,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Nepaisykite diegimo duomenų iš „Build System“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>Qt paleisti konfigūraciją</translation>
+        <translation type="vanished">Qt paleisti konfigūraciją</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>Vietinis kompiuteris</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Darbalaukis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>Negalima nužudyti proceso su PID %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>Negalima nutraukti proceso su PID %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Negalima atidaryti proceso.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>Neteisingas proceso ID.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Negalima atidaryti proceso: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>„DebugbreakProcess“ nepavyko:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 neegzistuoja. Jei patys sukūrėte %2, peržiūrėkite https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 neegzistuoja. Atrodo, kad jūsų %2 diegimas sugadintas.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>QML derinimui reikės bent vieno prievado.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Dabar paleisti automatinį aptikimą</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Mašinos tipas:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Fizinis įrenginys</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Laisvi prievadai:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>„%1“ gali apdoroti tik vietinius failus.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>Įrenginys „%1“ nepasiruošęs naudoti.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 neegzistuoja. Jei patys sukūrėte %2, peržiūrėkite https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>Negalima pradėti %1. Norėdami gauti daugiau informacijos, patikrinkite src \ įrankius \ win64interrupt \ win64interrupt.c.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>negalėjo nutraukti proceso.</translation>
     </message>
@@ -17900,7 +20472,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Šiam rinkiniui nėra nustatyto įrenginio. Ar norite pridėti įrenginį?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Patikrinkite, ar nėra sukonfigūruoto įrenginio</translation>
     </message>
@@ -17915,23 +20487,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Galimi įrenginių tipai:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>Nėra kelio „%1“ prietaiso</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>Keliui „%1“ įrenginys nerastas.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>Įrenginio „%1“ failų prieiga nepasiekiama.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>Jokio prietaiso, skirto keliui „%1“</translation>
+        <translation type="vanished">Jokio prietaiso, skirto keliui „%1“</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>Nėra prieigos prie įrenginio „%1“</translation>
+        <translation type="vanished">Nėra prieigos prie įrenginio „%1“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Visi</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (numatytasis %2)</translation>
     </message>
@@ -17971,22 +20559,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Nuotolinė klaida</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Įrenginys:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Tipas konkretus</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Pašalinti</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Nustatykite kaip numatytąjį</translation>
     </message>
@@ -17996,7 +20585,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Pridėkite ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Pradėkite vedlį, kad pridėtumėte įrenginį ...</translation>
     </message>
@@ -18007,7 +20596,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Pridėti %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;Vardas:</translation>
     </message>
@@ -18022,7 +20611,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Dabartinė būsena:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Atkurti</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Taip (ID yra „%1“)</translation>
     </message>
@@ -18037,8 +20631,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Rodyti bėgimo procesus ...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Prietaisai</translation>
     </message>
@@ -18058,12 +20652,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Įrenginio testas nepavyko.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Nuotolinės klaidos išvestis buvo: %1</translation>
+        <translation type="vanished">Nuotolinės klaidos išvestis buvo: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>Rasta %n laisvų prievadų.</numerusform>
@@ -18072,12 +20665,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Tikrina turimus uostus ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Jokio įrenginio nustatymo bandymo perkėlimui.</translation>
     </message>
@@ -18107,7 +20700,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bendroji failo kopija</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>Ieškoti PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Ieškoti Qt diegime</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Ieškoti kataloguose</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Kabliataškiais atskirtas katalogų sąrašas</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Pasirinkite įrenginio kelius, kuriuose reikia ieškoti vykdomųjų failų.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Kurti rinkinius</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Nustatyti rinkinius šio įrenginio įrankių rinkiniams.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Įrenginys neprijungtas.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Palikite tuščią, jei vykdomąjį failą reikia ieškoti $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Derinimui naudoti SSH prievadų peradresavimą</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>Įjunkite derinimą nuotoliniuose tikslose, kurie negali atverti GDB serverio prievadų.
+SSH tuneliavimas naudojamas nuotoliniam GDB serverio prievadui susieti su localhost.
+Vietiniai ir nuotoliniai prievadai nustatomi automatiškai.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Prieiga per:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Pasirinkite įrenginį, per kurį jungtis.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Tiesioginis</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Įrenginio pavadinimas negali būti tuščias.</translation>
     </message>
@@ -18117,18 +20784,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Įrenginys su šiuo pavadinimu jau egzistuoja.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Įveskite sąrašus ir intervalus taip: „1024,1026-1028,1030“.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Terminalo atidarymas nepalaikomas.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>Įrenginys „%2“ negali tvarkyti failo „%1“.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Scenarijaus vykdymas („source“) šioje platformoje nepalaikomas.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Prietaisas</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>Šiam įrenginiui signalo operacijos receptas nepasiekiamas.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Pasirengęs naudoti</translation>
     </message>
@@ -18148,22 +20834,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Nežinoma</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Šiame įrenginyje vykdyti įrankius</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Šaltinio ir kūrimo įrankiai šiame įrenginyje</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Automatinis aptikimas</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>„LocalSource“ () neįdiegtas šiam įrenginio tipui.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>SignalOperationData kelias nenurodytas.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>SignalOperationData nurodytas netinkamas PID.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Nėra įrenginio nurodytam keliui: „%1“.</translation>
+        <translation type="vanished">Nėra įrenginio nurodytam keliui: „%1“.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>Kelio „%1“ įrenginys nepalaiko žudymo procesų.</translation>
+        <translation type="vanished">Kelio „%1“ įrenginys nepalaiko žudymo procesų.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>Proceso ID</translation>
     </message>
@@ -18173,53 +20882,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Komandinė eilutė</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>Gavimo procesų sąrašas. Tai gali užtrukti.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>Nepavyko gauti procesų sąrašo.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>Ssh</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Įgalinkite ryšio bendrinimą:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Ryšio dalijimosi laikas:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>Kelias į SSH vykdomąją medžiagą:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>Kelias į SFTP vykdomąją medžiagą:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>Kelias į SSH-askPass vykdomąjį:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>Kelias į SSH-KEYGEN vykdomąją medžiagą:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>minutės</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Projektas %1</translation>
@@ -18231,7 +20944,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Projektas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Atkurti „Global“</translation>
     </message>
@@ -18241,40 +20955,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ekrano nustatymai</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>&amp;Rodykite dešinę ir paraštę stulpelyje:</translation>
+        <translation type="vanished">&amp;Rodykite dešinę ir paraštę stulpelyje:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Naudokite konkrečios konteksto maržą</translation>
+        <translation type="vanished">Naudokite konkrečios konteksto maržą</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Jei įmanoma, naudokite kitą maržą. Pavyzdžiui, „Clangformat“ papildinio „ColumnLimit“.</translation>
+        <translation type="vanished">Jei įmanoma, naudokite kitą maržą. Pavyzdžiui, „Clangformat“ papildinio „ColumnLimit“.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Aplinka</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Pagrindinė aplinka šiai paleidimo konfigūracijai:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Rodyti programos išvestį, kai paleidžiama</translation>
     </message>
@@ -18285,12 +20994,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Pasirinkite katalogą</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>Ed &amp;it</translation>
     </message>
@@ -18330,7 +21039,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Atidarykite terminalą su šia aplinka.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Neatsakyti &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
@@ -18372,17 +21081,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Naudokite &lt;b&gt;%1 &lt;/b&gt; ir</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>Failai visuose projekto kataloguose</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>Failai visuose projekto kataloguose:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Nustatymas</translation>
     </message>
@@ -18392,18 +21101,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Matoma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>Mingw</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 ( %2, %3 %4, %5)</translation>
+        <translation type="vanished">%1 ( %2, %3 %4, %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3, kelias „%4“)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Nepaisykite kodo modelio</translation>
     </message>
@@ -18415,7 +21128,7 @@ fails because Clang does not understand the target architecture.</source>
  Nepavyksta, nes Clang nesupranta tikslinės architektūros.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Platformos „Codegen“ vėliavos:</translation>
     </message>
@@ -18430,7 +21143,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Tikslas trigubas:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Tėvų įrankių grandinė:</translation>
     </message>
@@ -18455,22 +21168,22 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Teksto redagavimo įvestis, kad būtų galima išspręsti.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Laukas nėra objektas.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Laukas neturi vardo.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>Laukas „%1“ neturi jokio tipo.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>Laukas „%1“ turi nepalaikomą tipą „%2“.</translation>
     </message>
@@ -18480,102 +21193,102 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Kai analizės laukas „ %1“: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Etiketės („%1“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Etiketė („%1“) neturi TRTEXT.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>„Spacer“ („%1“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>Tarpinis („%1“) nuosavybė „Faktorius“ nėra sveikas vertė.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Linedit („%1“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>Linedit („%1“) turi netinkamą įprastinę išraišką „%2“ „Validator“.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>„Linedit“ („%1“) turi netinkamą vertę „%2“ „Užbaigimas“.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>„TextEdit“ („%1“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>„Patchooser“ duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>rūšis „%1“ nėra viena iš palaikomų „esamoDirectory“, „katalogų“, „failas“, „SaveFile“, „CaterCommand“, „Komanda“, „Bet koks“.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Žymės langelio („%1“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Žymės langelio („%1“) vertės, skirtos pažymėti ir nepatikrinti būsenos, yra vienodos.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>JONS JSON sąrašai neleidžiami viduje esančių sąrašų elementų.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Nėra „rakto“, rasto sąrašo elementuose.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1 („%2“) duomenys nėra objektas.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 („%2“) „rodyklė“ nėra sveikas vertė.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 („%2“) „disabledIndex“ nėra sveikas vertė.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;elementų&quot; trūksta.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 („%2“) „elementai“ nėra JSON sąrašas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>Bent vienos reikalingos funkcijos nėra.</translation>
     </message>
@@ -18590,7 +21303,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Bent vienos pageidaujamos funkcijos nėra.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Funkcijų sąrašas yra nustatytas, o ne tipų sąrašas.</translation>
     </message>
@@ -18605,7 +21318,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Funkcijų sąrašo elementas nėra eilutė ar objektas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Nepavyko įsipareigoti valdyti versijos</translation>
     </message>
@@ -18622,7 +21335,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>Nepavyko pridėti paprojekčių „%1“
@@ -18630,20 +21343,25 @@ to project &quot;%2&quot;.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Nepavyko pridėti vieno ar daugiau failų prie projekto
  „%1“ (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>Antrinis projektas „%1“ yra už „%2“ ribų.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>Projekto failas</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Pasirinkite projekto failą</translation>
     </message>
@@ -18653,12 +21371,12 @@ to project &quot;%2&quot;.</source>
         <translation>Projekte yra daugiau nei vienas projekto failas. Pasirinkite tą, kurį norėtumėte naudoti.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Patikrinkite, ar egzistuoja kintamasis. &lt;br&gt; Grąžina „tiesa“, jei tai daro, ir tuščia eilutė, jei ne.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Negalėjo nustatyti tikslinio kelio. „TargetPath“ nebuvo nustatytas nė viename puslapyje.</translation>
     </message>
@@ -18678,32 +21396,32 @@ to project &quot;%2&quot;.</source>
         <translation>Nėra „rakto“ objekto parinkčių.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Nepavyko perrašyti failų</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Nepavyko suformatuoti failų</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Nepavyko parašyti failų</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>Nepavyko paskelbti failų</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Nepavyko nušlifuoti failų</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Nepavyko atidaryti failų</translation>
     </message>
@@ -18745,66 +21463,65 @@ to project &quot;%2&quot;.</source>
         <translation>Negalite atidaryti projekto</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Generatorius nėra objektas.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Generatorius neturi „TypeID“ rinkinio.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeID „%1“ generatoriaus nežinomas. Palaikomi „TypeID“ yra: „%2“.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>Kelio „%1“ neegzistuoja tikrinant „JSON Wizard“ paieškos kelius.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>Patikrinkite „ %1“ %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* Nepavyko išanalizuoti „%1“:%2:%3:%4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Nerado JSON objekto „%1“.</translation>
+        <translation type="vanished">* Nerado JSON objekto „%1“.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Rasta ir analizuota konfigūracija.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>„JsonWizard“: „%1“ nerasta.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Puslapis nėra objektas.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Puslapyje nėra „TypeID“ rinkinio.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>„TypeID“ puslapio „%1“ nežinomas. Palaikomi „TypeID“ yra: „%2“.</translation>
     </message>
@@ -18814,7 +21531,8 @@ to project &quot;%2&quot;.</source>
         <translation>Puslapis su „TypeID“ „%1“ turi netinkamą „rodyklę“.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* Nerado JSON objekto „%1“.</translation>
     </message>
@@ -18824,22 +21542,22 @@ to project &quot;%2&quot;.</source>
         <translation>* Versija %1 nepalaikoma.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Nepavyko sukurti: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>Raktas nerastas.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Tikimasi objekto ar sąrašo.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Platforma, pasirinkta vedliui.</translation>
     </message>
@@ -18869,62 +21587,66 @@ to project &quot;%2&quot;.</source>
         <translation>Nėra ID rinkinio.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Jokios kategorijos nenustatyta.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>Piktogramos failas „%1“ nerastas.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>Vaizdo failas „%1“ nerastas.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>Nėra „DisplayName“ rinkinio.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>Nėra „DisplayCategory“ rinkinio.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Nėra aprašymo rinkinio.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>Kai analizuojami „generatoriai“: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>Kai analizuojama „puslapiai“: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>Netinkamas typeId.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">Kai analizuojama „puslapiai“: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Failų duomenų sąrašo įrašas nėra objektas.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Šaltinis ir taikinys yra tušti.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>Apdorojant „%1“: &lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [aplankas]</translation>
     </message>
@@ -18951,7 +21673,12 @@ to project &quot;%2&quot;.</source>
         <translation>Kai analizuojamos puslapio „ %1“: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Laukų nerasta.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>„Failo“ puslapio „Duomenys“ turi būti nenustatytas arba tuščias objektas.</translation>
     </message>
@@ -18961,12 +21688,12 @@ to project &quot;%2&quot;.</source>
         <translation>Klaidų analizė „ %1“ „Kits“ puslapyje: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>„Duomenys“ turi būti JSON objektas „rinkinių“ puslapiuose.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>Puslapyje „Rinkiniai“ reikalingas „%1“ rinkinys.</translation>
     </message>
@@ -18976,38 +21703,39 @@ to project &quot;%2&quot;.</source>
         <translation>„Duomenys“ turi būti tuščias arba JSON objektas „Projekto“ puslapiuose.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Neteisinga įprastinė išraiška „%1“ „%2“. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>„Duomenų“ puslapis „Santrauka“ gali būti nenustatytas arba turi būti objektas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Raktas nėra objektas.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>Šablonas „%1“ nėra pagrįsta įprastinė išraiška.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>„ScanerGenerator“: dvejetainis modelis „%1“ negalioja.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>Bevardis</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Rinkinys</translation>
@@ -19038,13 +21766,14 @@ to project &quot;%2&quot;.</source>
         <translation>Rinkinio ID.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>%1 klonas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -19075,49 +21804,86 @@ to project &quot;%2&quot;.</source>
         <translation>SYS šaknis</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Nėra kompiliatoriaus&gt;</translation>
+        <translation type="vanished">&lt;Nėra kompiliatoriaus&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Kompiliatorius</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Kompiliatorius, kurį reikia naudoti statybai. &lt;br&gt; Įsitikinkite, kad kompiliatorius pagamins dvejetainius failus, suderinamus su tiksliniu įrenginiu, QT versija ir kitomis naudojamomis bibliotekomis.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Kompiliatoriai sukuria kodą skirtingoms ABIS: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Kelias į kompiliatorių</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Kompiliatorius skirtingoms kalboms</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Kompiliatorius, vykdomas skirtingoms kalboms</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>Rastas įrankių rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Pašalinamas įrankių rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Įrankių rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Tikėtasi JSON objekto įrankių rinkinio aptikimui, gauta: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>JSON objekte aptikimui įrankių rinkinių nerasta.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Nežinoma kalba įrankių rinkinio aptikime: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Jokio kompiliatoriaus rinkinyje.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Vykdykite įrenginio tipą</translation>
     </message>
@@ -19127,18 +21893,69 @@ to project &quot;%2&quot;.</source>
         <translation>Įrenginio tipas, kuriame galima paleisti programas.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Nežinomas įrenginio tipas</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Įrenginys:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Įrenginio tipas</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Paleidimo įrenginys nenustatytas.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Kūrimo įrenginys nesuderinamas su šiuo rinkiniu.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Paleidimo įrenginys nesuderinamas su šiuo rinkiniu.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Pagrindinio kompiuterio adresas (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>SSH prievadas (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Naudotojo vardas (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>Privačiojo rakto failas (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Įrenginio vardas (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Įrenginio šakninis katalogas (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Vykdyti įrenginį</translation>
     </message>
@@ -19148,129 +21965,245 @@ to project &quot;%2&quot;.</source>
         <translation>Įrenginys, kuriame galima paleisti programas.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Kūrimo įrenginio tipas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Įrenginio, kuriame kuriama, tipas.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Nėra įrenginio nustatymo.</translation>
+        <translation type="vanished">Nėra įrenginio nustatymo.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Įrenginys nesuderinamas su šiuo rinkiniu.</translation>
+        <translation type="vanished">Įrenginys nesuderinamas su šiuo rinkiniu.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Nekonfigūruotas</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Pagrindinio kompiuterio adresas</translation>
+        <translation type="vanished">Pagrindinio kompiuterio adresas</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>SSH uostas</translation>
+        <translation type="vanished">SSH uostas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Įjunkite, kad nurodytumėte privataus rakto failą autentifikavimui; kitu atveju autentifikavimui naudojamas numatytasis mechanizmas (slaptažodis, .sshconfig ir numatytasis privatus raktas).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Naudoti konkretų raktą:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Įrenginio SSH pagrindinio kompiuterio rakto tikrinimo režimas.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Pagrindinio kompiuterio rakto tikrinimas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Pagrindinio kompiuterio rakto netikrinti.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Griežtas</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Griežtas pagrindinio kompiuterio rakto tikrinimas.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Leisti be atitikmens</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Leisti tikrinti pagrindinio kompiuterio raktą.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Pagrindinio kompiuterio vardas arba IP adresas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Įrenginio pagrindinio kompiuterio vardas arba IP adresas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Pagrindinio kompiuterio vardas:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Vartotojo vardas</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Įrenginio SSH naudotojo vardas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Naudotojo vardas:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Įrenginio SSH prievado numeris.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>SSH prievadas:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>Privatus rakto failas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>Įrenginio privačiojo rakto failas.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>Privačiojo rakto failas:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Skirtasis laikas:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Įrenginio SSH ryšio skirtasis laikas.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Įrenginio pavadinimas</translation>
+        <translation type="vanished">Įrenginio pavadinimas</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Įrenginio šaknies katalogas</translation>
+        <translation type="vanished">Įrenginio šaknies katalogas</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Sukurkite įrenginį</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Įrenginys, naudojamas kuriant programas.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Nėra pastatymo įrenginio rinkinio.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Sukurkite pagrindinio kompiuterio adresą</translation>
+        <translation type="vanished">Sukurkite pagrindinio kompiuterio adresą</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>Pastatyti SSH prievadą</translation>
+        <translation type="vanished">Pastatyti SSH prievadą</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Sukurkite vartotojo vardą</translation>
+        <translation type="vanished">Sukurkite vartotojo vardą</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Sukurkite privataus rakto failą</translation>
+        <translation type="vanished">Sukurkite privataus rakto failą</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Sukurkite įrenginio pavadinimą</translation>
+        <translation type="vanished">Sukurkite įrenginio pavadinimą</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Sukurkite įrenginio šaknies katalogą</translation>
+        <translation type="vanished">Sukurkite įrenginio šaknies katalogą</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Keisti ...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Nėra pakeitimų.</translation>
+        <translation type="vanished">Nėra pakeitimų.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>Jėga UTF-8 MSVC kompiliatoriaus išvestis</translation>
+        <translation type="vanished">Jėga UTF-8 MSVC kompiliatoriaus išvestis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Redaguoti kūrimo aplinką...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Redaguoti vykdymo aplinką...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Redaguoti kūrimo aplinką</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Redaguoti vykdymo aplinką</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>Priverstinė UTF-8 MSVC išvestis</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>Bet kuris iš jų perjungia MSVC į anglų kalbą arba išlaiko kalbą ir tiesiog verčia UTF-8 išvestį (gali skirtis priklausomai nuo naudojamo MSVC kompiliatoriaus).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Papildomi aplinkos nustatymai, kai naudojate šį rinkinį.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Aplinkos nustatymo vertė neteisinga.</translation>
+        <translation type="vanished">Aplinkos nustatymo vertė neteisinga.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -19278,29 +22211,65 @@ to project &quot;%2&quot;.</source>
         <translation>Aktyvaus projekto rinkinys: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 ant %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Darbalaukis (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Krovimo rinkiniai</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Pažymėkite kaip kintamą</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Tvarkykite ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>Rinkinio aspektų gamykla „%1“ nepalaiko aspektų kūrimo iš JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Automatiškai aptinkami įrenginio rinkiniai: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>Rastas rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Pašalinami įrenginio rinkiniai: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Pašalinamas rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Rinkinys: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
@@ -19315,12 +22284,12 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Rinkinio pavadinimas, tinkamas katalogų pavadinimams generuoti. Ši reikšmė naudojama kintamajam &lt;i&gt;%1&lt;/i&gt;, kuris, pavyzdžiui, nustato šešėlinio kūrimo katalogo pavadinimą.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Failo sistemos pavadinimas:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Rinkinio piktograma.</translation>
     </message>
@@ -19335,12 +22304,17 @@ to project &quot;%2&quot;.</source>
         <translation>Iš naujo nustatykite į įrenginio numatytąją piktogramą</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Ekrano pavadinimas nėra unikalus.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Nustatyti kaip numatytąjį rinkinį, naudojamą kuriant naują projektą.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>Numatytasis %1</translation>
     </message>
@@ -19355,18 +22329,16 @@ to project &quot;%2&quot;.</source>
         <translation>Vaizdai ( *.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (numatytasis)</translation>
+        <translation type="vanished">%1 (numatytasis)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Padaryti numatytąjį</translation>
+        <translation type="vanished">Padaryti numatytąjį</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Nustatymų filtras ...</translation>
     </message>
@@ -19386,7 +22358,7 @@ to project &quot;%2&quot;.</source>
         <translation>Pasirinkite, kuriuos rinkinio nustatymus rodyti pagal numatytuosius nustatymus.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Pateikite argumentus:</translation>
     </message>
@@ -19466,29 +22438,27 @@ to project &quot;%2&quot;.</source>
         <translation>Nėra konflikto su &lt;code&gt; makefags &lt;/code&gt; aplinkos kintamajame.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Paleisti be dislokavimo</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Projektas</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Bėgti</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt; Projektas: &lt;/b&gt; %1</translation>
     </message>
@@ -19523,7 +22493,7 @@ to project &quot;%2&quot;.</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Projektas: &lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
@@ -19553,49 +22523,54 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;stiliaus type = text/css&gt; a: saitas {color: rgb (128, 128, 255);} &lt;/Style&gt; Projektas &lt;b&gt;%1 &lt;/b&gt; dar nėra sukonfigūruotas &lt;br/&gt; &lt;Br/ &gt; Galite sukonfigūruoti jį &lt;a href = &quot;projektoMode&quot;&gt; Projektų režimas &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Grįžtant naudoti talpyklos aplinką „%1“ po:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Inicijavimas:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>Nerasta MSVC įrankių rinkinių. Turite įdiegti „Visual Studio“ arba „Visual Studio Build Tools“.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;Fate&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Papildomi argumentai „Vcvarsall.bat Call“</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>Nepavyko gauti MSVC aplinkos iš „%1“:
  %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>Clang-Cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>Procesas negali pasiekti failo, nes jį naudoja kitas procesas.
  Prieš pradėdami kurti, uždarykite visus veikiančius programos egzempliorius.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Parse Build išėjimas</translation>
     </message>
@@ -19645,7 +22620,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Naudokite analizatorius iš rinkinio:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Negalima analizuoti</translation>
     </message>
@@ -19655,26 +22630,26 @@ Please close all running instances of your application before starting a build.<
         <translation>Negalima analizuoti: Pasirinktas rinkinys nepateikia išvesties analizatoriaus.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Komanda:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Argumentai:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Darbo katalogas:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Pasirinktinio proceso žingsnis</translation>
@@ -19685,13 +22660,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Projekto pavadinimas</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Rinkinys negalioja.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Rinkinys neturi kūrimo įrenginio.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>Kūrimo įrenginys „%2“ negali apdoroti projekto failo „%1“.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Nesuderinamas rinkinys</translation>
     </message>
@@ -19726,37 +22711,39 @@ Please close all running instances of your application before starting a build.<
         <translation>Kai kurių konfigūracijų nepavyko nukopijuoti.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Nepavyko įkelti rinkinių per pagrįstą laiką.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Pasirinkite šakninį katalogą</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>Projektas „%1“ buvo sukonfigūruotas rinkiniui „%2“ su ID%3, kurio nebeegzistuoja. Galite sukurti naują rinkinį arba nukopijuoti išnykusio rinkinio veiksmus į kitą rinkinį %4 režimu.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Projektai</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>Nepavyko rasti jokio qml _*. QM failo „%1“</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: vardas.</translation>
@@ -19798,13 +22785,13 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: pilnas aktyvios kūrimo konfigūracijos kūrimo kelias.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Kintamieji aktyviosios kūrimo aplinkoje.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktyvios paleidimo konfigūracijos pavadinimas.</translation>
@@ -19816,45 +22803,61 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: aktyvios vykdymo konfigūracijos vykdomasis failas.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Kintamieji aktyviosios vykdymo konfigūracijos aplinkoje.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: aktyvios vykdymo konfigūracijos darbinis katalogas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Dokumentacijos komentarai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>nepasiekiamas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Projekto aplinka</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Diegti konfigūraciją</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>SSH vykdomasis failas:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>„Ninja“ vykdomasis failas:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C ++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Atidarykite ...</translation>
@@ -19875,7 +22878,12 @@ Please close all running instances of your application before starting a build.<
         <translation>&amp;Pradėkite derinti</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>&amp;Analizuoti</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Atidaryti su</translation>
     </message>
@@ -19885,12 +22893,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Naujas projektas ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Įkelkite projektą ...</translation>
+        <translation type="vanished">Įkelkite projektą ...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Atvira darbo vieta ...</translation>
     </message>
@@ -19900,23 +22907,24 @@ Please close all running instances of your application before starting a build.<
         <translation>Atidaryti failą</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Paleisti aplinką</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>Naujausi „P &amp;Robles“</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Uždaryti projektą</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>Uždarykite pro&amp;jektą „%1“</translation>
     </message>
@@ -19927,12 +22935,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>Uždarykite visus failus projekte „%1“</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>Uždaryti pro&amp;jektą</translation>
     </message>
@@ -19961,12 +22969,12 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Atstatyti</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Atstatykite visus projektus</translation>
     </message>
@@ -20036,12 +23044,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Visų konfigūracijų atstatymo projektas</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Švarus projektas</translation>
+        <translation type="vanished">Švarus projektas</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Išvalykite visų konfigūracijų projektą</translation>
     </message>
@@ -20051,7 +23058,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Atšaukti statybą</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Sukurkite be priklausomybių</translation>
@@ -20105,12 +23112,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>Uždarykite projektą „%1“</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Uždarykite kitus projektus</translation>
     </message>
@@ -20146,7 +23153,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Ištrinkite failą ...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Nustatykite kaip aktyvus projektas</translation>
     </message>
@@ -20181,7 +23188,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Greito jungiklio rinkinio parinkiklis</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Dabartinė statybos aplinka</translation>
     </message>
@@ -20191,7 +23198,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Dabartinė vykdymo aplinka</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Aktyvios aktyvaus projekto aplinka.</translation>
     </message>
@@ -20201,12 +23208,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Aktyvus aktyvaus projekto aplinka.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Įkrovos projektas</translation>
+        <translation type="vanished">Įkrovos projektas</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Atvira darbo vieta</translation>
     </message>
@@ -20236,18 +23242,71 @@ Please close all running instances of your application before starting a build.<
         <translation>Ar vis tiek norite atšaukti kūrimo procesą ir iškrauti projektą?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>Dezinfekavimo priemonė</translation>
+        <translation type="vanished">Dezinfekavimo priemonė</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Atminties tvarkymo problemos, kurias rado adresų sanitarijos.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Atidaryti projektą...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Kurti aktyvų projektą</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Išvalyti aktyvų projektą</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Vykdyti aktyvų projektą</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Sukurti antraštės failą</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Sukurti šaltinio failą</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Redaguoti aktyvią kūrimo konfigūraciją</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Atminties tvarkymo problemos, kurias rado adresų sanitarijos.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Redaguoti aktyvią vykdymo konfigūraciją</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Atidaryti projektą</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Mano užduotys</translation>
     </message>
@@ -20257,18 +23316,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Problemos iš užduočių sąrašo failo (.Tos).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Problemos, kurioms netinka specializuotesnė kategorija.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Parse statybos išvestis ...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Naujas projektas</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Nepavyko atidaryti projekto</translation>
     </message>
@@ -20278,12 +23342,37 @@ Please close all running instances of your application before starting a build.<
         <translation>&lt;h3&gt; Projektas jau atidarytas &lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>Nepavyksta atidaryti projekto „%1“: įskiepis neįkeltas.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Nepavyko atidaryti projekto „%1“: Nė vienas papildinys negali atidaryti projekto tipo „%2“.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>Šių failų nepavyko pervadinti failų sistemoje:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>Šie failai buvo pervadinti failų sistemoje, bet projekto failai neatnaujinti:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>Šie failai buvo pervadinti failų sistemoje, bet projekto struktūra neatnaujinta (kontekstas prarastas arba nepalaikomas):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Pervadinimo problemos</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Nepaisykite visų klaidų?</translation>
     </message>
@@ -20305,45 +23394,48 @@ Do you want to ignore them?</source>
         <translation>Konfigūracijos, kurios turėjo būti vykdoma, nebėra.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Visada išsaugokite failus prieš kurdami</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>Atviras projektas „%1“</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>Atviras projektas „%1“</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Projektas jau atidarytas.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>Failas „%1“ buvo pervadintas į „%2“, tačiau šių projektų nepavyko automatiškai pakeisti:%3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Projekto redagavimas nepavyko</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Šie projektai nepavyko automatiškai pašalinti failo: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>Pastato „ %1“ yra išjungtas: %2 &lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Joks projektas įkeltas.</translation>
@@ -20395,7 +23487,7 @@ Do you want to ignore them?</source>
         <translation>Ar vis tiek norite atšaukti kūrimo procesą ir uždaryti %1?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Nėra aktyvaus projekto.</translation>
     </message>
@@ -20425,23 +23517,23 @@ Do you want to ignore them?</source>
         <translation>Negalima paleisti „%1“.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>Aktyviam projektui jau numatytas vykdomas veiksmas.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Naujas failas</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Naujas paprojektis</translation>
@@ -20472,15 +23564,28 @@ Do you want to ignore them?</source>
         <translation>Failų pridėjimas prie projekto nepavyko</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Nepavyko atidaryti terminalo.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>Įjungti įskiepį %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>Norint atidaryti „%2“ tipo projektus, reikalingas papildinys „%1“. Ar norite jį dabar įjungti?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Nepavyko atidarymo terminalo.
+        <translation type="vanished">Nepavyko atidarymo terminalo.
  %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Pašalinti daugiau failų?</translation>
     </message>
@@ -20504,12 +23609,12 @@ Please try again.</source>
  Prašau bandyti dar kartą.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>Nepavyko pašalinti failo „%1“ iš projekto „%2“.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_kopija</translation>
     </message>
@@ -20525,17 +23630,17 @@ Please try again.</source>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Nepavyko dubliuoti failo</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“:%3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Nepavyko pridėti naujo failo „%1“ prie projekto.</translation>
     </message>
@@ -20560,36 +23665,32 @@ Please try again.</source>
         <translation>Nepavyko ištrinti failo %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>Projekto failo %1 negalima automatiškai pakeisti.
+        <translation type="vanished">Projekto failo %1 negalima automatiškai pakeisti.
 
  Vis tiek pervardyti nuo %2 iki %3?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>Failas %1 buvo pervadintas į %2, tačiau projekto failo %3 nebuvo galima automatiškai pakeisti.</translation>
+        <translation type="vanished">Failas %1 buvo pervadintas į %2, tačiau projekto failo %3 nebuvo galima automatiškai pakeisti.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>Failo %1 negalėjo būti pervadintas %2.</translation>
+        <translation type="vanished">Failo %1 negalėjo būti pervadintas %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Negalima pervardyti failo</translation>
+        <translation type="vanished">Negalima pervardyti failo</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Raskite failus iš visų projekto katalogų. Pridėkite &quot;+&lt;sumeris&gt;&quot; arba &quot;: &lt;pale&gt;&quot;, kad pereitumėte į nurodytą eilutės numerį. Pridėkite dar vieną „+&lt;sumeris&gt;“ arba „: &lt;pale&gt;“, kad pereikite ir į stulpelio numerį.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Vykdyti paleisti konfigūraciją</translation>
     </message>
@@ -20626,9 +23727,13 @@ Rename %2 to %3 anyway?</source>
         <translation>Perjungiama aktyvaus aktyvaus projekto konfigūracija.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Automatinis nustatytas</translation>
+        <translation type="vanished">Automatinis nustatytas</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Valdoma automatiškai</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20636,110 +23741,177 @@ Rename %2 to %3 anyway?</source>
         <translation>Automatiškai valdo %1 arba diegimo programa.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>Vadovas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>Sekundės laukimas tarp „švelnaus nužudymo“ ir „kieto žudymo“.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Dabartinis katalogas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Katalogas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Uždaryti šaltinio failai kartu su projektu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Išsaugokite visus failus prieš kurdami</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Prieš paleisdami jį visada dislokuokite projektą</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Pridėkite „Linker“ bibliotekos paieškos kelius, kad paleistumėte aplinką</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Visada klauskite prieš sustabdydami programas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Sukurkite tinkamą paleidimo konfigūraciją automatiškai</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Sinchronizuoti paleidimo konfigūracijas:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Ar vienoje kūrimo konfigūracijoje pridėjus, pašalinus ar redagavus paleidimo konfigūraciją atitinkamai turi būti atnaujintos kitos kūrimo konfigūracijos.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Nesinchronizuoti</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Kiekviena kūrimo konfigūracija turi savo vykdymo konfigūracijų rinkinį.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Sinchronizuoti viename rinkinyje</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>To paties rinkinio kūrimo konfigūracijos išlaiko sinchronizuotas vykdymo konfigūracijas.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Sinchronizuoti visuose rinkiniuose</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Visos projekto kūrimo konfigūracijos išlaiko sinchronizuotas vykdymo konfigūracijas, net ir skirtinguose rinkiniuose.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Aiškių klausimų sąrašas apie naują kūrimą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Sukurdami visus projektus, nutraukite klaidą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Pradėkite kurti procesus su mažu prioritetu</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Perspėkite prieš „Build“ katalogus su tarpais ar ne ASCII simboliais</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Kai kurie „Legacy Build“ įrankiai nelabai elgiasi su keliais, kuriuose yra „specialių“ simbolių, tokių kaip erdvės, dėl kurių gali atsirasti klaidingų kūrimo klaidų. &lt;p&gt; Atnašinkite šią parinktį, jei nedirbate su tokiais įrankiais.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Rodyti tik tinkamus rinkinius</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Rodyti tik aktyvius rinkinius</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>Rinkiniai, rodomi režime „Projektai“:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Nieko nestatyk</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Sukurkite visą projektą</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Sukurkite tik programą, kuri turi būti vykdoma</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Kūrimas ir vykdymas</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Viskas</translation>
+        <translation type="vanished">Viskas</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Tas pats projektas</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Tas pats projektas</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Visi</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20747,12 +23919,12 @@ Rename %2 to %3 anyway?</source>
         <translation>Tas pats statybos katalogas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Ta pati paraiška</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Įgalinta</translation>
     </message>
@@ -20767,32 +23939,30 @@ Rename %2 to %3 anyway?</source>
         <translation>Išskaičiuota iš projekto</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Naudokite JOM, o ne „Nmake“</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>Rodykite visus rinkinius „Build &amp; Run“ režime „Projektai“</translation>
+        <translation type="vanished">Rodykite visus rinkinius „Build &amp; Run“ režime „Projektai“</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Taip pat rodykite neaktyvius rinkinius „Build &amp; Run“ režime „Projektai“.</translation>
+        <translation type="vanished">Taip pat rodykite neaktyvius rinkinius „Build &amp; Run“ režime „Projektai“.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Aplinkos pakeitimai, skirti naudoti konfigūracijoms paleisti, bet nesukurti konfigūracijų.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Taikymo aplinka:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Projektų katalogas</translation>
     </message>
@@ -20807,33 +23977,39 @@ Rename %2 to %3 anyway?</source>
         <translation>Sukurkite ir bėgkite</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Sukurkite prieš diegdami:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Prieš statant, sustabdykite programas:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>Numatytasis „Bėgimas terminale“:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Laikas laukti prieš jėgos palaikymo programas:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>„Build &amp; Run“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Bet kokiu atveju atviras projektas?</translation>
     </message>
@@ -20843,7 +24019,7 @@ Rename %2 to %3 anyway?</source>
         <translation>Versijos valdymo gedimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Nerasta pastatymo</translation>
     </message>
@@ -20863,7 +24039,12 @@ Rename %2 to %3 anyway?</source>
         <translation>Importuoti</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (importuotas)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - laikinas</translation>
     </message>
@@ -20873,12 +24054,27 @@ Rename %2 to %3 anyway?</source>
         <translation>Importuotas rinkinys</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Nepavyko įkelti nustatymų iš „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Tai katalogas, bet turi būti failas.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Tai failas, bet turi būti katalogas.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Be pavadinimo</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Nepavyko atkurti projekto failų</translation>
     </message>
@@ -20898,24 +24094,24 @@ Rename %2 to %3 anyway?</source>
         <translation>Pašalinkite projektus iš sesijos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Šiam projektui neįgalinta jokių rinkinių. Įgalinkite rinkinius „projektų“ režime.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Pervardyti daugiau failų?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Ar norėtumėte pervardyti ir šiuos failus?
  %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Pasirinkite Drop veiksmą</translation>
     </message>
@@ -20997,17 +24193,22 @@ What should %1 do now?</source>
         <translation>Nesėkmės atnaujinimo projektas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt; ĮSPĖJIMAS: &lt;/b&gt; Šis failas sugeneruojamas.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Įspėjimas:&lt;/b&gt; šis failas yra kūrimo kataloge.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt; ĮSPĖJIMAS: &lt;/b&gt; Šis failas yra už projekto katalogo ribų.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Supaprastinti medį</translation>
     </message>
@@ -21052,7 +24253,7 @@ What should %1 do now?</source>
         <translation>Sinchronizuokite su redaktoriumi</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Filtro medis</translation>
     </message>
@@ -21067,7 +24268,7 @@ What should %1 do now?</source>
         <translation>Alt+x</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Atvira sesija #%1</translation>
     </message>
@@ -21089,23 +24290,23 @@ What should %1 do now?</source>
         <translation type="vanished">Ctrl+pamaina+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Atidarykite %1 &quot; %2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>Atidarykite%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sesija</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (paskutinė sesija)</translation>
     </message>
@@ -21115,39 +24316,39 @@ What should %1 do now?</source>
         <translation>%1 (dabartinė sesija)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Pervardyti</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>projektas</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Pašalinkite projektą iš naujausių projektų</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Išvalyti naujausią projekto sąrašą</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Sesijos</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Naudokite įprastas išraiškas</translation>
     </message>
@@ -21162,7 +24363,7 @@ What should %1 do now?</source>
         <translation>Rodyti neatitinkančias linijas</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Projektas buvo sukonfigūruotas rinkiniams, kurių nebėra. Norėdami atkurti projekto nustatymus, kontekstiniame meniu pasirinkite vieną iš šių parinkčių:</translation>
     </message>
@@ -21183,7 +24384,7 @@ What should %1 do now?</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Sukurkite naują rinkinį</translation>
     </message>
@@ -21203,23 +24404,28 @@ What should %1 do now?</source>
         <translation>Pašalinkite visus išnykusius taikinius</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Spustelėkite, kad įjungtumėte tikslą, spustelėkite dar kartą, kad jis taptų aktyvus</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Dingo taikiniai</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Projekto nustatymai</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Importuokite esamą statybą ...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Projekto parinkėjas</translation>
     </message>
@@ -21229,44 +24435,44 @@ What should %1 do now?</source>
         <translation>Aktyvus projektas</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Tvarkykite rinkinius ...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Sukurkite sistemos išvestį</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>Importo katalogas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>Failai netiesiogiai pridedami prie projektų:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Non ne&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Netiesiogiai pridėti&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>Pridėti prie ir &amp;versijos valdymo:</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Pridėkite kaip paprojektą prie projekto:</translation>
     </message>
@@ -21276,17 +24482,17 @@ What should %1 do now?</source>
         <translation>&amp;Pridėti prie ir projekto:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>Versijos valdymo sistemos saugyklos nepavyko sukurti „%1“.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Nepavyko pridėti „%1“ prie versijos valdymo sistemos.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>Failai, kuriuos reikia pridėti:</translation>
     </message>
@@ -21296,7 +24502,7 @@ What should %1 do now?</source>
         <translation>Failai, kuriuos reikia pridėti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Pašalinti</translation>
@@ -21307,40 +24513,60 @@ What should %1 do now?</source>
         <translation>Pašalinkite užduočių sąrašą.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Paleiskite nustatymus</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Kintamieji bėgimo aplinkoje.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Vykdymo konfigūracijos darbo katalogas.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>Naudoti &lt;a href=&quot;dummy&quot;&gt;visuotinius nustatymus&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Naudoti visuotinius nustatymus</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Naudoti visuotinius nustatymus</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Naudoti pritaikytus nustatymus</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Vykdymo konfigūracijos pavadinimas.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>Vykdymo konfigūracijos vykdomoji galimybė.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Nėra aktyvios statybos sistemos</translation>
+        <translation type="vanished">Nėra aktyvios statybos sistemos</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>Paleiskite %{įrenginys: vardas}</translation>
     </message>
     <message>
@@ -21350,12 +24576,12 @@ What should %1 do now?</source>
         <translation>%1 (ON %{įrenginys: vardas})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>Terminalas</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Paleisti terminale</translation>
     </message>
@@ -21365,33 +24591,33 @@ What should %1 do now?</source>
         <translation>Darbo katalogas</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Pasirinkite darbo katalogą</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Iš naujo nustatykite iki numatytojo</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Argumentai</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Komandos eilutės argumentai:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Perjunkite kelių eilučių režimą.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Vykdomas</translation>
     </message>
@@ -21402,12 +24628,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Vykdoma:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Pakaitinis vykdomas įrenginyje:</translation>
     </message>
@@ -21417,7 +24643,7 @@ What should %1 do now?</source>
         <translation>Vietoj to naudokite šią komandą</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Pridėkite „Build Library“ paieškos kelią į „Dyld_library_Path“ ir „Dyld_framework_path“</translation>
     </message>
@@ -21432,7 +24658,17 @@ What should %1 do now?</source>
         <translation>Pridėkite „Build Library“ paieškos kelią į LD_LIBRARY_PATH</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Ekranui naudoti Qt VNC platformą</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>Nustato QT_QPA_PLATFORM=vnc, kuris „Qt“ programos sąsają nukreipia į integruotą VNC serverį. Prie programos sąsajos prisijunkite VNC klientu. Išsamiau žr. programos išvestyje.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Naudokite rėmų derinimo versiją (dyld_image_suffix = _debug)</translation>
     </message>
@@ -21442,7 +24678,32 @@ What should %1 do now?</source>
         <translation>Vykdykite kaip pagrindinį vartotoją</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Vykdyti kaip naudotojas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Vykdyti kaip naudotojas:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>šaknis</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Įjungti žurnalo kategorijų filtravimą</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Įjungia žurnalo kategorijų (QLoggingCategory) filtravimą programos išvestyje. Reikia Qt 6.11 ar naujesnės versijos.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Emuliatorius</translation>
     </message>
@@ -21452,22 +24713,39 @@ What should %1 do now?</source>
         <translation>Paleidimo priemonė:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>Naudoti X11 peradresavimą:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>X11 persiuntimas:</translation>
+        <translation type="vanished">X11 persiuntimas:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Pirmyn į vietinį ekraną</translation>
+        <translation type="vanished">Pirmyn į vietinį ekraną</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Netikėta vykdymo kontrolės būsena %1, kai darbuotojas %2 pradėjo.</translation>
+        <translation type="vanished">Netikėta vykdymo kontrolės būsena %1, kai darbuotojas %2 pradėjo.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Nėra recepto kūrėjo.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Nepavyksta naudoti prievadų rinkiklio. Įrenginys nenustatytas.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Laisvų prievadų nerasta.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; vis dar vykdoma.&lt;center/&gt;&lt;center&gt;Priverstinai uždaryti?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -21487,108 +24765,114 @@ What should %1 do now?</source>
         <translation>&amp;Ir toliau bėgi</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>Procesas priverstinai stabdomas...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Negalima nuskaityti derinimo išvesties.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>Prašoma sustabdyti procesą...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>Procesas netikėtai nebaigtas.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Dingo ryšys?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Vartotojas paprašė sustoti. Išjungimas ...</translation>
+        <translation type="vanished">Vartotojas paprašė sustoti. Išjungimas ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Nuotolinis procesas nebuvo baigtas laiku. Pamiršta ryšys?</translation>
+        <translation type="vanished">Nuotolinis procesas nebuvo baigtas laiku. Pamiršta ryšys?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Negalima paleisti: neduodama komanda.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1 išėjo su kodu %2</translation>
+        <translation type="vanished">%1 išėjo su kodu %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 sudužo.</translation>
+        <translation type="vanished">%1 sudužo.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Procesas buvo baigtas stipriai.</translation>
+        <translation type="vanished">Procesas buvo baigtas stipriai.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Pradedant %1 ...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Aplinka:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Nurodyta jokių vykdomųjų asmenų.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Procesas nepavyko pradėti.</translation>
+        <translation type="vanished">Procesas nepavyko pradėti.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>Įvyko nežinoma proceso klaida.</translation>
+        <translation type="vanished">Įvyko nežinoma proceso klaida.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Trūksta arba iškviestos programos „%1“, arba jums gali būti nepakankami leidimai, kad galėtumėte iškviesti programą.</translation>
+        <translation type="vanished">Trūksta arba iškviestos programos „%1“, arba jums gali būti nepakankami leidimai, kad galėtumėte iškviesti programą.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Procesas sudužo.</translation>
+        <translation type="vanished">Procesas sudužo.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Klaida įvyko bandant rašyti į procesą. Pvz., Procesas gali nevykdyti, arba jis galėjo uždaryti savo įvesties kanalą.</translation>
+        <translation type="vanished">Klaida įvyko bandant rašyti į procesą. Pvz., Procesas gali nevykdyti, arba jis galėjo uždaryti savo įvesties kanalą.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Klaida įvyko bandant perskaityti iš proceso. Pvz., Procesas gali nevykdyti.</translation>
+        <translation type="vanished">Klaida įvyko bandant perskaityti iš proceso. Pvz., Procesas gali nevykdyti.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Pašalinkite visus</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Diegimas</translation>
+        <translation type="vanished">Diegimas</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Metodas:</translation>
+        <translation type="vanished">Metodas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Vykdykite konfigūraciją:</translation>
+        <translation type="vanished">Vykdykite konfigūraciją:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Pašalinti paleidimo konfigūraciją?</translation>
     </message>
@@ -21598,7 +24882,7 @@ What should %1 do now?</source>
         <translation>Ar tikrai norite ištrinti paleidimo konfigūraciją &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Pašalinti paleidimo konfigūracijas?</translation>
     </message>
@@ -21608,17 +24892,37 @@ What should %1 do now?</source>
         <translation>Ar tikrai norite ištrinti visas paleisti konfigūracijas?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Naujas RUN konfigūracijos pavadinimas &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Atšaukti „Build &amp;&amp;“ pašalinkite diegimo konfigūraciją</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Klonuoti iš vykdymo konfigūracijos</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Kitų paleidimo konfigūracijų nėra.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Diegimo nustatymai</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Aktyvi diegimo konfigūracija:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Pašalinti diegti konfigūraciją %1?</translation>
     </message>
@@ -21643,12 +24947,27 @@ What should %1 do now?</source>
         <translation>Ar tikrai norite ištrinti diegimo konfigūraciją &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Naujas pavadinimas diegti konfigūraciją &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Pašalinti keletą...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Klonuoti į šią...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Aktyvi vykdymo konfigūracija:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Šaltinio katalogas:</translation>
     </message>
@@ -21700,12 +25019,12 @@ These files are preserved.</source>
         <translation>Redaguoti failus</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Pridėkite esamą katalogą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Parodykite redaktoriuje</translation>
     </message>
@@ -21715,12 +25034,14 @@ These files are preserved.</source>
         <translation>Parodykite užduoties vietą redaktoriuje.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Failai</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Importuoti esamą projektą</translation>
     </message>
@@ -21730,12 +25051,13 @@ These files are preserved.</source>
         <translation>Projekto pavadinimas ir vieta</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Projekto pavadinimas:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Failo pasirinkimas</translation>
     </message>
@@ -21750,68 +25072,63 @@ These files are preserved.</source>
         <translation>Importuoja esamus projektus, kurie nenaudoja „QMake“, „Cmake“, „QBS“, „Meson“ ar „AutoTools“. &lt;p&gt; Tai sukuria projekto failą, leidžiantį naudoti %1 kaip kodų redaktorių ir kaip paleidimo priemonę derinimo ir analizės įrankiams. Jei norite sukurti projektą, gali tekti redaguoti sugeneruotą projekto failą.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Nežinoma statybos sistema „%1“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Tiksliniai nustatymai</translation>
+        <translation type="vanished">Tiksliniai nustatymai</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Šaltinio katalogas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Sukurkite sistemą</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Dabartinio projekto pavadinimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Konfigūruokite projektą</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Parodykite visus rinkinius</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Paslėpti neaktyvius rinkinius</translation>
+        <translation type="vanished">Paslėpti neaktyvius rinkinius</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>Šiame projekte nėra apibrėžto jokio rinkinio.</translation>
+        <translation type="vanished">Šiame projekte nėra apibrėžto jokio rinkinio.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Konfigūruokite projektą</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Rinkinys netinkamas projektui</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Spustelėkite, jei norite suaktyvinti</translation>
+        <translation type="vanished">Spustelėkite, jei norite suaktyvinti</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>Įgalinkite projekto „%1“ rinkinį</translation>
     </message>
@@ -21856,12 +25173,11 @@ These files are preserved.</source>
         <translation>Kopijuokite veiksmus iš kito rinkinio ...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Įgalinti rinkinį</translation>
+        <translation type="vanished">Įgalinti rinkinį</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Nerasta tinkamų rinkinių.</translation>
     </message>
@@ -21881,18 +25197,23 @@ These files are preserved.</source>
         <translation>Įveskite rinkinius pagal pavadinimą ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Slėpti netinkamus rinkinius</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Pasirinkite savo projekto rinkinius</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Šie rinkiniai gali būti naudojami projektui &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt; Klaida: &lt;/b&gt;</translation>
@@ -21904,12 +25225,12 @@ These files are preserved.</source>
         <translation>&lt;b&gt; ĮSPĖJIMAS: &lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 reikia sukurti kompiliatorių. Kompiliatoriaus sukonfigūruokite rinkinio parinktyse.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Klaida:</translation>
     </message>
@@ -21919,7 +25240,7 @@ These files are preserved.</source>
         <translation>Įspėjimas:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Negalima atidaryti užduoties failo %1: %2</translation>
     </message>
@@ -21944,7 +25265,7 @@ These files are preserved.</source>
         <translation>Nustokite stebėti užduoties failus.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>„TaskHub“ klaida</translation>
     </message>
@@ -21954,42 +25275,46 @@ These files are preserved.</source>
         <translation>„TaskHub“ įspėjimas</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Sukurkite problemą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Klausimai</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Rodyti įspėjimus</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Kurti problemas iš išorinio kūrimo išvesties...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Filtruoti pagal kategorijas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;noBr&gt; &lt;b&gt; abi: &lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>Ne atnaujinti</translation>
+        <translation type="vanished">Ne atnaujinti</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Ši įrankių grandinė negalioja.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>„Toolchain“ automatinio aptikimo parametrai</translation>
     </message>
@@ -22008,43 +25333,59 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
  Įgalinkite tai, jei planuojate sukurti 32 bitų x86 dvejetainius failus nenaudodami tam skirto kryžminio kompiliatoriaus.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Tipas</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Kalba</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Iš naujo nustatyti</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Automatinio aptikimo nustatymai ...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Aptiktų kopijų kompiliatoriai</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Ne visi kompiliatoriai nustatyti teisingai.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Šis kompiliatorius jau buvo sukonfigūruotas: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; jis vėl nebuvo sukonfigūruotas.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Šie kompiliatoriai jau buvo sukonfigūruoti: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; Jie nebuvo sukonfigūruoti iš naujo.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Kompiliatoriai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Annotate</translation>
     </message>
@@ -22060,6 +25401,9 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>Atšaukti</translation>
     </message>
@@ -22069,12 +25413,26 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Laukia, kol bus sustos paraiškos.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Šią konfigūraciją galite redaguoti .qtcreator/projekto.json failo viduje.</translation>
+        <translation type="vanished">Šią konfigūraciją galite redaguoti .qtcreator/projekto.json failo viduje.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Klonuokite konfigūraciją, kad ją pakeistumėte. Arba pakeiskite failą .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Darbo srities tvarkytuvė</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>%1 kopija</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Išskyrimas iš projekto</translation>
     </message>
@@ -22084,23 +25442,294 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>„Rescan Workspace“</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>Parašo pakeitimas</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>„XcodeBuild“ nepavyko.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Kopijuoti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1, kelias „%2“</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>&amp;Kompiliatoriaus kelias</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>%1 kompiliatoriaus kelias</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Pateikti rankiniu būdu</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Nepavyko nukopijuoti projekto naudotojo nustatymų iš „%1“ į naują numatytąją vietą „%2“: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>Nepavyko atidaryti „%1“ rašymui: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>„Windows“ konfigūracija</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Visi šio puslapio pakeitimai įsigalioja nedelsiant.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>Pasirinkite NuGet ir „Windows App SDK“ atsisiuntimo kelią.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>Pasirinkti atsisiuntimo kelią</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>Pasirinkite NuGet kelią.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>Pasirinkti nuget.exe failą</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>Atsisiųsti NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>Automatiškai atsisiųsti NuGet.
+
+NuGet reikalingas Windows App SDK atsisiuntimui.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Pasirinkite „Windows App SDK“ kelią.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Atsisiųsti Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Automatiškai atsisiųsti Windows App SDK naudojant NuGet.
+
+Jei automatinis atsisiuntimas nepavyksta, Qt Creator pasiūlo atidaryti atsisiuntimo URL
+sistemos naršyklėje, kad atsisiųstumėte rankiniu būdu.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>Atsisiuntimo kelias egzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>NuGet kelias egzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>„Windows App SDK“ kelias egzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>„Windows App SDK“ nustatymai tinkami.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>„Windows App SDK“ nustatymuose yra klaidų.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Pasirinkti „Windows App SDK“ kelią</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>Atsisiuntimo kelias</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>Atsisiuntimo vieta:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>NuGet vieta:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>„Windows App SDK“ nustatymai</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>„Windows App SDK“ vieta:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>NuGet atsisiuntimas nepavyko.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Atidaryti NuGet URL rankiniam atsisiuntimui?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>Atidaryti atsisiuntimo URL</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>Atsisiunčiama</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>Atsisiunčiamas NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>SDK įrankių atsisiuntimo URL tuščias.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>Įvyko SSL klaidų, atsisiuntimas nutrauktas.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>Nepavyko atsisiųsti NuGet iš URL %1: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>Atsisiuntimas iš %1 buvo nukreiptas kitur.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>Pasirinktas NuGet atsisiuntimo kelias (%1) jau egzistuoja.
+Pasirinkite kitą kelią.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>Atsisiuntimo kelias nesukonfigūruotas.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Atsisiunčiamas Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>„Windows App SDK“ jau sukonfigūruotas.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Atsisiunčiamas Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>„Windows App SDK“ atsisiuntimas nepavyko.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Atidaryti „Windows App SDK“ URL rankiniam atsisiuntimui?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>„Windows App SDK“</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Atnaujinimo reikalavimai</translation>
     </message>
@@ -22131,22 +25760,25 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Įdiekite paketus</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>Nepavyko įdiegti „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Diegimas „%1“ buvo atšauktas per „TimeOut“.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Vartotojas panaikino „%1“ diegimą.</translation>
+        <translation type="vanished">Vartotojas panaikino „%1“ diegimą.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Įdiegti „ %1“ nepavyko su išėjimo kodu %2.</translation>
+        <translation type="vanished">Įdiegti „ %1“ nepavyko su išėjimo kodu %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>Pakartoti</translation>
@@ -22182,7 +25814,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Atviras interaktyvus „Python“. Arba nieko importuoti, importuoti dabartinį failą arba importuoti viską (*) iš dabartinio failo.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Jokio Python pasirinko</translation>
     </message>
@@ -22197,14 +25829,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Tvarkykite „Python“ vertėjus</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Nėra</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Python rengyklė</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Nėra</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
@@ -22214,9 +25850,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Vertėjas, naudojamas „Python“ projektams.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Nėra „Python“ sąrankos.</translation>
+        <translation type="vanished">Nėra „Python“ sąrankos.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Python nenustatytas.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22229,7 +25869,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python „%1“ nėra vykdomas.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>„Python“%1 “nėra tinkamo PIP. PIP reikalingas norint įdiegti „Python“ paketus iš „Python“ paketo rodyklės, tokios kaip „Pyside“ ir „Python“ kalbos serveris. Norėdami naudoti bet kurį iš šių funkcijų, įsitikinkite, kad PIP yra įdiegtas tam pythonui.</translation>
     </message>
@@ -22249,12 +25889,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Kelias į Python vertėją</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>„Python“ kalbos serveris (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Įdiekite „Python“ kalbos serverį (PYLS) %1 ( %2). Kalbos serveris pateikia specifinį „Python“ užpildymą ir anotaciją.</translation>
     </message>
@@ -22269,32 +25909,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Atnaujinkite „Python“ kalbos serverį (PYLS) %1 ( %2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Visada atnaujinkite</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Atnaujinimas</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Niekada</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Leidiniai, analizuojami iš „Python Runtime“ išvesties.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>Jokio „Python“ vertėjo rinkinio rinkinyje „%1“.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 Spustelėkite čia, kad įdiegtumėte %1 (reikia pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Buferinė išvestis</translation>
     </message>
@@ -22309,8 +25959,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Scenarijus:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -22320,19 +25969,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Paleisti %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Vykdomas</translation>
+        <translation type="vanished">Vykdomas</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Vykdomasis yra tuščias.</translation>
     </message>
@@ -22347,56 +25994,109 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>„%1“ nėra vykdomas failas.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Pridėti</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Ištrinti</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Padaryti numatytąjį</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp;Generuoti rinkinį</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Išvalykite</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Pašalinkite visus „Python“ vertėjus neturint galiojančio vykdomojo programos.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Venv kūrimas nepavyko:
+%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Venv kūrimas nenormaliai nutrauktas:
+%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Nepavyko pradėti Venv kūrimo:
+%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Venv kūrimas atšauktas.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>Rasta „%1“ (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Pašalinamas Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Vertėjai</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Papildiniai:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Vykdomasis failas:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Naudokite „Python“ kalbos serverį</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>Norėdami rasti išsamų galimų parinkčių sąrašą, pasitarkite su [Python LSP serverio konfigūracijos dokumentacija] (%1).</translation>
     </message>
@@ -22406,12 +26106,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Išplėstinė</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Kalbos serverio konfigūracija</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>„Python“ vertėjas:</translation>
     </message>
@@ -22431,46 +26131,67 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Sukurti</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Sukurkite „Python Venv“</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Ieškote „Python“ dvejetų ...</translation>
+        <translation type="vanished">Ieškote „Python“ dvejetų ...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>Rasta „%1“ (%2)</translation>
+        <translation type="vanished">Rasta „%1“ (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Python pašalinimas</translation>
+        <translation type="vanished">Python pašalinimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>„Python Wizard“ puslapio „Duomenys“ tikisi žemėlapio su „elementais“, kuriuose yra objektų sąrašas.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>„Python Wizard“ puslapio duomenų elemente tikimasi lauko „Trey“, kuriame yra tos „Python“ versijos UI matoma eilutė, ir lauką „Vertė“, kuriame yra objektas su „pysideversion“ lauku, naudojamu importo teiginiams „Python“ failuose.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>„PYSIDE“ versija:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Analizės klaida: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Tipo klaida: „%1“ turi būti „%2“, o ne „%3“.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Trūksta mazgo klaida: lentelėje „%1“ turi būti mazgas „%2“.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>Mazgas „%1“ tuščias.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Failas „%1“ neegzistuoja.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>XML klaida eilutėje %1, stulpelis %2: %3</translation>
@@ -22484,7 +26205,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Perkelti skirtuką į kairę</translation>
     </message>
@@ -22502,20 +26223,402 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Jungiamasi...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>„%1“ nėra vykdomasis failas.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Nepavyko paleisti apvalkalo: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Apvalkalo procesas baigėsi kodu %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>Procesas baigėsi kodu: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Mastelis: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Kopijuoti</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Įklijuoti</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Išvalyti apvalkalą</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Pažymėti viską</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Aiškus pasirinkimas</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>Perkelti žymeklį per žodį į kairę</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>Perkelti žymeklį per žodį į dešinę</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Ištrinti žodį kairėje</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Ištrinti eilutę kairėje</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Uždaryti skirtuką</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Uždaryti visus skirtukus</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Uždaryti kitus skirtukus</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Apvalkalas</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Konfigūruoti...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Įterpti makrokomandos kintamąjį</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Naujas apvalkalas</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Sukurti naują apvalkalą.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Uždaryti apvalkalą</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Uždaryti dabartinį apvalkalą.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Kitas apvalkalas</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Ankstesnis apvalkalas</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Įrenginiai</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Dabartinė %{%1} reikšmė: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>„PowerShell 7“</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>„Windows PowerShell“</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Komandų eilutė</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>Spalva, naudojama %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Nepavyko atidaryti failo.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>JSON analizės klaida: „%1“, poslinkis: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Spalvų nerasta.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Neteisingas spalvos formatas.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Nežinomas spalvų schemos formatas.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Naudoti vidinį terminalą</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>Naudoja vidinį terminalą, kai įjungta „Vykdyti terminale“, ir komandai „Čia atidaryti terminalą“.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Šeima:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Terminale naudojamas šrifto šeima.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Dydis:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Terminale naudojamas šrifto dydis (taškais).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Mastelis:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Keičia šrifto dydį. Ctrl+ratukas keičia mastelį tik vienam apvalkalui šio seanso metu.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Eilučių tarpai:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Kiekvienos eilutės aukštis, išreikštas šrifto aukščio procentais.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Leisti mirksintį žymeklį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>Leisti žymekliui mirksėti.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Apvalkalo kelias:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Paleidžiamas apvalkalo vykdomasis failas.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Apvalkalo argumentai:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Argumentai, perduodami apvalkalui.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Siųsti terminalui klavišą „Escape“</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>Paspaudus klavišą „Escape“, jis siunčiamas terminalui, užuot uždaręs terminalą.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>Vietoj %1 terminalui siunčia Esc.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Paspauskite %1, kad terminalui nusiųstumėte Esc.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Blokuoti sparčiuosius klavišus terminale</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Neleidžia „Qt Creator“ sparčiesiems klavišams trukdyti terminalui.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>%1 spartieji klavišai blokuojami, kai fokusas yra terminale.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>%1 spartieji klavišai turi pirmenybę.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Garsinis signalas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Gavus skambučio simbolį, terminalas pypteli.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Įjungti pelės sekimą</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Įjungia pelės sekimą terminale.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Įjungti tiesioginį perskirstymą (eksperimentinis)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Keičiant terminalo dydį, tekstas lūžta ir išdėstomas iš naujo. Atminkite, kad tai tinkamai veikia ne su visais apvalkalais ir raginimais.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>Bendra</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Šriftas</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Numatytasis apvalkalas</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>Apvalkalas, kurį atidaro mygtukas +. Automatinis pasirenka geriausią įdiegtą ir seka įdiegtų pakeitimus.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Automatinis (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+67" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+35" />
         <source>Full</source>
         <translation>Pilnas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>First Letter</source>
         <translation>Pirmoji raidė</translation>
     </message>
@@ -22540,32 +26643,32 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Suaktyvinti užbaigimą:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>Skirtasis laikas ms:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Simbolių slenkstis:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>Automatiškai užbaigti bendrą &amp;priedėlį</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Įterpia bendrą galimų užbaigimo elementų priešdėlį.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Automatiškai skaidomos eilutės</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22574,57 +26677,57 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 Be to, „Shift“ + „Enter“ įterpia pabėgimo simbolį žymeklio vietoje ir perkelia likusią eilutės dalį į kitą eilutę.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Įdėkite atidarymo arba uždarymo skliaustus</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Įterpti baigiamąją citatą</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Erdvinio teksto pasirinkimas su skliaustais</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Kai įvedate atitinkantį skliaustą ir yra teksto pasirinkimas, užuot pašalinę pasirinkimą, apjuoskite jį atitinkamais simboliais.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>Įterpti &amp;tarpą po funkcijos pavadinimo</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Aplink teksto pasirinkimas su kabutėmis</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Kai įvedate atitinkančią citatą ir yra teksto pasirinkimas, užuot pašalinę pasirinkimą, apjuoskite jį atitinkamais simboliais.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Animuoti automatiškai įterptą tekstą</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Rodyti vaizdinę užuominą, kai, pavyzdžiui, redaktorius automatiškai įterpia skliaustelį arba citatą.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Pažymėkite automatiškai įterptą tekstą</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Praleisti automatiškai įterptą simbolį įvedant</translation>
     </message>
@@ -22634,17 +26737,17 @@ Be to, „Shift“ + „Enter“ įterpia pabėgimo simbolį žymeklio vietoje i
         <translation>Praleisti automatiškai įterptą simbolį, jei pabaigus įvedėte rankiniu būdu arba paspaudus tabuliuką.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Pašalinkite automatiškai įterptą tekstą naikinimo klavišu</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Pašalinkite automatiškai įterptą simbolį, jei paleidiklis ištrinamas naikinimo klavišu po užbaigimo.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Perrašyti baigiamuosius skyrybos ženklus</translation>
     </message>
@@ -22654,12 +26757,12 @@ Be to, „Shift“ + „Enter“ įterpia pabėgimo simbolį žymeklio vietoje i
         <translation>Automatiškai perrašyti uždaromuosius skliaustus ir kabutes.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>&amp;Automatiškai įterpkite atitinkamus simbolius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+103" />
         <source>Enable Doxygen blocks</source>
         <translation>Įjungti „Doxygen“ blokus</translation>
     </message>
@@ -22707,25 +26810,25 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">&amp;Automatiškai įterpti atitinkančius simbolius</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Dokumentacijos komentarai</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+96" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+48" />
         <source>Completion</source>
         <translation>Užbaigimas</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+126" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Klaida</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Netinkamas aktyviklis. Tinkamame aktyviklyje gali būti tik raidžių, skaičių arba apatinių brūkšnių, kai pirmasis simbolis ribojamas iki raidės arba apatinio brūkšnio.</translation>
     </message>
@@ -22745,7 +26848,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Grąžinant fragmentą įvyko klaida.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Grįžti įmontuotas</translation>
     </message>
@@ -22755,17 +26858,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Grupė:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Papildyti</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Atkurti pašalintus integruotus elementus</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Atstatyti viską</translation>
     </message>
@@ -22780,7 +26883,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Nepasirinktas joks fragmentas.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Fragmentai</translation>
     </message>
@@ -22789,9 +26892,13 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">Eilutė: 9999, pl.: 999</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>Žymekliai: %2</translation>
+        <translation type="vanished">Žymekliai: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+202" />
+        <source>Cursors: %1</source>
+        <translation>Žymekliai: %1</translation>
     </message>
     <message>
         <location line="+8" />
@@ -22825,6 +26932,11 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Pasirinktos eilutės:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Pozicija dokumente:</translation>
     </message>
@@ -22834,7 +26946,50 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Inkaras:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Tarpai</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>Skirtukai</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Įtraukų nustatymai: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Dokumento nustatymai</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Skirtukų nustatymai</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Įtraukos dydis</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Skirtuko dydis</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Visuotiniai nustatymai...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>„Unix“ linijų galūnės (LF)</translation>
     </message>
@@ -22844,17 +26999,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>„Windows“ eilutės galūnės (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Kitos anotacijos</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>Spausdinti dokumentą</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Failo klaida</translation>
     </message>
@@ -22869,7 +27024,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Tekstas per didelis, kad būtų rodomas (%1 MB).</translation>
     </message>
@@ -22884,32 +27039,84 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Pasirinkite Kodavimas</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Fragmento analizės klaida</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>Šio failo paryškinimo apibrėžimas nerastas. Ar norėtumėte atsisiųsti papildomų paryškinimo apibrėžimo failų?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>Šiam failui buvo rastas daugiau nei vienas paryškinimo apibrėžimas. Kuris turėtų būti naudojamas norint paryškinti šį failą?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Prisiminkite Mano pasirinkimą</translation>
     </message>
     <message>
-        <location line="+3822" />
+        <location line="+762" />
+        <source>Apply</source>
+        <translation>Taikyti</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Taikyti dabartinį pasiūlymą.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Taikyti vieną žodį</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Taikyti vieną dabartinio pasiūlymo žodį.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Taikyti eilutę</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Taikyti vieną dabartinio pasiūlymo eilutę.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-28" />
+        <source>Fold Recursively</source>
+        <translation>Suskleisti rekursyviai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Suskleisti viską</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Išskleisti rekursyviai</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Išskleisti viską</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Mastelio keitimas: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Ištrinkite UTF-8 BOM išsaugodami</translation>
     </message>
@@ -22919,27 +27126,27 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Įrašykite UTF-8 MK prie išsaugojimo</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Nepavyko rasti apibrėžimo.</translation>
     </message>
     <message>
-        <location line="-9882" />
+        <location line="-10575" />
         <source>Line: %1, Col: %2</source>
         <translation>Eilutė: %1, kolona: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+45" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Išvalyti tarpą</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>In entire &amp;document</source>
         <translation>Visame &amp;dokumente</translation>
     </message>
     <message>
-        <location line="-4" />
+        <location line="+15" />
         <source>Clean indentation</source>
         <translation>Švarus įdubimas</translation>
     </message>
@@ -22949,7 +27156,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>&amp;Užtikrinkite naują eilutę failo pabaigoje</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -23002,22 +27209,48 @@ Influences the indentation of continuation lines.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>Numatytasis &amp;įtraukos dydis:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Lygiuoti tęsiamąsias eilutes:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>Skirtukai ir įtrauka</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Kodo įtrauka sukonfigūruota &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; ir &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; nustatymuose.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Teksto rengyklės įtraukos nustatymas naudojamas tik nekodiniams failams. Norėdami sukonfigūruoti kodo failų įtrauką, žr. C++ ir Qt greito kodavimo stiliaus nustatymus.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158" />
+        <source>Auto detect</source>
+        <translation>Aptikti automatiškai</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1 bando aptikti įtraukų nustatymus pagal failo turinį. Jei aptikti nepavyksta, naudojami toliau nurodyti nustatymai.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Numatytoji tabuliacijos politika:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Tik erdvės</translation>
     </message>
@@ -23027,9 +27260,8 @@ Influences the indentation of continuation lines.
         <translation>Tik skirtukai</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Mišrus</translation>
+        <translation type="vanished">Mišrus</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23037,12 +27269,11 @@ Influences the indentation of continuation lines.
         <translation>&amp;Skirtuko dydis:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Įtraukos dydis:</translation>
+        <translation type="vanished">&amp;Įtraukos dydis:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Visai ne</translation>
     </message>
@@ -23057,44 +27288,41 @@ Influences the indentation of continuation lines.
         <translation>Su įprasta įtrauka</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Serijos terminalo skirtuko dydis:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Skirtukų politika:</translation>
+        <translation type="vanished">Skirtukų politika:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+24" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Įgalinti automatinį &amp;įtraukimą</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+4" />
         <source>Never</source>
         <translation>Niekada</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-236" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-148" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Visada</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>Pirmaujančioje baltojoje erdvėje</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Nė vienas</translation>
+        <translation type="vanished">Nė vienas</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Vadovaujasi ankstesnėmis įtraukomis</translation>
     </message>
@@ -23104,7 +27332,7 @@ Influences the indentation of continuation lines.
         <translation>Neįtraukos</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -23135,28 +27363,39 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
 </translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+22" />
         <source>Prefer single line comments</source>
         <translation>Pirmenybę teikite vienos eilutės komentarams</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-61" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Automatinis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-33" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Tab klavišas atlieka automatinį įtraukimą:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Nėra</translation>
+    </message>
+    <message>
+        <location line="+30" />
         <source>At Line Start</source>
         <translation>Iš eilės pradžios</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>Po WhiteSpace</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Nurodo, kur turėtų būti išdėstyti vienos eilutės komentarai.</translation>
     </message>
@@ -23176,12 +27415,12 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>%1: Komentaras pateikiamas po pirmaujančių tarpų.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Pageidaujamas komentaro pozicija:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+12" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Praleiskite tuščią tarpą failų tipams:</translation>
     </message>
@@ -23191,32 +27430,32 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Išvardytų failų šablonų neapkarpykite galinių tarpų.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Failų šablonų, kuriuose naudojami pakaitos simboliai, sąrašas, atskirtas kableliais arba kabliataškiais.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-18" />
         <source>Always writes a newline character at the end of the file.</source>
         <translation>Visada įrašo naujos eilutės simbolį failo pabaigoje.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-19" />
         <source>Removes trailing whitespace upon saving.</source>
         <translation>Išsaugojus pašalinamas galinis tarpas.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+25" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Koreguoja tarpą priekyje pagal skirtuko nustatymus.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-15" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Išvalo tarpus visame dokumente, o ne tik pakeistose dalyse.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Pridėti, jei kodavimas yra UTF-8</translation>
     </message>
@@ -23231,7 +27470,7 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Visada Ištrinti</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -23248,22 +27487,22 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
 &lt;p&gt;Šis nustatymas &lt;b&gt;neturi&lt;/b&gt; įtakos UTF-16 ir UTF-32 MK naudojimui.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Slėpti pelės žymeklį rašant</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+10" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>Į&amp;galinti slinkties ir mastelio keitimą ratuku</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Įgalinti įmontuotą kupranugarių dėklą &amp;navigaciją</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Įgalinti išmaniojo pasirinkimo keitimą</translation>
     </message>
@@ -23273,7 +27512,7 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Naudodami pasirinkimo blokavimo aukštyn / žemyn veiksmus dabar galėsite pasirinkti protingesnius.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Rodyti pagalbos patarimus naudojant sparčiuosius klavišus (Alt)</translation>
     </message>
@@ -23283,22 +27522,22 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Paspaudus Alt rodoma kontekstinė pagalba arba įvedama informacija kaip patarimai.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>Užvedus pelės žymeklį</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>Paspauskite Shift + pelės žymeklį</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>Rašymas</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Valymas taupant</translation>
     </message>
@@ -23308,108 +27547,111 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Valymo veiksmai, kurie automatiškai atliekami prieš pat išsaugant failą į diską.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Failų kodavimas</translation>
+        <translation type="vanished">Failų kodavimas</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>Pelė ir klaviatūra</translation>
+        <translation type="vanished">Pelė ir klaviatūra</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Backspace įtrauka:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Numatytoji koduotė:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>UTF-8 BOM:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Numatytoji eilučių pabaiga:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Rodyti pagalbos patarimus naudojant pelę:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Užvedus pelės žymeklį rodoma kontekstinė žinyno arba tipo informacija.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Rodo kontekstui jautrią žinyną arba įveskite informaciją paspaudę klavišą „Shift“ + pelės žymeklį.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+139" />
-        <location line="+201" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+232" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Ekranas</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-318" />
         <source>Display line &amp;numbers</source>
         <translation>Rodyti eilutes &amp;skaičius</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+49" />
         <source>Mark &amp;text changes</source>
         <translation>Pažymėti &amp;teksto pakeitimus</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>Automatiškai sulankstyti pirmą &amp;komentuoti</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>&amp;Rodyti ir sulankstyti žymeklius</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-17" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Įsivaizduokite tarpą</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="+21" />
         <source>Highlight current &amp;line</source>
         <translation>Pažymėkite esamą &amp;eiliją</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-25" />
         <source>Enable text &amp;wrapping</source>
         <translation>Į&amp;galinti teksto įvyniojimą</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Nustatykite &lt;a href=&quot;font zoom&quot;&gt;šrifto eilučių tarpus&lt;/a&gt; į 100 %, kad įgalintumėte teksto vyniojimo parinktį.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Rodyti dešinę &amp;paraštę stulpelyje:</translation>
+        <translation type="vanished">Rodyti dešinę &amp;paraštę stulpelyje:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Rodyti dešinę &amp;paraštę po stulpelio:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Tonuokite visą paraštės plotą</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Naudokite konteksto paraštę</translation>
     </message>
@@ -23419,62 +27661,77 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Jei įmanoma, naudokite kitą paraštę. Pavyzdžiui, ColumnLimit iš ClangFormat papildinio.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Redaktoriaus turinio plotis:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100 % reiškia, kad teksto turiniui rodyti naudojamas visas redaktoriaus lango plotis (numatytasis).&lt;br&gt;50 % reiškia, kad naudojama pusė redaktoriaus pločio.&lt;br&gt;Likę 50 % padalijami į kairę ir dešinę paraštes, turinį centruojant.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Animuoti atitinkančius skliaustus</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Slinkties juostoje pažymėkite paieškos rezultatus</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Animate navigation within file</source>
         <translation>Animuoti naršymą faile</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-78" />
         <source>Highlight &amp;blocks</source>
         <translation>Pažymėkite &amp;blokus</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+32" />
         <source>Center &amp;cursor on scroll</source>
         <translation>Centruokite &amp;žymeklį ant slinkties</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Vizualizuokite įtrauką</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Rodyti failo eilutės pabaigą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Rodyti failo kodavimą</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Visada atidarykite nuorodas kitame skiltyje</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Paryškinkite atitinkančius skliaustus</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-36" />
         <source>Shows tabs and spaces.</source>
         <translation>Rodomi skirtukai ir tarpai.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Rodyti tabuliacijos nustatymus</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Ir pabrėžti pasirinkimą</translation>
     </message>
@@ -23484,7 +27741,7 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Pridedamas spalvotas fonas ir žymeklis prie slinkties juostos į pasirinkto teksto atsiradimą.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>Šalia redaktoriaus turinio</translation>
     </message>
@@ -23499,12 +27756,17 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation>Sulygiuotas dešinėje pusėje</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>Tarp eilučių</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Įjungti minižemėlapį</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Eilutės anotacijos</translation>
     </message>
@@ -23513,27 +27775,27 @@ Nurodo, kaip atgalinis klavišas sąveikauja su įtrauka.
         <translation type="vanished">Eilučių anotacijos</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>Marža</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>Įvyniojimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-220" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-18" />
         <source>Enable &amp;mouse navigation</source>
         <translation>Įjungti &amp;pelės naršymą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+571" />
         <source>Copy Color Scheme</source>
         <translation>Kopijuoti spalvų schemą</translation>
     </message>
     <message>
-        <location line="-434" />
+        <location line="-458" />
         <location line="+6" />
         <source>%</source>
         <translation>%</translation>
@@ -23561,7 +27823,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Temos &quot;%1&quot; spalvų schema</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+27" />
         <source>Zoom:</source>
         <translation>Mastelio keitimas:</translation>
     </message>
@@ -23571,7 +27833,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Tarpai tarp eilučių:</translation>
     </message>
     <message>
-        <location line="+370" />
+        <location line="+383" />
         <location line="+92" />
         <source>Color scheme name:</source>
         <translation>Spalvų schemos pavadinimas:</translation>
@@ -23582,7 +27844,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>%1 (kopijuoti)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Ištrinti spalvų schemą</translation>
     </message>
@@ -23592,14 +27854,14 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Ar tikrai norite visam laikui ištrinti šią spalvų schemą?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Importuoti spalvų schemą</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Spalvų schema (*.xml);;Visi failai (*)</translation>
     </message>
@@ -23609,8 +27871,8 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Eksportuoti spalvų schemą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+41" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-233" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+38" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-238" />
         <source>Remove</source>
         <translation>Pašalinti</translation>
     </message>
@@ -23629,12 +27891,17 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation type="vanished">Dabartiniai nustatymai:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Pasirinkta konfigūracija tik skaitoma. Nukopijuokite konfigūraciją, kad galėtumėte ją redaguoti.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Pasirinktiniai nustatymai:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Kopijuoti kodo stilių</translation>
     </message>
@@ -23660,8 +27927,8 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-534" />
-        <location line="+460" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-557" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
@@ -23673,22 +27940,22 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Kodo stiliai (*.xml);;Visi failai (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Nepavyko importuoti kodo stiliaus iš „%1“.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Eksporto kodo stilius</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [proxy: %2]</translation>
     </message>
@@ -23703,7 +27970,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>%1 [pritaikomas]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+87" />
         <source>Color Scheme Changed</source>
         <translation>Pakeista spalvų schema</translation>
     </message>
@@ -23718,7 +27985,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Išmesti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Dabartinis failas</translation>
     </message>
@@ -23736,19 +28003,19 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Atkreipkite dėmesį, kad tai atlieka tik failų, kurie buvo išsaugoti diske, paiešką.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+191" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-526" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-549" />
+        <location line="+651" />
         <source>Font</source>
         <translation>Šriftas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-625" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-637" />
         <source>Family:</source>
         <translation>Šeima:</translation>
     </message>
@@ -23831,7 +28098,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Spalva:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Nėra pabraukimo</translation>
     </message>
@@ -23866,18 +28133,18 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Brūkšnys-taškas-taškas pabraukimas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-67" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-78" />
         <source>Antialias</source>
         <translation>Antialias</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-254" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-265" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+30" />
         <source>Copy...</source>
         <translation>Kopijuoti...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Dabartinio dokumento eilutė</translation>
     </message>
@@ -23892,7 +28159,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>&lt;eilutė&gt;:&lt;stulpelis&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>%1 eilutė, %2 stulpelis</translation>
     </message>
@@ -23907,7 +28174,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Stulpelis %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-239" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-208" />
         <source>Trigger Completion</source>
         <translation>Trigerio užbaigimas</translation>
     </message>
@@ -23947,13 +28214,13 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Rodyti kontekstinį meniu</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-216" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Tekstas</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Pasirinktas tekstas dabartiniame dokumente.</translation>
     </message>
@@ -24056,7 +28323,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>&amp;Pervynioti pastraipą</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3765" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4031" />
         <source>Go to line number...</source>
         <translation>Eiti į eilutės numerį...</translation>
     </message>
@@ -24336,7 +28603,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Rūšiuoti eilutės</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+53" />
         <source>Go to Previous Word (Camel Case)</source>
         <translation>Eikite į ankstesnį žodį (kupranugario dėklas)</translation>
     </message>
@@ -24360,7 +28627,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation type="vanished">&amp;Rūšiuoti pasirinktas eilutes</translation>
     </message>
     <message>
-        <location line="-80" />
+        <location line="-74" />
         <source>Meta+Shift+S</source>
         <translation>Meta + Shift + S</translation>
     </message>
@@ -24370,33 +28637,33 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Alt + Shift + S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3389" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Sulenkite</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+4" />
         <source>Unfold</source>
         <translation>Išskleiskite</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+10" />
         <source>Toggle &amp;Fold All</source>
         <translation>Perjungti &amp;Sulenkti viską</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Reset Font Size</source>
-        <translation>Iš naujo nustatyti šrifto dydį</translation>
+        <translation type="vanished">Iš naujo nustatyti šrifto dydį</translation>
     </message>
     <message>
         <source>Meta+0</source>
         <translation type="vanished">Meta+0</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl + 0</translation>
+        <translation type="vanished">Ctrl + 0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24510,7 +28777,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation type="vanished">Eikite į Next Word Camel Case with Selection</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-66" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
@@ -24520,27 +28787,23 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Increase Font Size</source>
-        <translation>Padidinkite šrifto dydį</translation>
+        <translation type="vanished">Padidinkite šrifto dydį</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Sumažinti šrifto dydį</translation>
+        <translation type="vanished">Sumažinti šrifto dydį</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-167" />
         <source>Ctrl+{</source>
         <translation>Ctrl+{</translation>
     </message>
@@ -24590,7 +28853,7 @@ Jei vertė mažesnė nei 100 %, grafika gali sutapti ir netinkamai suderinta.</t
         <translation>Ctrl + Alt + žemyn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Tekstas</translation>
     </message>
@@ -25103,6 +29366,16 @@ Norėdami sukurti vartotojo apibrėžtus operatorius, naudokite Overloaded Opera
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Atributas</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Atributai.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>komentuoti</translation>
     </message>
@@ -25349,6 +29622,26 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>Pabraukite įspėjimo diagnostikos kontekstų spalvą.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Informacija</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Informacinių diagnostikos pranešimų pabraukimo spalva.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Informacinis kontekstas</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Informacinių diagnostikos pranešimų konteksto pabraukimo spalva.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Išvesties argumentas</translation>
@@ -25467,29 +29760,23 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>Pasaulinis</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+63" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+247" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+210" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+664" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-279" />
         <source>Text Editor</source>
         <translation>Teksto redaktorius</translation>
     </message>
     <message>
-        <location line="-3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-109" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+89" />
         <source>Behavior</source>
         <translation>Elgesys</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Ne spalvų schemos failas.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>kilęs iš QObject</translation>
@@ -25560,7 +29847,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation type="vanished">(tipo pavadinimas READ name WRITE setName NOTIFY namePakeistas)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>su taikiniais</translation>
@@ -25584,7 +29871,7 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>su taikiniu</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>„QuickTest“ bandymo atvejis</translation>
@@ -25638,12 +29925,12 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         <translation>pavyzdys</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Vidinis</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Ieškoma</translation>
     </message>
@@ -25666,27 +29953,33 @@ Nebus taikomas tarpams komentaruose ir eilutėse.</translation>
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Pakeitimo nutraukimas.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 iš %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Visi toliau nurodyti pakeitimai įsigalioja nedelsiant.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Redaguokite peržiūros turinį, kad pamatytumėte, kaip dabartiniai nustatymai taikomi priskirtiems kodo fragmentams. Peržiūros pakeitimai neturi įtakos dabartiniams nustatymams.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>„Windows“ (CRLF)</translation>
     </message>
@@ -25745,7 +30038,7 @@ Išskyrus: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>Nenaudojamas kintamasis</translation>
     </message>
@@ -25760,12 +30053,12 @@ Išskyrus: %3
         <translation type="vanished">Teksto redaktorius</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>Nepavyko nuskaityti failo &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>Nepavyko paskambinti %1 arba įvyko kita klaida. Formatuojant failą %2 baigėsi skirtasis laikas.</translation>
     </message>
@@ -25775,12 +30068,12 @@ Išskyrus: %3
         <translation type="vanished">Teksto redaktorius</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>Failed to format: %1.</source>
         <translation>Nepavyko suformatuoti: %1.</translation>
     </message>
     <message>
-        <location line="+175" />
+        <location line="+174" />
         <source>Error in text formatting: %1</source>
         <translation>Teksto formatavimo klaida: %1</translation>
     </message>
@@ -25800,28 +30093,27 @@ Išskyrus: %3
         <translation>Failas buvo pakeistas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Paryškinimo priemonės atnaujinimai: atlikta</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Highlighter atnaujinimai:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Paryškinimo priemonės atnaujinimai: prasideda</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paryškinimo apibrėžtis teikia &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; variklis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Paryškinimo apibrėžtis teikia &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; variklis.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-180" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3735" />
         <source>Download Definitions</source>
         <translation>Atsisiųsti apibrėžimus</translation>
     </message>
@@ -25831,7 +30123,7 @@ Išskyrus: %3
         <translation>Atsisiųskite trūkstamus ir atnaujinkite esamus sintaksės apibrėžimo failus.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Iš naujo įkelti apibrėžimus</translation>
     </message>
@@ -25841,7 +30133,7 @@ Išskyrus: %3
         <translation>Iš naujo įkelkite išoriškai pakeistus apibrėžimo failus.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Iš naujo nustatyti prisimintas apibrėžtis</translation>
     </message>
@@ -25851,27 +30143,40 @@ Išskyrus: %3
         <translation>Iš naujo nustatyti apibrėžimus, prisimintus failams, kurie gali būti susieti su daugiau nei vienu paryškinimo apibrėžimu.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>Sintaksės paryškinimo apibrėžimo failai</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Praleisti naujinių tikrinimą failams, atitinkantiems:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Praleisti sintaksės paryškinimą failams, atitinkantiems:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Paryškinimo apibrėžimus pateikia %1 variklis.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>Vartotojo paryškinimo apibrėžimo failai</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Nepaisomi failų šablonai:</translation>
+        <translation type="vanished">Nepaisomi failų šablonai:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>Atsisiuntimas baigtas</translation>
+        <translation type="vanished">Atsisiuntimas baigtas</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Bendras paryškintuvas</translation>
     </message>
@@ -25891,23 +30196,22 @@ Išskyrus: %3
         <translation>Filtro medis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
+        <location line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Rūšiuoti pagal abėcėlę</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+126" />
+        <location line="+125" />
         <source>Outline</source>
         <translation>Kontūras</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Refaktorizavimas negali būti taikomas.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Numatytas skyriklis po manglerio ID.</translation>
     </message>
@@ -25927,17 +30231,16 @@ Išskyrus: %3
         <translation>Nepavyko sukurti vartotojo fragmento katalogo %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Skirtumas nuo dabartinio failo</translation>
+        <translation type="vanished">Skirtumas nuo dabartinio failo</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Atidaromas failas</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>Rodyti eilutes %1 komentarus</translation>
     </message>
@@ -25958,9 +30261,9 @@ Išskyrus: %3
         <translation>Žymė</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Žymės</translation>
     </message>
@@ -25970,17 +30273,17 @@ Išskyrus: %3
         <translation>Suranda žymes. Filtruokite pagal failo pavadinimą, pagal žymės eilutę arba žymės užrašų tekstą.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Judėti aukštyn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Judėti žemyn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Redaguoti</translation>
     </message>
@@ -25995,7 +30298,7 @@ Išskyrus: %3
         <translation>Pašalinkite visus</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Pašalinkite visas žymes</translation>
     </message>
@@ -26006,14 +30309,14 @@ Išskyrus: %3
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Redaguoti žymę</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Perjunkite žymę</translation>
     </message>
@@ -26043,7 +30346,27 @@ Išskyrus: %3
         <translation>Kita žymė dokumente</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Rūšiuoti pagal failų pavadinimus</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Pastaba Tekstas:</translation>
     </message>
@@ -26053,12 +30376,17 @@ Išskyrus: %3
         <translation>Eilutės numeris:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>JSON redaktorius</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Markdown rengyklė</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Pabrėžimas</translation>
     </message>
@@ -26102,21 +30430,36 @@ Išskyrus: %3
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>Perkraukite simbolio tipo hierarchiją po žymekliu.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Paprastojo teksto rengyklė</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Pasirinkti ankstesnį pasiūlymą</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Pasirinkti kitą pasiūlymą</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Klasės pavadinime negali būti vardų erdvės skyriklių.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Įveskite klasės pavadinimą.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Klasės pavadinime yra neteisingų simbolių.</translation>
     </message>
@@ -26156,12 +30499,21 @@ Išskyrus: %3
         <translation>Nepavyko vykdyti „%1“: %2</translation>
     </message>
     <message>
-        <location line="+109" />
+        <location line="+6" />
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+Procesas baigėsi kodu %1.
+Paspauskite Return, kad uždarytumėte šį langą...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Nepavyko pradėti terminalo proceso. Stubatas išėjo prieš pradedant prastesnį.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Negalima nustatyti leidimų laikinojo katalogo „ %1“: %2</translation>
     </message>
@@ -26195,9 +30547,8 @@ Išskyrus: %3
         <translation>Nepavyko sukurti lizdo „%1“: %2</translation>
     </message>
     <message>
-        <location line="-171" />
         <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Paspauskite &lt;RETURN&gt;, kad uždarytumėte šį langą...</translation>
+        <translation type="vanished">Paspauskite &lt;RETURN&gt;, kad uždarytumėte šį langą...</translation>
     </message>
     <message>
         <source>Cannot obtain a handle to the inferior: %1</source>
@@ -26208,7 +30559,7 @@ Išskyrus: %3
         <translation type="vanished">Nepavyko gauti išėjimo būsenos iš prastesnės: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: atšaukta. Rasta %n pasitaikymų %2 failuose.</numerusform>
@@ -26226,7 +30577,7 @@ Išskyrus: %3
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>Fai&amp;lo šablonas:</translation>
     </message>
@@ -26266,23 +30617,23 @@ Išskyrus: %3
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Kelias:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+141" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+140" />
         <source>Location</source>
         <translation>Vieta</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Numatytoji priesaga, jei aiškiai nenurodote failo plėtinio, yra &quot;.%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Vietinis</translation>
     </message>
@@ -26292,7 +30643,7 @@ Išskyrus: %3
         <translation>Nuotolinis</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Pasirinkite...</translation>
     </message>
@@ -26302,29 +30653,34 @@ Išskyrus: %3
         <translation>Naršyti...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Pasirinkite Katalogas</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Pasirinkite Vykdomasis</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Pasirinkti failą</translation>
     </message>
     <message>
-        <location line="+176" />
+        <location line="+180" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Kelias „%1“ išplėstas iki tuščios eilutės.</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Alternatyvos</translation>
+    </message>
+    <message>
+        <location line="-192" />
         <location line="+10" />
         <location line="+20" />
         <source>The path &quot;%1&quot; does not exist.</source>
@@ -26367,13 +30723,13 @@ Išskyrus: %3
         <translation type="vanished">Visas kelias: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-58" />
-        <location line="+74" />
+        <location line="-56" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Kelias neturi būti tuščias.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Įdėti...</translation>
     </message>
@@ -26388,22 +30744,32 @@ Išskyrus: %3
         <translation>Aišku</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Įvadas ir projekto vieta</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Naudoti kaip numatytąją projekto vietą</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>Įveskite projekto pavadinimą</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Pridėti į projektą:</translation>
+    </message>
+    <message>
+        <location line="+104" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Pasirinktas projekto vedlys nepalaiko šios kūrimo sistemos.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>Bus sukurtas katalogas „%1“.</translation>
     </message>
@@ -26418,22 +30784,22 @@ Išskyrus: %3
         <translation>Failas tokiu pavadinimu jau yra.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Netinkamas projekto pavadinimas.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Neteisingas simbolis „.“.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Rastas netinkamas simbolis „%1“.</translation>
     </message>
     <message>
-        <location line="-232" />
+        <location line="-250" />
         <source>Name:</source>
         <translation>Vardas:</translation>
     </message>
@@ -26443,7 +30809,7 @@ Išskyrus: %3
         <translation>Sukurti:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Failas pakeistas</translation>
     </message>
@@ -26469,18 +30835,18 @@ Išskyrus: %3
         <translation>Numatytąjį elgesį galima nustatyti Redaguoti &gt; Nuostatos &gt; Aplinka &gt; Sistema.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Uždaryti</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Ne visiems &amp;&amp; &amp;Skirt</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>Failas buvo pašalintas</translation>
     </message>
@@ -26531,9 +30897,8 @@ Išskyrus: %3
     %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+89" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Failo klaida</translation>
     </message>
@@ -26546,61 +30911,68 @@ Išskyrus: %3
         <translation type="vanished">Nepavyko atkurti darbo srities %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Failo formatas nepalaikomas.</translation>
+        <translation type="vanished">Failo formatas nepalaikomas.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Nepavyko rasti jokio išarchyvavimo vykdomojo failo PATH (%1).</translation>
+        <translation type="vanished">Nepavyko rasti jokio išarchyvavimo vykdomojo failo PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Nėra šaltinio failo.</translation>
+        <translation type="vanished">Nėra šaltinio failo.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Nėra paskirties katalogo rinkinio.</translation>
+        <translation type="vanished">Nėra paskirties katalogo rinkinio.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Nepavyko atidaryti išvesties failo.</translation>
+        <translation type="vanished">Nepavyko atidaryti išvesties failo.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Nepavyko parašyti išvesties failo.</translation>
+        <translation type="vanished">Nepavyko parašyti išvesties failo.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Komanda nepavyko.</translation>
+        <translation type="vanished">Komanda nepavyko.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Vykdomas %1
+        <translation type="vanished">Vykdomas %1
 „%2“.
 
 </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Nustatyti iš naujo</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Atkurti numatytąją reikšmę.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Atkurti numatytąją reikšmę</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Paspauskite ir palaikykite, kad atkurtumėte numatytąją reikšmę.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Įgalinti</translation>
     </message>
@@ -26613,6 +30985,11 @@ in &quot;%2&quot;.
         <location line="+1" />
         <source>Default</source>
         <translation>Numatytasis</translation>
+    </message>
+    <message>
+        <location line="+1774" />
+        <source>Change...</source>
+        <translation>Keisti...</translation>
     </message>
     <message>
         <source>Leave at Default</source>
@@ -26636,7 +31013,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Paslėpti detales...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>D&amp;augiau neklausk</translation>
     </message>
@@ -26646,12 +31023,12 @@ in &quot;%2&quot;.
         <translation>&amp;Daugiau neberodyti</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Nurodyta jokio „Clangd“ vykdomojo elemento.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Nepavyko gauti clangd versijos: netikėta clangd išvestis.</translation>
     </message>
@@ -26678,7 +31055,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Nepavyko nukopijuoti %1 į %2, tai nerašomas katalogas.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+273" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Nepavyko rekursyviai nukopijuoti iš &quot;%1&quot; į &quot;%2&quot; bandant sukurti tar archyvą iš šaltinio: %3</translation>
     </message>
@@ -26700,18 +31077,17 @@ in &quot;%2&quot;.
         <translation type="vanished">CreateTempFile neįdiegtas &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+409" />
+        <location line="-136" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>Kelias „%1“ egzistuoja, bet nėra rašomas katalogas.</translation>
     </message>
     <message>
-        <location line="-356" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>„CopyFile“ neįgyvendinama „%1“.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>Negalite nukopijuoti iš „%1“, tai nėra katalogas.</translation>
     </message>
@@ -26721,54 +31097,136 @@ in &quot;%2&quot;.
         <translation>Negalite nukopijuoti „%1“ į „%2“:%3</translation>
     </message>
     <message>
-        <location line="+103" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>„FileContents“ neįgyvendinamas „%1“.</translation>
+        <translation type="vanished">„FileContents“ neįgyvendinamas „%1“.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">„WriteFileContents“ neįgyvendinamas „%1“.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">„CreateTempfile“ neįgyvendinamas „%1“.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">Laikrodis neįgyvendinamas.</translation>
+    </message>
+    <message>
+        <location line="-173" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>Funkcija „%1“ neįgyvendinta „%2“.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>createSymLink „%1“ neįgyvendintas.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>renameFile „%1“ neįgyvendintas.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>Nepavyko stebėti „%1“, jis neegzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>Nepavyko stebėti „%1“.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>Nepavyko pašalinti „%1“ stebėtojo, jis nerastas.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>„WriteFileContents“ neįgyvendinamas „%1“.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>Nepavyko pašalinti „%1“ stebėtojo.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>„CreateTempfile“ neįgyvendinamas „%1“.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>Nepavyko sukurti failo „%1“.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>Laikrodis neįgyvendinamas.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>Nepavyko sukurti katalogo „%1“.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>Atsisakymas pašalinti standartinį katalogą „%1“.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Atsisakymas pašalinti šakninį katalogą.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Atsisakymas pašalinti jūsų namų katalogą.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Nepavyko pašalinti katalogo „%1“.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Nepavyko pašalinti failo „%1“.</translation>
     </message>
     <message>
-        <location line="+551" />
+        <location line="+140" />
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>Nepavyko atidaryti failo „%1“.</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>Nepavyko sukurti laikinojo katalogo „%1“ (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>Nepavyko pakeisti „%1“ leidimų.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>Nepavyko nustatyti, ar „%1“ ir „%2“ nurodo tą patį failą: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>Komanda „%1“ nepavyko: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Nepavyko sukurti simbolinės nuorodos failui „%1“ ties „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>Nepavyko sukurti laikinojo katalogo „%1“ (per daug bandymų).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>Nepavyko sukurti laikinųjų failų „%1“ (per daug bandymų).</translation>
+    </message>
+    <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Nepavyko sukurti laikino failo „%1“ (per daug bando).</translation>
+        <translation type="vanished">Nepavyko sukurti laikino failo „%1“ (per daug bando).</translation>
     </message>
     <message>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -26783,7 +31241,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Nepavyko atidaryti failo &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-449" />
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Neįmanoma nuskaityti &quot;%1&quot;: %2</translation>
     </message>
@@ -26800,23 +31258,38 @@ in &quot;%2&quot;.
         <translation type="vanished">Nepavyko sukurti laikinojo failo &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="-87" />
-        <location line="+406" />
+        <location line="-139" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() netikėtai iškviesta ne „Windows“ platformoje.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Nepavyko sukurti simbolinės nuorodos į „%1“ ties „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Nepavyko pervadinti failo „%1“ į „%2“: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>Failo „%1“ neegzistuoja.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Could not open File &quot;%1&quot;.</source>
-        <translation>Nepavyko atidaryti failo „%1“.</translation>
+        <translation type="vanished">Nepavyko atidaryti failo „%1“.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+27" />
         <source>Could not open file &quot;%1&quot; for writing.</source>
         <translation>Nepavyko atidaryti failo „%1“ rašymui.</translation>
     </message>
@@ -26835,24 +31308,21 @@ in &quot;%2&quot;.
         <translation>Nepavyko sukurti laikino failo „%1“ (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Įrenginys nėra prijungtas</translation>
+        <translation type="vanished">Įrenginys nėra prijungtas</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>Nepavyko nuskaityti failo „%1“: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>Nepavyko įrašyti failo „%1“: %2</translation>
+        <translation type="vanished">Nepavyko įrašyti failo „%1“: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>Nepavyko sukurti laikinojo failo „%1“: %2</translation>
+        <translation type="vanished">Nepavyko sukurti laikinojo failo „%1“: %2</translation>
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
@@ -26860,6 +31330,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Ištrinti</translation>
     </message>
@@ -26918,7 +31389,7 @@ in &quot;%2&quot;.
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>Atrodo, kad eilučių lentelė yra 0x%1</translation>
     </message>
@@ -26928,7 +31399,7 @@ in &quot;%2&quot;.
         <translation>sekcijos pavadinimas %1 iš %2 už failo pabaigos</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Redaguoti aplinką</translation>
     </message>
@@ -26949,7 +31420,7 @@ Norėdami išvalyti kintamąjį, įrašykite jo pavadinimą eilutėje, kurioje n
 Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>Filtras</translation>
     </message>
@@ -26959,7 +31430,7 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Aiškus tekstas</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Centrinis valdiklis</translation>
     </message>
@@ -26973,34 +31444,34 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation type="vanished">Automatiškai slėpti peržiūros pavadinimo juostas</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+92" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+107" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>Pavadinimas tuščias.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Pavadinime yra tarpų.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Neteisingas simbolis „%1“.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Netinkami simboliai „%1“.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Pavadinimas atitinka MS Windows įrenginį (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>Reikalingas failo plėtinys %1:</translation>
     </message>
@@ -27010,7 +31481,37 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Reikalingi failo plėtiniai %1:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Vidinė DeviceFileAccess klaida: watch() negrąžino rezultato.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>Nepavyko rasti laikinojo katalogo įrenginyje %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Nepavyko sukurti laikinojo failo: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Nepavyko sukurti laikinojo katalogo: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Įrenginio kabliukas nenustatytas.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>Nepavyksta pasiekti nuotolinio kelio „%1“.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 %2</translation>
@@ -27022,7 +31523,7 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>%1 %2 %3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Klaida bandant kopijuoti failą: %1</translation>
     </message>
@@ -27037,49 +31538,52 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Nepavyko nustatyti leidimų &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>Nepavyksta sukurti simbolinės nuorodos į „%1“ ties „%2“: keliai nenurodo to paties įrenginio.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>Nepavyko perkelti %1 į %2. Šaltinio failo pašalinti nepavyko: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Nenustatytas „localSource“ įrenginio kabliukas.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Mano kompiuteris</translation>
+        <translation type="vanished">Mano kompiuteris</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>Kompiuteris</translation>
+        <translation type="vanished">Kompiuteris</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>vardas</translation>
+        <translation type="vanished">vardas</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Dydis</translation>
+        <translation type="vanished">Dydis</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Malonus</translation>
+        <translation type="vanished">Malonus</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Tipas</translation>
+        <translation type="vanished">Tipas</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Data pakeista</translation>
+        <translation type="vanished">Data pakeista</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>Nepavyko įrašyti failo %1: %2</translation>
     </message>
@@ -27089,12 +31593,12 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Nepavyko įrašyti failo %1. Diskas pilnas?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: yra rezervuotas failo pavadinimas sistemoje Windows. Negalima išsaugoti.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>Nepavyko perrašyti failo %1: %2</translation>
     </message>
@@ -27104,13 +31608,13 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Nepavyko sukurti failo %1: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>Nepavyko sukurti laikinojo failo %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Negalima sukurti laikino failo %1: %2</translation>
     </message>
@@ -27125,34 +31629,45 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>Perrašyti esamą failą &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nepavyko nukopijuoti failo „%1“ į „%2“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>Nepavyko sukurti katalogo „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>Failas %1 neegzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>Nepavyko paruošti juodraščio buferio „%1“.</translation>
+    </message>
+    <message>
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>Nepavyko sukurti katalogo „%1“.</translation>
+        <translation type="vanished">Nepavyko sukurti katalogo „%1“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>Negalima sukurti OpenGL konteksto.</translation>
+        <translation type="vanished">Negalima sukurti OpenGL konteksto.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Parodyk detales</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Daugiau neberodyti</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Uždaryti</translation>
     </message>
@@ -27202,52 +31717,49 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>Nepavyko paleisti proceso paleidimo priemonės „%1“: %2</translation>
+        <translation type="vanished">Nepavyko paleisti proceso paleidimo priemonės „%1“: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Proceso paleidimo priemonė netikėtai uždaryta: %1</translation>
+        <translation type="vanished">Proceso paleidimo priemonė netikėtai uždaryta: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>Proceso paleidimo priemonės lizdo klaida.</translation>
+        <translation type="vanished">Proceso paleidimo priemonės lizdo klaida.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Vidinio lizdo klaida: %1</translation>
+        <translation type="vanished">Vidinio lizdo klaida: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Lizdo klaida: %1</translation>
+        <translation type="vanished">Lizdo klaida: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Vidinė protokolo klaida: netinkamas paketo dydis %1.</translation>
+        <translation type="vanished">Vidinė protokolo klaida: netinkamas paketo dydis %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Vidinė protokolo klaida: netinkamas paketo tipas %1.</translation>
+        <translation type="vanished">Vidinė protokolo klaida: netinkamas paketo tipas %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Paleidimo lizdas netikėtai užsidarė.</translation>
+        <translation type="vanished">Paleidimo lizdas netikėtai užsidarė.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Begalinė rekursijos klaida</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>Nepavyko išskleisti makrokomandų proceso argumentuose: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Visas kelias, įskaitant failo pavadinimą.</translation>
     </message>
@@ -27277,27 +31789,32 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation>%1: failo bazinis pavadinimas be kelio ir priesagos.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: pirminio katalogo failo vardas.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Pasauliniai kintamieji</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Prieiga prie aplinkos kintamųjų.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>Sumažinti</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;NUSTATYTI&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Kintamasis</translation>
     </message>
@@ -27317,7 +31834,6 @@ Norėdami išjungti kintamąjį, prieš eilutę pažymėkite „#“.</translati
         <translation type="vanished">&lt;VALUE&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -27326,7 +31842,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Įveskite vieną aplinkos kintamąjį vienoje eilutėje.
+        <translation type="vanished">Įveskite vieną aplinkos kintamąjį vienoje eilutėje.
  Norėdami nustatyti ar pakeisti kintamąjį, naudokite kintamąjį = vertę.
  Norėdami išjungti kintamąjį, priešdėkite šią eilutę su „#“.
  Norėdami pridėti kintamąjį, naudokite kintamąjį+= vertę.
@@ -27336,7 +31852,40 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
  Linijos, pradedant nuo „##“, bus traktuojamos kaip komentarai.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>Failas gali būti paprastas tekstinis failas su rakto ir reikšmės poromis
+arba scenarijus, kurį įvertins sistemos apvalkalas.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Įveskite po vieną aplinkos kintamąjį eilutėje.
+Kintamajam nustatyti ar pakeisti naudokite KINTAMASIS=REIKŠMĖ.
+Kintamajam išjungti eilutės pradžioje įrašykite „#“.
+Prie kintamojo pridėti pabaigoje naudokite KINTAMASIS+=REIKŠMĖ.
+Prie kintamojo pridėti pradžioje naudokite KINTAMASIS=+REIKŠMĖ.
+Esamus kintamuosius REIKŠMĖJE galima nurodyti naudojant ${KITAS}.
+Kintamajam išvalyti eilutėje įrašykite tik jo vardą.
+Eilutės, prasidedančios „##“, laikomos komentarais.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Gauti kintamuosius iš tekstinio failo ar apvalkalo scenarijaus:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;GERAI</translation>
     </message>
@@ -27346,7 +31895,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&amp;Atšaukti</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Klaida komandinėje eilutėje.</translation>
     </message>
@@ -27356,17 +31905,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Programos „%1“ nėra arba ji nevykdoma.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>Nepavyko rasti programos „%1“.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Vykdomasis failas nenurodytas.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>Nepavyko sukurti proceso sąsajos „%1“.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>Procesas neatsako</translation>
     </message>
@@ -27386,7 +31940,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Nutraukti procesą?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Komanda „%1“ sėkmingai baigta.</translation>
     </message>
@@ -27411,11 +31965,26 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Komanda „ %1“ buvo atšaukta po %2 ms.</translation>
     </message>
     <message>
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Standartinės klaidų išvesties turinys:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Standartinės išvesties turinys:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Arba trūksta iškviečiamos programos, arba gali nepakakti leidimų ją paleisti.</translation>
+    </message>
+    <message>
         <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
         <translation type="vanished">Komanda „%1“ neatsakė per skirtąjį laiką (%2 s).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Pašalinti failą</translation>
     </message>
@@ -27445,7 +32014,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Aplankas, kurį reikia pašalinti:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Nepavyko nuskaityti failo</translation>
     </message>
@@ -27466,18 +32035,18 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Nebuvo ką rašyti.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Nerasta jokių galiojančių nustatymų</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nepavyko rasti tinkamo nustatymų failo.&lt;/p&gt;&lt;p&gt;Visi kataloge „%1“ rasti nustatymų failai buvo netinkami dabartinei %2 versijai, pavyzdžiui, todėl, kad juos sukūrė nesuderinama %2 versija, arba todėl, kad buvo naudojamas kitas nustatymų kelias.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nepavyko rasti tinkamo nustatymų failo.&lt;/p&gt;&lt;p&gt;Visi nustatymų failai, rasti kataloge „%1“, buvo per nauji arba per seni, kad juos būtų galima perskaityti.&lt;/p&gt;</translation>
     </message>
@@ -27502,7 +32071,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&lt;p&gt;Nustatymų failas, sukurtas naudojant šį %1 egzempliorių, nerastas.&lt;/p&gt;&lt;p&gt;Ar anksčiau dirbote su šiuo projektu kitame kompiuteryje arba naudojote kitą nustatymų kelią?&lt;/p&gt;&lt;p&gt;Ar vis dar dirbate norite įkelti nustatymų failą „%2“?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>Nepalaikomas sujungimo nustatymų failas</translation>
     </message>
@@ -27512,72 +32081,71 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>„%1“ nepalaiko %2. Ar vis tiek norite pabandyti jį įkelti?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="-1646" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Papildyti</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Pašalinti</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Pervardyti</translation>
+        <translation type="vanished">Pervardyti</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>Ar tikrai norite ištrinti konfigūraciją &lt;b&gt;%1&lt;/b&gt;?</translation>
+        <translation type="vanished">Ar tikrai norite ištrinti konfigūraciją &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Naujas konfigūracijos &lt;b&gt;%1&lt;/b&gt; pavadinimas:</translation>
+        <translation type="vanished">Naujas konfigūracijos &lt;b&gt;%1&lt;/b&gt; pavadinimas:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Pervardyti...</translation>
+        <translation type="vanished">Pervardyti...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Praėjęs laikas: %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Nepakanka atminties.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>Įvyko kodavimo klaida.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Kintamasis&lt;/th&gt;&lt;th&gt;Išplečiama į&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;dabartinio failo katalogas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;failo pavadinimas (su pilnu keliu)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;failo pavadinimas (be kelio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Kintamasis&lt;/th&gt;&lt;th&gt;Išplečiama į&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;dabartinio failo katalogas&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;failo pavadinimas (su pilnu keliu)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;failo pavadinimas (be kelio)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Įterpti kintamąjį</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Dabartinė vertė: %1</translation>
+        <translation type="vanished">Dabartinė vertė: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Dabartinė %{%1} reikšmė: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Įterpti neišplėstą reikšmę</translation>
     </message>
@@ -27593,56 +32161,49 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Įterpti išplėstinę vertę</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Pasirinkite kintamąjį, kurį norite įterpti.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Kintamieji</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Procesas nepavyko pradėti.</translation>
+        <translation type="vanished">Procesas nepavyko pradėti.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Nepavyko įdiegti apvalkalo scenarijaus: %1
+        <translation type="vanished">Nepavyko įdiegti apvalkalo scenarijaus: %1
  %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Laikas bandant patikrinti, ar %1.</translation>
+        <translation type="vanished">Laikas bandant patikrinti, ar %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>Komanda „%1“ nerasta.</translation>
+        <translation type="vanished">Komanda „%1“ nerasta.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Scenarijaus diegimas buvo priverstas žlugti.</translation>
+        <translation type="vanished">Scenarijaus diegimas buvo priverstas žlugti.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Laikas laukiant apvalkalo scenarijaus diegimo.</translation>
+        <translation type="vanished">Laikas laukiant apvalkalo scenarijaus diegimo.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Nepavyko įdiegti apvalkalo scenarijaus: %1</translation>
+        <translation type="vanished">Nepavyko įdiegti apvalkalo scenarijaus: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -27651,22 +32212,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Nepavyko pradėti terminalo proceso: „%1“.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Nepavyko kopijavimo failo.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Nepavyko skaityti failas.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Nepavyko rašyti failą.</translation>
     </message>
@@ -27676,12 +32237,12 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Nėra LUA sąsajos rinkinio</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Rodyti/paslėpti slaptažodį</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Vartotojas:</translation>
     </message>
@@ -27696,9 +32257,269 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Negalėjo rasti apvalkalo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Netinkama komanda</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1 naudoja %2 strigčių duomenims rinkti ir siųsti į Sentry apdoroti. %2 gali užfiksuoti bet kokį sugedusio proceso atminties turinį, įskaitant jautrią naudotojo informaciją, URL ir bet kokį kitą turinį, kurį naudotojai patikėjo %1. Surinktos strigčių ataskaitos naudojamos tik klaidoms taisyti.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Daugiau informacijos:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>%1 apžvalga</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>%1 saugumo politika</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Nėra taikytinų pakeitimų.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Nepavyko gauti aplinkos kintamųjų iš įrenginio: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>Nepavyko gauti aplinkos kintamųjų iš „%1“: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>Nepavyko gauti aplinkos kintamųjų iš „%1“: netikėta išvestis</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (numatytasis)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Klonuoti</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Padaryti numatytuoju</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Atkurti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Atšaukti</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>&amp;Grąžinti</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>Iškir&amp;pti</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>&amp;Kopijuoti</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Kopijuoti &amp;nuorodos vietą</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Įklijuoti</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Pažymėti viską</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Įterpti Unicode valdymo simbolį</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Nuotolinė klaidų išvestis buvo: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>„%1“ neegzistuoja.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>„find“ nėra esamas vykdomasis failas</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>Nepavyko paleisti %1: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>„ps“ nėra esamas vykdomasis failas.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>„pidin“ nėra esamas vykdomasis failas.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>Nepavyko paleisti ps: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>Nepavyko paleisti pidin: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>Nepavyko patikrinti /proc: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Nepavyko sukurti momentinės kopijos: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>Atšaukti</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Vidinė klaida: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Neįgyvendinimo klaida: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Nežinoma klaida: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Nežinoma priežastis.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Čia atidaryti komandų eilutę</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Čia atidaryti terminalą</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Terminalo emuliatorius, naudojamas terminalui atidaryti.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Komanda:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Komandų eilutės argumentai, naudojami „%1“.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>„%1“ argumentai:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Komandų eilutės argumentai, naudojami „Vykdyti terminale“.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>„Vykdyti terminale“ argumentai:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Vykdyti terminale</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Tinkinti...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Šablonai</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Pasirinkti terminalo emuliatorių</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Tai ne archyvas.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>Atšaukta.</translation>
     </message>
 </context>
 <context>
@@ -27708,6 +32529,14 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Klaida išsaugant analizatorius: %1</translation>
     </message>
 </context>
 </TS>

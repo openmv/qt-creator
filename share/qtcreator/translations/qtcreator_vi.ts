@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="vi_VN">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Đóng tab</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Không có</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Sao chép</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>Tối đa</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>trung bình</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>Cách thức</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>tối thiểu</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Nghĩa là</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Trôi nổi</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Không tìm thấy mục mật khẩu</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Không thể giải mã dữ liệu</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Không tìm thấy mục mật khẩu</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Không thể giải mã dữ liệu</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Không thể giải mã dữ liệu: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Mã hóa thất bại: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Kích thước thông tin xác thực vượt quá kích thước tối đa %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Khóa thông tin xác thực vượt quá kích thước tối đa %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Ghi thông tin xác thực không thành công: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Đang tải xuống định nghĩa cú pháp mới cho &apos;%1&apos;...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>Đang tải xuống định nghĩa cú pháp mới cho &apos;%1&apos;…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Đang cập nhật định nghĩa cú pháp cho &apos;%1&apos; lên phiên bản %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>Đang cập nhật định nghĩa cú pháp cho &apos;%1&apos; lên phiên bản %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">Đang tải xuống định nghĩa cú pháp mới cho &apos;%1&apos;...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">Đang cập nhật định nghĩa cú pháp cho &apos;%1&apos; lên phiên bản %2...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Sao chép/Chuyển đổi tệp Python</translation>
     </message>
@@ -245,47 +307,765 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QUnicodeControlCharacterMenu</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>Không thể mở %1: %2</translation>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Dấu trái sang phải</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Dấu phải sang trái</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Bộ nối rộng bằng không</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Bộ không nối rộng bằng không</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Khoảng trắng rộng bằng không</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Bắt đầu nhúng trái sang phải</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Bắt đầu nhúng phải sang trái</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Bắt đầu ghi đè trái sang phải</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Bắt đầu ghi đè phải sang trái</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Kết thúc định dạng hướng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Cô lập trái sang phải</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Cô lập phải sang trái</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI First strong isolate</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Kết thúc cô lập hướng</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::AcpClient</name>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Tác tử này không còn khả dụng. Hãy chọn một tác tử để bắt đầu cuộc trò chuyện mới.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Lỗi phiên: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Lỗi phiên: phản hồi không hợp lệ.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>Lỗi lời nhắc: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Không thể đặt tùy chọn cấu hình: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Không thể liệt kê các phiên: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Không thể liệt kê các phiên: phản hồi không hợp lệ.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Không thể tải phiên: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Cuộc trò chuyện mới</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Không thể tải danh sách AI agent. Hãy kiểm tra kết nối internet rồi thử lại.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Thử lại</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Tải lại danh sách tác tử AI.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Chọn AI Agent</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Yêu cầu xác thực</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Phương thức:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>Hủy</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Xác thực</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Yêu cầu bị người dùng ngắt</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Xác thực thất bại: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 đã sẵn sàng.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Tác tử</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Đang bắt đầu cuộc trò chuyện...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>Đang kết nối tới %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Đang tải cuộc trò chuyện...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Đóng</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Đổi tên cuộc trò chuyện...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Đóng cuộc trò chuyện</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>Máy khách ACP</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Hiển thị trò chuyện AI tác tử trong bảng bên</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>Kiểm tra máy khách ACP...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Mở rộng tất cả</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>Thông báo máy khách</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Thông báo</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Thông báo từ máy chủ</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>Tệp nhật ký</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>Trình kiểm tra ACP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Chọn&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Xóa</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>Máy khách ACP:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Không xác định</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Sao chép</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>Cho phép</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Luôn cho phép</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Từ chối</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Luôn từ chối</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>Yêu cầu quyền</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Đã xác thực</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Từ chối</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Bị từ chối</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 phút</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 giây</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Tùy chỉnh&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Chỉ định thủ công một tác tử không có trong registry.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Mẫu:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Chọn một mẫu từ registry để điền sẵn các cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Tên:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Tên hiển thị.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Máy chủ mới&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Tệp thực thi:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>Tệp thực thi để khởi chạy tiến trình máy chủ ACP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Đối số:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>Các đối số để khởi chạy tiến trình máy chủ ACP.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Thay đổi môi trường:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>Lệnh sẽ khởi tạo máy chủ ACP.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>Agent này cần &quot;%1&quot; nhưng không tìm thấy.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Hãy đảm bảo Node.js đã được cài đặt và npx khả dụng trong PATH. Xem &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; để biết hướng dẫn cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Hãy đảm bảo UV đã được cài đặt và uvx khả dụng trong PATH. Xem &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; để biết hướng dẫn cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>Máy chủ ACP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Thêm nhà cung cấp</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Mã nguồn mở</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Mọi thứ khác</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>Chưa cấu hình lệnh cho máy chủ ACP.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Không tìm thấy lệnh: &quot;%1&quot;. Hãy kiểm tra xem nó có tồn tại và có thể thực thi không.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Không tìm thấy lệnh: &quot;%1&quot;. Hãy kiểm tra xem nó có thể thực thi và nằm trong PATH không.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Không thể gửi dữ liệu: tiến trình chưa được khởi động (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Không thể gửi dữ liệu: tiến trình &quot;%1&quot; không chạy (mã thoát %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>Lỗi phân tích JSON: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>Cần một đối tượng JSON.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter để gửi, Shift+Enter để xuống dòng; dán hoặc thả hình ảnh và tệp để đính kèm</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Lọc lệnh...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Xóa ngữ cảnh</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Tùy chọn cấu hình</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Hiển thị suy nghĩ</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Thêm ngữ cảnh</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Thêm tệp...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Thêm tệp ngữ cảnh</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Thêm tệp từ xa...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Trình soạn thảo hiện tại</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Chèn lệnh</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Gửi (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Lỗi tập tin</translation>
+        <source>Stop (Esc)</source>
+        <translation>Dừng (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Ngữ cảnh: đã dùng %1 trên %2 token (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Chi phí phiên: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Nhấp để thu gọn cuộc hội thoại.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n tệp đính kèm</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>Đang xếp hàng: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Được gửi khi tác tử hoàn tất.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Sửa tin nhắn trong hàng đợi</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Hình ảnh</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>vừa xong</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>1 phút trước</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>%1 phút trước</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>1 giờ trước</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>%1 giờ trước</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>hôm qua</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>%1 ngày trước</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Cuộc trò chuyện chưa đặt tên</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Đổi tên cuộc trò chuyện</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Tên (để trống để tự động):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Bắt đầu cuộc trò chuyện</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Cuộc trò chuyện mới trong thư mục...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Các cuộc trò chuyện trước</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Lọc cuộc trò chuyện...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Đang tải các cuộc trò chuyện trước...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Cuộc trò chuyện mới bắt đầu trong %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Chọn thư mục cho cuộc trò chuyện</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>Hiển thị 1 cuộc trò chuyện cũ hơn</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>Hiển thị %1 cuộc trò chuyện cũ hơn</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Các cuộc trò chuyện trước (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Không có cuộc trò chuyện trước nào.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Không có cuộc trò chuyện nào khớp.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Mở trong trình soạn thảo</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 · 1 dòng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 · %2 dòng</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Đầu vào thô</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">Không thể mở %1: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Lỗi tập tin</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Trình chỉnh sửa nhị phân không thể mở các tệp trống.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>Tệp quá lớn đối với Trình chỉnh sửa nhị phân (tối đa 32GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Độ lệch tệp quá lớn.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Địa chỉ byte</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Hoàn tác</translation>
+        <translation type="vanished">&amp;Hoàn tác</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Làm lại</translation>
+        <translation type="vanished">&amp;Làm lại</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>Bộ nhớ ở mức 0x%1</translation>
     </message>
@@ -345,7 +1125,7 @@
         <translation>Giá trị &amp;nbsp;bát phân &amp;nbsp;trước:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;gấp đôi&lt;/i&gt;&amp;nbsp;giá trị:</translation>
     </message>
@@ -355,7 +1135,7 @@
         <translation>Giá trị &lt;i&gt;gấp đôi&lt;/i&gt;&amp;nbsp;trước đó:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;giá trị:</translation>
     </message>
@@ -365,12 +1145,12 @@
         <translation>Giá trị &lt;i&gt;float&lt;/i&gt;&amp;nbsp;trước đó:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Thu phóng: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Sao chép không thành công</translation>
     </message>
@@ -380,7 +1160,7 @@
         <translation>Bạn không thể sao chép hơn 4 MB dữ liệu nhị phân.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Sao chép lựa chọn dưới dạng ký tự ASCII</translation>
     </message>
@@ -395,7 +1175,7 @@
         <translation>Đặt điểm dừng dữ liệu trên lựa chọn</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>Sao chép 0x%1</translation>
@@ -416,12 +1196,26 @@
         <translation>Sao chép giá trị</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Chuyển đến Địa chỉ 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Nhảy đến địa chỉ 0x%1 trong cửa sổ này</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>Không thể mở &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>Trình soạn thảo nhị phân</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Chuyển đến Địa chỉ 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Chuyển đến Địa chỉ 0x%1 trong Cửa sổ mới</translation>
     </message>
@@ -429,21 +1223,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Đăng nhập</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Yêu cầu đăng nhập không thành công: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Một cửa sổ trình duyệt sẽ mở ra. Nhập mã %1 khi được hỏi. 
 Mã đã được sao chép vào clipboard của bạn.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Đăng nhập không thành công</translation>
     </message>
@@ -453,48 +1252,40 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
         <translation>Yêu cầu đăng nhập không thành công: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Phi công phụ</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Tên người dùng và mật khẩu proxy được yêu cầu:</translation>
+        <translation type="vanished">Tên người dùng và mật khẩu proxy được yêu cầu:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Đừng hỏi lại. Điều này sẽ vô hiệu hóa Copilot ngay bây giờ.</translation>
+        <translation type="vanished">Đừng hỏi lại. Điều này sẽ vô hiệu hóa Copilot ngay bây giờ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Chọn Đề xuất Phi công phụ trước đó</translation>
+        <translation type="vanished">Chọn Đề xuất Phi công phụ trước đó</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Chọn Đề xuất phi công phụ tiếp theo</translation>
+        <translation type="vanished">Chọn Đề xuất phi công phụ tiếp theo</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Áp dụng (%1)</translation>
+        <translation type="vanished">Áp dụng (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Áp dụng Từ (%1)</translation>
+        <translation type="vanished">Áp dụng Từ (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 của %2</translation>
+        <translation type="vanished">%1 của %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Yêu cầu đề xuất phi công phụ</translation>
     </message>
@@ -530,25 +1321,25 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Vô hiệu hóa phi công phụ.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Kích hoạt phi công phụ</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Kích hoạt phi công phụ.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Chuyển đổi phi công phụ</translation>
     </message>
@@ -558,7 +1349,7 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
         <translation>Cho phép tích hợp Copilot.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>Đường dẫn Node.js:</translation>
     </message>
@@ -580,13 +1371,12 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
         <translation>Đường dẫn đến %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>đường dẫn %1</translation>
+        <translation type="vanished">đường dẫn %1</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Chọn đường dẫn đến %2 trong plugin Copilot Neovim. Xem %1 để biết hướng dẫn cài đặt.</translation>
@@ -607,97 +1397,100 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
         <translation>Tự động yêu cầu đề xuất cho vị trí con trỏ văn bản hiện tại sau khi thay đổi tài liệu.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Sử dụng proxy</translation>
+        <translation type="vanished">Sử dụng proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Sử dụng proxy</translation>
+        <translation type="vanished">Sử dụng proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Sử dụng proxy để kết nối với máy chủ Copilot.</translation>
+        <translation type="vanished">Sử dụng proxy để kết nối với máy chủ Copilot.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Máy chủ proxy</translation>
+        <translation type="vanished">Máy chủ proxy</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Máy chủ proxy:</translation>
+        <translation type="vanished">Máy chủ proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>Tên máy chủ của máy chủ proxy.</translation>
+        <translation type="vanished">Tên máy chủ của máy chủ proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Cổng ủy quyền</translation>
+        <translation type="vanished">Cổng ủy quyền</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Cổng ủy quyền:</translation>
+        <translation type="vanished">Cổng ủy quyền:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Cổng của máy chủ proxy.</translation>
+        <translation type="vanished">Cổng của máy chủ proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Người dùng ủy quyền</translation>
+        <translation type="vanished">Người dùng ủy quyền</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Người dùng ủy quyền:</translation>
+        <translation type="vanished">Người dùng ủy quyền:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Tên người dùng để truy cập máy chủ proxy.</translation>
+        <translation type="vanished">Tên người dùng để truy cập máy chủ proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Lưu mật khẩu proxy</translation>
+        <translation type="vanished">Lưu mật khẩu proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Lưu mật khẩu proxy</translation>
+        <translation type="vanished">Lưu mật khẩu proxy</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Lưu mật khẩu để truy cập máy chủ proxy. Mật khẩu được lưu trữ không an toàn.</translation>
+        <translation type="vanished">Lưu mật khẩu để truy cập máy chủ proxy. Mật khẩu được lưu trữ không an toàn.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Mật khẩu ủy quyền</translation>
+        <translation type="vanished">Mật khẩu ủy quyền</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Mật khẩu ủy quyền:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">Mật khẩu cho máy chủ proxy.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>Đường dẫn đến %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Proxy</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Mật khẩu ủy quyền:</translation>
+        <source>Proxy:</source>
+        <translation>Proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>Mật khẩu cho máy chủ proxy.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Máy chủ proxy dùng cho các kết nối, dạng http://host:port, hoặc http://user:password@host:port nếu proxy cần đăng nhập.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Từ chối trái phép</translation>
     </message>
@@ -712,7 +1505,22 @@ Mã đã được sao chép vào clipboard của bạn.</translation>
         <translation>Từ chối chứng chỉ trái phép từ máy chủ proxy. Tắt tính năng này là một rủi ro bảo mật.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>URL GitHub Enterprise</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>URL GitHub Enterprise:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>URL của máy chủ GitHub Enterprise của bạn.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>Việc bật %1 tùy thuộc vào sự đồng ý và tuân thủ các điều khoản %1 hiện hành của bạn. Bạn có trách nhiệm biết và chấp nhận các yêu cầu cũng như tham số khi sử dụng các công cụ như %1. Điều này có thể bao gồm, nhưng không giới hạn ở việc đảm bảo bạn có quyền cho phép %1 truy cập vào mã của mình, cũng như hiểu mọi tác động của việc bạn sử dụng %1 và các đề xuất được đưa ra (như bản quyền, độ chính xác, v.v.).</translation>
     </message>
@@ -735,33 +1543,27 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Tạo các tệp dịch qm mà ứng dụng có thể sử dụng từ các tệp ts của người dịch</translation>
+        <translation type="vanished">Tạo các tệp dịch qm mà ứng dụng có thể sử dụng từ các tệp ts của người dịch</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Bản dịch phát hành (lrelease)</translation>
+        <translation type="vanished">Bản dịch phát hành (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>nhà ngôn ngữ học</translation>
+        <translation type="vanished">nhà ngôn ngữ học</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Đồng bộ hóa tệp ts của người dịch với mã chương trình</translation>
+        <translation type="vanished">Đồng bộ hóa tệp ts của người dịch với mã chương trình</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Cập nhật bản dịch (lupdate)</translation>
+        <translation type="vanished">Cập nhật bản dịch (lupdate)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Mở tệp hiện tại trong Notepad</translation>
     </message>
@@ -771,9 +1573,9 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Chỉnh sửa bằng Notepad</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Chữ</translation>
     </message>
@@ -789,7 +1591,7 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt nhanh</translation>
     </message>
@@ -804,42 +1606,41 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Xem trước Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Mở tệp hiện tại trong vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>Chỉnh sửa bằng vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>Trình chỉnh sửa nhị phân</translation>
+        <translation type="vanished">Trình chỉnh sửa nhị phân</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+47" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+43" />
         <source>Target</source>
         <translation>Mục tiêu</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+108" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Nhãn</translation>
     </message>
     <message>
-        <location line="-107" />
-        <location line="+107" />
+        <location line="-129" />
+        <location line="+129" />
         <source>Command</source>
         <translation>Yêu cầu</translation>
     </message>
     <message>
-        <location line="-105" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+863" />
+        <location line="-127" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+933" />
         <source>Reset All</source>
         <translation>Đặt lại tất cả</translation>
     </message>
@@ -850,16 +1651,12 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+484" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+486" />
         <source>Reset</source>
         <translation>Cài lại</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-7" />
         <source>Reset to default.</source>
         <translation>Đặt lại về mặc định.</translation>
     </message>
@@ -879,7 +1676,7 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Ánh xạ lệnh</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+83" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Hành động &amp; Hành động chung từ Menu</translation>
     </message>
@@ -889,25 +1686,25 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Kích hoạt một hành động. Nếu nó từ menu thì nó khớp với bất kỳ phần nào của hệ thống phân cấp menu, được phân tách bằng dấu &quot;&gt;&quot;. Ví dụ: &quot;sess def&quot; khớp với &quot;Tệp &gt; Phiên &gt; Mặc định&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+65" />
         <source>Existing files</source>
         <translation>Các tập tin hiện có</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Lỗi tạo tệp</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Không thể mở trình soạn thảo cho &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[chỉ đọc]</translation>
     </message>
@@ -922,49 +1719,53 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>[liên kết tượng trưng]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>Thư mục dự án %1 chứa các tập tin không thể ghi đè: 
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Trình soạn thảo văn bản thuần túy</translation>
+        <translation type="vanished">Trình soạn thảo văn bản thuần túy</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Hiển thị thanh bên trái</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Ẩn thanh bên trái</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Hiển thị thanh bên phải</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Ẩn thanh bên phải</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Sao chép vào bộ nhớ tạm</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Xóa menu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+206" />
         <source>Proxy Authentication Required</source>
         <translation>Yêu cầu xác thực proxy</translation>
     </message>
@@ -974,12 +1775,32 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Đừng hỏi lại.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Sao chép giá trị đã mở rộng</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>Vị trí QStandardPaths::%1 trên hệ thống tệp cục bộ.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Không tìm thấy chủ đề nào trong quá trình cài đặt.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Trợ giúp</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Ngày hiện tại (ISO).</translation>
     </message>
@@ -1010,10 +1831,12 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Thư mục mặc định được cấu hình cho các dự án.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Thư mục được truy cập lần cuối trong hộp thoại tập tin.</translation>
@@ -1050,26 +1873,33 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat trên Windows, để trống trên mọi nền tảng khác.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Đường dẫn đến chính %1 đang chạy.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>Thư mục nơi %1 tìm thấy các tài nguyên được cài đặt sẵn của nó.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>Thư mục nơi %1 chứa dữ liệu người dùng tùy chỉnh.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Ngày hiện tại (chuỗi định dạng QDate).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Thời gian hiện tại (chuỗi định dạng QTime).</translation>
     </message>
@@ -1084,22 +1914,37 @@ Nếu không, bạn cần chỉ định đường dẫn đến tệp %2 từ plu
         <translation>Một bình luận.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Chuyển đổi chuỗi thành ASCII thuần túy.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Chuyển chuỗi thành dạng có thể dùng an toàn trong đường dẫn tệp.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Terminal được cấu hình tại Môi trường &gt; Hệ thống.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Các đối số được truyền cho lệnh terminal để chạy trong terminal được cấu hình tại Môi trường &gt; Hệ thống.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>Tùy chọn %1 &gt; %2...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Tạo thư mục</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Lỗi tệp cài đặt</translation>
     </message>
@@ -1128,52 +1973,48 @@ You will likely experience further problems using this instance of %3.</source>
 Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 này.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1 thu thập các báo cáo sự cố cho mục đích duy nhất là sửa lỗi. Để tắt tính năng này, hãy đi tới %2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1 có thể thu thập các báo cáo sự cố với mục đích duy nhất là sửa lỗi. Để kích hoạt tính năng này hãy vào %2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation>&gt; Tùy chọn &gt; Môi trường &gt; Hệ thống</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Chỉnh sửa&gt; Tùy chọn&gt; Môi trường&gt; Hệ thống</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 sử dụng Google Crashpad để thu thập các sự cố và gửi chúng đến chương trình phụ trợ của chúng tôi để xử lý. Crashpad có thể ghi lại các nội dung tùy ý từ bộ nhớ của quy trình bị lỗi, bao gồm thông tin nhạy cảm của người dùng, URL và bất kỳ nội dung nào khác mà người dùng đã tin cậy %1. Tuy nhiên, các báo cáo sự cố được thu thập chỉ được sử dụng cho mục đích duy nhất là sửa lỗi.</translation>
+        <translation type="vanished">%1 sử dụng Google Crashpad để thu thập các sự cố và gửi chúng đến chương trình phụ trợ của chúng tôi để xử lý. Crashpad có thể ghi lại các nội dung tùy ý từ bộ nhớ của quy trình bị lỗi, bao gồm thông tin nhạy cảm của người dùng, URL và bất kỳ nội dung nào khác mà người dùng đã tin cậy %1. Tuy nhiên, các báo cáo sự cố được thu thập chỉ được sử dụng cho mục đích duy nhất là sửa lỗi.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Thêm thông tin:</translation>
+        <translation type="vanished">Thêm thông tin:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>Tổng quan về Crashpad</translation>
+        <translation type="vanished">Tổng quan về Crashpad</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>Chính sách bảo mật %1</translation>
+        <translation type="vanished">Chính sách bảo mật %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Thiết kế</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Thêm tệp vào kiểm soát phiên bản (%1)</translation>
     </message>
@@ -1183,7 +2024,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Thêm tệp vào kiểm soát phiên bản (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Mã hóa văn bản</translation>
     </message>
@@ -1198,7 +2039,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Chọn mã hóa cho &quot;%1&quot;.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Tải lại bằng mã hóa</translation>
     </message>
@@ -1208,7 +2049,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Lưu bằng mã hóa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-348" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-353" />
         <source>Uncategorized</source>
         <translation>Chưa được phân loại</translation>
     </message>
@@ -1218,12 +2059,12 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Các công cụ sẽ xuất hiện trực tiếp trong menu Công cụ bên ngoài.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Danh mục mới</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Công cụ mới</translation>
     </message>
@@ -1239,15 +2080,15 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>văn bản hữu ích</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Môi trường hệ thống</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+474" />
-        <location line="+72" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+52" />
+        <location line="+62" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+646" />
+        <location line="+71" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+53" />
         <source>Add</source>
         <translation>Thêm vào</translation>
     </message>
@@ -1259,17 +2100,16 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+182" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+316" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+307" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+1" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+396" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+384" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Di dời</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Loại bỏ công cụ.</translation>
+        <translation type="vanished">Loại bỏ công cụ.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1331,15 +2171,13 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+248" />
         <source>No changes to apply.</source>
-        <translation>Không có thay đổi để áp dụng.</translation>
+        <translation type="vanished">Không có thay đổi để áp dụng.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+98" />
         <source>Change...</source>
         <translation>Thay đổi...</translation>
     </message>
@@ -1370,19 +2208,47 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Có thể thực thi:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+68" />
+        <source>Custom Language Models</source>
+        <translation>Mô hình ngôn ngữ tùy chỉnh</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Mô hình mới&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Tệp thực thi</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+656" />
+        <source>Executable:</source>
+        <translation>Tệp thực thi:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Đối số</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Lập luận:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Thư mục làm việc:</translation>
     </message>
@@ -1393,7 +2259,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Môi trường:</translation>
     </message>
@@ -1408,7 +2274,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Thêm danh mục</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -1418,19 +2284,21 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>PATH=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Công cụ bên ngoài</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-10" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-26" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-20" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-55" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Con đường:</translation>
     </message>
@@ -1481,6 +2349,11 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Trạng thái quản lý phiên bản:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Có thể đọc được:</translation>
     </message>
@@ -1501,18 +2374,18 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Liên kết tượng trưng:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>Không xác định</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
@@ -1527,7 +2400,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Mac (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Hỗn hợp</translation>
@@ -1548,7 +2421,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Không xác định</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Chọn một mẫu:</translation>
     </message>
@@ -1558,8 +2431,8 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Chọn...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+903" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+955" />
         <source>Projects</source>
         <translation>Dự án</translation>
     </message>
@@ -1579,7 +2452,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Mẫu %1</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Nền tảng độc lập</translation>
     </message>
@@ -1599,7 +2472,7 @@ Bạn có thể sẽ gặp thêm vấn đề khi sử dụng phiên bản %3 nà
         <translation>Mở tập tin &quot;%1&quot; bằng:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Ghi đè các tập tin hiện có</translation>
     </message>
@@ -1615,8 +2488,8 @@ Bạn có muốn ghi đè lên chúng không?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2079" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+438" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2210" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+447" />
         <source>Make Writable</source>
         <translation>Làm cho có thể ghi được</translation>
     </message>
@@ -1727,7 +2600,7 @@ Do you want to check them out now?</source>
 Bạn có muốn kiểm tra chúng bây giờ không?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+32" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+29" />
         <source>The following files have unsaved changes:</source>
         <translation>Các tệp sau đây có những thay đổi chưa được lưu:</translation>
     </message>
@@ -1752,10 +2625,9 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Khô&amp;ng lưu</translation>
     </message>
     <message>
-        <location line="+76" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
+        <location line="+78" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2060" />
         <source>&amp;Save</source>
         <translation>&amp;Cứu</translation>
     </message>
@@ -1787,7 +2659,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Cứu</translation>
     </message>
@@ -1802,17 +2674,90 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Lưu đã chọn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+561" />
         <source>Sort categories</source>
         <translation>Sắp xếp danh mục</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Áp dụng mọi thay đổi và quay lại chế độ trước.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Áp dụng mọi thay đổi và ở lại đây.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Hủy mọi thay đổi và ở lại đây.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Hủy mọi thay đổi và quay lại chế độ trước.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Thay đổi chưa được áp dụng</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Có các thay đổi chưa được áp dụng. Bạn có muốn áp dụng chúng không?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Áp dụng thay đổi</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Trang trước có các thay đổi chưa được lưu.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Áp dụng các thay đổi chưa lưu</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Bỏ các thay đổi chưa lưu</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Quay lại trang trước</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Có các thay đổi chưa được lưu.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Ở lại chế độ cài đặt</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+319" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Tùy chọn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-392" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-412" />
         <source>Invalid key sequence.</source>
         <translation>Chuỗi khóa không hợp lệ.</translation>
     </message>
@@ -1833,18 +2778,18 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Ghi</translation>
     </message>
     <message>
-        <location line="-155" />
-        <location line="+153" />
+        <location line="-176" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Trình tự khóa:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Sử dụng &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; và &quot;Shift&quot; cho các phím bổ trợ. Sử dụng &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, v.v. cho các phím đặc biệt. Kết hợp các phím riêng lẻ với &quot;+&quot; và kết hợp nhiều phím tắt thành một chuỗi phím tắt bằng &quot;,&quot;. Ví dụ: nếu người dùng phải giữ phím bổ trợ Ctrl và Shift trong khi nhấn Escape, sau đó thả ra và nhấn A, hãy nhập &quot;Ctrl+Shift+Escape,A&quot;.</translation>
     </message>
@@ -1864,25 +2809,25 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Trình tự khóa có thể có xung đột. &lt;a href=&quot;#conflicts&quot;&gt;Hiển thị.&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+78" />
         <source>Keyboard Shortcuts</source>
         <translation>Phím tắt</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Phím tắt</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+160" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Nhập lược đồ ánh xạ bàn phím</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Lược đồ ánh xạ bàn phím (*.kms)</translation>
     </message>
@@ -1892,34 +2837,33 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Xuất lược đồ ánh xạ bàn phím</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+220" />
         <source>Keyboard</source>
         <translation>Bàn phím</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Không thể lưu các tập tin.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1223" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1301" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Lỗi tập tin</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Lỗi khi lưu tập tin: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Tất cả các tệp (*.*)</translation>
@@ -1946,27 +2890,27 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Lưu tệp dưới dạng</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+162" />
         <source>Open File</source>
         <translation>Mở tệp</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>Không thể tải lại %1</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Save A&amp;ll</source>
         <translation>Lưu A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>Biên tập</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;không có tài liệu&gt;</translation>
     </message>
@@ -1976,77 +2920,76 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Không có tài liệu nào được chọn.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2301" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+251" />
         <source>Copy Full Path</source>
         <translation>Sao chép đường dẫn đầy đủ</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Sao chép đường dẫn và số dòng</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Sao chép tên tệp</translation>
     </message>
     <message>
-        <location line="+2" />
-        <location line="+1737" />
+        <location line="-856" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
         <source>Save &amp;As...</source>
         <translation>Lưu &amp;Dưới dạng...</translation>
     </message>
     <message>
-        <location line="-1736" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location line="-1796" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Lưu không định dạng</translation>
+    </message>
+    <message>
+        <location line="-1790" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Hoàn nguyên về Đã lưu</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Đóng</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Đóng tất cả</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Đóng những thứ khác</translation>
     </message>
     <message>
-        <location line="-1757" />
-        <location line="+124" />
+        <location line="-1738" />
         <source>Close All Except Visible</source>
         <translation>Đóng tất cả ngoại trừ hiển thị</translation>
     </message>
     <message>
-        <location line="-119" />
         <source>Properties...</source>
-        <translation>Của cải...</translation>
+        <translation type="vanished">Của cải...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>Ghim</translation>
+        <translation type="vanished">Ghim</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="-77" />
         <source>Revert File to Saved</source>
         <translation>Hoàn nguyên tệp về Đã lưu</translation>
     </message>
@@ -2065,7 +3008,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+68" />
         <source>Previous Open Document in History</source>
         <translation>Tài liệu mở trước đó trong lịch sử</translation>
     </message>
@@ -2075,19 +3018,53 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Tài liệu mở tiếp theo trong lịch sử</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-343" />
+        <location line="+11" />
+        <source>Previous Tab</source>
+        <translation>Thẻ trước đó</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Thẻ tiếp theo</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Đóng tất cả tab</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Đóng các tab khác</translation>
+    </message>
+    <message>
+        <location line="-2583" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-352" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Quay lại</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>Đi về phía trước</translation>
     </message>
     <message>
         <location line="+11" />
+        <source>Open Previous Document</source>
+        <translation>Mở tài liệu trước đó</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Mở tài liệu tiếp theo</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Reopen Last Closed Document</source>
         <translation>Mở lại tài liệu đã đóng gần đây nhất</translation>
     </message>
@@ -2098,7 +3075,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-312" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7" />
@@ -2139,12 +3116,12 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Đi tới phần chia hoặc cửa sổ tiếp theo</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-218" />
         <source>Ad&amp;vanced</source>
         <translation>&amp;Trình độ cao</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Tài liệu hiện tại</translation>
     </message>
@@ -2159,7 +3136,7 @@ Bạn có muốn kiểm tra chúng bây giờ không?</translation>
         <translation>Tọa độ Y của góc trên bên trái của trình soạn thảo hiện tại, so với màn hình.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Tiếp tục mở tệp văn bản lớn?</translation>
     </message>
@@ -2173,22 +3150,21 @@ Continue?</source>
 Tiếp tục?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Không thể mở &quot;%1&quot;: Không thể mở tệp thuộc loại &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Không thể mở &quot;%1&quot; để đọc. Tệp không tồn tại hoặc bạn không có quyền mở tệp.</translation>
+        <translation type="vanished">Không thể mở &quot;%1&quot; để đọc. Tệp không tồn tại hoặc bạn không có quyền mở tệp.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Không thể mở &quot;%1&quot;: Lỗi không xác định.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Tệp này chưa được mở ở %1.</translation>
     </message>
@@ -2203,7 +3179,7 @@ Tiếp tục?</translation>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Bạn đang thay đổi tệp chỉ đọc.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+26" />
         <source>&amp;Save %1</source>
         <translation>&amp;Lưu %1</translation>
     </message>
@@ -2211,6 +3187,11 @@ Tiếp tục?</translation>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>Lưu %1 &amp;Như...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>Lưu %1 không định dạng</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2223,7 +3204,7 @@ Tiếp tục?</translation>
         <translation>Tải lại %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>Đóng %1</translation>
     </message>
@@ -2233,7 +3214,7 @@ Tiếp tục?</translation>
         <translation>Đóng tất cả ngoại trừ %1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Không thể mở tệp</translation>
     </message>
@@ -2243,7 +3224,7 @@ Tiếp tục?</translation>
         <translation>Không thể mở file để chỉnh sửa bằng VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Bạn sẽ mất những thay đổi hiện tại nếu bạn tiếp tục hoàn nguyên %1.</translation>
     </message>
@@ -2254,9 +3235,12 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-212" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>Hủy bỏ</translation>
     </message>
@@ -2266,7 +3250,7 @@ Tiếp tục?</translation>
         <translation>Hủy &amp;&amp; &amp;Khác biệt</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>Đóng &quot;%1&quot;</translation>
     </message>
@@ -2276,17 +3260,15 @@ Tiếp tục?</translation>
         <translation>Đóng trình chỉnh sửa</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Đóng tất cả ngoại trừ &quot;%1&quot;</translation>
+        <translation type="vanished">Đóng tất cả ngoại trừ &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Đóng các biên tập viên khác</translation>
+        <translation type="vanished">Đóng các biên tập viên khác</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+64" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>Bỏ ghim &quot;%1&quot;</translation>
     </message>
@@ -2301,13 +3283,18 @@ Tiếp tục?</translation>
         <translation>Trình chỉnh sửa ghim</translation>
     </message>
     <message>
-        <location line="+363" />
+        <location line="+27" />
+        <source>Diff Against Current File</source>
+        <translation>So sánh với tệp hiện tại</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Mở tập tin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Mở tài liệu</translation>
@@ -2328,22 +3315,26 @@ Tiếp tục?</translation>
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Trình chỉnh sửa hệ thống</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>Không thể mở URL %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Kéo để kéo tài liệu giữa các phần tách</translation>
+        <translation type="vanished">Kéo để kéo tài liệu giữa các phần tách</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Kéo để mở tài liệu trong một khung chia khác.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Đóng tài liệu</translation>
     </message>
@@ -2358,17 +3349,17 @@ Tiếp tục?</translation>
         <translation>Tập tin có thể ghi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>Không thể tìm thấy tệp thực thi cho &quot;%1&quot; (được mở rộng &quot;%2&quot;)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>Đang khởi động công cụ bên ngoài &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>&quot;%1&quot; đã hoàn tất</translation>
     </message>
@@ -2378,22 +3369,22 @@ Tiếp tục?</translation>
         <translation>&quot;%1&quot; kết thúc có lỗi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Bên ngoài</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>Lỗi khi phân tích cú pháp công cụ bên ngoài %1: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Lỗi: Công cụ bên ngoài trong %1 có id trùng lặp</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Khởi chạy trình duyệt tệp không thành công</translation>
     </message>
@@ -2418,7 +3409,7 @@ Tiếp tục?</translation>
 %2</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Lệnh cho trình duyệt tệp chưa được đặt.</translation>
     </message>
@@ -2448,12 +3439,17 @@ Tiếp tục?</translation>
         <translation>Hiển thị trong Trình tìm kiếm</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Hiển thị trong trình quản lý tệp</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>Hiển thị thư mục chứa</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Mở dấu nhắc lệnh tại đây</translation>
     </message>
@@ -2476,23 +3472,36 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>Không thể xóa tập tin &quot;%1&quot;.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>Không thể xóa tệp &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>Không thể giải mã nội dung.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>Không thể đổi tên include guard trong tệp &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">Không thể xóa tập tin &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Không thể đổi tên bộ bảo vệ bao gồm trong tệp &quot;%1&quot;.</translation>
+        <translation type="vanished">Không thể đổi tên bộ bảo vệ bao gồm trong tệp &quot;%1&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>%n lần xuất hiện được thay thế.</numerusform>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Tìm/Thay thế</translation>
     </message>
@@ -2509,8 +3518,8 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Trình độ cao...</translation>
     </message>
@@ -2520,7 +3529,7 @@ Tiếp tục?</translation>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-174" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-176" />
         <source>Find</source>
         <translation>Tìm thấy</translation>
     </message>
@@ -2541,19 +3550,19 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Thay thế</translation>
     </message>
     <message>
-        <location line="-222" />
-        <location line="+237" />
+        <location line="-224" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Thay thế &amp;&amp; Tìm</translation>
     </message>
     <message>
-        <location line="-232" />
-        <location line="+261" />
+        <location line="-234" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Thay thế tất cả</translation>
     </message>
@@ -2632,8 +3641,7 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+28" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-214" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+108" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-350" />
         <source>Case Sensitive</source>
         <translation>Phân biệt chữ hoa chữ thường</translation>
     </message>
@@ -2664,12 +3672,12 @@ Tiếp tục?</translation>
         <translation>Thay thế bằng...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Cụm từ tìm kiếm trống.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Tìm kiếm</translation>
     </message>
@@ -2679,7 +3687,7 @@ Tiếp tục?</translation>
         <translation>Tìm kiếm &amp;&amp; &amp;Thay thế</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>&amp;Tìm kiếm:</translation>
     </message>
@@ -2692,6 +3700,16 @@ Tiếp tục?</translation>
         <location line="+3" />
         <source>Whole words o&amp;nly</source>
         <translation>Toàn bộ từ o&amp;nly</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>Bỏ qua tệp nhị phân</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Bỏ qua tệp được tạo tự động</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2731,7 +3749,12 @@ Tiếp tục?</translation>
     <message>
         <location line="+2" />
         <source>None</source>
+        <comment>No find flags</comment>
         <translation>Không có</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Không có</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2808,7 +3831,7 @@ Tiếp tục?</translation>
         <translation>Không tìm thấy kết quả phù hợp.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+124" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+128" />
         <location line="+501" />
         <source>Expand All</source>
         <translation>Mở rộng tất cả</translation>
@@ -2816,7 +3839,7 @@ Tiếp tục?</translation>
     <message>
         <location line="-487" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-44" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Hiển thị đường dẫn liên quan đến dự án đang hoạt động</translation>
     </message>
@@ -2843,7 +3866,7 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-194" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-197" />
         <source>Collapse All</source>
         <translation>Thu gọn tất cả</translation>
     </message>
@@ -2858,7 +3881,7 @@ Tiếp tục?</translation>
         <translation>Lịch sử:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Hiển thị tập tin ẩn</translation>
     </message>
@@ -2873,7 +3896,7 @@ Tiếp tục?</translation>
         <translation>Hiển thị các thư mục trên cùng</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+43" />
         <source>Synchronize with Editor</source>
         <translation>Đồng bộ hóa với Trình chỉnh sửa</translation>
     </message>
@@ -2883,33 +3906,42 @@ Tiếp tục?</translation>
         <translation>Đồng bộ hóa thư mục gốc với trình chỉnh sửa</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Tệp mới</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Thư mục mới</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Xóa thư mục...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>Tệp mới...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-386" />
         <source>Open &quot;%1&quot;</source>
         <translation>Mở &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Xóa thư mục</translation>
+        <translation type="vanished">Xóa thư mục</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+102" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+99" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2943,17 +3975,16 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+589" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+613" />
         <source>Options</source>
         <translation>Tùy chọn</translation>
     </message>
     <message>
-        <location line="+114" />
         <source>Add New...</source>
-        <translation>Thêm mới...</translation>
+        <translation type="vanished">Thêm mới...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+128" />
         <source>Rename...</source>
         <translation>Đổi tên...</translation>
     </message>
@@ -2963,7 +3994,7 @@ Tiếp tục?</translation>
         <translation>Di dời...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-86" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+210" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Hiển thị phím tắt trong menu ngữ cảnh (mặc định: %1)</translation>
     </message>
@@ -2978,7 +4009,7 @@ Tiếp tục?</translation>
         <translation>tắt</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Ghi đè con trỏ cho chế độ xem</translation>
     </message>
@@ -2990,25 +4021,54 @@ If the system cursors for resizing views are not displayed properly, you can use
 Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem không được hiển thị chính xác, bạn có thể sử dụng con trỏ do %1 cung cấp.</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="-69" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Đặt lại hộp thoại Không hỏi/Hiển thị lại</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Đặt lại về mặc định.</translation>
+        <translation type="vanished">Đặt lại về mặc định.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>chủ đề:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>Ngôn ngữ:</translation>
+    </message>
+    <message>
+        <location line="-121" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>Bật lại các cảnh báo đã bị ẩn bằng cách chọn &quot;Không hiển thị lại&quot; (ví dụ: thiếu bộ tô sáng cú pháp).</translation>
+    </message>
+    <message>
+        <location line="+78" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Ưu tiên thanh thông tin dạng biểu ngữ hơn cửa sổ bật lên</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Dùng trình soạn thảo dạng thẻ</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Hiển thị nút OK và Hủy trong chế độ Tùy chọn</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Bảng mã văn bản cho công cụ:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Màu:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3031,47 +4091,51 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Làm tròn cho 0,75 trở lên</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Đừng làm tròn</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>Chính sách làm tròn số liệu của Sở Di Trú:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Các biến môi trường sau được đặt và có thể ảnh hưởng đến hành vi chia tỷ lệ giao diện người dùng của %1:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Môi trường ảnh hưởng đến hành vi mở rộng giao diện người dùng.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Cỡ tab Serial Terminal:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>User Interface</source>
-        <translation>Giao diện người dùng</translation>
+        <translation type="vanished">Giao diện người dùng</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Ngôn ngữ hệ thống&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+224" />
         <source>The language change will take effect after restart.</source>
         <translation>Việc thay đổi ngôn ngữ sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Kiểu thanh công cụ:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Nhỏ gọn</translation>
     </message>
@@ -3081,91 +4145,92 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Thư giãn</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>Sự thay đổi chính sách làm tròn số điểm thi đua (DPI) sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Giao diện</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+53" />
         <source>Environment</source>
         <translation>Môi trường</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>Không thể đặt quyền.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>Không thể tạo thư mục %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1429" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1295" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Cấu hình...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Mở hộp thoại Tùy chọn.</translation>
+        <translation type="vanished">Mở hộp thoại Tùy chọn.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Mở hộp thoại Tùy chọn.</translation>
+        <translation type="vanished">Mở hộp thoại Tùy chọn.</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+415" />
         <source>Restart Required</source>
         <translation>Yêu cầu khởi động lại</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>Sau đó</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Khởi động lại ngay bây giờ</translation>
     </message>
     <message>
-        <location line="+378" />
+        <location line="+451" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Dựa trên Qt %1 (%2, %3)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;Từ bản sửa đổi %1&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;Được xây dựng trên %1 %2&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;Được xây dựng trên %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Bản quyền 2008-%6 %7. Mọi quyền được bảo lưu.&lt;br/&gt;&lt;br/&gt;Chương trình được cung cấp NGUYÊN TRẠNG KHÔNG CÓ BẤT CỨ HÌNH THỨC BẢO ĐẢM NÀO, BAO GỒM BẢO HÀNH VỀ THIẾT KẾ, KHẢ NĂNG CÓ THỂ BÁN VÀ SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Bản quyền 2008-%6 %7. Mọi quyền được bảo lưu.&lt;br/&gt;&lt;br/&gt;Chương trình được cung cấp NGUYÊN TRẠNG KHÔNG CÓ BẤT CỨ HÌNH THỨC BẢO ĐẢM NÀO, BAO GỒM BẢO HÀNH VỀ THIẾT KẾ, KHẢ NĂNG CÓ THỂ BÁN VÀ SỰ PHÙ HỢP CHO MỘT MỤC ĐÍCH CỤ THỂ.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Logo Qt cũng như Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® và Qt Embedded® là các nhãn hiệu đã đăng ký của The Qt Company Ltd.</translation>
+        <translation type="vanished">Logo Qt cũng như Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® và Qt Embedded® là các nhãn hiệu đã đăng ký của The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+325" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Thoát %1?</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+89" />
         <source>&amp;File</source>
         <translation>&amp;Tài liệu</translation>
     </message>
@@ -3175,12 +4240,12 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>&amp;Biên tập</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+29" />
         <source>&amp;View</source>
         <translation>&amp;Xem</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>&amp;Tools</source>
         <translation>&amp;Công cụ</translation>
     </message>
@@ -3221,7 +4286,12 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>&amp;Mở tệp...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Mở tệp...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Mở tệp &amp;Với...</translation>
     </message>
@@ -3301,7 +4371,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Chọn &amp;Tất cả</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Đi tới Dòng...</translation>
     </message>
@@ -3321,7 +4391,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Thu nhỏ</translation>
     </message>
@@ -3337,7 +4407,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Ctrl+Shift+-</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Kích thước ban đầu</translation>
     </message>
@@ -3352,7 +4422,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Hiển thị nhật ký...</translation>
     </message>
@@ -3363,7 +4433,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
     </message>
     <message>
         <location line="+11" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+167" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+207" />
         <source>Minimize</source>
         <translation>Giảm thiểu</translation>
     </message>
@@ -3379,7 +4449,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Toàn màn hình</translation>
     </message>
@@ -3408,7 +4478,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Ẩn thanh menu</translation>
     </message>
@@ -3418,7 +4488,8 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Điều này sẽ ẩn hoàn toàn thanh menu. Bạn có thể hiển thị lại bằng cách nhập %1.&lt;br&gt;&lt;br&gt;Hoặc kích hoạt hành động &quot;%2&quot; từ bộ lọc định vị &quot;%3&quot; (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Lượt xem</translation>
     </message>
@@ -3448,42 +4519,85 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Liên hệ...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Kiểu chọn chế độ chu kỳ</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Kiểu chọn chế độ</translation>
+        <translation type="vanished">Kiểu chọn chế độ</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Ẩn</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Chế độ</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Biểu tượng và văn bản</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Chỉ biểu tượng</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Ẩn giấu</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>Hiển thị %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-70" />
         <source>Version:</source>
         <translation>Phiên bản:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Nhật ký thay đổi</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="-2309" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Mở Tùy chọn.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>Không tìm thấy tệp thực thi %1 trong %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>Được build vào %1 %2 dựa trên Qt %3 (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>Logo Qt, logo axivion stopping software erosion, logo Qt Group, cũng như Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® là các nhãn hiệu đã đăng ký của The Qt Company Ltd. hoặc các công ty con của công ty.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 là phần mềm tự do, bạn được phép phân phối lại theo &lt;a href=&quot;%2&quot;&gt;một số điều kiện nhất định&lt;/a&gt;. Tuy nhiên, một số thành phần có thể áp dụng các điều kiện khác.</translation>
+    </message>
+    <message>
+        <location line="+1450" />
         <source>Contact</source>
         <translation>Liên hệ</translation>
     </message>
@@ -3493,22 +4607,42 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>&lt;p&gt;Bạn có thể liên hệ với nhà phát triển Qt Creator tại danh sách gửi thư của Qt Creator:&lt;/p&gt;%1&lt;p&gt;hoặc kênh #qt-creator trên Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Trình theo dõi lỗi của chúng tôi nằm ở %3.&lt;/p&gt;&lt;p&gt;Vui lòng sử dụng %4 cho các đoạn văn bản lớn hơn.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Chưa được triển khai</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>Tệp đã được khôi phục từ bản sao được lưu tự động. Chọn Lưu để xác nhận hoặc Hoàn nguyên về Đã lưu để loại bỏ các thay đổi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>Mở bằng VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>So sánh &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>Nhật ký &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>Chú thích &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>Nhà máy có id=&quot;%1&quot; đã được đăng ký. Đang xóa.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Tải lại tất cả các thuật sĩ</translation>
     </message>
@@ -3516,6 +4650,11 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Kiểm tra trạng thái thuật sĩ</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Khác</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -3528,7 +4667,7 @@ Nếu con trỏ hệ thống để thay đổi kích thước chế độ xem kh
         <translation>Không thể chuyển đổi kết quả của &quot;%1&quot; thành chuỗi.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Đánh giá các câu lệnh JavaScript đơn giản.&lt;br&gt;Các ký tự &apos;}&apos; phải được thoát dưới dạng &quot;\}&quot;, ký tự &apos;\&apos; phải được thoát dưới dạng &quot;\\&quot; và &quot;%{&quot; phải được thoát dưới dạng &quot;%\{&quot;.</translation>
     </message>
@@ -3568,17 +4707,17 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-416" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-42" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-406" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Thêm vào...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Biên tập...</translation>
     </message>
@@ -3589,7 +4728,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Chọn thư mục</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Thực thi các lệnh tùy chỉnh</translation>
     </message>
@@ -3599,7 +4738,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
         <translation>Chạy một lệnh tùy ý với các đối số. Lệnh được tìm kiếm trong biến môi trường PATH nếu cần. Lưu ý rằng lệnh được chạy trực tiếp, không phải trong shell.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Lệnh trước đó vẫn đang chạy (&quot;%1&quot;). 
@@ -3611,7 +4750,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Giết quá trình trước đó?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>Không thể tìm thấy tệp thực thi cho &quot;%1&quot;.</translation>
     </message>
@@ -3666,7 +4805,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Tạo thư mục</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+43" />
         <source>Files in File System</source>
         <translation>Tập tin trong hệ thống tập tin</translation>
     </message>
@@ -3676,17 +4815,17 @@ Bạn có muốn giết nó không?</translation>
         <translation>Mở một tệp được cung cấp bởi đường dẫn tương đối đến tài liệu hiện tại hoặc đường dẫn tuyệt đối. &quot;~&quot; đề cập đến thư mục chính của bạn. Bạn có tùy chọn tạo một tập tin nếu nó chưa tồn tại.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+136" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>Tạo và mở tệp &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>Tạo thư mục &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Bao gồm các tập tin ẩn</translation>
     </message>
@@ -3696,7 +4835,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Lọc:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Cấu hình bộ lọc</translation>
     </message>
@@ -3721,7 +4860,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Bao gồm bộ lọc khi không sử dụng tiền tố cho tìm kiếm.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+133" />
         <source>The evaluation was interrupted.</source>
         <translation>Việc đánh giá bị gián đoạn.</translation>
     </message>
@@ -3741,7 +4880,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Động cơ bị hủy sau khi hết thời gian chờ.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+31" />
         <source>Evaluate JavaScript</source>
         <translation>Đánh giá JavaScript</translation>
     </message>
@@ -3756,13 +4895,23 @@ Bạn có muốn giết nó không?</translation>
         <translation>Đặt lại công cụ</translation>
     </message>
     <message>
-        <location line="+40" />
-        <location line="+4" />
+        <location line="+43" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Sao chép vào khay nhớ tạm: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+6" />
+        <source>Ignore Generated Files</source>
+        <translation>Bỏ qua tệp được tạo tự động</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Bỏ qua tệp được tạo tự động khi dùng các bộ lọc liên quan đến dự án.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>Tìm kiếm trên web</translation>
     </message>
@@ -3782,12 +4931,12 @@ Bạn có muốn giết nó không?</translation>
         <translation>Kích hoạt tìm kiếm trong trình theo dõi lỗi Qt.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>Xác định vị trí...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Mở một tài liệu&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tệp &gt; Mở tệp (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tệp &gt; Ví dụ &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Tệp &gt; Tệp gần đây&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Kéo và thả tệp vào đây&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3802,7 +4951,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- gõ &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; để chuyển đến định nghĩa hàm&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Cập nhật bộ nhớ đệm định vị</translation>
     </message>
@@ -3812,12 +4961,12 @@ Bạn có muốn giết nó không?</translation>
         <translation>Định vị</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Bộ lọc có sẵn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-61" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Khoảng thời gian làm mới:</translation>
     </message>
@@ -3827,17 +4976,23 @@ Bạn có muốn giết nó không?</translation>
         <translation>Bộ lọc định vị không cập nhật dữ liệu được lưu trong bộ nhớ đệm ngay lập tức, chẳng hạn như bộ lọc thư mục tùy chỉnh, sẽ cập nhật dữ liệu đó sau khoảng thời gian này.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation>phút</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Dùng hoàn thành bằng phím Tab</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>Bộ lọc định vị hiển thị đường dẫn tương đối đến dự án đang hoạt động khi có thể.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+42" />
         <source>Files in Directories</source>
         <translation>Tập tin trong thư mục</translation>
     </message>
@@ -3848,12 +5003,13 @@ Bạn có muốn giết nó không?</translation>
         <translation>Mẫu URL</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-2" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>Tên</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Tiền tố</translation>
     </message>
@@ -3873,17 +5029,17 @@ Bạn có muốn giết nó không?</translation>
         <translation>Phong tục</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-10" />
         <source>Open as Centered Popup</source>
         <translation>Mở dưới dạng cửa sổ bật lên ở giữa</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-21" />
         <source>Refresh</source>
         <translation>Làm cho khỏe lại</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+99" />
         <source>Type to locate</source>
         <translation>Nhập để định vị</translation>
     </message>
@@ -3898,7 +5054,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Chuyển sang một tài liệu đang mở.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-145" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-141" />
         <source>Locator query string.</source>
         <translation>Chuỗi truy vấn định vị.</translation>
     </message>
@@ -3933,7 +5089,7 @@ Bạn có muốn giết nó không?</translation>
         <translation>Bộ định vị: Xảy ra lỗi khi chạy &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+67" />
         <source>Sort results</source>
         <translation>Sắp xếp kết quả</translation>
     </message>
@@ -3965,7 +5121,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>URL:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-942" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-982" />
         <source>Entry is missing a logging category name.</source>
         <translation>Mục nhập thiếu tên danh mục ghi nhật ký.</translation>
     </message>
@@ -3980,7 +5136,12 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Cấp độ không hợp lệ: %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Danh mục ghi nhật ký này dùng cách tiếp cận không tĩnh không được khuyến khích và không thể được xử lý bởi trình xem nhật ký.</translation>
+    </message>
+    <message>
+        <location line="+85" />
         <location line="+88" />
         <source>Category</source>
         <translation>Loại</translation>
@@ -4022,7 +5183,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-424" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-414" />
         <source>Type</source>
         <translation>Kiểu</translation>
     </message>
@@ -4038,7 +5199,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -4046,8 +5207,8 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>Thông thoáng</translation>
     </message>
@@ -4133,12 +5294,12 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Cập nhật từ cài sẵn...</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Save Logs As</source>
         <translation>Lưu nhật ký dưới dạng</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Không thể ghi nhật ký vào &quot;%1&quot;.</translation>
     </message>
@@ -4148,17 +5309,17 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Không mở được tập tin &quot;%1&quot; để ghi nhật ký.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Save Enabled Categories As...</source>
         <translation>Lưu danh mục đã bật dưới dạng...</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Không thể ghi tập tin cài sẵn &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Tải danh mục đã bật từ</translation>
     </message>
@@ -4178,12 +5339,12 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Định dạng tệp cài sẵn không mong muốn.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Thiết bị đầu cuối nối tiếp</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Gói văn bản</translation>
     </message>
@@ -4313,7 +5474,7 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Lỗi nội bộ: Loại không hợp lệ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>Loại MIME</translation>
     </message>
@@ -4323,41 +5484,41 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Người xử lý</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Đặt lại tất cả các định nghĩa loại MIME về giá trị mặc định của chúng.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>Đặt lại các loại MIME</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Đặt lại trình xử lý được chỉ định cho tất cả các định nghĩa loại MIME về mặc định.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>Đặt lại trình xử lý</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>Mẫu:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Danh sách tên tệp có ký tự đại diện được phân tách bằng dấu chấm phẩy.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Tiêu đề ma thuật</translation>
     </message>
@@ -4372,51 +5533,63 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Sự ưu tiên</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Các loại MIME đã đăng ký</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Chi tiết</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Những thay đổi sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>Các loại MIME</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>Chuyển sang chế độ &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>Kích hoạt Chế độ xem %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Hiển thị các dòng không khớp</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Hiển thị {} dòng &amp;phía trước</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Hiển thị {} dòng &amp;phía sau</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Lọc đầu ra...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Tối đa hóa</translation>
     </message>
@@ -4426,33 +5599,35 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>đầu ra</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+97" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Mục tiếp theo</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Mục trước</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>&amp;Ra &amp; đưa</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Đặt lại về mặc định</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>đầu ra.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Thu phóng: %1%</translation>
     </message>
@@ -4461,21 +5636,37 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <source>Save Contents...</source>
         <translation>Lưu nội dung...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>Sao chép nội dung vào bộ đệm nháp</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>Không thể mở trình soạn thảo cho &quot;%1&quot;.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>Đã lược bỏ %n ký tự do giới hạn trong thiết lập</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>Đã loại bỏ %n ký tự do cài đặt Đầu ra Ứng dụng</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Loại bỏ quá nhiều đầu ra đang chờ xử lý.]</translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Tệp văn bản (*.txt);;Tất cả các tệp (*)</translation>
     </message>
@@ -4561,17 +5752,17 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Plugin đã cài đặt</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Thay đổi plugin sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>Lỗi plugin của %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Nguồn</translation>
     </message>
@@ -4586,82 +5777,133 @@ Bấm đúp để chỉnh sửa mục.</translation>
         <translation>Tập tin không tồn tại.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Plugin yêu cầu phiên bản không tương thích của %1 (%2).</translation>
+        <translation type="vanished">Plugin yêu cầu phiên bản không tương thích của %1 (%2).</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>Không tìm thấy plugin %1.</translation>
+        <translation type="vanished">Không tìm thấy plugin %1.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+82" />
         <source>Check Archive</source>
         <translation>Kiểm tra lưu trữ</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Canceled.</source>
         <translation>Đã hủy.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+44" />
         <source>Checking archive...</source>
         <translation>Đang kiểm tra kho lưu trữ...</translation>
     </message>
     <message>
-        <location line="+21" />
         <source>There was an error while unarchiving.</source>
-        <translation>Đã xảy ra lỗi khi hủy lưu trữ.</translation>
+        <translation type="vanished">Đã xảy ra lỗi khi hủy lưu trữ.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-18" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Lưu trữ là OK.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>Install Location</source>
-        <translation>Vị trí cài đặt</translation>
+        <translation type="vanished">Vị trí cài đặt</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Chọn vị trí cài đặt.</translation>
+        <translation type="vanished">Chọn vị trí cài đặt.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Plugin người dùng</translation>
+        <translation type="vanished">Plugin người dùng</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Plugin sẽ có sẵn cho tất cả các cài đặt %1 tương thích, nhưng chỉ dành cho người dùng hiện tại.</translation>
+        <translation type="vanished">Plugin sẽ có sẵn cho tất cả các cài đặt %1 tương thích, nhưng chỉ dành cho người dùng hiện tại.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>cài đặt %1</translation>
+        <translation type="vanished">cài đặt %1</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Plugin sẽ chỉ khả dụng cho bản cài đặt %1 này, nhưng dành cho tất cả người dùng có thể truy cập nó.</translation>
+        <translation type="vanished">Plugin sẽ chỉ khả dụng cho bản cài đặt %1 này, nhưng dành cho tất cả người dùng có thể truy cập nó.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Bản tóm tắt</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>&quot;%1&quot; sẽ được cài đặt vào &quot;%2&quot;.</translation>
+        <translation type="vanished">&quot;%1&quot; sẽ được cài đặt vào &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-225" />
+        <source>Plugin is already installed.</source>
+        <translation>Plugin đã được cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>Đã cài đặt một plugin có ID &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>Không có plugin nào với ID &quot;%1&quot; được cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Plugin không thể phân giải các phụ thuộc:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Không tìm thấy plugin nào.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>Tìm thấy nhiều hơn một plugin.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Archive extracted successfully.</source>
+        <translation>Đã giải nén kho lưu trữ thành công.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>Đã xảy ra lỗi khi giải nén: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Tải plugin ngay lập tức</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1 sẽ được cài đặt vào %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Chấp nhận điều khoản và điều kiện</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Plugin %1 yêu cầu bạn chấp nhận các điều khoản và điều kiện sau:</translation>
+    </message>
+    <message>
+        <location line="+34" />
         <source>Overwrite File</source>
         <translation>Ghi đè tập tin</translation>
     </message>
@@ -4677,61 +5919,79 @@ Bấm đúp để chỉnh sửa mục.</translation>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Không thể ghi tập tin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Không thể tạo thư mục &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Không thể ghi tập tin &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Cài đặt plugin</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Đang sao chép các tệp plugin...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Đang sao chép
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Không thể sao chép tập tin plugin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Hiển thị chi tiết...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>Chuyển đổi chi tiết tiến độ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>Quy trình</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-271" />
         <source>Bytes</source>
-        <translation>Byte</translation>
+        <translation type="vanished">Byte</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>KiB</source>
-        <translation>KiB</translation>
+        <translation type="vanished">KiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>MiB</translation>
+        <translation type="vanished">MiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>GiB</translation>
+        <translation type="vanished">GiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>TiB</translation>
+        <translation type="vanished">TiB</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+67" />
         <source>Patch command:</source>
         <translation>Lệnh vá:</translation>
     </message>
@@ -4783,7 +6043,12 @@ miễn là chúng chưa được sửa đổi trước khi tái cấu trúc.</tr
         <translation>Tự động giải phóng tài nguyên của các tài liệu cũ không hiển thị và không được sửa đổi. Chúng vẫn hiển thị trong danh sách các tài liệu đang mở.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Báo cáo sự cố được lưu trong &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Files to keep open:</source>
         <translation>Các tập tin cần tiếp tục mở:</translation>
     </message>
@@ -4803,7 +6068,12 @@ miễn là chúng chưa được sửa đổi trước khi tái cấu trúc.</tr
         <translation>MB</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+7" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>Số lượng &quot;Tệp gần đây&quot;:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Always Ask</source>
         <translation>Luôn hỏi</translation>
     </message>
@@ -4828,120 +6098,160 @@ miễn là chúng chưa được sửa đổi trước khi tái cấu trúc.</tr
         <translation>Yêu cầu xác nhận trước khi thoát</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-43" />
         <source>Enable crash reporting</source>
         <translation>Bật báo cáo sự cố</translation>
     </message>
     <message>
+        <location line="-132" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Biến&lt;/th&gt;&lt;th&gt;Được mở rộng thành&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;thư mục của tệp hiện tại&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;tên tệp (kèm đường dẫn đầy đủ)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;tên tệp (không kèm đường dẫn)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Dấu phân cách biến:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>Dùng giao diện D-Bus của trình quản lý tệp freedesktop.org</translation>
+    </message>
+    <message>
         <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Dùng &lt;a href=&quot;%1&quot;&gt;giao diện D-Bus freedesktop.org&lt;/a&gt; cho &lt;i&gt;Mở trong trình quản lý tệp&lt;/i&gt;, nếu có. Nếu không, quay về &quot;Trình duyệt tệp bên ngoài&quot; ở trên.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>Lệnh dùng cho &lt;i&gt;Open in File Manager&lt;/i&gt; nếu giao diện D-Bus của freedesktop.org không khả dụng. Lệnh có thể chứa các biến sau:
+</translation>
+    </message>
+    <message>
+        <location line="+49" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Cho phép báo cáo sự cố tự động. Các báo cáo được thu thập chỉ được sử dụng cho mục đích duy nhất là sửa lỗi.</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>Clear Local Crash Reports</source>
-        <translation>Xóa báo cáo sự cố cục bộ</translation>
+        <translation type="vanished">Xóa báo cáo sự cố cục bộ</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>Đối số dòng lệnh được sử dụng cho &quot;Chạy trong thiết bị đầu cuối&quot;.</translation>
+        <translation type="vanished">Đối số dòng lệnh được sử dụng cho &quot;Chạy trong thiết bị đầu cuối&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>Đối số dòng lệnh được sử dụng cho &quot;%1&quot;.</translation>
+        <translation type="vanished">Đối số dòng lệnh được sử dụng cho &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Đặt lại về mặc định.</translation>
+        <translation type="vanished">Đặt lại về mặc định.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-89" />
         <source>Terminal:</source>
         <translation>Phần cuối:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+38" />
         <source>External file browser:</source>
         <translation>Trình duyệt tập tin bên ngoài:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>File system case sensitivity:</source>
-        <translation>Phân biệt chữ hoa chữ thường của hệ thống tập tin:</translation>
+        <translation type="vanished">Phân biệt chữ hoa chữ thường của hệ thống tập tin:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Ảnh hưởng đến cách khớp tên tệp để quyết định xem chúng có giống nhau hay không.</translation>
+        <translation type="vanished">Ảnh hưởng đến cách khớp tên tệp để quyết định xem chúng có giống nhau hay không.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>Số lượng mục nhập tối đa trong &quot;Tệp gần đây&quot;:</translation>
+        <translation type="vanished">Số lượng mục nhập tối đa trong &quot;Tệp gần đây&quot;:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+149" />
         <source>System</source>
         <translation>Hệ thống</translation>
     </message>
     <message>
-        <location line="-217" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Báo cáo sự cố</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Phân biệt chữ hoa chữ thường (Mặc định)</translation>
+        <translation type="vanished">Phân biệt chữ hoa chữ thường (Mặc định)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Không phân biệt chữ hoa chữ thường (Mặc định)</translation>
+        <translation type="vanished">Không phân biệt chữ hoa chữ thường (Mặc định)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Không phân biệt chữ hoa chữ thường</translation>
+        <translation type="vanished">Không phân biệt chữ hoa chữ thường</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Thay đổi phân biệt chữ hoa chữ thường của hệ thống tệp sẽ có hiệu lực sau khi khởi động lại.</translation>
+        <translation type="vanished">Thay đổi phân biệt chữ hoa chữ thường của hệ thống tệp sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location line="+77" />
         <source>Variables</source>
-        <translation>Biến</translation>
+        <translation type="vanished">Biến</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Tự động</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>vô danh</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Chủ đề hiện tại: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Thay đổi chủ đề sẽ có hiệu lực sau khi khởi động lại.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+212" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>Đã phát hiện một thư mục dưới sự quản lý phiên bản được plugin %1 hỗ trợ.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Phát hiện quản lý phiên bản</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enable %1</source>
+        <translation>Bật %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>Thư mục &quot;%1&quot; dường như nằm dưới quản lý phiên bản có thể được xử lý bởi plugin %2 đang bị tắt.</translation>
+    </message>
+    <message>
+        <location line="+95" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>Kho lưu trữ %1 đã được phát hiện nhưng %1 không được định cấu hình.</translation>
     </message>
@@ -4988,45 +6298,121 @@ to version control (%2)?</source>
         <source>Adding to Version Control Failed</source>
         <translation>Thêm vào kiểm soát phiên bản không thành công</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Không thể thêm các tệp sau vào quản lý phiên bản (%1)
+%2
+... và %n tệp khác.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>đã thêm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>đã sửa đổi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>đã xóa</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>đã đổi tên</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>chưa theo dõi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>chưa hợp nhất</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>không xác định</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Trạng thái quản lý phiên bản: đã thêm.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Trạng thái quản lý phiên bản: đã sửa đổi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Trạng thái quản lý phiên bản: đã xóa.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Trạng thái quản lý phiên bản: đã đổi tên.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Trạng thái quản lý phiên bản: chưa theo dõi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Trạng thái quản lý phiên bản: chưa hợp nhất.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>Không thể thêm tập tin 
+        <translation type="vanished">Không thể thêm tập tin 
 %1 
 để kiểm soát phiên bản (%2)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Không thể thêm các tệp sau vào kiểm soát phiên bản (%1) 
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>Khoảng %1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Sao chép và đóng</translation>
+        <translation type="vanished">Sao chép và đóng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>thẻ:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Hiển thị tất cả</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Mặt sau</translation>
     </message>
@@ -5041,20 +6427,227 @@ to version control (%2)
         <translation>Vào toàn màn hình</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>Trình soạn thảo Python</translation>
+        <translation type="vanished">Trình soạn thảo Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>Trình chỉnh sửa đánh dấu</translation>
+        <translation type="vanished">Trình chỉnh sửa đánh dấu</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Chuyển sang trình soạn thảo kế tiếp</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Bỏ ghim</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>Với các biến môi trường có ngữ nghĩa danh sách nhưng không dùng ký tự phân tách
+đường dẫn chuẩn, bạn cần cấu hình các ký tự phân tách tương ứng tại đây nếu định
+tổng hợp chúng từ nhiều nguồn (ví dụ từ kit và từ dự án).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Biến</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Dấu phân cách</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-145" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Thêm máy chủ MCP từ Registry</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Lọc máy chủ...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Tất cả loại</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>Từ xa</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Kho lưu trữ:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Trang web:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Gói:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Kho từ xa:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Tên hiển thị.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Máy chủ mới&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Lệnh để khởi chạy tiến trình máy chủ MCP. Chỉ dùng cho loại kết nối vào/ra chuẩn.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Các đối số để khởi chạy tiến trình máy chủ MCP. Chỉ dùng cho loại kết nối vào/ra chuẩn.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>URL để kết nối đến máy chủ MCP. Không dùng cho loại kết nối vào/ra chuẩn.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Loại kết nối:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>Loại kết nối dùng cho máy chủ MCP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Vào/ra chuẩn</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>HTTP có thể phát trực tuyến</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>Tiêu đề HTTP:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>Các tiêu đề HTTP được đưa vào khi kết nối tới máy chủ MCP. Chỉ dùng cho các loại kết nối HTTP.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Các thay đổi biến môi trường được áp dụng khi khởi chạy tiến trình máy chủ MCP. Chỉ dùng cho loại kết nối standard IO.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Chọn loại kết nối</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Máy chủ này cung cấp nhiều cách kết nối. Vui lòng chọn một:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Thêm từ Registry...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Bật máy chủ MCP tài liệu Qt</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Khi được bật, máy chủ MCP tài liệu Qt từ https://qt-docs-mcp.qt.io/mcp sẽ được sử dụng.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>Các máy chủ MCP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Thoát chế độ gỡ lỗi</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Thanh công cụ</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Trình soạn thảo</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Không có kho lưu trữ bí mật! Các giá trị của bạn sẽ được lưu dưới dạng văn bản thuần trong cài đặt!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Bạn có thể cài đặt libsecret hoặc KWallet để bật kho lưu trữ bí mật.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Dòng ngữ cảnh:</translation>
     </message>
@@ -5064,13 +6657,18 @@ to version control (%2)
         <translation>Bỏ qua khoảng trắng</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Thu gọn tất cả</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Tải lại khác biệt</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] so với [%2] %3</translation>
     </message>
@@ -5086,7 +6684,7 @@ to version control (%2)
         <translation>[%1] %2 so với [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Ẩn mô tả thay đổi</translation>
     </message>
@@ -5096,54 +6694,57 @@ to version control (%2)
         <translation>Hiển thị mô tả thay đổi</translation>
     </message>
     <message>
-        <location line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+103" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Mở rộng tất cả</translation>
+    </message>
+    <message>
+        <location line="-478" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Đang chờ dữ liệu...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Truy xuất dữ liệu không thành công.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Không thể phân tích cú pháp tệp vá &quot;%1&quot;. Nội dung không có định dạng khác biệt thống nhất.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+170" />
         <source>Diff Editor</source>
         <translation>Trình chỉnh sửa khác biệt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>Khác biệt</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>Đã lưu</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Đã sửa đổi</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>Tệp khác biệt</translation>
     </message>
@@ -5153,7 +6754,7 @@ to version control (%2)
         <translation>Tập tin được sửa đổi khác biệt</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;Khác biệt</translation>
     </message>
@@ -5174,12 +6775,12 @@ to version control (%2)
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Tệp mở khác biệt</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Meta+Shift+H</translation>
     </message>
@@ -5194,27 +6795,32 @@ to version control (%2)
         <translation>Các tập tin bên ngoài khác biệt...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Khác biệt &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Chọn tệp đầu tiên cho Diff</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Chọn tệp thứ hai cho Diff</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Khác biệt &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Không tìm thấy tệp: &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Gửi đoạn tới CodePaster...</translation>
     </message>
@@ -5229,7 +6835,7 @@ to version control (%2)
         <translation>Hoàn nguyên đoạn...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Lỗi:&lt;/b&gt; Không thể giải mã &quot;%1&quot; bằng mã hóa &quot;%2&quot;.</translation>
     </message>
@@ -5239,12 +6845,12 @@ to version control (%2)
         <translation>Chọn Mã hóa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Chuyển sang Trình chỉnh sửa khác biệt thống nhất</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+4" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Chuyển sang Trình chỉnh sửa khác biệt cạnh nhau</translation>
     </message>
@@ -5254,7 +6860,7 @@ to version control (%2)
         <translation>Đồng bộ hóa thanh cuộn ngang</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>Đã bỏ qua %n dòng...</numerusform>
@@ -5276,7 +6882,7 @@ to version control (%2)
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Không có sự khác biệt.</translation>
@@ -5288,48 +6894,57 @@ to version control (%2)
         <translation>Hiển thị khác biệt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>Không có tài liệu</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Sao chép văn bản đã làm sạch</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Plugin &quot;%1&quot; được chỉ định hai lần để thử nghiệm.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Phần bổ trợ &quot;%1&quot; không tồn tại.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Plugin &quot;%1&quot; chưa được kiểm tra.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Không thể yêu cầu kịch bản &quot;%1&quot; vì nó đã được yêu cầu.</translation>
+        <translation type="vanished">Không thể yêu cầu kịch bản &quot;%1&quot; vì nó đã được yêu cầu.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Tùy chọn không xác định %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>Tùy chọn %1 yêu cầu một đối số.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+67" />
+        <source>Id:</source>
+        <translation>Id:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
@@ -5345,6 +6960,11 @@ to version control (%2)
     </message>
     <message>
         <location line="+1" />
+        <source>Vendor Id:</source>
+        <translation>ID nhà cung cấp:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Vendor:</source>
         <translation>Người bán:</translation>
     </message>
@@ -5357,6 +6977,11 @@ to version control (%2)
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Tài liệu:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5394,14 +7019,24 @@ to version control (%2)
         <translation>Có thể tải mà không cần khởi động lại:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
+        <comment>No category</comment>
         <translation>Không có</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
+        <comment>Platforms: All</comment>
         <translation>Tất cả</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Không có</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">Tất cả</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5414,8 +7049,8 @@ to version control (%2)
         <translation>Chi tiết plugin của %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1633" />
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1532" />
         <source>Continue</source>
         <translation>Tiếp tục</translation>
     </message>
@@ -5525,12 +7160,12 @@ to version control (%2)
         <translation>Plugin đã hết vòng đời và bị xóa.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-561" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-583" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Nhiều phiên bản của cùng một plugin đã được tìm thấy.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Đã phát hiện sự phụ thuộc vòng tròn:</translation>
     </message>
@@ -5582,14 +7217,50 @@ Lý do: %3</translation>
         <translation>Tắt plugin</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Điều khoản và điều kiện</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Chấp nhận</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Từ chối</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Plugin %1 yêu cầu bạn chấp nhận các điều khoản và điều kiện sau:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Bạn đã không chấp nhận các điều khoản và điều kiện</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Không thể tải plugin vì không tải được phần phụ thuộc: %1(%2) 
 Lý do: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+713" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Không tìm thấy plugin.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Không tồn tại.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+837" />
         <source>Cannot open file</source>
         <translation>Không thể mở tập tin</translation>
     </message>
@@ -5639,13 +7310,24 @@ Lý do: %3</translation>
         <translation>Không tìm thấy dữ liệu meta plugin</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>ID plugin &quot;%1&quot; phải là chữ thường</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Điều khoản và điều kiện: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Thông số nền tảng không hợp lệ &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -5677,11 +7359,25 @@ Lý do: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Không thể giải quyết sự phụ thuộc &apos;%1(%2)&apos;</translation>
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>Không thể giải quyết phần phụ thuộc vào plugin &quot;%1(%2)&quot;</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+274" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Không thể gỡ bỏ plugin hệ thống.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Không thể xác định thư mục gốc.</translation>
+    </message>
+    <message>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation type="vanished">Không thể giải quyết sự phụ thuộc &apos;%1(%2)&apos;</translation>
+    </message>
+    <message>
+        <location line="-200" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>Tải thư viện không thành công vì trạng thái != Đã giải quyết</translation>
     </message>
@@ -5706,7 +7402,17 @@ Lý do: %3</translation>
         <translation>Khởi tạo plugin không thành công: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Khởi tạo plugin đã ném ra một ngoại lệ: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Khởi tạo plugin đã ném ra một ngoại lệ không xác định</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>Không thể thực hiện tiện ích mở rộng được khởi tạo vì trạng thái != Đã khởi tạo</translation>
     </message>
@@ -5721,19 +7427,27 @@ Lý do: %3</translation>
         <translation>Lỗi nội bộ: không có phiên bản plugin nào để thực hiện delayInitialize</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (không dùng nữa)</translation>
+        <translation type="vanished">%1 (không dùng nữa)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (thử nghiệm)</translation>
+        <translation type="vanished">%1 (thử nghiệm)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>không dùng nữa</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>thử nghiệm</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Đường dẫn: %1 
@@ -5747,7 +7461,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Plugin được bật dưới dạng phần phụ thuộc của plugin đã bật.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Đường dẫn: %1 
@@ -5766,7 +7480,7 @@ Plugin bị vô hiệu hóa bởi đối số dòng lệnh.</translation>
         <translation>Đường dẫn: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Plugin không có sẵn trên nền tảng này.</translation>
     </message>
@@ -5811,7 +7525,7 @@ Plugin bị vô hiệu hóa bởi đối số dòng lệnh.</translation>
         <translation>Tiện ích</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-319" />
         <source>Enabling Plugins</source>
         <translation>Kích hoạt plugin</translation>
     </message>
@@ -5829,7 +7543,7 @@ cũng sẽ kích hoạt các plugin sau:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Vô hiệu hóa plugin</translation>
     </message>
@@ -6015,18 +7729,23 @@ Bạn có muốn ghi đè lên nó không?</translation>
         <translation>Sao chép dưới dạng URL dữ liệu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Tệp không thể đọc được.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Định dạng hình ảnh không được hỗ trợ.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>Không đọc được hình ảnh SVG.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Không đọc được hình ảnh.</translation>
     </message>
@@ -6093,37 +7812,57 @@ Bạn có muốn ghi đè lên chúng không?</translation>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Lỗi %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Không dùng nữa</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Đang đến</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Hướng ngoại</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>căn cứ</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>bắt nguồn</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Mở trong trình soạn thảo</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>Mở hệ thống phân cấp %1</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Gọi</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Loại</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Phân cấp cuộc gọi</translation>
     </message>
@@ -6133,13 +7872,18 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>Tải lại hệ thống phân cấp cuộc gọi cho biểu tượng dưới vị trí con trỏ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 cho %2</translation>
+        <translation type="vanished">%1 cho %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1 cho %2 (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>chưa được khởi tạo</translation>
@@ -6181,14 +7925,20 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>lỗi</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>không thể tắt</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>Tham số không hợp lệ trong &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Lỗi khởi tạo máy chủ ngôn ngữ &quot;%1&quot;</translation>
     </message>
@@ -6198,12 +7948,12 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>Lỗi khởi tạo: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Kết quả khởi tạo không hợp lệ.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Thông tin máy chủ không hợp lệ.</translation>
     </message>
@@ -6213,12 +7963,11 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>Không có kết quả khởi tạo.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Sao chép vào Clipboard</translation>
+        <translation type="vanished">Sao chép vào Clipboard</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Ứng dụng khách ngôn ngữ</translation>
     </message>
@@ -6268,33 +8017,35 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>Không thể xử lý loại MIME &quot;%1&quot; của tin nhắn.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Không thể gửi dữ liệu đến máy chủ chưa khởi động %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Không ngờ đã xong. Khởi động lại sau %1 giây.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Không ngờ đã xong.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Mở rộng tất cả</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Thu gọn tất cả</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Máy chủ ngôn ngữ StdIO chung</translation>
     </message>
@@ -6314,7 +8065,7 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>Các vấn đề được cung cấp bởi Máy chủ ngôn ngữ trong tài liệu hiện tại.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Thêm vào</translation>
     </message>
@@ -6324,32 +8075,37 @@ Bạn có muốn ghi đè lên chúng không?</translation>
         <translation>&amp;Xóa bỏ</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>Tổng quan</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Luôn bật</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Yêu cầu một tệp mở</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Khởi động máy chủ cho mỗi dự án</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Đã bật:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Đặt loại MIME...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Mẫu tệp</translation>
     </message>
@@ -6361,67 +8117,87 @@ Example: *.cpp%1*.h</source>
 Ví dụ: *.cpp%1*.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>Không thể phân tích cú pháp JSON tại %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>JSON dành riêng cho máy chủ ngôn ngữ để chuyển qua trường &quot;initializationOptions&quot; của yêu cầu &quot;khởi tạo&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Ngôn ngữ:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Mẫu tập tin:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Hành vi khởi động:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Tùy chọn khởi tạo:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>Chọn loại MIME</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Lọc</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Có thể thực thi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Lập luận:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>Lỗi JSON</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Máy chủ ngôn ngữ theo dự án</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Dùng cài đặt chung</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Đã bật</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Đã tắt</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Cấu hình không gian làm việc</translation>
     </message>
@@ -6433,12 +8209,12 @@ See the documentation of the specific language server for valid settings.</sourc
 Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài đặt hợp lệ.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Máy chủ ngôn ngữ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Tìm kiếm lại để cập nhật kết quả và kích hoạt lại Thay thế</translation>
     </message>
@@ -6457,7 +8233,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
 %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>Tìm tài liệu tham khảo với %1 cho:</translation>
@@ -6478,12 +8254,12 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Bắt đầu nhập để xem thay thế.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Hiển thị các bản sửa lỗi nhanh có sẵn</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>Khởi động lại %1</translation>
     </message>
@@ -6498,49 +8274,56 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Quản lý...</translation>
     </message>
     <message>
-        <location line="+144" />
-        <source>Install npm Package</source>
-        <translation>Cài đặt gói npm</translation>
-    </message>
-    <message>
-        <location line="+6" />
-        <source>Running &quot;%1&quot; to install %2.</source>
-        <translation>Chạy &quot;%1&quot; để cài đặt %2.</translation>
-    </message>
-    <message>
-        <location line="+17" />
-        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
-        <translation>Quá trình cài đặt &quot;%1&quot; đã bị hủy do hết thời gian chờ.</translation>
-    </message>
-    <message>
-        <location line="+1" />
-        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Việc cài đặt &quot;%1&quot; đã bị người dùng hủy bỏ.</translation>
-    </message>
-    <message>
-        <location line="+8" />
-        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Cài đặt &quot;%1&quot; không thành công với mã thoát %2.</translation>
-    </message>
-    <message>
-        <location line="+56" />
-        <source>Install %1 language server via npm.</source>
-        <translation>Cài đặt máy chủ ngôn ngữ %1 qua npm.</translation>
-    </message>
-    <message>
-        <location line="+1" />
-        <source>Setup %1 language server (%2).</source>
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
         <translation>Thiết lập máy chủ ngôn ngữ %1 (%2).</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Set Up</source>
+        <translation>Thiết lập</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Install npm Package</source>
+        <translation>Cài đặt gói npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Running &quot;%1&quot; to install %2.</source>
+        <translation>Chạy &quot;%1&quot; để cài đặt %2.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
+        <translation>Quá trình cài đặt &quot;%1&quot; đã bị hủy do hết thời gian chờ.</translation>
+    </message>
+    <message>
+        <source>The installation of &quot;%1&quot; was canceled by the user.</source>
+        <translation type="vanished">Việc cài đặt &quot;%1&quot; đã bị người dùng hủy bỏ.</translation>
+    </message>
+    <message>
+        <location line="-5" />
+        <source>Installing &quot;%1&quot; failed with exit code %2.</source>
+        <translation>Cài đặt &quot;%1&quot; không thành công với mã thoát %2.</translation>
+    </message>
+    <message>
+        <location line="-36" />
+        <source>Install %1 language server via npm.</source>
+        <translation>Cài đặt máy chủ ngôn ngữ %1 qua npm.</translation>
+    </message>
+    <message>
+        <source>Setup %1 language server (%2).</source>
+        <translation type="vanished">Thiết lập máy chủ ngôn ngữ %1 (%2).</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Install</source>
         <translation>Cài đặt</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Cài đặt</translation>
+        <translation type="vanished">Cài đặt</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6568,12 +8351,12 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Tùy chọn:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Khả năng của máy chủ</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Tin nhắn khách hàng</translation>
     </message>
@@ -6593,22 +8376,32 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Tệp nhật ký</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>Chưa chọn máy khách</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Thanh tra khách hàng ngôn ngữ</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;Chọn&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Máy chủ ngôn ngữ:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>Gửi tin nhắn</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Nhật ký</translation>
     </message>
@@ -6618,15 +8411,25 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Khả năng</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Thông thoáng</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Sắp xếp theo bảng chữ cái</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Chọn ký hiệu&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>Không thể giải mã nội dung bằng &quot;%1&quot;. Đang quay trở lại &quot;%2&quot;.</translation>
     </message>
@@ -6636,7 +8439,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Cần một số nguyên trong &quot;%1&quot;, nhưng lại nhận được &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>Không thể phân tích cú pháp thông báo JSON: &quot;%1&quot;.</translation>
     </message>
@@ -6646,17 +8449,17 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <translation>Cần có một đối tượng JSON nhưng lại nhận được giá trị JSON &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>Không có tham số nào trong &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>Không có ID nào được đặt trong &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>Tạo %1</translation>
     </message>
@@ -6672,25 +8475,188 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>Không tìm thấy hành động nào có ID &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>Lệnh &quot;%1&quot; không có hành động liên kết.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>Hành động &quot;%1&quot; bị vô hiệu hóa.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Mở rộng tất cả</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>Thông báo máy khách</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Thông báo</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Thông báo từ máy chủ</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>Tệp nhật ký</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>Trình kiểm tra máy chủ MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Chọn&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Xóa</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Phiên:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Không xác định</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Toàn cục</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Localhost (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Bất kỳ (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Tùy chỉnh</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Địa chỉ IP không hợp lệ.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>Máy chủ MCP</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>Kiểm tra máy chủ MCP...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>Không thể khởi động máy chủ MCP trên &quot;%1:%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>Bật máy chủ MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>Địa chỉ mà máy chủ MCP lắng nghe các kết nối đến.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Cổng:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Tự động</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>Cổng để máy chủ MCP lắng nghe. Để 0 để tự động chọn một cổng trống.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Bật truy cập Cross Origin:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>Bật Cross-Origin Resource Sharing (CORS) cho máy chủ MCP. Cần thiết nếu bạn muốn kết nối tới máy chủ từ ứng dụng web.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Đã sao chép địa chỉ vào bộ nhớ tạm.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>Máy chủ MCP đang chạy, lắng nghe tại: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>Máy chủ MCP không chạy.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Trạng thái:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+75" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+77" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+210" />
         <location line="+37" />
         <location line="+164" />
         <location line="+65" />
@@ -6705,7 +8671,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -6714,22 +8680,22 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+288" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+89" />
+        <location line="+12" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+91" />
         <location line="+101" />
         <location line="+9" />
         <location line="+102" />
@@ -6739,38 +8705,38 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+107" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1186" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+589" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1205" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -6781,7 +8747,7 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -6800,21 +8766,21 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+829" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Kết nối</translation>
     </message>
     <message>
         <location line="-97" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2298" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2315" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Vui lòng chọn loại bảng</translation>
     </message>
@@ -6848,8 +8814,8 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-33" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
@@ -6858,13 +8824,13 @@ Xem tài liệu của máy chủ ngôn ngữ cụ thể để biết các cài �
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-138" />
-        <location line="+139" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-126" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
-        <location line="+188" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-198" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
         <location line="+27" />
@@ -6881,13 +8847,13 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash gắn trong của OpenMV Cam (một cửa sổ có thể mở hoặc không mở).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-342" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-324" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util có thể không ổn định trên nền tảng này. Nếu tải không thành công, vui lòng sử dụng máy tính thông thường.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-418" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Không có cài đặt DFU cho loại bảng đã chọn!</translation>
     </message>
@@ -6900,7 +8866,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-71" />
         <source>Erasing Disk</source>
         <translation>Xóa đĩa</translation>
     </message>
@@ -6911,50 +8877,50 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
-        <location line="+22" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+821" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
+        <location line="+16" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-154" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+846" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Lỗi hết thời gian!</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-63" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -6991,42 +8957,42 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+193" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1569" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1548" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2612" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2642" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Lỗi: %L1!</translation>
@@ -7034,40 +9000,40 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     <message>
         <location line="+13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+13" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-550" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-511" />
         <source>Read ROMFS</source>
         <translation>Đọc ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Viết ROMFS</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Phần mềm nhấp nháy</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+109" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>Cập nhật chương trình cơ sở DFU không thành công!</translation>
     </message>
@@ -7075,7 +9041,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -7083,7 +9049,7 @@ Trong trường hợp này, hãy nhấp vào OK khi bạn thấy ổ đĩa flash
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-548" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Kết nối lại Cam OpenMV của bạn...</translation>
     </message>
@@ -7112,30 +9078,30 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
-        <location line="+1979" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4046" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1040" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1053" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>Hủy bỏ</translation>
     </message>
@@ -7183,7 +9149,7 @@ Tiếp tục?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+193" />
         <location line="+47" />
@@ -7299,7 +9265,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1 của bạn không có hệ thống tệp ROM.</translation>
     </message>
@@ -7346,12 +9312,12 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động DFU của OpenMV Cam của
         <translation>Để nạp một ảnh bootloader, OpenMV Cam của bạn phải ở chế độ khôi phục bootloader. Rút camera ra, nối BOOT0/SBL/RECOVERY với 3.3V bằng một dây nối, rồi cắm camera trở lại trước khi thử lại.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>Đọc ROMFS qua DFU không thành công!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>Ghi ROMFS qua DFU không thành công!</translation>
     </message>
@@ -7379,7 +9345,7 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-783" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-680" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Đang chuẩn bị các công cụ bootloader... (có thể mất vài giây)</translation>
     </message>
@@ -7449,7 +9415,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Không có cài đặt PicoTool cho thiết bị đã chọn!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -7461,7 +9427,7 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Cập nhật chương trình cơ sở PicoTool không thành công!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Giá trị %L1</translation>
@@ -7523,11 +9489,11 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation type="vanished">Vui lòng nhập mạng WiFi của bạn tại đây</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-380" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7539,20 +9505,20 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4655" />
-        <location line="+988" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4636" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Trình chỉnh sửa tập dữ liệu</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Vui lòng nhập tên lớp</translation>
     </message>
     <message>
-        <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-945" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-931" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7565,24 +9531,24 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>Không tạo được &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Không lưu được file hình ảnh vì lý do không xác định!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Bạn có chắc chắn muốn xóa vĩnh viễn &quot;%L1&quot; không?</translation>
     </message>
@@ -7610,12 +9576,12 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5017" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4998" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+352" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Vườn thú mẫu</translation>
     </message>
@@ -7636,14 +9602,14 @@ Nhấp vào nút Ok sau khi Bộ tải khởi động SBL của OpenMV Cam của
         <translation>ĐƯỢC RỒI</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1316" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1278" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1378" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1290" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-305" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Không thể sao chép tập tin &quot;%1&quot; sang &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Thiếu đối số cho -serial_number_filter</translation>
     </message>
@@ -7664,7 +9630,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng dụng của OpenMV IDE rồi khởi động lại OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7681,7 +9647,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa nó khi cài đặt tài nguyên.</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+167" />
         <source>Missing argument for -form_key</source>
         <translation>Thiếu đối số cho -form_key</translation>
     </message>
@@ -7696,12 +9662,12 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Vui lòng nhập mã biểu mẫu</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+86" />
         <source>untitled_$.py</source>
         <translation>không có tiêu đề_$.py</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+60" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7726,7 +9692,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>Ví dụ</translation>
     </message>
@@ -7742,7 +9708,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1802" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1831" />
         <source>Load Custom Firmware</source>
         <translation>Tải chương trình cơ sở tùy chỉnh</translation>
     </message>
@@ -7872,22 +9838,22 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Sao chép/Chuyển đổi tệp Python</translation>
     </message>
     <message>
         <location line="+14" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Mở thiết bị đầu cuối</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Tầm nhìn máy</translation>
     </message>
@@ -7908,28 +9874,28 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1070" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Chuyển đổi mô hình</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Trình chỉnh sửa ngưỡng</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Trình chỉnh sửa điểm chính</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7938,7 +9904,7 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Trình tạo thẻ tháng tư</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Gia đình TAG16H5 (30 Thẻ)</translation>
     </message>
@@ -7973,22 +9939,22 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <translation>Trình tạo mã QR</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Không mở được: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-2894" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-161" />
@@ -7996,8 +9962,8 @@ Các phiên bản OpenMV IDE trước v4.3.0 không có tệp này và sẽ xóa
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1801" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+2163" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+38" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8020,8 +9986,8 @@ Vui lòng đóng mọi chương trình đang xem/chỉnh sửa dữ liệu ứng
 Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi cài đặt tài nguyên.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+854" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+866" />
         <location line="+126" />
         <location line="+51" />
         <location line="+42" />
@@ -8033,8 +9999,13 @@ Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi
         <translation>Kho lưu trữ bên thứ ba</translation>
     </message>
     <message>
-        <location line="+401" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location line="+210" />
+        <source>Leave Settings</source>
+        <translation>Thoát khỏi cài đặt</translation>
+    </message>
+    <message>
+        <location line="+257" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Nạp ROMFS vào OpenMV Cam</translation>
@@ -8056,7 +10027,7 @@ Các phiên bản %2 trước v4.3.0 không có tệp này và sẽ xóa nó khi
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8130,7 +10101,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+460" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+480" />
         <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Phát luồng RTSP</translation>
@@ -8206,8 +10177,8 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
@@ -8218,7 +10189,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Vui lòng thêm phần mở rộng tập tin!</translation>
     </message>
     <message>
-        <location line="-4360" />
+        <location line="-4341" />
         <source>Exporting...</source>
         <translation>Đang xuất...</translation>
     </message>
@@ -8320,7 +10291,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Giấy phép</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
         <source>OpenMV Forums</source>
         <translation>Diễn đàn OpenMV</translation>
     </message>
@@ -8393,8 +10364,8 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Dừng (tạm dừng tập lệnh)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -8402,9 +10373,9 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Bộ đệm khung</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -8417,7 +10388,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Ghi lại bộ đệm khung</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8534,7 +10505,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+254" />
         <source>Close</source>
         <translation>Đóng</translation>
     </message>
@@ -8554,8 +10525,8 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Thu thập dữ liệu</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3813" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3842" />
         <source>Board:</source>
         <translation>Bảng:</translation>
     </message>
@@ -8620,7 +10591,7 @@ Bạn có muốn chọn một tên khác không?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Cập nhật có sẵn</translation>
     </message>
@@ -8629,7 +10600,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation type="vanished">Phiên bản mới của OpenMV IDE (%L1.%L2.%L3) hiện có sẵn để tải xuống.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>Tải xuống</translation>
     </message>
@@ -8642,7 +10613,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation type="vanished">Một ứng dụng khác đang sử dụng cổng khám phá phát sóng OpenMV Cam. Vui lòng đóng ứng dụng đó và khởi động lại OpenMV IDE để kích hoạt lập trình WiFi.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Lỗi thư mục tài liệu</translation>
     </message>
@@ -8652,7 +10623,7 @@ Bạn có muốn chọn một tên khác không?</translation>
         <translation>Không tạo được thư mục tài liệu!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>Phi công phụ GitHub</translation>
     </message>
@@ -8710,27 +10681,27 @@ Phần sụn của OpenMV Cam của bạn đang bị lỗi do lỗi phần cứn
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Cổng nối tiếp - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Đang kết nối... (thời gian chờ 30 giây)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8781,12 +10752,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>Kết nối máy chủ UDP - %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_udp_server_terminal</translation>
     </message>
@@ -8817,12 +10788,12 @@ người bổ sung sudo %L1 quay số
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>Kết nối máy chủ TCP - %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Đối số cổng không hợp lệ (%1) cho -open_tcp_server_terminal</translation>
     </message>
@@ -8851,7 +10822,7 @@ người bổ sung sudo %L1 quay số
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8964,7 +10935,7 @@ Would you like to register your OpenMV Cam now?</source>
 Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</translation>
     </message>
     <message>
-        <location line="-2446" />
+        <location line="-2440" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Giới thiệu về %1</translation>
@@ -9021,25 +10992,25 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Bộ đệm khung - Độ phân giải (w:%1, h:%2) - Tiêu điểm (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+152" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Chọn nguồn bộ đệm khung, hoặc tắt nó để đạt hiệu năng tối đa</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Tắt</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Bật</translation>
     </message>
     <message>
-        <location line="-2068" />
+        <location line="-2082" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Truyền ảnh nén JPG để có hiệu năng cao hơn</translation>
@@ -9081,7 +11052,7 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Chọn nội dung hiển thị của ngăn này</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Bộ đệm khung (%1)</translation>
     </message>
@@ -9108,8 +11079,8 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+121" />
         <source>No Drive</source>
         <translation>Không có ổ đĩa</translation>
     </message>
@@ -9119,7 +11090,7 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>Đã có phiên bản mới của %5 (%L1.%L2.%L3) để tải xuống. Xem &lt;a href=&quot;%L4&quot;&gt;ghi chú phát hành&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Kết nối (Có sẵn mạng)</translation>
     </message>
@@ -9139,7 +11110,7 @@ Bạn có muốn đăng ký OpenMV Cam của mình ngay bây giờ không?</tran
         <translation>-auto_run ở chế độ trình xem yêu cầu một đối số tệp kịch bản văn bản có thể đọc được trên dòng lệnh.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9242,13 +11213,13 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Khóa bảng được định dạng không hợp lệ!</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+84" />
         <source>OpenMV Cam Error</source>
         <translation>Lỗi OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location line="+7" />
+        <location line="+36" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
         <location line="+7" />
@@ -9257,14 +11228,14 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Lưu hình ảnh</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Tệp hình ảnh (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-925" />
+        <location line="-907" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9301,14 +11272,14 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9318,7 +11289,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Nhà ga mới</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Kết nối với cổng nối tiếp</translation>
     </message>
@@ -9339,7 +11310,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Vui lòng chọn một cổng nối tiếp</translation>
     </message>
@@ -9350,7 +11321,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9364,15 +11335,15 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>Chuỗi không hợp lệ: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Không tìm thấy cổng nối tiếp!</translation>
     </message>
@@ -9382,41 +11353,41 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Kết nối với máy chủ UDP với tư cách là máy khách hoặc khởi động Máy chủ UDP?</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation>Kết nối với máy chủ</translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation>Khởi động một máy chủ</translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Vui lòng nhập địa chỉ IP (hoặc tên miền) và cổng (ví dụ: xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>Kết nối máy khách UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Vui lòng nhập số cổng (nhập 0 cho bất kỳ cổng miễn phí ngẫu nhiên nào)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Kết nối với máy chủ TCP với tư cách là máy khách hay khởi động Máy chủ TCP?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>Kết nối máy khách TCP - %1</translation>
     </message>
@@ -9436,17 +11407,17 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Vị trí hình ảnh nguồn?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation>Bộ đệm khung</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation>Tệp hình ảnh</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Bộ ngưỡng đã chọn sẽ được cập nhật khi đóng.</translation>
@@ -9468,17 +11439,17 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Bạn muốn làm gì?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation>Chỉnh sửa tập tin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation>Hợp nhất tập tin</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9488,7 +11459,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+420" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+421" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Tệp điểm chính (*.lbp *.orb)</translation>
     </message>
@@ -9587,16 +11558,16 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Tài nguyên IDE OpenMV mới có sẵn (ví dụ: ví dụ, chương trình cơ sở, tài liệu, v.v.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Cài đặt</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
@@ -9604,19 +11575,19 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-162" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Đang tải xuống...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>Đang cài đặt...</translation>
     </message>
@@ -9638,18 +11609,18 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Không thể mở tệp tài nguyên &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Yêu cầu mạng không thành công &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-257" />
+        <location line="-268" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9662,65 +11633,65 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Xóa hệ thống tệp FAT nội bộ</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Nếu bạn bật tùy chọn này, tất cả các tệp trên hệ thống tệp FAT bên trong của OpenMV Cam sẽ bị xóa. Thao tác này không xóa các tập tin trên bất kỳ thẻ SD có thể tháo rời nào (nếu được lắp vào).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Đặt lại hệ thống tệp ROMFS</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Nếu bạn bật tùy chọn này, hệ thống tệp ROM trên OpenMV Cam của bạn sẽ được đặt lại về mặc định.</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+310" />
+        <location line="-4432" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Chạy</translation>
     </message>
     <message>
-        <location line="-210" />
+        <location line="-204" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Bộ nạp khởi động</translation>
     </message>
     <message>
-        <location line="-112" />
+        <location line="-106" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; không phải là một tập tin!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>Cập nhật hệ thống tệp ROMFS</translation>
     </message>
@@ -9741,7 +11712,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+4031" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Cảnh báo: Việc nâng cấp lên phiên bản chương trình cơ sở mới yêu cầu phải xóa hệ thống tệp FAT.</translation>
     </message>
@@ -9754,7 +11725,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation type="vanished">Không thể giải nén firmware!</translation>
     </message>
     <message>
-        <location line="-4979" />
+        <location line="-5003" />
         <source>Checking development examples...</source>
         <translation>Đang kiểm tra ví dụ phát triển...</translation>
     </message>
@@ -9795,7 +11766,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Đã có tài nguyên %2 mới (ví dụ như ví dụ, firmware, tài liệu, v.v.). Xem &lt;a href=&quot;%L1&quot;&gt;ghi chú phát hành&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>Tệp tài nguyên đã tải xuống &quot;%L1&quot; không vượt qua kiểm tra tổng kiểm. Vui lòng thử lại sau.</translation>
     </message>
@@ -9816,7 +11787,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Tệp nhị phân firmware (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>Tệp zip &quot;%L1&quot; không chứa ảnh firmware!</translation>
     </message>
@@ -9826,7 +11797,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Không thể giải nén tệp zip firmware &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+260" />
+        <location line="+254" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Không thể tải firmware phát triển mới nhất!</translation>
@@ -9891,7 +11862,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Cổng nối tiếp:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
@@ -9905,12 +11876,12 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
 %1</translation>
     </message>
     <message>
-        <location line="+185" />
+        <location line="+186" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>Một bảng ở chế độ DFU đã được phát hiện. Bạn muốn làm gì?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Cài đặt chương trình cơ sở phát hành mới nhất (v%L1.%L2.%L3)</translation>
     </message>
@@ -9945,37 +11916,37 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
         <translation>Bạn có kết nối OpenMV Cam không và nó có bị brick không?</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+2874" />
+        <location line="+87" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Tùy chọn nâng cấp:</translation>
     </message>
     <message>
-        <location line="-2793" />
-        <location line="+175" />
+        <location line="-2807" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Vui lòng cập nhật bộ nạp khởi động lên phiên bản mới nhất và cài đặt SoftDevice để flash firmware OpenMV. Bạn có thể tìm thêm thông tin trên &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-209" />
-        <location line="+174" />
+        <location line="-222" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Vui lòng rút ngắn REC về GND và đặt lại bảng của bạn. Bạn có thể tìm thêm thông tin trên &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-219" />
         <source>No released firmware available for the attached board!</source>
         <translation>Không có chương trình cơ sở nào được phát hành cho bảng đính kèm!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Vui lòng chọn một thiết bị DFU</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+166" />
         <source>Connecting...
 
 (Hit cancel if this takes more than 5 seconds).</source>
@@ -10000,7 +11971,7 @@ Bạn có muốn đăng ký OpenMV Cam ngay bây giờ không?</translation>
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Lỗi hết thời gian chờ khi lấy kiến ​​trúc bảng!</translation>
@@ -10126,8 +12097,8 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation>Phiên bản chương trình cơ sở: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Cổng nối tiếp: %L1</translation>
     </message>
@@ -10136,7 +12107,7 @@ OpenMV khuyên bạn chỉ nên tải bootloader.dfu để sửa chữa bootload
         <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [đã lỗi thời - bấm vào đây để nâng cấp]</translation>
     </message>
@@ -10175,7 +12146,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+196" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Chạy kịch bản</translation>
@@ -10193,7 +12164,7 @@ To prevent this, open the Apple menu, go to System Settings, click Privacy &amp;
         <translation>Lỗi: Không thể mở &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>More Examples</source>
         <translation>Thêm ví dụ</translation>
     </message>
@@ -10234,7 +12205,22 @@ Cụ thể, hãy xem ví dụ Xử lý hình ảnh -&gt; Theo dõi màu sắc v�
         <translation>Không tìm thấy cài đặt bảng nào cho bảng được kết nối!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-852" />
+        <source>No documentation here</source>
+        <translation>Không có tài liệu ở đây</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>Không có tài liệu cho &quot;%1&quot;</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Trợ giúp theo ngữ cảnh</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Chỉnh sửa ngưỡng thang độ xám bằng Trình chỉnh sửa ngưỡng</translation>
     </message>
@@ -10387,17 +12373,17 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
     </message>
     <message>
         <location line="+73" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Chọn ổ đĩa</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Không tìm thấy ổ đĩa hợp lệ nào liên kết với OpenMV Cam của bạn!</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+36" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Vui lòng liên kết ổ đĩa với OpenMV Cam của bạn</translation>
     </message>
@@ -10480,17 +12466,17 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
     </message>
     <message>
         <location line="+139" />
-        <location line="+20" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Lưu tập lệnh</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Loại bỏ nhận xét và chuyển đổi dấu cách thành tab?</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -10636,7 +12622,7 @@ Bạn có muốn OpenMV IDE sao chép nó vào OpenMV Cam của bạn không?</t
         <translation>Chức năng: %1, Tổng số cuộc gọi: %2, Tổng số μs: %3, Tổng số chu kỳ: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1170" />
         <source>Please select the target</source>
         <translation>Hãy chọn mục tiêu</translation>
     </message>
@@ -10657,7 +12643,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -10693,7 +12679,9 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -10712,7 +12700,7 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <translation>Chỉnh sửa ROMFS</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Một thư mục có cùng tên đã tồn tại!</translation>
@@ -10770,29 +12758,29 @@ OpenMV IDE sẽ chỉ sao chép mô hình.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Giải nén tập tin</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Xem/Chỉnh sửa</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Thêm tập tin</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Thư mục mới</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -10828,7 +12816,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nối và dùng các tùy chọn bootloader để chỉnh sửa lại hệ thống tập tin ROM.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Chưa chọn loại bo mạch.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -10836,13 +12831,34 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
         <translation>ROMFS không được hỗ trợ trên bảng này!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Chưa chọn đích ROMFS.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>Đọc ROMFS từ camera không thành công.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Không giải nén được ROMFS!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>Ảnh ROMFS có %L1 byte nhưng ROMFS của bo mạch chứa %L2 byte.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>Ghi ROMFS vào camera không thành công.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>ROMFS OpenMV</translation>
@@ -10884,7 +12900,7 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
         <translation>Bạn có chắc chắn muốn đặt lại hệ thống tệp ROM của OpenMV Cam không?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10962,34 +12978,34 @@ OpenMV Cam của bạn vẫn đang ở chế độ bootloader: nhấp Kết nố
         <translation>Thiết lập lại mềm</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-298" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-301" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>Công cụ Alif</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Vui lòng bật công tắc chế độ bảo trì cứng, công tắc này chưa được bật, sau đó nhấn nút người dùng trên OpenMV Cam của bạn.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-924" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-815" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Tính năng này không được hỗ trợ trên máy này!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -10998,7 +13014,7 @@ The camera must be power cycled after after recovery.</source>
 Máy ảnh phải được cấp nguồn sau khi phục hồi.</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+42" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11007,7 +13023,7 @@ The camera must be power cycled after a system package update.</source>
 Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+100" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Vui lòng ngắt kết nối OpenMV Cam khỏi máy tính của bạn, tắt công tắc chế độ bảo trì cứng nếu được bật. Để OpenMV Cam của bạn không được kết nối cho đến khi được hướng dẫn kết nối lại.</translation>
     </message>
@@ -11017,21 +13033,21 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Nhận thiết bị</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1247" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1264" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Truy vấn không thành công!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11049,13 +13065,13 @@ Máy ảnh phải được cấp nguồn sau khi cập nhật gói hệ thống.
         <location line="+27" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-101" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-110" />
         <location line="+50" />
         <source>Uploading...</source>
         <translation>Đang tải lên...</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+77" />
         <source>This may take a while, coffee break?</source>
         <translation>Việc này có thể mất một lúc, nghỉ giải lao nhé?</translation>
     </message>
@@ -11234,61 +13250,61 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Vui lòng nhập Khóa API dự án Edge Impulse</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Đang chờ flashloader được nhận diện...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>Flashloader i.MX không được nhận diện.</translation>
     </message>
     <message>
-        <location line="+356" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location line="+305" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Lệnh này mất một lúc để thực thi. Xin hãy kiên nhẫn.</translation>
     </message>
@@ -11308,7 +13324,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Xong</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Bận</translation>
     </message>
@@ -11324,12 +13340,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Ẩn chi tiết</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Bạn muốn làm gì?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Chỉ cần sao chép kịch bản</translation>
     </message>
@@ -11349,40 +13365,40 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Biên dịch thành mã byte</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;Tùy chọn CLI của trình biên dịch chéo MPY&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Trình độ cao</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>Trình biên dịch chéo MPY</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Biên dịch</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>Trình biên dịch chéo MPY không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+294" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+296" />
         <source>Success - Press Ok to close the window</source>
         <translation>Thành công - Nhấn Ok để đóng cửa sổ</translation>
     </message>
@@ -11395,13 +13411,13 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Lỗi - Nhấn Cancel để đóng cửa sổ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>PicoCông cụ</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>Lập trình viên STM32</translation>
     </message>
@@ -11411,18 +13427,18 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Lập trình viên STM32 không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Trình biên dịch STedge</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>Không sao chép được tệp JSON!</translation>
     </message>
@@ -11433,12 +13449,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Vui lòng chỉ định cài đặt trình biên dịch:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Tối ưu hóa tối đa</translation>
     </message>
@@ -11458,7 +13474,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Không tối ưu hóa</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>--sự dài dòng 2</translation>
     </message>
@@ -11468,7 +13484,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Tùy chọn CLI lõi STdgeAI&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>--mapping-tóm tắt</translation>
     </message>
@@ -11478,7 +13494,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Tùy chọn CLI thần kinh STEdgeAI&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Không mở được tệp JSON!</translation>
@@ -11591,12 +13607,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Trình biên dịch Vela</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Tối ưu hóa hiệu suất</translation>
     </message>
@@ -11606,7 +13622,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Tối ưu hóa kích thước</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>--verbose-tiến bộ</translation>
     </message>
@@ -11616,7 +13632,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Tùy chọn CLI của Trình biên dịch Vela&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Vela</translation>
     </message>
@@ -11626,7 +13642,7 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Trình biên dịch Vela không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-796" />
         <source>Reading File...</source>
         <translation>Đang đọc tệp...</translation>
     </message>
@@ -11658,12 +13674,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>Tập tin chuyển mã...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11722,30 +13738,30 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation type="vanished">Nhận định dạng đầu vào</translation>
     </message>
     <message>
-        <location line="+97" />
-        <location line="+85" />
+        <location line="+105" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>Không tìm thấy tệp thực thi FFmpeg (bản cài đặt có thể chưa hoàn chỉnh).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Lấy định dạng</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+101" />
+        <location line="+95" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11769,12 +13785,12 @@ Mở một tập dữ liệu để tải nó lên.</translation>
         <translation>Chuyển đổi video</translation>
     </message>
     <message>
-        <location line="-1132" />
+        <location line="-1153" />
         <source>Converting</source>
         <translation>Chuyển đổi</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG không được hỗ trợ trên nền tảng này.</translation>
     </message>
@@ -11792,7 +13808,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Bản cài đặt OpenMV IDE của bạn có thể chưa hoàn chỉnh.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Không thể ghi vào tập tin video đầu ra!</translation>
     </message>
@@ -11802,19 +13818,19 @@ Bản cài đặt OpenMV IDE của bạn có thể chưa hoàn chỉnh.</transla
         <translation>Không thể mở tập tin video đầu ra!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Phát video</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Phát lại video không được hỗ trợ trên nền tảng này.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>Không khởi chạy được ffplay!</translation>
     </message>
@@ -11942,7 +13958,7 @@ Bản cài đặt OpenMV IDE của bạn có thể chưa hoàn chỉnh.</transla
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Hiện văn bản</translation>
@@ -12187,7 +14203,7 @@ Hãy sửa hoặc xóa chúng trước khi lưu.</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12212,7 +14228,7 @@ Hãy sửa hoặc xóa chúng trước khi lưu.</translation>
         <translation>&quot;%L1&quot; - cài đặt thất bại: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - cập nhật &quot;%L2&quot; thất bại: %L3</translation>
     </message>
@@ -12429,7 +14445,7 @@ Cài đặt ngay?</translation>
         <translation>&quot;%L1&quot; chưa được cài đặt</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; bo mạch &quot;%L2&quot; (%L3) trùng id bootloader của &quot;%L4&quot; (%L5)</translation>
     </message>
@@ -12588,7 +14604,7 @@ This deletes its boards, firmware, and examples.</source>
 Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -12826,7 +14842,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>%L1 mẫu (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12940,12 +14956,12 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Phổ</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Lấy trung bình</translation>
     </message>
@@ -13046,7 +15062,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Kết nối camera để xem các kênh</translation>
     </message>
@@ -13478,98 +15494,61 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Trò chuyện tác tử (plugin ACP Client) không khả dụng.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Boost.</translation>
     </message>
     <message>
-        <location line="-568" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="+1" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Vị trí dự án</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -13583,11 +15562,63 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Vị trí</translation>
     </message>
     <message>
-        <location line="-336" />
+        <location line="-931" />
         <source>Boost Test (header only)</source>
         <translation>Kiểm tra tăng cường (chỉ tiêu đề)</translation>
     </message>
@@ -13597,32 +15628,32 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Kiểm tra tăng cường (thư viện dùng chung)</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+26" />
+        <location line="+1" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Khung kiểm tra:</translation>
     </message>
     <message>
-        <location line="-166" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-358" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Tên bộ thử nghiệm:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Tên trường hợp thử nghiệm:</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-361" />
         <source>Boost include directory (optional):</source>
         <translation>Tăng cường bao gồm thư mục (tùy chọn):</translation>
     </message>
@@ -13632,281 +15663,286 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Thư mục cài đặt Boost (tùy chọn):</translation>
     </message>
     <message>
-        <location line="-534" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Xây dựng hệ thống:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Thông tin dự án và thử nghiệm</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Chi tiết</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Lựa chọn bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>Bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Quản lý dự án</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Bản tóm tắt</translation>
     </message>
     <message>
-        <location line="-321" />
+        <location line="-934" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Tạo một dự án thử nghiệm đơn vị mới bằng Boost. Kiểm tra đơn vị cho phép bạn xác minh rằng mã phù hợp để sử dụng và không có hồi quy.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Dự án thử nghiệm</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>Dự án thử nghiệm tăng cường</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng cách sử dụng Catch2.</translation>
     </message>
@@ -13951,7 +15987,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm Catch2</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Google Test.</translation>
     </message>
@@ -13986,7 +16022,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm của Google</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng Qt Test.</translation>
     </message>
@@ -14002,13 +16038,19 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Tạo mã khởi tạo và dọn dẹp</translation>
     </message>
     <message>
-        <location line="-209" />
+        <location line="-286" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake cho Qt5 và Qt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Tạo một dự án thử nghiệm đơn vị mới bằng Qt Test. Kiểm tra đơn vị cho phép bạn xác minh rằng mã phù hợp để sử dụng và không có hồi quy.</translation>
     </message>
@@ -14018,7 +16060,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Dự án thử nghiệm Qt</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Trình hướng dẫn này tạo một dự án thử nghiệm đơn vị đơn giản bằng cách sử dụng Qt Quick Test.</translation>
     </message>
@@ -14028,7 +16070,25 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tạo mã thiết lập</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+2" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 trở lên</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 trở lên</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Tương thích mã Qt:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Tạo một dự án thử nghiệm đơn vị mới bằng Qt Quick Test. Kiểm tra đơn vị cho phép bạn xác minh rằng mã phù hợp để sử dụng và không có hồi quy.</translation>
     </message>
@@ -14043,36 +16103,36 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tên đủ điều kiện, bao gồm cả không gian tên</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Tên lớp:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Tùy chỉnh&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Lớp cơ sở:</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>Bao gồm QObject</translation>
     </message>
@@ -14107,62 +16167,63 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Thêm QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Tệp tiêu đề:</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Tập tin nguồn:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Con đường:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Xác định lớp</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Tạo tiêu đề C++ và tệp nguồn cho một lớp mới mà bạn có thể thêm vào dự án C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>Lớp C++</translation>
     </message>
@@ -14203,16 +16264,16 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Mô hình mục Qt</translation>
     </message>
@@ -14248,75 +16309,64 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Lớp Python</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Tạo một dự án thử nghiệm dựa trên CMake để có thể nhập đoạn mã.</translation>
+        <translation type="vanished">Tạo một dự án thử nghiệm dựa trên CMake để có thể nhập đoạn mã.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>Mã số:</translation>
+        <translation type="vanished">Mã số:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidget</translation>
+        <translation type="vanished">QtCore, QtWidget</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Sử dụng mô-đun Qt:</translation>
+        <translation type="vanished">Sử dụng mô-đun Qt:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Gói ứng dụng (macOS)</translation>
+        <translation type="vanished">Gói ứng dụng (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Xác định đoạn mã</translation>
+        <translation type="vanished">Xác định đoạn mã</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Đoạn mã</translation>
+        <translation type="vanished">Đoạn mã</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Tạo một dự án thử nghiệm dựa trên CMake nơi bạn có thể nhập đoạn mã để biên dịch và kiểm tra nó.</translation>
+        <translation type="vanished">Tạo một dự án thử nghiệm dựa trên CMake nơi bạn có thể nhập đoạn mã để biên dịch và kiểm tra nó.</translation>
     </message>
     <message>
-        <location line="-148" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="+384" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Dự án khác</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code Snippet</source>
-        <translation>Đoạn mã</translation>
+        <translation type="vanished">Đoạn mã</translation>
     </message>
     <message>
-        <location line="+316" />
+        <location line="-575" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Tạo tệp tiêu đề mà bạn có thể thêm vào dự án C/C++.</translation>
     </message>
@@ -14326,7 +16376,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp tiêu đề C/C++</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Tạo một tệp nguồn mà bạn có thể thêm vào dự án C/C++.</translation>
     </message>
@@ -14336,7 +16386,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp nguồn C/C++</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Chọn một mẫu biểu mẫu</translation>
     </message>
@@ -14356,12 +16406,14 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Mẫu thiết kế tiện ích Qt</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="+7" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Tạo trình đổ bóng phân đoạn trong Ngôn ngữ tạo bóng OpenGL dành cho máy tính để bàn (GLSL). Trình đổ bóng mảnh tạo ra màu pixel cuối cùng cho hình tam giác, điểm và đường được hiển thị bằng OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14369,7 +16421,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Trình đổ bóng mảnh (OpenGL trên máy tính để bàn)</translation>
     </message>
@@ -14384,7 +16436,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Vertex Shader (OpenGL dành cho máy tính để bàn)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Tạo trình đổ bóng phân đoạn bằng Ngôn ngữ tạo bóng OpenGL/ES 2.0 (GLSL/ES). Trình đổ bóng mảnh tạo ra màu pixel cuối cùng cho hình tam giác, điểm và đường được hiển thị bằng OpenGL.</translation>
     </message>
@@ -14404,7 +16456,31 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Trình tạo bóng đỉnh (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+7" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Tạo fragment shader bằng GLSL tương thích Vulkan. Fragment shader tạo ra màu pixel cuối cùng cho các tam giác, điểm và đường được kết xuất.
+Dùng khi nhắm tới Qt6 trở lên.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Fragment Shader (tương thích Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Tạo vertex shader bằng GLSL tương thích Vulkan. Vertex shader biến đổi vị trí, pháp tuyến và tọa độ kết cấu của các tam giác, điểm và đường được kết xuất.
+Dùng khi nhắm tới Qt6 trở lên.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Vertex Shader (tương thích Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Tạo một tệp Java với mã soạn sẵn.</translation>
     </message>
@@ -14419,7 +16495,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp Java</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Thư viện không quốc tịch</translation>
     </message>
@@ -14440,92 +16516,82 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp JS</translation>
     </message>
     <message>
-        <location line="-84" />
+        <location line="+7" />
         <source>Creates a markdown file.</source>
         <translation>Tạo một tập tin đánh dấu.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>Tổng quan</translation>
     </message>
     <message>
-        <location line="-119" />
+        <location line="-97" />
         <source>Markdown File</source>
         <translation>Tệp đánh dấu</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Model name:</source>
-        <translation>Tên mẫu:</translation>
+        <translation type="vanished">Tên mẫu:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+54" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Vị trí:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; tồn tại trong hệ thống tệp.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Tên mẫu và vị trí</translation>
+        <translation type="vanished">Tên mẫu và vị trí</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Tạo một mô hình trống mới với sơ đồ trống.</translation>
+        <translation type="vanished">Tạo một mô hình trống mới với sơ đồ trống.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>Làm người mẫu</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>Người mẫu</translation>
+        <translation type="vanished">Người mẫu</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Tạo mô hình vết xước bằng cách sử dụng tệp tạm thời.</translation>
+        <translation type="vanished">Tạo mô hình vết xước bằng cách sử dụng tệp tạm thời.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Mô hình vết xước</translation>
+        <translation type="vanished">Mô hình vết xước</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Tạo một tệp Nim trống bằng bộ ký tự UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Tập tin Nim</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Tạo một tập lệnh Nim trống bằng cách sử dụng bộ ký tự UTF-8.</translation>
     </message>
@@ -14545,7 +16611,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp Python</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Tạo tệp Tài nguyên Qt (.qrc).</translation>
     </message>
@@ -14555,7 +16621,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp tài nguyên Qt</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Tạo tệp QML với mã soạn sẵn, bắt đầu bằng &quot;nhập QtQuick&quot;.</translation>
     </message>
@@ -14565,7 +16631,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Tệp QML (Qt nhanh 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Tạo vùng đệm đầu bằng cách sử dụng tệp tạm thời.</translation>
     </message>
@@ -14575,7 +16641,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Bộ đệm đầu</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Tên biểu đồ trạng thái:</translation>
     </message>
@@ -14595,7 +16661,7 @@ Thao tác này sẽ xóa các bo mạch, firmware và ví dụ của nó.</trans
         <translation>Biểu đồ bang</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14639,7 +16705,7 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Phiên bản Catch2:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Thông tin kiểm tra</translation>
     </message>
@@ -14655,7 +16721,7 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Trường hợp thử nghiệm</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Tạo một tập tin trống.</translation>
     </message>
@@ -14665,7 +16731,7 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Tệp trống</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Tạo một tệp dịch mà bạn có thể thêm vào dự án Qt.</translation>
     </message>
@@ -14675,61 +16741,67 @@ Bạn không nên kết hợp nhiều khung thử nghiệm trong một dự án.
         <translation>Tệp dịch Qt</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Trình hướng dẫn này tạo một ứng dụng bảng điều khiển dựa trên Qt đơn giản.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake với khả năng tương thích Qt 5</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Xác định hệ thống xây dựng</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Xây dựng hệ thống</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Tệp dịch</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Dịch thuật</translation>
     </message>
     <message>
-        <location line="-406" />
+        <location line="-529" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14739,30 +16811,31 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Ứng dụng (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Ứng dụng bảng điều khiển Qt</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Trình hướng dẫn này tạo một dự án thư viện C++.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Chỉ định thông tin cơ bản về các lớp mà bạn muốn tạo các tệp mã nguồn khung.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Thư viện chia sẻ</translation>
     </message>
@@ -14777,14 +16850,15 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Plugin Qt</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Kiểu:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -14820,12 +16894,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Không có</translation>
     </message>
@@ -14850,55 +16919,55 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>mô-đun Qt:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Xác định chi tiết dự án</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-482" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Tạo thư viện C++. Bạn có thể tạo:&lt;ul&gt;&lt;li&gt;thư viện C++ dùng chung để sử dụng với &lt;tt&gt;QPluginLoader&lt;/tt&gt; và thời gian chạy (Plugin)&lt;/li&gt;&lt;li&gt;thư viện C++ dùng chung hoặc tĩnh để sử dụng với dự án khác tại linktime&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-425" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>Thư viện</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>Thư viện C++</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Tạo một ứng dụng Nim đơn giản.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Dự án không phải Qt</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Ứng dụng Nim</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>nhị phân</translation>
     </message>
@@ -14914,12 +16983,12 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Sự miêu tả:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -14980,18 +17049,20 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>Khác</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Giấy phép:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>C</translation>
     </message>
@@ -15032,21 +17103,21 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Cấu hình</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Tạo ứng dụng Nim bằng Nimble.</translation>
     </message>
@@ -15056,7 +17127,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh nhẹn</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Tạo một ứng dụng C đơn giản không có phần phụ thuộc.</translation>
     </message>
@@ -15066,7 +17137,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng C đơn giản</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Tạo một ứng dụng C++ đơn giản không có phần phụ thuộc.</translation>
     </message>
@@ -15076,7 +17147,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng C++ đơn giản</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Trình hướng dẫn này tạo một tệp .pro trống.</translation>
     </message>
@@ -15091,46 +17162,55 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Dự án qmake trống</translation>
     </message>
     <message>
-        <location line="-180" />
-        <location line="+21" />
+        <location line="+5" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+33" />
-        <source>PySide 2</source>
-        <translation>PySide 2</translation>
+        <location line="-22" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Tên dự án chỉ được dùng chữ cái, chữ số hoặc dấu gạch dưới.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+45" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>Plugin C++ của Qt Creator</translation>
+    </message>
+    <message>
+        <source>PySide 2</source>
+        <translation type="vanished">PySide 2</translation>
+    </message>
+    <message>
+        <location line="-379" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Tạo ứng dụng Qt cho Python chỉ chứa mã chính cho QApplication.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Ứng dụng (Qt cho Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Ứng dụng trống</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Tập tin dự án:</translation>
+        <translation type="vanished">Tập tin dự án:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Tạo một ứng dụng Qt cho Python có chứa một cửa sổ trống.</translation>
     </message>
@@ -15140,27 +17220,23 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Cửa sổ trống</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15</translation>
+        <translation type="vanished">PySide 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14</translation>
+        <translation type="vanished">PySide 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13</translation>
+        <translation type="vanished">PySide 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12</translation>
+        <translation type="vanished">PySide 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+13" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Tạo ứng dụng Qt Quick có chứa một cửa sổ trống.</translation>
     </message>
@@ -15170,7 +17246,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh Qt - Trống</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+11" />
         <source>Define Python Interpreter</source>
         <translation>Xác định trình thông dịch Python</translation>
     </message>
@@ -15190,45 +17266,169 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Giao diện người dùng cửa sổ</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Trình hướng dẫn này tạo một dự án Qt Interface Framework.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Cấu hình giao diện mô tả dữ liệu trao đổi giữa frontend và backend.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Tên của dự án được tạo, bắt đầu bằng chữ in hoa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Tên giao diện:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Tên của giao diện trở thành một phần của mô-đun được tạo, bắt đầu bằng chữ in hoa.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Thêm mã mẫu vào dự án</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Bao gồm các cấu trúc cơ bản; nếu không, một dự án trống sẽ được tạo.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Tạo giao diện phân vùng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>Giao diện phân vùng có các phần tử tương ứng cho toàn bộ dữ liệu trong nhiều vùng.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Thiết lập backend:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Tạo backend mô phỏng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>Tạo backend mô phỏng có thể viết kịch bản từ QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Tạo triển khai backend production</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Tạo backend triển khai gốc đầy đủ.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Tạo backend Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Tạo backend có thể kết nối tới phía máy chủ bằng công nghệ Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Tạo máy chủ mô phỏng Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Tạo máy chủ mô phỏng mà backend Qt Remote Objects có thể kết nối tới.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Tạo máy chủ production Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Tạo máy chủ triển khai gốc mà backend Qt Remote Objects có thể kết nối tới.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>Nếu không chọn backend hoạt động được, mã mẫu của giao diện frontend sẽ không chạy và thậm chí có thể gây lỗi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Cấu hình giao diện</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Cấu hình</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Tạo dự án Qt Interface Framework với frontend đã cấu hình và các backend tùy chọn.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>Dự án Qt Interface Framework</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Phiên bản Qt yêu cầu tối thiểu:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>Mục của tôi</translation>
     </message>
@@ -15268,24 +17468,38 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Plugin mở rộng Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="+6" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Sử dụng bàn phím ảo Qt</translation>
     </message>
     <message>
-        <location line="-180" />
         <source>Qt 6.4</source>
-        <translation>Qt 6.4</translation>
+        <translation type="vanished">Qt 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-49" />
         <source>Qt 6.5</source>
         <translation>Qt 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+1" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>Đặt QT_QML_GENERATE_QMLLS_INI thành ON trong CMake</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Tạo ứng dụng Qt Quick có thể có cả mã QML và C++. Bạn có thể xây dựng ứng dụng và triển khai nó trên các nền tảng mục tiêu trên máy tính để bàn, thiết bị nhúng và thiết bị di động.</translation>
     </message>
@@ -15295,7 +17509,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng nhanh Qt</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15309,7 +17523,17 @@ Sử dụng phiên bản &quot;tương thích&quot; này nếu bạn muốn sử
         <translation>Ứng dụng nhanh Qt (tương thích)</translation>
     </message>
     <message>
-        <location line="-92" />
+        <location line="+5" />
+        <source>Create a project that you can open in Qt Design Studio</source>
+        <translation>Tạo dự án có thể mở trong Qt Design Studio</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Tạo dự án có cấu trúc tương thích với cả Qt Design Studio và Qt Creator. Dự án chứa một biểu mẫu .ui.qml mà bạn có thể chỉnh sửa trực quan trong Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15323,12 +17547,12 @@ To develop a full application, create a Qt Quick Application project instead.</s
         <translation>Nguyên mẫu giao diện người dùng nhanh Qt</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Trình hướng dẫn này tạo dự án Ứng dụng Qt Widget. Theo mặc định, ứng dụng bắt nguồn từ QApplication và bao gồm một tiện ích trống.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>Tạo biểu mẫu</translation>
     </message>
@@ -15357,50 +17581,50 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ứng dụng tiện ích Qt</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vui lòng định cấu hình &lt;b&gt;%{vcsName&lt;/b&gt; ngay bây giờ.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Kho lưu trữ:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>URL kho lưu trữ không hợp lệ</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>Thư mục:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; tồn tại trong hệ thống tệp.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Sử dụng thư mục hiện có</translation>
     </message>
@@ -15475,23 +17699,22 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Ôn tập:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Chỉ định URL kho lưu trữ, thư mục thanh toán và đường dẫn.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Đang điều hành chi nhánh Bazaar...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Dòng vô tính</translation>
     </message>
@@ -15501,22 +17724,22 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Sao chép một nhánh Bazaar và cố gắng tải dự án chứa trong đó.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Dự án nhập khẩu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Bazaar Clone (Hoặc chi nhánh)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Mô-đun:</translation>
     </message>
@@ -15531,19 +17754,19 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Đang chạy thanh toán CVS...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Thanh toán</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Kiểm tra kho lưu trữ CVS và cố gắng tải dự án chứa trong đó.</translation>
     </message>
@@ -15553,7 +17776,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Thanh toán CVS</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;nhánh mặc định&gt;</translation>
     </message>
@@ -15593,7 +17816,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Bản sao Git</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Chạy bản sao Mercurial...</translation>
     </message>
@@ -15608,7 +17831,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>bản sao thủy ngân</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Chứng chỉ máy chủ tin cậy</translation>
     </message>
@@ -15628,7 +17851,62 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Thanh toán lật đổ</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Yêu cầu passthrough</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Yêu cầu quyền cho chế độ passthrough.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>Yêu cầu theo dõi bàn tay</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>Yêu cầu quyền theo dõi bàn tay.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Yêu cầu neo không gian</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Yêu cầu quyền cho API neo.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>Tính năng XR</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Tính năng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Chọn kit: với Apple Vision Pro, hãy chọn bất kỳ kit nào.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>Tạo ứng dụng Qt Quick 3D XR với mã QML và C++. Bạn có thể build và triển khai ứng dụng lên VR trên máy tính để bàn và các nền tảng XR độc lập. Với Apple Vision Pro, bạn có thể phát triển trong Qt Creator nhưng phải triển khai dự án CMake bằng XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>Ứng dụng XR</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Trình hướng dẫn này tạo một plugin Qt Creator tùy chỉnh.</translation>
     </message>
@@ -15688,12 +17966,11 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Tạo plugin Qt Creator tùy chỉnh.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Plugin tạo Qt</translation>
+        <translation type="vanished">Plugin tạo Qt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>&amp;Phiên</translation>
     </message>
@@ -15713,7 +17990,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Tên của phiên hiện tại.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Xóa phiên</translation>
     </message>
@@ -15735,7 +18012,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
 %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Lỗi khi khôi phục phiên</translation>
     </message>
@@ -15745,33 +18022,33 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Không thể khôi phục phiên %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Đang tải phiên</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Lỗi khi lưu phiên</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>Không thể lưu phiên %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Không thể lưu phiên vào tệp &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Nhập tên của phiên:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Trình quản lý phiên</translation>
     </message>
@@ -15811,7 +18088,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Phiên là gì?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Phiên họp</translation>
     </message>
@@ -15821,7 +18098,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Sửa đổi lần cuối</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Tên phiên mới</translation>
@@ -15847,7 +18124,7 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Sao chép và &amp;Mở</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Đổi tên phiên</translation>
     </message>
@@ -15862,17 +18139,17 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Đổi tên và &amp;Mở</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;tùy chỉnh&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Cấu hình bị lỗi. Kiểm tra chế độ xem Sự cố để biết chi tiết.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>Không thể tạo thư mục &quot;%1&quot;</translation>
     </message>
@@ -15882,44 +18159,41 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Chương trình &quot;%1&quot; không tồn tại hoặc không thể thực thi được.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Đang bắt đầu: &quot;%1&quot; %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>Quá trình &quot;%1&quot; đã thoát bình thường.</translation>
+        <translation type="vanished">Quá trình &quot;%1&quot; đã thoát bình thường.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>Quá trình &quot;%1&quot; đã thoát với mã %2.</translation>
+        <translation type="vanished">Quá trình &quot;%1&quot; đã thoát với mã %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>Không thể bắt đầu quá trình &quot;%1&quot; %2.</translation>
+        <translation type="vanished">Không thể bắt đầu quá trình &quot;%1&quot; %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>Quá trình &quot;%1&quot; bị lỗi.</translation>
+        <translation type="vanished">Quá trình &quot;%1&quot; bị lỗi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[không có]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>Tên</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Nguồn</translation>
     </message>
@@ -15939,7 +18213,22 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Tạo nên</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Xóa các cấu hình chạy</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Lọc cấu hình chạy theo tên</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Xóa mục đã chọn</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>Tệp trong bất kỳ dự án nào</translation>
     </message>
@@ -15949,18 +18238,19 @@ Chọn trước Qt trên máy tính để bàn để xây dựng ứng dụng n�
         <translation>Định vị các tập tin của tất cả các dự án đang mở. Nối &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; để chuyển đến số dòng đã cho. Thêm một &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; khác để chuyển đến số cột.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Tất cả dự án</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Tất cả các dự án:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -15969,7 +18259,7 @@ Không bao gồm: %2
 %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Đính kèm trình gỡ lỗi vào quy trình này</translation>
     </message>
@@ -15979,7 +18269,33 @@ Không bao gồm: %2
         <translation>Đính kèm trình gỡ lỗi vào %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Danh mục</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Gỡ lỗi</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Nghiêm trọng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Lỗi chí mạng</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Thông tin</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Dừng lại</translation>
     </message>
@@ -16015,12 +18331,12 @@ Không bao gồm: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Đầu ra ứng dụng</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Chạy lại cấu hình chạy này.</translation>
     </message>
@@ -16030,45 +18346,74 @@ Không bao gồm: %2
         <translation>Dừng chạy chương trình.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>ứng dụng-output-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Cửa sổ đầu ra ứng dụng</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Lọc danh mục nhật ký nội bộ của Qt</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Lọc danh mục theo biểu thức chính quy</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Biểu thức chính quy không hợp lệ: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Bỏ chọn tất cả</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Bỏ chọn tất cả %1</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Chọn tất cả %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Không hợp lệ</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Đầu ra ngắt từ</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Xóa đầu ra cũ trong lần chạy mới</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Hợp nhất stderr và stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Luôn luôn</translation>
     </message>
@@ -16083,45 +18428,64 @@ Không bao gồm: %2
         <translation>Chỉ ở đầu ra đầu tiên</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Loại bỏ đầu ra quá mức</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Ghi đè màu nền</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Tùy chỉnh màu nền của đầu ra ứng dụng.
+Lưu ý: đầu ra hiện có sẽ không được tô màu lại.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Giới hạn đầu ra ở %1 ký tự</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Mở đầu ra ứng dụng khi chạy:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Mở đầu ra ứng dụng khi gỡ lỗi:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>không có tiêu đề</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Xây dựng thư mục:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>Không thể truy cập thư mục bản dựng từ thiết bị bản dựng.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>Xây dựng bóng tối:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>Thư mục bản dựng chứa ký tự có thể có vấn đề &quot;%1&quot;.</translation>
     </message>
@@ -16131,15 +18495,16 @@ Không bao gồm: %2
         <translation>Cảnh báo này có thể bị chặn &lt;a href=&quot;dummy&quot;&gt;tại đây&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Thông tin gỡ lỗi riêng biệt:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Môi trường xây dựng</translation>
     </message>
@@ -16149,14 +18514,14 @@ Không bao gồm: %2
         <translation>Xóa môi trường hệ thống</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Trình phân tích cú pháp đầu ra tùy chỉnh</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Phân tích đầu ra tiêu chuẩn trong quá trình xây dựng</translation>
     </message>
@@ -16166,29 +18531,34 @@ Không bao gồm: %2
         <translation>Làm cho trình phân tích cú pháp đầu ra tìm kiếm chẩn đoán trên thiết bị xuất chuẩn thay vì thiết bị xuất chuẩn.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Cài đặt bản dựng</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Thư mục gốc của dự án. Có thể khác với Project:Path đối với một số hệ thống xây dựng.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Xây dựng thư mục</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Tên cấu hình bản dựng</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Các biến trong môi trường của cấu hình bản dựng</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Chú giải công cụ trong bộ chọn mục tiêu:</translation>
     </message>
@@ -16198,8 +18568,9 @@ Không bao gồm: %2
         <translation>Xuất hiện dưới dạng chú giải công cụ khi di chuột cấu hình bản dựng</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Môi trường hệ thống</translation>
     </message>
@@ -16215,7 +18586,24 @@ Không bao gồm: %2
         <translation>Dự án không được phân tích cú pháp thành công.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>Mặc định</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Phát hành</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Hồ sơ</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>Tập tin chính của dự án</translation>
     </message>
@@ -16245,7 +18633,7 @@ Không bao gồm: %2
         <translation>Loại cấu hình bản dựng đang hoạt động của dự án</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>Không có thiết bị xây dựng nào được đặt cho bộ &quot;%1&quot;.</translation>
     </message>
@@ -16265,14 +18653,14 @@ Không bao gồm: %2
         <translation>Thiết bị xây dựng &quot;%1&quot; không thể truy cập thư mục bản dựng.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>Đã hoàn thành %1 trong số %n bước</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Dừng ứng dụng</translation>
     </message>
@@ -16292,7 +18680,7 @@ Không bao gồm: %2
         <translation>Thiết bị xây dựng không chuẩn bị được cho việc xây dựng %1 (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Biên dịch</translation>
@@ -16336,13 +18724,13 @@ Không bao gồm: %2
         <translation>Các vấn đề được tìm thấy khi chạy thử nghiệm.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -16352,10 +18740,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -16363,11 +18751,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Triển khai</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -16375,7 +18763,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Xây dựng</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>Đã hủy xây dựng/triển khai</translation>
     </message>
@@ -16395,34 +18783,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Bỏ qua bước bị vô hiệu hóa %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Lỗi khi xây dựng/triển khai dự án %1 (kit: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>Bộ %1 có vấn đề về cấu hình và đây có thể là nguyên nhân sâu xa của vấn đề này.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>Khi thực hiện bước &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Cho phép</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Vô hiệu hóa</translation>
@@ -16433,7 +18821,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Sử dụng mặc định dự án</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>Thư mục xây dựng mặc định:</translation>
     </message>
@@ -16443,7 +18831,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Mẫu dùng để xây dựng thư mục bản dựng mặc định.&lt;br&gt;&lt;br&gt;Có thể đặt giá trị mặc định bằng biến môi trường &lt;tt&gt;%1&lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Thư mục làm việc mặc định:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Mẫu dùng để tạo thư mục làm việc mặc định của cấu hình chạy.&lt;br&gt;&lt;br&gt;Giá trị mặc định có thể được đặt bằng biến môi trường &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>Gỡ lỗi QML:</translation>
     </message>
@@ -16458,72 +18856,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Thuộc tính bản dựng mặc định</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Không có cài đặt bản dựng nào</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Chỉnh sửa cấu hình bản dựng:</translation>
+        <translation type="vanished">Chỉnh sửa cấu hình bản dựng:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Thêm vào</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Di dời</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Đổi tên...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Dòng vô tính...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Cấu hình build đang dùng:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Cấu hình mới</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Tên cấu hình mới:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Tên mới cho cấu hình bản dựng &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -16532,14 +18932,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Cấu hình sao chép</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Hủy bản dựng &amp;&amp; Xóa cấu hình bản dựng</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Không loại bỏ</translation>
     </message>
@@ -16584,13 +18984,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Xóa mục</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 bước</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>Không %1 bước</translation>
     </message>
@@ -16615,7 +19015,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Không thể xóa bước xây dựng trong khi xây dựng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>Dự án hiện đang được phân tích cú pháp.</translation>
     </message>
@@ -16640,13 +19040,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kiểu mã</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Biên dịch đầu ra</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>biên dịch-output.txt</translation>
@@ -16667,9 +19067,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ô</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Đã loại bỏ đầu ra biên dịch quá mức.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>Mở đầu ra biên dịch khi xây dựng</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>Loại bỏ đầu ra biên dịch liên tục đến nhanh hơn khả năng xử lý.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -16706,7 +19116,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Sao chép thư mục đệ quy</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>lỗi:</translation>
@@ -16718,7 +19128,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>cảnh báo:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>Đang truy vấn %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>Nhận trợ giúp từ %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Nhờ LLM %1 trợ giúp về vấn đề này.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>Các tập tin trong dự án hiện tại</translation>
     </message>
@@ -16728,44 +19153,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Định vị các tập tin từ dự án của tài liệu hiện tại. Nối &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; để chuyển đến số dòng đã cho. Thêm một &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; khác để chuyển đến số cột.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>Dự án &quot;%1&quot;</translation>
+        <translation type="vanished">Dự án &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Dự án hiện tại</translation>
+        <translation type="vanished">Dự án hiện tại</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Một dự án</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>Dự án &quot;%1&quot;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Dự án:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Hiện tại</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Có thể thực thi tùy chỉnh</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Chạy %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Bạn cần đặt tệp thực thi trong cấu hình chạy tùy chỉnh.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>Chưa cấu hình tệp thực thi trong cấu hình chạy tùy chỉnh.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>Đi tới cấu hình chạy %1 và thiết lập một tệp thực thi.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Bạn cần đặt tệp thực thi trong cấu hình chạy tùy chỉnh.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Không thể đọc trình phân tích đầu ra tùy chỉnh từ &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Trình phân tích cú pháp đầu ra tùy chỉnh quét đầu ra dòng lệnh để tìm các mẫu lỗi do người dùng cung cấp&lt;br&gt;để tạo các mục trong Sự cố.&lt;br&gt;Bạn có thể định cấu hình trình phân tích cú pháp &lt;a href=&quot;dummy&quot;&gt;tại đây&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (mặc định của dự án)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Không có trình phân tích cú pháp tùy chỉnh nào đang hoạt động</translation>
     </message>
@@ -16846,8 +19305,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Bài kiểm tra</translation>
     </message>
@@ -16871,19 +19330,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Lỗi</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Cảnh báo</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Không áp dụng:</translation>
     </message>
@@ -16903,16 +19362,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mẫu không khớp với tin nhắn.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Build mặc định</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Chạy mặc định</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Tên của trình phân tích tùy chỉnh.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Trình phân tích tùy chỉnh này được dùng mặc định cho tất cả cấu hình xây dựng của dự án.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Trình phân tích tùy chỉnh này được dùng mặc định cho tất cả cấu hình chạy của dự án.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Không thể sửa đổi trình phân tích vì nó được nhập tự động.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Trình phân tích cú pháp đầu ra tùy chỉnh được xác định ở đây có thể được bật riêng lẻ trong cài đặt xây dựng hoặc chạy của dự án.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Thêm vào...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Xuất...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>Nhập...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -16920,37 +19419,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Trình phân tích cú pháp mới</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Lưu trình phân tích</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Tải trình phân tích</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Lỗi khi tải trình phân tích</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Lỗi khi tải trình phân tích: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Phong tục</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Kêu vang</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -16963,11 +19487,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Trống</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>MACRO[=VALUE]</translation>
     </message>
@@ -16992,22 +19517,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Danh sách mkspecs được phân tách bằng dấu phẩy.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Đường dẫn trình biên dịch:</translation>
+        <translation type="vanished">&amp;Đường dẫn trình biên dịch:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Tạo đường dẫn:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;ABI:</translation>
     </message>
@@ -17052,7 +19573,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Điều này sẽ tạo ra sự phụ thuộc vòng tròn.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Đồng bộ hóa cấu hình</translation>
     </message>
@@ -17062,12 +19583,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Đồng bộ hóa bộ công cụ hoạt động, xây dựng và triển khai cấu hình giữa các dự án.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Triển khai các phần phụ thuộc</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Không chỉ build các phần phụ thuộc mà còn triển khai chúng.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>phụ thuộc</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Triển khai cục bộ</translation>
@@ -17093,65 +19624,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ghi đè dữ liệu triển khai từ hệ thống xây dựng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>Cấu hình chạy Qt</translation>
+        <translation type="vanished">Cấu hình chạy Qt</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>PC cục bộ</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Máy tính để bàn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>Không thể hủy tiến trình với pid %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>Không thể làm gián đoạn quá trình với pid %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Không thể mở quá trình.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>Id quy trình không hợp lệ.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Không thể mở quy trình: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>DebugBreakProcess không thành công:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 không tồn tại. Nếu bạn tự xây dựng %2, hãy xem https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 không tồn tại. Bản cài đặt %2 của bạn có vẻ bị hỏng.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>Bạn sẽ cần ít nhất một cổng để gỡ lỗi QML.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Chạy tự động phát hiện ngay</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Loại máy:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Thiết bị vật lý</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Cổng trống:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>&quot;%1&quot; chỉ có thể xử lý các tệp cục bộ.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>Thiết bị &quot;%1&quot; chưa sẵn sàng để sử dụng.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 không tồn tại. Nếu bạn tự xây dựng %2, hãy xem https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>Không thể bắt đầu %1. Kiểm tra src\tools\win64interrupt\win64interrupt.c để biết thêm thông tin.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>không thể phá vỡ quá trình.</translation>
     </message>
@@ -17173,7 +19743,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Không có thiết bị nào được thiết lập cho bộ sản phẩm này. Bạn có muốn thêm một thiết bị?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Kiểm tra thiết bị đã được cấu hình</translation>
     </message>
@@ -17188,23 +19758,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Các loại thiết bị có sẵn:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>Không có thiết bị cho đường dẫn &quot;%1&quot;</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>Không tìm thấy thiết bị cho đường dẫn &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>Không có quyền truy cập tệp cho thiết bị &quot;%1&quot;.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>Không tìm thấy thiết bị nào cho đường dẫn &quot;%1&quot;</translation>
+        <translation type="vanished">Không tìm thấy thiết bị nào cho đường dẫn &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>Không có quyền truy cập tập tin cho thiết bị &quot;%1&quot;</translation>
+        <translation type="vanished">Không có quyền truy cập tập tin cho thiết bị &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Tất cả</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (mặc định cho %2)</translation>
     </message>
@@ -17244,22 +19830,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Lỗi từ xa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Thiết bị:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Loại cụ thể</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Di dời</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Đặt làm mặc định</translation>
     </message>
@@ -17269,7 +19856,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Thêm vào...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Bắt đầu trình hướng dẫn thêm thiết bị...</translation>
     </message>
@@ -17280,7 +19867,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Thêm %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;Tên:</translation>
     </message>
@@ -17295,7 +19882,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tình trạng hiện tại:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Khôi phục</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Có (id là &quot;%1&quot;)</translation>
     </message>
@@ -17310,8 +19902,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Hiển thị các tiến trình đang chạy...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Thiết bị</translation>
     </message>
@@ -17331,24 +19923,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kiểm tra thiết bị không thành công.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Đầu ra lỗi từ xa là: %1</translation>
+        <translation type="vanished">Đầu ra lỗi từ xa là: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>Đã tìm thấy %n cổng miễn phí.</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Đang kiểm tra các cổng có sẵn...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Không có thiết bị nào được thiết lập để chuyển thử nghiệm.</translation>
     </message>
@@ -17378,7 +19969,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>bản sao tập tin chung</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>Tìm trong PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Tìm trong bản cài đặt Qt</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Tìm trong các thư mục</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Danh sách thư mục phân tách bằng dấu chấm phẩy</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Chọn các đường dẫn trên thiết bị cần quét tìm tệp nhị phân.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Tạo kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Thiết lập các kit cho bộ công cụ biên dịch của thiết bị này.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Thiết bị chưa được kết nối.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Để trống để tìm tệp thực thi trong $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Dùng chuyển tiếp cổng SSH để gỡ lỗi</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>Bật gỡ lỗi trên các mục tiêu từ xa không thể mở cổng GDB server.
+Đường hầm SSH được dùng để ánh xạ cổng GDB server từ xa tới localhost.
+Cổng cục bộ và cổng từ xa được xác định tự động.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Truy cập qua:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Chọn thiết bị để kết nối qua.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Trực tiếp</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Tên thiết bị không được để trống.</translation>
     </message>
@@ -17388,18 +20053,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Một thiết bị có tên này đã tồn tại.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Nhập danh sách và dải như sau: &quot;1024,1026-1028,1030&quot;.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Việc mở một thiết bị đầu cuối không được hỗ trợ.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>Tệp &quot;%1&quot; không thể được xử lý bởi thiết bị &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Chạy script nguồn không được hỗ trợ trên nền tảng này.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Thiết bị</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>Không có công thức thao tác tín hiệu nào khả dụng cho thiết bị này.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Sẵn sàng để sử dụng</translation>
     </message>
@@ -17419,22 +20103,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Không xác định</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Chạy công cụ trên thiết bị này</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Công cụ nguồn và xây dựng trên thiết bị này</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Tự động phát hiện</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>localSource() không được triển khai cho loại thiết bị này.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>Chưa chỉ định đường dẫn cho SignalOperationData.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>Chưa chỉ định PID hợp lệ cho SignalOperationData.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Không có thiết bị nào cho đường dẫn đã cho: &quot;%1&quot;.</translation>
+        <translation type="vanished">Không có thiết bị nào cho đường dẫn đã cho: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>Thiết bị cho đường dẫn &quot;%1&quot; không hỗ trợ quá trình hủy.</translation>
+        <translation type="vanished">Thiết bị cho đường dẫn &quot;%1&quot; không hỗ trợ quá trình hủy.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>ID tiến trình</translation>
     </message>
@@ -17444,53 +20151,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Dòng lệnh</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>Đang tìm nạp danh sách quy trình. Việc này có thể mất một lúc.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>Không thể lấy danh sách tiến trình.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>SSH</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Bật chia sẻ kết nối:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Hết thời gian chia sẻ kết nối:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>Đường dẫn đến ssh thực thi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>Đường dẫn đến file thực thi sftp:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>Đường dẫn đến tệp thực thi ssh-askpass:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>Đường dẫn đến tệp thực thi ssh-keygen:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>phút</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Dự án %1</translation>
@@ -17502,7 +20213,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Dự án</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Khôi phục toàn cầu</translation>
     </message>
@@ -17512,40 +20224,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Cài đặt hiển thị</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Hiển thị phải &amp;lề tại cột:</translation>
+        <translation type="vanished">Hiển thị phải &amp;lề tại cột:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Sử dụng lề theo ngữ cảnh cụ thể</translation>
+        <translation type="vanished">Sử dụng lề theo ngữ cảnh cụ thể</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Nếu có, hãy sử dụng một mức ký quỹ khác. Ví dụ: ColumnLimit từ plugin ClangFormat.</translation>
+        <translation type="vanished">Nếu có, hãy sử dụng một mức ký quỹ khác. Ví dụ: ColumnLimit từ plugin ClangFormat.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Biên tập viên</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Môi trường</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Môi trường cơ sở cho cấu hình chạy này:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Hiển thị trong đầu ra ứng dụng khi chạy</translation>
     </message>
@@ -17556,12 +20263,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Chọn thư mục</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>B&amp;iên tập</translation>
     </message>
@@ -17601,7 +20308,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mở một thiết bị đầu cuối với môi trường này được thiết lập.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Bỏ đặt &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
@@ -17643,17 +20350,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Sử dụng &lt;b&gt;%1&lt;/b&gt; và</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>Tệp trong tất cả các thư mục dự án</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>Các tệp trong tất cả các thư mục dự án:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Cài đặt</translation>
     </message>
@@ -17663,18 +20370,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Dễ thấy</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>tối thiểu</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 (%2, %3 %4 tại %5)</translation>
+        <translation type="vanished">%1 (%2, %3 %4 tại %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3 tại &quot;%4&quot;)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Ghi đè cho mô hình mã</translation>
     </message>
@@ -17686,7 +20397,7 @@ fails because Clang does not understand the target architecture.</source>
 thất bại vì Clang không hiểu kiến trúc đích.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Cờ codegen nền tảng:</translation>
     </message>
@@ -17701,7 +20412,7 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
         <translation>Mục tiêu gấp ba:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Chuỗi công cụ dành cho phụ huynh:</translation>
     </message>
@@ -17726,22 +20437,22 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
         <translation>Việc chỉnh sửa văn bản đầu vào để sửa chữa.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Trường không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Trường không có tên.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>Trường &quot;%1&quot; không có loại.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>Trường &quot;%1&quot; có loại &quot;%2&quot; không được hỗ trợ.</translation>
     </message>
@@ -17751,102 +20462,102 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
         <translation>Khi phân tích trường &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Dữ liệu nhãn (&quot;%1&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Nhãn (&quot;%1&quot;) không có trText.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>Dữ liệu Spacer (&quot;%1&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>&quot;Hệ số&quot; thuộc tính Spacer (&quot;%1&quot;) không có giá trị nguyên.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Dữ liệu LineEdit (&quot;%1&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) có biểu thức chính quy không hợp lệ &quot;%2&quot; trong &quot;trình xác thực&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) có giá trị không hợp lệ &quot;%2&quot; trong phần &quot;hoàn thành&quot;.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Dữ liệu TextEdit (&quot;%1&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>Dữ liệu PathChooser không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>loại &quot;%1&quot; không phải là một trong các &quot;hiện cóDirectory&quot;, &quot;thư mục&quot;, &quot;tệp&quot;, &quot;saveFile&quot;, &quot;hiện cóCommand&quot;, &quot;lệnh&quot;, &quot;bất kỳ&quot;.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Dữ liệu CheckBox (&quot;%1&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Các giá trị CheckBox (&quot;%1&quot;) cho trạng thái đã chọn và không được chọn là giống hệt nhau.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>Không cho phép danh sách JSON nào bên trong các mục Danh sách.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Không tìm thấy &quot;chìa khóa&quot; trong các mục Danh sách.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>Dữ liệu %1 (&quot;%2&quot;) không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;chỉ mục&quot; không phải là giá trị số nguyên.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; không phải là giá trị nguyên.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;mục&quot; bị thiếu.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;mục&quot; không phải là danh sách JSON.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>Ít nhất một tính năng bắt buộc không có mặt.</translation>
     </message>
@@ -17861,7 +20572,7 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
         <translation>Ít nhất một tính năng ưa thích không có.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Danh sách tính năng được đặt và không thuộc danh sách loại.</translation>
     </message>
@@ -17876,7 +20587,7 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
         <translation>Phần tử danh sách tính năng không phải là một chuỗi hoặc đối tượng.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Không thể cam kết kiểm soát phiên bản</translation>
     </message>
@@ -17893,7 +20604,7 @@ thất bại vì Clang không hiểu kiến trúc đích.</translation>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>Không thể thêm dự án con &quot;%1&quot; 
@@ -17901,20 +20612,25 @@ to project &quot;%2&quot;.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Không thể thêm một hoặc nhiều tệp vào dự án 
 &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>Dự án con &quot;%1&quot; nằm ngoài &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>Tệp dự án</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Chọn tệp dự án</translation>
     </message>
@@ -17924,12 +20640,12 @@ to project &quot;%2&quot;.</source>
         <translation>Dự án chứa nhiều hơn một tệp dự án. Chọn cái bạn muốn sử dụng.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Kiểm tra xem biến có tồn tại hay không.&lt;br&gt;Trả về &quot;true&quot; nếu có và trả về một chuỗi trống nếu không.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Không thể xác định đường dẫn mục tiêu. &quot;TargetPath&quot; chưa được đặt trên bất kỳ trang nào.</translation>
     </message>
@@ -17949,32 +20665,32 @@ to project &quot;%2&quot;.</source>
         <translation>Không có &apos;chìa khóa&apos; trong đối tượng tùy chọn.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Không thể ghi đè tập tin</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Không thể định dạng tệp</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Không thể ghi tập tin</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>Không thể xử lý tập tin sau</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Không thể đánh bóng tập tin</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Không mở được tập tin</translation>
     </message>
@@ -18016,66 +20732,65 @@ to project &quot;%2&quot;.</source>
         <translation>Không thể mở dự án</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Máy phát điện không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Trình tạo không có bộ typeId.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>LoạiId &quot;%1&quot; của trình tạo không xác định. Các typeId được hỗ trợ là: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>Đường dẫn &quot;%1&quot; không tồn tại khi kiểm tra đường dẫn tìm kiếm của trình hướng dẫn JSON.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>Đang kiểm tra &quot;%1&quot; cho %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* Không thể phân tích cú pháp &quot;%1&quot;:%2:%3: %4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Không tìm thấy đối tượng JSON trong &quot;%1&quot;.</translation>
+        <translation type="vanished">* Không tìm thấy đối tượng JSON trong &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Đã tìm thấy và phân tích cấu hình.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>JsonWizard: không tìm thấy &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Trang không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Trang chưa được đặt typeId.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>LoạiId &quot;%1&quot; của trang không xác định. Các typeId được hỗ trợ là: &quot;%2&quot;.</translation>
     </message>
@@ -18085,7 +20800,8 @@ to project &quot;%2&quot;.</source>
         <translation>Trang có typeId &quot;%1&quot; có &quot;chỉ mục&quot; không hợp lệ.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* Không tìm thấy đối tượng JSON trong &quot;%1&quot;.</translation>
     </message>
@@ -18095,22 +20811,22 @@ to project &quot;%2&quot;.</source>
         <translation>* Phiên bản %1 không được hỗ trợ.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Không tạo được: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>không tìm thấy chìa khóa.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Dự kiến ​​một đối tượng hoặc một danh sách.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Nền tảng được chọn cho trình hướng dẫn.</translation>
     </message>
@@ -18140,62 +20856,66 @@ to project &quot;%2&quot;.</source>
         <translation>Không có id nào được đặt.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Không có danh mục nào được đặt.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>Không tìm thấy tập tin biểu tượng &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>Không tìm thấy tệp hình ảnh &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>Chưa đặt Tên hiển thị.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>Không có Danh mục hiển thị nào được đặt.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Không có mô tả nào được đặt.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>Khi phân tích cú pháp &quot;máy phát điện&quot;: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>Khi phân tích &quot;trang&quot;: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>Không có typeId hợp lệ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">Khi phân tích &quot;trang&quot;: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Mục nhập danh sách dữ liệu tệp không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Nguồn và đích đều trống.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>Khi xử lý &quot;%1&quot;:&lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [thư mục]</translation>
     </message>
@@ -18222,7 +20942,12 @@ to project &quot;%2&quot;.</source>
         <translation>Khi phân tích các trường của trang &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Không tìm thấy trường nào.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>&quot;dữ liệu&quot; cho trang &quot;Tệp&quot; cần phải được bỏ đặt hoặc một đối tượng trống.</translation>
     </message>
@@ -18232,12 +20957,12 @@ to project &quot;%2&quot;.</source>
         <translation>Lỗi phân tích cú pháp &quot;%1&quot; trong trang &quot;Bộ công cụ&quot;: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>&quot;data&quot; phải là đối tượng JSON cho trang &quot;Kits&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>Trang &quot;Bộ công cụ&quot; yêu cầu bộ &quot;%1&quot;.</translation>
     </message>
@@ -18247,38 +20972,39 @@ to project &quot;%2&quot;.</source>
         <translation>&quot;dữ liệu&quot; phải trống hoặc phải là đối tượng JSON cho các trang &quot;Dự án&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Biểu thức chính quy không hợp lệ &quot;%1&quot; trong &quot;%2&quot;. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>&quot;dữ liệu&quot; cho trang &quot;Tóm tắt&quot; có thể không được đặt hoặc cần phải là một đối tượng.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Chìa khóa không phải là một đối tượng.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>Mẫu &quot;%1&quot; không phải là biểu thức chính quy hợp lệ.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>ScannerGenerator: Mẫu nhị phân &quot;%1&quot; không hợp lệ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>Vô danh</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Bộ</translation>
@@ -18309,13 +21035,14 @@ to project &quot;%2&quot;.</source>
         <translation>ID của bộ sản phẩm.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>Bản sao của %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -18346,49 +21073,86 @@ to project &quot;%2&quot;.</source>
         <translation>Hệ thống gốc</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Không có trình biên dịch&gt;</translation>
+        <translation type="vanished">&lt;Không có trình biên dịch&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Trình biên dịch</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Trình biên dịch được sử dụng để xây dựng.&lt;br&gt;Đảm bảo trình biên dịch sẽ tạo ra các tệp nhị phân tương thích với thiết bị đích, phiên bản Qt và các thư viện khác được sử dụng.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Trình biên dịch tạo mã cho các ABI khác nhau: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Đường dẫn đến trình biên dịch có thể thực thi được</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Trình biên dịch cho các ngôn ngữ khác nhau</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Trình biên dịch có thể thực thi được cho các ngôn ngữ khác nhau</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>Đã tìm thấy toolchain: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Đang gỡ bỏ bộ công cụ biên dịch: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Bộ công cụ biên dịch: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Cần một đối tượng JSON để phát hiện toolchain, nhưng nhận được: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>Không tìm thấy bộ công cụ biên dịch nào trong đối tượng JSON để phát hiện.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Ngôn ngữ không xác định trong phát hiện bộ công cụ biên dịch: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Không có trình biên dịch nào được cài đặt trong bộ công cụ.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Chạy loại thiết bị</translation>
     </message>
@@ -18398,18 +21162,69 @@ to project &quot;%2&quot;.</source>
         <translation>Loại thiết bị để chạy ứng dụng.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Loại thiết bị không xác định</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Thiết bị:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Loại thiết bị</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Chưa đặt thiết bị chạy.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Thiết bị build không tương thích với kit này.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Thiết bị chạy không tương thích với kit này.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Địa chỉ máy chủ (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>Cổng SSH (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Tên người dùng (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>Tệp khóa riêng (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Tên thiết bị (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Thư mục gốc của thiết bị (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Chạy thiết bị</translation>
     </message>
@@ -18419,129 +21234,245 @@ to project &quot;%2&quot;.</source>
         <translation>Thiết bị để chạy các ứng dụng.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Loại thiết bị build</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Loại thiết bị để xây dựng.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Không có thiết bị nào được đặt.</translation>
+        <translation type="vanished">Không có thiết bị nào được đặt.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Thiết bị không tương thích với bộ này.</translation>
+        <translation type="vanished">Thiết bị không tương thích với bộ này.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Chưa được định cấu hình</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Địa chỉ máy chủ</translation>
+        <translation type="vanished">Địa chỉ máy chủ</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>Cổng SSH</translation>
+        <translation type="vanished">Cổng SSH</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Bật để chỉ định tệp khóa riêng dùng cho xác thực; nếu không, cơ chế mặc định sẽ được dùng để xác thực (mật khẩu, .sshconfig và khóa riêng mặc định).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Dùng khóa cụ thể:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Chế độ kiểm tra khóa máy chủ SSH của thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Kiểm tra khóa máy chủ:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Không kiểm tra khóa máy chủ.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Nghiêm ngặt</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Kiểm tra khóa máy chủ nghiêm ngặt.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Cho phép không khớp</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Cho phép kiểm tra khóa máy chủ.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Tên máy chủ hoặc địa chỉ IP</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Tên máy chủ hoặc địa chỉ IP của thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Tên máy chủ:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Tên người dùng</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Tên người dùng SSH của thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Tên người dùng:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Số cổng SSH của thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>Cổng SSH:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>Tệp khóa riêng</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>Tệp khóa riêng của thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>Tệp khóa riêng:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Thời gian chờ:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Thời gian chờ kết nối SSH của thiết bị.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Tên thiết bị</translation>
+        <translation type="vanished">Tên thiết bị</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Thư mục gốc của thiết bị</translation>
+        <translation type="vanished">Thư mục gốc của thiết bị</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Xây dựng thiết bị</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Thiết bị được sử dụng để xây dựng các ứng dụng trên đó.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Không có thiết bị xây dựng nào được thiết lập.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Xây dựng địa chỉ máy chủ</translation>
+        <translation type="vanished">Xây dựng địa chỉ máy chủ</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>Xây dựng cổng SSH</translation>
+        <translation type="vanished">Xây dựng cổng SSH</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Xây dựng tên người dùng</translation>
+        <translation type="vanished">Xây dựng tên người dùng</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Xây dựng tập tin khóa riêng</translation>
+        <translation type="vanished">Xây dựng tập tin khóa riêng</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Xây dựng tên thiết bị</translation>
+        <translation type="vanished">Xây dựng tên thiết bị</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Xây dựng thư mục gốc của thiết bị</translation>
+        <translation type="vanished">Xây dựng thư mục gốc của thiết bị</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Thay đổi...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Không có thay đổi để áp dụng.</translation>
+        <translation type="vanished">Không có thay đổi để áp dụng.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>Buộc đầu ra trình biên dịch MSVC UTF-8</translation>
+        <translation type="vanished">Buộc đầu ra trình biên dịch MSVC UTF-8</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Sửa môi trường build...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Sửa môi trường chạy...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Sửa môi trường build</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Sửa môi trường chạy</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>Buộc đầu ra MSVC dùng UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>Chuyển MSVC sang tiếng Anh hoặc giữ ngôn ngữ và chỉ buộc đầu ra UTF-8 (có thể thay đổi tùy thuộc vào trình biên dịch MSVC được sử dụng).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Cài đặt môi trường xây dựng bổ sung khi sử dụng bộ công cụ này.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Giá trị cài đặt môi trường không hợp lệ.</translation>
+        <translation type="vanished">Giá trị cài đặt môi trường không hợp lệ.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -18549,29 +21480,65 @@ to project &quot;%2&quot;.</source>
         <translation>Bộ dự án đang hoạt động: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 trên %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Máy tính để bàn (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Đang tải bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Đánh dấu là có thể thay đổi</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Quản lý...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>Nhà máy khía cạnh kit &quot;%1&quot; không hỗ trợ tạo khía cạnh từ JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Đang tự động phát hiện kit cho thiết bị: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>Đã tìm thấy kit: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Đang gỡ bỏ các kit cho thiết bị: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Đang gỡ bỏ kit: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Kit: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
@@ -18586,12 +21553,12 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Tên của bộ công cụ phù hợp để tạo tên thư mục. Giá trị này được sử dụng cho biến &lt;i&gt;%1&lt;/i&gt;, chẳng hạn, biến này xác định tên của thư mục bản dựng bóng.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Tên hệ thống tập tin:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Biểu tượng bộ.</translation>
     </message>
@@ -18606,12 +21573,17 @@ to project &quot;%2&quot;.</source>
         <translation>Đặt lại về biểu tượng mặc định của thiết bị</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Tên hiển thị không phải là duy nhất.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Đặt làm kit mặc định để dùng khi tạo dự án mới.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>Mặc định cho %1</translation>
     </message>
@@ -18626,18 +21598,16 @@ to project &quot;%2&quot;.</source>
         <translation>Hình ảnh (*.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (mặc định)</translation>
+        <translation type="vanished">%1 (mặc định)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Đặt làm mặc định</translation>
+        <translation type="vanished">Đặt làm mặc định</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Bộ lọc cài đặt...</translation>
     </message>
@@ -18657,7 +21627,7 @@ to project &quot;%2&quot;.</source>
         <translation>Chọn cài đặt bộ công cụ nào sẽ hiển thị theo mặc định.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Đưa ra lập luận:</translation>
     </message>
@@ -18737,29 +21707,27 @@ to project &quot;%2&quot;.</source>
         <translation>Không có xung đột với biến môi trường &lt;code&gt;MAKEFLAGS&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Chạy mà không cần triển khai</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Dự án</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Chạy</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Dự án:&lt;/b&gt; %1</translation>
     </message>
@@ -18794,7 +21762,7 @@ to project &quot;%2&quot;.</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Dự án: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</translation>
     </message>
@@ -18824,49 +21792,54 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);&lt;/style&gt;Dự án &lt;b&gt;%1&lt;/b&gt; chưa được định cấu hình&lt;br/&gt;&lt;br/&gt;Bạn có thể định cấu hình dự án trong &lt;a href=&quot;projectmode&quot;&gt;Chế độ dự án&lt;/a&gt;&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Quay lại sử dụng môi trường được lưu trong bộ nhớ đệm cho &quot;%1&quot; sau:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Khởi tạo:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
-        <source>&lt;empty&gt;</source>
-        <translation type="unfinished"></translation>
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>Không tìm thấy bộ công cụ biên dịch MSVC nào. Bạn cần cài đặt Visual Studio hoặc Visual Studio Build Tools.</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="+49" />
+        <location line="+148" />
+        <source>&lt;empty&gt;</source>
+        <translation>&lt;empty&gt;</translation>
+    </message>
+    <message>
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Đối số bổ sung cho lệnh gọi vcvarsall.bat</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>Không thể truy xuất Môi trường MSVC từ &quot;%1&quot;: 
 %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>clang-cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>Quá trình không thể truy cập tệp vì nó đang được sử dụng bởi một quá trình khác. 
 Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng của bạn trước khi bắt đầu xây dựng.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Phân tích đầu ra bản dựng</translation>
     </message>
@@ -18916,7 +21889,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Sử dụng trình phân tích cú pháp từ bộ:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Không thể phân tích cú pháp</translation>
     </message>
@@ -18926,26 +21899,26 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Không thể phân tích cú pháp: Bộ công cụ đã chọn không cung cấp trình phân tích cú pháp đầu ra.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Yêu cầu:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Lập luận:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Thư mục làm việc:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Bước quy trình tùy chỉnh</translation>
@@ -18956,13 +21929,23 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Tên dự án</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Bộ này không hợp lệ.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Kit không có thiết bị biên dịch.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>Thiết bị build &quot;%2&quot; không thể xử lý tệp dự án &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Bộ công cụ không tương thích</translation>
     </message>
@@ -18997,37 +21980,39 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Không thể sao chép một số cấu hình.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Không thể tải bộ dụng cụ trong một khoảng thời gian hợp lý.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Chọn thư mục gốc</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>Dự án &quot;%1&quot; đã được định cấu hình cho bộ công cụ &quot;%2&quot; với id %3, không còn tồn tại nữa. Bạn có thể tạo một bộ công cụ mới hoặc sao chép các bước của bộ công cụ đã biến mất sang bộ công cụ khác ở chế độ %4.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Dự án</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>Không thể tìm thấy bất kỳ tệp qml_*.qm nào tại &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Tên.</translation>
@@ -19069,13 +22054,13 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>%1: Đường dẫn bản dựng đầy đủ của cấu hình bản dựng đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Các biến trong môi trường xây dựng đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Tên của cấu hình chạy đang hoạt động.</translation>
@@ -19087,45 +22072,61 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>%1: Có thể thực thi cấu hình chạy đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Các biến trong môi trường của cấu hình chạy đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Thư mục làm việc của cấu hình chạy đang hoạt động.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Nhận xét tài liệu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>không có sẵn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Môi trường dự án</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Triển khai cấu hình</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>Tệp thực thi SSH:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>Tệp thực thi Ninja:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Mở...</translation>
@@ -19146,7 +22147,12 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>&amp;Bắt đầu gỡ lỗi</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>Phân &amp;tích</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Mở bằng</translation>
     </message>
@@ -19156,12 +22162,11 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Dự án mới...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Tải dự án...</translation>
+        <translation type="vanished">Tải dự án...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Mở không gian làm việc...</translation>
     </message>
@@ -19171,23 +22176,24 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Mở tệp</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Môi trường chạy</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>Các dự án&amp;dự án gần đây</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Đóng dự án</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>Đó&amp;ng dự án &quot;%1&quot;</translation>
     </message>
@@ -19198,12 +22204,12 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>Đóng tất cả các tệp trong dự án &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>Đó&amp;ng dự án</translation>
     </message>
@@ -19232,12 +22238,12 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Xây dựng lại</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Xây dựng lại tất cả các dự án</translation>
     </message>
@@ -19307,12 +22313,11 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Dự án xây dựng lại cho tất cả các cấu hình</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Dự án sạch</translation>
+        <translation type="vanished">Dự án sạch</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Dự án sạch cho tất cả các cấu hình</translation>
     </message>
@@ -19322,7 +22327,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Hủy bản dựng</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Xây dựng không phụ thuộc</translation>
@@ -19376,12 +22381,12 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>Đóng dự án &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Đóng các dự án khác</translation>
     </message>
@@ -19417,7 +22422,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Xóa tệp...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Đặt làm dự án đang hoạt động</translation>
     </message>
@@ -19452,7 +22457,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Bộ chọn bộ chuyển đổi nhanh</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Môi trường xây dựng hiện tại</translation>
     </message>
@@ -19462,7 +22467,7 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Môi trường chạy hiện tại</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Môi trường xây dựng tích cực của dự án đang hoạt động.</translation>
     </message>
@@ -19472,12 +22477,11 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Môi trường chạy tích cực của dự án đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Tải dự án</translation>
+        <translation type="vanished">Tải dự án</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Không gian làm việc mở</translation>
     </message>
@@ -19507,18 +22511,71 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Bạn có muốn hủy quá trình xây dựng và hủy dự án không?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>chất khử trùng</translation>
+        <translation type="vanished">chất khử trùng</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Các vấn đề xử lý bộ nhớ mà trình khử trùng địa chỉ đã tìm thấy.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Mở dự án...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Build dự án đang dùng</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Dọn dẹp dự án đang dùng</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Chạy dự án đang hoạt động</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Tạo tệp header</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Tạo tệp nguồn</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Sửa cấu hình build đang dùng</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Các vấn đề xử lý bộ nhớ mà trình khử trùng địa chỉ đã tìm thấy.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Sửa cấu hình chạy đang dùng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Mở dự án</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Nhiệm vụ của tôi</translation>
     </message>
@@ -19528,18 +22585,23 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>Sự cố từ tệp danh sách nhiệm vụ (.tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Các vấn đề không thuộc danh mục chuyên biệt hơn.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Phân tích kết quả xây dựng...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Dự án mới</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Không thể mở dự án</translation>
     </message>
@@ -19549,12 +22611,37 @@ Vui lòng đóng tất cả các phiên bản đang chạy của ứng dụng c�
         <translation>&lt;h3&gt;Dự án đã mở&lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>Không thể mở dự án &quot;%1&quot;: Plugin chưa được tải.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Dự án mở &quot;%1&quot; không thành công: Không có plugin nào có thể mở loại dự án &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>Không thể đổi tên các tệp sau trong hệ thống tệp:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>Các tệp này đã được đổi tên trong hệ thống tệp, nhưng các tệp dự án chưa được cập nhật:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>Các tệp này đã được đổi tên trong hệ thống tệp, nhưng cấu trúc dự án chưa được cập nhật (mất ngữ cảnh hoặc không được hỗ trợ):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Các vấn đề đổi tên</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Bỏ qua tất cả lỗi?</translation>
     </message>
@@ -19576,45 +22663,48 @@ Bạn có muốn bỏ qua chúng?</translation>
         <translation>Cấu hình đáng lẽ phải chạy không còn khả dụng nữa.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Luôn lưu tệp trước khi xây dựng</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>Mở dự án trong &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>Mở dự án &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Dự án đã được mở.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>Tệp &quot;%1&quot; đã được đổi tên thành &quot;%2&quot;, nhưng các dự án sau không thể tự động thay đổi: %3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Chỉnh sửa dự án không thành công</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Các dự án sau không thể tự động xóa tệp: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>Tòa nhà &quot;%1&quot; bị vô hiệu hóa: %2&lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Không có dự án nào được tải.</translation>
@@ -19666,7 +22756,7 @@ Bạn có muốn bỏ qua chúng?</translation>
         <translation>Bạn có muốn hủy quá trình xây dựng và vẫn đóng %1 không?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Không có dự án đang hoạt động.</translation>
     </message>
@@ -19696,23 +22786,23 @@ Bạn có muốn bỏ qua chúng?</translation>
         <translation>Không thể chạy &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>Hành động chạy đã được lên lịch cho dự án đang hoạt động.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 trong %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Tệp mới</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Tiểu dự án mới</translation>
@@ -19743,15 +22833,28 @@ Bạn có muốn bỏ qua chúng?</translation>
         <translation>Thêm tệp vào dự án không thành công</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Không thể mở terminal.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>Bật plugin %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>Cần có plugin &quot;%1&quot; để mở các dự án thuộc loại &quot;%2&quot;. Bạn có muốn bật nó ngay bây giờ không?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Không thể mở thiết bị đầu cuối. 
+        <translation type="vanished">Không thể mở thiết bị đầu cuối. 
 %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Xóa các tập tin khác?</translation>
     </message>
@@ -19775,12 +22878,12 @@ Please try again.</source>
 Vui lòng thử lại.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>Không thể xóa tệp &quot;%1&quot; khỏi dự án &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_sao chép</translation>
     </message>
@@ -19796,17 +22899,17 @@ Vui lòng thử lại.</translation>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Sao chép tập tin không thành công</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>Không sao chép được tập tin &quot;%1&quot; sang &quot;%2&quot;: %3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Không thể thêm tệp mới &quot;%1&quot; vào dự án.</translation>
     </message>
@@ -19831,36 +22934,32 @@ Vui lòng thử lại.</translation>
         <translation>Không thể xóa tập tin %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>Tệp dự án %1 không thể được tự động thay đổi. 
+        <translation type="vanished">Tệp dự án %1 không thể được tự động thay đổi. 
 
 Vẫn đổi tên %2 thành %3?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>Tệp %1 đã được đổi tên thành %2, nhưng tệp dự án %3 không thể tự động thay đổi.</translation>
+        <translation type="vanished">Tệp %1 đã được đổi tên thành %2, nhưng tệp dự án %3 không thể tự động thay đổi.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>Không thể đổi tên tệp %1 thành %2.</translation>
+        <translation type="vanished">Không thể đổi tên tệp %1 thành %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Không thể đổi tên tập tin</translation>
+        <translation type="vanished">Không thể đổi tên tập tin</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Định vị các tập tin từ tất cả các thư mục dự án. Nối &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; để chuyển đến số dòng đã cho. Thêm một &quot;+&lt;number&gt;&quot; hoặc &quot;:&lt;number&gt;&quot; khác để chuyển đến số cột.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Chạy cấu hình chạy</translation>
     </message>
@@ -19897,9 +22996,13 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Chuyển đổi cấu hình chạy đang hoạt động của dự án đang hoạt động.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Tự động phát hiện</translation>
+        <translation type="vanished">Tự động phát hiện</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Được quản lý tự động</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19907,110 +23010,177 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Được quản lý tự động bởi %1 hoặc trình cài đặt.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>Thủ công</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>S</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>Lượng giây chờ đợi giữa lần &quot;diệt mềm&quot; và &quot;diệt cứng&quot; một ứng dụng đang chạy.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Thư mục hiện tại</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Thư mục</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Đóng các tập tin nguồn cùng với dự án</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Lưu tất cả các tập tin trước khi xây dựng</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Luôn triển khai dự án trước khi chạy nó</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Thêm đường dẫn tìm kiếm thư viện liên kết vào môi trường chạy</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Luôn hỏi trước khi dừng ứng dụng</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Tự động tạo cấu hình chạy phù hợp</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Giữ đồng bộ các cấu hình chạy:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Việc thêm, xóa hoặc chỉnh sửa cấu hình chạy trong một cấu hình xây dựng có cập nhật các cấu hình xây dựng khác tương ứng hay không.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Không đồng bộ</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Mỗi cấu hình build có tập cấu hình chạy riêng.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Đồng bộ trong một kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>Các cấu hình build trong cùng một kit giữ đồng bộ cấu hình chạy.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Đồng bộ trên tất cả kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Mọi cấu hình build trong dự án giữ đồng bộ cấu hình chạy, kể cả giữa các kit.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Xóa danh sách vấn đề trên bản dựng mới</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Hủy bỏ do lỗi khi xây dựng tất cả các dự án</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Bắt đầu quá trình xây dựng với mức độ ưu tiên thấp</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Cảnh báo chống lại các thư mục xây dựng có dấu cách hoặc ký tự không phải ASCII</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Một số công cụ xây dựng cũ không xử lý tốt các đường dẫn chứa ký tự &quot;đặc biệt&quot; như dấu cách, có khả năng dẫn đến lỗi xây dựng giả.&lt;p&gt;Bỏ chọn tùy chọn này nếu bạn không làm việc với những công cụ như vậy.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Chỉ hiển thị các kit phù hợp</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Chỉ hiển thị các kit đang hoạt động</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>Các kit được liệt kê trong chế độ &quot;Dự án&quot;:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Đừng xây dựng bất cứ điều gì</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Xây dựng toàn bộ dự án</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Chỉ xây dựng ứng dụng để chạy</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Build và chạy</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Tất cả</translation>
+        <translation type="vanished">Tất cả</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Cùng dự án</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Cùng dự án</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Tất cả</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20018,12 +23188,12 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Thư mục bản dựng tương tự</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Ứng dụng tương tự</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Đã bật</translation>
     </message>
@@ -20038,32 +23208,30 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Được khấu trừ từ dự án</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Sử dụng jom thay vì nmake</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>Hiển thị tất cả các bộ công cụ trong chế độ &quot;Xây dựng &amp; Chạy&quot; ở chế độ &quot;Dự án&quot;</translation>
+        <translation type="vanished">Hiển thị tất cả các bộ công cụ trong chế độ &quot;Xây dựng &amp; Chạy&quot; ở chế độ &quot;Dự án&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Cũng hiển thị các bộ công cụ không hoạt động trong &quot;Xây dựng &amp; Chạy&quot; ở chế độ &quot;Dự án&quot;.</translation>
+        <translation type="vanished">Cũng hiển thị các bộ công cụ không hoạt động trong &quot;Xây dựng &amp; Chạy&quot; ở chế độ &quot;Dự án&quot;.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Những thay đổi về môi trường được áp dụng để chạy cấu hình nhưng không áp dụng cho cấu hình xây dựng.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Môi trường ứng dụng:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Danh mục dự án</translation>
     </message>
@@ -20078,33 +23246,39 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Xây dựng và chạy</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Xây dựng trước khi triển khai:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Dừng ứng dụng trước khi xây dựng:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>Mặc định cho &quot;Chạy trong terminal&quot;:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Thời gian chờ đợi trước khi buộc dừng ứng dụng:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>Xây dựng &amp; Chạy</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Vẫn mở dự án?</translation>
     </message>
@@ -20114,7 +23288,7 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Lỗi kiểm soát phiên bản</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Không tìm thấy bản dựng nào</translation>
     </message>
@@ -20134,7 +23308,12 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Nhập bản dựng</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (đã nhập)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - tạm thời</translation>
     </message>
@@ -20144,12 +23323,27 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Bộ nhập khẩu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Không thể tải thiết lập từ &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Là thư mục, nhưng phải là tệp.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Là tệp, nhưng phải là thư mục.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Không có tiêu đề</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Không thể khôi phục các tập tin dự án</translation>
     </message>
@@ -20169,24 +23363,24 @@ Vẫn đổi tên %2 thành %3?</translation>
         <translation>Xóa dự án khỏi Phiên</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Không có bộ công cụ nào được kích hoạt cho dự án này. Kích hoạt bộ công cụ ở chế độ &quot;Dự án&quot;.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Đổi tên nhiều tập tin hơn?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Bạn có muốn đổi tên các tập tin này không? 
 %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Chọn hành động thả</translation>
     </message>
@@ -20268,17 +23462,22 @@ What should %1 do now?</source>
         <translation>Cập nhật dự án không thành công</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Tệp này đã được tạo.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Tệp này nằm trong thư mục build.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt; Tệp này nằm ngoài thư mục dự án.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Cây đơn giản hóa</translation>
     </message>
@@ -20323,7 +23522,7 @@ What should %1 do now?</source>
         <translation>Đồng bộ hóa với Trình chỉnh sửa</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Cây lọc</translation>
     </message>
@@ -20338,7 +23537,7 @@ What should %1 do now?</source>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Phiên mở #%1</translation>
     </message>
@@ -20360,23 +23559,23 @@ What should %1 do now?</source>
         <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Mở %1 &quot;%2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>Mở %1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>phiên họp</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (phiên cuối cùng)</translation>
     </message>
@@ -20386,39 +23585,39 @@ What should %1 do now?</source>
         <translation>%1 (phiên hiện tại)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Đổi tên</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>dự án</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Xóa dự án khỏi các dự án gần đây</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Xóa danh sách dự án gần đây</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Phiên</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Sử dụng biểu thức chính quy</translation>
     </message>
@@ -20433,7 +23632,7 @@ What should %1 do now?</source>
         <translation>Hiển thị các dòng không khớp</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Dự án đã được định cấu hình cho các bộ công cụ không còn tồn tại. Chọn một trong các tùy chọn sau trong menu ngữ cảnh để khôi phục cài đặt của dự án:</translation>
     </message>
@@ -20454,7 +23653,7 @@ What should %1 do now?</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Tạo một bộ công cụ mới</translation>
     </message>
@@ -20474,23 +23673,28 @@ What should %1 do now?</source>
         <translation>Loại bỏ tất cả các mục tiêu biến mất</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Nhấp để bật mục tiêu, nhấp lại để đặt làm mục tiêu đang dùng</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Mục tiêu biến mất</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Cài đặt dự án</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Nhập bản dựng hiện có...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Bộ chọn dự án</translation>
     </message>
@@ -20500,44 +23704,44 @@ What should %1 do now?</source>
         <translation>Dự án đang hoạt động</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Quản lý bộ...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Xây dựng đầu ra hệ thống</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>Thư mục nhập khẩu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>Các tập tin được ngầm thêm vào các dự án:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Không&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Ngầm Thêm&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>Thêm &amp;vào kiểm soát phiên bản:</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Thêm dưới dạng dự án con vào dự án:</translation>
     </message>
@@ -20547,17 +23751,17 @@ What should %1 do now?</source>
         <translation>Thêm vào &amp;dự án:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>Không thể tạo kho lưu trữ hệ thống kiểm soát phiên bản trong &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Không thể thêm &quot;%1&quot; vào hệ thống kiểm soát phiên bản.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>Các tập tin sẽ được thêm vào:</translation>
     </message>
@@ -20567,7 +23771,7 @@ What should %1 do now?</source>
         <translation>Các tập tin sẽ được thêm vào</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Di dời</translation>
@@ -20578,40 +23782,60 @@ What should %1 do now?</source>
         <translation>Xóa nhiệm vụ khỏi danh sách nhiệm vụ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Chạy cài đặt</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Các biến trong môi trường chạy.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Thư mục làm việc của cấu hình chạy.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>Dùng &lt;a href=&quot;dummy&quot;&gt;cài đặt chung&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Dùng cài đặt chung</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Dùng cài đặt chung</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Dùng cài đặt tùy chỉnh</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Tên của cấu hình chạy.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>Cấu hình chạy có thể thực thi được.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Không có hệ thống xây dựng nào hoạt động</translation>
+        <translation type="vanished">Không có hệ thống xây dựng nào hoạt động</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>Chạy trên %{Device:Name}</translation>
     </message>
     <message>
@@ -20621,12 +23845,12 @@ What should %1 do now?</source>
         <translation>%1 (trên %{Device:Name})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>Phần cuối</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Chạy trong thiết bị đầu cuối</translation>
     </message>
@@ -20636,33 +23860,33 @@ What should %1 do now?</source>
         <translation>Thư mục làm việc</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Chọn thư mục làm việc</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Đặt lại về mặc định</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Đối số</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Đối số dòng lệnh:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Chuyển đổi chế độ nhiều dòng.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Có thể thực thi</translation>
     </message>
@@ -20673,12 +23897,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Có thể thực thi:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Thực thi thay thế trên thiết bị:</translation>
     </message>
@@ -20688,7 +23912,7 @@ What should %1 do now?</source>
         <translation>Thay vào đó hãy sử dụng lệnh này</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Thêm đường dẫn tìm kiếm thư viện bản dựng vào DYLD_LIBRARY_PATH và DYLD_FRAMEWORK_PATH</translation>
     </message>
@@ -20703,7 +23927,17 @@ What should %1 do now?</source>
         <translation>Thêm đường dẫn tìm kiếm thư viện bản dựng vào LD_LIBRARY_PATH</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Dùng nền tảng Qt VNC để hiển thị</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>Đặt QT_QPA_PLATFORM=vnc, chuyển tiếp giao diện của ứng dụng Qt đến máy chủ VNC tích hợp. Kết nối đến giao diện ứng dụng bằng một máy khách VNC. Xem đầu ra của ứng dụng để biết chi tiết.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Sử dụng phiên bản gỡ lỗi của khung (DYLD_IMAGE_SUFFIX=_debug)</translation>
     </message>
@@ -20713,7 +23947,32 @@ What should %1 do now?</source>
         <translation>Chạy với tư cách người dùng root</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Chạy với tư cách người dùng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Chạy với tư cách người dùng:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>gốc</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Bật lọc danh mục nhật ký</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Bật lọc cho các danh mục nhật ký (QLoggingCategory) trong Application Output. Yêu cầu Qt 6.11 trở lên.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Trình giả lập</translation>
     </message>
@@ -20723,22 +23982,39 @@ What should %1 do now?</source>
         <translation>Trình khởi chạy:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>Dùng chuyển tiếp X11:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>Chuyển tiếp X11:</translation>
+        <translation type="vanished">Chuyển tiếp X11:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Chuyển tiếp tới màn hình cục bộ</translation>
+        <translation type="vanished">Chuyển tiếp tới màn hình cục bộ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Trạng thái kiểm soát chạy không mong đợi %1 khi nhân viên %2 khởi động.</translation>
+        <translation type="vanished">Trạng thái kiểm soát chạy không mong đợi %1 khi nhân viên %2 khởi động.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Không có bộ tạo công thức.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Không thể dùng trình thu thập cổng. Chưa đặt thiết bị nào.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Không tìm thấy cổng trống nào.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; vẫn đang chạy.&lt;center/&gt;&lt;center&gt;Buộc nó thoát?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -20758,108 +24034,114 @@ What should %1 do now?</source>
         <translation>&amp;Tiếp tục chạy</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>Đang buộc dừng tiến trình...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Không thể truy xuất đầu ra gỡ lỗi.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>Đang yêu cầu tiến trình dừng...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>Tiến trình kết thúc ngoài dự kiến.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Mất kết nối?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Người dùng yêu cầu dừng lại. Đang tắt...</translation>
+        <translation type="vanished">Người dùng yêu cầu dừng lại. Đang tắt...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Quá trình từ xa không kết thúc kịp thời. Mất kết nối?</translation>
+        <translation type="vanished">Quá trình từ xa không kết thúc kịp thời. Mất kết nối?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Không thể chạy: Không có lệnh nào được đưa ra.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1 đã thoát với mã %2</translation>
+        <translation type="vanished">%1 đã thoát với mã %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 bị lỗi.</translation>
+        <translation type="vanished">%1 bị lỗi.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Quá trình đã kết thúc một cách mạnh mẽ.</translation>
+        <translation type="vanished">Quá trình đã kết thúc một cách mạnh mẽ.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Đang bắt đầu %1...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Môi trường:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Không có lệnh thực thi nào được chỉ định.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Quá trình không thể bắt đầu.</translation>
+        <translation type="vanished">Quá trình không thể bắt đầu.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>Đã xảy ra lỗi không xác định trong quá trình này.</translation>
+        <translation type="vanished">Đã xảy ra lỗi không xác định trong quá trình này.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Chương trình được gọi &quot;%1&quot; bị thiếu hoặc bạn có thể không có đủ quyền để gọi chương trình.</translation>
+        <translation type="vanished">Chương trình được gọi &quot;%1&quot; bị thiếu hoặc bạn có thể không có đủ quyền để gọi chương trình.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Quá trình này bị lỗi.</translation>
+        <translation type="vanished">Quá trình này bị lỗi.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Đã xảy ra lỗi khi cố gắng ghi vào quy trình. Ví dụ: quy trình có thể không chạy hoặc có thể nó đã đóng kênh đầu vào.</translation>
+        <translation type="vanished">Đã xảy ra lỗi khi cố gắng ghi vào quy trình. Ví dụ: quy trình có thể không chạy hoặc có thể nó đã đóng kênh đầu vào.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Đã xảy ra lỗi khi cố gắng đọc từ quá trình này. Ví dụ: quá trình có thể không chạy.</translation>
+        <translation type="vanished">Đã xảy ra lỗi khi cố gắng đọc từ quá trình này. Ví dụ: quá trình có thể không chạy.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Xóa tất cả</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Triển khai</translation>
+        <translation type="vanished">Triển khai</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Phương pháp:</translation>
+        <translation type="vanished">Phương pháp:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Chạy cấu hình:</translation>
+        <translation type="vanished">Chạy cấu hình:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Xóa cấu hình chạy?</translation>
     </message>
@@ -20869,7 +24151,7 @@ What should %1 do now?</source>
         <translation>Bạn có thực sự muốn xóa cấu hình chạy &lt;b&gt;%1&lt;/b&gt; không?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Xóa cấu hình chạy?</translation>
     </message>
@@ -20879,17 +24161,37 @@ What should %1 do now?</source>
         <translation>Bạn có thực sự muốn xóa tất cả các cấu hình đang chạy không?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Tên mới cho cấu hình chạy &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Hủy Xây dựng &amp;&amp; Xóa cấu hình triển khai</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Nhân bản từ cấu hình chạy</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Không có cấu hình chạy nào khác.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Thiết lập triển khai</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Cấu hình triển khai đang dùng:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Xóa Cấu hình Triển khai %1?</translation>
     </message>
@@ -20914,12 +24216,27 @@ What should %1 do now?</source>
         <translation>Bạn có thực sự muốn xóa cấu hình triển khai &lt;b&gt;%1&lt;/b&gt; không?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Tên mới cho cấu hình triển khai &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Xóa hàng loạt...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Nhân bản vào đây...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Cấu hình chạy đang dùng:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Thư mục nguồn:</translation>
     </message>
@@ -20967,12 +24284,12 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Chỉnh sửa tập tin</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Thêm thư mục hiện có</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Hiển thị trong Trình chỉnh sửa</translation>
     </message>
@@ -20982,12 +24299,14 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Hiển thị vị trí nhiệm vụ trong trình chỉnh sửa.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Tập tin</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Nhập dự án hiện có</translation>
     </message>
@@ -20997,12 +24316,13 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Tên dự án và vị trí</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Tên dự án:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Lựa chọn tập tin</translation>
     </message>
@@ -21017,68 +24337,63 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Nhập các dự án hiện có không sử dụng qmake, CMake, Qbs, Meson hoặc Autotools.&lt;p&gt;Việc này sẽ tạo một tệp dự án cho phép bạn sử dụng %1 làm trình chỉnh sửa mã và làm trình khởi chạy cho các công cụ gỡ lỗi và phân tích. Nếu bạn muốn xây dựng dự án, bạn có thể cần chỉnh sửa tệp dự án đã tạo.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Hệ thống xây dựng không xác định &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Cài đặt mục tiêu</translation>
+        <translation type="vanished">Cài đặt mục tiêu</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Thư mục nguồn</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Xây dựng hệ thống</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Tên dự án hiện tại</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Định cấu hình dự án</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Hiển thị tất cả bộ dụng cụ</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Ẩn bộ dụng cụ không hoạt động</translation>
+        <translation type="vanished">Ẩn bộ dụng cụ không hoạt động</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>Không có bộ công cụ nào được xác định trong dự án này.</translation>
+        <translation type="vanished">Không có bộ công cụ nào được xác định trong dự án này.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Cấu hình dự án</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kit không phù hợp với dự án</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Bấm để kích hoạt</translation>
+        <translation type="vanished">Bấm để kích hoạt</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>Kích hoạt Bộ công cụ cho Dự án &quot;%1&quot;</translation>
     </message>
@@ -21123,12 +24438,11 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Sao chép các bước từ bộ công cụ khác...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Kích hoạt bộ công cụ</translation>
+        <translation type="vanished">Kích hoạt bộ công cụ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Không tìm thấy bộ dụng cụ phù hợp.</translation>
     </message>
@@ -21148,18 +24462,23 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Nhập để lọc bộ dụng cụ theo tên...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Ẩn các kit không phù hợp</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Chọn bộ dụng cụ cho dự án của bạn</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Các bộ công cụ sau đây có thể được sử dụng cho dự án &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt;Lỗi:&lt;/b&gt;</translation>
@@ -21171,12 +24490,12 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>&lt;b&gt;Cảnh báo:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 cần thiết lập trình biên dịch để xây dựng. Cấu hình trình biên dịch trong các tùy chọn của bộ công cụ.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Lỗi:</translation>
     </message>
@@ -21186,7 +24505,7 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Cảnh báo:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Không thể mở tệp tác vụ %1: %2</translation>
     </message>
@@ -21211,7 +24530,7 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Dừng giám sát các tập tin nhiệm vụ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>Lỗi trung tâm tác vụ</translation>
     </message>
@@ -21221,42 +24540,46 @@ Những tập tin này được bảo tồn.</numerusform>
         <translation>Cảnh báo trung tâm tác vụ</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Sự cố xây dựng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Vấn đề</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Hiển thị cảnh báo</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Tạo vấn đề từ đầu ra build bên ngoài...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Lọc theo danh mục</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>không cập nhật</translation>
+        <translation type="vanished">không cập nhật</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Chuỗi công cụ này không hợp lệ.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>Cài đặt tự động phát hiện chuỗi công cụ</translation>
     </message>
@@ -21275,43 +24598,59 @@ Một cho mục tiêu x86_64 gốc và một cho mục tiêu x86 đơn giản.
 Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị phân x86 32 bit mà không sử dụng trình biên dịch chéo chuyên dụng.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Kiểu</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Ngôn ngữ</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Phát hiện lại</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Cài đặt tự động phát hiện...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Đã phát hiện trình biên dịch trùng lặp</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Không phải tất cả trình biên dịch được thiết lập đúng.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Trình biên dịch sau đã được định cấu hình:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Nó chưa được định cấu hình lại.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Các trình biên dịch sau đây đã được định cấu hình:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Chúng chưa được định cấu hình lại.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Trình biên dịch</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Chú thích</translation>
     </message>
@@ -21327,6 +24666,9 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>Hủy bỏ</translation>
     </message>
@@ -21336,12 +24678,26 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Đang chờ các ứng dụng dừng lại.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Bạn có thể chỉnh sửa cấu hình này bên trong tệp .qtcreator/project.json.</translation>
+        <translation type="vanished">Bạn có thể chỉnh sửa cấu hình này bên trong tệp .qtcreator/project.json.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Hãy nhân bản cấu hình để thay đổi nó, hoặc thực hiện thay đổi trong tệp .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Trình quản lý không gian làm việc</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>Bản sao của %1</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Loại trừ khỏi dự án</translation>
     </message>
@@ -21351,23 +24707,293 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Quét lại không gian làm việc</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>Thay thế chữ ký</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>Xcodebuild không thành công.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Sao chép</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1 tại &quot;%2&quot;</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>Đường dẫn trình biên dịc&amp;h</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>Đường dẫn trình biên dịch %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Cung cấp thủ công</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Không thể sao chép thiết lập người dùng của dự án từ &quot;%1&quot; sang vị trí mặc định mới &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>Không thể mở &quot;%1&quot; để ghi: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>Cấu hình Windows</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Mọi thay đổi trên trang này có hiệu lực ngay lập tức.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>Chọn đường dẫn tải xuống của NuGet và Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>Chọn đường dẫn tải xuống</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>Chọn đường dẫn của NuGet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>Chọn tệp nuget.exe</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>Tải xuống NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>Tự động tải xuống NuGet.
+
+Cần có NuGet để tải xuống Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Chọn đường dẫn của Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Tải xuống Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Tự động tải xuống Windows App SDK bằng NuGet.
+
+Nếu tải xuống tự động thất bại, Qt Creator sẽ đề xuất mở URL tải xuống
+trong trình duyệt hệ thống để tải thủ công.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>Đường dẫn tải xuống đã tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>Đường dẫn NuGet đã tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>Đường dẫn Windows App SDK đã tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>Cài đặt Windows App SDK ổn.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>Cài đặt Windows App SDK có lỗi.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Chọn đường dẫn Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>Đường dẫn tải xuống</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>Vị trí tải xuống:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>Vị trí NuGet:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>Cài đặt Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>Vị trí Windows App SDK:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>Tải xuống NuGet không thành công.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Mở URL NuGet để tải xuống thủ công?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>Mở URL tải xuống</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>Đang tải xuống</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>Đang tải xuống NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>URL tải xuống SDK Tools trống.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>Gặp lỗi SSL, đã hủy tải xuống.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>Tải xuống NuGet từ URL %1 thất bại: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>Việc tải xuống từ %1 đã bị chuyển hướng.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>Đường dẫn tải xuống đã chọn (%1) cho NuGet đã tồn tại.\nHãy chọn một đường dẫn khác.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>Chưa cấu hình đường dẫn tải xuống.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Đang tải xuống Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK đã được cấu hình.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Đang tải xuống Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>Tải xuống Windows App SDK không thành công.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Mở URL Windows App SDK để tải xuống thủ công?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Yêu cầu cập nhật</translation>
     </message>
@@ -21398,22 +25024,25 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Gói cài đặt</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>Cài đặt &quot;%1&quot; thất bại: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Quá trình cài đặt &quot;%1&quot; đã bị hủy do hết thời gian chờ.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Việc cài đặt &quot;%1&quot; đã bị người dùng hủy bỏ.</translation>
+        <translation type="vanished">Việc cài đặt &quot;%1&quot; đã bị người dùng hủy bỏ.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Cài đặt &quot;%1&quot; không thành công với mã thoát %2.</translation>
+        <translation type="vanished">Cài đặt &quot;%1&quot; không thành công với mã thoát %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>REPL</translation>
@@ -21449,7 +25078,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Mở Python tương tác. Không nhập gì, nhập tệp hiện tại hoặc nhập mọi thứ (*) từ tệp hiện tại.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Không có Python nào được chọn</translation>
     </message>
@@ -21464,14 +25093,18 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Quản lý trình thông dịch Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Không có</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Trình soạn thảo Python</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Không có</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
@@ -21481,9 +25114,13 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Trình thông dịch được sử dụng cho các dự án dựa trên Python.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Không có thiết lập Python.</translation>
+        <translation type="vanished">Không có thiết lập Python.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Chưa thiết lập Python.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -21496,7 +25133,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Python &quot;%1&quot; không thể thực thi được.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python &quot;%1&quot; không chứa pip có thể sử dụng được. pip là cần thiết để cài đặt các gói Python từ Python Package Index, như PySide và máy chủ ngôn ngữ Python. Để sử dụng bất kỳ chức năng nào trong số đó, hãy đảm bảo rằng pip đã được cài đặt cho Python đó.</translation>
     </message>
@@ -21516,12 +25153,12 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Đường dẫn đến trình thông dịch Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>Máy chủ ngôn ngữ Python (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Cài đặt máy chủ ngôn ngữ Python (PyLS) cho %1 (%2). Máy chủ ngôn ngữ cung cấp chú thích và hoàn thiện cụ thể cho Python.</translation>
     </message>
@@ -21536,32 +25173,42 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Cập nhật máy chủ ngôn ngữ Python (PyLS) cho %1 (%2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Luôn cập nhật</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Cập nhật</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Không bao giờ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Các vấn đề được phân tích cú pháp từ đầu ra thời gian chạy Python.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>Không có trình thông dịch Python nào được đặt cho bộ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 Nhấp vào đây để cài đặt %1 (yêu cầu pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Đầu ra được đệm</translation>
     </message>
@@ -21576,8 +25223,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Kịch bản:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>Trăn:</translation>
     </message>
@@ -21587,19 +25233,17 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Chạy %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Có thể thực thi</translation>
+        <translation type="vanished">Có thể thực thi</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Có thể thực thi trống.</translation>
     </message>
@@ -21614,56 +25258,106 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>&quot;%1&quot; không phải là tập tin thực thi.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Thêm vào</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Xóa bỏ</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Đặt làm mặc định</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp;Tạo bộ công cụ</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Dọn dẹp</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Xóa tất cả trình thông dịch Python mà không có tệp thực thi hợp lệ.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Tạo Venv không thành công:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Tạo Venv kết thúc bất thường:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Không thể bắt đầu tạo Venv:\n%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Đã hủy tạo Venv.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>Đã tìm thấy &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Đang gỡ bỏ Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Thông dịch viên</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Plugin:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Tệp thực thi:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Sử dụng máy chủ ngôn ngữ Python</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>Để biết danh sách đầy đủ các tùy chọn có sẵn, hãy tham khảo [Tài liệu cấu hình máy chủ Python LSP](%1).</translation>
     </message>
@@ -21673,12 +25367,12 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Trình độ cao</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Cấu hình máy chủ ngôn ngữ</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>Trình thông dịch Python:</translation>
     </message>
@@ -21698,46 +25392,67 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Tạo nên</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Tạo Python venv</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Đang tìm kiếm các tệp nhị phân Python...</translation>
+        <translation type="vanished">Đang tìm kiếm các tệp nhị phân Python...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>Đã tìm thấy &quot;%1&quot; (%2)</translation>
+        <translation type="vanished">Đã tìm thấy &quot;%1&quot; (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Xóa Python</translation>
+        <translation type="vanished">Xóa Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>&quot;dữ liệu&quot; của trang trình hướng dẫn Python mong đợi một bản đồ có &quot;mục&quot; chứa danh sách các đối tượng.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Một mục trong dữ liệu trang trình hướng dẫn Python yêu cầu trường &quot;trKey&quot; chứa chuỗi hiển thị giao diện người dùng cho phiên bản Python đó và trường &quot;giá trị&quot; chứa đối tượng có trường &quot;PySideVersion&quot; được sử dụng để nhập câu lệnh trong tệp Python.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>Phiên bản PySide:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Lỗi phân tích cú pháp: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Lỗi kiểu: &quot;%1&quot; phải là &quot;%2&quot;, không phải &quot;%3&quot;.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Lỗi thiếu nút: bảng &quot;%1&quot; phải chứa nút &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>Nút &quot;%1&quot; trống.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Tệp &quot;%1&quot; không tồn tại.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>Lỗi XML trên dòng %1, col %2: %3</translation>
@@ -21751,7 +25466,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Di chuyển tab sang trái</translation>
     </message>
@@ -21769,15 +25484,391 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Đang kết nối...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>&quot;%1&quot; không thể thực thi được.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Không thể khởi động shell: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Tiến trình shell đã thoát với mã %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>Tiến trình đã thoát với mã: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Thu phóng: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Sao chép</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Dán</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Xóa shell</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Chọn tất cả</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Xóa lựa chọn</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>Di chuyển con trỏ sang trái một từ</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>Di chuyển con trỏ sang phải một từ</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Xóa từ bên trái</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Xóa dòng bên trái</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Đóng tab</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Đóng tất cả tab</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Đóng các tab khác</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Shell</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Cấu hình...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Chèn biến macro</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Shell mới</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Tạo một shell mới.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Đóng shell</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Đóng shell hiện tại.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Shell tiếp theo</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Shell trước đó</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Thiết bị</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Giá trị hiện tại của %{%1}: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Dấu nhắc lệnh</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>Màu dùng cho %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Không thể mở tệp.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>Lỗi phân tích JSON: &quot;%1&quot;, tại vị trí: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Không tìm thấy màu nào.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Định dạng màu không hợp lệ.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Định dạng bảng màu không xác định.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Dùng terminal tích hợp</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>Dùng terminal tích hợp khi bật &quot;Chạy trong terminal&quot; và cho &quot;Mở Terminal tại đây&quot;.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Họ:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Họ phông chữ dùng trong terminal.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Kích thước:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Cỡ phông chữ dùng trong terminal (tính bằng point).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Thu phóng:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Điều chỉnh cỡ phông chữ. Ctrl+con lăn chuột phóng to một shell trong phiên.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Giãn dòng:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Chiều cao của mỗi dòng, theo phần trăm của phông chữ.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Cho phép con trỏ nhấp nháy</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>Cho phép con trỏ nhấp nháy.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Đường dẫn shell:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Tệp thực thi shell cần khởi động.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Đối số của shell:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Các đối số được truyền cho shell.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Gửi phím escape đến terminal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>Gửi phím escape đến terminal khi nhấn thay vì đóng terminal.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>Gửi Esc đến terminal thay vì %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Nhấn %1 để gửi Esc đến terminal.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Chặn phím tắt trong terminal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Ngăn các phím tắt của Qt Creator can thiệp vào terminal.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>Các phím tắt của %1 bị chặn khi tiêu điểm nằm trong terminal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>Các phím tắt của %1 được ưu tiên.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Chuông âm thanh</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Làm cho terminal phát tiếng bíp khi nhận được ký tự chuông.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Bật theo dõi chuột</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Bật theo dõi chuột trong terminal.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Bật reflow trực tiếp (thử nghiệm)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Ngắt dòng và dàn lại văn bản khi đổi kích thước terminal. Lưu ý rằng tính năng này không hoạt động đúng với mọi shell và dấu nhắc.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>Chung</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Phông chữ</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Shell mặc định</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>Shell mà nút + mở ra. Tự động sẽ chọn shell tốt nhất đã cài đặt và theo dõi các thay đổi về những gì được cài đặt.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Tự động (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>bắt nguồn từ QObject</translation>
@@ -21843,7 +25934,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>(gõ tên ĐỌC tên VIẾT setName THÔNG BÁO tên Đã thay đổi CUỐI CÙNG)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>với mục tiêu</translation>
@@ -21867,7 +25958,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>với mục tiêu</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Trường hợp thử nghiệm QuickTest</translation>
@@ -21921,18 +26012,17 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>ví dụ</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+148" />
         <source>Sort Alphabetically</source>
         <translation>Sắp xếp theo thứ tự bảng chữ cái</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Nội bộ</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Tìm kiếm</translation>
     </message>
@@ -21951,7 +26041,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Hủy bỏ thay thế.</translation>
     </message>
@@ -21962,46 +26052,38 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Toàn cầu</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+206" />
+        <location line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+134" />
         <source>Behavior</source>
         <translation>Hành vi</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+175" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+109" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+342" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+803" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+556" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-462" />
         <source>Text Editor</source>
         <translation>Trình soạn thảo văn bản</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+75" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+28" />
         <source>Never</source>
         <translation>Không bao giờ</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-238" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Luôn luôn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>Trong khoảng trắng hàng đầu</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Không có</translation>
+        <translation type="vanished">Không có</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Theo dõi thụt lề trước đó</translation>
     </message>
@@ -22011,7 +26093,7 @@ Kích hoạt tính năng này nếu bạn dự định tạo các tệp nhị ph
         <translation>Không thụt lề</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -22042,33 +26124,44 @@ Chỉ định cách phím backspace tương tác với thụt lề.
 </translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-17" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Bật tự động &amp;thụt lề</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Phím Tab thực hiện thụt lề tự động:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+27" />
         <source>Prefer single line comments</source>
         <translation>Thích bình luận một dòng</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+124" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Tự động</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>At Line Start</source>
         <translation>Tại dòng bắt đầu</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>Sau khoảng trắng</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Chỉ định vị trí của các nhận xét một dòng.</translation>
     </message>
@@ -22088,12 +26181,12 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>%1: Nhận xét được đặt sau khoảng trắng ở đầu.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Vị trí bình luận ưa thích:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+76" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Bỏ qua khoảng trắng sạch cho các loại tệp:</translation>
     </message>
@@ -22103,12 +26196,12 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Đối với các mẫu tệp được liệt kê, không cắt bớt khoảng trắng ở cuối.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Danh sách các mẫu tệp nhận biết ký tự đại diện, được phân tách bằng dấu phẩy hoặc dấu chấm phẩy.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-19" />
         <source>&amp;Ensure newline at end of file</source>
         <translation>&amp;Đảm bảo dòng mới ở cuối tệp</translation>
     </message>
@@ -22118,7 +26211,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Luôn viết một ký tự dòng mới vào cuối tập tin.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-20" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Làm sạch khoảng trắng</translation>
     </message>
@@ -22128,27 +26221,27 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Loại bỏ khoảng trắng ở cuối khi lưu.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+24" />
         <source>Clean indentation</source>
         <translation>Vết lõm sạch</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Sửa khoảng trắng ở đầu theo cài đặt tab.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-16" />
         <source>In entire &amp;document</source>
         <translation>Trong toàn bộ &amp;tài liệu</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Xóa khoảng trắng trong toàn bộ tài liệu thay vì chỉ những phần đã thay đổi.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Thêm nếu mã hóa là UTF-8</translation>
     </message>
@@ -22163,7 +26256,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Luôn xóa</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -22180,27 +26273,27 @@ Chỉ định cách phím backspace tương tác với thụt lề.
 &lt;p&gt;Cài đặt này &lt;b&gt;không&lt;/b&gt; ảnh hưởng đến việc sử dụng BOM UTF-16 và UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Ẩn con trỏ chuột khi gõ</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable &amp;mouse navigation</source>
         <translation>Bật &amp;điều hướng chuột</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>&amp;Bật thu phóng bánh xe cuộn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Kích hoạt tính năng &amp;điều hướng lạc đà tích hợp</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Bật thay đổi lựa chọn thông minh</translation>
     </message>
@@ -22210,7 +26303,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Sử dụng thao tác Select Block Up/Down giờ đây sẽ mang đến những lựa chọn thông minh hơn.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Hiển thị chú giải công cụ trợ giúp bằng phím tắt (Alt)</translation>
     </message>
@@ -22220,22 +26313,22 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Nhấn Alt sẽ hiển thị trợ giúp theo ngữ cảnh hoặc nhập thông tin dưới dạng chú giải công cụ.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>Khi di chuột qua</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>Khi Shift+Di chuột qua</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>đánh máy</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Dọn dẹp khi lưu</translation>
     </message>
@@ -22245,47 +26338,46 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Các hành động dọn dẹp được thực hiện tự động ngay trước khi tệp được lưu vào đĩa.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Mã hóa tập tin</translation>
+        <translation type="vanished">Mã hóa tập tin</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>Chuột và Bàn phím</translation>
+        <translation type="vanished">Chuột và Bàn phím</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Thụt lề lùi:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Mã hóa mặc định:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>BOM UTF-8:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Kết thúc dòng mặc định:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Hiển thị chú giải công cụ trợ giúp bằng chuột:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Hiển thị thông tin trợ giúp hoặc nhập thông tin theo ngữ cảnh khi di chuột qua.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Hiển thị thông tin trợ giúp hoặc nhập thông tin theo ngữ cảnh trên Shift+Mouseover.</translation>
     </message>
@@ -22296,9 +26388,9 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Đánh dấu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Dấu trang</translation>
     </message>
@@ -22308,17 +26400,17 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Định vị dấu trang. Lọc theo tên tệp, theo văn bản trên dòng dấu trang hoặc theo văn bản ghi chú của dấu trang.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Di chuyển lên</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Di chuyển xuống</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Biên tập</translation>
     </message>
@@ -22333,7 +26425,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Xóa tất cả</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Xóa tất cả dấu trang</translation>
     </message>
@@ -22344,14 +26436,14 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Chỉnh sửa dấu trang</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Chuyển đổi dấu trang</translation>
     </message>
@@ -22381,7 +26473,27 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Tiếp theo Dấu trang trong tài liệu</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Sắp xếp theo tên tệp</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Văn bản ghi chú:</translation>
     </message>
@@ -22392,23 +26504,29 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 của %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Mọi thay đổi bên dưới có hiệu lực ngay lập tức.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Chỉnh sửa nội dung xem trước để xem cách áp dụng cài đặt hiện tại cho đoạn mã tùy chỉnh. Những thay đổi trong bản xem trước không ảnh hưởng đến cài đặt hiện tại.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+39" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-664" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+36" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+139" />
         <source>Copy...</source>
         <translation>Sao chép...</translation>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-235" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+326" />
         <source>Remove</source>
         <translation>Di dời</translation>
     </message>
@@ -22423,12 +26541,17 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Nhập khẩu...</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Cấu hình đã chọn ở chế độ chỉ đọc. Hãy sao chép cấu hình để chỉnh sửa.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Cài đặt tùy chỉnh:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Sao chép kiểu mã</translation>
     </message>
@@ -22455,7 +26578,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     <message>
         <location line="+6" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+2" />
-        <location line="+460" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
@@ -22467,22 +26590,22 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Kiểu mã (*.xml);;Tất cả các tệp (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Không thể nhập kiểu mã từ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Kiểu mã xuất</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [proxy: %2]</translation>
     </message>
@@ -22497,7 +26620,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>%1 [có thể tùy chỉnh]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Không phải là tập tin lược đồ màu.</translation>
     </message>
@@ -22556,8 +26679,8 @@ Chỉ định cách phím backspace tương tác với thụt lề.
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-429" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-454" />
+        <location line="+651" />
         <source>Font</source>
         <translation>Phông chữ</translation>
     </message>
@@ -22582,7 +26705,7 @@ Chỉ định cách phím backspace tương tác với thụt lề.
         <translation>Màu sắc:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Không gạch chân</translation>
     </message>
@@ -22661,12 +26784,12 @@ Theo mặc định, &quot;@&quot; được sử dụng nếu nhận xét xung qu
 nếu nhận xét bắt đầu bằng &quot;/*!&quot; hoặc &quot;//!&quot;.</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Nhận xét tài liệu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-10" />
         <source>Full</source>
         <translation>Đầy</translation>
     </message>
@@ -22696,32 +26819,32 @@ nếu nhận xét bắt đầu bằng &quot;/*!&quot; hoặc &quot;//!&quot;.</t
         <translation>Kích hoạt hoàn thành:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>Thời gian chờ tính bằng mili giây:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Ngưỡng ký tự:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>Tự động hoàn thành tiền tố &amp;phổ biến</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Chèn tiền tố chung của các mục hoàn thành có sẵn.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Tự động chia chuỗi</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22730,57 +26853,63 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và di chuyển phần còn lại của chuỗi sang dòng tiếp theo.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Chèn dấu ngoặc mở hoặc đóng</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Chèn trích dẫn kết thúc</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Lựa chọn văn bản bao quanh với dấu ngoặc</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Khi gõ dấu ngoặc phù hợp và có vùng chọn văn bản, thay vì loại bỏ vùng chọn, hãy bao quanh vùng chọn đó bằng các ký tự tương ứng.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>Chèn &amp;dấu cách sau tên hàm</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Lựa chọn văn bản bao quanh với dấu ngoặc kép</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-41" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Không có</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Khi gõ một trích dẫn phù hợp và có một lựa chọn văn bản, thay vì loại bỏ lựa chọn, hãy bao quanh nó bằng các ký tự tương ứng.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Tạo hiệu ứng cho văn bản được chèn tự động</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Hiển thị gợi ý trực quan khi ví dụ như dấu ngoặc nhọn hoặc trích dẫn được trình chỉnh sửa tự động chèn vào.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Đánh dấu văn bản được chèn tự động</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Bỏ qua ký tự được chèn tự động khi gõ</translation>
     </message>
@@ -22790,17 +26919,17 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Bỏ qua ký tự được chèn tự động nếu gõ lại bằng tay sau khi hoàn thành hoặc bằng cách nhấn tab.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Xóa văn bản được chèn tự động trên phím xóa lùi</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Xóa ký tự được chèn tự động nếu trình kích hoạt bị xóa bằng phím lùi sau khi hoàn thành.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Ghi đè dấu chấm câu kết thúc</translation>
     </message>
@@ -22810,37 +26939,41 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Tự động ghi đè dấu ngoặc đơn và dấu ngoặc kép đóng.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>&amp;Tự động chèn các ký tự phù hợp</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+48" />
         <source>Completion</source>
         <translation>Hoàn thành</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="-295" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+47" />
         <source>Enable text &amp;wrapping</source>
         <translation>&amp;Bật tính năng ngắt dòng văn bản</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Đặt &lt;a href=&quot;font zoom&quot;&gt;khoảng cách dòng phông chữ&lt;/a&gt; thành 100% để bật tùy chọn ngắt dòng văn bản.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Hiển thị phải &amp;lề tại cột:</translation>
+        <translation type="vanished">Hiển thị phải &amp;lề tại cột:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Hiển thị lề &amp;phải sau cột:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Tô màu toàn bộ vùng lề</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Sử dụng lề theo ngữ cảnh cụ thể</translation>
     </message>
@@ -22850,82 +26983,92 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Nếu có, hãy sử dụng một mức ký quỹ khác. Ví dụ: ColumnLimit từ plugin ClangFormat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Chiều rộng nội dung trình soạn thảo:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% nghĩa là dùng toàn bộ chiều rộng cửa sổ trình soạn thảo để hiển thị nội dung văn bản (mặc định).&lt;br&gt;50% nghĩa là dùng một nửa chiều rộng trình soạn thảo để hiển thị nội dung văn bản.&lt;br&gt;50% còn lại được chia thành lề trái và lề phải để căn giữa nội dung.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Hoạt hình các dấu ngoặc đơn phù hợp</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Đánh dấu kết quả tìm kiếm trên thanh cuộn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-107" />
         <source>Display line &amp;numbers</source>
         <translation>Hiể&amp;n thị số dòng</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+115" />
         <source>Animate navigation within file</source>
         <translation>Hoạt hình điều hướng trong tập tin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-86" />
         <source>Highlight current &amp;line</source>
         <translation>Đá&amp;nh dấu dòng hiện tại</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+8" />
         <source>Highlight &amp;blocks</source>
         <translation>Đánh dấu &amp;khối</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Mark &amp;text changes</source>
         <translation>Đánh dấu &amp;văn bản thay đổi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>Tự động gấp đầu tiên &amp;nhận xét</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>Đ&amp;iểm đánh dấu hiển thị &amp; gấp</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+44" />
         <source>Center &amp;cursor on scroll</source>
         <translation>&amp;Con trỏ ở giữa khi cuộn</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Trực quan hóa thụt lề</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Hiển thị dòng kết thúc của tập tin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Hiển thị mã hóa tập tin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Luôn mở liên kết ở phần chia khác</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Đánh dấu dấu ngoặc đơn phù hợp</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-37" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Hiển thị khoảng trắng</translation>
     </message>
@@ -22935,7 +27078,12 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Hiển thị các tab và không gian.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Hiển thị thiết lập tab</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Đánh dấu lựa chọn</translation>
     </message>
@@ -22945,7 +27093,7 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Thêm nền màu và điểm đánh dấu vào thanh cuộn khi xuất hiện văn bản đã chọn.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>Bên cạnh nội dung biên tập</translation>
     </message>
@@ -22960,43 +27108,48 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
         <translation>Căn chỉnh ở bên phải</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>Giữa các dòng</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Bật minimap</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Chú thích dòng</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>Lề</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>gói</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+201" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Trưng bày</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Tệp hiện tại</translation>
     </message>
@@ -23014,7 +27167,7 @@ Ngoài ra, Shift+Enter sẽ chèn ký tự thoát vào vị trí con trỏ và d
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Xin lưu ý rằng thao tác này chỉ tìm kiếm các tệp đã được lưu vào đĩa.</translation>
     </message>
@@ -23073,12 +27226,12 @@ Không bao gồm: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>Biến không sử dụng</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-691" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-714" />
         <source>Antialias</source>
         <translation>Khử bí danh</translation>
     </message>
@@ -23111,7 +27264,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Phối màu cho chủ đề &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+25" />
         <source>Family:</source>
         <translation>Gia đình:</translation>
     </message>
@@ -23131,7 +27284,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Khoảng cách dòng:</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+382" />
         <source>Copy Color Scheme</source>
         <translation>Sao chép bảng màu</translation>
     </message>
@@ -23147,7 +27300,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>%1 (bản sao)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Xóa bảng màu</translation>
     </message>
@@ -23157,14 +27310,14 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Bạn có chắc chắn muốn xóa vĩnh viễn bảng màu này không?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Nhập lược đồ màu</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Bảng màu (*.xml);;Tất cả các tập tin (*)</translation>
     </message>
@@ -23194,7 +27347,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Không thể tạo tập tin tạm thời &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Failed to format: %1.</source>
         <translation>Không thể định dạng: %1.</translation>
     </message>
@@ -23204,12 +27357,12 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Không thể đọc tệp &quot;%1&quot;: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>Không thể gọi %1 hoặc xảy ra một số lỗi khác. Đã hết thời gian chờ khi định dạng tệp %2.</translation>
     </message>
     <message>
-        <location line="+150" />
+        <location line="+148" />
         <source>Error in text formatting: %1</source>
         <translation>Lỗi định dạng văn bản: %1</translation>
     </message>
@@ -23229,28 +27382,27 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Tập tin đã được sửa đổi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Cập nhật bút đánh dấu: đã xong</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Cập nhật bút đánh dấu:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Cập nhật bút đánh dấu: bắt đầu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Các định nghĩa về đánh dấu được cung cấp bởi công cụ &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Các định nghĩa về đánh dấu được cung cấp bởi công cụ &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3787" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4055" />
         <source>Download Definitions</source>
         <translation>Tải xuống định nghĩa</translation>
     </message>
@@ -23260,7 +27412,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Tải xuống các tệp định nghĩa cú pháp bị thiếu và cập nhật.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Tải lại định nghĩa</translation>
     </message>
@@ -23270,7 +27422,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Tải lại các tập tin định nghĩa được sửa đổi bên ngoài.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Đặt lại các định nghĩa đã nhớ</translation>
     </message>
@@ -23280,37 +27432,50 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Đặt lại các định nghĩa được ghi nhớ cho các tệp có thể được liên kết với nhiều định nghĩa đánh dấu.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>Tập tin định nghĩa đánh dấu cú pháp</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Bỏ qua kiểm tra cập nhật cho các tệp khớp với:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Bỏ qua tô sáng cú pháp cho các tệp khớp với:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Định nghĩa tô sáng cú pháp do engine %1 cung cấp.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>Tệp định nghĩa nổi bật của người dùng</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Các mẫu tệp bị bỏ qua:</translation>
+        <translation type="vanished">Các mẫu tệp bị bỏ qua:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>Tải xuống đã hoàn tất</translation>
+        <translation type="vanished">Tải xuống đã hoàn tất</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Bút đánh dấu chung</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>Trình soạn thảo JSON</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Dòng trong tài liệu hiện tại</translation>
     </message>
@@ -23325,7 +27490,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>&lt;dòng&gt;:&lt;cột&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>Dòng %1, Cột %2</translation>
     </message>
@@ -23340,7 +27505,12 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Cột %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Trình soạn thảo Markdown</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Nhấn mạnh</translation>
     </message>
@@ -23385,17 +27555,17 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Cây lọc</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location line="+136" />
         <source>Outline</source>
         <translation>phác thảo</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Tái cấu trúc không thể được áp dụng.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Dấu phân cách dự kiến ​​sau ID trình quản lý.</translation>
     </message>
@@ -23415,15 +27585,15 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Không thể tạo thư mục đoạn mã người dùng %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-195" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-200" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Lỗi</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Không phải là trình kích hoạt hợp lệ. Trình kích hoạt hợp lệ chỉ có thể chứa các chữ cái, số hoặc dấu gạch dưới, trong đó ký tự đầu tiên được giới hạn ở chữ cái hoặc dấu gạch dưới.</translation>
     </message>
@@ -23443,7 +27613,7 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Lỗi hoàn nguyên đoạn mã.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Hoàn nguyên tích hợp sẵn</translation>
     </message>
@@ -23453,17 +27623,17 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Nhóm:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Thêm vào</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Khôi phục các phần dựng sẵn đã xóa</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Đặt lại tất cả</translation>
     </message>
@@ -23478,12 +27648,12 @@ Giá trị nhỏ hơn 100% có thể dẫn đến đồ họa chồng chéo và 
         <translation>Không có đoạn trích nào được chọn.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Đoạn trích</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -23536,22 +27706,48 @@ Influences the indentation of continuation lines.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>Kích thước thụt &amp;lề mặc định:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Căn chỉnh các dòng tiếp theo:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>Tab và thụt lề</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Thụt lề mã được định cấu hình trong cài đặt &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; và &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Cài đặt thụt lề của trình soạn thảo văn bản chỉ được sử dụng cho các tệp không phải mã. Xem cài đặt kiểu mã hóa nhanh C++ và Qt để định cấu hình thụt lề cho các tệp mã.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3688" />
+        <source>Auto detect</source>
+        <translation>Tự động phát hiện</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1 cố gắng phát hiện thiết lập thụt lề dựa trên nội dung tệp. Nếu việc phát hiện thất bại, các thiết lập bên dưới sẽ được dùng.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Chính sách tab mặc định:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Chỉ khoảng trống</translation>
     </message>
@@ -23561,9 +27757,8 @@ Influences the indentation of continuation lines.
         <translation>Chỉ các tab</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Hỗn hợp</translation>
+        <translation type="vanished">Hỗn hợp</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23571,12 +27766,11 @@ Influences the indentation of continuation lines.
         <translation>Kích thước thẻ &amp; &amp;b:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Kích thước thụt lề:</translation>
+        <translation type="vanished">&amp;Kích thước thụt lề:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Không có gì</translation>
     </message>
@@ -23591,29 +27785,31 @@ Influences the indentation of continuation lines.
         <translation>Với thụt lề thông thường</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Kích thước tab thiết bị đầu cuối nối tiếp:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Chính sách tab:</translation>
+        <translation type="vanished">Chính sách tab:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Khác biệt với tệp hiện tại</translation>
+        <translation type="vanished">Khác biệt với tệp hiện tại</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Mở tập tin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3592" />
         <source>Cursors: %2</source>
-        <translation>Con trỏ: %2</translation>
+        <translation type="vanished">Con trỏ: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-165" />
+        <source>Cursors: %1</source>
+        <translation>Con trỏ: %1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -23652,6 +27848,11 @@ Influences the indentation of continuation lines.
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Các dòng đã chọn:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Vị trí trong tài liệu:</translation>
     </message>
@@ -23661,7 +27862,50 @@ Influences the indentation of continuation lines.
         <translation>Neo:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Dấu cách</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>Thẻ</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Thiết lập thụt lề: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Thiết lập tài liệu</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Cài đặt thẻ</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Kích thước thụt lề</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Kích thước thẻ</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Thiết lập toàn cục...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>Kết thúc dòng Unix (LF)</translation>
     </message>
@@ -23671,17 +27915,17 @@ Influences the indentation of continuation lines.
         <translation>Kết thúc dòng Windows (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Các chú thích khác</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>In tài liệu</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Lỗi tập tin</translation>
     </message>
@@ -23696,7 +27940,7 @@ Influences the indentation of continuation lines.
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Văn bản quá lớn để hiển thị (%1 MB).</translation>
     </message>
@@ -23711,37 +27955,89 @@ Influences the indentation of continuation lines.
         <translation>Chọn Mã hóa</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Lỗi phân tích đoạn mã</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>Không tìm thấy định nghĩa nổi bật cho tệp này. Bạn có muốn tải xuống các tập tin định nghĩa điểm nổi bật bổ sung không?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>Đã tìm thấy nhiều định nghĩa nổi bật cho tệp này. Cái nào nên được sử dụng để đánh dấu tập tin này?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Hãy nhớ sự lựa chọn của tôi</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+318" />
         <source>Go to line number...</source>
         <translation>Tới số dòng...</translation>
     </message>
     <message>
-        <location line="+3660" />
+        <location line="+444" />
+        <source>Apply</source>
+        <translation>Áp dụng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Áp dụng gợi ý hiện tại.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Áp dụng một từ</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Áp dụng một từ của gợi ý hiện tại.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Áp dụng dòng</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Áp dụng một dòng của gợi ý hiện tại.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+434" />
+        <source>Fold Recursively</source>
+        <translation>Thu gọn đệ quy</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Thu gọn tất cả</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Mở rộng đệ quy</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Mở rộng tất cả</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Thu phóng: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Xóa BOM UTF-8 khi lưu</translation>
     </message>
@@ -23751,18 +28047,18 @@ Influences the indentation of continuation lines.
         <translation>Thêm BOM UTF-8 khi lưu</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Không thể tìm thấy định nghĩa.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-434" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-404" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Chữ</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Văn bản được chọn trong tài liệu hiện tại.</translation>
     </message>
@@ -24212,59 +28508,55 @@ Influences the indentation of continuation lines.
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-2997" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Nếp gấp</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Unfold</source>
         <translation>Mở ra</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&gt;</source>
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+9" />
         <source>Toggle &amp;Fold All</source>
         <translation>Chuyển đổi &amp;Gấp tất cả</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Increase Font Size</source>
-        <translation>Tăng cỡ chữ</translation>
+        <translation type="vanished">Tăng cỡ chữ</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Giảm cỡ chữ</translation>
+        <translation type="vanished">Giảm cỡ chữ</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset Font Size</source>
-        <translation>Đặt lại cỡ chữ</translation>
+        <translation type="vanished">Đặt lại cỡ chữ</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
+        <translation type="vanished">Ctrl+0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24382,7 +28674,7 @@ Influences the indentation of continuation lines.
         <translation>Đi tới Từ tiếp theo (Trường hợp lạc đà) với lựa chọn</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Chữ</translation>
     </message>
@@ -24895,6 +29187,16 @@ To style user-defined operators, use Overloaded Operator.</source>
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Thuộc tính</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Các thuộc tính.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>Bình luận</translation>
     </message>
@@ -25141,6 +29443,26 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Màu gạch dưới của ngữ cảnh chẩn đoán cảnh báo.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Thông tin</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Màu gạch chân của chẩn đoán thông tin.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Ngữ cảnh thông tin</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Màu gạch chân của ngữ cảnh chẩn đoán thông tin.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Đối số đầu ra</translation>
@@ -25253,7 +29575,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Xác thực bảo hiểm thủ công ngầm định</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>Hiển thị chú thích nội tuyến cho %1</translation>
     </message>
@@ -25282,16 +29604,48 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>Tải lại hệ thống phân cấp loại cho ký hiệu dưới con trỏ.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Trình soạn thảo văn bản thuần</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Chọn gợi ý trước đó</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Chọn gợi ý tiếp theo</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Cài lại</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Đặt lại về mặc định.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Đặt lại về mặc định</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Nhấn và giữ để đặt lại về mặc định.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Cho phép</translation>
     </message>
@@ -25306,18 +29660,23 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Mặc định</translation>
     </message>
     <message>
-        <location line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location line="+128" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Thêm vào</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Di dời</translation>
+    </message>
+    <message>
+        <location line="+602" />
+        <source>Change...</source>
+        <translation>Thay đổi...</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/basetreeview.cpp" line="+559" />
@@ -25325,7 +29684,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Hiển thị Cột %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>Đừ&amp;ng &amp; hỏi lại</translation>
     </message>
@@ -25335,12 +29694,12 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Đừng &amp;hiển thị lại</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Không có lệnh thực thi clangd nào được chỉ định.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Không thể truy xuất phiên bản clangd: Đầu ra clangd không mong đợi.</translation>
     </message>
@@ -25350,17 +29709,17 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Phiên bản clangd là %1, nhưng bắt buộc phải có %2 hoặc cao hơn.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Tên lớp không được chứa dấu phân cách không gian tên.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Vui lòng nhập tên lớp.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Tên lớp chứa các ký tự không hợp lệ.</translation>
     </message>
@@ -25370,25 +29729,21 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Chi tiết</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+124" />
-        <location line="+409" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+145" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>Đường dẫn &quot;%1&quot; tồn tại nhưng không phải là thư mục có thể ghi.</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+706" />
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>Không tạo được thư mục &quot;%1&quot;.</translation>
+        <translation type="vanished">Không tạo được thư mục &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="-365" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>copyFile không được triển khai cho &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>Không thể sao chép từ &quot;%1&quot;, nó không phải là một thư mục.</translation>
     </message>
@@ -25398,7 +29753,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể sao chép &quot;%1&quot; sang &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+46" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Không thể sao chép đệ quy từ &quot;%1&quot; sang &quot;%2&quot; trong khi cố gắng tạo kho lưu trữ tar từ nguồn: %3</translation>
     </message>
@@ -25408,68 +29763,166 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể sao chép đệ quy từ &quot;%1&quot; sang &quot;%2&quot; trong khi cố gắng trích xuất kho lưu trữ tar vào đích: %3</translation>
     </message>
     <message>
-        <location line="+51" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>fileContents không được triển khai cho &quot;%1&quot;.</translation>
+        <translation type="vanished">fileContents không được triển khai cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">writeFileContents không được triển khai cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">createTempFile không được triển khai cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">watch không được thực hiện.</translation>
+    </message>
+    <message>
+        <location line="-227" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>Hàm &quot;%1&quot; chưa được triển khai cho &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>createSymLink chưa được triển khai cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>renameFile chưa được triển khai cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>Không thể theo dõi &quot;%1&quot;, không tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>Không thể theo dõi &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>Không thể gỡ bỏ trình theo dõi cho &quot;%1&quot;, không tìm thấy.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>writeFileContents không được triển khai cho &quot;%1&quot;.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>Không thể gỡ bỏ trình theo dõi cho &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>createTempFile không được triển khai cho &quot;%1&quot;.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>Không thể tạo tệp &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>watch không được thực hiện.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>Không thể tạo thư mục &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>Từ chối xóa thư mục chuẩn &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Từ chối xóa thư mục gốc.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Từ chối xóa thư mục chính của bạn.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Không thể xóa thư mục &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Không thể xóa tập tin &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+406" />
+        <location line="+12" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Không sao chép được tập tin &quot;%1&quot; sang &quot;%2&quot;: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() được gọi bất ngờ trên nền tảng không phải Windows.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Không thể tạo liên kết tượng trưng tới &quot;%1&quot; tại &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Không thể đổi tên tệp &quot;%1&quot; thành &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>Tập tin &quot;%1&quot; không tồn tại.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File &quot;%1&quot;.</source>
-        <translation>Không thể mở Tệp &quot;%1&quot;.</translation>
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>Không thể mở tệp &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>Không thể tạo thư mục tạm trong &quot;%1&quot; (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>Không thể thay đổi quyền của &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>Không thể xác định &quot;%1&quot; và &quot;%2&quot; có cùng là một tệp hay không: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>Lệnh &quot;%1&quot; thất bại: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Không thể tạo liên kết tượng trưng cho tệp &quot;%1&quot; tại &quot;%2&quot;: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>Không thể tạo thư mục tạm &quot;%1&quot; (thử quá nhiều lần).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>Không thể tạo các tệp tạm &quot;%1&quot; (thử quá nhiều lần).</translation>
+    </message>
+    <message>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation type="vanished">Không thể mở Tệp &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Không thể đọc &quot;%1&quot;: %2</translation>
     </message>
@@ -25491,69 +29944,59 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể tạo tập tin tạm thời trong &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Thiết bị chưa được kết nối</translation>
+        <translation type="vanished">Thiết bị chưa được kết nối</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>Không đọc được tệp &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>Không thể ghi tập tin &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Không thể ghi tập tin &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>Không tạo được tập tin tạm thời &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Không tạo được tập tin tạm thời &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Không tạo được tập tin tạm thời &quot;%1&quot; (thử quá nhiều lần).</translation>
+        <translation type="vanished">Không tạo được tập tin tạm thời &quot;%1&quot; (thử quá nhiều lần).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Quá trình không thể bắt đầu.</translation>
+        <translation type="vanished">Quá trình không thể bắt đầu.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Không cài đặt được tập lệnh shell: %1 
+        <translation type="vanished">Không cài đặt được tập lệnh shell: %1 
 %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Hết thời gian chờ trong khi cố kiểm tra %1.</translation>
+        <translation type="vanished">Hết thời gian chờ trong khi cố kiểm tra %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>Lệnh &quot;%1&quot; không được tìm thấy.</translation>
+        <translation type="vanished">Lệnh &quot;%1&quot; không được tìm thấy.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Việc cài đặt tập lệnh buộc phải thất bại.</translation>
+        <translation type="vanished">Việc cài đặt tập lệnh buộc phải thất bại.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Hết thời gian chờ cài đặt shell script.</translation>
+        <translation type="vanished">Hết thời gian chờ cài đặt shell script.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Không cài đặt được tập lệnh shell: %1</translation>
+        <translation type="vanished">Không cài đặt được tập lệnh shell: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Xóa bỏ</translation>
     </message>
@@ -25610,7 +30053,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>bảng chuỗi dường như ở mức 0x%1</translation>
     </message>
@@ -25620,17 +30063,17 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>tên phần %1 của %2 phía sau cuối tệp</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Chỉnh sửa môi trường</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;CHƯA ĐẶT&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Biến</translation>
     </message>
@@ -25646,12 +30089,12 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Không thể bắt đầu quá trình đầu cuối: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>Lọc</translation>
     </message>
@@ -25661,7 +30104,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Xóa văn bản</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Tiện ích trung tâm</translation>
     </message>
@@ -25671,34 +30114,34 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Đặt lại về bố cục mặc định</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+209" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+223" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>Tên trống.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Tên chứa khoảng trắng.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Ký tự không hợp lệ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Ký tự không hợp lệ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Tên trùng với thiết bị MS Windows (COM, AU, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT 9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>Cần có đuôi tệp %1:</translation>
     </message>
@@ -25708,7 +30151,37 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Cần có phần mở rộng tệp %1:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Lỗi DeviceFileAccess nội bộ: watch() không trả về kết quả.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>Không tìm thấy thư mục tạm trên thiết bị %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Không thể tạo tệp tạm: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Không thể tạo thư mục tạm: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Chưa đặt hook thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>Không thể truy cập đường dẫn từ xa &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 trên %2</translation>
@@ -25720,7 +30193,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>%1 %2 trên %3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Lỗi khi cố gắng sao chép tập tin: %1</translation>
     </message>
@@ -25735,12 +30208,22 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể đặt quyền trên &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>Không thể tạo liên kết tượng trưng tới &quot;%1&quot; tại &quot;%2&quot;: Các đường dẫn không thuộc cùng một thiết bị.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>Không thể di chuyển %1 sang %2. Việc xóa tệp nguồn thất bại: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Không có bộ móc thiết bị &quot;localSource&quot;.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: đã hủy. %n lần xuất hiện được tìm thấy trong các tập tin %2.</numerusform>
@@ -25754,7 +30237,7 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>&amp;Mẫu tệp:</translation>
     </message>
@@ -25779,66 +30262,58 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Các tệp có tên tệp hoặc đường dẫn tệp đầy đủ khớp với bất kỳ bộ lọc nào đều bị loại trừ.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Sao chép tập tin không thành công.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Không đọc được tập tin.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Không thể ghi tập tin.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Máy tính của tôi</translation>
+        <translation type="vanished">Máy tính của tôi</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>Máy tính</translation>
+        <translation type="vanished">Máy tính</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>Tên</translation>
+        <translation type="vanished">Tên</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Kích cỡ</translation>
+        <translation type="vanished">Kích cỡ</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Loại</translation>
+        <translation type="vanished">Loại</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Kiểu</translation>
+        <translation type="vanished">Kiểu</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Ngày sửa đổi</translation>
+        <translation type="vanished">Ngày sửa đổi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="-617" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Lỗi tập tin</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>Không thể ghi tập tin %1: %2</translation>
     </message>
@@ -25848,12 +30323,12 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể ghi tập tin %1. Đĩa đầy?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: Là tên tệp dành riêng trên Windows. Không thể lưu.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>Không thể ghi đè lên tệp %1: %2</translation>
     </message>
@@ -25863,13 +30338,13 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không thể tạo tệp %1: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>Không thể tạo tệp tạm thời trong %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Không thể tạo tập tin tạm thời %1: %2</translation>
     </message>
@@ -25884,9 +30359,24 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Ghi đè tập tin hiện có &quot;%1&quot;?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Không thể sao chép tập tin &quot;%1&quot; sang &quot;%2&quot;.</translation>
+    </message>
+    <message>
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>Không thể tạo thư mục &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>Tệp %1 không tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>Không thể thiết lập bộ đệm nháp trong &quot;%1&quot;.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+48" />
@@ -25900,38 +30390,37 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Con đường:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-173" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-199" />
         <source>Location</source>
         <translation>Vị trí</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Hậu tố mặc định nếu bạn không chỉ định rõ ràng phần mở rộng tệp là &quot;.%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>Không thể tạo ngữ cảnh OpenGL.</translation>
+        <translation type="vanished">Không thể tạo ngữ cảnh OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Hiển thị chi tiết</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Không hiển thị lại</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Đóng</translation>
     </message>
@@ -25979,44 +30468,36 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>Không thể khởi động trình khởi chạy quy trình tại &quot;%1&quot;: %2</translation>
+        <translation type="vanished">Không thể khởi động trình khởi chạy quy trình tại &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Trình khởi chạy quy trình bị đóng đột ngột: %1</translation>
+        <translation type="vanished">Trình khởi chạy quy trình bị đóng đột ngột: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>Lỗi ổ cắm trình khởi chạy quy trình.</translation>
+        <translation type="vanished">Lỗi ổ cắm trình khởi chạy quy trình.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Lỗi ổ cắm bên trong: %1</translation>
+        <translation type="vanished">Lỗi ổ cắm bên trong: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Lỗi ổ cắm: %1</translation>
+        <translation type="vanished">Lỗi ổ cắm: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Lỗi giao thức nội bộ: kích thước gói không hợp lệ %1.</translation>
+        <translation type="vanished">Lỗi giao thức nội bộ: kích thước gói không hợp lệ %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Lỗi giao thức nội bộ: loại gói không hợp lệ %1.</translation>
+        <translation type="vanished">Lỗi giao thức nội bộ: loại gói không hợp lệ %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Ổ cắm trình khởi chạy đóng đột ngột.</translation>
+        <translation type="vanished">Ổ cắm trình khởi chạy đóng đột ngột.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/lua.cpp" line="+25" />
@@ -26024,12 +30505,17 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>Không có bộ giao diện Lua</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Lỗi đệ quy vô hạn</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>Không thể mở rộng macro trong đối số của tiến trình: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Đường dẫn đầy đủ bao gồm tên tệp.</translation>
     </message>
@@ -26059,22 +30545,26 @@ Sẽ không được áp dụng cho khoảng trắng trong nhận xét và chu�
         <translation>%1: Tên cơ sở tệp không có đường dẫn và hậu tố.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: Tên tệp của thư mục cha.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Biến toàn cục</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Truy cập các biến môi trường.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>Giảm thiểu</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -26083,7 +30573,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Nhập một biến môi trường trên mỗi dòng. 
+        <translation type="vanished">Nhập một biến môi trường trên mỗi dòng. 
 Để đặt hoặc thay đổi một biến, hãy sử dụng VARIABLE=VALUE. 
 Để tắt một biến, hãy thêm &quot;#&quot; vào đầu dòng này. 
 Để thêm vào một biến, hãy sử dụng VARIABLE+=VALUE. 
@@ -26093,7 +30583,39 @@ Các biến hiện có có thể được tham chiếu trong VALUE với ${OTHER
 Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>Tệp có thể là một tệp văn bản đơn giản chứa các cặp khóa/giá trị,\nhoặc một script được shell hệ thống thực thi.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Nhập mỗi biến môi trường trên một dòng.
+Để đặt hoặc thay đổi biến, dùng VARIABLE=VALUE.
+Để vô hiệu hóa biến, thêm tiền tố &quot;#&quot; vào dòng đó.
+Để nối thêm vào biến, dùng VARIABLE+=VALUE.
+Để thêm vào đầu biến, dùng VARIABLE=+VALUE.
+Có thể tham chiếu các biến hiện có trong VALUE bằng ${OTHER}.
+Để xóa biến, ghi tên biến trên một dòng không có gì khác.
+Các dòng bắt đầu bằng &quot;##&quot; được coi là chú thích.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Lấy biến từ tệp văn bản hoặc shell script:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;ĐƯỢC RỒI</translation>
     </message>
@@ -26103,12 +30625,12 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>&amp;Hủy bỏ</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Hiển thị/Ẩn mật khẩu</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Người dùng:</translation>
     </message>
@@ -26118,7 +30640,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Mật khẩu:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Địa phương</translation>
     </message>
@@ -26128,7 +30650,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Xa</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Chọn...</translation>
     </message>
@@ -26138,25 +30660,25 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Duyệt...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Chọn thư mục</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Chọn có thể thực thi</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Chọn tệp</translation>
     </message>
     <message>
-        <location line="+95" />
-        <location line="+74" />
+        <location line="+100" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Đường dẫn không được trống.</translation>
     </message>
@@ -26200,12 +30722,17 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Không thể thực thi &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Đường dẫn &quot;%1&quot; được mở rộng thành một chuỗi trống.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Các lựa chọn thay thế</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Chèn...</translation>
     </message>
@@ -26220,22 +30747,27 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Thông thoáng</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Giới thiệu và vị trí dự án</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Sử dụng làm vị trí dự án mặc định</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>Nhập tên dự án</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Thêm vào dự án:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Name:</source>
         <translation>Tên:</translation>
     </message>
@@ -26245,7 +30777,12 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Tạo trong:</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+94" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Trình hướng dẫn dự án đã chọn không hỗ trợ hệ thống build.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>Thư mục &quot;%1&quot; sẽ được tạo.</translation>
     </message>
@@ -26260,22 +30797,22 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Một tập tin có tên đó đã tồn tại.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Tên dự án không hợp lệ.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Ký tự không hợp lệ &quot;.&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Đã tìm thấy ký tự không hợp lệ &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Lỗi trong dòng lệnh.</translation>
     </message>
@@ -26285,17 +30822,22 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Chương trình &quot;%1&quot; không tồn tại hoặc không thể thực thi được.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>Không thể tìm thấy chương trình &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Chưa chỉ định tệp thực thi.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>Không tạo được giao diện quy trình cho &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>Quy trình không phản hồi</translation>
     </message>
@@ -26315,7 +30857,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Chấm dứt quá trình?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Lệnh &quot;%1&quot; đã hoàn tất thành công.</translation>
     </message>
@@ -26340,7 +30882,22 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Lệnh &quot;%1&quot; đã bị hủy sau %2 ms.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Đầu ra lỗi chuẩn là:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Đầu ra chuẩn là:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Chương trình được gọi bị thiếu, hoặc bạn có thể không đủ quyền để gọi chương trình.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Tập tin đã thay đổi</translation>
     </message>
@@ -26366,18 +30923,18 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Hành vi mặc định có thể được đặt trong Chỉnh sửa &gt; Tùy chọn &gt; Môi trường &gt; Hệ thống.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Đóng</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Không với tất cả &amp;&amp; &amp;Diff</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>Tệp đã bị xóa</translation>
     </message>
@@ -26402,7 +30959,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>&amp;Cứu</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Xóa tệp</translation>
     </message>
@@ -26432,7 +30989,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Thư mục cần xóa:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Không đọc được tệp</translation>
     </message>
@@ -26453,18 +31010,18 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Không có gì để viết.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Không tìm thấy cài đặt hợp lệ</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Không tìm thấy tệp cài đặt hợp lệ nào.&lt;/p&gt;&lt;p&gt;Tất cả các tệp cài đặt được tìm thấy trong thư mục &quot;%1&quot; đều không phù hợp với phiên bản hiện tại của %2, chẳng hạn vì chúng được viết bởi phiên bản %2 không tương thích hoặc do đường dẫn cài đặt khác đã được sử dụng.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Không tìm thấy tệp cài đặt hợp lệ nào.&lt;/p&gt;&lt;p&gt;Tất cả tệp cài đặt được tìm thấy trong thư mục &quot;%1&quot; đều quá mới hoặc quá cũ để có thể đọc được.&lt;/p&gt;</translation>
     </message>
@@ -26489,7 +31046,7 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>&lt;p&gt;Không tìm thấy tệp cài đặt nào được tạo bởi phiên bản %1 này.&lt;/p&gt;&lt;p&gt;Bạn đã làm việc với dự án này trên một máy khác hay sử dụng đường dẫn cài đặt khác trước đây?&lt;/p&gt;&lt;p&gt;Bạn vẫn muốn tải tệp cài đặt &quot;%2&quot; phải không?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>Tệp cài đặt hợp nhất không được hỗ trợ</translation>
     </message>
@@ -26499,27 +31056,23 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>&quot;%1&quot; không được %2 hỗ trợ. Bạn có muốn thử tải nó không?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Đổi tên</translation>
+        <translation type="vanished">Đổi tên</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>Bạn có thực sự muốn xóa cấu hình &lt;b&gt;%1&lt;/b&gt; không?</translation>
+        <translation type="vanished">Bạn có thực sự muốn xóa cấu hình &lt;b&gt;%1&lt;/b&gt; không?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Tên mới cho cấu hình &lt;b&gt;%1&lt;/b&gt;:</translation>
+        <translation type="vanished">Tên mới cho cấu hình &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Đổi tên...</translation>
+        <translation type="vanished">Đổi tên...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Thời gian đã trôi qua: %1.</translation>
     </message>
@@ -26565,16 +31118,24 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
     </message>
     <message>
         <location line="+6" />
-        <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Nhấn &lt;RETURN&gt; để đóng cửa sổ này...</translation>
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+Quá trình đã kết thúc với mã %1.
+Nhấn Return để đóng cửa sổ này...</translation>
     </message>
     <message>
-        <location line="+103" />
+        <source>Press &lt;RETURN&gt; to close this window...</source>
+        <translation type="vanished">Nhấn &lt;RETURN&gt; để đóng cửa sổ này...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Không thể bắt đầu quá trình đầu cuối. Sơ khai đã thoát trước khi phần dưới được bắt đầu.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Không thể đặt quyền trên thư mục tạm thời &quot;%1&quot;: %2</translation>
     </message>
@@ -26584,80 +31145,73 @@ Các dòng bắt đầu bằng &quot;##&quot; sẽ được coi là nhận xét.
         <translation>Không thể tạo ổ cắm &quot;%1&quot;: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Hết bộ nhớ.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>Đã xảy ra lỗi mã hóa.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Định dạng tệp không được hỗ trợ.</translation>
+        <translation type="vanished">Định dạng tệp không được hỗ trợ.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Không thể tìm thấy bất kỳ tệp thực thi hủy lưu trữ nào trong PATH (%1).</translation>
+        <translation type="vanished">Không thể tìm thấy bất kỳ tệp thực thi hủy lưu trữ nào trong PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Không có tập tin nguồn nào được đặt.</translation>
+        <translation type="vanished">Không có tập tin nguồn nào được đặt.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Không có thư mục đích nào được đặt.</translation>
+        <translation type="vanished">Không có thư mục đích nào được đặt.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Không thể mở tập tin đầu ra.</translation>
+        <translation type="vanished">Không thể mở tập tin đầu ra.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Không thể ghi tập tin đầu ra.</translation>
+        <translation type="vanished">Không thể ghi tập tin đầu ra.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Lệnh không thành công.</translation>
+        <translation type="vanished">Lệnh không thành công.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Đang chạy %1 
+        <translation type="vanished">Đang chạy %1 
 trong &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellpacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Biến&lt;/th&gt;&lt;th&gt;Mở rộng tới&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;thư mục của tệp hiện tại&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;tên tệp (có đường dẫn đầy đủ)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;tên tệp (không có đường dẫn)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellpacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Biến&lt;/th&gt;&lt;th&gt;Mở rộng tới&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;thư mục của tệp hiện tại&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;tên tệp (có đường dẫn đầy đủ)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;tên tệp (không có đường dẫn)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Chèn biến</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Giá trị hiện tại: %1</translation>
+        <translation type="vanished">Giá trị hiện tại: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Giá trị hiện tại của %{%1}: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Chèn giá trị chưa được mở rộng</translation>
     </message>
@@ -26673,17 +31227,17 @@ trong &quot;%2&quot;.</translation>
         <translation>Chèn giá trị mở rộng</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Chọn một biến để chèn.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Biến</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -26693,9 +31247,269 @@ trong &quot;%2&quot;.</translation>
         <translation>&lt;BIẾN&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Lệnh không hợp lệ</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1 dùng %2 để thu thập sự cố và gửi đến Sentry xử lý. %2 có thể ghi lại nội dung bất kỳ từ bộ nhớ của tiến trình bị lỗi, bao gồm thông tin nhạy cảm của người dùng, URL và mọi nội dung khác mà người dùng đã tin tưởng giao cho %1. Tuy nhiên, các báo cáo sự cố thu thập được chỉ được dùng cho mục đích duy nhất là sửa lỗi.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Thông tin thêm:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>Tổng quan về %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>Chính sách bảo mật của %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Không có thay đổi nào để áp dụng.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Không thể lấy biến môi trường từ thiết bị: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>Không thể lấy biến môi trường từ &quot;%1&quot;: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>Không thể lấy biến môi trường từ &quot;%1&quot;: Đầu ra không mong đợi</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (Mặc định)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Nhân bản</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Đặt làm mặc định</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Khôi phục</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Hoàn tác</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>&amp;Làm lại</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>Cắ&amp;t</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>Sao &amp;chép</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Sao chép vị trí &amp;liên kết</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Dán</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Chọn tất cả</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Chèn ký tự điều khiển Unicode</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Đầu ra lỗi từ xa là: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; không tồn tại.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>&quot;find&quot; không phải là tệp thực thi hiện có</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>Không thể chạy %1: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>&quot;ps&quot; không phải là tệp thực thi hiện có.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>&quot;pidin&quot; không phải là tệp thực thi hiện có.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>Không thể chạy ps: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>Không thể chạy pidin: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>Không thể kiểm tra /proc: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Không thể tạo snapshot: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>Hủy</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Lỗi nội bộ: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Lỗi chưa triển khai: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Lỗi không xác định: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Lý do không xác định.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Mở Command Prompt tại đây</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Mở Terminal tại đây</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Trình giả lập terminal dùng để mở terminal.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Lệnh:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Đối số dòng lệnh dùng cho &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>Đối số của &quot;%1&quot;:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Đối số dòng lệnh dùng cho &quot;Run in terminal&quot;.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>Đối số của &quot;Run in Terminal&quot;:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Chạy trong terminal</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Tùy chỉnh...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Cấu hình sẵn</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Chọn trình giả lập terminal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Không phải là kho lưu trữ nén.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>Đã hủy.</translation>
     </message>
 </context>
 <context>
@@ -26705,6 +31519,14 @@ trong &quot;%2&quot;.</translation>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Lỗi khi lưu trình phân tích: %1</translation>
     </message>
 </context>
 </TS>

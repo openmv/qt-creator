@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="ro_RO">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Închidere filă</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Nici unul</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Copie</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>Max</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>Median</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>Modul</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>Min</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Medie</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Plutește</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Intrarea de parolă nu a fost găsită</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Datele nu au putut fi decriptate</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Intrarea de parolă nu a fost găsită</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Datele nu au putut fi decriptate</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Datele nu au putut fi decriptate: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Criptarea a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Dimensiunea acreditării depășește dimensiunea maximă de %1: %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Cheia de acreditare depășește dimensiunea maximă de %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Scrierea acreditărilor a eșuat: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>Se descarcă definiția de sintaxă nouă pentru „%1”...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>Se descarcă noua definiție de sintaxă pentru „%1”…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>Se actualizează definiția sintaxei pentru „%1” la versiunea %2...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>Se actualizează definiția de sintaxă pentru &apos;%1&apos; la versiunea %2…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">Se descarcă definiția de sintaxă nouă pentru „%1”...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">Se actualizează definiția sintaxei pentru „%1” la versiunea %2...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Copiați/Convertiți fișierul Python</translation>
     </message>
@@ -245,47 +307,767 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QUnicodeControlCharacterMenu</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>Nu se poate deschide %1: %2</translation>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Marcaj stânga-dreapta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Marcaj dreapta-stânga</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Alăturare de lățime zero</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Nealăturare de lățime zero</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Spațiu de lățime zero</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Început de încorporare stânga-dreapta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Început de încorporare dreapta-stânga</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Început de suprascriere stânga-dreapta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Început de suprascriere dreapta-stânga</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Încheiere formatare direcțională</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Izolare stânga-dreapta</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Izolare dreapta-stânga</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI First strong isolate</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Încheiere izolare direcțională</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::AcpClient</name>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Acest agent nu mai este disponibil. Alegeți un agent pentru a începe o conversație nouă.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Eroare de sesiune: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Eroare de sesiune: răspuns nevalid.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>Eroare de prompt: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Setarea opțiunii de configurare a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Listarea sesiunilor a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Listarea sesiunilor a eșuat: răspuns invalid.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Încărcarea sesiunii a eșuat: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Conversație nouă</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Lista agenților AI nu a putut fi încărcată. Verificați conexiunea la internet, apoi încercați din nou.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Încearcă din nou</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Reîncarcă lista agenților AI.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Alegeți agentul AI</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Autentificare necesară</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Metodă:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>Anulare</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Autentificare</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Cerere întreruptă de utilizator</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Autentificarea a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 este gata.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Agentul</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Se pornește conversația...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>Se conectează la %1</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Se încarcă conversația...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Închidere</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Redenumește conversația...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Închidere conversație</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>Client ACP</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Afișează chatul AI agentic în panoul lateral</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>Inspectare client ACP...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Extindere tot</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>Mesaj client</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Mesaje</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Mesaj de la server</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>Fișier jurnal</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>Inspector ACP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Selectați&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Golire</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>Client ACP:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Necunoscut</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Copiere</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>Permitere</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Permitere întotdeauna</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Respinge</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Respinge întotdeauna</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>Cerere de permisiune</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Autentificat</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Interzicere</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Refuzat</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 minute</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 secunde</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Personalizat&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Specificați manual un agent care nu este listat în registru.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Șablon:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Selectați un șablon din registru pentru a completa în prealabil setările.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Nume:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Numele afișat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Server nou&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Executabil:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>Executabilul pentru lansarea procesului serverului ACP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Argumente:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>Argumentele pentru lansarea procesului serverului ACP.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Modificări ale mediului:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>Comanda care va porni serverul ACP.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>„%1” este necesar pentru acest agent, dar nu a fost găsit.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Asigurați-vă că Node.js este instalat și că npx este disponibil în PATH. Consultați &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; pentru instrucțiuni de instalare.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Asigurați-vă că UV este instalat și că uvx este disponibil în PATH. Consultați &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; pentru instrucțiuni de instalare.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>Servere ACP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Mai mulți furnizori</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Sursă deschisă</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Orice altceva</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>Nu este configurată nicio comandă pentru serverul ACP.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Comanda nu a fost găsită: „%1”. Verificați că există și că este executabilă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Comanda nu a fost găsită: „%1”. Verificați că este executabilă și că se află în PATH.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Nu se pot trimite date: procesul nu a fost pornit (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Nu se pot trimite date: procesul „%1” nu rulează (cod de ieșire %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>Eroare de analiză JSON: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>Se aștepta un obiect JSON.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Enter pentru trimitere, Shift+Enter pentru linie nouă; lipiți sau trageți imagini și fișiere pentru a le atașa</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Filtrare comenzi...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Elimină contextul</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Opțiuni de configurare</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Afișează gândurile</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Adăugare context</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Adăugare fișier...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Adăugare fișier de context</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Adăugare fișier la distanță...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Editorul curent</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Inserare comandă</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Trimite (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Eroare de fișier</translation>
+        <source>Stop (Esc)</source>
+        <translation>Oprește (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Context: %1 din %2 tokeni utilizați (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Costul sesiunii: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Faceți clic pentru a compacta conversația.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n atașament(e)</numerusform>
+            <numerusform>%n atașament(e)</numerusform>
+            <numerusform>%n atașament(e)</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>În coadă: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Trimis când agentul termină.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Editare mesaj din coadă</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Imagine</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>chiar acum</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>acum 1 minut</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>acum %1 minute</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>acum 1 oră</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>acum %1 ore</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>ieri</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>acum %1 zile</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Conversație fără titlu</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Redenumește conversația</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Nume (lăsați gol pentru automat):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Începe o conversație</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Conversație nouă într-un dosar...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Conversații anterioare</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Filtrare conversații...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Se încarcă conversațiile anterioare...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Conversațiile noi încep în %1</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Alegeți un dosar pentru conversație</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>Afișează o conversație mai veche</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>Afișează %1 conversații mai vechi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Conversații anterioare (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Nu există conversații anterioare.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Nicio conversație nu se potrivește.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Deschide în editor</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 — 1 linie</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 — %2 linii</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Intrare brută</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">Nu se poate deschide %1: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Eroare de fișier</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Editorul binar nu poate deschide fișiere goale.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>Fișierul este prea mare pentru Editorul binar (max. 32 GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Offset de fișier prea mare.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Adresa octet</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Anula</translation>
+        <translation type="vanished">&amp;Anula</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Refaceți</translation>
+        <translation type="vanished">&amp;Refaceți</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>Memorie la 0x%1</translation>
     </message>
@@ -345,7 +1127,7 @@
         <translation>Valoarea &amp;nbsp;octală anterioară:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;dublă&lt;/i&gt;&amp;nbsp;valoare:</translation>
     </message>
@@ -355,7 +1137,7 @@
         <translation>&lt;i&gt;dublă&lt;/i&gt;&amp;nbsp;valoare anterioară:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;valoare:</translation>
     </message>
@@ -365,12 +1147,12 @@
         <translation>Valoarea &lt;i&gt;float&lt;/i&gt; anterioară:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Copierea eșuată</translation>
     </message>
@@ -380,7 +1162,7 @@
         <translation>Nu puteți copia mai mult de 4 MB de date binare.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Copiați selecția ca caractere ASCII</translation>
     </message>
@@ -395,7 +1177,7 @@
         <translation>Setați punctul de întrerupere a datelor la selecție</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>Copiați 0x%1</translation>
@@ -416,12 +1198,26 @@
         <translation>Copiați valoarea</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Salt la adresa 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Salt la adresa 0x%1 în această fereastră</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>Nu se poate deschide „%1”.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>Editor binar</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Salt la adresa 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Salt la adresa 0x%1 în fereastră nouă</translation>
     </message>
@@ -429,21 +1225,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Conectare</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Cererea de autentificare a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Se va deschide o fereastră de browser. Introduceți codul %1 când vi se cere. 
 Codul a fost copiat în clipboard.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Autentificare eșuată</translation>
     </message>
@@ -453,48 +1254,40 @@ Codul a fost copiat în clipboard.</translation>
         <translation>Solicitarea de conectare a eșuat: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Copilotul</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Numele de utilizator și parola proxy sunt necesare:</translation>
+        <translation type="vanished">Numele de utilizator și parola proxy sunt necesare:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Nu mai întreba. Acest lucru va dezactiva Copilot pentru moment.</translation>
+        <translation type="vanished">Nu mai întreba. Acest lucru va dezactiva Copilot pentru moment.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Selectați Previous Copilot Suggestion</translation>
+        <translation type="vanished">Selectați Previous Copilot Suggestion</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Selectați Sugestie de copil următor</translation>
+        <translation type="vanished">Selectați Sugestie de copil următor</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Aplicați (%1)</translation>
+        <translation type="vanished">Aplicați (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Aplicați Word (%1)</translation>
+        <translation type="vanished">Aplicați Word (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 din %2</translation>
+        <translation type="vanished">%1 din %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Solicitați sugestie de copilot</translation>
     </message>
@@ -530,25 +1323,25 @@ Codul a fost copiat în clipboard.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Dezactivați Copilot.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Activați Copilot</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Activați Copilot.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Comutați Copilotul</translation>
     </message>
@@ -558,7 +1351,7 @@ Codul a fost copiat în clipboard.</translation>
         <translation>Activează integrarea Copilot.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>Calea Node.js:</translation>
     </message>
@@ -580,13 +1373,12 @@ Codul a fost copiat în clipboard.</translation>
         <translation>Calea către %1:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>calea %1</translation>
+        <translation type="vanished">calea %1</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Selectați calea către %2 în pluginul Copilot Neovim. Consultați %1 pentru instrucțiuni de instalare.</translation>
@@ -607,97 +1399,100 @@ Codul a fost copiat în clipboard.</translation>
         <translation>Solicitați automat sugestii pentru poziția curentă a cursorului de text după modificările aduse documentului.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Utilizați proxy</translation>
+        <translation type="vanished">Utilizați proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Utilizați proxy</translation>
+        <translation type="vanished">Utilizați proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Utilizați un proxy pentru a vă conecta la serverele Copilot.</translation>
+        <translation type="vanished">Utilizați un proxy pentru a vă conecta la serverele Copilot.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Gazdă proxy</translation>
+        <translation type="vanished">Gazdă proxy</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Gazdă proxy:</translation>
+        <translation type="vanished">Gazdă proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>Numele de gazdă al serverului proxy.</translation>
+        <translation type="vanished">Numele de gazdă al serverului proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Port proxy</translation>
+        <translation type="vanished">Port proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Port proxy:</translation>
+        <translation type="vanished">Port proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Portul serverului proxy.</translation>
+        <translation type="vanished">Portul serverului proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Utilizator proxy</translation>
+        <translation type="vanished">Utilizator proxy</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Utilizator proxy:</translation>
+        <translation type="vanished">Utilizator proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Numele de utilizator pentru a accesa serverul proxy.</translation>
+        <translation type="vanished">Numele de utilizator pentru a accesa serverul proxy.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Salvați parola proxy</translation>
+        <translation type="vanished">Salvați parola proxy</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Salvați parola proxy</translation>
+        <translation type="vanished">Salvați parola proxy</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Salvați parola pentru a accesa serverul proxy. Parola este stocată în mod nesigur.</translation>
+        <translation type="vanished">Salvați parola pentru a accesa serverul proxy. Parola este stocată în mod nesigur.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Parola proxy</translation>
+        <translation type="vanished">Parola proxy</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Parola proxy:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">Parola pentru serverul proxy.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>Calea către %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Proxy</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Parola proxy:</translation>
+        <source>Proxy:</source>
+        <translation>Proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>Parola pentru serverul proxy.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Serverul proxy de utilizat pentru conexiuni, sub forma http://gazdă:port sau http://utilizator:parolă@gazdă:port dacă proxy-ul necesită autentificare.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Respinge Neautorizat</translation>
     </message>
@@ -712,7 +1507,22 @@ Codul a fost copiat în clipboard.</translation>
         <translation>Respinge certificatele neautorizate de la serverul proxy. Dezactivarea acestei funcții reprezintă un risc de securitate.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>URL GitHub Enterprise</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>URL GitHub Enterprise:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>URL-ul serverului dvs. GitHub Enterprise.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>Activarea %1 este condiționată de acordul dvs. și de respectarea termenilor dvs. aplicabili %1. Este responsabilitatea dumneavoastră să cunoașteți și să acceptați cerințele și parametrii utilizării instrumentelor precum %1. Aceasta poate include, dar nu se limitează la, asigurarea că aveți drepturile de a permite accesul %1 la codul dvs., precum și înțelegerea oricăror implicații ale utilizării de către dvs. a %1 și sugestiile produse (cum ar fi drepturile de autor, acuratețea etc.).</translation>
     </message>
@@ -735,33 +1545,27 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Creează fișiere de traducere qm care pot fi utilizate de o aplicație din fișierele ts ale traducătorului</translation>
+        <translation type="vanished">Creează fișiere de traducere qm care pot fi utilizate de o aplicație din fișierele ts ale traducătorului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Lansare traduceri (lrelease)</translation>
+        <translation type="vanished">Lansare traduceri (lrelease)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>Lingvist</translation>
+        <translation type="vanished">Lingvist</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Sincronizează fișierele ts ale traducătorului cu codul programului</translation>
+        <translation type="vanished">Sincronizează fișierele ts ale traducătorului cu codul programului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Actualizați traduceri (actualizare)</translation>
+        <translation type="vanished">Actualizați traduceri (actualizare)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Deschide fișierul curent în Notepad</translation>
     </message>
@@ -771,9 +1575,9 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Editați cu Notepad</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Text</translation>
     </message>
@@ -789,7 +1593,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt Rapid</translation>
     </message>
@@ -804,42 +1608,41 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Previzualizare Qt Quick 2 (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Deschide fișierul curent în vi</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>Editați cu vi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>Editor binar</translation>
+        <translation type="vanished">Editor binar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+47" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+43" />
         <source>Target</source>
         <translation>Ţintă</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+108" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Eticheta</translation>
     </message>
     <message>
-        <location line="-107" />
-        <location line="+107" />
+        <location line="-129" />
+        <location line="+129" />
         <source>Command</source>
         <translation>Comanda</translation>
     </message>
     <message>
-        <location line="-105" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+863" />
+        <location line="-127" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+933" />
         <source>Reset All</source>
         <translation>Resetați toate</translation>
     </message>
@@ -850,16 +1653,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+484" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+150" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+191" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+486" />
         <source>Reset</source>
         <translation>Resetați</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-7" />
         <source>Reset to default.</source>
         <translation>Resetați la valoarea implicită.</translation>
     </message>
@@ -879,7 +1678,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Mapările comenzilor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+83" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Acțiuni și acțiuni globale din meniu</translation>
     </message>
@@ -889,25 +1688,25 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Declanșează o acțiune. Dacă este din meniu, se potrivește cu orice parte a unei ierarhii de meniu, separate prin „&gt;”. De exemplu, „sess def” se potrivește cu „Fișier &gt; Sesiuni &gt; Implicit”.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+65" />
         <source>Existing files</source>
         <translation>Fișiere existente</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Eșec la generarea fișierului</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>Nu s-a putut deschide un editor pentru „%1”.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[numai citire]</translation>
     </message>
@@ -922,49 +1721,53 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>[link simbolic]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>Directorul de proiect %1 conține fișiere care nu pot fi suprascrise: 
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Editor de text simplu</translation>
+        <translation type="vanished">Editor de text simplu</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Afișați bara laterală din stânga</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Ascunde bara laterală din stânga</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Afișați bara laterală din dreapta</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Ascundeți bara laterală din dreapta</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Copiere în clipboard</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Ștergeți meniul</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+206" />
         <source>Proxy Authentication Required</source>
         <translation>Este necesară autentificarea proxy</translation>
     </message>
@@ -974,12 +1777,32 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Nu mai întreba.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Copiere valoare extinsă</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>Locația QStandardPaths::%1 în sistemul de fișiere local.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Nu s-au găsit teme la instalare.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Ajutor</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Data curentă (ISO).</translation>
     </message>
@@ -1010,10 +1833,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Directorul implicit configurat pentru proiecte.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Directorul vizitat ultima dată într-un dialog de fișier.</translation>
@@ -1050,26 +1875,33 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>.bat pe Windows, gol pe toate celelalte platforme.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Calea către rularea %1 în sine.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>Directorul în care %1 își găsește resursele preinstalate.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>Directorul în care %1 pune date personalizate de utilizator.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Data curentă (QDate formatstring).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Ora curentă (QTime formatstring).</translation>
     </message>
@@ -1084,22 +1916,37 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Un comentariu.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Convertiți șirul în ASCII pur.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Convertește șirul în ceva ce poate fi folosit în siguranță într-o cale de fișier.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Terminalul configurat în Mediu &gt; Sistem.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Argumentele transmise comenzii terminalului pentru rularea în terminalul configurat în Mediu &gt; Sistem.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1 &gt; %2 Preferințe...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Creați dosar</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Eroare fișier de setări</translation>
     </message>
@@ -1128,52 +1975,48 @@ You will likely experience further problems using this instance of %3.</source>
 Probabil că veți întâmpina probleme suplimentare folosind această instanță de %3.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1 colectează rapoarte de blocare cu scopul exclusiv de a remedia erori. Pentru a dezactiva această caracteristică, accesați %2.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1 poate colecta rapoarte de blocare cu scopul exclusiv de a remedia erori. Pentru a activa această funcție, accesați %2.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation>&gt; Preferințe &gt; Mediu &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Editare &gt; Preferințe &gt; Mediu &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1 folosește Google Crashpad pentru a colecta erori și pentru a le trimite către backend-ul nostru pentru procesare. Crashpad poate captura conținut arbitrar din memoria procesului blocat, inclusiv informații sensibile ale utilizatorului, adrese URL și orice alt conținut în care utilizatorii au avut încredere în %1. Rapoartele de blocare colectate sunt totuși utilizate numai în scopul remedierii erorilor.</translation>
+        <translation type="vanished">%1 folosește Google Crashpad pentru a colecta erori și pentru a le trimite către backend-ul nostru pentru procesare. Crashpad poate captura conținut arbitrar din memoria procesului blocat, inclusiv informații sensibile ale utilizatorului, adrese URL și orice alt conținut în care utilizatorii au avut încredere în %1. Rapoartele de blocare colectate sunt totuși utilizate numai în scopul remedierii erorilor.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Mai multe informații:</translation>
+        <translation type="vanished">Mai multe informații:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>Prezentare generală a Crashpadului</translation>
+        <translation type="vanished">Prezentare generală a Crashpadului</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>Politica de securitate %1</translation>
+        <translation type="vanished">Politica de securitate %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Proiecta</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Adăugați fișierul la controlul versiunii (%1)</translation>
     </message>
@@ -1183,7 +2026,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Adăugați fișierele la controlul versiunilor (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Codificarea textului</translation>
     </message>
@@ -1198,7 +2041,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Selectați codificarea pentru „%1”.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Reîncărcați cu codificare</translation>
     </message>
@@ -1208,7 +2051,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Salvați cu codificare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-348" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-353" />
         <source>Uncategorized</source>
         <translation>Necategorizat</translation>
     </message>
@@ -1218,12 +2061,12 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Instrumente care vor apărea direct sub meniul Instrumente externe.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Noua categorie</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Instrument nou</translation>
     </message>
@@ -1239,15 +2082,15 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Text util</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Mediul de sistem</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+474" />
-        <location line="+72" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+52" />
+        <location line="+62" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+646" />
+        <location line="+71" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+53" />
         <source>Add</source>
         <translation>Adăuga</translation>
     </message>
@@ -1259,17 +2102,16 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
     <message>
         <location line="+2" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+182" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+316" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+307" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+1" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+396" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+384" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Elimina</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Scoateți instrumentul.</translation>
+        <translation type="vanished">Scoateți instrumentul.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -1330,15 +2172,13 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+248" />
         <source>No changes to apply.</source>
-        <translation>Fără modificări de aplicat.</translation>
+        <translation type="vanished">Fără modificări de aplicat.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+98" />
         <source>Change...</source>
         <translation>Schimba...</translation>
     </message>
@@ -1369,19 +2209,47 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Executabil:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+68" />
+        <source>Custom Language Models</source>
+        <translation>Modele de limbaj personalizate</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Model nou&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Executabil</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+656" />
+        <source>Executable:</source>
+        <translation>Executabil:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Argumente</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Argumente:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Director de lucru:</translation>
     </message>
@@ -1392,7 +2260,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Mediu:</translation>
     </message>
@@ -1407,7 +2275,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Adăugați o categorie</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -1417,19 +2285,21 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>PATH=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Instrumente externe</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-10" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="-26" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-20" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-55" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Cale:</translation>
     </message>
@@ -1480,6 +2350,11 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Starea controlului versiunilor:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Citibil:</translation>
     </message>
@@ -1500,18 +2375,18 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Legatura simbolica:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>Necunoscut</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
@@ -1526,7 +2401,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Mac (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Amestecat</translation>
@@ -1547,7 +2422,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Nedefinit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Alegeți un șablon:</translation>
     </message>
@@ -1557,8 +2432,8 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Alege...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+903" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+955" />
         <source>Projects</source>
         <translation>Proiecte</translation>
     </message>
@@ -1578,7 +2453,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>%1 Șabloane</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Independent de platformă</translation>
     </message>
@@ -1598,7 +2473,7 @@ Probabil că veți întâmpina probleme suplimentare folosind această instanț�
         <translation>Deschideți fișierul „%1” cu:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Suprascrieți fișierele existente</translation>
     </message>
@@ -1614,8 +2489,8 @@ Doriți să le suprascrieți?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2079" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+438" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+2210" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+447" />
         <source>Make Writable</source>
         <translation>Faceți inscriptibil</translation>
     </message>
@@ -1726,7 +2601,7 @@ Do you want to check them out now?</source>
 Vrei să le verifici acum?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+32" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+29" />
         <source>The following files have unsaved changes:</source>
         <translation>Următoarele fișiere au modificări nesalvate:</translation>
     </message>
@@ -1751,10 +2626,9 @@ Vrei să le verifici acum?</translation>
         <translation>&amp;Nu salvați</translation>
     </message>
     <message>
-        <location line="+76" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1711" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2000" />
+        <location line="+78" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+2060" />
         <source>&amp;Save</source>
         <translation>&amp;Salva</translation>
     </message>
@@ -1786,7 +2660,7 @@ Vrei să le verifici acum?</translation>
     <message>
         <location line="+15" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Salva</translation>
     </message>
@@ -1801,17 +2675,90 @@ Vrei să le verifici acum?</translation>
         <translation>Salvați selectat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+561" />
         <source>Sort categories</source>
         <translation>Sortați categoriile</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Aplică toate modificările și revine la modul anterior.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Aplică toate modificările și rămâne aici.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Renunță la toate modificările și rămâne aici.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Renunță la toate modificările și revine la modul anterior.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Modificări neaplicate</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Există modificări neaplicate. Doriți să le aplicați?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Aplicare modificări</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Pagina anterioară conține modificări nesalvate.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Aplicare modificări nesalvate</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Abandonare modificări nesalvate</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Revenire la pagina anterioară</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Există modificări nesalvate.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Rămâi în modul Setări</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+319" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Preferințe</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-392" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-412" />
         <source>Invalid key sequence.</source>
         <translation>Secvență de taste nevalidă.</translation>
     </message>
@@ -1832,18 +2779,18 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Înregistra</translation>
     </message>
     <message>
-        <location line="-155" />
-        <location line="+153" />
+        <location line="-176" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Secvență de taste:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Folosiți „Cmd”, „Opt”, „Ctrl” și „Shift” pentru tastele modificatoare. Folosiți „Escape”, „Backspace”, „Delete”, „Insert”, „Home” și așa mai departe, pentru tastele speciale. Combinați tastele individuale cu „+” și combinați mai multe comenzi rapide într-o secvență de comenzi rapide cu &quot;,&quot;. De exemplu, dacă utilizatorul trebuie să țină apăsate tastele modificatoare Ctrl și Shift în timp ce apăsă Escape, apoi eliberați și apăsați A, introduceți „Ctrl+Shift+Escape,A”.</translation>
     </message>
@@ -1863,25 +2810,25 @@ Vrei să le verifici acum?</translation>
         <translation>Secvența de chei are potențiale conflicte. &lt;a href=&quot;#conflicts&quot;&gt;Afișați.&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+78" />
         <source>Keyboard Shortcuts</source>
         <translation>Comenzi rapide de la tastatură</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Comandă rapidă</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+160" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Importați schema de mapare a tastaturii</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Schema de mapare a tastaturii (*.kms)</translation>
     </message>
@@ -1891,34 +2838,33 @@ Vrei să le verifici acum?</translation>
         <translation>Exportați schema de mapare a tastaturii</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+220" />
         <source>Keyboard</source>
         <translation>Tastatura</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Nu s-au putut salva fișierele.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1223" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1301" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Eroare de fișier</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Eroare la salvarea fișierului: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Toate fișierele (*.*)</translation>
@@ -1945,27 +2891,27 @@ Vrei să le verifici acum?</translation>
         <translation>Salvați fișierul ca</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+162" />
         <source>Open File</source>
         <translation>Deschideți fișierul</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>Nu se poate reîncărca %1</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Save A&amp;ll</source>
         <translation>Salvați A&amp;ll</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>Edita</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;fără document&gt;</translation>
     </message>
@@ -1975,77 +2921,76 @@ Vrei să le verifici acum?</translation>
         <translation>Nu este selectat niciun document.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2301" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+251" />
         <source>Copy Full Path</source>
         <translation>Copiați calea completă</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Copiați calea și numărul liniei</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Copiați numele fișierului</translation>
     </message>
     <message>
-        <location line="+2" />
-        <location line="+1737" />
+        <location line="-856" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+5" />
         <source>Save &amp;As...</source>
         <translation>Salvați &amp;ca...</translation>
     </message>
     <message>
-        <location line="-1736" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location line="-1796" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Salvează fără formatare</translation>
+    </message>
+    <message>
+        <location line="-1790" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Reveniți la Salvat</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Aproape</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Închideți totul</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Închide Alții</translation>
     </message>
     <message>
-        <location line="-1757" />
-        <location line="+124" />
+        <location line="-1738" />
         <source>Close All Except Visible</source>
         <translation>Închideți toate, cu excepția celor vizibile</translation>
     </message>
     <message>
-        <location line="-119" />
         <source>Properties...</source>
-        <translation>Proprietăți...</translation>
+        <translation type="vanished">Proprietăți...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>Pin</translation>
+        <translation type="vanished">Pin</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="-77" />
         <source>Revert File to Saved</source>
         <translation>Reveniți fișierul la Salvat</translation>
     </message>
@@ -2064,7 +3009,7 @@ Vrei să le verifici acum?</translation>
         <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location line="+68" />
         <source>Previous Open Document in History</source>
         <translation>Documentul deschis anterior în istorie</translation>
     </message>
@@ -2074,19 +3019,53 @@ Vrei să le verifici acum?</translation>
         <translation>Următorul document deschis în istorie</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-343" />
+        <location line="+11" />
+        <source>Previous Tab</source>
+        <translation>Fila anterioară</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Fila următoare</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Închidere toate filele</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Închidere celelalte file</translation>
+    </message>
+    <message>
+        <location line="-2583" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-352" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Întoarce-te</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>Mergi înainte</translation>
     </message>
     <message>
         <location line="+11" />
+        <source>Open Previous Document</source>
+        <translation>Deschide documentul anterior</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Deschide documentul următor</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Reopen Last Closed Document</source>
         <translation>Redeschideți ultimul document închis</translation>
     </message>
@@ -2097,7 +3076,7 @@ Vrei să le verifici acum?</translation>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-312" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="-7" />
@@ -2138,12 +3117,12 @@ Vrei să le verifici acum?</translation>
         <translation>Accesați Următoarea diviziune sau fereastră</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-218" />
         <source>Ad&amp;vanced</source>
         <translation>A&amp;vansat</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Document curent</translation>
     </message>
@@ -2158,7 +3137,7 @@ Vrei să le verifici acum?</translation>
         <translation>Coordonata Y a colțului din stânga sus al editorului curent, relativ la ecran.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Continuați să deschideți fișierul text uriaș?</translation>
     </message>
@@ -2172,22 +3151,21 @@ Continue?</source>
 Continua?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>Nu s-a putut deschide „%1”: Nu se pot deschide fișierele de tip „%2”.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>Nu s-a putut deschide „%1” pentru citire. Fie că fișierul nu există, fie nu aveți permisiunile pentru a-l deschide.</translation>
+        <translation type="vanished">Nu s-a putut deschide „%1” pentru citire. Fie că fișierul nu există, fie nu aveți permisiunile pentru a-l deschide.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>Nu s-a putut deschide „%1”: eroare necunoscută.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Avertisment:&lt;/b&gt; Acest fișier nu a fost deschis încă în %1.</translation>
     </message>
@@ -2202,7 +3180,7 @@ Continua?</translation>
         <translation>&lt;b&gt;Avertisment:&lt;/b&gt; modificați un fișier numai în citire.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+26" />
         <source>&amp;Save %1</source>
         <translation>&amp;Salvați %1</translation>
     </message>
@@ -2210,6 +3188,11 @@ Continua?</translation>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>Salvați %1 &amp;Ca...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>Salvează %1 fără formatare</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2222,7 +3205,7 @@ Continua?</translation>
         <translation>Reîncărcați %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>Închide %1</translation>
     </message>
@@ -2232,7 +3215,7 @@ Continua?</translation>
         <translation>Închideți toate, cu excepția %1</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Nu se poate deschide fișierul</translation>
     </message>
@@ -2242,7 +3225,7 @@ Continua?</translation>
         <translation>Nu se poate deschide fișierul pentru editare cu VCS.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>Veți pierde modificările curente dacă continuați să reveniți la %1.</translation>
     </message>
@@ -2253,9 +3236,12 @@ Continua?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-212" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>Anula</translation>
     </message>
@@ -2265,7 +3251,7 @@ Continua?</translation>
         <translation>Anulați &amp;&amp; &amp;Dif</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>Închideți „%1”</translation>
     </message>
@@ -2275,17 +3261,15 @@ Continua?</translation>
         <translation>Închide Editorul</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>Închideți toate, cu excepția „%1”</translation>
+        <translation type="vanished">Închideți toate, cu excepția „%1”</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Închideți Alți editori</translation>
+        <translation type="vanished">Închideți Alți editori</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+64" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>Anulați fixarea „%1”</translation>
     </message>
@@ -2300,13 +3284,18 @@ Continua?</translation>
         <translation>Pin Editor</translation>
     </message>
     <message>
-        <location line="+363" />
+        <location line="+27" />
+        <source>Diff Against Current File</source>
+        <translation>Diff cu fișierul curent</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Deschiderea fișierului</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Deschideți Documente</translation>
@@ -2327,22 +3316,26 @@ Continua?</translation>
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Editor de sistem</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>URL-ul %1 nu a putut fi deschis.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Trageți pentru a trage documente între divizări</translation>
+        <translation type="vanished">Trageți pentru a trage documente între divizări</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Trageți pentru a deschide documentul într-o altă divizare.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Închideți documentul</translation>
     </message>
@@ -2357,17 +3350,17 @@ Continua?</translation>
         <translation>Fișierul poate fi scris</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>Nu s-a putut găsi executabilul pentru „%1” (extins „%2”)</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>Se pornește instrumentul extern „%1”</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>„%1” s-a terminat</translation>
     </message>
@@ -2377,22 +3370,22 @@ Continua?</translation>
         <translation>„%1” s-a terminat cu o eroare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Extern</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>Eroare la analizarea instrumentului extern %1: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Eroare: instrumentul extern din %1 are un ID duplicat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Lansarea unui browser de fișiere a eșuat</translation>
     </message>
@@ -2417,7 +3410,7 @@ Continua?</translation>
 %2</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Comanda pentru browserul de fișiere nu este setată.</translation>
     </message>
@@ -2447,12 +3440,17 @@ Continua?</translation>
         <translation>Afișați în Finder</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Afișează în managerul de fișiere</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>Afișați folderul care conține</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Deschideți linia de comandă aici</translation>
     </message>
@@ -2475,16 +3473,29 @@ Continua?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>Nu s-a putut elimina fișierul „%1”.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>Eliminarea fișierului „%1” a eșuat: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>Conținutul nu poate fi decodat.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>Redenumirea gardei de includere din fișierul „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">Nu s-a putut elimina fișierul „%1”.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>Nu s-a putut redenumi paza de includere în fișierul „%1”.</translation>
+        <translation type="vanished">Nu s-a putut redenumi paza de includere în fișierul „%1”.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>%n apariții înlocuite.</numerusform>
@@ -2493,7 +3504,7 @@ Continua?</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Găsiți/Înlocuiți</translation>
     </message>
@@ -2510,8 +3521,8 @@ Continua?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Avansat...</translation>
     </message>
@@ -2521,7 +3532,7 @@ Continua?</translation>
         <translation>Ctrl+Shift+F</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-174" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-176" />
         <source>Find</source>
         <translation>Găsi</translation>
     </message>
@@ -2542,19 +3553,19 @@ Continua?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Înlocui</translation>
     </message>
     <message>
-        <location line="-222" />
-        <location line="+237" />
+        <location line="-224" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Înlocuiți &amp;&amp; Găsiți</translation>
     </message>
     <message>
-        <location line="-232" />
-        <location line="+261" />
+        <location line="-234" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Înlocuiește toate</translation>
     </message>
@@ -2633,8 +3644,7 @@ Continua?</translation>
     </message>
     <message>
         <location line="+28" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-214" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+108" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-350" />
         <source>Case Sensitive</source>
         <translation>Caz sensibil</translation>
     </message>
@@ -2665,12 +3675,12 @@ Continua?</translation>
         <translation>Inlocuieste cu...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Termen de căutare gol.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Căutare</translation>
     </message>
@@ -2680,7 +3690,7 @@ Continua?</translation>
         <translation>Căutați &amp;&amp; &amp;Înlocuiți</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>&amp;Caută:</translation>
     </message>
@@ -2693,6 +3703,16 @@ Continua?</translation>
         <location line="+3" />
         <source>Whole words o&amp;nly</source>
         <translation>&amp;Numai cuvinte întregi</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>Ignorare fișiere binare</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Ignorare fișiere generate</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2732,7 +3752,12 @@ Continua?</translation>
     <message>
         <location line="+2" />
         <source>None</source>
-        <translation>Nici unul</translation>
+        <comment>No find flags</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Nici unul</translation>
     </message>
     <message>
         <location line="+2" />
@@ -2813,7 +3838,7 @@ Continua?</translation>
         <translation>Nu s-au găsit potriviri.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+124" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+128" />
         <location line="+501" />
         <source>Expand All</source>
         <translation>Extindeți toate</translation>
@@ -2821,7 +3846,7 @@ Continua?</translation>
     <message>
         <location line="-487" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-44" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Afișați căile în raport cu proiectul activ</translation>
     </message>
@@ -2848,7 +3873,7 @@ Continua?</translation>
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-194" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-197" />
         <source>Collapse All</source>
         <translation>Restrângeți totul</translation>
     </message>
@@ -2863,7 +3888,7 @@ Continua?</translation>
         <translation>Istorie:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Afișați fișierele ascunse</translation>
     </message>
@@ -2878,7 +3903,7 @@ Continua?</translation>
         <translation>Afișați folderele în partea de sus</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+43" />
         <source>Synchronize with Editor</source>
         <translation>Sincronizați cu Editorul</translation>
     </message>
@@ -2888,33 +3913,42 @@ Continua?</translation>
         <translation>Sincronizați directorul rădăcină cu Editor</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Fișier nou</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Dosar nou</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Elimină dosarul...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>Fișier nou...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-386" />
         <source>Open &quot;%1&quot;</source>
         <translation>Deschideți „%1”</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Eliminați folderul</translation>
+        <translation type="vanished">Eliminați folderul</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+102" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+99" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2948,17 +3982,16 @@ Continua?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+589" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+613" />
         <source>Options</source>
         <translation>Opțiuni</translation>
     </message>
     <message>
-        <location line="+114" />
         <source>Add New...</source>
-        <translation>Adăugați un nou...</translation>
+        <translation type="vanished">Adăugați un nou...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+128" />
         <source>Rename...</source>
         <translation>Redenumiți...</translation>
     </message>
@@ -2968,7 +4001,7 @@ Continua?</translation>
         <translation>Elimina...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-86" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+210" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Afișați comenzile rapide de la tastatură în meniurile contextuale (implicit: %1)</translation>
     </message>
@@ -2983,7 +4016,7 @@ Continua?</translation>
         <translation>oprit</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Ignorați cursoarele pentru vizualizări</translation>
     </message>
@@ -2995,25 +4028,54 @@ If the system cursors for resizing views are not displayed properly, you can use
 Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișate corect, puteți utiliza cursoarele furnizate de %1.</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="-69" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Resetați casetele de dialog Nu întrebați/Afișați din nou</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Resetați la valoarea implicită.</translation>
+        <translation type="vanished">Resetați la valoarea implicită.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>Temă:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>Limbă:</translation>
+    </message>
+    <message>
+        <location line="-121" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>Reactivează avertismentele suprimate prin selectarea opțiunii „Nu mai afișa” (de exemplu, evidențiator lipsă).</translation>
+    </message>
+    <message>
+        <location line="+78" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Preferă barele de informare de tip banner în locul ferestrelor pop-up</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Folosește editoare cu file</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Afișează butoanele OK și Anulare în modul Preferințe</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Codec de text pentru instrumente:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Culoare:</translation>
     </message>
     <message>
         <location line="+6" />
@@ -3036,47 +4098,51 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Rotunjiți pentru .75 și peste</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Nu rotunjiți</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>Politica de rotunjire a DPI:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Următoarele variabile de mediu sunt setate și pot influența comportamentul de scalare a interfeței de utilizare a %1:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Mediul influențează comportamentul de scalare a UI.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Dimensiune tab Terminal serial:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>User Interface</source>
-        <translation>Interfata utilizator</translation>
+        <translation type="vanished">Interfata utilizator</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Limba de sistem&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+224" />
         <source>The language change will take effect after restart.</source>
         <translation>Schimbarea limbii va intra în vigoare după repornire.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Stilul barei de instrumente:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Compact</translation>
     </message>
@@ -3086,91 +4152,92 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Relaxat</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>Modificarea politicii de rotunjire a DPI va intra în vigoare după repornire.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Interfață</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+53" />
         <source>Environment</source>
         <translation>Mediu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>Setarea permisiunilor a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>Nu se poate crea directorul %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1429" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1295" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Configurați...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Deschideți dialogul Preferințe.</translation>
+        <translation type="vanished">Deschideți dialogul Preferințe.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Deschideți dialogul Opțiuni.</translation>
+        <translation type="vanished">Deschideți dialogul Opțiuni.</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+415" />
         <source>Restart Required</source>
         <translation>Este necesară repornirea</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>Mai târziu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Reporniți acum</translation>
     </message>
     <message>
-        <location line="+378" />
+        <location line="+451" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Bazat pe Qt %1 (%2, %3)</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;Din versiunea %1&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;Construit pe %1 %2&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;Construit pe %1 %2&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Drepturi de autor 2008-%6 %7. Toate drepturile rezervate.&lt;br/&gt;&lt;br/&gt;Programul este oferit ca atare, fără nicio GARANTIE DE NICIUN FEL, INCLUSIV GARANȚIA DE DESIGN, VANTABILITATE ȘI ADECVARE PENTRU UN ANUMIT SCOP.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Drepturi de autor 2008-%6 %7. Toate drepturile rezervate.&lt;br/&gt;&lt;br/&gt;Programul este oferit ca atare, fără nicio GARANTIE DE NICIUN FEL, INCLUSIV GARANȚIA DE DESIGN, VANTABILITATE ȘI ADECVARE PENTRU UN ANUMIT SCOP.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Sigla Qt, precum și Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® și Qt Embedded® sunt mărci comerciale înregistrate ale The Qt Company Ltd.</translation>
+        <translation type="vanished">Sigla Qt, precum și Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® și Qt Embedded® sunt mărci comerciale înregistrate ale The Qt Company Ltd.</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+325" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>Ieșiți din %1?</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+89" />
         <source>&amp;File</source>
         <translation>&amp;Fişier</translation>
     </message>
@@ -3180,12 +4247,12 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>&amp;Edita</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+29" />
         <source>&amp;View</source>
         <translation>&amp;Vedere</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>&amp;Tools</source>
         <translation>&amp;Unelte</translation>
     </message>
@@ -3226,7 +4293,12 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>&amp;Deschideți fișierul...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Deschide fișier...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Deschideți fișierul &amp;Cu...</translation>
     </message>
@@ -3306,7 +4378,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Selectați &amp;Toate</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Mergeți la linie...</translation>
     </message>
@@ -3326,7 +4398,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Micșorați</translation>
     </message>
@@ -3342,7 +4414,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Ctrl+Shift+-</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Dimensiune originală</translation>
     </message>
@@ -3357,7 +4429,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Afișați jurnalele...</translation>
     </message>
@@ -3368,7 +4440,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
     </message>
     <message>
         <location line="+11" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+167" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+207" />
         <source>Minimize</source>
         <translation>Minimizați</translation>
     </message>
@@ -3384,7 +4456,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Ecran complet</translation>
     </message>
@@ -3413,7 +4485,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Ascunde bara de meniu</translation>
     </message>
@@ -3423,7 +4495,8 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Aceasta va ascunde complet bara de meniu. O puteți afișa din nou tastând %1.&lt;br&gt;&lt;br&gt;Sau declanșați acțiunea „%2” din filtrul de localizare „%3” (%4).</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Vizualizări</translation>
     </message>
@@ -3453,42 +4526,85 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Contact...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Stiluri de selectare a modului de ciclu</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Selector de mod Stil</translation>
+        <translation type="vanished">Selector de mod Stil</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Ascundere</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Moduri</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Pictograme și text</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Numai icoane</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Ascuns</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>Afișează %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-70" />
         <source>Version:</source>
         <translation>Versiune:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Jurnalul modificărilor</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="-2309" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Deschide Preferințele.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>Executabilul %1 nu a fost găsit în %2</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>Compilat la %1 %2 pe baza Qt %3 (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>Sigla Qt, sigla axivion stopping software erosion, sigla Qt Group, precum și Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® sunt mărci comerciale înregistrate ale The Qt Company Ltd. sau ale filialelor sale.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 este software liber și îl puteți redistribui în &lt;a href=&quot;%2&quot;&gt;anumite condiții&lt;/a&gt;. Pentru unele componente se pot aplica condiții diferite.</translation>
+    </message>
+    <message>
+        <location line="+1450" />
         <source>Contact</source>
         <translation>Contact</translation>
     </message>
@@ -3498,22 +4614,42 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>&lt;p&gt;Dezvoltatorii Qt Creator pot fi contactați la lista de corespondență Qt Creator:&lt;/p&gt;%1&lt;p&gt;sau canalul #qt-creator de pe Libera.Chat IRC:&lt;/p&gt;%2&lt;p&gt;Urmăritorul nostru de erori se află la %3.&lt;/p&gt;&lt;p&gt;Utilizați %4 pentru bucăți mai mari de text.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Neimplementat</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>Fișierul a fost restaurat din copierea salvată automat. Selectați Salvare pentru a confirma sau Reveniți la Salvat pentru a renunța la modificări.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>Deschidere cu VCS (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>Diff „%1”</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>Jurnal „%1”</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>Adnotare „%1”</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>Fabrică cu id=&quot;%1&quot; deja înregistrată. Ștergerea.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Reîncărcați toți vrăjitorii</translation>
     </message>
@@ -3521,6 +4657,11 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Inspectați starea expertului</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Altele</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -3533,7 +4674,7 @@ Dacă cursoarele de sistem pentru redimensionarea vizualizărilor nu sunt afișa
         <translation>Nu se poate converti rezultatul „%1” în șir.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Evaluați instrucțiuni JavaScript simple.&lt;br&gt;Caracterele literale „}” trebuie să fie evadate ca „\}”, caracterele „\” trebuie să fie evadate ca „\\”, iar „%{” trebuie să fie „%\{”.</translation>
     </message>
@@ -3575,17 +4716,17 @@ Pentru a face acest lucru, tastați această comandă rapidă și un spațiu în
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-416" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-42" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-406" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Adăuga...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Edita...</translation>
     </message>
@@ -3596,7 +4737,7 @@ Pentru a face acest lucru, tastați această comandă rapidă și un spațiu în
         <translation>Selectați Director</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Executați comenzi personalizate</translation>
     </message>
@@ -3606,7 +4747,7 @@ Pentru a face acest lucru, tastați această comandă rapidă și un spațiu în
         <translation>Rulează o comandă arbitrară cu argumente. Comanda este căutată în variabila de mediu PATH dacă este necesar. Rețineți că comanda este rulată direct, nu într-un shell.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Comanda anterioară încă rulează (&quot;%1&quot;). 
@@ -3618,7 +4759,7 @@ Vrei să-l omori?</translation>
         <translation>Omorâți procesul anterior?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>Nu s-a putut găsi executabilul pentru „%1”.</translation>
     </message>
@@ -3673,7 +4814,7 @@ Vrei să-l omori?</translation>
         <translation>Creați director</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+43" />
         <source>Files in File System</source>
         <translation>Fișiere în sistemul de fișiere</translation>
     </message>
@@ -3683,17 +4824,17 @@ Vrei să-l omori?</translation>
         <translation>Deschide un fișier dat de o cale relativă către documentul curent sau cale absolută. „~” se referă la directorul dvs. de acasă. Aveți opțiunea de a crea un fișier dacă acesta nu există încă.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+136" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>Creați și deschideți fișierul „%1”</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>Creați directorul „%1”</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Includeți fișiere ascunse</translation>
     </message>
@@ -3703,7 +4844,7 @@ Vrei să-l omori?</translation>
         <translation>Filtra:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Configurarea filtrului</translation>
     </message>
@@ -3728,7 +4869,7 @@ Vrei să-l omori?</translation>
         <translation>Includeți filtrul atunci când nu utilizați un prefix pentru căutări.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+133" />
         <source>The evaluation was interrupted.</source>
         <translation>Evaluarea a fost întreruptă.</translation>
     </message>
@@ -3748,7 +4889,7 @@ Vrei să-l omori?</translation>
         <translation>Motorul a fost întrerupt după expirarea timpului.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+31" />
         <source>Evaluate JavaScript</source>
         <translation>Evaluați JavaScript</translation>
     </message>
@@ -3763,13 +4904,23 @@ Vrei să-l omori?</translation>
         <translation>Resetați motorul</translation>
     </message>
     <message>
-        <location line="+40" />
-        <location line="+4" />
+        <location line="+43" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Copiați în clipboard: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+6" />
+        <source>Ignore Generated Files</source>
+        <translation>Ignorare fișiere generate</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Ignoră fișierele generate la folosirea filtrelor legate de proiect.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>Căutare pe Web</translation>
     </message>
@@ -3789,12 +4940,12 @@ Vrei să-l omori?</translation>
         <translation>Declanșează o căutare în instrumentul de urmărire a erorilor Qt.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>Localiza...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Deschideți un document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fișier &gt; Deschideți fișierul (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fișier &gt; Exemple &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Fișier &gt; Fișiere recente&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Trageți și plasați fișiere aici&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3809,7 +4960,7 @@ Vrei să-l omori?</translation>
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- tastați &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; pentru a trece la o definiție a funcției&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Actualizarea cache-urilor de localizare</translation>
     </message>
@@ -3819,12 +4970,12 @@ Vrei să-l omori?</translation>
         <translation>Localizator</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Filtre disponibile</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-61" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Interval de reîmprospătare:</translation>
     </message>
@@ -3834,17 +4985,23 @@ Vrei să-l omori?</translation>
         <translation>Filtrele de localizare care nu își actualizează imediat datele din memoria cache, cum ar fi filtrele de director personalizate, le actualizează după acest interval de timp.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation>min</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Folosește completarea cu Tab</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>Filtrele de localizare arată căile relative către proiectul activ atunci când este posibil.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+42" />
         <source>Files in Directories</source>
         <translation>Fișiere în directoare</translation>
     </message>
@@ -3855,12 +5012,13 @@ Vrei să-l omori?</translation>
         <translation>Șablon de adresă URL</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-2" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>Nume</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Prefix</translation>
     </message>
@@ -3880,17 +5038,17 @@ Vrei să-l omori?</translation>
         <translation>Personalizat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-10" />
         <source>Open as Centered Popup</source>
         <translation>Deschideți ca pop-up centrat</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-21" />
         <source>Refresh</source>
         <translation>Reîmprospăta</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+99" />
         <source>Type to locate</source>
         <translation>Tastați pentru a localiza</translation>
     </message>
@@ -3905,7 +5063,7 @@ Vrei să-l omori?</translation>
         <translation>Comută la un document deschis.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-145" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-141" />
         <source>Locator query string.</source>
         <translation>Șir de interogare de localizare.</translation>
     </message>
@@ -3940,7 +5098,7 @@ Vrei să-l omori?</translation>
         <translation>Localizator: a apărut o eroare la rularea „%1”.</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+67" />
         <source>Sort results</source>
         <translation>Sortați rezultatele</translation>
     </message>
@@ -3972,7 +5130,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>URL-uri:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-942" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-982" />
         <source>Entry is missing a logging category name.</source>
         <translation>În intrare lipsește un nume de categorie de înregistrare.</translation>
     </message>
@@ -3987,7 +5145,12 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Nivel nevalid: %1</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Această categorie de jurnalizare folosește o abordare nestatică nerecomandată și nu poate fi gestionată de vizualizatorul de jurnale.</translation>
+    </message>
+    <message>
+        <location line="+85" />
         <location line="+88" />
         <source>Category</source>
         <translation>Categorie</translation>
@@ -4029,7 +5192,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-424" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-414" />
         <source>Type</source>
         <translation>Tip</translation>
     </message>
@@ -4045,7 +5208,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -4053,8 +5216,8 @@ Faceți dublu clic pentru a edita elementul.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>Clar</translation>
     </message>
@@ -4140,12 +5303,12 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Actualizare de la presetare...</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+17" />
         <source>Save Logs As</source>
         <translation>Salvați jurnalele ca</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Nu s-a putut scrie jurnalele în „%1”.</translation>
     </message>
@@ -4155,17 +5318,17 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Nu s-a putut deschide fișierul „%1” pentru scrierea jurnalelor.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Save Enabled Categories As...</source>
         <translation>Salvați categoriile activate ca...</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>Nu s-a putut scrie fișierul presetat „%1”.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Încărcați categoriile activate de la</translation>
     </message>
@@ -4185,12 +5348,12 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Format de fișier prestabilit neașteptat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Terminal serial</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Încheiere text</translation>
     </message>
@@ -4320,7 +5483,7 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Eroare internă: tipul este nevalid</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>Tip MIME</translation>
     </message>
@@ -4330,41 +5493,41 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Handler</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Resetați toate definițiile tipului MIME la valorile implicite.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>Resetați tipurile MIME</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Resetați handlerul atribuit pentru toate definițiile de tip MIME la valoarea implicită.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>Resetați manevrele</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>Modele:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>O listă separată prin punct și virgulă de nume de fișiere cu metacaractere.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Antet magic</translation>
     </message>
@@ -4379,51 +5542,63 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Prioritate</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Tipuri MIME înregistrate</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Detalii</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Modificările vor intra în vigoare după repornire.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>Tipuri MIME</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>Comutați la modul &lt;b&gt;%1&lt;/b&gt;</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>Activați %1 Vizualizare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Afișați linii care nu se potrivesc</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Afișează {} liniile a&amp;nterioare</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Afișează {} liniile &amp;următoare</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Ieșire filtru...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Maximizați</translation>
     </message>
@@ -4433,33 +5608,35 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Ieșire</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+97" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Următorul articol</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Articolul precedent</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>&amp;Ieșire și ieșire</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Resetați la valoarea implicită</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>output.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
@@ -4468,23 +5645,41 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <source>Save Contents...</source>
         <translation>Salvați conținutul...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>Copiere conținut în bufferul temporar</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>Deschiderea editorului pentru „%1” a eșuat.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>%n caractere omise din cauza limitei din setări</numerusform>
+            <numerusform>%n caractere omise din cauza limitei din setări</numerusform>
+            <numerusform>%n caractere omise din cauza limitei din setări</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>Elided %n caractere din cauza setărilor de ieșire a aplicației</numerusform>
             <numerusform>Elided %n caractere din cauza setărilor de ieșire a aplicației</numerusform>
             <numerusform>Elided %n caractere din cauza setărilor de ieșire a aplicației</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Aruncarea cantității excesive de rezultate în așteptare.]</translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Fișiere text (*.txt);;Toate fișierele (*)</translation>
     </message>
@@ -4570,17 +5765,17 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Pluginuri instalate</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Modificările pluginului vor intra în vigoare după repornire.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>Erori de plugin pentru %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Sursă</translation>
     </message>
@@ -4595,82 +5790,133 @@ Faceți dublu clic pentru a edita elementul.</translation>
         <translation>Fișierul nu există.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Pluginul necesită o versiune incompatibilă a %1 (%2).</translation>
+        <translation type="vanished">Pluginul necesită o versiune incompatibilă a %1 (%2).</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>Nu s-a găsit pluginul %1.</translation>
+        <translation type="vanished">Nu s-a găsit pluginul %1.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+82" />
         <source>Check Archive</source>
         <translation>Verificați Arhiva</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Canceled.</source>
         <translation>Anulat.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+44" />
         <source>Checking archive...</source>
         <translation>Se verifică arhiva...</translation>
     </message>
     <message>
-        <location line="+21" />
         <source>There was an error while unarchiving.</source>
-        <translation>A apărut o eroare la dezarhivare.</translation>
+        <translation type="vanished">A apărut o eroare la dezarhivare.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-18" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Arhiva este OK.</translation>
     </message>
     <message>
-        <location line="+42" />
         <source>Install Location</source>
-        <translation>Locație de instalare</translation>
+        <translation type="vanished">Locație de instalare</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Alegeți locația de instalare.</translation>
+        <translation type="vanished">Alegeți locația de instalare.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Pluginuri de utilizator</translation>
+        <translation type="vanished">Pluginuri de utilizator</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Pluginul va fi disponibil pentru toate instalările %1 compatibile, dar numai pentru utilizatorul actual.</translation>
+        <translation type="vanished">Pluginul va fi disponibil pentru toate instalările %1 compatibile, dar numai pentru utilizatorul actual.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>%1 instalare</translation>
+        <translation type="vanished">%1 instalare</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Pluginul va fi disponibil numai pentru această instalare %1, dar pentru toți utilizatorii care îl pot accesa.</translation>
+        <translation type="vanished">Pluginul va fi disponibil numai pentru această instalare %1, dar pentru toți utilizatorii care îl pot accesa.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Rezumat</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>„%1” va fi instalat în „%2”.</translation>
+        <translation type="vanished">„%1” va fi instalat în „%2”.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="-225" />
+        <source>Plugin is already installed.</source>
+        <translation>Pluginul este deja instalat.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>Un modul cu ID-ul „%1” este deja instalat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>Nu este instalat niciun plugin cu ID-ul „%1”.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Pluginul nu a reușit să rezolve dependențele:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Nu s-au găsit pluginuri.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>S-a găsit mai mult de un plugin.</translation>
+    </message>
+    <message>
+        <location line="+96" />
+        <source>Archive extracted successfully.</source>
+        <translation>Arhiva a fost extrasă cu succes.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>A apărut o eroare la dezarhivare: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Încarcă pluginul imediat</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1 va fi instalat în %2.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Acceptați termenii și condițiile</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Pluginul %1 vă cere să acceptați următorii termeni și condiții:</translation>
+    </message>
+    <message>
+        <location line="+34" />
         <source>Overwrite File</source>
         <translation>Suprascrie fișierul</translation>
     </message>
@@ -4686,61 +5932,79 @@ Faceți dublu clic pentru a edita elementul.</translation>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Nu s-a putut scrie fișierul</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>Crearea directorului „%1” a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>Nu s-a putut scrie fișierul „%1”.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Instalați pluginul</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Se copiază fișierele modulului...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Se copiază
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Copierea fișierelor plugin nu a reușit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Afișează detalii...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>Comutați detaliile progresului</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>Procesele</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-271" />
         <source>Bytes</source>
-        <translation>octeți</translation>
+        <translation type="vanished">octeți</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>KiB</source>
-        <translation>KiB</translation>
+        <translation type="vanished">KiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>MiB</translation>
+        <translation type="vanished">MiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>GiB</translation>
+        <translation type="vanished">GiB</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>TiB</translation>
+        <translation type="vanished">TiB</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+67" />
         <source>Patch command:</source>
         <translation>Comanda de corecție:</translation>
     </message>
@@ -4792,7 +6056,12 @@ cu condiția să fie nemodificate înainte de refactorizare.</translation>
         <translation>Eliberați automat resurse de documente vechi care nu sunt vizibile și nu sunt modificate. Acestea rămân vizibile în lista de documente deschise.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+12" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Rapoartele de blocare sunt salvate în „%1”.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Files to keep open:</source>
         <translation>Fișiere de păstrat deschise:</translation>
     </message>
@@ -4812,7 +6081,12 @@ cu condiția să fie nemodificate înainte de refactorizare.</translation>
         <translation>MB</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+7" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>Numărul de „Fișiere recente”:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Always Ask</source>
         <translation>Întrebați întotdeauna</translation>
     </message>
@@ -4837,120 +6111,160 @@ cu condiția să fie nemodificate înainte de refactorizare.</translation>
         <translation>Cereți confirmarea înainte de a ieși</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-43" />
         <source>Enable crash reporting</source>
         <translation>Activați raportarea accidentelor</translation>
     </message>
     <message>
+        <location line="-132" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabilă&lt;/th&gt;&lt;th&gt;Se extinde la&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directorul fișierului curent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;numele fișierului (cu calea completă)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;numele fișierului (fără cale)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Separatori de variabile:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>Folosește interfața D-Bus freedesktop.org a managerului de fișiere</translation>
+    </message>
+    <message>
         <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Folosește &lt;a href=&quot;%1&quot;&gt;interfața D-Bus freedesktop.org&lt;/a&gt; pentru &lt;i&gt;Deschide în managerul de fișiere&lt;/i&gt;, dacă este disponibilă. În caz contrar, revine la „Navigatorul de fișiere extern” de mai sus.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>Comanda folosită pentru &lt;i&gt;Deschidere în managerul de fișiere&lt;/i&gt; dacă interfața D-Bus freedesktop.org nu este disponibilă. Comanda poate conține următoarele variabile:
+</translation>
+    </message>
+    <message>
+        <location line="+49" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Permiteți raportarea automată a blocărilor. Rapoartele colectate sunt folosite doar cu scopul de a remedia erori.</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>Clear Local Crash Reports</source>
-        <translation>Ștergeți rapoartele locale de blocare</translation>
+        <translation type="vanished">Ștergeți rapoartele locale de blocare</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>Argumentele liniei de comandă utilizate pentru „Run în terminal”.</translation>
+        <translation type="vanished">Argumentele liniei de comandă utilizate pentru „Run în terminal”.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>Argumentele liniei de comandă utilizate pentru „%1”.</translation>
+        <translation type="vanished">Argumentele liniei de comandă utilizate pentru „%1”.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Resetați la valoarea implicită.</translation>
+        <translation type="vanished">Resetați la valoarea implicită.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-89" />
         <source>Terminal:</source>
         <translation>Terminal:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+38" />
         <source>External file browser:</source>
         <translation>Browser de fișiere extern:</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>File system case sensitivity:</source>
-        <translation>Sensibilitatea sistemului de fișiere cu majuscule și minuscule:</translation>
+        <translation type="vanished">Sensibilitatea sistemului de fișiere cu majuscule și minuscule:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Influențează modul în care numele fișierelor sunt potrivite pentru a decide dacă sunt aceleași.</translation>
+        <translation type="vanished">Influențează modul în care numele fișierelor sunt potrivite pentru a decide dacă sunt aceleași.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>Numărul maxim de intrări în „Fișiere recente”:</translation>
+        <translation type="vanished">Numărul maxim de intrări în „Fișiere recente”:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+149" />
         <source>System</source>
         <translation>Sistem</translation>
     </message>
     <message>
-        <location line="-217" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Raportarea accidentelor</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Sensibil între majuscule și minuscule (implicit)</translation>
+        <translation type="vanished">Sensibil între majuscule și minuscule (implicit)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Nu ține cont de majuscule și minuscule (implicit)</translation>
+        <translation type="vanished">Nu ține cont de majuscule și minuscule (implicit)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Indiferent de majuscule</translation>
+        <translation type="vanished">Indiferent de majuscule</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Modificarea sensibilității la majuscule și minuscule a sistemului de fișiere va avea efect după repornire.</translation>
+        <translation type="vanished">Modificarea sensibilității la majuscule și minuscule a sistemului de fișiere va avea efect după repornire.</translation>
     </message>
     <message>
-        <location line="+77" />
         <source>Variables</source>
-        <translation>Variabile</translation>
+        <translation type="vanished">Variabile</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Automat</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>anonim</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Tema curentă: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Schimbarea temei va intra în vigoare după repornire.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+212" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>A fost detectat un director aflat sub controlul versiunilor, care este acceptat de modulul %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Control al versiunilor detectat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enable %1</source>
+        <translation>Activare %1</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>Directorul „%1” pare să fie sub controlul versiunilor, care poate fi gestionat de pluginul %2 dezactivat.</translation>
+    </message>
+    <message>
+        <location line="+95" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>A fost detectat depozitul %1, dar %1 nu este configurat.</translation>
     </message>
@@ -4997,45 +6311,127 @@ la controlul versiunilor (%2)?</translation>
         <source>Adding to Version Control Failed</source>
         <translation>Adăugarea la Controlul versiunii a eșuat</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Fișierele următoare nu au putut fi adăugate la controlul versiunilor (%1)
+%2
+... și încă %n.</numerusform>
+            <numerusform>Fișierele următoare nu au putut fi adăugate la controlul versiunilor (%1)
+%2
+... și încă %n.</numerusform>
+            <numerusform>Fișierele următoare nu au putut fi adăugate la controlul versiunilor (%1)
+%2
+... și încă %n.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>adăugat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>modificat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>șters</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>redenumit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>neurmărit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>nefuzionat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>necunoscut</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Starea controlului versiunilor: adăugat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Starea controlului versiunilor: modificat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Starea controlului versiunilor: șters.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Starea controlului versiunilor: redenumit.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Starea controlului versiunilor: neurmărit.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Starea controlului versiunilor: nefuzionat.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>Nu s-a putut adăuga fișierul 
+        <translation type="vanished">Nu s-a putut adăuga fișierul 
 %1 
 la controlul versiunii (%2)</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Nu s-au putut adăuga următoarele fișiere la controlul versiunii (%1) 
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>Aproximativ %1</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Copiați și închideți</translation>
+        <translation type="vanished">Copiați și închideți</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>Etichete:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Arată toate</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Spate</translation>
     </message>
@@ -5050,20 +6446,227 @@ la controlul versiunii (%2)</translation>
         <translation>Intrați pe ecran complet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>Editor Python</translation>
+        <translation type="vanished">Editor Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>Editor Markdown</translation>
+        <translation type="vanished">Editor Markdown</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Trecere la editorul următor</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Anulează fixarea</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>Pentru variabilele de mediu cu semantică de listă care nu folosesc separatorul standard al listelor de căi,
+trebuie să configurați aici separatorii respectivi dacă intenționați să le
+agregați din mai multe surse (de exemplu din kit și din proiect).</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Variabilă</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Separator</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-145" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Adăugare server MCP din registru</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Filtrare servere...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Toate tipurile</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>La distanță</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Depozit:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Site web:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Pachete:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Depozite la distanță:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Numele afișat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Server nou&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Comanda pentru lansarea procesului serverului MCP. Se utilizează numai pentru tipul de conexiune intrare/ieșire standard.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Argumentele pentru lansarea procesului serverului MCP. Se utilizează numai pentru tipul de conexiune intrare/ieșire standard.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>URL-ul de conectare la serverul MCP. Nu se utilizează pentru tipul de conexiune intrare/ieșire standard.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Tip de conexiune:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>Tipul de conexiune de utilizat pentru serverul MCP.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Intrare/ieșire standard</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>HTTP în flux</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>Anteturi HTTP:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>Anteturi HTTP de inclus la conectarea la serverul MCP. Se folosesc doar pentru tipurile de conexiune HTTP.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>Modificările variabilelor de mediu aplicate la lansarea procesului serverului MCP. Se folosesc doar pentru tipul de conexiune IO standard.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Alegeți tipul conexiunii</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Acest server oferă mai multe moduri de conectare. Alegeți unul:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Adăugare din registru...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Activare server MCP pentru documentația Qt</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Când este activat, se va folosi serverul MCP pentru documentația Qt de la https://qt-docs-mcp.qt.io/mcp.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>Servere MCP</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Ieșire din modul Depanare</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Bară de instrumente</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Editor</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Stocarea secretelor nu este disponibilă! Valorile dvs. vor fi stocate ca text simplu în setări!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Puteți instala libsecret sau KWallet pentru a activa stocarea secretelor.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Linii de context:</translation>
     </message>
@@ -5073,13 +6676,18 @@ la controlul versiunii (%2)</translation>
         <translation>Ignorați spațiul alb</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Restrângere tot</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Reîncărcați diferența</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] față de [%2] %3</translation>
     </message>
@@ -5095,7 +6703,7 @@ la controlul versiunii (%2)</translation>
         <translation>[%1] %2 față de [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Ascunde descrierea modificării</translation>
     </message>
@@ -5105,54 +6713,57 @@ la controlul versiunii (%2)</translation>
         <translation>Afișați descrierea modificării</translation>
     </message>
     <message>
-        <location line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+103" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Desfă tot</translation>
+    </message>
+    <message>
+        <location line="-478" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Se așteaptă date...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Preluarea datelor nu a reușit.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>Nu s-a putut analiza fișierul de corecție „%1”. Conținutul nu este într-un format de diferență unificată.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+170" />
         <source>Diff Editor</source>
         <translation>Editor de diferențe</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>Diff</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>Salvat</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Modificat</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>Fișiere diferențiale</translation>
     </message>
@@ -5162,7 +6773,7 @@ la controlul versiunii (%2)</translation>
         <translation>Fișiere modificate Diff</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;Dif</translation>
     </message>
@@ -5183,12 +6794,12 @@ la controlul versiunii (%2)</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Diff Deschideți fișiere</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Meta+Shift+H</translation>
     </message>
@@ -5203,27 +6814,32 @@ la controlul versiunii (%2)</translation>
         <translation>Diferența fișierelor externe...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Diferența „%1”</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Selectați primul fișier pentru Diff</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Selectați Al doilea fișier pentru Diff</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Diferența „%1”, „%2”</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Fișierul nu a fost găsit: „%1”.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Trimite o bucată la CodePaster...</translation>
     </message>
@@ -5238,7 +6854,7 @@ la controlul versiunii (%2)</translation>
         <translation>Reveniți bucată...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Eroare:&lt;/b&gt; nu s-a putut decoda „%1” cu codificarea „%2”.</translation>
     </message>
@@ -5248,12 +6864,12 @@ la controlul versiunii (%2)</translation>
         <translation>Selectați Codificare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Comutați la Unified Diff Editor</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+4" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Comutați la Editorul de diferențe alăturat</translation>
     </message>
@@ -5263,7 +6879,7 @@ la controlul versiunii (%2)</translation>
         <translation>Sincronizați barele de defilare orizontale</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>S-au omis %n linii...</numerusform>
@@ -5287,7 +6903,7 @@ la controlul versiunii (%2)</translation>
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Nicio diferență.</translation>
@@ -5299,48 +6915,57 @@ la controlul versiunii (%2)</translation>
         <translation>Dif. de randare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>Nici un document</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Copiere text curățat</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>Pluginul „%1” este specificat de două ori pentru testare.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>Pluginul „%1” nu există.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>Pluginul „%1” nu este testat.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Nu se poate solicita scenariul „%1” deoarece a fost deja solicitat.</translation>
+        <translation type="vanished">Nu se poate solicita scenariul „%1” deoarece a fost deja solicitat.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Opțiune necunoscută %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>Opțiunea %1 necesită un argument.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+67" />
+        <source>Id:</source>
+        <translation>Id:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
@@ -5356,6 +6981,11 @@ la controlul versiunii (%2)</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>Vendor Id:</source>
+        <translation>ID furnizor:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Vendor:</source>
         <translation>Furnizor:</translation>
     </message>
@@ -5368,6 +6998,11 @@ la controlul versiunii (%2)</translation>
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Documentație:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5405,14 +7040,24 @@ la controlul versiunii (%2)</translation>
         <translation>Încărcabil fără repornire:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
-        <translation>Nici unul</translation>
+        <comment>No category</comment>
+        <translation>Niciunul</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
+        <comment>Platforms: All</comment>
         <translation>Toate</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Nici unul</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">Toate</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5425,8 +7070,8 @@ la controlul versiunii (%2)</translation>
         <translation>Detalii plugin pentru %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1633" />
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1532" />
         <source>Continue</source>
         <translation>Continua</translation>
     </message>
@@ -5536,12 +7181,12 @@ la controlul versiunii (%2)</translation>
         <translation>Pluginul și-a încheiat ciclul de viață și a fost șters.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-561" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-583" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Au fost găsite mai multe versiuni ale aceluiași plugin.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Dependență circulară detectată:</translation>
     </message>
@@ -5593,14 +7238,50 @@ Motiv: %3</translation>
         <translation>Dezactivați pluginul</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Termeni și condiții</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Acceptare</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Refuzare</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>Pluginul %1 vă cere să acceptați următorii termeni și condiții:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Nu ați acceptat termenii și condițiile</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Nu se poate încărca pluginul deoarece dependența nu s-a încărcat: %1(%2) 
 Motiv: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+713" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Pluginul nu a fost găsit.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Nu există.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+837" />
         <source>Cannot open file</source>
         <translation>Nu se poate deschide fișierul</translation>
     </message>
@@ -5650,13 +7331,24 @@ Motiv: %3</translation>
         <translation>Metadatele pluginului nu au fost găsite</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>ID-ul pluginului „%1” trebuie să fie cu litere mici</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Termeni și condiții: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Specificație nevalidă a platformei „%1”: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -5688,11 +7380,25 @@ Motiv: %3</translation>
     </message>
     <message>
         <location line="+11" />
-        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>Nu s-a putut rezolva dependența „%1(%2)”</translation>
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>Dependența de modulul „%1(%2)” nu a putut fi rezolvată</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+274" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Modulele de sistem nu pot fi eliminate.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Directorul rădăcină nu a putut fi determinat.</translation>
+    </message>
+    <message>
+        <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
+        <translation type="vanished">Nu s-a putut rezolva dependența „%1(%2)”</translation>
+    </message>
+    <message>
+        <location line="-200" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>Încărcarea bibliotecii a eșuat deoarece starea != Rezolvată</translation>
     </message>
@@ -5717,7 +7423,17 @@ Motiv: %3</translation>
         <translation>Inițializarea pluginului a eșuat: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Inițializarea pluginului a generat o excepție: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Inițializarea pluginului a generat o excepție necunoscută</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>Nu se pot efectua extensiiInitialized deoarece starea != Inițializată</translation>
     </message>
@@ -5732,19 +7448,27 @@ Motiv: %3</translation>
         <translation>Eroare internă: nu aveți nicio instanță de plugin pentru a efectua delayedInitialize</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (învechit)</translation>
+        <translation type="vanished">%1 (învechit)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (experimental)</translation>
+        <translation type="vanished">%1 (experimental)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>depreciat</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>experimental</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Calea: %1 
@@ -5758,7 +7482,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Pluginul este activat ca dependență de un plugin activat.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Calea: %1 
@@ -5777,7 +7501,7 @@ Pluginul este dezactivat de argumentul liniei de comandă.</translation>
         <translation>Calea: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Pluginul nu este disponibil pe această platformă.</translation>
     </message>
@@ -5822,7 +7546,7 @@ Pluginul este dezactivat de argumentul liniei de comandă.</translation>
         <translation>Utilități</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-319" />
         <source>Enabling Plugins</source>
         <translation>Activarea pluginurilor</translation>
     </message>
@@ -5840,7 +7564,7 @@ va activa, de asemenea, următoarele pluginuri:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Dezactivarea pluginurilor</translation>
     </message>
@@ -6026,18 +7750,23 @@ Doriți să o suprascrieți?</translation>
         <translation>Copiați ca URL de date</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Fișierul nu poate fi citit.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Formatul de imagine nu este acceptat.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>Nu s-a putut citi imaginea SVG.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Nu s-a putut citi imaginea.</translation>
     </message>
@@ -6104,37 +7833,57 @@ Doriți să le suprascrieți?</translation>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Eroare %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Depreciat</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Sosire</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Ieșire</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>Bazele</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>Derivat</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Deschide în editor</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>Deschide ierarhia %1</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Apel</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Tip</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Apelați la Ierarhie</translation>
     </message>
@@ -6144,13 +7893,18 @@ Doriți să le suprascrieți?</translation>
         <translation>Reîncarcă ierarhia apelurilor pentru simbolul de sub poziția cursorului.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%1 pentru %2</translation>
+        <translation type="vanished">%1 pentru %2</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1 pentru %2 (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>neinițializat</translation>
@@ -6192,14 +7946,20 @@ Doriți să le suprascrieți?</translation>
         <translation>eroare</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>oprirea a eșuat</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>Parametru nevalid în „%1”: 
 %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Eroare de inițializare a serverului de limbă „%1”.</translation>
     </message>
@@ -6209,12 +7969,12 @@ Doriți să le suprascrieți?</translation>
         <translation>Eroare de inițializare: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Rezultatul inițializării este nevalid.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Informațiile serverului sunt nevalide.</translation>
     </message>
@@ -6224,12 +7984,11 @@ Doriți să le suprascrieți?</translation>
         <translation>Niciun rezultat de inițializare.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Copiați în Clipboard</translation>
+        <translation type="vanished">Copiați în Clipboard</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Client de limbă</translation>
     </message>
@@ -6279,33 +8038,35 @@ Doriți să le suprascrieți?</translation>
         <translation>Nu se poate gestiona tipul MIME „%1” al mesajului.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Nu se pot trimite date către serverul nepornit %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Terminat neașteptat. Repornește în %1 secunde.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Terminat neașteptat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Extindeți toate</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Restrângeți totul</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Server de limbă generic StdIO</translation>
     </message>
@@ -6325,7 +8086,7 @@ Doriți să le suprascrieți?</translation>
         <translation>Probleme furnizate de Language Server în documentul curent.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Adăuga</translation>
     </message>
@@ -6335,32 +8096,37 @@ Doriți să le suprascrieți?</translation>
         <translation>&amp;Şterge</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Întotdeauna Pornit</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Necesită un fișier deschis</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Porniți serverul pe proiect</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Activat:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Setați tipurile MIME...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Model de fișier</translation>
     </message>
@@ -6372,67 +8138,87 @@ Example: *.cpp%1*.h</source>
 Exemplu: *.cpp%1*.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>Nu s-a putut analiza JSON la %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>JSON specific serverului de limbă care trebuie transmis prin câmpul „initializationOptions” al cererii „inițializare”.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Limbă:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Model de fișier:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Comportament la pornire:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Opțiuni de inițializare:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>Selectați Tipuri MIME</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Filtra</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Executabil:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Argumente:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>Eroare JSON</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Servere de limbaj specifice proiectului</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Folosește setările globale</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Activat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Dezactivat</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Configurarea spațiului de lucru</translation>
     </message>
@@ -6444,12 +8230,12 @@ See the documentation of the specific language server for valid settings.</sourc
 Consultați documentația serverului de limbă specifică pentru setările valide.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Server de limbă</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Căutați din nou pentru a actualiza rezultatele și a reactiva Înlocuire</translation>
     </message>
@@ -6470,7 +8256,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
 %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>Găsiți referințe cu %1 pentru:</translation>
@@ -6491,12 +8277,12 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Începeți să tastați pentru a vedea înlocuitori.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Afișați soluțiile rapide disponibile</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>Reporniți %1</translation>
     </message>
@@ -6511,49 +8297,56 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Gestionează...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>Configurează serverul de limbaj %1 (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>Configurează</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>Instalați pachetul npm</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>Se rulează „%1” pentru a instala %2.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Instalarea „%1” a fost anulată după expirarea timpului.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Instalarea „%1” a fost anulată de către utilizator.</translation>
+        <translation type="vanished">Instalarea „%1” a fost anulată de către utilizator.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>Instalarea „%1” a eșuat cu codul de ieșire %2.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>Instalați serverul de limbă %1 prin npm.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>Configurați serverul de limbă %1 (%2).</translation>
+        <translation type="vanished">Configurați serverul de limbă %1 (%2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>Instala</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Înființat</translation>
+        <translation type="vanished">Înființat</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6581,12 +8374,12 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Opțiuni:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Capabilitățile serverului</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Mesaj client</translation>
     </message>
@@ -6606,22 +8399,32 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Fișier jurnal</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>Niciun client selectat</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Inspector Client Limbă</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;Selectați&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Server de limbă:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>Trimite mesajul</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Jurnal</translation>
     </message>
@@ -6631,15 +8434,25 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Capabilități</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Clar</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Sortează alfabetic</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Selectați simbolul&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>Nu se poate decoda conținutul cu „%1”. Revenirea la „%2”.</translation>
     </message>
@@ -6649,7 +8462,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Se aștepta un număr întreg în „%1”, dar a primit „%2”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>Nu s-a putut analiza mesajul JSON: „%1”.</translation>
     </message>
@@ -6659,17 +8472,17 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <translation>Se aștepta un obiect JSON, dar a primit o valoare JSON „%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>Nu există parametri în „%1”.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>Niciun ID nu este setat în „%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>Creați %1</translation>
     </message>
@@ -6685,25 +8498,188 @@ Consultați documentația serverului de limbă specifică pentru setările valid
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>Nu s-a găsit nicio acțiune cu ID-ul „%1”.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>Comanda „%1” nu are nicio acțiune asociată.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>Acțiunea „%1” este dezactivată.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Extindere tot</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>Mesaj client</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>Mesaje</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Mesaj de la server</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>Fișier jurnal</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>Inspector server MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Selectați&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Golire</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Sesiune:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Necunoscut</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Global</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Localhost (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Oricare (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Personalizat</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Adresă IP invalidă.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>Server MCP</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>Inspectare server MCP...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>Pornirea serverului MCP la „%1:%2” a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>Activare server MCP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>Adresa pe care serverul MCP trebuie să asculte conexiunile de intrare.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Port:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Automat</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>Portul pe care serverul MCP trebuie să asculte. Lăsați 0 pentru selectarea automată a unui port liber.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Activare acces cross-origin:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>Activează partajarea resurselor între origini (CORS) pentru serverul MCP. Este necesară dacă doriți să vă conectați la server dintr-o aplicație web.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Adresa a fost copiată în clipboard.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>Serverul MCP rulează și ascultă pe: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>Serverul MCP nu rulează.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Stare:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+75" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+77" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+208" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+210" />
         <location line="+37" />
         <location line="+164" />
         <location line="+65" />
@@ -6718,7 +8694,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -6727,22 +8703,22 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+41" />
         <location line="+13" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+286" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+288" />
         <location line="+9" />
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+89" />
+        <location line="+12" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+91" />
         <location line="+101" />
         <location line="+9" />
         <location line="+102" />
@@ -6752,38 +8728,38 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+105" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+107" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+587" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1186" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+589" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+1205" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -6794,7 +8770,7 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -6813,21 +8789,21 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+839" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+829" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Conectați-vă</translation>
     </message>
     <message>
         <location line="-97" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2298" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2315" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Vă rugăm să selectați tipul de panou</translation>
     </message>
@@ -6861,8 +8837,8 @@ Consultați documentația serverului de limbă specifică pentru setările valid
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-12" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-39" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-33" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-56" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-12" />
@@ -6871,13 +8847,13 @@ Consultați documentația serverului de limbă specifică pentru setările valid
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-138" />
-        <location line="+139" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-126" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-143" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-228" />
-        <location line="+188" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-198" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-58" />
         <location line="+32" />
         <location line="+27" />
@@ -6894,13 +8870,13 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
 În acest caz, faceți clic pe OK când vedeți montarea unității flash interne a Cam-ului OpenMV (o fereastră se poate deschide sau nu).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-342" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-324" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>Este posibil ca DFU Util să nu fie stabil pe această platformă. Dacă încărcarea eșuează, utilizați un computer obișnuit.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-454" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-418" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Nu există setări DFU pentru tipul de placă selectat!</translation>
     </message>
@@ -6913,7 +8889,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-83" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-71" />
         <source>Erasing Disk</source>
         <translation>Ștergerea discului</translation>
     </message>
@@ -6924,50 +8900,50 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+28" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+4" />
-        <location line="+22" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-172" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+821" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
+        <location line="+16" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-154" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+846" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Eroare de expirare!</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+33" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-63" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -7004,42 +8980,42 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="+9" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+189" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+193" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1569" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1548" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2612" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2642" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Eroare: %L1!</translation>
@@ -7047,40 +9023,40 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     <message>
         <location line="+13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+13" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-550" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-511" />
         <source>Read ROMFS</source>
         <translation>Citiți ROMFS</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>Scrieți ROMFS</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-8" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Firmware intermitent</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+109" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>Actualizarea firmware-ului DFU a eșuat!</translation>
     </message>
@@ -7088,7 +9064,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -7096,7 +9072,7 @@ In this case click OK when you see your OpenMV Cam&apos;s internal flash drive m
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-619" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-548" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>Reconectați camera OpenMV...</translation>
     </message>
@@ -7125,30 +9101,30 @@ Hit cancel to skip to bootloader recovery reprogramming.</source>
         <location line="+67" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+0" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+3" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4053" />
-        <location line="+1979" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4046" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1040" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+1053" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
         <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-324" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>Anula</translation>
     </message>
@@ -7196,7 +9172,7 @@ Continuați?</translation>
     </message>
     <message>
         <location line="+108" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+193" />
         <location line="+47" />
@@ -7312,7 +9288,7 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1 dvs. nu are un sistem de fișiere ROM.</translation>
     </message>
@@ -7359,12 +9335,12 @@ Faceți clic pe butonul Ok după ce încărcătorul DFU al OpenMV Cam a fost enu
         <translation>Pentru a scrie o imagine de bootloader, camera OpenMV trebuie să fie în modul de recuperare a bootloaderului. Deconectați camera, conectați BOOT0/SBL/RECOVERY la 3.3V cu un jumper, apoi reconectați camera înainte de a încerca din nou.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>Citirea ROMFS prin DFU a eșuat!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>Scrierea ROMFS prin DFU a eșuat!</translation>
     </message>
@@ -7392,7 +9368,7 @@ Hit cancel to skip to SBL reprogramming.</source>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-783" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-680" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Se pregătesc instrumentele bootloader... (poate dura câteva secunde)</translation>
     </message>
@@ -7462,7 +9438,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Nu există setări PicoTool pentru dispozitivul selectat!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -7474,7 +9450,7 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Actualizarea firmware-ului PicoTool a eșuat!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Valoarea %L1</translation>
@@ -7536,11 +9512,11 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation type="vanished">Vă rugăm să introduceți rețeaua WiFi aici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-370" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-380" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7552,20 +9528,20 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <location line="+11" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4655" />
-        <location line="+988" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4636" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Editor de set de date</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Vă rugăm să introduceți un nume de clasă</translation>
     </message>
     <message>
-        <location line="+58" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-945" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location line="+59" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-931" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7578,24 +9554,24 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Nu s-a putut crea „%L1”!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Nu s-a salvat fișierul imagine dintr-un motiv necunoscut!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Şterge</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>Sigur doriți să ștergeți definitiv „%L1”?</translation>
     </message>
@@ -7623,12 +9599,12 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5017" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4998" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+67" />
-        <location line="+352" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Grădina Zoologică Model</translation>
     </message>
@@ -7649,14 +9625,14 @@ Faceți clic pe butonul Ok după ce încărcătorul SBL al OpenMV Cam a fost enu
         <translation>Bine</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1316" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1278" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-308" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1378" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1290" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-305" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nu s-a putut copia fișierul „%1” în „%2”.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>Argument lipsă pentru -serial_number_filter</translation>
     </message>
@@ -7677,7 +9653,7 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
         <translation type="vanished">Închideți toate programele care vizualizează/editează datele aplicației OpenMV IDE și apoi reporniți OpenMV IDE!</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7694,7 +9670,7 @@ OpenMV IDE versions before v4.3.0 do not have this file and would have deleted i
 Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters la instalarea resurselor.</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+167" />
         <source>Missing argument for -form_key</source>
         <translation>Argument lipsă pentru -form_key</translation>
     </message>
@@ -7709,12 +9685,12 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Vă rugăm să introduceți cheia formularului</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+86" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="+60" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7739,7 +9715,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>Exemple</translation>
     </message>
@@ -7755,7 +9731,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
     </message>
     <message>
         <location line="+56" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1802" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1831" />
         <source>Load Custom Firmware</source>
         <translation>Încărcați firmware personalizat</translation>
     </message>
@@ -7885,22 +9861,22 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Copiați/Convertiți fișierul Python</translation>
     </message>
     <message>
         <location line="+14" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Deschideți terminalul</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Viziune artificială</translation>
     </message>
@@ -7921,28 +9897,28 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-910" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1070" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Convertiți modelul</translation>
     </message>
     <message>
         <location line="+10" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Editor de prag</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Editor de puncte cheie</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7951,7 +9927,7 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>AprilTag Generator</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>Familie TAG16H5 (30 de etichete)</translation>
     </message>
@@ -7986,22 +9962,22 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <translation>Generator de coduri QRC</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+160" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Deschiderea eșuată: „%L1”</translation>
     </message>
     <message>
-        <location line="-2848" />
+        <location line="-2894" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-161" />
@@ -8009,8 +9985,8 @@ Versiunile OpenMV IDE înainte de v4.3.0 nu au acest fișier și l-ar fi șters 
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1801" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+41" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+2163" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+38" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8033,8 +10009,8 @@ Please close any programs that are viewing/editing %1&apos;s application data an
 Versiunile %2 anterioare v4.3.0 nu au acest fișier și l-ar fi șters la instalarea resurselor.</translation>
     </message>
     <message>
-        <location line="+28" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+854" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+866" />
         <location line="+126" />
         <location line="+51" />
         <location line="+42" />
@@ -8046,8 +10022,13 @@ Versiunile %2 anterioare v4.3.0 nu au acest fișier și l-ar fi șters la instal
         <translation>Depozite terțe</translation>
     </message>
     <message>
-        <location line="+401" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location line="+210" />
+        <source>Leave Settings</source>
+        <translation>Ieșire din Setări</translation>
+    </message>
+    <message>
+        <location line="+257" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>Încărcare ROMFS pe camera OpenMV</translation>
@@ -8069,7 +10050,7 @@ Versiunile %2 anterioare v4.3.0 nu au acest fișier și l-ar fi șters la instal
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8143,7 +10124,7 @@ Doriți să alegeți un alt nume?</translation>
     </message>
     <message>
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+460" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+480" />
         <location line="+276" />
         <source>Play RTSP Stream</source>
         <translation>Redați fluxul RTSP</translation>
@@ -8219,8 +10200,8 @@ Doriți să alegeți un alt nume?</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-240" />
@@ -8231,7 +10212,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Vă rugăm să adăugați o extensie de fișier!</translation>
     </message>
     <message>
-        <location line="-4360" />
+        <location line="-4341" />
         <source>Exporting...</source>
         <translation>Exportator...</translation>
     </message>
@@ -8333,7 +10314,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Licență</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
         <source>OpenMV Forums</source>
         <translation>Forumuri OpenMV</translation>
     </message>
@@ -8406,8 +10387,8 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Opriți (opriți scriptul)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -8415,9 +10396,9 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Frame Buffer</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -8430,7 +10411,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Înregistrați frame-buffer-ul</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8547,7 +10528,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+250" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+254" />
         <source>Close</source>
         <translation>Aproape</translation>
     </message>
@@ -8567,8 +10548,8 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Capturați date</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3813" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3842" />
         <source>Board:</source>
         <translation>Bord:</translation>
     </message>
@@ -8633,7 +10614,7 @@ Doriți să alegeți un alt nume?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Actualizare disponibilă</translation>
     </message>
@@ -8642,7 +10623,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation type="vanished">O nouă versiune de OpenMV IDE (%L1.%L2.%L3) este disponibilă pentru descărcare.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>Descărcați</translation>
     </message>
@@ -8655,7 +10636,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation type="vanished">O altă aplicație utilizează portul de descoperire a difuzării OpenMV Cam. Închideți acea aplicație și reporniți OpenMV IDE pentru a activa programarea WiFi.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Eroare folder documente</translation>
     </message>
@@ -8665,7 +10646,7 @@ Doriți să alegeți un alt nume?</translation>
         <translation>Nu s-a putut crea folderul de documente!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>Copilotul GitHub</translation>
     </message>
@@ -8723,27 +10704,27 @@ Firmware-ul OpenMV Cam intră în panică din cauza unei defecțiuni hardware. V
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Port serial - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Se conectează... (30 de secunde expiră)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8794,12 +10775,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>Conexiune la server UDP - %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>Argument de port nevalid (%1) pentru -open_udp_server_terminal</translation>
     </message>
@@ -8830,12 +10811,12 @@ sudo adduser %L1 dialout
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>Conexiune la server TCP - %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>Argument de port nevalid (%1) pentru -open_tcp_server_terminal</translation>
     </message>
@@ -8864,7 +10845,7 @@ sudo adduser %L1 dialout
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8977,7 +10958,7 @@ Would you like to register your OpenMV Cam now?</source>
 Doriți să vă înregistrați Cam OpenMV acum?</translation>
     </message>
     <message>
-        <location line="-2446" />
+        <location line="-2440" />
         <location line="+8" />
         <source>About %1</source>
         <translation>Despre %1</translation>
@@ -9034,25 +11015,25 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Buffer de cadre - Rez (l:%1, î:%2) - Focus (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+172" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+152" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Selectați sursa bufferului de cadre sau opriți-l pentru performanță maximă</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Oprit</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Pornit</translation>
     </message>
     <message>
-        <location line="-2068" />
+        <location line="-2082" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Transmite imagini comprimate JPG pentru performanță mai mare</translation>
@@ -9094,7 +11075,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>Selectați ce afișează acest panou</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Buffer de cadre (%1)</translation>
     </message>
@@ -9121,8 +11102,8 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+307" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+122" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+121" />
         <source>No Drive</source>
         <translation>Fără unitate</translation>
     </message>
@@ -9132,7 +11113,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>O nouă versiune de %5 (%L1.%L2.%L3) este disponibilă pentru descărcare. Consultați &lt;a href=&quot;%L4&quot;&gt;notele de lansare&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Conectare (Rețea disponibilă)</translation>
     </message>
@@ -9152,7 +11133,7 @@ Doriți să vă înregistrați Cam OpenMV acum?</translation>
         <translation>-auto_run în modul de vizualizare necesită un argument fișier script text lizibil în linia de comandă.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9255,13 +11236,13 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Cheie de bord formatată nevalid!</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+84" />
         <source>OpenMV Cam Error</source>
         <translation>Eroare OpenMV Cam</translation>
     </message>
     <message>
-        <location line="+31" />
-        <location line="+7" />
+        <location line="+36" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-109" />
         <location line="+7" />
@@ -9270,14 +11251,14 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Salvați imaginea</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Fișiere imagine (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location line="-925" />
+        <location line="-907" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9314,14 +11295,14 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9331,7 +11312,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Terminal nou</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Conectați-vă la portul serial</translation>
     </message>
@@ -9352,7 +11333,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Vă rugăm să selectați un port serial</translation>
     </message>
@@ -9363,7 +11344,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9377,15 +11358,15 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>Șir nevalid: „%L1”!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Nu s-au găsit porturi seriale!</translation>
     </message>
@@ -9395,41 +11376,41 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Conectați-vă la un server UDP ca client sau porniți un server UDP?</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation>Conectați-vă la un server</translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation>Porniți un server</translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Vă rugăm să introduceți o adresă IP (sau un nume de domeniu) și un port (de exemplu, xxx.xxx.xxx.xxx:xxxx)</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>Conexiune client UDP - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Vă rugăm să introduceți un număr de port (introduceți 0 pentru orice port liber aleatoriu)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>Conectați-vă la un server TCP ca client sau porniți un server TCP?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>Conexiune client TCP - %1</translation>
     </message>
@@ -9449,17 +11430,17 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Locația imaginii sursă?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation>Frame Buffer</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation>Fișier imagine</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Tuplul de prag selectat va fi actualizat la închidere.</translation>
@@ -9481,17 +11462,17 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Ce ai vrea sa faci?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation>Editați fișierul</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation>Îmbinați fișierele</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9501,7 +11482,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <location line="-70" />
         <location line="+80" />
         <location line="+21" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+420" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+421" />
         <source>Keypoints Files (*.lbp *.orb)</source>
         <translation>Fișiere puncte cheie (*.lbp *.orb)</translation>
     </message>
@@ -9602,16 +11583,16 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation type="vanished">Sunt disponibile noi resurse OpenMV IDE (de exemplu, exemple, firmware, documentație etc.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Instala</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
         <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-286" />
         <location line="+46" />
@@ -9619,19 +11600,19 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-159" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-162" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>Se descarcă...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>Se instalează...</translation>
     </message>
@@ -9653,18 +11634,18 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>Nu se poate deschide fișierul de resurse „%L1”!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Solicitarea rețelei a eșuat „%L1”!</translation>
     </message>
     <message>
-        <location line="-257" />
+        <location line="-268" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9677,65 +11658,65 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+8" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Ștergeți sistemul intern de fișiere FAT</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Dacă activați această opțiune, toate fișierele din sistemul intern de fișiere FAT al OpenMV Cam vor fi șterse. Aceasta nu șterge fișierele de pe niciun card SD amovibil (dacă este introdus).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>Resetați sistemul de fișiere ROMFS</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Dacă activați această opțiune, sistemul de fișiere ROM de pe Cam-ul dvs. OpenMV va fi resetat la valoarea implicită.</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+310" />
+        <location line="-4432" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Fugi</translation>
     </message>
     <message>
-        <location line="-210" />
+        <location line="-204" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Bootloader</translation>
     </message>
     <message>
-        <location line="-112" />
+        <location line="-106" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>„%L1” nu este un fișier!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>Actualizați sistemul de fișiere ROMFS</translation>
     </message>
@@ -9756,7 +11737,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+27" />
-        <location line="+4031" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Avertisment: Upgrade-ul la noua versiune de firmware necesită ștergerea sistemului de fișiere FAT.</translation>
     </message>
@@ -9769,7 +11750,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation type="vanished">Nu se poate extrage firmware-ul!</translation>
     </message>
     <message>
-        <location line="-4979" />
+        <location line="-5003" />
         <source>Checking development examples...</source>
         <translation>Se verifică exemplele de dezvoltare...</translation>
     </message>
@@ -9810,7 +11791,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Sunt disponibile noi resurse %2 (de ex. exemple, firmware, documentație etc.). Consultați &lt;a href=&quot;%L1&quot;&gt;notele de lansare&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>Fișierul de resurse descărcat &quot;%L1&quot; nu a trecut verificarea sumei de control. Încercați din nou mai târziu.</translation>
     </message>
@@ -9831,7 +11812,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Binar firmware (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>Arhiva zip &quot;%L1&quot; nu conține o imagine de firmware!</translation>
     </message>
@@ -9841,7 +11822,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Nu se poate dezarhiva fișierul zip al firmware-ului &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+260" />
+        <location line="+254" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>Nu se poate descărca cel mai recent firmware de dezvoltare!</translation>
@@ -9906,7 +11887,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Port serial:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
@@ -9920,12 +11901,12 @@ Doriți să înregistrați camera OpenMV acum?</translation>
  %1</translation>
     </message>
     <message>
-        <location line="+185" />
+        <location line="+186" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>A fost detectată o placă în modul DFU. Ce ai vrea sa faci?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>Instalați cea mai recentă versiune de firmware (v%L1.%L2.%L3)</translation>
     </message>
@@ -9960,37 +11941,37 @@ Doriți să înregistrați camera OpenMV acum?</translation>
         <translation>Aveți o cameră OpenMV conectată și este blocată?</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+2874" />
+        <location line="+87" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Opțiuni de upgrade:</translation>
     </message>
     <message>
-        <location line="-2793" />
-        <location line="+175" />
+        <location line="-2807" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Actualizați bootloader-ul la cea mai recentă versiune și instalați SoftDevice pentru a flash-ul firmware-ului OpenMV. Mai multe informații pot fi găsite pe &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-209" />
-        <location line="+174" />
+        <location line="-222" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Vă rugăm să scurtați REC la GND și să vă resetați placa. Mai multe informații pot fi găsite pe &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-219" />
         <source>No released firmware available for the attached board!</source>
         <translation>Nu este disponibil niciun firmware lansat pentru placa atașată!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Vă rugăm să selectați un dispozitiv DFU</translation>
     </message>
     <message>
-        <location line="+165" />
+        <location line="+166" />
         <source>Connecting...
 
 (Hit cancel if this takes more than 5 seconds).</source>
@@ -10015,7 +11996,7 @@ Doriți să înregistrați camera OpenMV acum?</translation>
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Eroare de timeout la obținerea arhitecturii plăcii!</translation>
@@ -10141,8 +12122,8 @@ OpenMV recomandă doar încărcarea bootloader.dfu pentru a repara bootloader-ul
         <translation>Versiunea firmware: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Port serial: %L1</translation>
     </message>
@@ -10151,7 +12132,7 @@ OpenMV recomandă doar încărcarea bootloader.dfu pentru a repara bootloader-ul
         <translation type="vanished">FPS: 0</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation>- [ învechit - faceți clic aici pentru a face upgrade ]</translation>
     </message>
@@ -10190,7 +12171,7 @@ Pentru a preveni acest lucru, deschideți meniul Apple, mergeți la Configurări
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+191" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+196" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Rulare script</translation>
@@ -10208,7 +12189,7 @@ Pentru a preveni acest lucru, deschideți meniul Apple, mergeți la Configurări
         <translation>Eroare: Nu se poate deschide &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+229" />
         <source>More Examples</source>
         <translation>Mai multe exemple</translation>
     </message>
@@ -10249,7 +12230,22 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>Nu s-au găsit setări pentru placa conectată!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-68" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="-852" />
+        <source>No documentation here</source>
+        <translation>Nu există documentație aici</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>Nu există documentație pentru „%1”</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Ajutor contextual</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Editați pragul în tonuri de gri cu Editorul de prag</translation>
     </message>
@@ -10402,17 +12398,17 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
     </message>
     <message>
         <location line="+73" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Selectați Drive</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>Nu au fost găsite unități valide care să se asocieze cu camera dvs. OpenMV!</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+36" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Vă rugăm să asociați o unitate cu camera dvs. OpenMV</translation>
     </message>
@@ -10495,17 +12491,17 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
     </message>
     <message>
         <location line="+139" />
-        <location line="+20" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Salvați Scriptul</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Eliminați comentariile și convertiți spațiile în file?</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -10651,7 +12647,7 @@ Doriți ca OpenMV IDE să-l copieze pe Cam OpenMV?</translation>
         <translation>Funcții: %1, Total apeluri: %2, Total μs: %3, Total cicluri: %4</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1009" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1170" />
         <source>Please select the target</source>
         <translation>Vă rugăm să selectați ținta</translation>
     </message>
@@ -10672,7 +12668,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -10708,7 +12704,9 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -10727,7 +12725,7 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <translation>Editați ROMFS</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Un folder cu același nume există deja!</translation>
@@ -10785,29 +12783,29 @@ OpenMV IDE va ​​copia doar modelul așa cum este.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Extrage fișierul</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Vizualizați/Editați</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Adăugați fișier</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Dosar nou</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -10843,7 +12841,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 OpenMV Cam este încă în modul bootloader: faceți clic pe Conectare și folosiți opțiunile bootloaderului pentru a edita din nou sistemul de fișiere ROM.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Nu a fost ales niciun tip de placă.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -10851,13 +12856,34 @@ OpenMV Cam este încă în modul bootloader: faceți clic pe Conectare și folos
         <translation>ROMFS nu este acceptat pe această placă!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Nu a fost ales niciun obiectiv ROMFS.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>Citirea ROMFS de pe cameră a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>Nu s-a despachetat ROMFS!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>Imaginea ROMFS are %L1 octeți, dar ROMFS-ul plăcii are %L2 octeți.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>Scrierea ROMFS pe cameră a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV ROMFS</translation>
@@ -10899,7 +12925,7 @@ OpenMV Cam este încă în modul bootloader: faceți clic pe Conectare și folos
         <translation>Sigur doriți să resetați sistemul de fișiere ROM al OpenMV Cam?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -10977,34 +13003,34 @@ OpenMV Cam este încă în modul bootloader: faceți clic pe Conectare și folos
         <translation>Resetare soft</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-298" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-301" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>Alif Tools</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Vă rugăm să porniți comutatorul modului de întreținere hard, nu este activat, apoi apăsați butonul de utilizator de pe Cam OpenMV.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-924" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-815" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Această caracteristică nu este acceptată pe această mașină!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -11013,7 +13039,7 @@ The camera must be power cycled after after recovery.</source>
 Camera trebuie să fie oprită și alimentată după recuperare.</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+42" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11022,7 +13048,7 @@ The camera must be power cycled after a system package update.</source>
 Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+100" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Deconectați-vă OpenMV Cam de la computer, opriți comutatorul modului de întreținere hard, dacă este activat. Lăsați camera OpenMV neconectată până când vi se cere să o reconectați.</translation>
     </message>
@@ -11032,21 +13058,21 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Obțineți dispozitive</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1247" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1264" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Interogarea a eșuat!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11064,13 +13090,13 @@ Camera trebuie oprită după o actualizare a pachetului de sistem.</translation>
         <location line="+27" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-101" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-110" />
         <location line="+50" />
         <source>Uploading...</source>
         <translation>Se încarcă...</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+77" />
         <source>This may take a while, coffee break?</source>
         <translation>Poate dura ceva timp, pauză de cafea?</translation>
     </message>
@@ -11249,61 +13275,61 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Vă rugăm să introduceți o cheie API Edge Impulse Project</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Se așteaptă enumerarea flashloader-ului...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>Flashloader-ul i.MX nu s-a enumerat.</translation>
     </message>
     <message>
-        <location line="+356" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location line="+305" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Această comandă durează ceva timp pentru a se executa. Vă rog să aveți răbdare.</translation>
     </message>
@@ -11323,7 +13349,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Făcut</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Ocupat</translation>
     </message>
@@ -11339,12 +13365,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Ascunde detaliile</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Ce vreţi să faceţi?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Doar copiați scriptul</translation>
     </message>
@@ -11364,40 +13390,40 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Compilați în bytecode</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;Opțiuni CLI MPY Cross Compilier&lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Avansat</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>MPY Cross Compiler</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Compilarea</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>MPY Cross Compilier nu este acceptat pe această platformă.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+294" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+296" />
         <source>Success - Press Ok to close the window</source>
         <translation>Succes - Apăsați Ok pentru a închide fereastra</translation>
     </message>
@@ -11410,13 +13436,13 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Eșec - Apăsați Anulare pentru a închide fereastra</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>PicoTool</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>Programator STM32</translation>
     </message>
@@ -11426,18 +13452,18 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>STM32 Programmer nu este acceptat pe această platformă.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Compilatorul STEdge</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>Nu s-a putut copia fișierul JSON!</translation>
     </message>
@@ -11448,12 +13474,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Vă rugăm să specificați setările compilatorului:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Optimizare maximă</translation>
     </message>
@@ -11473,7 +13499,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Fără optimizare</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>--verbositatea 2</translation>
     </message>
@@ -11483,7 +13509,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Opțiuni CLI de bază STEdgeAI&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>--mapping-recap</translation>
     </message>
@@ -11493,7 +13519,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>&lt;a href=&quot;%1&quot;&gt;Opțiuni CLI STEdgeAI Neural-ART&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>Nu s-a putut deschide fișierul JSON!</translation>
@@ -11606,12 +13632,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Compilatorul Vela</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Optimizați pentru performanță</translation>
     </message>
@@ -11621,7 +13647,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Optimizați pentru dimensiune</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>--progres verbal</translation>
     </message>
@@ -11631,7 +13657,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>&lt;a href=&quot;https://gitlab.arm.com/artificial-intelligence/ethos-u/ethos-u-vela/-/blob/main/OPTIONS.md&quot;&gt;Opțiuni CLI Vela Compilier&lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Vela</translation>
     </message>
@@ -11641,7 +13667,7 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Compilatorul Vela nu este acceptat pe această platformă.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-796" />
         <source>Reading File...</source>
         <translation>Se citește fișierul...</translation>
     </message>
@@ -11673,12 +13699,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>Se transcodează fișierul...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11737,30 +13763,30 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation type="vanished">Obțineți formate de intrare</translation>
     </message>
     <message>
-        <location line="+97" />
-        <location line="+85" />
+        <location line="+105" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg nu este acceptat pe această platformă.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>Executabilul FFmpeg nu a fost găsit (este posibil ca instalarea să fie incompletă).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Obținere formate</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+101" />
+        <location line="+95" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11784,12 +13810,12 @@ Deschideți un set de date pentru a-l încărca.</translation>
         <translation>Convertiți videoclipul</translation>
     </message>
     <message>
-        <location line="-1132" />
+        <location line="-1153" />
         <source>Converting</source>
         <translation>Conversia</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG nu este acceptat pe această platformă.</translation>
     </message>
@@ -11807,7 +13833,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 Este posibil ca instalarea OpenMV IDE să fie incompletă.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Nu se poate scrie în fișierul video de ieșire!</translation>
     </message>
@@ -11817,19 +13843,19 @@ Este posibil ca instalarea OpenMV IDE să fie incompletă.</translation>
         <translation>Nu se poate deschide fișierul video de ieșire!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Redați videoclipul</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Redarea video nu este acceptată pe această platformă.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>Lansarea ffplay a eșuat!</translation>
     </message>
@@ -11957,7 +13983,7 @@ Este posibil ca instalarea OpenMV IDE să fie incompletă.</translation>
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Afișare text</translation>
@@ -12202,7 +14228,7 @@ Corectați-le sau ștergeți-le înainte de salvare.</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12227,7 +14253,7 @@ Corectați-le sau ștergeți-le înainte de salvare.</translation>
         <translation>&quot;%L1&quot; - instalarea a eșuat: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - actualizarea &quot;%L2&quot; a eșuat: %L3</translation>
     </message>
@@ -12444,7 +14470,7 @@ Instalați acum?</translation>
         <translation>&quot;%L1&quot; nu este instalat</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; placa &quot;%L2&quot; (%L3) se suprapune cu id-ul de bootloader al &quot;%L4&quot; (%L5)</translation>
     </message>
@@ -12603,7 +14629,7 @@ This deletes its boards, firmware, and examples.</source>
 Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -12841,7 +14867,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>%L1 eșantioane (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -12955,12 +14981,12 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Spectru</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Mediere</translation>
     </message>
@@ -13061,7 +15087,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Conectați o cameră pentru a vedea canalele</translation>
     </message>
@@ -13499,98 +15525,61 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>AI</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Chatul agentic (pluginul ACP Client) nu este disponibil.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+572" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Boost.</translation>
     </message>
     <message>
-        <location line="-568" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="+1" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Locația proiectului</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -13604,11 +15593,63 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Locaţie</translation>
     </message>
     <message>
-        <location line="-336" />
+        <location line="-931" />
         <source>Boost Test (header only)</source>
         <translation>Boost Test (numai antet)</translation>
     </message>
@@ -13618,32 +15659,32 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Boost Test (biblioteci partajate)</translation>
     </message>
     <message>
-        <location line="-25" />
-        <location line="+26" />
+        <location line="+1" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Cadrul de testare:</translation>
     </message>
     <message>
-        <location line="-166" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-358" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Nume suită de teste:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Numele cazului de testare:</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-361" />
         <source>Boost include directory (optional):</source>
         <translation>Boost include directorul (opțional):</translation>
     </message>
@@ -13653,281 +15694,286 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Boost director de instalare (opțional):</translation>
     </message>
     <message>
-        <location line="-534" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qfake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Sistem de construcție:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Informații despre proiect și test</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Detalii</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Selecția trusei</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>Truse</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Management de proiect</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Rezumat</translation>
     </message>
     <message>
-        <location line="-321" />
+        <location line="-934" />
         <source>Creates a new unit test project using Boost. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Creează un nou proiect de testare unitară folosind Boost. Testele unitare vă permit să verificați dacă codul este potrivit pentru utilizare și că nu există regresii.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Proiect de testare</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>Proiectul Boost Test</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Catch2.</translation>
     </message>
@@ -13972,7 +16018,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiectul de testare Catch2</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Google Test.</translation>
     </message>
@@ -14007,7 +16053,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiect de testare Google</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Qt Test.</translation>
     </message>
@@ -14023,13 +16069,19 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Generați codul de inițializare și curățare</translation>
     </message>
     <message>
-        <location line="-209" />
+        <location line="-286" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>CMake pentru Qt5 și Qt 6</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Creează un nou proiect de test unitar folosind Qt Test. Testele unitare vă permit să verificați dacă codul este potrivit pentru utilizare și că nu există regresii.</translation>
     </message>
@@ -14039,7 +16091,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Proiectul de testare Qt</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Acest expert creează un proiect simplu de testare unitară folosind Qt Quick Test.</translation>
     </message>
@@ -14049,7 +16101,25 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Generați codul de configurare</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+2" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 și versiuni ulterioare</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 și versiuni ulterioare</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Compatibilitate cod Qt:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>Creează un nou proiect de test unitar folosind Qt Quick Test. Testele unitare vă permit să verificați dacă codul este potrivit pentru utilizare și că nu există regresii.</translation>
     </message>
@@ -14064,36 +16134,36 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Nume complet calificat, inclusiv spații de nume</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Nume clasa:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Personalizat&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Clasa de baza:</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>Includeți QObject</translation>
     </message>
@@ -14128,62 +16198,63 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Adăugați QML_ELEMENT</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Fișier antet:</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Fișier sursă:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Cale:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Definiți clasa</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Creează un antet C++ și un fișier sursă pentru o nouă clasă pe care o puteți adăuga la un proiect C++.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>Clasa C++</translation>
     </message>
@@ -14224,16 +16295,16 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Qt Item Model</translation>
     </message>
@@ -14269,75 +16340,64 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Clasa Python</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Creează un proiect de testare bazat pe CMake pentru care poate fi introdus un fragment de cod.</translation>
+        <translation type="vanished">Creează un proiect de testare bazat pe CMake pentru care poate fi introdus un fragment de cod.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>Cod:</translation>
+        <translation type="vanished">Cod:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidgets</translation>
+        <translation type="vanished">QtCore, QtWidgets</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Utilizați module Qt:</translation>
+        <translation type="vanished">Utilizați module Qt:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Pachet de aplicații (macOS)</translation>
+        <translation type="vanished">Pachet de aplicații (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Definiți fragmentul de cod</translation>
+        <translation type="vanished">Definiți fragmentul de cod</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Fragment de cod</translation>
+        <translation type="vanished">Fragment de cod</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Creează un proiect de testare bazat pe CMake în care puteți introduce un fragment de cod pentru al compila și a-l verifica.</translation>
+        <translation type="vanished">Creează un proiect de testare bazat pe CMake în care puteți introduce un fragment de cod pentru al compila și a-l verifica.</translation>
     </message>
     <message>
-        <location line="-148" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="+384" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Alt Proiect</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code Snippet</source>
-        <translation>Fragment de cod</translation>
+        <translation type="vanished">Fragment de cod</translation>
     </message>
     <message>
-        <location line="+316" />
+        <location line="-575" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Creează un fișier antet pe care îl puteți adăuga la un proiect C/C++.</translation>
     </message>
@@ -14347,7 +16407,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier antet C/C++</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Creează un fișier sursă pe care îl puteți adăuga la un proiect C/C++.</translation>
     </message>
@@ -14357,7 +16417,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier sursă C/C++</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Alegeți un șablon de formular</translation>
     </message>
@@ -14377,12 +16437,14 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Formular Qt Widgets Designer</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="+7" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Creează un shader de fragment în limbajul de umbrire Desktop OpenGL (GLSL). Umbritoarele de fragmente generează culorile finale ale pixelilor pentru triunghiuri, puncte și linii redate cu OpenGL.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14390,7 +16452,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Fragment Shader (Desktop OpenGL)</translation>
     </message>
@@ -14405,7 +16467,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Vertex Shader (Desktop OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Creează un shader de fragment în limbajul de umbrire OpenGL/ES 2.0 (GLSL/ES). Umbritoarele de fragmente generează culorile finale ale pixelilor pentru triunghiuri, puncte și linii redate cu OpenGL.</translation>
     </message>
@@ -14425,7 +16487,31 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Vertex Shader (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+7" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Creează un fragment shader în GLSL compatibil Vulkan. Fragment shader-ele generează culorile finale ale pixelilor pentru triunghiurile, punctele și liniile de randat.
+Folosiți-l când vizați Qt6 sau o versiune ulterioară.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Fragment shader (compatibil Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Creează un vertex shader în GLSL compatibil Vulkan. Vertex shader-ele transformă pozițiile, normalele și coordonatele de textură ale triunghiurilor, punctelor și liniilor de randat.
+Folosiți-l când vizați Qt6 sau o versiune ulterioară.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Vertex Shader (compatibil Vulkan)</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Creează un fișier Java cu cod standard.</translation>
     </message>
@@ -14440,7 +16526,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier Java</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Bibliotecă apatridă</translation>
     </message>
@@ -14461,92 +16547,82 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișierul JS</translation>
     </message>
     <message>
-        <location line="-84" />
+        <location line="+7" />
         <source>Creates a markdown file.</source>
         <translation>Creează un fișier de reducere.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>General</translation>
     </message>
     <message>
-        <location line="-119" />
+        <location line="-97" />
         <source>Markdown File</source>
         <translation>Fișier Markdown</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Model name:</source>
-        <translation>Nume model:</translation>
+        <translation type="vanished">Nume model:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+54" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Locaţie:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(value(’TargetPath’))}” există în sistemul de fișiere.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Numele modelului și locația</translation>
+        <translation type="vanished">Numele modelului și locația</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Creează un nou model gol cu ​​o diagramă goală.</translation>
+        <translation type="vanished">Creează un nou model gol cu ​​o diagramă goală.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>Modelare</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>Model</translation>
+        <translation type="vanished">Model</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Creează un model de zgârietură folosind un fișier temporar.</translation>
+        <translation type="vanished">Creează un model de zgârietură folosind un fișier temporar.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Model Scratch</translation>
+        <translation type="vanished">Model Scratch</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>Creează un fișier Nim gol folosind setul de caractere UTF-8.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Fișierul Nim</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>Creează un fișier script Nim gol folosind un set de caractere UTF-8.</translation>
     </message>
@@ -14566,7 +16642,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier Python</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Creează un fișier de resurse Qt (.qrc).</translation>
     </message>
@@ -14576,7 +16652,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișierul de resurse Qt</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>Creează un fișier QML cu cod standard, începând cu „import QtQuick”.</translation>
     </message>
@@ -14586,7 +16662,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Fișier QML (Qt Quick 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Creează un buffer scratch folosind un fișier temporar.</translation>
     </message>
@@ -14596,7 +16672,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Scratch Buffer</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Numele diagramei de stat:</translation>
     </message>
@@ -14616,7 +16692,7 @@ Aceasta îi șterge plăcile, firmware-ul și exemplele.</translation>
         <translation>Diagrama de stat</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -14660,7 +16736,7 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Versiunea Catch2:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Informații de testare</translation>
     </message>
@@ -14676,7 +16752,7 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Caz de testare</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Creează un fișier gol.</translation>
     </message>
@@ -14686,7 +16762,7 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Fișier gol</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Creează un fișier de traducere pe care îl puteți adăuga la un proiect Qt.</translation>
     </message>
@@ -14696,61 +16772,67 @@ Nu ar trebui să amestecați mai multe cadre de testare într-un proiect.</trans
         <translation>Fișierul de traducere Qt</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Acest expert creează o aplicație simplă de consolă bazată pe Qt.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>CMake cu compatibilitate Qt 5</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Definiți sistemul de construcție</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Build System</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Fișier de traducere</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Traducere</translation>
     </message>
     <message>
-        <location line="-406" />
+        <location line="-529" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -14760,30 +16842,31 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Aplicație (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Aplicația Qt Console</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Acest expert creează un proiect de bibliotecă C++.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>Specificați informații de bază despre clasele pentru care doriți să generați fișiere de cod sursă schelet.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Bibliotecă comună</translation>
     </message>
@@ -14798,14 +16881,15 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Pluginul Qt</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Tip:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QAccessiblePlugin</translation>
     </message>
@@ -14841,12 +16925,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Nici unul</translation>
     </message>
@@ -14871,55 +16950,55 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Modulul Qt:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Definiți detaliile proiectului</translation>
     </message>
     <message>
-        <location line="-60" />
+        <location line="-482" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Creează o bibliotecă C++. Puteți crea:&lt;ul&gt;&lt;li&gt;o bibliotecă C++ partajată pentru a fi utilizată cu &lt;tt&gt;QPluginLoader&lt;/tt&gt; și runtime (Plugin-uri)&lt;/li&gt;&lt;li&gt;o bibliotecă C++ partajată sau statică pentru a fi utilizată cu un alt proiect la momentul link-ului&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-425" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>Bibliotecă</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>Biblioteca C++</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Creează o aplicație Nim simplă.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Proiect non-Qt</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Aplicația Nim</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>Binar</translation>
     </message>
@@ -14935,12 +17014,12 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Descriere:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15001,18 +17080,20 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>Alte</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Licenţă:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>C</translation>
     </message>
@@ -15053,21 +17134,21 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Configurare</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Creează o aplicație Nim cu Nimble.</translation>
     </message>
@@ -15077,7 +17158,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație agilă</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Creează o aplicație C simplă, fără dependențe.</translation>
     </message>
@@ -15087,7 +17168,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație C simplă</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Creează o aplicație C++ simplă, fără dependențe.</translation>
     </message>
@@ -15097,7 +17178,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație C++ simplă</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Acest expert creează un fișier .pro gol.</translation>
     </message>
@@ -15112,46 +17193,55 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Proiectul qmake gol</translation>
     </message>
     <message>
-        <location line="-180" />
-        <location line="+21" />
+        <location line="+5" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+33" />
-        <source>PySide 2</source>
-        <translation>PySide 2</translation>
+        <location line="-22" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Numele proiectului trebuie să conțină doar litere, cifre sau caractere de subliniere.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+45" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>Plugin C++ Qt Creator</translation>
+    </message>
+    <message>
+        <source>PySide 2</source>
+        <translation type="vanished">PySide 2</translation>
+    </message>
+    <message>
+        <location line="-379" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>Creează o aplicație Qt pentru Python care conține doar codul principal pentru o aplicație Q.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Aplicație (Qt pentru Python)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Aplicație goală</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Fișier proiect:</translation>
+        <translation type="vanished">Fișier proiect:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Creează o aplicație Qt pentru Python care conține o fereastră goală.</translation>
     </message>
@@ -15161,27 +17251,23 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Fereastra goală</translation>
     </message>
     <message>
-        <location line="+27" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15</translation>
+        <translation type="vanished">PySide 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14</translation>
+        <translation type="vanished">PySide 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13</translation>
+        <translation type="vanished">PySide 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12</translation>
+        <translation type="vanished">PySide 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+13" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Creează o aplicație Qt Quick care conține o fereastră goală.</translation>
     </message>
@@ -15191,7 +17277,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Qt Quick Application - Gol</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+11" />
         <source>Define Python Interpreter</source>
         <translation>Definiți Python Interpreter</translation>
     </message>
@@ -15211,45 +17297,169 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Interfața de utilizare a ferestrei</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Acest expert creează un proiect Qt Interface Framework.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Configurați interfața care descrie datele schimbate între frontend și backend.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Numele proiectului creat, începând cu literă mare.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Numele interfeței:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Numele interfeței care devine parte a modulului creat, începând cu literă mare.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Adăugare cod exemplu în proiect</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Include construcții de bază; altfel se creează un proiect gol.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Generare interfață pe zone</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>O interfață pe zone are elemente corespondente pentru toate datele din mai multe zone.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Configurare backend:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Generare backend de simulare</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>Creează un backend de simulare care poate fi scriptat din QML.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Generare implementare backend de producție</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Creează un backend complet, cu implementare nativă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Generare backend Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Generează un backend care se poate conecta la partea de server folosind tehnologia Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Generare server de simulare Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Generează un server de simulare la care se poate conecta backendul Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Generare server de producție Qt Remote Objects</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Generează un server cu implementare nativă la care se poate conecta backendul Qt Remote Objects.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>Dacă nu este selectat niciun backend funcțional, codul exemplu al interfeței frontend nu va funcționa și poate chiar genera erori.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Configurare interfață</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Configurare</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Creează un proiect Qt Interface Framework cu un frontend configurat și backenduri opționale.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>Proiect Qt Interface Framework</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Versiunea Qt minimă necesară:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>MyItem</translation>
     </message>
@@ -15289,24 +17499,38 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Plugin de extensie Qt Quick 2</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="+6" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Utilizați tastatura virtuală Qt</translation>
     </message>
     <message>
-        <location line="-180" />
         <source>Qt 6.4</source>
-        <translation>Qt 6.4</translation>
+        <translation type="vanished">Qt 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-49" />
         <source>Qt 6.5</source>
         <translation>Qt 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+1" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>Setați QT_QML_GENERATE_QMLLS_INI la ON în CMake</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Creează o aplicație Qt Quick care poate avea atât cod QML, cât și C++. Puteți crea aplicația și o puteți implementa pe platforme țintă desktop, încorporate și mobile.</translation>
     </message>
@@ -15316,7 +17540,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicație rapidă Qt</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15330,7 +17554,17 @@ Utilizați această versiune „compat” dacă doriți să utilizați alte sist
         <translation>Aplicație rapidă Qt (compat)</translation>
     </message>
     <message>
-        <location line="-92" />
+        <location line="+5" />
+        <source>Create a project that you can open in Qt Design Studio</source>
+        <translation>Creați un proiect pe care îl puteți deschide în Qt Design Studio</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Creează un proiect cu o structură compatibilă atât cu Qt Design Studio, cât și cu Qt Creator. Conține un formular .ui.qml pe care îl puteți edita vizual în Qt Design Studio.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15344,12 +17578,12 @@ Pentru a dezvolta o aplicație completă, creați un proiect Qt Quick Applicatio
         <translation>Prototip Qt Quick UI</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Acest expert generează un proiect Qt Widgets Application. Aplicația derivă implicit din QApplication și include un widget gol.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>Generați formular</translation>
     </message>
@@ -15378,50 +17612,50 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Aplicația Qt Widgets</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Vă rugăm să configurați &lt;b&gt;%{vcsName}&lt;/b&gt; acum.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Repertoriu:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Adresa URL a depozitului nu este validă</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>Director:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>„%{JS: Util.toNativeSeparators(’%{TargetPath}’)}” există în sistemul de fișiere.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Utilizați directorul existent</translation>
     </message>
@@ -15496,23 +17730,22 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Revizuire:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Specificați adresa URL a depozitului, directorul de plată și calea.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Sucursala Bazarului de conducere...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Clonează</translation>
     </message>
@@ -15522,22 +17755,22 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clonează o ramură Bazaar și încearcă să încarce proiectul conținut.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Import proiect</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Clona de bazar (sau ramură)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>Modul:</translation>
     </message>
@@ -15552,19 +17785,19 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Se execută verificarea CVS...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Verifică</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Verifică un depozit CVS și încearcă să încarce proiectul conținut.</translation>
     </message>
@@ -15574,7 +17807,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>CVS Checkout</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;ramură implicită&gt;</translation>
     </message>
@@ -15614,7 +17847,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clona Git</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Rulează clona Mercurial...</translation>
     </message>
@@ -15629,7 +17862,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clona mercurială</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Certificat de server de încredere</translation>
     </message>
@@ -15649,7 +17882,62 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Subversion Checkout</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Solicită passthrough</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Solicită permisiuni pentru modul passthrough.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>Solicită urmărirea mâinilor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>Solicită permisiuni pentru urmărirea mâinilor.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Solicită ancore spațiale</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Solicită permisiuni pentru API-ul de ancore.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>Funcții XR</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Caracteristici</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Selectarea kitului: pentru Apple Vision Pro, selectați orice kit.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>Creează o aplicație Qt Quick 3D XR cu cod QML și C++. Puteți compila și implementa aplicația pe platforme VR desktop și XR autonome. Pentru Apple Vision Pro, puteți dezvolta în Qt Creator, dar trebuie să implementați proiectul CMake cu XCode.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>Aplicație XR</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Acest expert creează un plugin personalizat Qt Creator.</translation>
     </message>
@@ -15709,12 +17997,11 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Creează un plugin personalizat Qt Creator.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Pluginul Qt Creator</translation>
+        <translation type="vanished">Pluginul Qt Creator</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S&amp;sesiuni</translation>
     </message>
@@ -15734,7 +18021,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Numele sesiunii curente.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Ștergeți sesiunea</translation>
     </message>
@@ -15756,7 +18043,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
  %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Eroare la restabilirea sesiunii</translation>
     </message>
@@ -15766,33 +18053,33 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Nu s-a putut restabili sesiunea %1</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Sesiunea de încărcare</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Eroare la salvarea sesiunii</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>Nu s-a putut salva sesiunea %1</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>Nu s-a putut salva sesiunea în fișierul „%1”</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Introduceți numele sesiunii:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Manager de sesiune</translation>
     </message>
@@ -15832,7 +18119,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Ce este o sesiune?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Sesiune</translation>
     </message>
@@ -15842,7 +18129,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Ultima modificare</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Nume nou sesiune</translation>
@@ -15868,7 +18155,7 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Clonează și &amp;Deschide</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Redenumiți sesiunea</translation>
     </message>
@@ -15883,17 +18170,17 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Redenumiți și &amp;Deschideți</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;personalizat&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Configurația este defectuoasă. Verificați vizualizarea Probleme pentru detalii.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>Nu s-a putut crea directorul „%1”</translation>
     </message>
@@ -15903,44 +18190,41 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Programul „%1” nu există sau nu este executabil.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Începând: „%1” %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>Procesul „%1” a ieșit normal.</translation>
+        <translation type="vanished">Procesul „%1” a ieșit normal.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>Procesul „%1” a ieșit cu codul %2.</translation>
+        <translation type="vanished">Procesul „%1” a ieșit cu codul %2.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>Nu s-a putut porni procesul „%1” %2.</translation>
+        <translation type="vanished">Nu s-a putut porni procesul „%1” %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>Procesul „%1” sa blocat.</translation>
+        <translation type="vanished">Procesul „%1” sa blocat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[nici unul]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>Nume</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Sursă</translation>
     </message>
@@ -15960,7 +18244,22 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Crea</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Elimină configurațiile de rulare</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Filtrare configurații de rulare după nume</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Elimină selecția</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>Fișiere în orice proiect</translation>
     </message>
@@ -15970,18 +18269,19 @@ Preselectează un desktop Qt pentru construirea aplicației, dacă este disponib
         <translation>Localizează fișierele tuturor proiectelor deschise. Adăugați „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a sări la numărul de linie dat. Adăugați un alt „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a trece și la numărul coloanei.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Toate Proiectele</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Toate proiectele:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -15990,7 +18290,7 @@ Excluzând: %2
 %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Atașați depanatorul la acest proces</translation>
     </message>
@@ -16000,7 +18300,33 @@ Excluzând: %2
         <translation>Atașați depanatorul la %1</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Categorie</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Depanare</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Critic</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Fatal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Informații</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Stop</translation>
     </message>
@@ -16036,12 +18362,12 @@ Excluzând: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Ieșire aplicație</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Reluați această configurație de rulare.</translation>
     </message>
@@ -16051,45 +18377,74 @@ Excluzând: %2
         <translation>Opriți rularea programului.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>application-output-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Fereastra de ieșire a aplicației</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Filtrare categorii interne de jurnal Qt</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Filtrare categorii după expresie regulată</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Expresie regulată invalidă: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Debifează tot</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Debifează tot %1</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Bifare toate %1</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Invalid</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Ieșire pentru împachetare în cuvinte</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Ștergeți rezultatul vechi pe o nouă rulare</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Îmbină stderr și stdout</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Întotdeauna</translation>
     </message>
@@ -16104,45 +18459,64 @@ Excluzând: %2
         <translation>Numai la prima ieșire</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Eliminare ieșire excesivă</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Suprascrie culoarea de fundal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Personalizați culoarea de fundal a ieșirii aplicației.
+Notă: ieșirea existentă nu va fi recolorată.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Limitați rezultatul la %1 caractere</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Deschideți ieșirea aplicației când rulați:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Deschideți ieșirea aplicației la depanare:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>fără titlu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Director de construcție:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>Directorul de compilare nu este accesibil de pe dispozitivul de compilare.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>Construcție umbră:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>Directorul de compilare conține caracterul potențial problematic „%1”.</translation>
     </message>
@@ -16152,15 +18526,16 @@ Excluzând: %2
         <translation>Acest avertisment poate fi suprimat &lt;a href=&quot;dummy&quot;&gt;aici&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Informații separate de depanare:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Construiți mediu</translation>
     </message>
@@ -16170,14 +18545,14 @@ Excluzând: %2
         <translation>Mediu de sistem clar</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Analizoare personalizate de ieșire</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Analizați rezultatul standard în timpul construirii</translation>
     </message>
@@ -16187,29 +18562,34 @@ Excluzând: %2
         <translation>Face ca analizatorii de ieșire să caute diagnostice pe stdout mai degrabă decât pe stderr.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Build Settings</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Directorul rădăcină al proiectului. Poate diferi de Project:Path pentru unele sisteme de compilare.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Build director</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Numele configurației de construcție</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Variabile în mediul configurației de construcție</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Indicator în selectorul țintei:</translation>
     </message>
@@ -16219,8 +18599,9 @@ Excluzând: %2
         <translation>Apare ca un sfat explicativ atunci când treceți cu mouse-ul la configurația de compilare</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Mediul de sistem</translation>
     </message>
@@ -16236,7 +18617,24 @@ Excluzând: %2
         <translation>Proiectul nu a fost analizat cu succes.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>Implicit</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Lansare</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Profil</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>Dosarul principal al proiectului</translation>
     </message>
@@ -16266,7 +18664,7 @@ Excluzând: %2
         <translation>Tipul configurației de construcție activă a proiectului</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>Nu este setat niciun dispozitiv de compilare pentru kitul „%1”.</translation>
     </message>
@@ -16286,7 +18684,7 @@ Excluzând: %2
         <translation>Dispozitivul de compilare „%1” nu poate ajunge la directorul de compilare.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>S-au încheiat %1 din %n pași</numerusform>
@@ -16295,7 +18693,7 @@ Excluzând: %2
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Opriți aplicațiile</translation>
     </message>
@@ -16315,7 +18713,7 @@ Excluzând: %2
         <translation>Dispozitivul de compilare nu s-a pregătit pentru compilarea %1 (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Compila</translation>
@@ -16359,13 +18757,13 @@ Excluzând: %2
         <translation>Probleme găsite la rularea testelor.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -16375,10 +18773,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -16386,11 +18784,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Implementează</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -16398,7 +18796,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Construi</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>Construirea/Implementarea a fost anulată</translation>
     </message>
@@ -16418,34 +18816,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Omiterea pasului dezactivat %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Eroare la construirea/implementarea proiectului %1 (kit: %2)</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>Kitul %1 are probleme de configurare care ar putea fi cauza principală a acestei probleme.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>Când executați pasul „%1”</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Permite</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Dezactivați</translation>
@@ -16456,7 +18854,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Utilizați valoarea implicită a proiectului</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>Director de compilare implicit:</translation>
     </message>
@@ -16466,7 +18864,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Șablon folosit pentru a construi directorul de compilare implicit.&lt;br&gt;&lt;br&gt;Valoarea implicită poate fi setată folosind variabila de mediu &lt;tt&gt;%1&lt;/tt&gt;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Director de lucru implicit:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Șablon folosit pentru a construi directorul de lucru implicit al unei configurații de rulare.&lt;br&gt;&lt;br&gt;Valoarea implicită poate fi setată folosind variabila de mediu &lt;tt&gt;%1&lt;/tt&gt;.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>Depanare QML:</translation>
     </message>
@@ -16481,72 +18889,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Proprietăți implicite de construcție</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Nu sunt disponibile setări de construcție</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Editați configurația build:</translation>
+        <translation type="vanished">Editați configurația build:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Adăuga</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Elimina</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Redenumiți...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Clonează...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Configurația de compilare activă:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Configurație nouă</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Nou nume de configurare:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nume nou pentru configurația de compilare &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -16555,14 +18965,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Clonează configurația</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Anulează Build &amp;&amp; Remove Build Configuration</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Nu îndepărtați</translation>
     </message>
@@ -16607,13 +19017,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Eliminați elementul</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 pași</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>Nu %1 pași</translation>
     </message>
@@ -16638,7 +19048,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Nu se poate elimina pasul de construire în timpul construcției</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>Proiectul este în prezent analizat.</translation>
     </message>
@@ -16663,13 +19073,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Stil cod</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Ieșire compilată</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>compile-output.txt</translation>
@@ -16690,9 +19100,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>O</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Ieșirea excesivă a compilării a fost eliminată.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>Deschideți ieșirea de compilare când construiți</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>Elimină ieșirea compilării care sosește continuu mai repede decât poate fi procesată.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -16729,7 +19149,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Copiați directorul recursiv</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>eroare:</translation>
@@ -16741,7 +19161,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>avertizare:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>Se interoghează %1...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>Obțineți ajutor de la %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Cereți ajutor de la LLM-ul %1 pentru această problemă.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>Fișiere în proiectul curent</translation>
     </message>
@@ -16751,44 +19186,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Localizează fișierele din proiectul documentului curent. Adăugați „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a sări la numărul de linie dat. Adăugați un alt „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a trece și la numărul coloanei.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>Proiectul „%1”</translation>
+        <translation type="vanished">Proiectul „%1”</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Proiect curent</translation>
+        <translation type="vanished">Proiect curent</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Proiect unic</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>Proiectul „%1”:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Proiect:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Curent</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Executabil personalizat</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Rulați %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Trebuie să setați un executabil în configurația de rulare personalizată.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>Nu este configurat niciun executabil în configurația de rulare personalizată.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>Accesați configurația de rulare %1 și configurați un executabil.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Trebuie să setați un executabil în configurația de rulare personalizată.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Citirea parserelor de ieșire personalizate din „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Analizoarele de ieșire personalizate scanează ieșirea din linia de comandă pentru modele de eroare furnizate de utilizator&lt;br&gt;pentru a crea intrări în Issues.&lt;br&gt;Parserii pot fi configurați &lt;a href=&quot;dummy&quot;&gt;aici&lt;/a&gt;.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (implicit pentru proiect)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Nu există analizoare personalizate active</translation>
     </message>
@@ -16871,8 +19340,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
@@ -16896,19 +19365,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Eroare</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Avertizare</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Nu se aplică:</translation>
     </message>
@@ -16928,16 +19397,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Modelul nu se potrivește cu mesajul.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Compilare implicită</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Rulează implicit</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Numele analizorului personalizat.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Acest analizor personalizat este folosit implicit pentru toate configurațiile de compilare ale proiectului.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Acest analizor personalizat este folosit implicit pentru toate configurațiile de rulare ale proiectului.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Parserul nu poate fi modificat deoarece a fost importat automat.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Analizatoarele de ieșire personalizate definite aici pot fi activate individual în setările de construire sau de rulare ale proiectului.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Adăuga...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Export...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>Import...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -16945,37 +19454,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Parser nou</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Salvează analizoarele</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Încarcă analizoarele</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Eroare la încărcarea parserelor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Eroare la încărcarea parserelor: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Personalizat</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Zăngăni</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -16990,11 +19524,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Gol</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>MACRO[=VALOARE]</translation>
     </message>
@@ -17019,22 +19554,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Lista de mkspecs, separată prin virgulă.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Calea compilatorului:</translation>
+        <translation type="vanished">&amp;Calea compilatorului:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Faceți calea:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;ABI:</translation>
     </message>
@@ -17079,7 +19610,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Acest lucru ar crea o dependență circulară.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Sincronizați configurația</translation>
     </message>
@@ -17089,12 +19620,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Sincronizați kitul activ, construiți și implementați configurația între proiecte.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Implementare dependențe</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Nu compilați doar dependențele, ci implementați-le și pe acestea.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>Dependente</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Implementați local</translation>
@@ -17120,65 +19661,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ignorați datele de implementare din sistemul de compilare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>Qt Run Configuration</translation>
+        <translation type="vanished">Qt Run Configuration</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>PC local</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Desktop</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>Procesul nu poate fi oprit cu pid %1: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>Nu se poate întrerupe procesul cu pid %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Procesul nu poate fi deschis.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>ID de proces nevalid.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Procesul nu poate fi deschis: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>DebugBreakProcess a eșuat:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 nu există. Dacă ați creat singur %2, consultați https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 nu există. Instalarea %2 pare coruptă.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>Aveți nevoie de cel puțin un port pentru depanarea QML.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Rulează acum detectarea automată</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Tip de mașină:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Dispozitiv fizic</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Porturi libere:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>„%1” poate gestiona doar fișiere locale.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>Dispozitivul „%1” nu este gata de utilizare.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 nu există. Dacă ați creat singur %2, consultați https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>Nu se poate porni %1. Verificați src\tools\win64interrupt\win64interrupt.c pentru mai multe informații.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>nu a putut întrerupe procesul.</translation>
     </message>
@@ -17200,7 +19780,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Nu există niciun dispozitiv configurat pentru acest kit. Doriți să adăugați un dispozitiv?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Verificați dacă există un dispozitiv configurat</translation>
     </message>
@@ -17215,23 +19795,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Tipuri de dispozitive disponibile:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>Niciun dispozitiv pentru calea „%1”</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>Nu s-a găsit niciun dispozitiv pentru calea „%1”.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>Nu există acces la fișiere pentru dispozitivul „%1”.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>Nu a fost găsit niciun dispozitiv pentru calea „%1”</translation>
+        <translation type="vanished">Nu a fost găsit niciun dispozitiv pentru calea „%1”</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>Nu există acces la fișiere pentru dispozitivul „%1”</translation>
+        <translation type="vanished">Nu există acces la fișiere pentru dispozitivul „%1”</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Toate</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 (implicit pentru %2)</translation>
     </message>
@@ -17271,22 +19867,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Eroare la distanță</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Dispozitiv:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Specific tip</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Elimina</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Setați ca implicit</translation>
     </message>
@@ -17296,7 +19893,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Adăuga...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Porniți expertul pentru a adăuga dispozitiv...</translation>
     </message>
@@ -17307,7 +19904,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Adăugați %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;Nume:</translation>
     </message>
@@ -17322,7 +19919,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Starea actuala:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Restaurare</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Da (id-ul este „%1”)</translation>
     </message>
@@ -17337,8 +19939,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Afișați procesele în derulare...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Dispozitive</translation>
     </message>
@@ -17358,12 +19960,11 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Testarea dispozitivului a eșuat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Ieșirea eroare de la distanță a fost: %1</translation>
+        <translation type="vanished">Ieșirea eroare de la distanță a fost: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>S-au găsit %n porturi libere.</numerusform>
@@ -17372,12 +19973,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Se verifică porturile disponibile...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Niciun dispozitiv setat pentru transferul de testare.</translation>
     </message>
@@ -17407,7 +20008,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>copie de fișier generic</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>Caută în PATH</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Caută în instalarea Qt</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Caută în directoare</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Listă de directoare separate prin punct și virgulă</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Selectați căile de pe dispozitiv care trebuie scanate pentru fișiere binare.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Creare kituri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Configurează kituri pentru seturile de instrumente ale acestui dispozitiv.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Dispozitivul nu este conectat.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Lăsați gol pentru a căuta executabilul în $PATH</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Folosește redirecționarea de porturi SSH pentru depanare</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>Activează depanarea pe ținte la distanță care nu pot expune porturile serverului GDB.
+Se folosește tunelarea SSH pentru a asocia portul serverului GDB la distanță cu localhost.
+Porturile locale și la distanță sunt determinate automat.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Acces prin:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Selectați dispozitivul prin care să se conecteze.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Direct</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Numele dispozitivului nu poate fi gol.</translation>
     </message>
@@ -17417,18 +20092,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Un dispozitiv cu acest nume există deja.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Introduceți liste și intervale astfel: „1024,1026-1028,1030”.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Deschiderea unui terminal nu este acceptată.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>Fișierul „%1” nu poate fi gestionat de dispozitivul „%2”.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Rularea unui script prin „source” nu este acceptată pe această platformă.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Dispozitiv</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>Nu este disponibilă nicio rețetă de operație de semnal pentru acest dispozitiv.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Gata de utilizare</translation>
     </message>
@@ -17448,22 +20142,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Necunoscut</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Rulează instrumentele pe acest dispozitiv</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Instrumente sursă și de compilare de pe acest dispozitiv</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Detectare automată</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>localSource() nu este implementat pentru acest tip de dispozitiv.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>Nu a fost specificată nicio cale pentru SignalOperationData.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>Nu a fost specificat niciun PID valid pentru SignalOperationData.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Niciun dispozitiv pentru calea dată: „%1”.</translation>
+        <translation type="vanished">Niciun dispozitiv pentru calea dată: „%1”.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>Dispozitivul pentru calea „%1” nu acceptă procesele de distrugere.</translation>
+        <translation type="vanished">Dispozitivul pentru calea „%1” nu acceptă procesele de distrugere.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>ID proces</translation>
     </message>
@@ -17473,53 +20190,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Linia de comandă</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>Preluarea listei de procese. Acest lucru ar putea dura ceva timp.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>Obținerea listei de procese a eșuat.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>SSH</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Activați partajarea conexiunii:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Timp de expirare a partajării conexiunii:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>Calea către executabilul ssh:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>Calea către executabilul sftp:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>Calea către executabilul ssh-askpass:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>Calea către executabilul ssh-keygen:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>minute</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Proiectul %1</translation>
@@ -17531,7 +20252,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Proiect</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Restaurare globală</translation>
     </message>
@@ -17541,40 +20263,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Setări de afișare</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Afișează &amp;marja din dreapta la coloană:</translation>
+        <translation type="vanished">Afișează &amp;marja din dreapta la coloană:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Utilizați marja specifică contextului</translation>
+        <translation type="vanished">Utilizați marja specifică contextului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Dacă este disponibilă, utilizați o marjă diferită. De exemplu, ColumnLimit din pluginul ClangFormat.</translation>
+        <translation type="vanished">Dacă este disponibilă, utilizați o marjă diferită. De exemplu, ColumnLimit din pluginul ClangFormat.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Editor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Mediu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Mediul de bază pentru această configurație de rulare:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Afișați în Ieșirea aplicației când rulați</translation>
     </message>
@@ -17585,12 +20302,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Alegeți Director</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>Ed&amp;ita</translation>
     </message>
@@ -17630,7 +20347,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Deschideți un terminal cu acest mediu configurat.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Dezactivați &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</translation>
     </message>
@@ -17672,17 +20389,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Folosiți &lt;b&gt;%1&lt;/b&gt; și</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>Fișierele din toate directoarele de proiect</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>Fișierele din toate directoarele de proiect:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Setare</translation>
     </message>
@@ -17692,18 +20409,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Vizibil</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>MinGW</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 (%2, %3 %4 la %5)</translation>
+        <translation type="vanished">%1 (%2, %3 %4 la %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3 la „%4”)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Suprascriere pentru modelul de cod</translation>
     </message>
@@ -17715,7 +20436,7 @@ fails because Clang does not understand the target architecture.</source>
 eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Indicatori de codificare a platformei:</translation>
     </message>
@@ -17730,7 +20451,7 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
         <translation>Triplu tinta:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Lanț de instrumente părinte:</translation>
     </message>
@@ -17755,22 +20476,22 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
         <translation>Intrarea de editare a textului pentru a remedia.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Câmpul nu este un obiect.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Câmpul nu are nume.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>Câmpul „%1” nu are niciun tip.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>Câmpul „%1” are tipul „%2” neacceptat.</translation>
     </message>
@@ -17780,102 +20501,102 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
         <translation>La analizarea câmpului „%1”: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Datele etichetei (&quot;%1&quot;) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Eticheta (&quot;%1&quot;) nu are trText.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>Datele spacer (&quot;%1&quot;) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>Proprietatea „factor” de distanțiere (&quot;%1&quot;) nu este o valoare întreagă.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Datele LineEdit (&quot;%1&quot;) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>LineEdit (&quot;%1&quot;) are o expresie regulată nevalidă &quot;%2&quot; în &quot;validator&quot;.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>LineEdit („%1”) are o valoare nevalidă „%2” în „finalizare”.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Datele TextEdit (&quot;%1&quot;) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>Datele PathChooser nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>tipul „%1” nu este unul dintre „existingDirectory”, „directory”, „fișier”, „saveFile”, „existingCommand”, „comandă”, „orice”.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Datele Casetei de verificare („%1”) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Valorile casetei de verificare (&quot;%1&quot;) pentru starea bifată și nebifată sunt identice.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>Nu sunt permise liste JSON în interiorul elementelor Listă.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Nu s-a găsit nicio „cheie” în articolele din listă.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>Datele %1 (&quot;%2&quot;) nu sunt un obiect.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;index&quot; nu este o valoare întreagă.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; nu este o valoare întreagă.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) „articole” lipsesc.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;articole&quot; nu este o listă JSON.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>Cel puțin o caracteristică necesară nu este prezentă.</translation>
     </message>
@@ -17890,7 +20611,7 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
         <translation>Cel puțin o caracteristică preferată nu este prezentă.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Lista de caracteristici este setată și nu de tip listă.</translation>
     </message>
@@ -17905,7 +20626,7 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
         <translation>Elementul din lista de caracteristici nu este un șir sau un obiect.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Nu s-a reușit să se angajeze la Controlul versiunilor</translation>
     </message>
@@ -17922,7 +20643,7 @@ eșuează deoarece Clang nu înțelege arhitectura țintă.</translation>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>Nu s-a putut adăuga subproiectul „%1” 
@@ -17930,20 +20651,25 @@ pentru a proiecta „%2”.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Nu s-a putut adăuga unul sau mai multe fișiere la proiect 
 „%1” (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>Subproiectul „%1” se află în afara „%2”.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>Fișier proiect</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Alegeți Fișier proiect</translation>
     </message>
@@ -17953,12 +20679,12 @@ pentru a proiecta „%2”.</translation>
         <translation>Proiectul conține mai mult de un fișier de proiect. Selectați-l pe cel pe care doriți să îl utilizați.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Verificați dacă există o variabilă.&lt;br&gt;Returnează „adevărat” dacă există și un șir gol dacă nu.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Nu s-a putut determina calea țintă. „TargetPath” nu a fost setat pe nicio pagină.</translation>
     </message>
@@ -17978,32 +20704,32 @@ pentru a proiecta „%2”.</translation>
         <translation>Nicio „cheie” în obiectul de opțiuni.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Nu s-a putut suprascrie fișierele</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Formatarea fișierelor nu a reușit</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Nu s-au putut scrie fișiere</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>Fișierele nu au putut fi postprocesate</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Fișierele poloneze nu au reușit</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Deschiderea fișierelor nu a reușit</translation>
     </message>
@@ -18045,66 +20771,65 @@ pentru a proiecta „%2”.</translation>
         <translation>Proiectul nu poate fi deschis</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Generatorul nu este un obiect.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Generatorul nu are setat tip ID.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeId „%1” al generatorului este necunoscut. TypeId-urile acceptate sunt: ​​„%2”.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>Calea „%1” nu există când se verifică căile de căutare ale expertului JSON.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>Se verifică „%1” pentru %2.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* Nu s-a putut analiza „%1”:%2:%3: %4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* Nu am găsit un obiect JSON în „%1”.</translation>
+        <translation type="vanished">* Nu am găsit un obiect JSON în „%1”.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Configurație găsită și analizată.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>JsonWizard: „%1” nu a fost găsit.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Pagina nu este un obiect.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Pagina nu are setat tip ID.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>TypeId „%1” al paginii este necunoscut. TypeId-urile acceptate sunt: ​​„%2”.</translation>
     </message>
@@ -18114,7 +20839,8 @@ pentru a proiecta „%2”.</translation>
         <translation>Pagina cu typeId „%1” are „index” nevalid.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* Nu am găsit un obiect JSON în „%1”.</translation>
     </message>
@@ -18124,22 +20850,22 @@ pentru a proiecta „%2”.</translation>
         <translation>* Versiunea %1 nu este acceptată.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Nu s-a putut crea: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>cheia nu a fost găsită.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Se aștepta un obiect sau o listă.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Platforma selectată pentru vrăjitor.</translation>
     </message>
@@ -18169,62 +20895,66 @@ pentru a proiecta „%2”.</translation>
         <translation>Niciun ID setat.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Nu este stabilită nicio categorie.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>Fișierul pictogramă „%1” nu a fost găsit.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>Fișierul imagine „%1” nu a fost găsit.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>Nu a fost setat displayName.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>Nu a fost setată nicio categorie de afișare.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Nu există descriere setată.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>La analizarea „generatoarelor”: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>La analizarea „paginilor”: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>Niciun typeId valid.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">La analizarea „paginilor”: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Intrarea în lista de date de fișiere nu este un obiect.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Sursa și ținta sunt ambele goale.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>La procesarea „%1”:&lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [dosar]</translation>
     </message>
@@ -18251,7 +20981,12 @@ pentru a proiecta „%2”.</translation>
         <translation>Când se analizează câmpurile paginii „%1”: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Nu s-au găsit câmpuri.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>„date” pentru o pagină „Fișier” trebuie să fie dezactivate sau un obiect gol.</translation>
     </message>
@@ -18261,12 +20996,12 @@ pentru a proiecta „%2”.</translation>
         <translation>Eroare la analizarea „%1” în pagina „Kituri”: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>„data” trebuie să fie un obiect JSON pentru paginile „Kituri”.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>Pagina „Kituri” necesită un set „%1”.</translation>
     </message>
@@ -18276,38 +21011,39 @@ pentru a proiecta „%2”.</translation>
         <translation>„date” trebuie să fie goale sau un obiect JSON pentru paginile „Proiect”.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Expresie regulată nevalidă „%1” în „%2”. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>„date” pentru o pagină „Rezumat” poate fi dezactivată sau trebuie să fie un obiect.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Cheia nu este un obiect.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>Modelul „%1” nu este o expresie regulată validă.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>ScannerGenerator: modelul binar „%1” nu este valid.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>Anonim</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Kit</translation>
@@ -18338,13 +21074,14 @@ pentru a proiecta „%2”.</translation>
         <translation>ID-ul trusei.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>Clonarea lui %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -18375,49 +21112,86 @@ pentru a proiecta „%2”.</translation>
         <translation>Sys Root</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Fără compilator&gt;</translation>
+        <translation type="vanished">&lt;Fără compilator&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Compilator</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Compilatorul de utilizat pentru construirea.&lt;br&gt;Asigurați-vă că compilatorul va produce fișiere binare compatibile cu dispozitivul țintă, versiunea Qt și alte biblioteci utilizate.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Compilatoarele produc cod pentru diferite ABI-uri: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Calea către executabilul compilatorului</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Compilator pentru diferite limbi</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Compiler executabil pentru diferite limbi</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>S-a găsit lanțul de instrumente: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Se elimină setul de instrumente: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Set de instrumente: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Se aștepta un obiect JSON pentru detecția lanțului de instrumente, s-a primit: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>Nu s-au găsit seturi de instrumente în obiectul JSON pentru detectare.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Limbă necunoscută în detectarea setului de instrumente: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Nici un compilator setat în kit.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Rulați tipul dispozitivului</translation>
     </message>
@@ -18427,18 +21201,69 @@ pentru a proiecta „%2”.</translation>
         <translation>Tipul de dispozitiv pe care rulează aplicațiile.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Tip de dispozitiv necunoscut</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Dispozitiv:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Tipul dispozitivului</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Nu este setat niciun dispozitiv de rulare.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Dispozitivul de compilare este incompatibil cu acest kit.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Dispozitivul de rulare este incompatibil cu acest kit.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Adresa gazdei (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>Port SSH (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Nume de utilizator (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>Fișier cheie privată (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Numele dispozitivului (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Directorul rădăcină al dispozitivului (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Rulați dispozitivul</translation>
     </message>
@@ -18448,129 +21273,245 @@ pentru a proiecta „%2”.</translation>
         <translation>Dispozitivul pe care rulează aplicațiile.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Tip de dispozitiv de compilare</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Tipul de dispozitiv pe care se compilează.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Niciun dispozitiv setat.</translation>
+        <translation type="vanished">Niciun dispozitiv setat.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Dispozitivul este incompatibil cu acest kit.</translation>
+        <translation type="vanished">Dispozitivul este incompatibil cu acest kit.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Neconfigurat</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Adresa gazdei</translation>
+        <translation type="vanished">Adresa gazdei</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>Port SSH</translation>
+        <translation type="vanished">Port SSH</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Activați pentru a specifica un fișier de cheie privată pentru autentificare; în caz contrar se folosește mecanismul implicit (parolă, .sshconfig și cheia privată implicită).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Folosește o cheie specifică:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Modul de verificare a cheii gazdă SSH a dispozitivului.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Verificarea cheii gazdei:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Fără verificarea cheii gazdă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Strict</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Verificare strictă a cheii gazdă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Permitere fără potrivire</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Permitere verificarea cheii gazdei.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Nume de gazdă sau adresă IP</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Numele gazdei sau adresa IP a dispozitivului.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Nume gazdă:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Nume utilizator</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Numele de utilizator SSH al dispozitivului.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Nume de utilizator:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Numărul portului SSH al dispozitivului.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>Port SSH:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>Fișier cu cheie privată</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>Fișierul cheie privată al dispozitivului.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>Fișier cheie privată:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Expirare:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Timpul de expirare al conexiunii SSH a dispozitivului.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Numele dispozitivului</translation>
+        <translation type="vanished">Numele dispozitivului</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Directorul rădăcină al dispozitivului</translation>
+        <translation type="vanished">Directorul rădăcină al dispozitivului</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Construiți dispozitivul</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Dispozitivul folosit pentru a construi aplicații pe.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Niciun dispozitiv de construcție setat.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Creați adresa gazdei</translation>
+        <translation type="vanished">Creați adresa gazdei</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>Construiți portul SSH</translation>
+        <translation type="vanished">Construiți portul SSH</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Creați numele de utilizator</translation>
+        <translation type="vanished">Creați numele de utilizator</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Creați fișierul cu cheie privată</translation>
+        <translation type="vanished">Creați fișierul cu cheie privată</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Creați numele dispozitivului</translation>
+        <translation type="vanished">Creați numele dispozitivului</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Creați directorul rădăcină al dispozitivului</translation>
+        <translation type="vanished">Creați directorul rădăcină al dispozitivului</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Schimba...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Fără modificări de aplicat.</translation>
+        <translation type="vanished">Fără modificări de aplicat.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>Forțați ieșirea compilatorului MSVC UTF-8</translation>
+        <translation type="vanished">Forțați ieșirea compilatorului MSVC UTF-8</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Editare mediu de compilare...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Editare mediu de rulare...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Editare mediu de compilare</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Editare mediu de rulare</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>Forțare ieșire MSVC în UTF-8</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>Fie comută MSVC la engleză, fie păstrează limba și forțează doar ieșirea UTF-8 (poate varia în funcție de compilatorul MSVC utilizat).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Setări suplimentare ale mediului de construcție atunci când utilizați acest kit.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Valoarea setării mediului este nevalidă.</translation>
+        <translation type="vanished">Valoarea setării mediului este nevalidă.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -18578,29 +21519,65 @@ pentru a proiecta „%2”.</translation>
         <translation>Kit de proiect activ: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1 pe %2</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Desktop (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Seturi de încărcare</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Marcați ca mutabil</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Gestionează...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>Fabrica de aspecte de kit „%1” nu acceptă crearea de aspecte din JSON.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Se detectează automat kiturile pentru dispozitivul: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>S-a găsit kitul: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Se elimină kiturile pentru dispozitivul: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Se elimină kitul: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Kit: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
@@ -18615,12 +21592,12 @@ pentru a proiecta „%2”.</translation>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Numele kitului potrivit pentru generarea numelor de directoare. Această valoare este folosită pentru variabila &lt;i&gt;%1&lt;/i&gt;, care, de exemplu, determină numele directorului de compilare umbră.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Nume sistem de fișiere:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Pictograma kit.</translation>
     </message>
@@ -18635,12 +21612,17 @@ pentru a proiecta „%2”.</translation>
         <translation>Resetați la pictograma implicită a dispozitivului</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Numele afișat nu este unic.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Setat ca kit implicit la crearea unui proiect nou.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>Implicit pentru %1</translation>
     </message>
@@ -18655,18 +21637,16 @@ pentru a proiecta „%2”.</translation>
         <translation>Imagini (*.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (implicit)</translation>
+        <translation type="vanished">%1 (implicit)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Setați implicit</translation>
+        <translation type="vanished">Setați implicit</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Setări filtru...</translation>
     </message>
@@ -18686,7 +21666,7 @@ pentru a proiecta „%2”.</translation>
         <translation>Alegeți setările kitului de afișat implicit.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Faceți argumente:</translation>
     </message>
@@ -18766,29 +21746,27 @@ pentru a proiecta „%2”.</translation>
         <translation>Niciun conflict cu variabila de mediu &lt;code&gt;MAKEFLAGS&lt;/code&gt;.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Rulați fără implementare</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Proiect</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Fugi</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt;Proiect:&lt;/b&gt; %1</translation>
     </message>
@@ -18823,7 +21801,7 @@ pentru a proiecta „%2”.</translation>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Proiect: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</translation>
     </message>
@@ -18853,49 +21831,54 @@ pentru a proiecta „%2”.</translation>
         <translation>&lt;style type=text/css&gt;a:link {color: rgb(128, 128, 255);}&lt;/style&gt;Proiectul &lt;b&gt;%1&lt;/b&gt; nu este încă configurat&lt;br/&gt;&lt;br/&gt;Îl puteți configura în &lt;a href=&quot;projectmode&quot;&gt;modul Proiecte&lt;/a&gt;&lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Revenirea pentru a utiliza mediul stocat în cache pentru „%1” după:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Inițializare:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>Nu s-a găsit niciun set de instrumente MSVC. Trebuie să instalați Visual Studio sau Visual Studio Build Tools.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;gol&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Argumente suplimentare pentru apelul vcvarsall.bat</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>Nu s-a putut prelua MSVC Environment de la „%1”: 
 %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>clang-cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>Procesul nu poate accesa fișierul deoarece este utilizat de un alt proces. 
 Închideți toate instanțele care rulează ale aplicației dumneavoastră înainte de a începe o construcție.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Parse Build Output</translation>
     </message>
@@ -18945,7 +21928,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Utilizați analizatori din kit:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Nu se poate analiza</translation>
     </message>
@@ -18955,26 +21938,26 @@ Please close all running instances of your application before starting a build.<
         <translation>Nu se poate analiza: kitul ales nu oferă un parser de ieșire.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Comanda:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Argumente:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Director de lucru:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Pas de proces personalizat</translation>
@@ -18985,13 +21968,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Numele proiectului</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Kitul nu este valabil.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Kitul nu are dispozitiv de compilare.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>Dispozitivul de compilare „%2” nu poate gestiona fișierul de proiect „%1”.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Kit incompatibil</translation>
     </message>
@@ -19026,37 +22019,39 @@ Please close all running instances of your application before starting a build.<
         <translation>Unele configurații nu au putut fi copiate.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Nu s-au putut încărca kiturile într-un timp rezonabil.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Selectați directorul rădăcină</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>Proiectul „%1” a fost configurat pentru kitul „%2” cu id %3, care nu mai există. Puteți crea un kit nou sau puteți copia pașii kitului dispărut într-un alt kit în modul %4.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Proiecte</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>Nu s-a putut găsi niciun fișier qml_*.qm la „%1”</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Nume.</translation>
@@ -19098,13 +22093,13 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Calea completă de construcție a configurației de construcție activă.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabile în mediul de construcție activ.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Numele configurației de rulare activă.</translation>
@@ -19116,45 +22111,61 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Executabil al configurației de rulare active.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Variabile din mediul configurației de rulare active.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Directorul de lucru al configurației de rulare active.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Comentarii de documentare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>indisponibil</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Mediul proiectului</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Implementează configurația</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>Executabil SSH:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>Executabil Ninja:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK-uri</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Deschide...</translation>
@@ -19175,7 +22186,12 @@ Please close all running instances of your application before starting a build.<
         <translation>&amp;Începeți depanarea</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>&amp;Analizare</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Deschide cu</translation>
     </message>
@@ -19185,12 +22201,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Proiect nou...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Încărcați proiectul...</translation>
+        <translation type="vanished">Încărcați proiectul...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Deschideți spațiul de lucru...</translation>
     </message>
@@ -19200,23 +22215,24 @@ Please close all running instances of your application before starting a build.<
         <translation>Deschideți fișierul</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Run Environment</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>P&amp;roiecte recente</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Închide proiectul</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>Î&amp;nchideți proiectul „%1”</translation>
     </message>
@@ -19227,12 +22243,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>Închideți toate fișierele din proiectul „%1”</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>Î&amp;nchide proiectul</translation>
     </message>
@@ -19261,12 +22277,12 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Reconstrui</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Reconstruiți toate proiectele</translation>
     </message>
@@ -19336,12 +22352,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Reconstruiți proiectul pentru toate configurațiile</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Proiect curat</translation>
+        <translation type="vanished">Proiect curat</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Proiect curat pentru toate configurațiile</translation>
     </message>
@@ -19351,7 +22366,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Anulează construcția</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Construiți fără dependențe</translation>
@@ -19405,12 +22420,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>Închideți proiectul „%1”</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Închideți alte proiecte</translation>
     </message>
@@ -19446,7 +22461,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Șterge fișierul...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Setați ca Proiect activ</translation>
     </message>
@@ -19481,7 +22496,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Selector de kit de comutare rapidă</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Mediul de construcție actual</translation>
     </message>
@@ -19491,7 +22506,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Mediul de rulare curent</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Mediul de construcție activ al proiectului activ.</translation>
     </message>
@@ -19501,12 +22516,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Mediul de rulare activ al proiectului activ.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Încărcați proiectul</translation>
+        <translation type="vanished">Încărcați proiectul</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Deschideți spațiul de lucru</translation>
     </message>
@@ -19536,18 +22550,71 @@ Please close all running instances of your application before starting a build.<
         <translation>Doriți să anulați procesul de construire și să descărcați proiectul oricum?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>Dezinfectant</translation>
+        <translation type="vanished">Dezinfectant</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Probleme de gestionare a memoriei pe care le-a găsit dezinfectantul pentru adrese.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Deschide proiect...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Compilare proiect activ</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Curățare proiect activ</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Rulează proiectul activ</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Creare fișier antet</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Creare fișier sursă</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Editare configurație de compilare activă</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Probleme de gestionare a memoriei pe care le-a găsit dezinfectantul pentru adrese.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Editare configurație de rulare activă</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Deschide proiect</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Sarcinile mele</translation>
     </message>
@@ -19557,18 +22624,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Probleme dintr-un fișier cu listă de activități (.tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Probleme neacoperite de o categorie mai specializată.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Analizați rezultatul Build...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Proiect nou</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Proiectul nu a putut fi deschis</translation>
     </message>
@@ -19578,12 +22650,37 @@ Please close all running instances of your application before starting a build.<
         <translation>&lt;h3&gt;Proiect deja deschis&lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>Nu se poate deschide proiectul „%1”: modulul nu este încărcat.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Deschiderea eșuată a proiectului „%1”: niciun plugin nu poate deschide tipul de proiect „%2”.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>Următoarele fișiere nu au putut fi redenumite în sistemul de fișiere:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>Aceste fișiere au fost redenumite în sistemul de fișiere, dar fișierele de proiect nu au fost actualizate:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>Aceste fișiere au fost redenumite în sistemul de fișiere, dar structura proiectului nu a fost actualizată (context pierdut sau neacceptat):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Probleme la redenumire</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Ignorați toate erorile?</translation>
     </message>
@@ -19605,45 +22702,48 @@ Vrei să le ignori?</translation>
         <translation>Configurația care trebuia să ruleze nu mai este disponibilă.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Salvați întotdeauna fișierele înainte de a construi</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>Deschideți proiectul în „%1”</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>Deschideți proiectul „%1”</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Proiectul este deja deschis.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>Fișierul „%1” a fost redenumit „%2”, dar următoarele proiecte nu au putut fi schimbate automat: %3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Editarea proiectului a eșuat</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Următoarele proiecte nu au reușit să elimine automat fișierul: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>Crearea „%1” este dezactivată: %2&lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Niciun proiect încărcat.</translation>
@@ -19695,7 +22795,7 @@ Vrei să le ignori?</translation>
         <translation>Doriți să anulați procesul de construire și să închideți %1 oricum?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Niciun proiect activ.</translation>
     </message>
@@ -19725,23 +22825,23 @@ Vrei să le ignori?</translation>
         <translation>Nu se poate rula „%1”.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>O acțiune de execuție este deja programată pentru proiectul activ.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%1 în %2</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Fișier nou</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Subproiect nou</translation>
@@ -19772,15 +22872,28 @@ Vrei să le ignori?</translation>
         <translation>Adăugarea fișierelor la proiect a eșuat</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Deschiderea terminalului a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>Activare modul %1</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>Pluginul „%1” este necesar pentru a deschide proiecte de tipul „%2”. Doriți să îl activați acum?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Deschiderea eșuată a terminalului. 
+        <translation type="vanished">Deschiderea eșuată a terminalului. 
 %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Eliminați mai multe fișiere?</translation>
     </message>
@@ -19804,12 +22917,12 @@ Please try again.</source>
 Vă rugăm să încercați din nou.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>Nu s-a putut elimina fișierul „%1” din proiectul „%2”.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_copie</translation>
     </message>
@@ -19825,17 +22938,17 @@ Vă rugăm să încercați din nou.</translation>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Duplicarea fișierului a eșuat</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>Nu s-a copiat fișierul „%1” în „%2”: %3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Nu s-a putut adăuga fișierul nou „%1” la proiect.</translation>
     </message>
@@ -19860,36 +22973,32 @@ Vă rugăm să încercați din nou.</translation>
         <translation>Nu s-a putut șterge fișierul %1.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>Fișierul proiect %1 nu poate fi schimbat automat. 
+        <translation type="vanished">Fișierul proiect %1 nu poate fi schimbat automat. 
 
 Redenumiți oricum %2 în %3?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>Fișierul %1 a fost redenumit în %2, dar fișierul de proiect %3 nu a putut fi schimbat automat.</translation>
+        <translation type="vanished">Fișierul %1 a fost redenumit în %2, dar fișierul de proiect %3 nu a putut fi schimbat automat.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>Fișierul %1 nu a putut fi redenumit %2.</translation>
+        <translation type="vanished">Fișierul %1 nu a putut fi redenumit %2.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Nu se poate redenumi fișierul</translation>
+        <translation type="vanished">Nu se poate redenumi fișierul</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Localizează fișiere din toate directoarele de proiect. Adăugați „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a sări la numărul de linie dat. Adăugați un alt „+&lt;număr&gt;” sau „:&lt;număr&gt;” pentru a trece și la numărul coloanei.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Run Run Configuration</translation>
     </message>
@@ -19926,9 +23035,13 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Comută configurația de rulare activă a proiectului activ.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Detectat automat</translation>
+        <translation type="vanished">Detectat automat</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Gestionat automat</translation>
     </message>
     <message>
         <location line="+5" />
@@ -19936,110 +23049,177 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Gestionat automat de %1 sau de instalator.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>Manual</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>s</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>Cantitatea de secunde de așteptat între o „omorâre soft” și o „omorâre greu” a unei aplicații care rulează.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Directorul curent</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Director</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Închideți fișierele sursă împreună cu proiectul</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Salvați toate fișierele înainte de a construi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Întotdeauna implementați proiectul înainte de al rula</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Adăugați căi de căutare a bibliotecii de linkuri pentru a rula mediul</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Întrebați întotdeauna înainte de a opri aplicațiile</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Creați automat configurații de rulare adecvate</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Păstrează configurațiile de rulare sincronizate:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Dacă adăugarea, eliminarea sau editarea unei configurații de rulare într-o configurație de compilare trebuie să actualizeze corespunzător celelalte configurații de compilare.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Nu sincroniza</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Fiecare configurație de compilare are propriul set de configurații de rulare.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Sincronizează într-un singur kit</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>Configurațiile de compilare din același kit își mențin configurațiile de rulare sincronizate.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Sincronizează în toate kiturile</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Toate configurațiile de compilare dintr-un proiect își mențin configurațiile de rulare sincronizate, chiar și între kituri.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Listă clară de probleme la noua versiune</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Anulați din eroare la construirea tuturor proiectelor</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Începeți procesele de construcție cu prioritate scăzută</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Avertizați împotriva directoarelor de compilare cu spații sau caractere non-ASCII</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Unele instrumente de compilare vechi nu se ocupă bine de căile care conțin caractere „speciale”, cum ar fi spațiile, ceea ce poate duce la erori de construcție false.&lt;p&gt;Debifați această opțiune dacă nu lucrați cu astfel de instrumente.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Afișează doar kiturile potrivite</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Afișează doar kiturile active</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>Kituri afișate în modul „Proiecte”:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Nu construiți nimic</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Construiți întregul proiect</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Creați numai aplicația care urmează să fie rulată</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Compilare și rulare</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Toate</translation>
+        <translation type="vanished">Toate</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Același Proiect</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Același Proiect</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Toate</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20047,12 +23227,12 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Același director de compilare</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Aceeași aplicație</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Activat</translation>
     </message>
@@ -20067,32 +23247,30 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Dedus din proiect</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Folosiți jom în loc de nmake</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>Afișați toate kiturile în „Build &amp; Run” în modul „Proiecte”.</translation>
+        <translation type="vanished">Afișați toate kiturile în „Build &amp; Run” în modul „Proiecte”.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Afișați și kiturile inactive în „Build &amp; Run” în modul „Proiecte”.</translation>
+        <translation type="vanished">Afișați și kiturile inactive în „Build &amp; Run” în modul „Proiecte”.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Modificările mediului se aplică la configurațiile de rulare, dar nu și la configurațiile de compilare.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Mediul de aplicare:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Director de proiecte</translation>
     </message>
@@ -20107,33 +23285,39 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Construiți și alergați</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Construiți înainte de implementare:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Opriți aplicațiile înainte de a construi:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>Implicit pentru „Run în terminal”:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Timp de așteptat înainte de oprirea forțată a aplicațiilor:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>Construiți și rulați</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Proiect deschis oricum?</translation>
     </message>
@@ -20143,7 +23327,7 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Eșec de control al versiunii</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Nu a fost găsită nicio versiune</translation>
     </message>
@@ -20163,7 +23347,12 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Import Build</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (importat)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - temporar</translation>
     </message>
@@ -20173,12 +23362,27 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Kit importat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Încărcarea setărilor din „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Este un director, dar trebuie să fie un fișier.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Este un fișier, dar trebuie să fie un director.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Fără titlu</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Nu s-au restabilit fișierele de proiect</translation>
     </message>
@@ -20198,24 +23402,24 @@ Redenumiți oricum %2 în %3?</translation>
         <translation>Eliminați proiecte din sesiune</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Nu sunt activate kituri pentru acest proiect. Activați kiturile în modul „Proiecte”.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Redenumiți mai multe fișiere?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Doriți să redenumiți și aceste fișiere? 
 %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Alegeți Drop Action</translation>
     </message>
@@ -20297,17 +23501,22 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Proiect de actualizare a eșecului</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt;Avertisment:&lt;/b&gt; acest fișier este generat.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Avertisment:&lt;/b&gt; Acest fișier se află în directorul de compilare.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt;Avertisment:&lt;/b&gt; acest fișier se află în afara directorului proiectului.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Simplificați Arborele</translation>
     </message>
@@ -20352,7 +23561,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Sincronizați cu Editorul</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Arborele filtrului</translation>
     </message>
@@ -20367,7 +23576,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Alt+X</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Deschideți Sesiunea #%1</translation>
     </message>
@@ -20389,23 +23598,23 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>Deschide %1 „%2”</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>Deschideți %1 „%2” (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>sesiune</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (ultima sesiune)</translation>
     </message>
@@ -20415,39 +23624,39 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>%1 (sesiunea curentă)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Redenumiți</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Şterge</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>proiect</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Eliminați proiectul din proiectele recente</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Ștergeți lista proiectelor recente</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Sesiuni</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Utilizați expresii regulate</translation>
     </message>
@@ -20462,7 +23671,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Afișați linii care nu se potrivesc</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Proiectul a fost configurat pentru truse care nu mai există. Selectați una dintre următoarele opțiuni din meniul contextual pentru a restabili setările proiectului:</translation>
     </message>
@@ -20483,7 +23692,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Creați un kit nou</translation>
     </message>
@@ -20503,23 +23712,28 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Eliminați toate țintele dispărute</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Faceți clic pentru a activa ținta, faceți clic din nou pentru a o face activă</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Țintele dispărute</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Setările proiectului</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Importați versiunea existentă...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Selector de proiecte</translation>
     </message>
@@ -20529,44 +23743,44 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Proiect activ</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Gestionați kiturile...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Build System Output</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>Import Director</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>Fișierele sunt adăugate implicit proiectelor:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Niciuna&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Adăugați implicit&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>Adăugați la controlul &amp;versiunii:</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Adăugați ca subproiect la proiect:</translation>
     </message>
@@ -20576,17 +23790,17 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Adăugați la &amp;proiect:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>Un depozit de sistem de control al versiunilor nu a putut fi creat în „%1”.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Nu s-a putut adăuga „%1” la sistemul de control al versiunilor.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>Fișiere de adăugat:</translation>
     </message>
@@ -20596,7 +23810,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Fișierele care urmează să fie adăugate</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Elimina</translation>
@@ -20607,40 +23821,60 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Eliminați sarcina din lista de sarcini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Rulați Setări</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Variabile în mediul de rulare.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Directorul de lucru al configurației de rulare.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>Folosește &lt;a href=&quot;dummy&quot;&gt;setările globale&lt;/a&gt;</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Folosește setările globale</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Folosește setările globale</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Folosește setări personalizate</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Numele configurației de rulare.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>Configurația de rulare este executabilă.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Niciun sistem de construcție activ</translation>
+        <translation type="vanished">Niciun sistem de construcție activ</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>Rulați pe %{Device:Name}</translation>
     </message>
     <message>
@@ -20650,12 +23884,12 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>%1 (pe %{Device:Name})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>Terminal</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Rulați în terminal</translation>
     </message>
@@ -20665,33 +23899,33 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Director de lucru</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Selectați Director de lucru</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Resetați la valoarea implicită</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Argumente</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Argumente ale liniei de comandă:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Comutați modul cu mai multe linii.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Executabil</translation>
     </message>
@@ -20702,12 +23936,12 @@ Ce ar trebui să facă %1 acum?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Executabil:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Executabil alternativ pe dispozitiv:</translation>
     </message>
@@ -20717,7 +23951,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Utilizați în schimb această comandă</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Adăugați calea de căutare a bibliotecii de compilare la DYLD_LIBRARY_PATH și DYLD_FRAMEWORK_PATH</translation>
     </message>
@@ -20732,7 +23966,17 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Adăugați calea de căutare a bibliotecii de compilare la LD_LIBRARY_PATH</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Folosește platforma Qt VNC pentru afișare</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>Setează QT_QPA_PLATFORM=vnc, ceea ce redirecționează interfața aplicației Qt către un server VNC integrat. Conectați-vă la interfața aplicației cu un client VNC. Consultați ieșirea aplicației pentru detalii.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Utilizați versiunea de depanare a cadrelor (DYLD_IMAGE_SUFFIX=_debug)</translation>
     </message>
@@ -20742,7 +23986,32 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Rulați ca utilizator root</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Rulează ca utilizator</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Rulează ca utilizator:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>rădăcină</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Activare filtrare categorii de jurnalizare</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Activează filtrarea categoriilor de jurnalizare (QLoggingCategory) în Ieșirea aplicației. Necesită Qt 6.11 sau o versiune ulterioară.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Emulator</translation>
     </message>
@@ -20752,22 +24021,39 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Lansatorul:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>Folosește redirecționarea X11:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>Redirecționare X11:</translation>
+        <translation type="vanished">Redirecționare X11:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Redirecționați către afișajul local</translation>
+        <translation type="vanished">Redirecționați către afișajul local</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Starea de control neașteptată %1 când a pornit lucrătorul %2.</translation>
+        <translation type="vanished">Starea de control neașteptată %1 când a pornit lucrătorul %2.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Nu există producător de rețetă.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Colectorul de porturi nu poate fi folosit. Nu este setat niciun dispozitiv.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Nu s-au găsit porturi libere.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; încă rulează.&lt;center/&gt;&lt;center&gt;Forțați să se închidă?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -20787,108 +24073,114 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>&amp;Continuați să alergați</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>Se oprește forțat procesul...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Nu se poate prelua rezultatul de depanare.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>Se solicită oprirea procesului...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>Procesul nu s-a încheiat în mod neașteptat.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Conexiune pierdută?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Utilizatorul a cerut oprire. Se închide...</translation>
+        <translation type="vanished">Utilizatorul a cerut oprire. Se închide...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Procesul de la distanță nu s-a încheiat la timp. S-a pierdut conexiunea?</translation>
+        <translation type="vanished">Procesul de la distanță nu s-a încheiat la timp. S-a pierdut conexiunea?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Nu se poate rula: nu a fost dată nicio comandă.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1 a ieșit cu codul %2</translation>
+        <translation type="vanished">%1 a ieșit cu codul %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 s-a prăbușit.</translation>
+        <translation type="vanished">%1 s-a prăbușit.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Procesul s-a încheiat cu forță.</translation>
+        <translation type="vanished">Procesul s-a încheiat cu forță.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Începând %1...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Mediu:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Nu este specificat niciun executabil.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Procesul nu a pornit.</translation>
+        <translation type="vanished">Procesul nu a pornit.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>A apărut o eroare necunoscută în proces.</translation>
+        <translation type="vanished">A apărut o eroare necunoscută în proces.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Fie programul invocat „%1” lipsește, fie este posibil să aveți permisiuni insuficiente pentru a invoca programul.</translation>
+        <translation type="vanished">Fie programul invocat „%1” lipsește, fie este posibil să aveți permisiuni insuficiente pentru a invoca programul.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Procesul s-a prăbușit.</translation>
+        <translation type="vanished">Procesul s-a prăbușit.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>A apărut o eroare la încercarea de a scrie în proces. De exemplu, este posibil ca procesul să nu ruleze sau să-și fi închis canalul de intrare.</translation>
+        <translation type="vanished">A apărut o eroare la încercarea de a scrie în proces. De exemplu, este posibil ca procesul să nu ruleze sau să-și fi închis canalul de intrare.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>A apărut o eroare la încercarea de a citi din proces. De exemplu, este posibil ca procesul să nu ruleze.</translation>
+        <translation type="vanished">A apărut o eroare la încercarea de a citi din proces. De exemplu, este posibil ca procesul să nu ruleze.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Eliminați tot</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Desfăşurare</translation>
+        <translation type="vanished">Desfăşurare</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Metodă:</translation>
+        <translation type="vanished">Metodă:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Rulați configurația:</translation>
+        <translation type="vanished">Rulați configurația:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Eliminați configurația de rulare?</translation>
     </message>
@@ -20898,7 +24190,7 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Chiar doriți să ștergeți configurația de rulare &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Eliminați configurațiile de rulare?</translation>
     </message>
@@ -20908,17 +24200,37 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Chiar doriți să ștergeți toate configurațiile de rulare?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nume nou pentru configurația de rulare &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Anulați Build &amp;&amp; Remove Deploy Configuration</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Clonare din configurația de rulare</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Nu există alte configurații de rulare.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Setări de implementare</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Configurația de implementare activă:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Eliminați configurația de implementare %1?</translation>
     </message>
@@ -20943,12 +24255,27 @@ Ce ar trebui să facă %1 acum?</translation>
         <translation>Chiar doriți să ștergeți configurația de implementare &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Nume nou pentru configurația de implementare &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Eliminare în masă...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Clonare în aceasta...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Configurația de rulare activă:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Director sursă:</translation>
     </message>
@@ -21000,12 +24327,12 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Editați fișierele</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Adăugați un director existent</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Afișați în Editor</translation>
     </message>
@@ -21015,12 +24342,14 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Afișați locația sarcinii într-un editor.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Fișiere</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Importați proiectul existent</translation>
     </message>
@@ -21030,12 +24359,13 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Numele și locația proiectului</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Nume proiect:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Selectarea fișierului</translation>
     </message>
@@ -21050,68 +24380,63 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Importă proiecte existente care nu utilizează qmake, CMake, Qbs, Meson sau Autotools.&lt;p&gt;Acest lucru creează un fișier de proiect care vă permite să utilizați %1 ca editor de cod și ca lansator pentru instrumente de depanare și analiză. Dacă doriți să construiți proiectul, poate fi necesar să editați fișierul proiect generat.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Sistem de construcție necunoscut „%1”</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Setări țintă</translation>
+        <translation type="vanished">Setări țintă</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Directorul sursă</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Construiți sistemul</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Numele proiectului curent</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Configurați proiectul</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Afișați toate kiturile</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Ascundeți kiturile inactive</translation>
+        <translation type="vanished">Ascundeți kiturile inactive</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>Niciun kit definit în acest proiect.</translation>
+        <translation type="vanished">Niciun kit definit în acest proiect.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Configurați proiectul</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kitul nu este potrivit pentru proiect</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Faceți clic pentru a activa</translation>
+        <translation type="vanished">Faceți clic pentru a activa</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>Activați kitul pentru proiectul „%1”</translation>
     </message>
@@ -21156,12 +24481,11 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Copiați pașii dintr-un alt kit...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Activați Kitul</translation>
+        <translation type="vanished">Activați Kitul</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Nu s-au găsit kituri adecvate.</translation>
     </message>
@@ -21181,18 +24505,23 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Tastați pentru a filtra kiturile după nume...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Ascundere kituri nepotrivite</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Selectați kituri pentru proiectul dvs</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Următoarele kituri pot fi utilizate pentru proiectul &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt;Eroare:&lt;/b&gt;</translation>
@@ -21204,12 +24533,12 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>&lt;b&gt;Avertisment:&lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1 are nevoie de un compilator configurat pentru a construi. Configurați un compilator în opțiunile kit-ului.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Eroare:</translation>
     </message>
@@ -21219,7 +24548,7 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Avertizare:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Nu se poate deschide fișierul de activitate %1: %2</translation>
     </message>
@@ -21244,7 +24573,7 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Opriți monitorizarea fișierelor de sarcini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>Eroare Taskhub</translation>
     </message>
@@ -21254,42 +24583,46 @@ Aceste fișiere sunt păstrate.</numerusform>
         <translation>Avertisment Taskhub</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Problemă de construcție</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Probleme</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Afișați avertismente</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Creare probleme din ieșirea unei compilări externe...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Filtrați după categorii</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>nu este la zi</translation>
+        <translation type="vanished">nu este la zi</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Acest lanț de instrumente este invalid.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>Setări de detectare automată a lanțului de instrumente</translation>
     </message>
@@ -21308,43 +24641,59 @@ Unul pentru ținta x86_64 nativă și unul pentru ținta x86 simplă.
 Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți fără a utiliza un compilator încrucișat dedicat.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Tip</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Limbă</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Re-detecta</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Setări de detectare automată...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Compilatoare duplicate detectate</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Nu toate compilatoarele sunt configurate corect.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Următorul compilator a fost deja configurat:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Nu a fost configurat din nou.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Următoarele compilatoare au fost deja configurate:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;Nu au fost configurate din nou.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Compilatoare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Adnota</translation>
     </message>
@@ -21360,6 +24709,9 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>Anula</translation>
     </message>
@@ -21369,12 +24721,26 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Se așteaptă oprirea aplicațiilor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Puteți edita această configurație în fișierul .qtcreator/project.json.</translation>
+        <translation type="vanished">Puteți edita această configurație în fișierul .qtcreator/project.json.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Clonați configurația pentru a o modifica. Sau faceți modificările în fișierul .qtcreator/project.json.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Manager de spațiu de lucru</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>Copie a %1</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Excludeți din proiect</translation>
     </message>
@@ -21384,23 +24750,293 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Rescanați spațiul de lucru</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>Înlocuirea semnăturii</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>Xcodebuild a eșuat.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Copiere</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1 la „%2”</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>Calea &amp;compilatorului</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>Calea compilatorului %1</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Furnizează manual</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Copierea setărilor utilizatorului pentru proiect din „%1” în noua locație implicită „%2” a eșuat: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>„%1” nu a putut fi deschis pentru scriere: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>Configurație Windows</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Toate modificările de pe această pagină au efect imediat.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>Selectați calea de descărcare pentru NuGet și Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>Selectați calea de descărcare</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>Selectați calea NuGet.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>Selectați fișierul nuget.exe</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>Descărcare NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>Descarcă automat NuGet.
+
+NuGet este necesar pentru descărcarea Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Selectați calea Windows App SDK.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Descărcare Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Descarcă automat Windows App SDK cu NuGet.
+
+Dacă descărcarea automată eșuează, Qt Creator propune deschiderea adresei de descărcare
+în browserul de sistem pentru descărcare manuală.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>Calea de descărcare există.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>Calea NuGet există.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>Calea Windows App SDK există.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>Setările Windows App SDK sunt în regulă.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>Setările Windows App SDK conțin erori.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Selectați calea Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>Cale de descărcare</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>Locație de descărcare:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>Locația NuGet:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>Setări Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>Locația Windows App SDK:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>Descărcarea NuGet a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Deschideți URL-ul NuGet pentru descărcare manuală?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>Deschide URL-ul de descărcare</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>Se descarcă</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>Se descarcă NuGet...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>URL-ul de descărcare SDK Tools este gol.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>Au apărut erori SSL, descărcarea a fost întreruptă.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>Descărcarea NuGet de la adresa %1 a eșuat: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>Descărcarea de la %1 a fost redirecționată.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>Calea de descărcare selectată (%1) pentru NuGet există deja.\nSelectați o altă cale.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>Calea de descărcare nu este configurată.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Se descarcă Windows App SDK</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK este deja configurat.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Se descarcă Windows App SDK...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>Descărcarea Windows App SDK a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Deschideți URL-ul Windows App SDK pentru descărcare manuală?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Cerințe de actualizare</translation>
     </message>
@@ -21431,22 +25067,25 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Instalați pachete</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>Instalarea „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>Instalarea „%1” a fost anulată după expirarea timpului.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>Instalarea „%1” a fost anulată de către utilizator.</translation>
+        <translation type="vanished">Instalarea „%1” a fost anulată de către utilizator.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>Instalarea „%1” a eșuat cu codul de ieșire %2.</translation>
+        <translation type="vanished">Instalarea „%1” a eșuat cu codul de ieșire %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>REPL</translation>
@@ -21482,7 +25121,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Deschideți Python interactiv. Fie importând nimic, importând fișierul curent sau importând totul (*) din fișierul curent.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Niciun Python selectat</translation>
     </message>
@@ -21497,14 +25136,18 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Gestionați interpreții Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Nici unul</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Editor Python</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Nici unul</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
@@ -21514,9 +25157,13 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Interpretul folosit pentru proiectele bazate pe Python.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Fără configurare Python.</translation>
+        <translation type="vanished">Fără configurare Python.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Nu este configurat Python.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -21529,7 +25176,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Python „%1” nu este executabil.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python „%1” nu conține un pip utilizabil. pip este necesar pentru a instala pachetele Python din Indexul pachetelor Python, cum ar fi PySide și serverul de limbaj Python. Pentru a utiliza oricare dintre aceste funcționalități, asigurați-vă că pip este instalat pentru acel Python.</translation>
     </message>
@@ -21549,12 +25196,12 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Calea către Python Interpreter</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>Server de limbaj Python (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>Instalați serverul de limbaj Python (PyLS) pentru %1 (%2). Serverul de limbaj oferă completare și adnotare specifice Python.</translation>
     </message>
@@ -21569,32 +25216,42 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Actualizați serverul de limbaj Python (PyLS) pentru %1 (%2).</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Actualizați întotdeauna</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Actualizare</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Nu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Probleme analizate din rezultatul Python runtime.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>Niciun interpret Python setat pentru kitul „%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 Faceți clic aici pentru a instala %1 (necesită pip)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Ieșire tamponată</translation>
     </message>
@@ -21609,8 +25266,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Scenariul:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>Piton:</translation>
     </message>
@@ -21620,19 +25276,17 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Rulați %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Executabil</translation>
+        <translation type="vanished">Executabil</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Executabilul este gol.</translation>
     </message>
@@ -21647,56 +25301,106 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>„%1” nu este un fișier executabil.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Adăuga</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Şterge</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Setarea implicită</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp;Generează kit</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Curăță</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Eliminați toți interpretii Python fără un executabil valid.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Crearea venv a eșuat:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Crearea venv s-a încheiat anormal:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Crearea venv nu a putut fi pornită:\n%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Crearea venv a fost anulată.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>S-a găsit „%1” (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Se elimină Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Interpreți</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Pluginuri:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Executabil:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Utilizați Python Language Server</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>Pentru o listă completă a opțiunilor disponibile, consultați [documentația de configurare a serverului Python LSP](%1).</translation>
     </message>
@@ -21706,12 +25410,12 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Avansat</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Configurare server de limbă</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>Interpret Python:</translation>
     </message>
@@ -21731,46 +25435,67 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Crea</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Creați Python venv</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Se caută binare Python...</translation>
+        <translation type="vanished">Se caută binare Python...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>S-a găsit „%1” (%2)</translation>
+        <translation type="vanished">S-a găsit „%1” (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Eliminarea Python</translation>
+        <translation type="vanished">Eliminarea Python</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>„date” unei pagini de expert Python așteaptă o hartă cu „articole” care să conțină o listă de obiecte.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Un element de date din pagina expertului Python se așteaptă la un câmp „trKey” care conține șirul vizibil al interfeței de utilizare pentru acea versiune Python și un câmp „valoare” care conține un obiect cu un câmp „PySideVersion” utilizat pentru instrucțiunile de import în fișierele Python.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>Versiunea PySide:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Eroare de analiză: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Eroare de tip: „%1” trebuie să fie de tip „%2”, nu „%3”.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Eroare de nod lipsă: tabelul „%1” trebuie să conțină un nod „%2”.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>Nodul „%1” este gol.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>Fișierul „%1” nu există.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>Eroare XML pe linia %1, coloana %2: %3</translation>
@@ -21784,7 +25509,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Mutați fila la stânga</translation>
     </message>
@@ -21802,15 +25527,391 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Se conectează...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>„%1” nu este executabil.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Pornirea shell-ului a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Procesul shell s-a încheiat cu codul %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>Procesul s-a încheiat cu codul: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Mărire: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Copiere</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Lipește</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Golire shell</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Selectează tot</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Ștergeți selecția</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>Mută cursorul un cuvânt la stânga</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>Mută cursorul un cuvânt la dreapta</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Ștergere cuvânt la stânga</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Ștergere linie la stânga</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Închidere filă</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Închidere toate filele</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Închidere celelalte file</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Shell</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Configurare...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Inserare variabilă macro</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Shell nou</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Creează un shell nou.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Închidere shell</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Închide shell-ul curent.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Shell-ul următor</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Shell-ul anterior</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Dispozitive</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Valoarea curentă a %{%1}: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Prompt de comandă</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>Culoarea folosită pentru %1.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Deschiderea fișierului a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>Eroare de analiză JSON: „%1”, la poziția: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Nu s-au găsit culori.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Format de culoare invalid.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Format necunoscut de schemă de culori.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Folosește terminalul intern</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>Folosește terminalul intern când „Rulează în terminal” este activat și pentru „Deschide terminalul aici”.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Familie:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Fontul folosit în terminal.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Dimensiune:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Dimensiunea fontului folosit în terminal (în puncte).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Mărire:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Scalează dimensiunea fontului. Ctrl+rotița mouse-ului mărește sau micșorează un singur shell pe durata sesiunii.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Spațiere între rânduri:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Înălțimea fiecărui rând, ca procent din cea a fontului.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Permitere cursor intermitent</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>Permite cursorului să clipească.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Calea shell-ului:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Executabilul shell-ului de pornit.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Argumentele shell-ului:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Argumentele care se transmit shell-ului.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Trimite tasta Escape către terminal</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>Trimite tasta Escape către terminal când este apăsată, în loc să închidă terminalul.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>Trimite Esc către terminal în loc de %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Apăsați %1 pentru a trimite Esc către terminal.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Blocare scurtături în terminal</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Împiedică scurtăturile Qt Creator să interfereze cu terminalul.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>Scurtăturile %1 sunt blocate când focalizarea este în terminal.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>Scurtăturile %1 au prioritate.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Semnal sonor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Face terminalul să emită un sunet când primește un caracter de clopoțel.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Activare urmărire mouse</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Activează urmărirea mouse-ului în terminal.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Activare reflow live (experimental)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Încadrează și rearanjează textul la redimensionarea terminalului. Rețineți că nu funcționează corect cu toate shell-urile și prompturile.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>General</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Font</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Shell implicit</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>Shell-ul pe care îl deschide butonul +. Automat îl alege pe cel mai bun instalat și urmărește modificările din ce este instalat.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Automat (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>derivat din QObject</translation>
@@ -21876,7 +25977,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>(nume tip CITEȘTE nume SCRIE setNume NOTIFICARE numeSchimbat FINAL)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>cu tinte</translation>
@@ -21900,7 +26001,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>cu tinta</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>Caz de testare QuickTest</translation>
@@ -21954,18 +26055,17 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>exemplu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
         <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+148" />
         <source>Sort Alphabetically</source>
         <translation>Sortați alfabetic</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Intern</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Căutând</translation>
     </message>
@@ -21988,7 +26088,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Se anulează înlocuirea.</translation>
     </message>
@@ -21999,46 +26099,38 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Global</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+206" />
+        <location line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+134" />
         <source>Behavior</source>
         <translation>Comportament</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+175" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+109" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+342" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+803" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+556" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-462" />
         <source>Text Editor</source>
         <translation>Editor de text</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+75" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+28" />
         <source>Never</source>
         <translation>Nu</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-238" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Întotdeauna</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>În spațiul alb de frunte</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Nici unul</translation>
+        <translation type="vanished">Nici unul</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Urmează liniuțele anterioare</translation>
     </message>
@@ -22048,7 +26140,7 @@ Activați acest lucru dacă intenționați să creați binare x86 pe 32 de biți
         <translation>Desfaceri</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -22078,33 +26170,44 @@ Specifică modul în care backspace interacționează cu indentarea.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="-17" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Activați &amp;indentarea automată</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Tasta Tab efectuează indentare automată:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+27" />
         <source>Prefer single line comments</source>
         <translation>Preferați comentariile pe o singură linie</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+124" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Automat</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>At Line Start</source>
         <translation>La Start Line</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>După Whitespace</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Specifică unde trebuie poziționate comentariile pe o singură linie.</translation>
     </message>
@@ -22124,12 +26227,12 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>%1: comentariul este plasat după spațiile albe principale.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Poziția preferată pentru comentariu:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+76" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Omiteți spațiile albe curate pentru tipurile de fișiere:</translation>
     </message>
@@ -22139,12 +26242,12 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Pentru modelele de fișiere enumerate, nu tăiați spațiile albe din urmă.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Listă de modele de fișiere care țin cont de caractere metalice, separate prin virgule sau punct și virgulă.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-19" />
         <source>&amp;Ensure newline at end of file</source>
         <translation>&amp;Asigurați-vă noua linie la sfârșitul fișierului</translation>
     </message>
@@ -22154,7 +26257,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Scrie întotdeauna un caracter newline la sfârșitul fișierului.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-20" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Curățați spațiul alb</translation>
     </message>
@@ -22164,27 +26267,27 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Elimină spațiile albe din urmă la salvare.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+24" />
         <source>Clean indentation</source>
         <translation>Crestatură curată</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Corectează spațiul alb de început în funcție de setările filei.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-16" />
         <source>In entire &amp;document</source>
         <translation>În întregul &amp;document</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Curăță spațiile albe din întregul document, în loc să nu fie doar pentru părțile modificate.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Adăugați dacă codificarea este UTF-8</translation>
     </message>
@@ -22199,7 +26302,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Ștergeți întotdeauna</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -22216,27 +26319,27 @@ Specifică modul în care backspace interacționează cu indentarea.
 &lt;p&gt;Această setare &lt;b&gt;nu&lt;/b&gt; influențează utilizarea BOM-urilor UTF-16 și UTF-32.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Ascundeți cursorul mouse-ului în timp ce introduceți text</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable &amp;mouse navigation</source>
         <translation>Activați navigarea cu &amp;mouse</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>&amp;Activați zoomul cu rotița de defilare</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Activați carcasa pe&amp;ntru cămilă încorporată și navigarea</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Activați schimbarea selecției inteligente</translation>
     </message>
@@ -22246,7 +26349,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Utilizarea acțiunilor Select Block Up / Down va oferi acum selecții mai inteligente.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Afișați sfaturi de ajutor folosind comanda rapidă de la tastatură (Alt)</translation>
     </message>
@@ -22256,22 +26359,22 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Apăsarea Alt afișează ajutor sensibil la context sau introduceți informații sub formă de sfaturi.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>Pe mouseover</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>Pe Shift+Mouseover</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>Tastarea</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Curățări la salvare</translation>
     </message>
@@ -22281,47 +26384,46 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Acțiuni de curățare care sunt efectuate automat chiar înainte ca fișierul să fie salvat pe disc.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Codificarea fișierelor</translation>
+        <translation type="vanished">Codificarea fișierelor</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>Mouse și tastatură</translation>
+        <translation type="vanished">Mouse și tastatură</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Indentație înapoi:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Codificare implicită:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>BOM UTF-8:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Terminații implicite ale liniilor:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Afișați sfaturi de ajutor folosind mouse-ul:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Afișează ajutor sensibil la context sau informații de tip la trecerea mouse-ului.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Afișează ajutor sensibil la context sau informații de tip pe Shift+Mouseover.</translation>
     </message>
@@ -22332,9 +26434,9 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Marcaj</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Marcaje</translation>
     </message>
@@ -22344,17 +26446,17 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Localizează marcaje. Filtrați după numele fișierului, după textul de pe linia marcajului sau după textul notei marcajului.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Deplasați-vă în sus</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Mutați în jos</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Edita</translation>
     </message>
@@ -22369,7 +26471,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Eliminați tot</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Eliminați toate marcajele</translation>
     </message>
@@ -22380,14 +26482,14 @@ Specifică modul în care backspace interacționează cu indentarea.
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Editați marcajul</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Comutați Marcaj</translation>
     </message>
@@ -22417,7 +26519,27 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Următorul marcaj în document</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Sortează după numele fișierelor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Notă text:</translation>
     </message>
@@ -22428,23 +26550,29 @@ Specifică modul în care backspace interacționează cu indentarea.
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%1 din %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Toate modificările de mai jos au efect imediat.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Editați conținutul previzualizării pentru a vedea cum sunt aplicate setările curente fragmentelor de cod personalizate. Modificările din previzualizare nu afectează setările curente.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+39" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-664" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+36" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+139" />
         <source>Copy...</source>
         <translation>Copie...</translation>
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-235" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+326" />
         <source>Remove</source>
         <translation>Elimina</translation>
     </message>
@@ -22459,12 +26587,17 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Import...</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Configurația selectată este doar în citire. Copiați configurația pentru a o edita.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Setări personalizate:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Copiați stilul codului</translation>
     </message>
@@ -22491,7 +26624,7 @@ Specifică modul în care backspace interacționează cu indentarea.
     <message>
         <location line="+6" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+2" />
-        <location line="+460" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Şterge</translation>
     </message>
@@ -22503,22 +26636,22 @@ Specifică modul în care backspace interacționează cu indentarea.
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Stiluri de cod (*.xml);;Toate fișierele (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>Nu se poate importa stilul codului din „%1”.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Export cod stil</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [proxy: %2]</translation>
     </message>
@@ -22533,7 +26666,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>%1 [personalizabil]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Nu este un fișier de schemă de culori.</translation>
     </message>
@@ -22592,8 +26725,8 @@ Specifică modul în care backspace interacționează cu indentarea.
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-429" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-454" />
+        <location line="+651" />
         <source>Font</source>
         <translation>Font</translation>
     </message>
@@ -22618,7 +26751,7 @@ Specifică modul în care backspace interacționează cu indentarea.
         <translation>Culoare:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Fără subliniere</translation>
     </message>
@@ -22697,12 +26830,12 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
 dacă comentariul începe cu „/*!” sau „//!”.</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Comentarii de documentare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-10" />
         <source>Full</source>
         <translation>Deplin</translation>
     </message>
@@ -22732,32 +26865,32 @@ dacă comentariul începe cu „/*!” sau „//!”.</translation>
         <translation>Activați finalizarea:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>Timeout în ms:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Pragul de caractere:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>&amp;Prefix comun de completare automată</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Inserează prefixul comun al elementelor de completare disponibile.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Împărțiți automat șiruri</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22766,57 +26899,63 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Introduceți paranteze de deschidere sau de închidere</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Introduceți citatul de închidere</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Selectarea textului înconjurat cu paranteze</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Când tastați o paranteză potrivită și există o selecție de text, în loc să eliminați selecția, o înconjoară cu caracterele corespunzătoare.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>Introduceți &amp;spațiu după numele funcției</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Înconjurați selecția de text cu ghilimele</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-41" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Niciunul</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Când tastați un citat potrivit și există o selecție de text, în loc să eliminați selecția, o înconjoară cu caracterele corespunzătoare.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Animați textul inserat automat</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Afișați un indiciu vizual atunci când, de exemplu, o acoladă sau un citat este inserat automat de editor.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Evidențiați textul inserat automat</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Omiteți caracterul inserat automat când introduceți text</translation>
     </message>
@@ -22826,17 +26965,17 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Omiteți caracterul inserat automat dacă este reintrodus manual după finalizare sau apăsând Tab.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Eliminați textul inserat automat pe backspace</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Eliminați caracterul inserat automat dacă declanșatorul este șters prin backspace după finalizare.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Suprascrieți semnele de punctuație de închidere</translation>
     </message>
@@ -22846,37 +26985,41 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Suprascrie automat parantezele de închidere și ghilimele.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>Inser&amp;ați automat caractere care se potrivesc</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+48" />
         <source>Completion</source>
         <translation>Finalizare</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="-295" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+47" />
         <source>Enable text &amp;wrapping</source>
         <translation>&amp;Activați împachetarea textului</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Setați &lt;a href=&quot;font zoom&quot;&gt;spațierea liniilor fontului&lt;/a&gt; la 100% pentru a activa opțiunea de împachetare a textului.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Afișează &amp;marja din dreapta la coloană:</translation>
+        <translation type="vanished">Afișează &amp;marja din dreapta la coloană:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Afișare &amp;marginea dreaptă după coloana:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Nuanțați întreaga zonă a marginii</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Utilizați marja specifică contextului</translation>
     </message>
@@ -22886,82 +27029,92 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Dacă este disponibilă, utilizați o marjă diferită. De exemplu, ColumnLimit din pluginul ClangFormat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Lățimea conținutului editorului:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% înseamnă că se folosește întreaga lățime a ferestrei editorului pentru afișarea textului (implicit).&lt;br&gt;50% înseamnă că se folosește jumătate din lățimea editorului pentru afișarea textului.&lt;br&gt;Cele 50% rămase se împart în marginile stângă și dreaptă, centrând conținutul.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Animați parantezele care se potrivesc</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Evidențiați rezultatele căutării pe bara de derulare</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-107" />
         <source>Display line &amp;numbers</source>
         <translation>Afișează &amp;numerele de linii</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+115" />
         <source>Animate navigation within file</source>
         <translation>Animați navigarea în fișier</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-86" />
         <source>Highlight current &amp;line</source>
         <translation>Evidențiați &amp;linia curentă</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+8" />
         <source>Highlight &amp;blocks</source>
         <translation>Evidențiați &amp;blocuri</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Mark &amp;text changes</source>
         <translation>Marcați modificările &amp;textului</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>Îndoiți automat primul &amp;comentare</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>A&amp;fișează și marcatoare pliabile</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+44" />
         <source>Center &amp;cursor on scroll</source>
         <translation>&amp;Centrați cursorul pe derulare</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Vizualizați indentarea</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Afișează sfârșitul liniei fișierului</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Afișează codificarea fișierului</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Deschideți întotdeauna linkurile într-o altă diviziune</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Evidențiați parantezele care se potrivesc</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-37" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Vizualizați spațiul alb</translation>
     </message>
@@ -22971,7 +27124,12 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Afișează file și spații.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Afișare setări tab</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Evidențiați selecția</translation>
     </message>
@@ -22981,7 +27139,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Adaugă un fundal colorat și un marcator la bara de defilare la aparițiile textului selectat.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>Lângă conținutul editorului</translation>
     </message>
@@ -22996,43 +27154,48 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
         <translation>Aliniat în partea dreaptă</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>Între rânduri</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Activare minihartă</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Adnotări de linie</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>Marja</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>Ambalaj</translation>
     </message>
     <message>
         <location line="+7" />
-        <location line="+201" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Afişa</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>Windows (CRLF)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Fișier curent</translation>
     </message>
@@ -23050,7 +27213,7 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Vă rugăm să rețineți că aceasta caută numai fișierele care au fost salvate pe disc.</translation>
     </message>
@@ -23109,12 +27272,12 @@ Filter: %2
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>Variabilă neutilizată</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-691" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-714" />
         <source>Antialias</source>
         <translation>Antialias</translation>
     </message>
@@ -23147,7 +27310,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Schema de culori pentru tema „%1”</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+25" />
         <source>Family:</source>
         <translation>Familial:</translation>
     </message>
@@ -23167,7 +27330,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Spațiere între linii:</translation>
     </message>
     <message>
-        <location line="+369" />
+        <location line="+382" />
         <source>Copy Color Scheme</source>
         <translation>Copiați schema de culori</translation>
     </message>
@@ -23183,7 +27346,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>%1 (copie)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Ștergeți schema de culori</translation>
     </message>
@@ -23193,14 +27356,14 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Sigur doriți să ștergeți definitiv această schemă de culori?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Importați schema de culori</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Schema de culori (*.xml);;Toate fișierele (*)</translation>
     </message>
@@ -23230,7 +27393,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Nu se poate crea fișierul temporar „%1”: %2.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+12" />
         <source>Failed to format: %1.</source>
         <translation>Formatarea eșuată: %1.</translation>
     </message>
@@ -23240,12 +27403,12 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Nu se poate citi fișierul „%1”: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>Nu se poate apela %1 sau a apărut o altă eroare. Timpul de expirare a fost atins la formatarea fișierului %2.</translation>
     </message>
     <message>
-        <location line="+150" />
+        <location line="+148" />
         <source>Error in text formatting: %1</source>
         <translation>Eroare la formatarea textului: %1</translation>
     </message>
@@ -23265,28 +27428,27 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Fișierul a fost modificat.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Actualizări de evidențiere: gata</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Actualizări de evidențiere:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Actualizări de evidențiere: începe</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definițiile de evidențiere sunt furnizate de motorul &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Definițiile de evidențiere sunt furnizate de motorul &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3787" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4055" />
         <source>Download Definitions</source>
         <translation>Descărcați definiții</translation>
     </message>
@@ -23296,7 +27458,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Descărcați și actualizați fișierele de definiție de sintaxă existente.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Reîncărcați definițiile</translation>
     </message>
@@ -23306,7 +27468,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Reîncărcați fișierele de definiție modificate extern.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Resetați definițiile memorate</translation>
     </message>
@@ -23316,37 +27478,50 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Resetați definițiile memorate pentru fișierele care pot fi asociate cu mai multe definiții de evidențiere.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>Sintaxă Highlight Definition Files</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Omite verificarea actualizărilor pentru fișierele care se potrivesc cu:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Omite evidențierea sintaxei pentru fișierele care se potrivesc cu:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Definițiile de evidențiere sunt furnizate de motorul %1.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>Evidențiați fișiere de definiție de utilizator</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Modele de fișiere ignorate:</translation>
+        <translation type="vanished">Modele de fișiere ignorate:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>Descărcarea s-a terminat</translation>
+        <translation type="vanished">Descărcarea s-a terminat</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Evidențiator generic</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>Editor JSON</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Linie în documentul curent</translation>
     </message>
@@ -23361,7 +27536,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>&lt;linie&gt;:&lt;coloană&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>Linia %1, coloana %2</translation>
     </message>
@@ -23376,7 +27551,12 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Coloana %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Editor Markdown</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Accent</translation>
     </message>
@@ -23421,17 +27601,17 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Arborele filtrelor</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location line="+136" />
         <source>Outline</source>
         <translation>Contur</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Refactorizarea nu poate fi aplicată.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Delimitator așteptat după ID-ul mangler.</translation>
     </message>
@@ -23451,15 +27631,15 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Nu se poate crea directorul de fragmente de utilizator %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-195" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-200" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Eroare</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Nu este un declanșator valid. Un declanșator valid poate conține numai litere, cifre sau caractere de subliniere, în cazul în care primul caracter este limitat la literă sau litere de subliniere.</translation>
     </message>
@@ -23479,7 +27659,7 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Eroare la revenirea fragmentului.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Reveniți încorporat</translation>
     </message>
@@ -23489,17 +27669,17 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Grup:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Adăuga</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Restaurați elementele încorporate eliminate</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Resetați toate</translation>
     </message>
@@ -23514,12 +27694,12 @@ O valoare mai mică de 100% poate duce la suprapunere și nealiniere a graficelo
         <translation>Niciun fragment selectat.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Fragmente</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -23572,22 +27752,48 @@ Influențează indentarea liniilor de continuare.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>&amp;Dimensiune implicită a indentării:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Aliniere linii de continuare:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>File și Indentare</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Indentarea codului este configurată în setările &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; și &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt;.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Setarea de indentare a editorului de text este utilizată numai pentru fișierele fără cod. Consultați setările stilului de codare rapidă C++ și Qt pentru a configura indentarea pentru fișierele de cod.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3688" />
+        <source>Auto detect</source>
+        <translation>Detectare automată</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1 încearcă să detecteze setările de indentare pe baza conținutului fișierului. Dacă detecția eșuează, se vor folosi setările de mai jos.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Politica implicită pentru tab:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Numai spații</translation>
     </message>
@@ -23597,9 +27803,8 @@ Influențează indentarea liniilor de continuare.
         <translation>Numai file</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Amestecat</translation>
+        <translation type="vanished">Amestecat</translation>
     </message>
     <message>
         <location line="+2" />
@@ -23607,12 +27812,11 @@ Influențează indentarea liniilor de continuare.
         <translation>Dimensiunea ta&amp;b:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Dimensiune indentare:</translation>
+        <translation type="vanished">&amp;Dimensiune indentare:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Deloc</translation>
     </message>
@@ -23627,29 +27831,31 @@ Influențează indentarea liniilor de continuare.
         <translation>Cu indentare obișnuită</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Dimensiunea filei terminalului serial:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Politica filelor:</translation>
+        <translation type="vanished">Politica filelor:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Diferență față de fișierul curent</translation>
+        <translation type="vanished">Diferență față de fișierul curent</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Deschiderea fișierului</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3592" />
         <source>Cursors: %2</source>
-        <translation>Cursore: %2</translation>
+        <translation type="vanished">Cursore: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-165" />
+        <source>Cursors: %1</source>
+        <translation>Cursoare: %1</translation>
     </message>
     <message>
         <location line="+7" />
@@ -23688,6 +27894,11 @@ Influențează indentarea liniilor de continuare.
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Linii selectate:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Poziția în document:</translation>
     </message>
@@ -23697,7 +27908,50 @@ Influențează indentarea liniilor de continuare.
         <translation>Ancoră:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Spații</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>File</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Setări de indentare: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Setări document</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Setări file</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Dimensiune indentare</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Dimensiune tabulator</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Setări globale...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>Terminații de linie Unix (LF)</translation>
     </message>
@@ -23707,17 +27961,17 @@ Influențează indentarea liniilor de continuare.
         <translation>Terminații de linie Windows (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Alte adnotări</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>Imprimați documentul</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Eroare de fișier</translation>
     </message>
@@ -23732,7 +27986,7 @@ Influențează indentarea liniilor de continuare.
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Textul este prea mare pentru a fi afișat (%1 MB).</translation>
     </message>
@@ -23747,37 +28001,89 @@ Influențează indentarea liniilor de continuare.
         <translation>Selectați Codificare</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Eroare de analizare a fragmentului</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>O definiție de evidențiere nu a fost găsită pentru acest fișier. Doriți să descărcați fișiere suplimentare cu definiții de evidențiere?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>S-au găsit mai multe definiții de evidențiere pentru acest fișier. Care ar trebui folosit pentru a evidenția acest fișier?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Ține minte alegerea mea</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+318" />
         <source>Go to line number...</source>
         <translation>Accesați numărul rândului...</translation>
     </message>
     <message>
-        <location line="+3660" />
+        <location line="+444" />
+        <source>Apply</source>
+        <translation>Aplicare</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Aplică sugestia curentă.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Aplicare un cuvânt</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Aplică un cuvânt din sugestia curentă.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Aplicare linie</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Aplică o linie din sugestia curentă.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+434" />
+        <source>Fold Recursively</source>
+        <translation>Restrângere recursivă</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Restrângere tot</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Desfă recursiv</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Desfă tot</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Zoom: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Ștergeți BOM UTF-8 la Salvare</translation>
     </message>
@@ -23787,18 +28093,18 @@ Influențează indentarea liniilor de continuare.
         <translation>Adăugați UTF-8 BOM la Salvare</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Nu s-a putut găsi definiția.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-434" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-404" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Text</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Textul selectat din documentul curent.</translation>
     </message>
@@ -24248,59 +28554,55 @@ Influențează indentarea liniilor de continuare.
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-2997" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Îndoiți</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Unfold</source>
         <translation>Desfășurați</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+1" />
         <source>Ctrl+&gt;</source>
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+9" />
         <source>Toggle &amp;Fold All</source>
         <translation>&amp;Comutați și îndoiți toate</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Increase Font Size</source>
-        <translation>Măriți dimensiunea fontului</translation>
+        <translation type="vanished">Măriți dimensiunea fontului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Reduceți dimensiunea fontului</translation>
+        <translation type="vanished">Reduceți dimensiunea fontului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset Font Size</source>
-        <translation>Resetați dimensiunea fontului</translation>
+        <translation type="vanished">Resetați dimensiunea fontului</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
+        <translation type="vanished">Ctrl+0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24418,7 +28720,7 @@ Influențează indentarea liniilor de continuare.
         <translation>Accesați Cuvântul următor (cazul Camel) cu selecție</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Text</translation>
     </message>
@@ -24931,6 +29233,16 @@ Pentru a stila operatorii definiți de utilizator, utilizați Operator supraînc
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Atribut</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Atribute.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>Comentariu</translation>
     </message>
@@ -25177,6 +29489,26 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Culoarea sublinierii contextelor diagnosticelor de avertizare.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Informații</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Culoarea de subliniere a diagnosticelor informative.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Context informativ</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Culoarea de subliniere a contextelor diagnosticelor informative.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Argument de ieșire</translation>
@@ -25289,7 +29621,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Validarea manuală implicită a acoperirii</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>Afișați adnotările inline pentru %1</translation>
     </message>
@@ -25318,16 +29650,48 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>Reîncarcă ierarhia tipurilor pentru simbolul de sub cursor.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Editor text simplu</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Selectează sugestia anterioară</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Selectează sugestia următoare</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Resetați</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Resetează la valoarea implicită.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Resetează la valoarea implicită</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Apăsați și țineți apăsat pentru a reveni la valoarea implicită.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Permite</translation>
     </message>
@@ -25342,18 +29706,23 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Implicit</translation>
     </message>
     <message>
-        <location line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location line="+128" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Adăuga</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Elimina</translation>
+    </message>
+    <message>
+        <location line="+602" />
+        <source>Change...</source>
+        <translation>Modificare...</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/basetreeview.cpp" line="+559" />
@@ -25361,7 +29730,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Afișați coloana %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>Nu &amp;întreaba din nou</translation>
     </message>
@@ -25371,12 +29740,12 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu &amp;arata din nou</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Nu a fost specificat niciun executabil clangd.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Nu s-a putut prelua versiunea clangd: Ieșire clangd neașteptată.</translation>
     </message>
@@ -25386,17 +29755,17 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Versiunea clangd este %1, dar este necesar %2 sau mai mare.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Numele clasei nu trebuie să conțină delimitatori de spațiu de nume.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Vă rugăm să introduceți un nume de clasă.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Numele clasei conține caractere nevalide.</translation>
     </message>
@@ -25406,25 +29775,21 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Detalii</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+124" />
-        <location line="+409" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+145" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>Calea „%1” există, dar nu este un director care poate fi scris.</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+706" />
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>Nu s-a putut crea directorul „%1”.</translation>
+        <translation type="vanished">Nu s-a putut crea directorul „%1”.</translation>
     </message>
     <message>
-        <location line="-365" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>copyFile nu este implementat pentru „%1”.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>Nu se poate copia din „%1”, nu este un director.</translation>
     </message>
@@ -25434,7 +29799,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu se poate copia „%1” în „%2”: %3</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+46" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Nu s-a putut copia recursiv din „%1” în „%2” în timp ce încercam să creez arhiva tar din sursă: %3</translation>
     </message>
@@ -25444,68 +29809,166 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu s-a putut copia recursiv de la „%1” la „%2” în timp ce încercați să extrageți arhiva tar către țintă: %3</translation>
     </message>
     <message>
-        <location line="+51" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>fileContents nu este implementat pentru „%1”.</translation>
+        <translation type="vanished">fileContents nu este implementat pentru „%1”.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">writeFileContents nu este implementat pentru „%1”.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">createTempFile nu este implementat pentru „%1”.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">ceasul nu este implementat.</translation>
+    </message>
+    <message>
+        <location line="-227" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>Funcția „%1” nu este implementată pentru „%2”.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>„createSymLink” nu este implementat pentru „%1”.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>„renameFile” nu este implementat pentru „%1”.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>Urmărirea „%1” a eșuat, nu există.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>Urmărirea „%1” a eșuat.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>Eliminarea observatorului pentru „%1” a eșuat, nu a fost găsit.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>writeFileContents nu este implementat pentru „%1”.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>Eliminarea observatorului pentru „%1” a eșuat.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>createTempFile nu este implementat pentru „%1”.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>Fișierul „%1” nu a putut fi creat.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>ceasul nu este implementat.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>Directorul „%1” nu a putut fi creat.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>Se refuză eliminarea directorului standard „%1”.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Refuzul de a elimina directorul rădăcină.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Refuzul de a elimina directorul dvs. de acasă.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>Nu s-a putut elimina directorul „%1”.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>Nu s-a putut elimina fișierul „%1”.</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+406" />
+        <location line="+12" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>Nu s-a putut copia fișierul „%1” în „%2”: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() a fost apelat neașteptat pe o platformă non-Windows.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Crearea legăturii simbolice către „%1” în „%2” a eșuat: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>Redenumirea fișierului „%1” în „%2” a eșuat: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>Fișierul „%1” nu există.</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Could not open File &quot;%1&quot;.</source>
-        <translation>Nu s-a putut deschide Fișierul „%1”.</translation>
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>Fișierul „%1” nu a putut fi deschis.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>Directorul temporar nu a putut fi creat în „%1” (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>Permisiunile pentru „%1” nu au putut fi modificate.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>Determinarea dacă „%1” și „%2” se referă la același fișier a eșuat: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>Comanda „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>Crearea legăturii simbolice pentru fișierul „%1” în „%2” a eșuat: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>Crearea directorului temporar „%1” a eșuat (prea multe încercări).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>Crearea fișierelor temporare „%1” a eșuat (prea multe încercări).</translation>
+    </message>
+    <message>
+        <source>Could not open File &quot;%1&quot;.</source>
+        <translation type="vanished">Nu s-a putut deschide Fișierul „%1”.</translation>
+    </message>
+    <message>
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>Nu se poate citi „%1”: %2</translation>
     </message>
@@ -25529,69 +29992,59 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu s-a putut crea fișierul temporar în „%1” (%2).</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Dispozitivul nu este conectat</translation>
+        <translation type="vanished">Dispozitivul nu este conectat</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>Citirea fișierului „%1” eșuată: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>Nu a reușit la scrierea fișierului „%1”: %2</translation>
+        <translation type="vanished">Nu a reușit la scrierea fișierului „%1”: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>Nu s-a creat fișierul temporar „%1”: %2</translation>
+        <translation type="vanished">Nu s-a creat fișierul temporar „%1”: %2</translation>
     </message>
     <message>
-        <location line="+30" />
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Nu s-a creat fișierul temporar „%1” (prea multe încercări).</translation>
+        <translation type="vanished">Nu s-a creat fișierul temporar „%1” (prea multe încercări).</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Procesul nu a pornit.</translation>
+        <translation type="vanished">Procesul nu a pornit.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Nu s-a instalat scriptul shell: %1 
+        <translation type="vanished">Nu s-a instalat scriptul shell: %1 
 %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>Timeout în timp ce încercați să verificați pentru %1.</translation>
+        <translation type="vanished">Timeout în timp ce încercați să verificați pentru %1.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>Comanda „%1” nu a fost găsită.</translation>
+        <translation type="vanished">Comanda „%1” nu a fost găsită.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Instalarea scriptului a fost forțată să eșueze.</translation>
+        <translation type="vanished">Instalarea scriptului a fost forțată să eșueze.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Timeout în așteptarea instalării scriptului shell.</translation>
+        <translation type="vanished">Timeout în așteptarea instalării scriptului shell.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Nu s-a instalat scriptul shell: %1</translation>
+        <translation type="vanished">Nu s-a instalat scriptul shell: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Şterge</translation>
     </message>
@@ -25650,7 +30103,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>tabelul de șiruri pare să fie la 0x%1</translation>
     </message>
@@ -25660,17 +30113,17 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>numele secțiunii %1 din %2 în spatele sfârșitului fișierului</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Editați mediul</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;UNSET&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Variabilă</translation>
     </message>
@@ -25686,12 +30139,12 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Nu s-a pornit procesul terminal: „%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>Filtra</translation>
     </message>
@@ -25701,7 +30154,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Text clar</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Widget central</translation>
     </message>
@@ -25711,34 +30164,34 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Resetați la aspectul implicit</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+209" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+223" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>Numele este gol.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Numele conține spațiu alb.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Caracter nevalid „%1”.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Caractere nevalide „%1”.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Numele se potrivește cu dispozitivul MS Windows (COM, AU, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT 9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>Este necesară extensia de fișier %1:</translation>
     </message>
@@ -25748,7 +30201,37 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Sunt necesare extensiile de fișier %1:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Eroare internă DeviceFileAccess: watch() nu a returnat un rezultat.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>Directorul temporar nu a fost găsit pe dispozitivul %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Fișierul temporar nu a putut fi creat: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Directorul temporar nu a putut fi creat: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Nu este setat niciun hook de dispozitiv.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>Calea la distanță „%1” nu poate fi accesată.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%1 pe %2</translation>
@@ -25760,7 +30243,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>%1 %2 pe %3</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Eroare la încercarea de a copia fișierul: %1</translation>
     </message>
@@ -25775,12 +30258,22 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu s-au putut seta permisiunile pentru „%1”</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>Nu se poate crea legătura simbolică către „%1” în „%2”: căile nu se referă la același dispozitiv.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>Mutarea %1 în %2 a eșuat. Eliminarea fișierului sursă a eșuat: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>Nu există un set de cârlige pentru dispozitiv „localSource”.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: anulat. %n apariții găsite în %2 fișiere.</numerusform>
@@ -25798,7 +30291,7 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>Mode&amp;l de fișier:</translation>
     </message>
@@ -25823,66 +30316,58 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Fișierele cu numele fișierului sau calea completă a fișierului care se potrivesc cu orice filtru sunt excluse.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Copierea fișierului eșuată.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Citirea fișierului eșuată.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Nu a reușit la scrierea fișierului.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Computerul meu</translation>
+        <translation type="vanished">Computerul meu</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>Calculator</translation>
+        <translation type="vanished">Calculator</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>Nume</translation>
+        <translation type="vanished">Nume</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Dimensiune</translation>
+        <translation type="vanished">Dimensiune</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Fel</translation>
+        <translation type="vanished">Fel</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Tip</translation>
+        <translation type="vanished">Tip</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Data modificării</translation>
+        <translation type="vanished">Data modificării</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="-617" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Eroare de fișier</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>Nu se poate scrie fișierul %1: %2</translation>
     </message>
@@ -25892,12 +30377,12 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu se poate scrie fișierul %1. Disc plin?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: Este un nume de fișier rezervat pe Windows. Nu se poate salva.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>Nu se poate suprascrie fișierul %1: %2</translation>
     </message>
@@ -25907,13 +30392,13 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nu se poate crea fișierul %1: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>Nu se poate crea fișierul temporar în %1: %2</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Nu se poate crea fișierul temporar %1: %2</translation>
     </message>
@@ -25928,9 +30413,24 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Suprascrieți fișierul existent „%1”?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>Nu s-a putut copia fișierul „%1” în „%2”.</translation>
+    </message>
+    <message>
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>Crearea directorului „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>Fișierul %1 nu există.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>Configurarea bufferului temporar în „%1” a eșuat.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/filewizardpage.cpp" line="+48" />
@@ -25944,38 +30444,37 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Cale:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-173" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-199" />
         <source>Location</source>
         <translation>Locaţie</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Sufixul implicit dacă nu specificați în mod explicit o extensie de fișier este „.%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>Nu se poate crea context OpenGL.</translation>
+        <translation type="vanished">Nu se poate crea context OpenGL.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Afișați detalii</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Nu mai afișa</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Aproape</translation>
     </message>
@@ -26025,44 +30524,36 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>Nu s-a pornit lansatorul de proces la „%1”: %2</translation>
+        <translation type="vanished">Nu s-a pornit lansatorul de proces la „%1”: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>Lansatorul de proces s-a închis în mod neașteptat: %1</translation>
+        <translation type="vanished">Lansatorul de proces s-a închis în mod neașteptat: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>Eroare de soclu al lansatorului de proces.</translation>
+        <translation type="vanished">Eroare de soclu al lansatorului de proces.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Eroare internă de soclu: %1</translation>
+        <translation type="vanished">Eroare internă de soclu: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Eroare de soclu: %1</translation>
+        <translation type="vanished">Eroare de soclu: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Eroare de protocol intern: dimensiunea pachetului nevalidă %1.</translation>
+        <translation type="vanished">Eroare de protocol intern: dimensiunea pachetului nevalidă %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Eroare de protocol intern: tip de pachet nevalid %1.</translation>
+        <translation type="vanished">Eroare de protocol intern: tip de pachet nevalid %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Priza de lansare s-a închis în mod neașteptat.</translation>
+        <translation type="vanished">Priza de lansare s-a închis în mod neașteptat.</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/lua.cpp" line="+25" />
@@ -26070,12 +30561,17 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>Nicio interfață Lua setată</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Eroare de recursivitate infinită</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>Extinderea macrourilor din argumentele procesului a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Calea completă, inclusiv numele fișierului.</translation>
     </message>
@@ -26105,22 +30601,26 @@ Nu se va aplica spațiilor albe din comentarii și șiruri.</translation>
         <translation>%1: Numele de bază al fișierului fără cale și sufix.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: numele fișierului din directorul părinte.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Variabile globale</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Accesați variabilele de mediu.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>Minimizați</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -26129,7 +30629,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Introduceți o variabilă de mediu pe linie. 
+        <translation type="vanished">Introduceți o variabilă de mediu pe linie. 
 Pentru a seta sau modifica o variabilă, utilizați VARIABLE=VALUE. 
 Pentru a dezactiva o variabilă, prefixați această linie cu „#”. 
 Pentru a adăuga la o variabilă, utilizați VARIABIL+=VALOARE. 
@@ -26139,7 +30639,39 @@ Pentru a șterge o variabilă, puneți numele acesteia pe o linie fără nimic a
 Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>Fișierul poate fi un fișier text simplu care conține perechi cheie/valoare,\nsau un script evaluat de shell-ul sistemului.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Introduceți o variabilă de mediu pe linie.
+Pentru a seta sau modifica o variabilă, folosiți VARIABILA=VALOARE.
+Pentru a dezactiva o variabilă, prefixați linia cu „#”.
+Pentru a adăuga la sfârșitul unei variabile, folosiți VARIABILA+=VALOARE.
+Pentru a adăuga la începutul unei variabile, folosiți VARIABILA=+VALOARE.
+Variabilele existente pot fi referite într-o VALOARE cu ${ALTA}.
+Pentru a șterge o variabilă, scrieți numele ei pe o linie singură.
+Liniile care încep cu „##” sunt tratate drept comentarii.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Obținere variabile din fișier text sau script shell:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;BINE</translation>
     </message>
@@ -26149,12 +30681,12 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>&amp;Anula</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Afișați/Ascundeți parola</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Utilizator:</translation>
     </message>
@@ -26164,7 +30696,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Parolă:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Local</translation>
     </message>
@@ -26174,7 +30706,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Telecomanda</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Alege...</translation>
     </message>
@@ -26184,25 +30716,25 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Răsfoiește...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Alegeți Director</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Alegeți Executable</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Alegeți Fișier</translation>
     </message>
     <message>
-        <location line="+95" />
-        <location line="+74" />
+        <location line="+100" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Calea nu trebuie să fie goală.</translation>
     </message>
@@ -26246,12 +30778,17 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Nu se poate executa „%1”.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+24" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>Calea „%1” sa extins la un șir gol.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Alternative</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Introduce...</translation>
     </message>
@@ -26266,22 +30803,27 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Clar</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Introducere și locația proiectului</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Utilizați ca locație implicită a proiectului</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>Introduceți numele proiectului</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Adăugare la proiect:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Name:</source>
         <translation>Nume:</translation>
     </message>
@@ -26291,7 +30833,12 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Creați în:</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+94" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Expertul de proiect ales nu acceptă sistemul de compilare.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>Directorul „%1” va fi creat.</translation>
     </message>
@@ -26306,22 +30853,22 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Un fișier cu acest nume există deja.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Numele proiectului este nevalid.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Caracter nevalid „.”.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>S-a găsit caracterul nevalid „%1”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Eroare în linia de comandă.</translation>
     </message>
@@ -26331,17 +30878,22 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Programul „%1” nu există sau nu este executabil.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>Programul „%1” nu a putut fi găsit.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Nu a fost specificat niciun executabil.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>Nu s-a putut crea interfața de proces pentru „%1”.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>Procesul nu răspunde</translation>
     </message>
@@ -26361,7 +30913,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Terminați procesul?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>Comanda „%1” s-a terminat cu succes.</translation>
     </message>
@@ -26386,7 +30938,22 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Comanda „%1” a fost anulată după %2 ms.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Ieșirea de eroare standard a fost:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Ieșirea standard a fost:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Fie programul invocat lipsește, fie nu aveți permisiuni suficiente pentru a-l invoca.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Fișier schimbat</translation>
     </message>
@@ -26412,18 +30979,18 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Comportamentul implicit poate fi setat în Editare &gt; Preferințe &gt; Mediu &gt; Sistem.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Aproape</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Nu la Toate &amp;&amp;&amp;Dif</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>Fișierul a fost eliminat</translation>
     </message>
@@ -26448,7 +31015,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>&amp;Salva</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Eliminați fișierul</translation>
     </message>
@@ -26478,7 +31045,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Dosar de eliminat:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Nu s-a putut citi fișierul</translation>
     </message>
@@ -26499,18 +31066,18 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Nu era nimic de scris.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Nu au fost găsite setări valide</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nu a fost găsit niciun fișier de setări valid.&lt;/p&gt;&lt;p&gt;Toate fișierele de setări găsite în directorul „%1” nu erau potrivite pentru versiunea curentă a %2, de exemplu, deoarece au fost scrise de o versiune incompatibilă a %2 sau pentru că a fost folosită o cale de setări diferită.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Nu a fost găsit niciun fișier de setări valid.&lt;/p&gt;&lt;p&gt;Toate fișierele de setări găsite în directorul „%1” au fost fie prea noi, fie prea vechi pentru a fi citite.&lt;/p&gt;</translation>
     </message>
@@ -26535,7 +31102,7 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>&lt;p&gt;Nu a fost găsit niciun fișier de setări creat de această instanță de %1.&lt;/p&gt;&lt;p&gt;Ați lucrat cu acest proiect pe o altă mașină sau ați folosit altă cale de setări înainte?&lt;/p&gt;&lt;p&gt;Totuși doriți să încărcați fișierul de setări „%2”?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>Fișier cu setări de îmbinare neacceptat</translation>
     </message>
@@ -26545,27 +31112,23 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>„%1” nu este acceptat de %2. Vrei să încerci să-l încarci oricum?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Redenumiți</translation>
+        <translation type="vanished">Redenumiți</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>Chiar doriți să ștergeți configurația &lt;b&gt;%1&lt;/b&gt;?</translation>
+        <translation type="vanished">Chiar doriți să ștergeți configurația &lt;b&gt;%1&lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>Nume nou pentru configurația &lt;b&gt;%1&lt;/b&gt;:</translation>
+        <translation type="vanished">Nume nou pentru configurația &lt;b&gt;%1&lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Redenumiți...</translation>
+        <translation type="vanished">Redenumiți...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Timp scurs: %1.</translation>
     </message>
@@ -26611,16 +31174,24 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
     </message>
     <message>
         <location line="+6" />
-        <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Apăsați &lt;RETURN&gt; pentru a închide această fereastră...</translation>
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+Procesul s-a încheiat cu codul %1.
+Apăsați Return pentru a închide această fereastră...</translation>
     </message>
     <message>
-        <location line="+103" />
+        <source>Press &lt;RETURN&gt; to close this window...</source>
+        <translation type="vanished">Apăsați &lt;RETURN&gt; pentru a închide această fereastră...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Procesul terminalului a eșuat. Stut-ul a ieșit înainte ca cel inferior să fie pornit.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Nu se pot seta permisiunile pentru directorul temporar „%1”: %2</translation>
     </message>
@@ -26630,80 +31201,73 @@ Rândurile care încep cu „##” vor fi tratate ca comentarii.</translation>
         <translation>Nu se poate crea soclul „%1”: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Din memorie.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>A fost întâlnită o eroare de codificare.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Formatul de fișier nu este acceptat.</translation>
+        <translation type="vanished">Formatul de fișier nu este acceptat.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>Nu s-a putut găsi niciun executabil de dezarhivat în PATH (%1).</translation>
+        <translation type="vanished">Nu s-a putut găsi niciun executabil de dezarhivat în PATH (%1).</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Niciun fișier sursă setat.</translation>
+        <translation type="vanished">Niciun fișier sursă setat.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Niciun director de destinație setat.</translation>
+        <translation type="vanished">Niciun director de destinație setat.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Nu s-a putut deschide fișierul de ieșire.</translation>
+        <translation type="vanished">Nu s-a putut deschide fișierul de ieșire.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Nu s-a putut scrie fișierul de ieșire.</translation>
+        <translation type="vanished">Nu s-a putut scrie fișierul de ieșire.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Comanda a eșuat.</translation>
+        <translation type="vanished">Comanda a eșuat.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>Se execută %1 
+        <translation type="vanished">Se execută %1 
 în „%2”.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabilă&lt;/th&gt;&lt;th&gt;Se extinde în&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directorul fișierului curent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;numele fișierului (cu calea completă)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;numele fișierului (fără cale)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variabilă&lt;/th&gt;&lt;th&gt;Se extinde în&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directorul fișierului curent&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;numele fișierului (cu calea completă)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;numele fișierului (fără cale)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Inserați variabila</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Valoarea curentă: %1</translation>
+        <translation type="vanished">Valoarea curentă: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>Valoarea curentă a %{%1}: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Inserați o valoare neexpandită</translation>
     </message>
@@ -26719,17 +31283,17 @@ in &quot;%2&quot;.
         <translation>Inserați o valoare extinsă</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Selectați o variabilă de inserat.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Variabile</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
@@ -26739,9 +31303,269 @@ in &quot;%2&quot;.
         <translation>&lt;VARIABILE&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Comanda nevalidă</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1 folosește %2 pentru a colecta rapoarte de blocare și a le trimite la Sentry spre procesare. %2 poate captura conținut arbitrar din memoria procesului blocat, inclusiv informații sensibile ale utilizatorului, adrese URL și orice alt conținut încredințat de utilizatori aplicației %1. Rapoartele de blocare colectate sunt folosite exclusiv pentru remedierea erorilor.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Mai multe informații:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>Prezentare generală %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>Politica de securitate %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Nu există modificări de aplicat.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Obținerea variabilelor de mediu de pe dispozitiv a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>Obținerea variabilelor de mediu din „%1” a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>Obținerea variabilelor de mediu din „%1” a eșuat: ieșire neașteptată</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (implicit)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Clonare</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Setează ca implicit</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Restaurează</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Anulare</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>&amp;Refacere</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>Decu&amp;pare</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>&amp;Copiere</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Copiere &amp;locație link</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Lipire</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Selectează tot</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Inserare caracter de control Unicode</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Ieșirea de eroare de la distanță a fost: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>„%1” nu există.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>„find” nu este un executabil existent</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>Rularea %1 a eșuat: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>„ps” nu este un executabil existent.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>„pidin” nu este un executabil existent.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>Rularea ps a eșuat: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>Rularea pidin a eșuat: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>Verificarea /proc a eșuat: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Crearea instantaneului a eșuat: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>Anulare</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Eroare internă: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Eroare de neimplementare: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Eroare necunoscută: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Motiv necunoscut.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Deschide linia de comandă aici</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Deschide terminalul aici</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Emulatorul de terminal folosit pentru deschiderea unui terminal.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Comandă:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>Argumente de linie de comandă folosite pentru „%1”.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>„%1” argumente:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>Argumente de linie de comandă folosite pentru „Rulare în terminal”.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>Argumente „Rulare în terminal”:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Rulează în terminal</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Personalizare...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Presetări</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Selectați emulatorul de terminal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Nu este o arhivă.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>Anulat.</translation>
     </message>
 </context>
 <context>
@@ -26751,6 +31575,14 @@ in &quot;%2&quot;.
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Eroare la salvarea parserelor: %1</translation>
     </message>
 </context>
 </TS>

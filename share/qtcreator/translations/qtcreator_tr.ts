@@ -2,9 +2,17 @@
 <!DOCTYPE TS>
 <TS version="2.1" language="tr_TR">
 <context>
+    <name>CloseButton</name>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="+218" />
+        <source>Close Tab</source>
+        <translation>Sekmeyi Kapat</translation>
+    </message>
+</context>
+<context>
     <name>Language</name>
     <message>
-        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+112" />
+        <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definition_p.h" line="+124" />
         <source>None</source>
         <translation>Hiçbiri</translation>
     </message>
@@ -12,7 +20,7 @@
 <context>
     <name>OpenMV::Internal::OpenMVProfileView</name>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+840" />
+        <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="+842" />
         <source>Copy</source>
         <translation>Kopyala</translation>
     </message>
@@ -96,62 +104,50 @@
 <context>
     <name>OpenMVPluginHistogram</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.ui" />
         <source>000</source>
         <translation>000</translation>
     </message>
     <message>
-        <location/>
         <source>Max</source>
         <translation>maks.</translation>
     </message>
     <message>
-        <location/>
         <source>Median</source>
         <translation>Medyan</translation>
     </message>
     <message>
-        <location/>
         <source>Mode</source>
         <translation>mod</translation>
     </message>
     <message>
-        <location/>
         <source>LQ</source>
         <translation>LQ</translation>
     </message>
     <message>
-        <location/>
         <source>UQ</source>
         <translation>UQ</translation>
     </message>
     <message>
-        <location/>
         <source>StDev</source>
         <translation>StDev</translation>
     </message>
     <message>
-        <location/>
         <source>Min</source>
         <translation>dak.</translation>
     </message>
     <message>
-        <location/>
         <source>Mean</source>
         <translation>Anlam</translation>
     </message>
     <message>
-        <location/>
         <source>R</source>
         <translation>R</translation>
     </message>
     <message>
-        <location/>
         <source>G</source>
         <translation>G</translation>
     </message>
     <message>
-        <location/>
         <source>B</source>
         <translation>B</translation>
     </message>
@@ -174,7 +170,7 @@
 <context>
     <name>QDockWidget</name>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+219" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+244" />
         <source>Float</source>
         <translation>Batmadan yüzmek</translation>
     </message>
@@ -195,6 +191,62 @@
     </message>
 </context>
 <context>
+    <name>QKeychain::DeletePasswordJobPrivate</name>
+    <message>
+        <location filename="../../../src/libs/3rdparty/qtkeychain/qtkeychain/keychain_win.cpp" line="+228" />
+        <source>Password entry not found</source>
+        <translation>Parola girdisi bulunamadı</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Veri şifresi çözülemedi</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::ReadPasswordJobPrivate</name>
+    <message>
+        <location line="-128" />
+        <source>Password entry not found</source>
+        <translation>Parola girdisi bulunamadı</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Could not decrypt data</source>
+        <translation>Veri şifresi çözülemedi</translation>
+    </message>
+    <message>
+        <location line="+24" />
+        <location line="+121" />
+        <source>Could not decrypt data: %1</source>
+        <translation>Veri şifresi çözülemedi: %1</translation>
+    </message>
+</context>
+<context>
+    <name>QKeychain::WritePasswordJobPrivate</name>
+    <message>
+        <location line="-86" />
+        <location line="+97" />
+        <source>Encryption failed: %1</source>
+        <translation>Şifreleme başarısız oldu: %1</translation>
+    </message>
+    <message>
+        <location line="-90" />
+        <source>Credential size exceeds maximum size of %1: %2</source>
+        <translation>Kimlik bilgisi boyutu en büyük boyutu aşıyor (%1): %2</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>Credential key exceeds maximum size of %1</source>
+        <translation>Kimlik bilgisi anahtarı en büyük boyutu aşıyor: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Writing credentials failed: %1</source>
+        <translation>Kimlik bilgilerini yazma başarısız oldu: %1</translation>
+    </message>
+</context>
+<context>
     <name>QObject</name>
     <message>
         <location filename="../../../src/libs/3rdparty/syntax-highlighting/src/lib/definitiondownloader.cpp" line="+64" />
@@ -203,16 +255,26 @@
     </message>
     <message>
         <location line="+14" />
-        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
-        <translation>&apos;%1&apos; için yeni sözdizimi tanımı indiriliyor...</translation>
+        <source>Downloading new syntax definition for &apos;%1&apos;…</source>
+        <comment>@info</comment>
+        <translation>&apos;%1&apos; için yeni sözdizimi tanımı indiriliyor…</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
-        <translation>&apos;%1&apos; için sözdizimi tanımı %2 sürümüne güncelleniyor...</translation>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2…</source>
+        <comment>@info</comment>
+        <translation>&apos;%1&apos; için sözdizimi tanımı %2 sürümüne güncelleniyor…</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1358" />
+        <source>Downloading new syntax definition for &apos;%1&apos;...</source>
+        <translation type="vanished">&apos;%1&apos; için yeni sözdizimi tanımı indiriliyor...</translation>
+    </message>
+    <message>
+        <source>Updating syntax definition for &apos;%1&apos; to version %2...</source>
+        <translation type="vanished">&apos;%1&apos; için sözdizimi tanımı %2 sürümüne güncelleniyor...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+1430" />
         <source>Copy/Convert Python File</source>
         <translation>Python dosyasını kopyala/dönüştür</translation>
     </message>
@@ -242,6 +304,79 @@
         <location line="+19" />
         <source>Convert Model</source>
         <translation>Model Dönüştür</translation>
+    </message>
+</context>
+<context>
+    <name>QUnicodeControlCharacterMenu</name>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="+3480" />
+        <source>LRM Left-to-right mark</source>
+        <translation>LRM Soldan sağa işareti</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLM Right-to-left mark</source>
+        <translation>RLM Sağdan sola işareti</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWJ Zero width joiner</source>
+        <translation>ZWJ Sıfır genişlikli birleştirici</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWNJ Zero width non-joiner</source>
+        <translation>ZWNJ Sıfır genişlikli birleştirmeyen</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>ZWSP Zero width space</source>
+        <translation>ZWSP Sıfır genişlikli boşluk</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRE Start of left-to-right embedding</source>
+        <translation>LRE Soldan sağa gömmenin başlangıcı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLE Start of right-to-left embedding</source>
+        <translation>RLE Sağdan sola gömmenin başlangıcı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRO Start of left-to-right override</source>
+        <translation>LRO Soldan sağa geçersiz kılmanın başlangıcı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLO Start of right-to-left override</source>
+        <translation>RLO Sağdan sola geçersiz kılmanın başlangıcı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDF Pop directional formatting</source>
+        <translation>PDF Yön biçimlendirmesini sonlandır</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>LRI Left-to-right isolate</source>
+        <translation>LRI Soldan sağa yalıtım</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>RLI Right-to-left isolate</source>
+        <translation>RLI Sağdan sola yalıtım</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>FSI First strong isolate</source>
+        <translation>FSI İlk güçlü yalıtım</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PDI Pop directional isolate</source>
+        <translation>PDI Yön yalıtımını sonlandır</translation>
     </message>
 </context>
 <context>
@@ -384,47 +519,692 @@
     </message>
 </context>
 <context>
-    <name>QtC::BinEditor</name>
+    <name>QtC::AcpClient</name>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+230" />
-        <source>Cannot open %1: %2</source>
-        <translation>%1 açılamıyor: %2</translation>
+        <location filename="../../../src/plugins/acpclient/acpchatcontroller.cpp" line="+96" />
+        <source>This agent is no longer available. Choose an agent to start a new chat.</source>
+        <translation>Bu aracı artık kullanılamıyor. Yeni sohbet başlatmak için bir aracı seçin.</translation>
+    </message>
+    <message>
+        <location line="+128" />
+        <source>Session error: %1</source>
+        <translation>Oturum hatası: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session error: invalid response.</source>
+        <translation>Oturum hatası: geçersiz yanıt.</translation>
+    </message>
+    <message>
+        <location line="+248" />
+        <source>Prompt error: %1</source>
+        <translation>İstem hatası: %1</translation>
+    </message>
+    <message>
+        <location line="+53" />
+        <source>Failed to set config option: %1</source>
+        <translation>Yapılandırma seçeneği ayarlanamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>Failed to list sessions: %1</source>
+        <translation>Oturumlar listelenemedi: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Failed to list sessions: invalid response.</source>
+        <translation>Oturumlar listelenemedi: geçersiz yanıt.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Failed to load session: %1</source>
+        <translation>Oturum yüklenemedi: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchattab.cpp" line="+106" />
+        <location line="+1066" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="+285" />
+        <source>New Chat</source>
+        <translation>Yeni Sohbet</translation>
+    </message>
+    <message>
+        <location line="-1011" />
+        <source>Couldn&apos;t load the list of AI agents. Check your internet connection, then try again.</source>
+        <translation>Yapay zekâ ajanlarının listesi yüklenemedi. İnternet bağlantınızı denetleyip yeniden deneyin.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Try Again</source>
+        <translation>Yeniden Dene</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Load the list of AI agents again.</source>
+        <translation>Yapay zekâ aracı listesini yeniden yükle.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Choose AI Agent</source>
+        <translation>Yapay Zekâ Ajanı Seç</translation>
+    </message>
+    <message>
+        <location line="+91" />
+        <source>Authentication Required</source>
+        <translation>Kimlik Doğrulama Gerekli</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Method:</source>
+        <translation>Yöntem:</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+55" />
+        <source>Cancel</source>
+        <translation>İptal</translation>
+    </message>
+    <message>
+        <location line="-54" />
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="+1211" />
+        <source>Authenticate</source>
+        <translation>Kimlik Doğrula</translation>
+    </message>
+    <message>
+        <location line="+193" />
+        <source>Request interrupted by user</source>
+        <translation>Kullanıcı isteği kesti</translation>
+    </message>
+    <message>
+        <location line="+41" />
+        <source>Authentication failed: %1</source>
+        <translation>Kimlik doğrulama başarısız: %1</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>%1 is ready.</source>
+        <translation>%1 hazır.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The agent</source>
+        <translation>Aracı</translation>
+    </message>
+    <message>
+        <location line="+305" />
+        <source>Starting chat...</source>
+        <translation>Sohbet başlatılıyor...</translation>
+    </message>
+    <message>
+        <location line="+171" />
+        <source>%1 (%2)</source>
+        <translation>%1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Connecting to %1</source>
+        <translation>%1 bağlantısı kuruluyor</translation>
+    </message>
+    <message>
+        <location line="+131" />
+        <source>Loading chat...</source>
+        <translation>Sohbet yükleniyor...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpchatwidget.cpp" line="+127" />
+        <source>Close</source>
+        <translation>Kapat</translation>
+    </message>
+    <message>
+        <location line="+63" />
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-102" />
+        <source>Rename Chat...</source>
+        <translation>Sohbeti Yeniden Adlandır...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Chat</source>
+        <translation>Sohbeti Kapat</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpclientplugin.cpp" line="+71" />
+        <source>ACP Client</source>
+        <translation>ACP İstemcisi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location line="+12" />
+        <source>Show Agentic AI Chat in Side Panel</source>
+        <translation>Yapay Zekâ Aracı Sohbetini Yan Panelde Göster</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>Inspect ACP Client...</source>
+        <translation>ACP İstemcisini Denetle...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpinspector.cpp" line="+71" />
+        <source>Expand All</source>
+        <translation>Tümünü Genişlet</translation>
+    </message>
+    <message>
+        <location line="+60" />
+        <source>Client Message</source>
+        <translation>İstemci İletisi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>İletiler</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Sunucu İletisi</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>Log File</source>
+        <translation>Günlük Dosyası</translation>
+    </message>
+    <message>
+        <location line="+67" />
+        <source>ACP Inspector</source>
+        <translation>ACP Denetçisi</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Seç&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Temizle</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>ACP Client:</source>
+        <translation>ACP İstemcisi:</translation>
+    </message>
+    <message>
+        <location line="+69" />
+        <source>Unknown</source>
+        <translation>Bilinmiyor</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpmessageview.cpp" line="-1005" />
+        <source>Copy</source>
+        <translation>Kopyala</translation>
+    </message>
+    <message>
+        <location line="+799" />
+        <source>Allow</source>
+        <translation>İzin Ver</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Allow Always</source>
+        <translation>Her Zaman İzin Ver</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject</source>
+        <translation>Reddet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Reject Always</source>
+        <translation>Her Zaman Reddet</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Permission Request</source>
+        <translation>İzin İsteği</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>Authenticated</source>
+        <translation>Kimliği Doğrulandı</translation>
+    </message>
+    <message>
+        <location line="+614" />
+        <source>Deny</source>
+        <translation>Reddet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Denied</source>
+        <translation>Reddedildi</translation>
+    </message>
+    <message>
+        <location line="+225" />
+        <source>%1:%2 minutes</source>
+        <translation>%1:%2 dakika</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 seconds</source>
+        <translation>%1 saniye</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.cpp" line="+128" />
+        <location line="+25" />
+        <source>&lt;Custom&gt;</source>
+        <translation>&lt;Özel&gt;</translation>
+    </message>
+    <message>
+        <location line="-22" />
+        <location line="+25" />
+        <source>Manually specify an agent not listed in the registry.</source>
+        <translation>Kayıt defterinde listelenmeyen bir aracıyı elle belirtin.</translation>
+    </message>
+    <message>
+        <location line="+90" />
+        <source>Template:</source>
+        <translation>Şablon:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select a template from the registry to pre-fill the settings.</source>
+        <translation>Ayarları önceden doldurmak için kayıt defterinden bir şablon seçin.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name:</source>
+        <translation>Ad:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The display name.</source>
+        <translation>Görünen ad.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Yeni Sunucu&gt;</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Executable:</source>
+        <translation>Çalıştırılabilir dosya:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The executable to launch the ACP server process.</source>
+        <translation>ACP sunucusu işlemini başlatacak yürütülebilir dosya.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Arguments:</source>
+        <translation>Bağımsız değişkenler:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to launch the ACP server process.</source>
+        <translation>ACP sunucusu işlemini başlatmak için bağımsız değişkenler.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Environment changes:</source>
+        <translation>Ortam değişiklikleri:</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>The command that will spawn the ACP server.</source>
+        <translation>ACP sunucusunu başlatacak komut.</translation>
+    </message>
+    <message>
+        <location line="+32" />
+        <source>&quot;%1&quot; is needed for this Agent, but was not found.</source>
+        <translation>Bu Ajan için &quot;%1&quot; gerekli ancak bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Make sure Node.js is installed and npx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>Node.js&apos;in kurulu olduğundan ve npx&apos;in PATH içinde bulunduğundan emin olun. Kurulum yönergeleri için &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; adresine bakın.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Make sure UV is installed and uvx is available in PATH. See &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; for installation instructions.</source>
+        <translation>UV&apos;nin kurulu olduğundan ve uvx&apos;in PATH içinde bulunduğundan emin olun. Kurulum yönergeleri için &lt;a href=&quot;%1&quot;&gt;%1&lt;/a&gt; adresine bakın.</translation>
+    </message>
+    <message>
+        <location line="+213" />
+        <source>ACP Servers</source>
+        <translation>ACP Sunucuları</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpsettings.h" line="+67" />
+        <source>More providers</source>
+        <translation>Daha fazla sağlayıcı</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open source</source>
+        <translation>Açık kaynak</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Everything else</source>
+        <translation>Diğer her şey</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acpstdiotransport.cpp" line="+132" />
+        <source>No command configured for ACP server.</source>
+        <translation>ACP sunucusu için yapılandırılmış komut yok.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Command not found: &quot;%1&quot;. Check that it exists and is executable.</source>
+        <translation>Komut bulunamadı: &quot;%1&quot;. Var olduğunu ve çalıştırılabilir olduğunu denetleyin.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command not found: &quot;%1&quot;. Check that it is executable and on your PATH.</source>
+        <translation>Komut bulunamadı: &quot;%1&quot;. Çalıştırılabilir olduğunu ve PATH içinde bulunduğunu denetleyin.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Cannot send data: process has not been started (%1).</source>
+        <translation>Veri gönderilemiyor: İşlem başlatılmadı (%1).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Cannot send data: process &quot;%1&quot; is not running (exit code %2).</source>
+        <translation>Veri gönderilemiyor: &quot;%1&quot; işlemi çalışmıyor (çıkış kodu %2).</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/acptransport.cpp" line="+75" />
+        <source>JSON parse error: %1</source>
+        <translation>JSON ayrıştırma hatası: %1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Expected JSON object.</source>
+        <translation>JSON nesnesi bekleniyordu.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatinputedit.cpp" line="+39" />
+        <source>Enter to send, Shift+Enter for a new line; paste or drop images and files to attach them</source>
+        <translation>Göndermek için Enter, yeni satır için Shift+Enter; eklemek için görselleri ve dosyaları yapıştırın veya bırakın</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/chatpanel.cpp" line="+275" />
+        <source>Filter commands...</source>
+        <translation>Komutları süz...</translation>
+    </message>
+    <message>
+        <location line="+259" />
+        <source>Remove Context</source>
+        <translation>Bağlamı Kaldır</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Configuration Options</source>
+        <translation>Yapılandırma Seçenekleri</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Show Thoughts</source>
+        <translation>Düşünceleri Göster</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Add Context</source>
+        <translation>Bağlam Ekle</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Add File...</source>
+        <translation>Dosya Ekle...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+11" />
+        <source>Add Context File</source>
+        <translation>Bağlam Dosyası Ekle</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Add Remote File...</source>
+        <translation>Uzak Dosya Ekle...</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Current Editor</source>
+        <translation>Geçerli Düzenleyici</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Insert Command</source>
+        <translation>Komut Ekle</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <location line="+126" />
+        <source>Send (Enter)</source>
+        <translation>Gönder (Enter)</translation>
     </message>
     <message>
         <location line="+0" />
-        <location line="+5" />
-        <location line="+9" />
-        <location line="+10" />
-        <source>File Error</source>
-        <translation>Dosya hatası</translation>
+        <source>Stop (Esc)</source>
+        <translation>Durdur (Esc)</translation>
     </message>
     <message>
-        <location line="-14" />
+        <location line="+153" />
+        <source>Context: %1 of %2 tokens used (%3%)</source>
+        <translation>Bağlam: %1 / %2 belirteç kullanıldı (%3%)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Session cost: %1</source>
+        <translation>Oturum maliyeti: %1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Click to compact the conversation.</source>
+        <translation>Konuşmayı sıkıştırmak için tıklayın.</translation>
+    </message>
+    <message numerus="yes">
+        <location line="+146" />
+        <source>%n attachment(s)</source>
+        <translation>
+            <numerusform>%n ek</numerusform>
+        </translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Queued: %1</source>
+        <translation>Kuyrukta: %1</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sent when the agent is done.</source>
+        <translation>Aracı işini bitirdiğinde gönderilir.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Edit Queued Message</source>
+        <translation>Kuyruktaki İletiyi Düzenle</translation>
+    </message>
+    <message>
+        <location line="+344" />
+        <source>Image</source>
+        <translation>Görsel</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/sessionpickerwidget.cpp" line="-123" />
+        <source>just now</source>
+        <translation>az önce</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 minute ago</source>
+        <translation>1 dakika önce</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 minutes ago</source>
+        <translation>%1 dakika önce</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>1 hour ago</source>
+        <translation>1 saat önce</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 hours ago</source>
+        <translation>%1 saat önce</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>yesterday</source>
+        <translation>dün</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>%1 days ago</source>
+        <translation>%1 gün önce</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Untitled chat</source>
+        <translation>Başlıksız sohbet</translation>
+    </message>
+    <message>
+        <location line="+80" />
+        <source>Rename Chat</source>
+        <translation>Sohbeti Yeniden Adlandır</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name (leave empty for automatic):</source>
+        <translation>Ad (otomatik için boş bırakın):</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>Start a Chat</source>
+        <translation>Sohbet Başlat</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>New Chat in a Folder...</source>
+        <translation>Klasörde Yeni Sohbet...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <location line="+172" />
+        <source>Previous Chats</source>
+        <translation>Önceki Sohbetler</translation>
+    </message>
+    <message>
+        <location line="-166" />
+        <source>Filter chats...</source>
+        <translation>Sohbetleri süz...</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <location line="+141" />
+        <source>Loading previous chats...</source>
+        <translation>Önceki sohbetler yükleniyor...</translation>
+    </message>
+    <message>
+        <location line="-112" />
+        <source>New chats start in %1</source>
+        <translation>Yeni sohbetler %1 içinde başlar</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Choose a Folder for the Chat</source>
+        <translation>Sohbet İçin Klasör Seç</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Show 1 older chat</source>
+        <translation>1 eski sohbeti göster</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show %1 older chats</source>
+        <translation>%1 eski sohbeti göster</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Previous Chats (%1%2)</source>
+        <translation>Önceki Sohbetler (%1%2)</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No previous chats.</source>
+        <translation>Önceki sohbet yok.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No chats match.</source>
+        <translation>Eşleşen sohbet yok.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/acpclient/toolcalldetailwidget.cpp" line="+123" />
+        <source>Open in Editor</source>
+        <translation>Düzenleyicide Aç</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>%1 · 1 line</source>
+        <translation>%1 – 1 satır</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>%1 · %2 lines</source>
+        <translation>%1 – %2 satır</translation>
+    </message>
+    <message>
+        <location line="+661" />
+        <source>Raw Input</source>
+        <translation>Ham Giriş</translation>
+    </message>
+</context>
+<context>
+    <name>QtC::BinEditor</name>
+    <message>
+        <source>Cannot open %1: %2</source>
+        <translation type="vanished">%1 açılamıyor: %2</translation>
+    </message>
+    <message>
+        <source>File Error</source>
+        <translation type="vanished">Dosya hatası</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+2128" />
         <source>The Binary Editor cannot open empty files.</source>
         <translation>Binary Editor boş dosyaları açamaz.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>The file is too big for the Binary Editor (max. 32GB).</source>
         <translation>Dosya, İkili Düzenleyici için çok büyük (maks. 32 GB).</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+3" />
+        <source>File offset too large.</source>
+        <translation>Dosya ofseti çok büyük.</translation>
+    </message>
+    <message>
+        <location line="+76" />
         <source>Byte Address</source>
         <translation>Bayt Adresi</translation>
     </message>
     <message>
-        <location line="+123" />
         <source>&amp;Undo</source>
-        <translation>&amp;Geri alma</translation>
+        <translation type="vanished">&amp;Geri alma</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>&amp;Redo</source>
-        <translation>&amp;Yinele</translation>
+        <translation type="vanished">&amp;Yinele</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorwidget.cpp" line="+1228" />
+        <location line="-747" />
         <source>Memory at 0x%1</source>
         <translation>0x%1&apos;de bellek</translation>
     </message>
@@ -484,7 +1264,7 @@
         <translation>Önceki&amp;nbsp;sekizlik&amp;nbsp;değer:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+16" />
         <source>&lt;i&gt;double&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;iki kat&lt;/i&gt;&amp;nbsp;değer:</translation>
     </message>
@@ -494,7 +1274,7 @@
         <translation>Önceki &lt;i&gt;iki kat&lt;/i&gt;&amp;nbsp;değer:</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>&lt;i&gt;float&lt;/i&gt;&amp;nbsp;value:</source>
         <translation>&lt;i&gt;kayan&lt;/i&gt;&amp;nbsp;değer:</translation>
     </message>
@@ -504,12 +1284,12 @@
         <translation>Önceki &lt;i&gt;kayan&lt;/i&gt;&amp;nbsp;değer:</translation>
     </message>
     <message>
-        <location line="+122" />
+        <location line="+111" />
         <source>Zoom: %1%</source>
         <translation>Yakınlaştırma: %1%</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+10" />
         <source>Copying Failed</source>
         <translation>Kopyalama Başarısız</translation>
     </message>
@@ -519,7 +1299,7 @@
         <translation>4 MB&apos;den fazla ikili veriyi kopyalayamazsınız.</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Copy Selection as ASCII Characters</source>
         <translation>Seçimi ASCII Karakterleri Olarak Kopyala</translation>
     </message>
@@ -534,7 +1314,7 @@
         <translation>Seçimde Veri Kesme Noktası Ayarla</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+11" />
         <location line="+4" />
         <source>Copy 0x%1</source>
         <translation>0x%1 kopyala</translation>
@@ -555,12 +1335,26 @@
         <translation>Değeri Kopyala</translation>
     </message>
     <message>
-        <location line="+46" />
-        <source>Jump to Address 0x%1</source>
-        <translation>Adrese Atla 0x%1</translation>
+        <location line="+37" />
+        <source>Jump to Address 0x%1 in This Window</source>
+        <translation>Bu Penceredeki 0x%1 Adresine Git</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+253" />
+        <source>Cannot open &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; açılamıyor.</translation>
+    </message>
+    <message>
+        <location line="+273" />
+        <source>Binary Editor</source>
+        <translation>İkili Düzenleyici</translation>
+    </message>
+    <message>
+        <source>Jump to Address 0x%1</source>
+        <translation type="vanished">Adrese Atla 0x%1</translation>
+    </message>
+    <message>
+        <location line="-524" />
         <source>Jump to Address 0x%1 in New Window</source>
         <translation>Yeni Pencerede Adres 0x%1&apos;e Atla</translation>
     </message>
@@ -568,21 +1362,26 @@
 <context>
     <name>QtC::Copilot</name>
     <message>
-        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+29" />
-        <location line="+86" />
+        <location filename="../../../src/plugins/copilot/authwidget.cpp" line="+30" />
+        <location line="+87" />
         <location line="+5" />
         <source>Sign In</source>
         <translation>Kayıt olmak</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+23" />
+        <source>The sign-in request failed: %1</source>
+        <translation>Oturum açma isteği başarısız oldu: %1</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>A browser window will open. Enter the code %1 when asked.
 The code has been copied to your clipboard.</source>
         <translation>Bir tarayıcı penceresi açılacaktır. Sorulduğunda %1 kodunu girin.
  Kod panonuza kopyalandı.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Login Failed</source>
         <translation>Giriş başarısız oldu</translation>
     </message>
@@ -592,48 +1391,40 @@ The code has been copied to your clipboard.</source>
         <translation>Giriş isteği başarısız oldu: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotclient.cpp" line="+336" />
-        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+66" />
+        <location filename="../../../src/plugins/copilot/copilotprojectpanel.cpp" line="+67" />
         <source>Copilot</source>
         <translation>Kopya</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Proxy username and password required:</source>
-        <translation>Proxy kullanıcı adı ve şifre gerekli:</translation>
+        <translation type="vanished">Proxy kullanıcı adı ve şifre gerekli:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Do not ask again. This will disable Copilot for now.</source>
-        <translation>Tekrar sorma. Bu şimdilik kopilotu devre dışı bırakacak.</translation>
+        <translation type="vanished">Tekrar sorma. Bu şimdilik kopilotu devre dışı bırakacak.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilothoverhandler.cpp" line="+40" />
         <source>Select Previous Copilot Suggestion</source>
-        <translation>Önceki Copilot önerisini seçin</translation>
+        <translation type="vanished">Önceki Copilot önerisini seçin</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Select Next Copilot Suggestion</source>
-        <translation>Sonraki Copilot Önerisini Seçin</translation>
+        <translation type="vanished">Sonraki Copilot Önerisini Seçin</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Apply (%1)</source>
-        <translation>Uygula (%1)</translation>
+        <translation type="vanished">Uygula (%1)</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Apply Word (%1)</source>
-        <translation>Kelime Uygula (%1)</translation>
+        <translation type="vanished">Kelime Uygula (%1)</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>%1 of %2</source>
-        <translation>%1 of %2</translation>
+        <translation type="vanished">%1 of %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+65" />
+        <location filename="../../../src/plugins/copilot/copilotplugin.cpp" line="+62" />
         <source>Request Copilot Suggestion</source>
         <translation>Copilot önerisi isteyin</translation>
     </message>
@@ -669,25 +1460,25 @@ The code has been copied to your clipboard.</source>
     </message>
     <message>
         <location line="+1" />
-        <location line="+28" />
+        <location line="+31" />
         <source>Disable Copilot.</source>
         <translation>Kopilotu devre dışı bırakın.</translation>
     </message>
     <message>
-        <location line="-21" />
-        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+31" />
+        <location line="-23" />
+        <location filename="../../../src/plugins/copilot/copilotsettings.cpp" line="+36" />
         <location line="+1" />
         <source>Enable Copilot</source>
         <translation>Copilot&apos;u etkinleştir</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+22" />
         <source>Enable Copilot.</source>
         <translation>Copilot&apos;u etkinleştirin.</translation>
     </message>
     <message>
-        <location line="-13" />
+        <location line="-14" />
         <source>Toggle Copilot</source>
         <translation>Kopilotu geçiş</translation>
     </message>
@@ -697,7 +1488,7 @@ The code has been copied to your clipboard.</source>
         <translation>Copilot entegrasyonunu etkinleştirir.</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+96" />
         <source>Node.js path:</source>
         <translation>Node.js Yolu:</translation>
     </message>
@@ -719,13 +1510,12 @@ The code has been copied to your clipboard.</source>
         <translation>%1&apos;e giden yol:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 path</source>
         <extracomment>%1 is the filename of the copilot language server</extracomment>
-        <translation>%1 Yol</translation>
+        <translation type="vanished">%1 Yol</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Select path to %2 in Copilot Neovim plugin. See %1 for installation instructions.</source>
         <extracomment>%1 is the URL to copilot.vim getting started, %2 is the filename of the copilot language server</extracomment>
         <translation>Copilot Neovim eklentisinde %2 yolu seçin. Kurulum talimatları için %1&apos;e bakınız.</translation>
@@ -746,97 +1536,100 @@ The code has been copied to your clipboard.</source>
         <translation>Belgedeki değişikliklerden sonra geçerli metin imleç konumu için otomatik olarak öneriler isteyin.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Use Proxy</source>
-        <translation>Proxy kullanın</translation>
+        <translation type="vanished">Proxy kullanın</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use proxy</source>
-        <translation>Proxy kullanın</translation>
+        <translation type="vanished">Proxy kullanın</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Use a proxy to connect to the Copilot servers.</source>
-        <translation>Copilot sunucularına bağlanmak için bir proxy kullanın.</translation>
+        <translation type="vanished">Copilot sunucularına bağlanmak için bir proxy kullanın.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Host</source>
-        <translation>Proxy host</translation>
+        <translation type="vanished">Proxy host</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy host:</source>
-        <translation>Proxy Host:</translation>
+        <translation type="vanished">Proxy Host:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The host name of the proxy server.</source>
-        <translation>Proxy sunucusunun ana bilgisayar adı.</translation>
+        <translation type="vanished">Proxy sunucusunun ana bilgisayar adı.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy Port</source>
-        <translation>Vekil bağlantı noktası</translation>
+        <translation type="vanished">Vekil bağlantı noktası</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy port:</source>
-        <translation>Proxy Port:</translation>
+        <translation type="vanished">Proxy Port:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The port of the proxy server.</source>
-        <translation>Proxy sunucusunun bağlantı noktası.</translation>
+        <translation type="vanished">Proxy sunucusunun bağlantı noktası.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy User</source>
-        <translation>Proxy kullanıcısı</translation>
+        <translation type="vanished">Proxy kullanıcısı</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Proxy user:</source>
-        <translation>Proxy kullanıcısı:</translation>
+        <translation type="vanished">Proxy kullanıcısı:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The user name to access the proxy server.</source>
-        <translation>Proxy sunucusuna erişmek için kullanıcı adı.</translation>
+        <translation type="vanished">Proxy sunucusuna erişmek için kullanıcı adı.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save Proxy Password</source>
-        <translation>Proxy şifresini kaydet</translation>
+        <translation type="vanished">Proxy şifresini kaydet</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Save proxy password</source>
-        <translation>Proxy şifresini kaydet</translation>
+        <translation type="vanished">Proxy şifresini kaydet</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Save the password to access the proxy server. The password is stored insecurely.</source>
-        <translation>Proxy sunucusuna erişmek için şifreyi kaydedin. Parola güvensiz olarak saklanır.</translation>
+        <translation type="vanished">Proxy sunucusuna erişmek için şifreyi kaydedin. Parola güvensiz olarak saklanır.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Proxy Password</source>
-        <translation>Proxy şifresi</translation>
+        <translation type="vanished">Proxy şifresi</translation>
+    </message>
+    <message>
+        <source>Proxy password:</source>
+        <translation type="vanished">Proxy şifresi:</translation>
+    </message>
+    <message>
+        <source>The password for the proxy server.</source>
+        <translation type="vanished">Proxy sunucusu için şifre.</translation>
+    </message>
+    <message>
+        <location line="-11" />
+        <source>Path to %1</source>
+        <extracomment>%1 is the filename of the copilot language server</extracomment>
+        <translation>%1 yolu</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Proxy</source>
+        <translation>Proxy</translation>
     </message>
     <message>
         <location line="+3" />
-        <source>Proxy password:</source>
-        <translation>Proxy şifresi:</translation>
+        <source>Proxy:</source>
+        <translation>Proxy:</translation>
     </message>
     <message>
-        <location line="+2" />
-        <source>The password for the proxy server.</source>
-        <translation>Proxy sunucusu için şifre.</translation>
+        <location line="+8" />
+        <source>The proxy server to use for connections, as http://host:port, or http://user:password@host:port if the proxy needs a login.</source>
+        <translation>Bağlantılar için kullanılacak proxy sunucusu: http://ana_bilgisayar:bağlantı_noktası veya proxy oturum açma gerektiriyorsa http://kullanıcı:parola@ana_bilgisayar:bağlantı_noktası.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Reject Unauthorized</source>
         <translation>Yetkisiz reddet</translation>
     </message>
@@ -851,7 +1644,22 @@ The code has been copied to your clipboard.</source>
         <translation>Proxy sunucusundan yetkisiz sertifikaları reddedin. Bunu kapatmak bir güvenlik riskidir.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+3" />
+        <source>GitHub Enterprise URL</source>
+        <translation>GitHub Enterprise URL&apos;si</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>GitHub Enterprise URL:</source>
+        <translation>GitHub Enterprise URL&apos;si:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The URL of your GitHub Enterprise server.</source>
+        <translation>GitHub Enterprise sunucunuzun URL&apos;si.</translation>
+    </message>
+    <message>
+        <location line="+65" />
         <source>Enabling %1 is subject to your agreement and abidance with your applicable %1 terms. It is your responsibility to know and accept the requirements and parameters of using tools like %1. This may include, but is not limited to, ensuring you have the rights to allow %1 access to your code, as well as understanding any implications of your use of %1 and suggestions produced (like copyright, accuracy, etc.).</source>
         <translation>%1&apos;i etkinleştirme, sözleşmenize ve uygulanabilir %1 terimlerinizle ilgili kalmaz. %1 gibi araçları kullanmanın gereksinimlerini ve parametrelerini bilmek ve kabul etmek sizin sorumluluğunuzdadır. Bu, kodunuza %1 erişimine izin verme haklarına sahip olmanın yanı sıra %1 ve üretilen önerilerin (telif hakkı, doğruluk vb. Gibi) herhangi bir etkisini anlama haklarına sahip olmanızı sağlayabilir, ancak bunlarla sınırlı değildir.</translation>
     </message>
@@ -874,30 +1682,35 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
 <context>
     <name>QtC::Core</name>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+86" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizard.cpp" line="+83" />
         <location line="+11" />
         <location line="+17" />
-        <location line="+16" />
+        <location line="+17" />
         <source>File Generation Failure</source>
         <translation>Dosya Oluşturma Hatası</translation>
     </message>
     <message>
-        <location line="-59" />
+        <location line="-63" />
         <source>Existing files</source>
         <translation>Mevcut dosyalar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+142" />
+        <location filename="../../../src/plugins/coreplugin/generatedfile.cpp" line="+173" />
+        <source>Failed to set permissions.</source>
+        <translation>İzinler ayarlanamadı.</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Unable to create the directory %1.</source>
         <translation>%1 dizini oluşturulamıyor.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+171" />
+        <location filename="../../../src/plugins/coreplugin/basefilewizardfactory.cpp" line="+163" />
         <source>Failed to open an editor for &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; için bir düzenleyici açılamadı.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+26" />
         <source>[read only]</source>
         <translation>[Sadece oku]</translation>
     </message>
@@ -912,56 +1725,91 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>[sembolik bağlantı]</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+41" />
         <source>The project directory %1 contains files which cannot be overwritten:
 %2.</source>
         <translation>%1 proje dizini, üzerine yazılamayan dosyalar içeriyor:
 %2.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+370" />
-        <location line="+46" />
-        <location line="+1691" />
-        <location line="+534" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+455" />
+        <location line="+1791" />
+        <location line="+557" />
         <source>Revert to Saved</source>
         <translation>Kaydedilenlere Geri Dön</translation>
     </message>
     <message>
-        <location line="-2270" />
-        <location line="+95" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+447" />
-        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+64" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+421" />
+        <location line="-2298" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+446" />
+        <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+76" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+859" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+292" />
         <location filename="../../../src/plugins/coreplugin/sidebarwidget.cpp" line="+57" />
         <location line="+1" />
         <source>Close</source>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location line="-94" />
-        <location line="+100" />
+        <location line="+6" />
         <source>Close All</source>
         <translation>Hepsini kapat</translation>
     </message>
     <message>
-        <location line="-99" />
-        <location line="+113" />
-        <location line="+1645" />
+        <location line="+14" />
+        <location line="+1750" />
         <source>Close Others</source>
         <translation>Diğerlerini Kapat</translation>
     </message>
     <message>
-        <location line="-1710" />
+        <location line="-1815" />
         <source>Revert File to Saved</source>
         <translation>Dosyayı Kaydedilmişe Döndür</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="-12" />
+        <location line="+1797" />
+        <source>Save Without Formatting</source>
+        <translation>Biçimlendirmeden Kaydet</translation>
+    </message>
+    <message>
+        <location line="-1755" />
         <source>Ctrl+W</source>
         <translation>Ctrl+W</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+104" />
+        <source>Previous Tab</source>
+        <translation>Önceki Sekme</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Next Tab</source>
+        <translation>Sonraki Sekme</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <location line="+2600" />
+        <source>Close All Tabs</source>
+        <translation>Tüm Sekmeleri Kapat</translation>
+    </message>
+    <message>
+        <location line="-2589" />
+        <location line="+2595" />
+        <source>Close Other Tabs</source>
+        <translation>Diğer Sekmeleri Kapat</translation>
+    </message>
+    <message>
+        <location line="-2560" />
+        <source>Open Previous Document</source>
+        <translation>Önceki Belgeyi Aç</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Open Next Document</source>
+        <translation>Sonraki Belgeyi Aç</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+101" />
         <location line="+67" />
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="-9" />
@@ -987,34 +1835,38 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Tüm Bölmeleri Kaldır</translation>
     </message>
     <message>
-        <location line="+2669" />
+        <location line="+2529" />
+        <source>Diff Against Current File</source>
+        <translation>Geçerli Dosyayla Karşılaştır</translation>
+    </message>
+    <message>
+        <location line="+491" />
         <source>Opening File</source>
         <translation>Dosya Açma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+696" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+706" />
         <source>Could not save the files.</source>
         <comment>error message</comment>
         <translation>Dosyalar kaydedilemedi.</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+601" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2471" />
-        <location line="+39" />
-        <location line="+24" />
-        <location line="+1475" />
-        <location line="+246" />
+        <location line="+54" />
+        <location line="+592" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2825" />
+        <location line="+50" />
+        <location line="+1641" />
+        <location line="+195" />
         <source>File Error</source>
         <translation>Dosya hatası</translation>
     </message>
     <message>
-        <location line="-600" />
+        <location line="-591" />
         <source>Error while saving file: %1</source>
         <translation>Dosya kaydedilirken hata oluştu: %1</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>All Files (*.*)</source>
         <comment>On Windows</comment>
         <translation>Tüm dosyalar (*.*)</translation>
@@ -1031,27 +1883,42 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Bu konumda &quot;%1&quot; adlı bir öğe zaten var. Üzerine yazmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+229" />
         <source>Open File</source>
         <translation>Açık dosya</translation>
     </message>
     <message>
-        <location line="+258" />
+        <location line="+252" />
         <source>Cannot reload %1</source>
         <translation>%1 yeniden yüklenemiyor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+53" />
+        <location filename="../../../src/plugins/coreplugin/iversioncontrol.cpp" line="+54" />
         <source>Open with VCS (%1)</source>
         <translation>VCS ile aç (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-588" />
+        <location line="+120" />
+        <source>Diff &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; farkı</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Log &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; günlüğü</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Annotate &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; için açıklama ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-619" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; You are changing a read-only file.</source>
         <translation>&lt;b&gt;Uyarı:&lt;/b&gt; Salt okunur bir dosyayı değiştiriyorsunuz.</translation>
     </message>
     <message>
-        <location line="-1490" />
+        <location line="-1626" />
         <source>Next Open Document in History</source>
         <translation>Sonraki Belgeyi Geçmişte Açın</translation>
     </message>
@@ -1061,59 +1928,58 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Önceki Belgeyi Geçmişte Aç</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-8" />
+        <location line="+317" />
         <source>Go Back</source>
         <translation>Geri gitmek</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-316" />
+        <location line="+317" />
         <source>Go Forward</source>
         <translation>İleri git</translation>
     </message>
     <message>
-        <location line="-238" />
-        <location line="+124" />
+        <location line="-118" />
         <source>Close All Except Visible</source>
         <translation>Görünenler Dışında Tümünü Kapat</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+159" />
         <source>Go to Last Edit</source>
         <translation>Son Düzenlemeye Git</translation>
     </message>
     <message>
-        <location line="-268" />
+        <location line="+2383" />
         <source>Copy Full Path</source>
         <translation>Tam Yolu Kopyala</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>Copy Path and Line Number</source>
         <translation>Yolu ve Satır Numarasını Kopyala</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Copy File Name</source>
         <translation>Dosya Adını Kopyala</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Properties...</source>
-        <translation>Özellikler...</translation>
+        <translation type="vanished">Özellikler...</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Pin</source>
-        <translation>Toplu iğne</translation>
+        <translation type="vanished">Toplu iğne</translation>
     </message>
     <message>
         <source>Alternative Close</source>
         <translation type="vanished">Alternatif Kapanış</translation>
     </message>
     <message>
-        <location line="+85" />
+        <location line="-2596" />
         <source>Ctrl+F4</source>
         <translation>Ctrl+F4</translation>
     </message>
@@ -1122,13 +1988,13 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation type="vanished">Ctrl+Shift+W</translation>
     </message>
     <message>
-        <location line="+158" />
+        <location line="+182" />
         <source>Reopen Last Closed Document</source>
         <translation>Son kapalı belgeyi yeniden açın</translation>
     </message>
     <message>
         <location line="+41" />
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+8" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-309" />
         <source>Open in New Window</source>
         <translation>Yeni pencerede aç</translation>
     </message>
@@ -1143,12 +2009,12 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Sonraki Bölmeye veya Pencereye Git</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1852" />
         <source>Ad&amp;vanced</source>
         <translation>&amp;Gelişmiş</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+44" />
         <source>Current document</source>
         <translation>Geçerli belge</translation>
     </message>
@@ -1163,7 +2029,7 @@ Otherwise you need to specify the path to the %2 file from the Copilot neovim pl
         <translation>Ekrana göre geçerli düzenleyicinin sol üst köşesinin Y koordinatı.</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+53" />
         <source>Continue Opening Huge Text File?</source>
         <translation>Büyük Metin Dosyası Açılmaya Devam Edilsin mi?</translation>
     </message>
@@ -1177,22 +2043,21 @@ Continue?</source>
 Devam etmek?</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+64" />
         <source>Could not open &quot;%1&quot;: Cannot open files of type &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; açılamadı: &quot;%2&quot; türündeki dosyalar açılamıyor.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Could not open &quot;%1&quot; for reading. Either the file does not exist or you do not have the permissions to open it.</source>
-        <translation>&quot;%1&quot; okumak için açılamadı. Ya dosya mevcut değil ya da onu açma izniniz yok.</translation>
+        <translation type="vanished">&quot;%1&quot; okumak için açılamadı. Ya dosya mevcut değil ya da onu açma izniniz yok.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+46" />
         <source>Could not open &quot;%1&quot;: Unknown error.</source>
         <translation>&quot;%1&quot; açılamadı: Bilinmeyen hata.</translation>
     </message>
     <message>
-        <location line="+1130" />
+        <location line="+1214" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file was not opened in %1 yet.</source>
         <translation>&lt;b&gt;Uyarı:&lt;/b&gt; Bu dosya henüz %1&apos;de açılmadı.</translation>
     </message>
@@ -1202,7 +2067,7 @@ Devam etmek?</translation>
         <translation>Açık</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+30" />
         <source>&amp;Save %1</source>
         <translation>&amp;%1 Kaydet</translation>
     </message>
@@ -1210,6 +2075,11 @@ Devam etmek?</translation>
         <location line="+1" />
         <source>Save %1 &amp;As...</source>
         <translation>%1 &amp;Farklı Kaydet...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Save %1 Without Formatting</source>
+        <translation>%1 Dosyasını Biçimlendirmeden Kaydet</translation>
     </message>
     <message>
         <location line="+2" />
@@ -1222,7 +2092,7 @@ Devam etmek?</translation>
         <translation>%1&apos;i yeniden yükle</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Close %1</source>
         <translation>%1&apos;i kapat</translation>
     </message>
@@ -1232,7 +2102,7 @@ Devam etmek?</translation>
         <translation>%1 Hariç Tümünü Kapat</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+282" />
         <source>Cannot Open File</source>
         <translation>Dosya açılamıyor</translation>
     </message>
@@ -1242,7 +2112,7 @@ Devam etmek?</translation>
         <translation>Dosya, VCS ile düzenlenmek üzere açılamıyor.</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+247" />
         <source>You will lose your current changes if you proceed reverting %1.</source>
         <translation>%1&apos;i geri almaya devam ederseniz mevcut değişikliklerinizi kaybedeceksiniz.</translation>
     </message>
@@ -1253,9 +2123,12 @@ Devam etmek?</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwidget.cpp" line="+140" />
         <location line="+127" />
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+191" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+192" />
+        <location line="+354" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="+887" />
+        <location line="+67" />
         <source>Cancel</source>
         <translation>İptal etmek</translation>
     </message>
@@ -1265,12 +2138,12 @@ Devam etmek?</translation>
         <translation>İptal &amp;&amp; &amp;Fark</translation>
     </message>
     <message>
-        <location line="+308" />
+        <location line="+367" />
         <source>Close &quot;%1&quot;</source>
         <translation>&quot;%1&quot;i kapat</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+65" />
         <source>Unpin &quot;%1&quot;</source>
         <translation>&quot;%1&quot;in sabitlemesini kaldır</translation>
     </message>
@@ -1285,7 +2158,7 @@ Devam etmek?</translation>
         <translation>Pin Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-489" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="-482" />
         <source>Overwrite?</source>
         <translation>üzerine yaz?</translation>
     </message>
@@ -1295,17 +2168,21 @@ Devam etmek?</translation>
         <translation>Farklı kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/editmode.cpp" line="+89" />
         <source>Edit</source>
         <translation>Düzenlemek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
         <source>Drag to drag documents between splits</source>
-        <translation>Belgeleri bölmeler arasında sürüklemek için sürükleyin</translation>
+        <translation type="vanished">Belgeleri bölmeler arasında sürüklemek için sürükleyin</translation>
     </message>
     <message>
-        <location line="+270" />
+        <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="+28" />
+        <source>Drag to open the document in another split.</source>
+        <translation>Belgeyi başka bir bölmede açmak için sürükleyin.</translation>
+    </message>
+    <message>
+        <location line="+279" />
         <source>Close Document</source>
         <translation>Belgeyi Kapat</translation>
     </message>
@@ -1320,23 +2197,22 @@ Devam etmek?</translation>
         <translation>Dosya yazılabilir</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+145" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="+152" />
         <source>Reset Do Not Ask/Show Again Dialogs</source>
         <translation>Sorma/Tekrar Gösterme Diyaloglarını Sıfırla</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Reset to default.</source>
         <comment>Color</comment>
-        <translation>Varsayılana sıfırla.</translation>
+        <translation type="vanished">Varsayılana sıfırla.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+188" />
         <source>Theme:</source>
         <translation>Tema:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-64" />
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
@@ -1349,12 +2225,11 @@ Devam etmek?</translation>
         <translation type="vanished">Yüksek DPI ayarları, yeniden başlatmanın ardından etkili olacaktır.</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>User Interface</source>
-        <translation>Kullanıcı arayüzü</translation>
+        <translation type="vanished">Kullanıcı arayüzü</translation>
     </message>
     <message>
-        <location line="-159" />
+        <location line="-66" />
         <source>Show keyboard shortcuts in context menus (default: %1)</source>
         <translation>Bağlam menülerinde klavye kısayollarını göster (varsayılan: %1)</translation>
     </message>
@@ -1369,7 +2244,7 @@ Devam etmek?</translation>
         <translation>kapalı</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Override cursors for views</source>
         <translation>Görünümler için imleçleri geçersiz kılın</translation>
     </message>
@@ -1381,7 +2256,32 @@ If the system cursors for resizing views are not displayed properly, you can use
  Görünümleri yeniden boyutlandırmak için sistem imleçleri düzgün görüntülenmezse, %1&apos;e göre sağlanan imleçleri kullanabilirsiniz.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+12" />
+        <source>Prefer banner style info bars over pop-ups</source>
+        <translation>Açılır pencereler yerine başlık biçimli bilgi çubuklarını tercih et</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Use tabbed editors</source>
+        <translation>Sekmeli düzenleyicileri kullan</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Show OK and Cancel buttons in Preferences mode</source>
+        <translation>Tercihler kipinde Tamam ve İptal düğmelerini göster</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Text codec for tools:</source>
+        <translation>Araçlar için metin kodlaması:</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Color:</source>
+        <translation>Renk:</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Round Up for .5 and Above</source>
         <translation>.5 ve üstü.</translation>
     </message>
@@ -1401,42 +2301,52 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>.75 ve üstü</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Don&apos;t Round</source>
         <translation>Dönememe</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+4" />
         <source>DPI rounding policy:</source>
         <translation>DPI Yuvarlama Politikası:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-111" />
         <source>The following environment variables are set and can influence the UI scaling behavior of %1:</source>
         <translation>Aşağıdaki ortam değişkenleri ayarlanır ve %1&apos;in kullanıcı arayüzü ölçeklendirme davranışını etkileyebilir:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Environment influences UI scaling behavior.</source>
         <translation>Çevre kullanıcı arayüzü ölçeklendirme davranışını etkiler.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+201" />
         <source>Serial Terminal Tab size:</source>
         <translation>Seri Terminal Sekme boyutu:</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="-342" />
         <source>&lt;System Language&gt;</source>
         <translation>&lt;Sistem Dili&gt;</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
+        <source>Re-enable warnings that were suppressed by selecting &quot;Do Not Show Again&quot; (for example, missing highlighter).</source>
+        <translation>&quot;Bir Daha Gösterme&quot; seçilerek bastırılan uyarıları yeniden etkinleştir (örneğin, eksik vurgulayıcı).</translation>
+    </message>
+    <message>
+        <location line="+126" />
         <source>The language change will take effect after restart.</source>
         <translation>Dil değişikliği, yeniden başlatmanın ardından etkili olacaktır.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
+        <source>Toolbar style:</source>
+        <translation>Araç çubuğu stili:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Compact</source>
         <translation>Kompakt</translation>
     </message>
@@ -1446,41 +2356,39 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Rahat</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-6" />
         <source>The DPI rounding policy change will take effect after restart.</source>
         <translation>DPI yuvarlama ilkesi değişikliği yeniden başlatıldıktan sonra yürürlüğe girecektir.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+107" />
         <source>Interface</source>
         <translation>Arayüz</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+356" />
         <source>Environment</source>
         <translation>Çevre</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+480" />
         <source>Variables</source>
-        <translation>Değişkenler</translation>
+        <translation type="vanished">Değişkenler</translation>
     </message>
     <message>
-        <location line="-271" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+116" />
         <source>Terminal:</source>
         <translation>Terminal:</translation>
     </message>
     <message>
-        <location line="-166" />
         <source>Bytes</source>
-        <translation>bayt</translation>
+        <translation type="vanished">bayt</translation>
     </message>
     <message>
         <source>KB</source>
         <translation type="vanished">KB</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+111" />
         <source>MB</source>
         <translation>MB</translation>
     </message>
@@ -1493,77 +2401,81 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation type="vanished">tüberküloz</translation>
     </message>
     <message>
-        <location line="-20" />
+        <location line="-33" />
         <source>Auto-suspend unmodified files</source>
         <translation>Değiştirilmemiş dosyaları otomatik olarak askıya al</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+8" />
         <source>Enable crash reporting</source>
         <translation>Kilitlenme raporlamasını etkinleştir</translation>
     </message>
     <message>
-        <location line="-26" />
+        <location line="+7" />
+        <source>Crash reports are saved in &quot;%1&quot;.</source>
+        <translation>Çökme raporları &quot;%1&quot; içine kaydedilir.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Warn before opening text files greater than</source>
         <translation>Şundan büyük metin dosyalarını açmadan önce uyar</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+10" />
+        <source>Number of &quot;Recent Files&quot;:</source>
+        <translation>&quot;Son Dosyalar&quot; sayısı:</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Ask for confirmation before exiting</source>
         <translation>Çıkmadan önce onay isteyin</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="-75" />
         <source>Auto-save modified files</source>
         <translation>Değiştirilen dosyaları otomatik kaydet</translation>
     </message>
     <message>
-        <location line="+96" />
         <source>Clear Local Crash Reports</source>
-        <translation>Yerel Çökme Raporlarını Temizle</translation>
+        <translation type="vanished">Yerel Çökme Raporlarını Temizle</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="+17" />
         <source>Auto-save files after refactoring</source>
         <translation>Yeniden düzenlemeden sonra dosyaları otomatik kaydet</translation>
     </message>
     <message>
-        <location line="-49" />
         <source>KiB</source>
-        <translation>Kib</translation>
+        <translation type="vanished">Kib</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>MiB</source>
-        <translation>Mib</translation>
+        <translation type="vanished">Mib</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>GiB</source>
-        <translation>Gib</translation>
+        <translation type="vanished">Gib</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>TiB</source>
-        <translation>Tib</translation>
+        <translation type="vanished">Tib</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+10" />
         <source>Automatically free resources of old documents that are not visible and not modified. They stay visible in the list of open documents.</source>
         <translation>Görünmeyen ve değiştirilmeyen eski belgelerin kaynaklarını otomatik olarak serbest bırakın. Açık belgeler listesinde görünür durumda kalırlar.</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+8" />
         <source>Allow crashes to be automatically reported. Collected reports are used for the sole purpose of fixing bugs.</source>
         <translation>Çökmelerin otomatik olarak raporlanmasına izin verin. Toplanan raporlar, yalnızca hataları düzeltmek amacıyla kullanılır.</translation>
     </message>
     <message>
-        <location line="+35" />
         <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
-        <translation>&quot;Terminalde çalıştır&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
+        <translation type="vanished">&quot;Terminalde çalıştır&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+33" />
         <source>Always Ask</source>
         <translation>Her zaman sor</translation>
     </message>
@@ -1578,27 +2490,24 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Değişiklikleri Yoksay</translation>
     </message>
     <message>
-        <location line="-47" />
+        <location line="-61" />
         <source>min</source>
         <translation>dakika</translation>
     </message>
     <message>
-        <location line="+105" />
         <source>Command line arguments used for &quot;%1&quot;.</source>
-        <translation>&quot;%1&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
+        <translation type="vanished">&quot;%1&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>File system case sensitivity:</source>
-        <translation>Dosya sistemi büyük/küçük harf duyarlılığı:</translation>
+        <translation type="vanished">Dosya sistemi büyük/küçük harf duyarlılığı:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Influences how file names are matched to decide if they are the same.</source>
-        <translation>Aynı olup olmadıklarına karar vermek için dosya adlarının nasıl eşleştirildiğini etkiler.</translation>
+        <translation type="vanished">Aynı olup olmadıklarına karar vermek için dosya adlarının nasıl eşleştirildiğini etkiler.</translation>
     </message>
     <message>
-        <location line="-117" />
+        <location line="+37" />
         <source>Files to keep open:</source>
         <translation>Açık tutulacak dosyalar:</translation>
     </message>
@@ -1608,55 +2517,77 @@ If the system cursors for resizing views are not displayed properly, you can use
         <translation>Bellekte tutulması gereken minimum açık belge sayısı. Bu sayıyı artırmak, belgeleri manuel olarak kapatmadığınızda daha fazla kaynak kullanımına yol açacaktır.</translation>
     </message>
     <message>
-        <location line="+84" />
-        <location line="+3" />
         <source>?</source>
-        <translation>?</translation>
+        <translation type="vanished">?</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Reset to default.</source>
         <comment>Terminal</comment>
-        <translation>Varsayılana sıfırla.</translation>
+        <translation type="vanished">Varsayılana sıfırla.</translation>
     </message>
     <message>
-        <location line="-130" />
+        <location line="-53" />
         <source>Patch command:</source>
         <translation>Yama komutu:</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="-11" />
         <source>External file browser:</source>
         <translation>Harici dosya tarayıcısı:</translation>
     </message>
     <message>
-        <location line="-83" />
+        <location line="+88" />
         <source>When files are externally modified:</source>
         <translation>Dosyalar harici olarak değiştirildiğinde:</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-60" />
         <source>Interval:</source>
         <translation>Aralık:</translation>
     </message>
     <message>
-        <location line="+147" />
         <source>Maximum number of entries in &quot;Recent Files&quot;:</source>
-        <translation>&quot;Son Dosyalar&quot;daki maksimum giriş sayısı:</translation>
+        <translation type="vanished">&quot;Son Dosyalar&quot;daki maksimum giriş sayısı:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+248" />
+        <location line="+121" />
         <source>System</source>
         <translation>sistem</translation>
     </message>
     <message>
-        <location line="-423" />
+        <location line="-137" />
         <source>Command used for reverting diff chunks.</source>
         <translation>Fark parçalarını geri döndürmek için kullanılan komut.</translation>
     </message>
     <message>
+        <location line="-96" />
+        <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
+        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Değişken&lt;/th&gt;&lt;th&gt;Genişleme&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;geçerli dosyanın dizini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;dosya adı (tam yolla)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;dosya adı (yolsuz)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Variable separators:</source>
+        <translation>Değişken ayırıcıları:</translation>
+    </message>
+    <message>
         <location line="+7" />
+        <source>Use freedesktop.org file manager D-Bus interface</source>
+        <translation>freedesktop.org dosya yöneticisi D-Bus arayüzünü kullan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus interface&lt;/a&gt; for &lt;i&gt;Open in File Manager&lt;/i&gt;, if available. Otherwise falls back to the &quot;External file browser&quot; above.</source>
+        <translation>Varsa &lt;i&gt;Dosya Yöneticisinde Aç&lt;/i&gt; için &lt;a href=&quot;%1&quot;&gt;freedesktop.org D-Bus arayüzünü&lt;/a&gt; kullanır. Aksi halde yukarıdaki &quot;Harici dosya tarayıcısı&quot; seçeneğine döner.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Command used for &lt;i&gt;Open in File Manager&lt;/i&gt; if the freedesktop.org D-Bus interface is not available. The command can contain the following variables:
+</source>
+        <translation>freedesktop.org D-Bus arayüzü kullanılamıyorsa &lt;i&gt;Dosya Yöneticisinde Aç&lt;/i&gt; için kullanılan komut. Komut aşağıdaki değişkenleri içerebilir:
+</translation>
+    </message>
+    <message>
+        <location line="+17" />
         <source>Automatically creates temporary copies of modified files. If %1 is restarted after a crash or power failure, it asks whether to recover the auto-saved content.</source>
         <translation>Değiştirilen dosyaların geçici kopyalarını otomatik olarak oluşturur. Bir çökme veya elektrik kesintisinden sonra %1 yeniden başlatılırsa, otomatik olarak kaydedilen içeriğin kurtarılıp kurtarılmayacağını sorar.</translation>
     </message>
@@ -1668,7 +2599,8 @@ provided they were unmodified before the refactoring.</source>
 yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translation>
     </message>
     <message>
-        <location line="+183" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-48" />
+        <location line="+10" />
         <source>Crash Reporting</source>
         <translation>Kilitlenme Raporlama</translation>
     </message>
@@ -1677,32 +2609,28 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation type="vanished">Değişiklik, yeniden başlatmanın ardından geçerli olacaktır.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Case Sensitive (Default)</source>
-        <translation>Büyük/Küçük Harfe Duyarlı (Varsayılan)</translation>
+        <translation type="vanished">Büyük/Küçük Harfe Duyarlı (Varsayılan)</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Case Insensitive (Default)</source>
-        <translation>Büyük/Küçük Harfe Duyarsız (Varsayılan)</translation>
+        <translation type="vanished">Büyük/Küçük Harfe Duyarsız (Varsayılan)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Case Insensitive</source>
-        <translation>Büyük/Küçük Harfe Duyarsız</translation>
+        <translation type="vanished">Büyük/Küçük Harfe Duyarsız</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>The file system case sensitivity change will take effect after restart.</source>
-        <translation>Dosya sistemi büyük/küçük harf duyarlılığı değişikliği, yeniden başlatmanın ardından etkili olacaktır.</translation>
+        <translation type="vanished">Dosya sistemi büyük/küçük harf duyarlılığı değişikliği, yeniden başlatmanın ardından etkili olacaktır.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-25" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-121" />
         <source>Output</source>
         <translation>Çıktı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+1807" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-27" />
         <source>&amp;File</source>
         <translation>&amp;Dosya</translation>
     </message>
@@ -1712,7 +2640,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&amp;Düzenlemek</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+41" />
         <source>&amp;Tools</source>
         <translation>&amp;Aletler</translation>
     </message>
@@ -1727,16 +2655,14 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&amp;Yardım</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+133" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-2622" />
-        <location line="+1737" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+139" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="+132" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1006" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+162" />
         <source>&amp;Save</source>
         <translation>&amp;Kaydetmek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1736" />
-        <location line="+1737" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+10" />
         <source>Save &amp;As...</source>
         <translation>F&amp;arklı kaydet...</translation>
@@ -1747,23 +2673,23 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ctrl+Shift+S</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+701" />
+        <location filename="../../../src/plugins/coreplugin/documentmanager.cpp" line="+695" />
         <source>Save A&amp;ll</source>
         <translation>&amp;Hepsini kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-284" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-338" />
         <location line="+1" />
         <source>Exit %1?</source>
         <translation>%1&apos;den çıkılsın mı?</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+135" />
         <source>&amp;View</source>
         <translation>&amp;Görüş</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+74" />
         <source>Return to Editor</source>
         <translation>Editöre Dön</translation>
     </message>
@@ -1789,7 +2715,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&amp;Açık dosya...</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+26" />
+        <source>Open File...</source>
+        <translation>Dosya Aç...</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Open File &amp;With...</source>
         <translation>Dosyayı &amp;Şununla Aç...</translation>
     </message>
@@ -1864,7 +2795,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&amp;Hepsini seç</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <source>&amp;Go to Line...</source>
         <translation>&amp;Line git...</translation>
     </message>
@@ -1879,7 +2810,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ctrl++</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Zoom Out</source>
         <translation>Uzaklaştır</translation>
     </message>
@@ -1895,7 +2826,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ctrl+Shift+-</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Original Size</source>
         <translation>Orijinal boyut</translation>
     </message>
@@ -1910,7 +2841,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ctrl+0</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>Show Logs...</source>
         <translation>Günlükleri Göster...</translation>
     </message>
@@ -1944,7 +2875,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation type="vanished">Ctrl+Alt+M</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>Hide Menu Bar</source>
         <translation>Menü çubuğunu gizle</translation>
     </message>
@@ -1954,7 +2885,8 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Bu, menü çubuğunu tamamen gizler. %1 yazarak yeniden gösterebilirsiniz.&lt;br&gt;&lt;br&gt;Veya &quot;%3&quot; konumlandırıcı filtresinden (%4) &quot;%2&quot; eylemini tetikleyin.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+19" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+252" />
         <source>&amp;Views</source>
         <translation>&amp;Görüntüleme</translation>
     </message>
@@ -1979,42 +2911,58 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Temas etmek...</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+240" />
         <source>Cycle Mode Selector Styles</source>
         <translation>Döngü Modu Seçici Stilleri</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Mode Selector Style</source>
-        <translation>Mod Seçici Stili</translation>
+        <translation type="vanished">Mod Seçici Stili</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-103" />
+        <source>Hide</source>
+        <translation>Gizle</translation>
+    </message>
+    <message>
+        <location line="+110" />
+        <source>Modes</source>
+        <translation>Kipler</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Icons and Text</source>
         <translation>Simgeler ve Metin</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Icons Only</source>
         <translation>Yalnızca Simgeler</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>Hidden</source>
         <translation>Gizlenmiş</translation>
     </message>
     <message>
-        <location line="+474" />
+        <location line="+159" />
+        <source>Show %1</source>
+        <extracomment>%1 = name of a mode</extracomment>
+        <translation>%1 Göster</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+503" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+578" />
         <source>Version:</source>
         <translation>Sürüm:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-6" />
         <source>Change Log</source>
         <translation>Değişiklik Günlüğü</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+61" />
         <source>Contact</source>
         <translation>Temas etmek</translation>
     </message>
@@ -2024,12 +2972,39 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&lt;p&gt;Qt Creator geliştiricilerine Qt Creator posta listesinden ulaşılabilir:&lt;/p&gt;%1&lt;p&gt;veya Libera.Chat IRC&apos;deki #qt-creator kanalı:&lt;/p&gt;%2&lt;p&gt;Hata izleyicimiz %3 konumunda bulunuyor.&lt;/p&gt;&lt;p&gt;Daha büyük metin parçaları için lütfen %4 kullanın.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="-819" />
+        <location line="-780" />
         <source>Ctrl+L</source>
         <translation>Ctrl+L</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="-1591" />
+        <source>Open Preferences.</source>
+        <comment>msgShowOptionsDialogToolTip</comment>
+        <translation>Tercihleri Aç.</translation>
+    </message>
+    <message>
+        <location line="+229" />
+        <source>Could not find %1 executable in %2</source>
+        <translation>%2 içinde %1 çalıştırılabilir dosyası bulunamadı</translation>
+    </message>
+    <message>
+        <location line="+622" />
+        <source>Built on %1 %2 based on Qt %3 (%4, %5)</source>
+        <extracomment>Built on &lt;date&gt; &lt;time&gt; based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
+        <translation>%3 tabanlı %1 %2 üzerinde derlendi (%4, %5)</translation>
+    </message>
+    <message>
+        <location line="+35" />
+        <source>The Qt logo, axivion stopping software erosion logo, Qt Group logo, as well as Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® are registered trademarks of The Qt Company Ltd. or its subsidiaries.</source>
+        <translation>Qt logosu, axivion stopping software erosion logosu, Qt Group logosu ile Qt®, Axivion®, axivion stopping software erosion®, Boot to Qt®, Built with Qt®, Coco®, froglogic®, Qt Cloud Services®, Qt Developer Days®, Qt Embedded®, Qt Enterprise®, Qt Group®, Qt Mobile®, Qt Quick®, Qt Quick Compiler®, Squish® The Qt Company Ltd. veya iştiraklerinin tescilli ticari markalarıdır.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>%1 is free software, and you are welcome to redistribute it under &lt;a href=&quot;%2&quot;&gt;certain conditions&lt;/a&gt;. For some components, different conditions might apply though.</source>
+        <translation>%1 özgür bir yazılımdır ve &lt;a href=&quot;%2&quot;&gt;belirli koşullar&lt;/a&gt; altında yeniden dağıtabilirsiniz. Ancak bazı bileşenler için farklı koşullar geçerli olabilir.</translation>
+    </message>
+    <message>
+        <location line="+733" />
         <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-27" />
         <source>Minimize</source>
         <translation>küçültmek</translation>
@@ -2046,18 +3021,18 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+135" />
+        <location filename="../../../src/plugins/coreplugin/windowsupport.cpp" line="+132" />
         <source>Full Screen</source>
         <translation>Tam ekran</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+125" />
         <source>About &amp;Plugins...</source>
         <translation>&amp;Eklentiler Hakkında...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+76" />
-        <location line="+244" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/openeditorsview.cpp" line="+81" />
+        <location line="+265" />
         <location filename="../../../src/plugins/coreplugin/locator/opendocumentsfilter.cpp" line="+30" />
         <source>Open Documents</source>
         <translation>Açık Belgeler</translation>
@@ -2073,19 +3048,17 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>alt+O</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+855" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+938" />
         <source>Close Editor</source>
         <translation>Editörü Kapat</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Close All Except &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; Hariç Tümünü Kapat</translation>
+        <translation type="vanished">&quot;%1&quot; Hariç Tümünü Kapat</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Close Other Editors</source>
-        <translation>Diğer Düzenleyicileri Kapat</translation>
+        <translation type="vanished">Diğer Düzenleyicileri Kapat</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/editormanager/openeditorswindow.cpp" line="+55" />
@@ -2093,14 +3066,14 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>*</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+452" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="+522" />
         <location line="+88" />
         <source>Category</source>
         <translation>Kategori</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+381" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="+369" />
         <source>Type</source>
         <translation>Tip</translation>
     </message>
@@ -2116,7 +3089,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1030" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="+1257" />
         <location line="+16" />
         <location line="+14" />
         <source>Save Log</source>
@@ -2124,8 +3097,8 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+33" />
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-726" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="+98" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-897" />
         <source>Clear</source>
         <translation>Temizlemek</translation>
     </message>
@@ -2160,7 +3133,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Zaman Damgası</translation>
     </message>
     <message>
-        <location line="-411" />
+        <location line="-458" />
         <source>Entry is missing a logging category name.</source>
         <translation>Giriş bir günlüğe kaydetme kategorisi adı eksik.</translation>
     </message>
@@ -2175,7 +3148,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Geçersiz Seviye: %1</translation>
     </message>
     <message>
-        <location line="+312" />
+        <location line="+270" />
+        <source>This logging category uses discouraged non-static approach and cannot get handled by the logging viewer.</source>
+        <translation>Bu günlük kategorisi önerilmeyen statik olmayan yaklaşımı kullanıyor ve günlük görüntüleyicisi tarafından işlenemiyor.</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Debug</source>
         <translation>Ayıklamak</translation>
     </message>
@@ -2260,27 +3238,27 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Hazır Ayardan Güncelle...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+47" />
         <source>Save Enabled Categories As...</source>
         <translation>Etkin kategorileri kaydet ...</translation>
     </message>
     <message>
-        <location line="+51" />
+        <location line="+48" />
         <source>Failed to open preset file &quot;%1&quot; for reading.</source>
         <translation>Okuma için önceden ayarlanmış &quot;%1&quot; dosyasını açılamadı.</translation>
     </message>
     <message>
-        <location line="-172" />
+        <location line="-165" />
         <source>Uncheck All</source>
         <translation>Tümünü işaretleme</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+87" />
         <source>Save Logs As</source>
         <translation>Günlükleri Farklı Kaydet</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+14" />
         <source>Failed to write logs to &quot;%1&quot;.</source>
         <translation>Günlükler &quot;%1&quot; konumuna yazılamadı.</translation>
     </message>
@@ -2294,12 +3272,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation type="vanished">Etkin Kategorileri Farklı Kaydet</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+42" />
         <source>Failed to write preset file &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; ön ayar dosyası yazılamadı.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Load Enabled Categories From</source>
         <translation>Etkin Kategorileri Yükle</translation>
     </message>
@@ -2318,42 +3296,56 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Beklenmeyen önceden ayarlanmış dosya biçimi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-190" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-295" />
         <source>Show Non-matching Lines</source>
         <translation>Eşleşmeyen Çizgileri Göster</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
+        <source>Show {} &amp;preceding lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Önceki {} satırı &amp;göster</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Show {} &amp;subsequent lines</source>
+        <extracomment>The placeholder &quot;{}&quot; is replaced by a spin box for selecting a number.</extracomment>
+        <translation>Sonraki {} satırı gö&amp;ster</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Filter output...</source>
         <translation>Çıkışı filtrele...</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+167" />
         <source>Maximize</source>
         <translation>Maksimize et</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+120" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+651" />
         <source>Next Item</source>
         <translation>Sıradaki eşya</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-12" />
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="+4" />
         <source>Previous Item</source>
         <translation>Önceki madde</translation>
     </message>
     <message>
-        <location line="+64" />
+        <location line="-20" />
         <source>Out&amp;put</source>
         <translation>Çı&amp;ktı</translation>
     </message>
     <message>
-        <location line="+472" />
+        <location line="+524" />
         <source>Reset to Default</source>
         <translation>Varsayılan olarak sıfırlayın</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-242" />
         <source>MIME Type</source>
         <translation>MIME Türü</translation>
     </message>
@@ -2363,41 +3355,41 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>işleyici</translation>
     </message>
     <message>
-        <location line="+236" />
+        <location line="+222" />
         <source>Reset all MIME type definitions to their defaults.</source>
         <translation>Tüm MIME türü tanımlarını varsayılan değerlerine sıfırlayın.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+253" />
-        <location line="+182" />
+        <location line="+256" />
+        <location line="+170" />
         <source>Reset MIME Types</source>
         <translation>MIME Türlerini Sıfırla</translation>
     </message>
     <message>
-        <location line="-432" />
+        <location line="-423" />
         <source>Reset the assigned handler for all MIME type definitions to the default.</source>
         <translation>Tüm MIME türü tanımları için atanan işleyiciyi varsayılana sıfırlayın.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+432" />
+        <location line="+423" />
         <source>Reset Handlers</source>
         <translation>İşleyicileri Sıfırla</translation>
     </message>
     <message>
-        <location line="-429" />
-        <location line="+431" />
+        <location line="-420" />
+        <location line="+422" />
         <source>Patterns:</source>
         <translation>desenler:</translation>
     </message>
     <message>
-        <location line="-427" />
+        <location line="-418" />
         <source>A semicolon-separated list of wildcarded file names.</source>
         <translation>Joker karakterli dosya adlarının noktalı virgülle ayrılmış listesi.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Magic Header</source>
         <translation>Sihirli Başlık</translation>
     </message>
@@ -2412,25 +3404,25 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Öncelik</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+403" />
+        <location line="+21" />
+        <location line="+388" />
         <source>Registered MIME Types</source>
         <translation>Kayıtlı MIME Türleri</translation>
     </message>
     <message>
-        <location line="-400" />
-        <location line="+405" />
-        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+42" />
+        <location line="-380" />
+        <location line="+385" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+61" />
         <source>Details</source>
         <translation>Detaylar</translation>
     </message>
     <message>
-        <location line="-188" />
+        <location line="-176" />
         <source>Changes will take effect after restart.</source>
         <translation>Değişiklikler, yeniden başlatmanın ardından geçerli olacaktır.</translation>
     </message>
     <message>
-        <location line="+168" />
+        <location line="+165" />
         <source>MIME Types</source>
         <translation>MIME Türleri</translation>
     </message>
@@ -2450,7 +3442,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Yüklü Eklentiler</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="+70" />
         <source>Plugin changes will take effect after restart.</source>
         <translation>Eklenti değişiklikleri, yeniden başlatmanın ardından geçerli olacaktır.</translation>
     </message>
@@ -2459,17 +3451,17 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation type="vanished">%1 Eklenti Ayrıntıları</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location filename="../../../src/plugins/coreplugin/plugindialog.cpp" line="+70" />
         <source>Plugin Errors of %1</source>
         <translation>%1 Eklenti Hataları</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+31" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressview.cpp" line="+38" />
         <source>Processes</source>
         <translation>Süreçler</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-80" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-82" />
         <source>&amp;Diff</source>
         <translation>&amp;Fark</translation>
     </message>
@@ -2479,7 +3471,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&amp;Kaydetme</translation>
     </message>
     <message>
-        <location line="+77" />
+        <location line="+79" />
         <source>&amp;Diff &amp;&amp; Cancel</source>
         <translation>&amp;Fark &amp;&amp; İptal</translation>
     </message>
@@ -2510,8 +3502,8 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-290" />
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-295" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="+90" />
         <source>Save</source>
         <translation>Kaydetmek</translation>
     </message>
@@ -2521,7 +3513,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Seçileni Kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+192" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+343" />
         <source>Click and type the new key sequence.</source>
         <translation>Tıklayın ve yeni tuş dizisini yazın.</translation>
     </message>
@@ -2532,17 +3524,17 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+1" />
-        <location line="+277" />
+        <location line="+298" />
         <source>Record</source>
         <translation>Kayıt</translation>
     </message>
     <message>
-        <location line="+427" />
+        <location line="+422" />
         <source>Keyboard</source>
         <translation>Tuş takımı</translation>
     </message>
     <message>
-        <location line="-745" />
+        <location line="-761" />
         <source>Invalid key sequence.</source>
         <translation>Geçersiz anahtar dizisi.</translation>
     </message>
@@ -2552,13 +3544,13 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Tuş sırası düzenleyicide çalışmaz.</translation>
     </message>
     <message>
-        <location line="+469" />
+        <location line="+491" />
         <source>Import Keyboard Mapping Scheme</source>
         <translation>Klavye Eşleme Şemasını İçe Aktar</translation>
     </message>
     <message>
         <location line="+2" />
-        <location line="+40" />
+        <location line="+46" />
         <source>Keyboard Mapping Scheme (*.kms)</source>
         <translation>Klavye Eşleme Şeması (*.kms)</translation>
     </message>
@@ -2568,13 +3560,13 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Klavye Eşleme Şemasını Dışa Aktarma</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+153" />
+        <location line="-378" />
+        <location line="+174" />
         <source>Key sequence:</source>
         <translation>Tuş sırası:</translation>
     </message>
     <message>
-        <location line="-149" />
+        <location line="-170" />
         <source>Use &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot;, and &quot;Shift&quot; for modifier keys. Use &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot;, and so on, for special keys. Combine individual keys with &quot;+&quot;, and combine multiple shortcuts to a shortcut sequence with &quot;,&quot;. For example, if the user must hold the Ctrl and Shift modifier keys while pressing Escape, and then release and press A, enter &quot;Ctrl+Shift+Escape,A&quot;.</source>
         <translation>Değiştirici tuşlar için &quot;Cmd&quot;, &quot;Opt&quot;, &quot;Ctrl&quot; ve &quot;Shift&quot; kullanın. Özel tuşlar için &quot;Escape&quot;, &quot;Backspace&quot;, &quot;Delete&quot;, &quot;Insert&quot;, &quot;Home&quot; vb. kullanın. Tek tek tuşları &quot;+&quot; ile birleştirin ve birden çok kısayolu &quot;,&quot; ile bir kısayol dizisine birleştirin. Örneğin, kullanıcının Escape tuşuna basarken Ctrl ve Shift değiştirici tuşlarını basılı tutması ve ardından serbest bırakıp A&apos;ya basması gerekiyorsa, &quot;Ctrl+Shift+Escape,A&quot; girin.</translation>
     </message>
@@ -2599,12 +3591,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Aramak...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolwindow.cpp" line="+34" />
         <source>Empty search term.</source>
         <translation>Boş arama terimi.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+53" />
         <source>&amp;Search</source>
         <translation>&amp;Aramak</translation>
     </message>
@@ -2614,7 +3606,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ara &amp;&amp; &amp;Değiştir</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Search f&amp;or:</source>
         <translation>&amp;Aramak:</translation>
     </message>
@@ -2622,6 +3614,16 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <location line="+14" />
         <source>Whole words o&amp;nly</source>
         <translation>Sadece butu&amp;n kelimeler</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore binary files</source>
+        <translation>İkili dosyaları yoksay</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Ignore generated files</source>
+        <translation>Oluşturulan dosyaları yoksay</translation>
     </message>
     <message>
         <location line="+3" />
@@ -2634,12 +3636,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ka&amp;psam:</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-15" />
         <source>&amp;Case sensitive</source>
         <translation>&amp;Harfe duyarlı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+312" />
+        <location filename="../../../src/plugins/coreplugin/find/findplugin.cpp" line="+274" />
         <source>&amp;Find/Replace</source>
         <translation>&amp;Bul/Değiştir</translation>
     </message>
@@ -2656,8 +3658,8 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-109" />
-        <location line="+110" />
+        <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="-111" />
+        <location line="+112" />
         <source>Advanced...</source>
         <translation>Gelişmiş...</translation>
     </message>
@@ -2696,19 +3698,19 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Değiştir &amp;&amp; Öncekini Bul</translation>
     </message>
     <message>
-        <location line="-248" />
-        <location line="+261" />
+        <location line="-250" />
+        <location line="+263" />
         <source>Replace All</source>
         <translation>Hepsini değiştir</translation>
     </message>
     <message>
-        <location line="-311" />
+        <location line="-313" />
         <source>Find Flags</source>
         <translation>İşaretleri Bul</translation>
     </message>
     <message>
         <location line="+45" />
-        <location line="+237" />
+        <location line="+239" />
         <source>Replace &amp;&amp; Find</source>
         <translation>Değiştir &amp;&amp; Bul</translation>
     </message>
@@ -2762,8 +3764,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+13" />
-        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-741" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-89" />
+        <location filename="../../../src/plugins/coreplugin/outputpanemanager.cpp" line="-818" />
         <source>Case Sensitive</source>
         <translation>Harfe duyarlı</translation>
     </message>
@@ -2789,7 +3790,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>İle değiştirin...</translation>
     </message>
     <message>
-        <location line="-522" />
+        <location line="-524" />
         <source>Find</source>
         <translation>Bulmak</translation>
     </message>
@@ -2804,9 +3805,9 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>İle değiştirin:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+138" />
+        <location filename="../../../src/plugins/coreplugin/find/searchresultwindow.cpp" line="+142" />
         <location line="+500" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+272" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+66" />
         <source>Show Paths in Relation to Active Project</source>
         <translation>Aktif projeye göre yolları gösterin</translation>
     </message>
@@ -2828,7 +3829,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+126" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+709" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+758" />
         <source>Collapse All</source>
         <translation>Hepsini Daralt</translation>
     </message>
@@ -2855,7 +3856,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/find/findtoolbar.cpp" line="+8" />
-        <location line="+227" />
+        <location line="+229" />
         <source>Replace</source>
         <translation>Yer değiştirmek</translation>
     </message>
@@ -2875,7 +3876,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>&quot;%1&quot; dosyasını şununla aç:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-459" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-449" />
         <source>Show Hidden Files</source>
         <translation>Gizli dosyaları göster</translation>
     </message>
@@ -2890,38 +3891,47 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Klasörleri Üstte Göster</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+47" />
         <source>Synchronize Root Directory with Editor</source>
         <translation>Kök Dizini Editör ile Senkronize Etme</translation>
     </message>
     <message>
-        <location line="+142" />
+        <location line="+170" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Yeni dosya</translation>
     </message>
     <message>
-        <location line="+156" />
-        <location line="+78" />
+        <location line="+157" />
+        <location line="+62" />
         <source>New Folder</source>
         <translation>Yeni dosya</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+4" />
+        <source>Remove Folder...</source>
+        <translation>Klasörü Kaldır...</translation>
+    </message>
+    <message>
+        <location line="+230" />
+        <source>New File...</source>
+        <translation>Yeni Dosya...</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="+199" />
         <source>Open &quot;%1&quot;</source>
         <translation>&quot;%1&quot;i aç</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Remove Folder</source>
-        <translation>Klasörü Kaldır</translation>
+        <translation type="vanished">Klasörü Kaldır</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-107" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="-205" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-103" />
         <location line="+9" />
-        <location line="+45" />
-        <location line="+14" />
+        <location line="+42" />
+        <location line="+13" />
         <location line="+9" />
         <location line="+29" />
         <location filename="../../../src/plugins/coreplugin/mimetypemagicdialog.cpp" line="+160" />
@@ -2954,12 +3964,11 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Ev</translation>
     </message>
     <message>
-        <location line="+145" />
         <source>Add New...</source>
-        <translation>Yeni ekle...</translation>
+        <translation type="vanished">Yeni ekle...</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+159" />
         <source>Rename...</source>
         <translation>Yeniden isimlendirmek...</translation>
     </message>
@@ -2969,12 +3978,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Kaldırmak...</translation>
     </message>
     <message>
-        <location line="-622" />
+        <location line="-643" />
         <source>Synchronize with Editor</source>
         <translation>Düzenleyici ile senkronize et</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+643" />
+        <location filename="../../../src/plugins/coreplugin/locator/ilocatorfilter.cpp" line="+654" />
         <source>Filter Configuration</source>
         <translation>Filtre Yapılandırması</translation>
     </message>
@@ -3030,14 +4039,16 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>%1 filtre güncellemesi: iptal edildi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+69" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="+96" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+102" />
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+96" />
-        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+33" />
+        <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+34" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+70" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/filepropertiesdialog.cpp" line="+1" />
         <source>Path:</source>
         <translation>Yol:</translation>
     </message>
@@ -3088,6 +4099,11 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+1" />
+        <source>Version control state:</source>
+        <translation>Sürüm denetimi durumu:</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Readable:</source>
         <translation>Okunabilir:</translation>
     </message>
@@ -3108,18 +4124,18 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Sembolik bağlantı:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <location line="+1" />
-        <location line="+18" />
-        <location line="+50" />
-        <location line="+32" />
+        <location line="+17" />
+        <location line="+49" />
+        <location line="+34" />
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+63" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/processprogress.cpp" line="+64" />
         <source>Unknown</source>
         <translation>Bilinmeyen</translation>
     </message>
     <message>
-        <location line="-91" />
+        <location line="-92" />
         <source>Windows (CRLF)</source>
         <translation>Pencereler (CRLF)</translation>
     </message>
@@ -3134,7 +4150,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Mac (CR)</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+46" />
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+102" />
         <source>Mixed</source>
         <translation>Karışık</translation>
@@ -3161,22 +4177,22 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+102" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-16" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-397" />
-        <location line="+414" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+265" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-396" />
+        <location line="+404" />
         <source>Add...</source>
         <translation>Eklemek...</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+63" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-411" />
-        <location line="+412" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-401" />
+        <location line="+402" />
         <source>Edit...</source>
         <translation>Düzenlemek...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+136" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+133" />
         <source>Uncategorized</source>
         <translation>kategorize edilmemiş</translation>
     </message>
@@ -3186,12 +4202,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Doğrudan Harici Araçlar menüsü altında görünecek araçlar.</translation>
     </message>
     <message>
-        <location line="+207" />
+        <location line="+198" />
         <source>New Category</source>
         <translation>Yeni kategori</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+26" />
         <source>New Tool</source>
         <translation>Yeni Araç</translation>
     </message>
@@ -3207,12 +4223,12 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Yararlı metin</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+57" />
         <source>System Environment</source>
         <translation>Sistem Ortamı</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+63" />
         <source>Add tool.</source>
         <translation>Araç ekle.</translation>
     </message>
@@ -3221,15 +4237,14 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <location filename="../../../src/plugins/coreplugin/locator/directoryfilter.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-3" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="+20" />
-        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-409" />
-        <location line="+410" />
+        <location filename="../../../src/plugins/coreplugin/mimetypesettings.cpp" line="-399" />
+        <location line="+400" />
         <source>Remove</source>
         <translation>Kaldırmak</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Remove tool.</source>
-        <translation>Aracı kaldırın.</translation>
+        <translation type="vanished">Aracı kaldırın.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -3291,15 +4306,13 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+422" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+126" />
         <source>No changes to apply.</source>
-        <translation>Uygulanacak değişiklik yok.</translation>
+        <translation type="vanished">Uygulanacak değişiklik yok.</translation>
     </message>
     <message>
-        <location line="-419" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-239" />
+        <location line="+15" />
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="+168" />
+        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-91" />
         <source>Change...</source>
         <translation>Değiştirmek...</translation>
     </message>
@@ -3330,23 +4343,47 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+223" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+220" />
         <source>Executable:</source>
         <comment>noun</comment>
         <translation>Yürütülebilir:</translation>
     </message>
     <message>
-        <source>Executable:</source>
-        <translation type="vanished">yürütülebilir:</translation>
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-28" />
+        <source>Custom Language Models</source>
+        <translation>Özel Dil Modelleri</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>&lt;New model&gt;</source>
+        <translation>&lt;Yeni model&gt;</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Executable</source>
+        <translation>Çalıştırılabilir dosya</translation>
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
+        <source>Executable:</source>
+        <translation>yürütülebilir:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Arguments</source>
+        <translation>Bağımsız Değişkenler</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="+1" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+8" />
         <source>Arguments:</source>
         <translation>Argümanlar:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+1" />
         <source>Working directory:</source>
         <translation>Çalışma dizini:</translation>
     </message>
@@ -3357,7 +4394,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="+5" />
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="+39" />
         <source>Environment:</source>
         <translation>Çevre:</translation>
     </message>
@@ -3372,7 +4409,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>Kategori ekle</translation>
     </message>
     <message>
-        <location line="+301" />
+        <location line="+317" />
         <source>PATH=C:\dev\bin;${PATH}</source>
         <translation>PATH=C:\dev\bin;${PATH}</translation>
     </message>
@@ -3382,7 +4419,7 @@ yeniden düzenlemeden önce değiştirilmemiş olmaları koşuluyla.</translatio
         <translation>PATH=/opt/bin:${PATH}</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+30" />
         <source>External Tools</source>
         <translation>Harici Araçlar</translation>
     </message>
@@ -3399,7 +4436,7 @@ To do this, you type this shortcut and a space in the Locator entry field, and t
 Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk yazın ve ardından aranacak kelimeyi yazın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+121" />
+        <location filename="../../../src/plugins/coreplugin/locator/filesystemfilter.cpp" line="+139" />
         <source>Files in File System</source>
         <translation>Dosya Sistemindeki Dosyalar</translation>
     </message>
@@ -3413,7 +4450,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation type="vanished">&quot;%1&quot; Oluşturun ve Açın</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-64" />
         <source>Create File</source>
         <translation>Dosya oluştur</translation>
     </message>
@@ -3448,17 +4485,17 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Dizin oluştur</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+180" />
         <source>Create and Open File &quot;%1&quot;</source>
         <translation>&quot;%1&quot; dosyası oluşturun ve açın</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Create Directory &quot;%1&quot;</source>
         <translation>&quot;%1&quot; dizini oluştur</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+55" />
         <source>Include hidden files</source>
         <translation>Gizli dosyaları dahil et</translation>
     </message>
@@ -3468,27 +4505,37 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Filtrele:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+20" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorfiltersfilter.cpp" line="+21" />
         <source>Available filters</source>
         <translation>Mevcut filtreler</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+567" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-8" />
         <source>Open as Centered Popup</source>
         <translation>Ortalanmış Açılır Pencere Olarak Aç</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="+592" />
         <source>Refresh</source>
         <translation>Yenile</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+101" />
         <source>Type to locate (%1)</source>
         <translation>Bulmak için yazın (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+67" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="+14" />
+        <source>Ignore Generated Files</source>
+        <translation>Oluşturulan Dosyaları Yoksay</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Ignore generated files when using project related filters.</source>
+        <translation>Projeyle ilgili süzgeçleri kullanırken oluşturulan dosyaları yoksay.</translation>
+    </message>
+    <message>
+        <location line="+38" />
         <source>Web Search</source>
         <translation>İnternette arama</translation>
     </message>
@@ -3508,12 +4555,12 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>QT hata izleyicisinde bir aramayı tetikler.</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+29" />
         <source>Locate...</source>
         <translation>bulun...</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+146" />
         <source>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Open a document&lt;/div&gt;&lt;table&gt;&lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Open File (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Examples &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; File &gt; Recent Files&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Drag and drop files here&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;body style=&quot;color:#909090; font-size:14px&quot;&gt;&lt;div align=&apos;center&apos;&gt;&lt;div style=&quot;font-size:20px&quot;&gt;Belge aç&lt;/div&gt;&lt;table&gt; &lt;tr&gt;&lt;td&gt;&lt;hr/&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Dosya &gt; Dosya Aç (%1)&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Dosya &gt; Örnekler &lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Dosya &gt; Son Kullanılan Dosyalar&lt;/div&gt;&lt;div style=&quot;margin-top: 5px&quot;&gt;&amp;bull; Dosyaları buraya sürükleyip bırakın&lt;/div&gt;&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;&lt;/div&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -3528,7 +4575,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>&lt;div style=&quot;margin-left: 1em&quot;&gt;- bir işlev tanımına atlamak için &lt;code&gt;%1&amp;lt;space&amp;gt;&amp;lt;pattern&amp;gt;&lt;/code&gt; yazın&lt;/div&gt;</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+83" />
         <source>Updating Locator Caches</source>
         <translation>Konum Belirleyici Önbelleklerini Güncelleme</translation>
     </message>
@@ -3538,15 +4585,15 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Bulmak için yazın</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-494" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+107" />
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="-513" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+128" />
+        <location line="+71" />
         <location filename="../../../src/plugins/coreplugin/locator/urllocatorfilter.cpp" line="-1" />
         <source>Add</source>
         <translation>Eklemek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="-58" />
+        <location filename="../../../src/plugins/coreplugin/locator/locator.cpp" line="-350" />
         <source>Refresh interval:</source>
         <translation>Yenileme aralığı:</translation>
     </message>
@@ -3556,17 +4603,23 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Özel dizin filtreleri gibi, önbelleğe alınan verilerini hemen güncellemeyen konum belirleyici filtreler, bu zaman aralığından sonra günceller.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-3" />
         <source> min</source>
+        <extracomment>short for &quot;minutes&quot;</extracomment>
         <translation> dakika</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="-19" />
+        <source>Use Tab Completion</source>
+        <translation>Sekme Tamamlamayı Kullan</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Locator filters show relative paths to the active project when possible.</source>
         <translation>Bulucu filtreler, mümkün olduğunda aktif projeye nispi yollar gösterir.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+45" />
         <source>Files in Directories</source>
         <translation>Dizinlerdeki dosyalar</translation>
     </message>
@@ -3577,12 +4630,13 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>URL Şablonu</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location filename="../../../src/plugins/coreplugin/customlanguagemodels.cpp" line="-12" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+105" />
         <source>Name</source>
         <translation>İsim</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorsettingspage.cpp" line="+0" />
         <source>Prefix</source>
         <translation>Önek</translation>
     </message>
@@ -3602,7 +4656,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Gelenek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-121" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/saveitemsdialog.cpp" line="-123" />
         <source>Save Changes</source>
         <translation>Değişiklikleri Kaydet</translation>
     </message>
@@ -3617,31 +4671,31 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Oluşturmadan önce tüm dosyaları otomatik olarak kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-105" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="-121" />
         <source>Keyboard Shortcuts</source>
         <translation>Klavye kısayolları</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+49" />
-        <location line="+107" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="+45" />
+        <location line="+129" />
         <source>Command</source>
         <translation>Emretmek</translation>
     </message>
     <message>
-        <location line="-108" />
-        <location line="+108" />
+        <location line="-130" />
+        <location line="+130" />
         <source>Label</source>
         <translation>Etiket</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/shortcutsettings.cpp" line="+1" />
-        <location line="+15" />
-        <location line="+11" />
+        <location line="+9" />
+        <location line="+34" />
         <source>Shortcut</source>
         <translation>Kısayol</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-92" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/commandmappings.cpp" line="-114" />
         <source>Command Mappings</source>
         <translation>Komut Eşlemeleri</translation>
     </message>
@@ -3652,7 +4706,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-208" />
+        <location filename="../../../src/plugins/coreplugin/loggingviewer.cpp" line="-201" />
         <source>Reset All</source>
         <translation>Hepsini sıfırla</translation>
     </message>
@@ -3663,7 +4717,6 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="+3" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-14" />
         <source>Reset to default.</source>
         <translation>Varsayılana sıfırla.</translation>
     </message>
@@ -3679,97 +4732,164 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="-5" />
-        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+6" />
-        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-295" />
-        <location filename="../../../src/plugins/coreplugin/systemsettings.cpp" line="-1" />
-        <location line="+8" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/externaltoolconfig.cpp" line="+5" />
         <source>Reset</source>
         <translation>Sıfırla</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+56" />
         <source>Plain Text Editor</source>
-        <translation>Düz Metin Düzenleyici</translation>
+        <translation type="vanished">Düz Metin Düzenleyici</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="+639" />
         <source>Show Left Sidebar</source>
         <translation>Sol Kenar Çubuğunu Göster</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Left Sidebar</source>
         <translation>Sol Kenar Çubuğunu Gizle</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Show Right Sidebar</source>
         <translation>Sağ Kenar Çubuğunu Göster</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Hide Right Sidebar</source>
         <translation>Sağ Kenar Çubuğunu Gizle</translation>
     </message>
     <message>
-        <location line="+103" />
+        <location line="+5" />
+        <source>Copy to Clipboard</source>
+        <translation>Panoya Kopyala</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+503" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/coreplugin/actionmanager/command.cpp" line="-25" />
         <source>Clear Menu</source>
         <translation>Menüyü Temizle</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/bineditor/bineditorplugin.cpp" line="+27" />
         <source>Binary Editor</source>
-        <translation>İkili Düzenleyici</translation>
+        <translation type="vanished">İkili Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/settingsdialog.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-393" />
         <source>Sort categories</source>
         <translation>Kategorileri sıralayın</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+146" />
+        <source>Apply all changes and return to previous mode.</source>
+        <translation>Tüm değişiklikleri uygula ve önceki moda dön.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location line="+9" />
+        <source>Apply all changes and stay here.</source>
+        <translation>Tüm değişiklikleri uygula ve burada kal.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <location line="+9" />
+        <source>Discard all changes and stay here.</source>
+        <translation>Tüm değişiklikleri at ve burada kal.</translation>
+    </message>
+    <message>
+        <location line="-8" />
+        <source>Discard all changes and return to previous mode.</source>
+        <translation>Tüm değişiklikleri at ve önceki moda dön.</translation>
+    </message>
+    <message>
+        <location line="+154" />
+        <location line="+41" />
+        <location line="+27" />
+        <source>Unapplied Changes</source>
+        <translation>Uygulanmamış Değişiklikler</translation>
+    </message>
+    <message>
+        <location line="-65" />
+        <source>There are unapplied changes. Do you want to apply them?</source>
+        <translation>Uygulanmamış değişiklikler var. Uygulamak istiyor musunuz?</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Apply Changes</source>
+        <translation>Değişiklikleri Uygula</translation>
+    </message>
+    <message>
+        <location line="+39" />
+        <source>The previous page contains unsaved changes.</source>
+        <translation>Önceki sayfada kaydedilmemiş değişiklikler var.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <location line="+29" />
+        <source>Apply Unsaved Changes</source>
+        <translation>Kaydedilmemiş Değişiklikleri Uygula</translation>
+    </message>
+    <message>
+        <location line="-24" />
+        <location line="+31" />
+        <source>Abandon Unsaved Changes</source>
+        <translation>Kaydedilmemiş Değişikliklerden Vazgeç</translation>
+    </message>
+    <message>
+        <location line="-26" />
+        <source>Return to Previous Page</source>
+        <translation>Önceki Sayfaya Dön</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>There are unsaved changes.</source>
+        <translation>Kaydedilmemiş değişiklikler var.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Stay in Settings Mode</source>
+        <translation>Ayarlar Kipinde Kal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+403" />
+        <location filename="../../../src/plugins/coreplugin/settingsmode.cpp" line="-388" />
+        <location line="+531" />
         <source>Preferences</source>
         <translation>Tercihler</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+492" />
-        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-66" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+507" />
+        <location filename="../../../src/plugins/coreplugin/locator/locatorwidget.cpp" line="-78" />
         <source>Options</source>
         <translation>Seçenekler</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Creates qm translation files that can be used by an application from the translator&apos;s ts files</source>
-        <translation>Çevirmenin ts dosyalarından bir uygulama tarafından kullanılabilecek qm çeviri dosyaları oluşturur</translation>
+        <translation type="vanished">Çevirmenin ts dosyalarından bir uygulama tarafından kullanılabilecek qm çeviri dosyaları oluşturur</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Release Translations (lrelease)</source>
-        <translation>Yayın Çevirileri (yayın)</translation>
+        <translation type="vanished">Yayın Çevirileri (yayın)</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+20" />
         <source>Linguist</source>
-        <translation>Dilbilimci</translation>
+        <translation type="vanished">Dilbilimci</translation>
     </message>
     <message>
-        <location line="-2" />
         <source>Synchronizes translator&apos;s ts files with the program code</source>
-        <translation>Çevirmenin ts dosyalarını program koduyla senkronize eder</translation>
+        <translation type="vanished">Çevirmenin ts dosyalarını program koduyla senkronize eder</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Update Translations (lupdate)</source>
-        <translation>Çevirileri Güncelle (lupdate)</translation>
+        <translation type="vanished">Çevirileri Güncelle (lupdate)</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/externaltools_tr.h" line="+3" />
         <source>Opens the current file in Notepad</source>
         <translation>Geçerli dosyayı Not Defteri&apos;nde açar</translation>
     </message>
@@ -3779,9 +4899,9 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Not Defteri ile düzenle</translation>
     </message>
     <message>
-        <location line="-19" />
-        <location line="+10" />
-        <location line="+10" />
+        <location line="+1" />
+        <location line="+15" />
+        <location line="+5" />
         <source>Text</source>
         <translation>Metin</translation>
     </message>
@@ -3797,7 +4917,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="+1" />
-        <location line="+20" />
+        <location line="+5" />
         <source>Qt Quick</source>
         <translation>Qt Hızlı</translation>
     </message>
@@ -3812,19 +4932,19 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Qt Hızlı 2 Önizleme (qmlscene)</translation>
     </message>
     <message>
-        <location line="-26" />
-        <location line="+10" />
+        <location line="+4" />
+        <location line="+5" />
         <source>Opens the current file in vi</source>
         <translation>Geçerli dosyayı vi&apos;de açar</translation>
     </message>
     <message>
-        <location line="-9" />
-        <location line="+10" />
+        <location line="-4" />
+        <location line="+5" />
         <source>Edit with vi</source>
         <translation>vi ile düzenle</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="+50" />
+        <location filename="../../../src/plugins/coreplugin/actionsfilter.cpp" line="-320" />
         <source>Global Actions &amp; Actions from the Menu</source>
         <translation>Menüden Küresel Eylemler ve Eylemler</translation>
     </message>
@@ -3834,7 +4954,7 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Bir eylemi tetikler. Menüden geliyorsa, menü hiyerarşisinin &quot;&gt;&quot; ile ayrılmış herhangi bir bölümüyle eşleşir. Örneğin &quot;sess def&quot;, &quot;Dosya &gt; Oturumlar &gt; Varsayılan&quot; ile eşleşir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="+156" />
+        <location filename="../../../src/plugins/coreplugin/coreplugin.cpp" line="-112" />
         <source>Proxy Authentication Required</source>
         <translation>Proxy kimlik doğrulaması gerekli</translation>
     </message>
@@ -3844,12 +4964,32 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Tekrar sorma.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
+        <source>Copy Expanded Value</source>
+        <translation>Genişletilmiş Değeri Kopyala</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>QStandardPaths::%1 location on the local filesystem.</source>
+        <translation>Yerel dosya sistemindeki QStandardPaths::%1 konumu.</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>No themes found in installation.</source>
         <translation>Kurulumda tema bulunamadı.</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+27" />
+        <source>AI</source>
+        <translation>Yapay Zekâ</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Help</source>
+        <translation>Yardım</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>The current date (ISO).</source>
         <translation>Geçerli tarih (ISO).</translation>
     </message>
@@ -3880,10 +5020,12 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="+3" />
+        <location line="+2" />
         <source>The configured default directory for projects.</source>
         <translation>Projeler için yapılandırılmış varsayılan dizin.</translation>
     </message>
     <message>
+        <location line="+2" />
         <location line="+2" />
         <source>The directory last visited in a file dialog.</source>
         <translation>Bir dosya iletişim kutusunda en son ziyaret edilen dizin.</translation>
@@ -3920,26 +5062,33 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
     </message>
     <message>
         <location line="+3" />
+        <source>.bat on windows, empty on all other platforms.</source>
+        <translation>Windows&apos;ta .bat, diğer tüm platformlarda boş.</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>The path to the running %1 itself.</source>
         <translation>Koşu %1&apos;in kendisine giden yol.</translation>
     </message>
     <message>
         <location line="+3" />
+        <location line="+4" />
         <source>The directory where %1 finds its pre-installed resources.</source>
         <translation>%1&apos;in önceden yüklenmiş kaynaklarını bulduğu dizin.</translation>
     </message>
     <message>
         <location line="+4" />
+        <location line="+4" />
         <source>The directory where %1 puts custom user data.</source>
         <translation>%1&apos;in özel kullanıcı verilerini koyduğu dizin.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+6" />
         <source>The current date (QDate formatstring).</source>
         <translation>Geçerli tarih (QDate formatstring).</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>The current time (QTime formatstring).</source>
         <translation>Geçerli saat (QTime formatstring).</translation>
     </message>
@@ -3954,22 +5103,37 @@ Bunu yapmak için, Konum Belirleyici giriş alanına bu kısayolu ve bir boşluk
         <translation>Bir yorum.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Convert string to pure ASCII.</source>
         <translation>Dizeyi saf ascii&apos;ye dönüştürün.</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+6" />
+        <source>Convert string to something that can be safely used in a file path.</source>
+        <translation>Dizeyi bir dosya yolunda güvenle kullanılabilecek bir şeye dönüştür.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The terminal configured in Environment &gt; Sytem.</source>
+        <translation>Ortam &gt; Sistem bölümünde yapılandırılan terminal.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>The arguments passed to the terminal command to run in terminal configured in Environment &gt; System.</source>
+        <translation>Ortam &gt; Sistem bölümünde yapılandırılan terminalde çalıştırılacak terminal komutuna iletilen bağımsız değişkenler.</translation>
+    </message>
+    <message>
+        <location line="+68" />
         <source>%1 &gt; %2 Preferences...</source>
         <translation>%1 &gt; %2 Tercihler...</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="-305" />
         <source>Create Folder</source>
         <translation>Klasör oluşturun</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+362" />
         <source>Settings File Error</source>
         <translation>Ayarlar Dosyası Hatası</translation>
     </message>
@@ -3998,52 +5162,48 @@ You will likely experience further problems using this instance of %3.</source>
 Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksınız.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-349" />
         <source>%1 collects crash reports for the sole purpose of fixing bugs. To disable this feature go to %2.</source>
         <translation>%1, yalnızca hataları düzeltmek amacıyla kilitlenme raporları toplar. Bu özelliği devre dışı bırakmak için %2&apos;ye gidin.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>%1 can collect crash reports for the sole purpose of fixing bugs. To enable this feature go to %2.</source>
         <translation>%1, yalnızca hataları düzeltmek amacıyla kilitlenme raporları toplayabilir. Bu özelliği etkinleştirmek için %2&apos;ye gidin.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source> &gt; Preferences &gt; Environment &gt; System</source>
         <translation> &gt; Tercihler &gt; Ortam &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Edit &gt; Preferences &gt; Environment &gt; System</source>
         <translation>Düzenle &gt; Tercihler &gt; Ortam &gt; Sistem</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>%1 uses Google Crashpad for collecting crashes and sending them to our backend for processing. Crashpad may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
-        <translation>%1, kilitlenmeleri toplamak ve işlenmek üzere arka ucumuza göndermek için Google Crashpad&apos;i kullanıyor. Crashpad, kilitlenen işlemin belleğinden kullanıcıya duyarlı bilgiler, URL&apos;ler ve kullanıcıların %1 güvendiği diğer içerikler dahil rastgele içerikleri yakalayabilir. Toplanan kilitlenme raporları, ancak yalnızca hataları düzeltmek amacıyla kullanılır.</translation>
+        <translation type="vanished">%1, kilitlenmeleri toplamak ve işlenmek üzere arka ucumuza göndermek için Google Crashpad&apos;i kullanıyor. Crashpad, kilitlenen işlemin belleğinden kullanıcıya duyarlı bilgiler, URL&apos;ler ve kullanıcıların %1 güvendiği diğer içerikler dahil rastgele içerikleri yakalayabilir. Toplanan kilitlenme raporları, ancak yalnızca hataları düzeltmek amacıyla kullanılır.</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>More information:</source>
-        <translation>Daha fazla bilgi:</translation>
+        <translation type="vanished">Daha fazla bilgi:</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Crashpad Overview</source>
-        <translation>Crashpad&apos;e Genel Bakış</translation>
+        <translation type="vanished">Crashpad&apos;e Genel Bakış</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 security policy</source>
-        <translation>%1 güvenlik politikası</translation>
+        <translation type="vanished">%1 güvenlik politikası</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+88" />
+        <location filename="../../../src/plugins/coreplugin/designmode.cpp" line="+90" />
         <source>Design</source>
         <translation>Tasarım</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/addtovcsdialog.cpp" line="+49" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+77" />
         <source>Add the file to version control (%1)</source>
         <translation>Dosyayı sürüm kontrolüne ekle (%1)</translation>
     </message>
@@ -4053,7 +5213,7 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>Dosyaları sürüm kontrolüne ekleyin (%1)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+71" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/codecselector.cpp" line="+73" />
         <source>Text Encoding</source>
         <translation>Metin kodlaması</translation>
     </message>
@@ -4068,7 +5228,7 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>&quot;%1&quot; için kodlamayı seçin.%2</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+43" />
         <source>Reload with Encoding</source>
         <translation>Kodlama ile Yeniden Yükle</translation>
     </message>
@@ -4078,7 +5238,7 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>Kodlama ile Kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/newdialogwidget.cpp" line="+204" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/newdialog.cpp" line="+253" />
         <source>Choose a template:</source>
         <translation>Bir şablon seçin:</translation>
     </message>
@@ -4088,8 +5248,8 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>Seçmek...</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+88" />
+        <location line="+65" />
+        <location filename="../../../src/plugins/coreplugin/foldernavigationwidget.cpp" line="+94" />
         <source>Projects</source>
         <translation>Projeler</translation>
     </message>
@@ -4109,7 +5269,7 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>%1 Şablonları</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+160" />
         <source>Platform independent</source>
         <translation>Platform bağımsız</translation>
     </message>
@@ -4119,7 +5279,7 @@ Bu %3 örneğini kullanırken muhtemelen daha fazla sorunla karşılaşacaksın�
         <translation>Desteklenen Platformlar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+61" />
+        <location filename="../../../src/plugins/coreplugin/dialogs/promptoverwritedialog.cpp" line="+59" />
         <source>Overwrite Existing Files</source>
         <translation>Mevcut dosyaların üzerine yaz</translation>
     </message>
@@ -4135,7 +5295,7 @@ Bunların üzerine yazmak ister misiniz?</translation>
     <message>
         <location filename="../../../src/plugins/coreplugin/dialogs/readonlyfilesdialog.cpp" line="+1" />
         <location line="+299" />
-        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-885" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/editormanager.cpp" line="-1171" />
         <location filename="../../../src/plugins/coreplugin/editortoolbar.cpp" line="-5" />
         <source>Make Writable</source>
         <translation>Yazılabilir Yap</translation>
@@ -4247,22 +5407,22 @@ Do you want to check them out now?</source>
 Onları şimdi kontrol etmek ister misin?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-968" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-1093" />
         <source>Restart Required</source>
         <translation>Yeniden başlatma gerekiyor</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Later</source>
         <translation>Daha sonra</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Restart Now</source>
         <translation>Şimdi yeniden başlat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+288" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/documentmodel.cpp" line="+325" />
         <source>&lt;no document&gt;</source>
         <translation>&lt;belge yok&gt;</translation>
     </message>
@@ -4272,27 +5432,27 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>Belge seçilmedi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+21" />
+        <location filename="../../../src/plugins/coreplugin/editormanager/systemeditor.cpp" line="+25" />
         <source>System Editor</source>
         <translation>Sistem Editörü</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Could not open URL %1.</source>
         <translation>%1 URL&apos;si açılamadı.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+590" />
+        <location filename="../../../src/plugins/coreplugin/externaltool.cpp" line="+546" />
         <source>Could not find executable for &quot;%1&quot; (expanded &quot;%2&quot;)</source>
         <translation>&quot;%1&quot; (&quot;%2&quot; genişletildi) için yürütülebilir dosya bulunamadı</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+88" />
         <source>Starting external tool &quot;%1&quot;</source>
         <translation>&quot;%1&quot; harici aracı başlatılıyor</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+12" />
         <source>&quot;%1&quot; finished</source>
         <translation>&quot;%1&quot; bitti</translation>
     </message>
@@ -4302,22 +5462,22 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>&quot;%1&quot; hatayla bitirdi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+59" />
+        <location filename="../../../src/plugins/coreplugin/externaltoolmanager.cpp" line="+66" />
         <source>&amp;External</source>
         <translation>&amp;Harici</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Error while parsing external tool %1: %2</source>
         <translation>%1 harici aracı ayrıştırılırken hata oluştu: %2</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Error: External tool in %1 has duplicate id</source>
         <translation>Hata: %1 içindeki harici aracın yinelenen kimliği var</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+60" />
+        <location filename="../../../src/plugins/coreplugin/fileutils.cpp" line="+101" />
         <source>Launching a file browser failed</source>
         <translation>Bir dosya tarayıcısı başlatılamadı</translation>
     </message>
@@ -4352,7 +5512,7 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation type="vanished">Windows Gezgini&apos;ni başlatma yolunda explorer.exe bulunamadı.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+64" />
         <source>The command for file browser is not set.</source>
         <translation>Dosya tarayıcısı için komut ayarlanmadı.</translation>
     </message>
@@ -4382,12 +5542,17 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>Finder&apos;da göster</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
+        <source>Show in File Manager</source>
+        <translation>Dosya Yöneticisinde Göster</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Show Containing Folder</source>
         <translation>İçeren Klasörü Göster</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+7" />
         <source>Open Command Prompt Here</source>
         <translation>Komut İstemini Burada Açın</translation>
     </message>
@@ -4410,16 +5575,29 @@ Onları şimdi kontrol etmek ister misin?</translation>
     </message>
     <message>
         <location line="+19" />
-        <source>Failed to remove file &quot;%1&quot;.</source>
-        <translation>&quot;%1&quot; dosyası kaldırılamadı.</translation>
+        <source>Failed to remove file &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot; dosyası kaldırılamadı: %2</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+28" />
+        <source>Cannot decode contents.</source>
+        <translation>İçerik çözülemiyor.</translation>
+    </message>
+    <message>
+        <location line="+149" />
+        <source>Failed to rename the include guard in file &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot; dosyasındaki include koruması yeniden adlandırılamadı: %2</translation>
+    </message>
+    <message>
+        <source>Failed to remove file &quot;%1&quot;.</source>
+        <translation type="vanished">&quot;%1&quot; dosyası kaldırılamadı.</translation>
+    </message>
+    <message>
         <source>Failed to rename the include guard in file &quot;%1&quot;.</source>
-        <translation>&quot;%1&quot; dosyasındaki içerme koruması yeniden adlandırılamadı.</translation>
+        <translation type="vanished">&quot;%1&quot; dosyasındaki içerme koruması yeniden adlandırılamadı.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+131" />
+        <location filename="../../../src/plugins/coreplugin/find/currentdocumentfind.cpp" line="+132" />
         <source>%n occurrences replaced.</source>
         <translation>
             <numerusform>%n oluşum değiştirildi.</numerusform>
@@ -4453,7 +5631,12 @@ Onları şimdi kontrol etmek ister misin?</translation>
     <message>
         <location line="+2" />
         <source>None</source>
-        <translation>Hiçbiri</translation>
+        <comment>No find flags</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Hiçbiri</translation>
     </message>
     <message>
         <location line="+2" />
@@ -4530,22 +5713,20 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>Hiçbir sonuç bulunamadı.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-460" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-422" />
         <source>Configure...</source>
         <comment>msgShowOptionsDialog</comment>
         <translation>Yapılandır...</translation>
     </message>
     <message>
-        <location line="+12" />
         <source>Open Preferences dialog.</source>
         <comment>msgShowOptionsDialogToolTip (mac version)</comment>
-        <translation>Tercihler iletişim kutusunu açın.</translation>
+        <translation type="vanished">Tercihler iletişim kutusunu açın.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Open Options dialog.</source>
         <comment>msgShowOptionsDialogToolTip (non-mac version)</comment>
-        <translation>Seçenekler iletişim kutusunu açın.</translation>
+        <translation type="vanished">Seçenekler iletişim kutusunu açın.</translation>
     </message>
     <message>
         <source> (%1)</source>
@@ -4556,22 +5737,28 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation type="vanished">%1 %2%3</translation>
     </message>
     <message>
-        <location line="+824" />
+        <location line="+873" />
         <source>Based on Qt %1 (%2, %3)</source>
+        <extracomment>Based on Qt &lt;version&gt; (&lt;compiler&gt;, &lt;arch&gt;)</extracomment>
         <translation>Qt %1&apos;e (%2, %3) göre</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+672" />
+        <location filename="../../../src/plugins/coreplugin/idocument.cpp" line="+353" />
+        <source>Not implemented</source>
+        <translation>Uygulanmadı</translation>
+    </message>
+    <message>
+        <location line="+295" />
         <source>File was restored from auto-saved copy. Select Save to confirm or Revert to Saved to discard changes.</source>
         <translation>Dosya, otomatik olarak kaydedilen kopyadan geri yüklendi. Onaylamak için Kaydet&apos;i veya değişiklikleri atmak için Kaydedildi&apos;ye Döndür&apos;ü seçin.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="+199" />
+        <location filename="../../../src/plugins/coreplugin/iwizardfactory.cpp" line="-304" />
         <source>Factory with id=&quot;%1&quot; already registered. Deleting.</source>
         <translation>id=&quot;%1&quot; ile fabrika zaten kayıtlı. Silme.</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location line="+231" />
         <source>Reload All Wizards</source>
         <translation>Tüm Sihirbazları Yeniden Yükle</translation>
     </message>
@@ -4579,6 +5766,11 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <location line="+12" />
         <source>Inspect Wizard State</source>
         <translation>Sihirbaz Durumunu İncele</translation>
+    </message>
+    <message>
+        <location line="+66" />
+        <source>Other</source>
+        <translation>Diğer</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/jsexpander.cpp" line="+49" />
@@ -4591,12 +5783,12 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>&quot;%1&quot; sonucu dizgeye dönüştürülemiyor.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+11" />
         <source>Evaluate simple JavaScript statements.&lt;br&gt;Literal &apos;}&apos; characters must be escaped as &quot;\}&quot;, &apos;\&apos; characters must be escaped as &quot;\\&quot;, and &quot;%{&quot; must be escaped as &quot;%\{&quot;.</source>
         <translation>Basit JavaScript deyimlerini değerlendirin.&lt;br&gt;Değişmez &apos;}&apos; karakterlerinden &quot;\}&quot;, &apos;\&apos; karakterlerinden &quot;\\&quot; ve &quot;%{&quot; karakterlerinden &quot;%\{&quot; olarak çıkış yapılmalıdır.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+28" />
+        <location filename="../../../src/plugins/coreplugin/locator/executefilter.cpp" line="+29" />
         <source>Execute Custom Commands</source>
         <translation>Özel Komutları Yürüt</translation>
     </message>
@@ -4606,7 +5798,7 @@ Onları şimdi kontrol etmek ister misin?</translation>
         <translation>Bağımsız değişkenlerle rastgele bir komut çalıştırır. Komut, gerekirse PATH ortam değişkeninde aranır. Komutun bir kabukta değil, doğrudan çalıştırıldığını unutmayın.</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+65" />
         <source>Previous command is still running (&quot;%1&quot;).
 Do you want to kill it?</source>
         <translation>Önceki komut hala çalışıyor (&quot;%1&quot;).
@@ -4618,7 +5810,7 @@ Onu öldürmek mi istiyorsun?</translation>
         <translation>Önceki İşlemi Öldür?</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+42" />
         <source>Could not find executable for &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; için yürütülebilir dosya bulunamadı.</translation>
     </message>
@@ -4638,7 +5830,7 @@ Onu öldürmek mi istiyorsun?</translation>
         <translation>Tercihlerde ayarladığınız harici bir aracı çalıştırır (Ortam &gt; Harici Araçlar).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+360" />
+        <location filename="../../../src/plugins/coreplugin/locator/javascriptfilter.cpp" line="+354" />
         <source>Evaluate JavaScript</source>
         <translation>JavaScript&apos;i değerlendirin</translation>
     </message>
@@ -4653,7 +5845,7 @@ Onu öldürmek mi istiyorsun?</translation>
         <translation>Motoru Sıfırla</translation>
     </message>
     <message>
-        <location line="-58" />
+        <location line="-50" />
         <source>Engine aborted after timeout.</source>
         <translation>Zaman aşımından sonra motor durduruldu.</translation>
     </message>
@@ -4673,13 +5865,13 @@ Onu öldürmek mi istiyorsun?</translation>
         <translation>Motor düzgün bir şekilde yeniden başlatılmadı.</translation>
     </message>
     <message>
-        <location line="+277" />
-        <location line="+4" />
+        <location line="+272" />
+        <location line="+5" />
         <source>Copy to clipboard: %1</source>
         <translation>Panoya kopyala: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-74" />
+        <location filename="../../../src/plugins/coreplugin/locator/spotlightlocatorfilter.cpp" line="-70" />
         <source>Locator: Error occurred when running &quot;%1&quot;.</source>
         <translation>Yer Belirleyici: &quot;%1&quot; çalıştırılırken hata oluştu.</translation>
     </message>
@@ -4714,7 +5906,7 @@ Onu öldürmek mi istiyorsun?</translation>
         <translation>Global dosya sistemi dizininden dosyaları bulur (Spotlight, Leve, her şey). Verilen satır numarasına atlamak için &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Suster&gt;&quot; ekleyin. Sütun numarasına da atlamak için başka bir &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Sune&gt;&quot; ekleyin.</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+109" />
         <source>Sort results</source>
         <translation>Sonuçları sıralayın</translation>
     </message>
@@ -4750,12 +5942,12 @@ Double-click to edit item.</source>
         <translation>URL&apos;ler:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/messageoutputwindow.cpp" line="-22" />
+        <location filename="../../../src/plugins/coreplugin/messagemanager.cpp" line="-23" />
         <source>Serial Terminal</source>
         <translation>Seri Terminal</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+32" />
         <source>Wrap Text</source>
         <translation>Sarma Metni</translation>
     </message>
@@ -4889,24 +6081,24 @@ Double-click to edit item.</source>
         <translation>Dahili hata: Tür geçersiz</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="+215" />
+        <location filename="../../../src/plugins/coreplugin/modemanager.cpp" line="-35" />
         <source>Switch to &lt;b&gt;%1&lt;/b&gt; mode</source>
         <translation>&lt;b&gt;%1&lt;/b&gt; moduna geç</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/navigationsubwidget.cpp" line="+167" />
-        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+233" />
+        <location filename="../../../src/plugins/coreplugin/navigationwidget.cpp" line="+231" />
         <source>Activate %1 View</source>
         <translation>%1 Görünümü Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-244" />
+        <location filename="../../../src/plugins/coreplugin/outputwindow.cpp" line="-300" />
         <source>output.txt</source>
         <extracomment>default file name suggested for saving text from output views</extracomment>
         <translation>output.txt</translation>
     </message>
     <message>
-        <location line="+210" />
+        <location line="+246" />
         <source>Zoom: %1%</source>
         <translation>Yakınlaştırma: %1%</translation>
     </message>
@@ -4915,22 +6107,38 @@ Double-click to edit item.</source>
         <source>Save Contents...</source>
         <translation>İçerikleri kaydedin ...</translation>
     </message>
+    <message>
+        <location line="+13" />
+        <source>Copy Contents to Scratch Buffer</source>
+        <translation>İçeriği Karalama Arabelleğine Kopyala</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Failed to open editor for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için düzenleyici açılamadı.</translation>
+    </message>
     <message numerus="yes">
-        <location line="+159" />
-        <source>Elided %n characters due to Application Output settings</source>
+        <location line="+217" />
+        <source>Elided %n characters due to settings limit</source>
         <translation>
+            <numerusform>Ayar sınırı nedeniyle %n karakter kısaltıldı</numerusform>
+        </translation>
+    </message>
+    <message numerus="yes">
+        <source>Elided %n characters due to Application Output settings</source>
+        <translation type="vanished">
             <numerusform>Uygulama Çıktısı ayarları nedeniyle %n karakter elendi</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+89" />
         <source>[Discarding excessive amount of pending output.]
 </source>
         <translation>[Aşırı miktarda bekleyen çıktının atılması.]
 </translation>
     </message>
     <message>
-        <location line="+404" />
+        <location line="+575" />
         <source>Text Files (*.txt);;All files (*)</source>
         <translation>Metin Dosyaları (*.txt);;Tüm dosyalar (*)</translation>
     </message>
@@ -5009,7 +6217,7 @@ Double-click to edit item.</source>
         <translation>&quot;%1&quot; başarısız oldu (çıkış kodu %2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-109" />
+        <location filename="../../../src/plugins/coreplugin/plugininstallwizard.cpp" line="-544" />
         <source>Source</source>
         <translation>Kaynak</translation>
     </message>
@@ -5024,86 +6232,137 @@ Double-click to edit item.</source>
         <translation>Dosya bulunmuyor.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+7" />
+        <source>Plugin is already installed.</source>
+        <translation>Eklenti zaten kurulu.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>A plugin with ID &quot;%1&quot; is already installed.</source>
+        <translation>&quot;%1&quot; kimlikli bir eklenti zaten kurulu.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No plugin with ID &quot;%1&quot; is installed.</source>
+        <translation>&quot;%1&quot; kimlikli eklenti kurulu değil.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Plugin failed to resolve dependencies:</source>
+        <translation>Eklenti bağımlılıkları çözümleyemedi:</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>No plugins found.</source>
+        <translation>Eklenti bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>More than one plugin found.</source>
+        <translation>Birden fazla eklenti bulundu.</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Check Archive</source>
         <translation>Arşivi Kontrol Et</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+56" />
         <source>Checking archive...</source>
         <translation>Arşiv kontrol ediliyor...</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Archive extracted successfully.</source>
+        <translation>Arşiv başarıyla çıkarıldı.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>There was an error while unarchiving: %1</source>
+        <translation>Arşivden çıkarılırken hata oluştu: %1</translation>
+    </message>
+    <message>
+        <location line="+79" />
+        <source>Load plugin immediately</source>
+        <translation>Eklentiyi hemen yükle</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>%1 will be installed into %2.</source>
+        <translation>%1, %2 içine kurulacak.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Accept Terms and Conditions</source>
+        <translation>Hüküm ve Koşulları Kabul Et</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>%1 eklentisi, aşağıdaki hüküm ve koşulları kabul etmenizi gerektiriyor:</translation>
     </message>
     <message>
         <source>The file is not an archive.</source>
         <translation type="vanished">Dosya bir arşiv değildir.</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-221" />
         <source>Canceled.</source>
         <translation>İptal edildi.</translation>
     </message>
     <message>
-        <location line="+40" />
         <source>There was an error while unarchiving.</source>
-        <translation>Arşivden çıkarılırken bir hata oluştu.</translation>
+        <translation type="vanished">Arşivden çıkarılırken bir hata oluştu.</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+26" />
+        <location line="+60" />
         <source>Archive is OK.</source>
         <translation>Arşiv tamam.</translation>
     </message>
     <message>
-        <location line="-82" />
         <source>Plugin requires an incompatible version of %1 (%2).</source>
-        <translation>Eklenti, uyumsuz bir %1 (%2) sürümü gerektiriyor.</translation>
+        <translation type="vanished">Eklenti, uyumsuz bir %1 (%2) sürümü gerektiriyor.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Did not find %1 plugin.</source>
-        <translation>%1 eklentisi bulunamadı.</translation>
+        <translation type="vanished">%1 eklentisi bulunamadı.</translation>
     </message>
     <message>
-        <location line="+117" />
         <source>Install Location</source>
-        <translation>Yükleme Konumu</translation>
+        <translation type="vanished">Yükleme Konumu</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Choose install location.</source>
-        <translation>Kurulum yerini seçin.</translation>
+        <translation type="vanished">Kurulum yerini seçin.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>User plugins</source>
-        <translation>Kullanıcı eklentileri</translation>
+        <translation type="vanished">Kullanıcı eklentileri</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available to all compatible %1 installations, but only for the current user.</source>
-        <translation>Eklenti, tüm uyumlu %1 kurulumları tarafından kullanılabilecek, ancak yalnızca mevcut kullanıcı için geçerli olacak.</translation>
+        <translation type="vanished">Eklenti, tüm uyumlu %1 kurulumları tarafından kullanılabilecek, ancak yalnızca mevcut kullanıcı için geçerli olacak.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>%1 installation</source>
-        <translation>%1 kurulum</translation>
+        <translation type="vanished">%1 kurulum</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The plugin will be available only to this %1 installation, but for all users that can access it.</source>
-        <translation>Eklenti yalnızca bu %1 kurulumu için mevcut olacak, ancak ona erişebilen tüm kullanıcılar için mevcut olacak.</translation>
+        <translation type="vanished">Eklenti yalnızca bu %1 kurulumu için mevcut olacak, ancak ona erişebilen tüm kullanıcılar için mevcut olacak.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+52" />
         <source>Summary</source>
         <translation>Özet</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>&quot;%1&quot; will be installed into &quot;%2&quot;.</source>
-        <translation>&quot;%1&quot;, &quot;%2&quot; içine yüklenecek.</translation>
+        <translation type="vanished">&quot;%1&quot;, &quot;%2&quot; içine yüklenecek.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+117" />
         <source>Overwrite File</source>
         <translation>Dosyanın üzerine yaz</translation>
     </message>
@@ -5119,46 +6378,76 @@ Double-click to edit item.</source>
     </message>
     <message>
         <location line="+10" />
+        <location line="+6" />
         <source>Failed to Write File</source>
         <translation>Dosya Yazılamadı</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-5" />
+        <source>Failed to create directory &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; dizini oluşturulamadı.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Failed to write file &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; dosyası yazılamadı.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+15" />
         <source>Install Plugin</source>
         <translation>Eklenti kur</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+57" />
+        <source>Copying plugin files...</source>
+        <translation>Eklenti dosyaları kopyalanıyor...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copying
+%1</source>
+        <translation>Kopyalanıyor
+%1</translation>
+    </message>
+    <message>
+        <location line="+11" />
         <source>Failed to Copy Plugin Files</source>
         <translation>Eklenti Dosyaları Kopyalanamadı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="+338" />
+        <location filename="../../../src/plugins/coreplugin/progressmanager/progressmanager.cpp" line="-101" />
+        <source>Show Details...</source>
+        <translation>Ayrıntıları Göster...</translation>
+    </message>
+    <message>
+        <location line="+425" />
         <source>Toggle Progress Details</source>
         <translation>İlerleme Ayrıntılarını Değiştir</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+47" />
+        <source>Auto</source>
+        <translation>Otomatik</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>unnamed</source>
         <translation>isimsiz</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location filename="../../../src/plugins/coreplugin/generalsettings.cpp" line="-46" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+74" />
         <source>Current theme: %1</source>
         <translation>Geçerli tema: %1</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-35" />
+        <location filename="../../../src/plugins/coreplugin/themechooser.cpp" line="+39" />
         <source>The theme change will take effect after restart.</source>
         <translation>Tema değişikliği, yeniden başlatmanın ardından geçerli olacaktır.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+263" />
+        <location filename="../../../src/plugins/coreplugin/vcsmanager.cpp" line="+324" />
         <source>%1 repository was detected but %1 is not configured.</source>
         <translation>%1 deposu algılandı ancak %1 yapılandırılmadı.</translation>
     </message>
@@ -5172,7 +6461,27 @@ Double-click to edit item.</source>
         <translation type="vanished">Aşağıdaki dosyalar sürüm kontrol sisteminden (%2) kaldırılsın mı? %1Not: Bu, yerel dosyayı kaldırabilir.</translation>
     </message>
     <message>
+        <location line="-184" />
+        <source>A directory under version control was detected that is supported by the %1 plugin.</source>
+        <translation>%1 eklentisinin desteklediği, sürüm denetimi altında bir dizin algılandı.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Version Control Detected</source>
+        <translation>Sürüm Denetimi Algılandı</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>Enable %1</source>
+        <translation>%1 özelliğini etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>The directory &quot;%1&quot; seems to be under version control that can be handled by the disabled %2 plugin.</source>
+        <translation>&quot;%1&quot; dizini, devre dışı bırakılmış %2 eklentisinin işleyebileceği bir sürüm denetimi altında görünüyor.</translation>
+    </message>
+    <message>
+        <location line="+168" />
         <source>Remove the following files from the version control system (%1)?</source>
         <translation>Aşağıdaki dosyaları sürüm kontrol sisteminden (%1) kaldırın?</translation>
     </message>
@@ -5209,66 +6518,139 @@ sürüm kontrolüne (%2)?</translation>
         <source>Adding to Version Control Failed</source>
         <translation>Sürüm Kontrolüne Ekleme Başarısız Oldu</translation>
     </message>
+    <message numerus="yes">
+        <location line="+11" />
+        <source>Could not add the following files to version control (%1)
+%2
+... and %n more.</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
+        <translation>
+            <numerusform>Aşağıdaki dosyalar sürüm denetimine eklenemedi (%1)
+%2
+... ve %n tane daha.</numerusform>
+        </translation>
+    </message>
     <message>
-        <location line="+6" />
+        <location line="+129" />
+        <source>added</source>
+        <translation>eklendi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>modified</source>
+        <translation>değiştirildi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>deleted</source>
+        <translation>silindi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>renamed</source>
+        <translation>yeniden adlandırıldı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>untracked</source>
+        <translation>izlenmiyor</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unmerged</source>
+        <translation>birleştirilmemiş</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>unknown</source>
+        <translation>bilinmiyor</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Version control state: added.</source>
+        <translation>Sürüm denetimi durumu: eklendi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: modified.</source>
+        <translation>Sürüm denetimi durumu: değiştirildi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: deleted.</source>
+        <translation>Sürüm denetimi durumu: silindi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: renamed.</source>
+        <translation>Sürüm denetimi durumu: yeniden adlandırıldı.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: untracked.</source>
+        <translation>Sürüm denetimi durumu: izlenmiyor.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Version control state: unmerged.</source>
+        <translation>Sürüm denetimi durumu: birleştirilmemiş.</translation>
+    </message>
+    <message>
         <source>Could not add the file
 %1
 to version control (%2)
 </source>
-        <translation>dosya eklenemedi
+        <translation type="vanished">dosya eklenemedi
 %1
 sürüm kontrolüne (%2)
 </translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-148" />
         <source>Could not add the following files to version control (%1)
 %2</source>
+        <extracomment>%1 = name of VCS system, %2 = lines with file paths</extracomment>
         <translation>Aşağıdaki dosyalar sürüm kontrolüne eklenemedi (%1)
 %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+37" />
+        <location filename="../../../src/plugins/coreplugin/versiondialog.cpp" line="+46" />
         <source>About %1</source>
         <translation>%1 hakkında</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Copy and Close</source>
-        <translation>Kopyala ve kapat</translation>
+        <translation type="vanished">Kopyala ve kapat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="+6" />
+        <location filename="../../../src/plugins/coreplugin/icore.cpp" line="-20" />
         <source>&lt;br/&gt;From revision %1&lt;br/&gt;</source>
         <translation>&lt;br/&gt;%1 revizyonundan&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>&lt;br/&gt;Built on %1 %2&lt;br/&gt;</source>
-        <translation>&lt;br/&gt;%1 %2 üzerine inşa edildi&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;br/&gt;%1 %2 üzerine inşa edildi&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Copyright 2008-%6 %7. All rights reserved.&lt;br/&gt;&lt;br/&gt;The program is provided AS IS with NO WARRANTY OF ANY KIND, INCLUDING THE WARRANTY OF DESIGN, MERCHANTABILITY AND FITNESS FOR A PARTICULAR PURPOSE.&lt;br/&gt;</source>
-        <translation>&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Telif Hakkı 2008-%6 %7. Tüm hakları saklıdır.&lt;br/&gt;&lt;br/&gt;Program, TASARIM, SATILABİLİRLİK VE BELİRLİ BİR AMACA UYGUNLUK GARANTİSİ DAHİL HİÇBİR GARANTİ OLMAKSIZIN OLDUĞU GİBİ sağlanmaktadır.&lt;br/&gt;</translation>
+        <translation type="vanished">&lt;h3&gt;%1&lt;/h3&gt;%2&lt;br/&gt;%3%4%5&lt;br/&gt;Telif Hakkı 2008-%6 %7. Tüm hakları saklıdır.&lt;br/&gt;&lt;br/&gt;Program, TASARIM, SATILABİLİRLİK VE BELİRLİ BİR AMACA UYGUNLUK GARANTİSİ DAHİL HİÇBİR GARANTİ OLMAKSIZIN OLDUĞU GİBİ sağlanmaktadır.&lt;br/&gt;</translation>
     </message>
     <message>
-        <location line="+19" />
         <source>The Qt logo as well as Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® and Qt Embedded® are registered trademarks of The Qt Company Ltd.</source>
-        <translation>Qt logosunun yanı sıra Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® ve Qt Embedded® The Qt Company Ltd&apos;nin tescilli ticari markalarıdır.</translation>
+        <translation type="vanished">Qt logosunun yanı sıra Qt®, Qt Quick®, Built with Qt®, Boot to Qt®, Qt Quick Compiler®, Qt Enterprise®, Qt Mobile® ve Qt Embedded® The Qt Company Ltd&apos;nin tescilli ticari markalarıdır.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+862" />
+        <location filename="../../../src/plugins/coreplugin/welcomepagehelper.cpp" line="+487" />
         <source>Tags:</source>
         <translation>Etiketler:</translation>
     </message>
     <message>
-        <location line="+345" />
+        <location line="+351" />
         <source>Show All</source>
         <translation>Hepsini göster</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+85" />
         <source>Back</source>
         <translation>Geri</translation>
     </message>
@@ -5288,20 +6670,225 @@ sürüm kontrolüne (%2)
         <translation>Açık bir belgeye geçer.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonconstants.h" line="+14" />
         <source>Python Editor</source>
-        <translation>Python editörü</translation>
+        <translation type="vanished">Python editörü</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+542" />
         <source>Markdown Editor</source>
-        <translation>Markdown Editor</translation>
+        <translation type="vanished">Markdown Editor</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/coreconstants.h" line="+101" />
+        <source>Cycle to Next Editor</source>
+        <translation>Sonraki Düzenleyiciye Geç</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/editormanager/editorview.cpp" line="-1" />
+        <source>Unpin</source>
+        <translation>Sabitlemeyi Kaldır</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/envvarseparatoraspect.cpp" line="-99" />
+        <source>For environment variables with list semantics that do not use the standard path list
+separator, you need to configure the respective separators here if you plan to
+aggregate them from several places (for instance from the kit and from the project).</source>
+        <translation>Standart yol listesi ayırıcısını kullanmayan, liste anlamlı ortam değişkenleri için, bunları birden çok yerden (örneğin kitten ve projeden) birleştirmeyi planlıyorsanız ilgili ayırıcıları burada yapılandırmanız gerekir.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Variable</source>
+        <translation>Değişken</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Separator</source>
+        <translation>Ayırıcı</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/mcp/mcpmanager.cpp" line="-270" />
+        <source>Add MCP Server From Registry</source>
+        <translation>Kayıt Defterinden MCP Sunucusu Ekle</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Filter servers...</source>
+        <translation>Sunucuları süz...</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>All Types</source>
+        <translation>Tüm Türler</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>npm</source>
+        <translation>npm</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PyPI</source>
+        <translation>PyPI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>OCI</source>
+        <translation>OCI</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Remote</source>
+        <translation>Uzak</translation>
+    </message>
+    <message>
+        <location line="+114" />
+        <source>Repository:</source>
+        <translation>Depo:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Website:</source>
+        <translation>Web sitesi:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Packages:</source>
+        <translation>Paketler:</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Remotes:</source>
+        <translation>Uzak depolar:</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>The display name.</source>
+        <translation>Görünen ad.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>&lt;New Server&gt;</source>
+        <translation>&lt;Yeni Sunucu&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The command to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>MCP sunucusu işlemini başlatmak için komut. Yalnızca standart G/Ç bağlantı türü için kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The arguments to launch the MCP server process. Only used for standard IO connection type.</source>
+        <translation>MCP sunucusu işlemini başlatmak için bağımsız değişkenler. Yalnızca standart G/Ç bağlantı türü için kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>The URL to connect to the MCP server. Not used for standard IO connection type.</source>
+        <translation>MCP sunucusuna bağlanılacak URL. Standart G/Ç bağlantı türü için kullanılmaz.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Connection type:</source>
+        <translation>Bağlantı türü:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The type of connection to use for the MCP server.</source>
+        <translation>MCP sunucusu için kullanılacak bağlantı türü.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Standard IO</source>
+        <translation>Standart G/Ç</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>SSE</source>
+        <translation>SSE</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Streamable HTTP</source>
+        <translation>Akışlı HTTP</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>HTTP headers:</source>
+        <translation>HTTP üstbilgileri:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>HTTP headers to include when connecting to the MCP server. Only used for HTTP connection types.</source>
+        <translation>MCP sunucusuna bağlanırken eklenecek HTTP üstbilgileri. Yalnızca HTTP bağlantı türleri için kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Environment variable changes applied when launching the MCP server process. Only used for standard IO connection type.</source>
+        <translation>MCP sunucusu işlemi başlatılırken uygulanan ortam değişkeni değişiklikleri. Yalnızca standart GÇ bağlantı türü için kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+277" />
+        <source>Choose Connection Type</source>
+        <translation>Bağlantı Türünü Seç</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This server offers multiple ways to connect. Please choose one:</source>
+        <translation>Bu sunucu birden fazla bağlanma yolu sunuyor. Lütfen birini seçin:</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Add From Registry...</source>
+        <translation>Kayıt Defterinden Ekle...</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Qt Documentation MCP Server</source>
+        <translation>Qt Belgeleri MCP Sunucusunu Etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>When enabled, the Qt documentation MCP server from https://qt-docs-mcp.qt.io/mcp will be used.</source>
+        <translation>Etkinleştirildiğinde https://qt-docs-mcp.qt.io/mcp adresindeki Qt belgeleri MCP sunucusu kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+84" />
+        <source>MCP Servers</source>
+        <translation>MCP Sunucuları</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/perspective.cpp" line="-651" />
+        <source>Leave Debug Mode</source>
+        <translation>Hata Ayıklama Kipinden Çık</translation>
+    </message>
+    <message>
+        <location line="+38" />
+        <source>Toolbar</source>
+        <translation>Araç çubuğu</translation>
+    </message>
+    <message>
+        <location line="+485" />
+        <source>Editor</source>
+        <translation>Düzenleyici</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/coreplugin/secretaspect.cpp" line="+110" />
+        <source>Secret storage is not available! Your values will be stored as plaintext in the settings!</source>
+        <translation>Gizli depolama kullanılamıyor! Değerleriniz ayarlarda düz metin olarak saklanacak!</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>You can install libsecret or KWallet to enable secret storage.</source>
+        <translation>Gizli depolamayı etkinleştirmek için libsecret veya KWallet kurabilirsiniz.</translation>
     </message>
 </context>
 <context>
     <name>QtC::DiffEditor</name>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+197" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+404" />
         <source>Context lines:</source>
         <translation>Bağlam satırları:</translation>
     </message>
@@ -5311,13 +6898,18 @@ sürüm kontrolüne (%2)
         <translation>Boşlukları Yoksay</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+1" />
+        <location line="+4" />
+        <location line="+200" />
+        <source>Fold All</source>
+        <translation>Tümünü Katla</translation>
+    </message>
+    <message>
+        <location line="-193" />
         <source>Reload Diff</source>
         <translation>Farkı Yeniden Yükle</translation>
     </message>
     <message>
-        <location line="+128" />
+        <location line="+119" />
         <source>[%1] vs. [%2] %3</source>
         <translation>[%1] ve [%2] %3</translation>
     </message>
@@ -5333,7 +6925,7 @@ sürüm kontrolüne (%2)
         <translation>[%1] %2 - [%3] %4</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+50" />
         <source>Hide Change Description</source>
         <translation>Değişiklik Açıklamasını Gizle</translation>
     </message>
@@ -5343,36 +6935,41 @@ sürüm kontrolüne (%2)
         <translation>Değişiklik Açıklamasını Göster</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+300" />
+        <location line="+11" />
+        <source>Unfold All</source>
+        <translation>Tümünü Aç</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/diffeditor/diffeditordocument.cpp" line="+285" />
         <source>Could not parse patch file &quot;%1&quot;. The content is not of unified diff format.</source>
         <translation>&quot;%1&quot; yama dosyası ayrıştırılamadı. İçerik birleşik fark biçiminde değil.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorfactory.cpp" line="+21" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+236" />
         <source>Diff Editor</source>
         <translation>Fark Düzenleyici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+111" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorplugin.cpp" line="+112" />
         <source>Diff</source>
         <translation>fark</translation>
     </message>
     <message>
-        <location line="+89" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="+91" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Saved</source>
         <translation>kaydedildi</translation>
     </message>
     <message>
-        <location line="-122" />
-        <location line="+54" />
-        <location line="+69" />
+        <location line="-117" />
+        <location line="+51" />
+        <location line="+67" />
         <source>Modified</source>
         <translation>Değiştirilmiş</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+98" />
         <source>Diff Files</source>
         <translation>Fark Dosyaları</translation>
     </message>
@@ -5382,7 +6979,7 @@ sürüm kontrolüne (%2)
         <translation>Fark Değiştirilmiş Dosyalar</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+41" />
         <source>&amp;Diff</source>
         <translation>&amp;Fark</translation>
     </message>
@@ -5403,12 +7000,12 @@ sürüm kontrolüne (%2)
     </message>
     <message>
         <location line="+4" />
-        <location line="+65" />
+        <location line="+67" />
         <source>Diff Open Files</source>
         <translation>Fark Açık Dosyalar</translation>
     </message>
     <message>
-        <location line="-63" />
+        <location line="-65" />
         <source>Meta+Shift+H</source>
         <translation>Meta+Shift+H</translation>
     </message>
@@ -5423,27 +7020,32 @@ sürüm kontrolüne (%2)
         <translation>Harici Dosyaları Fark Et...</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+54" />
         <source>Diff &quot;%1&quot;</source>
         <translation>Fark &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+19" />
         <source>Select First File for Diff</source>
         <translation>Fark için İlk Dosyayı Seçin</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+11" />
         <source>Select Second File for Diff</source>
         <translation>Fark için İkinci Dosyayı Seçin</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>Diff &quot;%1&quot;, &quot;%2&quot;</source>
         <translation>Fark &quot;%1&quot;, &quot;%2&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+228" />
+        <location filename="../../../src/plugins/diffeditor/diffeditorwidgetcontroller.cpp" line="+211" />
+        <source>File not found: &quot;%1&quot;.</source>
+        <translation>Dosya bulunamadı: &quot;%1&quot;.</translation>
+    </message>
+    <message>
+        <location line="+18" />
         <source>Send Chunk to CodePaster...</source>
         <translation>Chunk&apos;ı CodePaster&apos;a gönder...</translation>
     </message>
@@ -5458,7 +7060,7 @@ sürüm kontrolüne (%2)
         <translation>Parçayı Geri Döndür...</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+43" />
         <source>&lt;b&gt;Error:&lt;/b&gt; Could not decode &quot;%1&quot; with &quot;%2&quot;-encoding.</source>
         <translation>&lt;b&gt;Hata:&lt;/b&gt; &quot;%2&quot; kodlamasıyla &quot;%1&quot; kodu çözülemedi.</translation>
     </message>
@@ -5468,30 +7070,28 @@ sürüm kontrolüne (%2)
         <translation>Kodlama Seç</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+76" />
+        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="-743" />
         <source>Switch to Unified Diff Editor</source>
         <translation>Unified Diff Editor&apos;a geçin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffeditor.cpp" line="+52" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="+27" />
-        <location line="+81" />
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+817" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+69" />
+        <location line="+29" />
+        <location line="+535" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+823" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+70" />
         <source>Waiting for data...</source>
         <translation>Veri bekleniyor...</translation>
     </message>
     <message>
-        <location line="+9" />
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-78" />
-        <location line="+81" />
+        <location line="-532" />
+        <location line="+541" />
         <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="+57" />
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+392" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="+406" />
         <source>Retrieving data failed.</source>
         <translation>Veriler alınamadı.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/diffview.cpp" line="-33" />
+        <location line="-569" />
         <source>Switch to Side By Side Diff Editor</source>
         <translation>Yan Yana Diff Düzenleyiciye Geç</translation>
     </message>
@@ -5501,7 +7101,7 @@ sürüm kontrolüne (%2)
         <translation>Yatay Kaydırma Çubuklarını Senkronize Et</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-324" />
+        <location filename="../../../src/plugins/diffeditor/sidebysidediffeditorwidget.cpp" line="-326" />
         <source>Skipped %n lines...</source>
         <translation>
             <numerusform>%n satır atlandı...</numerusform>
@@ -5523,7 +7123,7 @@ sürüm kontrolüne (%2)
         <translation>[%1] %2</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+235" />
         <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-8" />
         <source>No difference.</source>
         <translation>Fark yok.</translation>
@@ -5535,15 +7135,20 @@ sürüm kontrolüne (%2)
         <translation>Oluşturma farkı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-487" />
+        <location filename="../../../src/plugins/diffeditor/unifieddiffeditorwidget.cpp" line="-500" />
         <source>No document</source>
         <translation>belge yok</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Copy Cleaned Text</source>
+        <translation>Temizlenmiş Metni Kopyala</translation>
     </message>
 </context>
 <context>
     <name>QtC::ExtensionSystem</name>
     <message>
-        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+64" />
+        <location filename="../../../src/libs/extensionsystem/plugindetailsview.cpp" line="+68" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
@@ -5553,14 +7158,24 @@ sürüm kontrolüne (%2)
         <translation>Sürüm:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Vendor:</source>
         <translation>SATICI:</translation>
     </message>
     <message>
-        <location line="-1" />
+        <location line="-2" />
         <source>Compatibility version:</source>
         <translation>Uyumluluk sürümü:</translation>
+    </message>
+    <message>
+        <location line="-3" />
+        <source>Id:</source>
+        <translation>Kimlik:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Vendor Id:</source>
+        <translation>Satıcı Kimliği:</translation>
     </message>
     <message>
         <location line="+2" />
@@ -5571,6 +7186,11 @@ sürüm kontrolüne (%2)
         <location line="+1" />
         <source>URL:</source>
         <translation>URL:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Documentation:</source>
+        <translation>Belgeler:</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5608,14 +7228,24 @@ sürüm kontrolüne (%2)
         <translation>Yeniden başlatmadan yüklenebilir:</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+77" />
         <source>None</source>
-        <translation>Hiçbiri</translation>
+        <comment>No category</comment>
+        <translation>Yok</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+8" />
         <source>All</source>
-        <translation>Tüm</translation>
+        <comment>Platforms: All</comment>
+        <translation>Tümü</translation>
+    </message>
+    <message>
+        <source>None</source>
+        <translation type="vanished">Hiçbiri</translation>
+    </message>
+    <message>
+        <source>All</source>
+        <translation type="vanished">Tüm</translation>
     </message>
     <message>
         <location line="+1" />
@@ -5678,19 +7308,27 @@ sürüm kontrolüne (%2)
         <translation>Eklenti yaşam döngüsünü sonlandırdı ve silindi.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+103" />
         <source>%1 (deprecated)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (kullanımdan kaldırıldı)</translation>
+        <translation type="vanished">%1 (kullanımdan kaldırıldı)</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>%1 (experimental)</source>
         <extracomment>%1 is a plugin name</extracomment>
-        <translation>%1 (deneysel)</translation>
+        <translation type="vanished">%1 (deneysel)</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/libs/extensionsystem/pluginview.cpp" line="+104" />
+        <source>deprecated</source>
+        <translation>kullanımdan kaldırıldı</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>experimental</source>
+        <translation>deneysel</translation>
+    </message>
+    <message>
+        <location line="+12" />
         <source>Path: %1
 Plugin is not available on this platform.</source>
         <translation>Yol: %1
@@ -5704,7 +7342,7 @@ Plugin is enabled as dependency of an enabled plugin.</source>
 Eklenti, etkin bir eklentinin bağımlılığı olarak etkinleştirildi.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Path: %1
 Plugin is enabled by command line argument.</source>
         <translation>Yol: %1
@@ -5723,7 +7361,7 @@ Eklenti, komut satırı bağımsız değişkeni tarafından devre dışı bırak
         <translation>Yol: %1</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+18" />
         <source>Plugin is not available on this platform.</source>
         <translation>Eklenti bu platformda mevcut değil.</translation>
     </message>
@@ -5768,7 +7406,7 @@ Eklenti, komut satırı bağımsız değişkeni tarafından devre dışı bırak
         <translation>Araçlar</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1604" />
         <source>Enabling Plugins</source>
         <translation>Eklentileri Etkinleştirme</translation>
     </message>
@@ -5786,7 +7424,7 @@ ayrıca aşağıdaki eklentileri de etkinleştirir:
 %2</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+19" />
         <source>Disabling Plugins</source>
         <translation>Eklentileri Devre Dışı Bırakma</translation>
     </message>
@@ -5844,12 +7482,12 @@ ayrıca aşağıdaki eklentileri de devre dışı bırakır:
         <translation>silindi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="+1072" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-676" />
         <source>Multiple versions of the same plugin have been found.</source>
         <translation>Aynı eklentinin birden fazla sürümü bulundu.</translation>
     </message>
     <message>
-        <location line="+440" />
+        <location line="+462" />
         <source>Circular dependency detected:</source>
         <translation>Döngüsel bağımlılık algılandı:</translation>
     </message>
@@ -5909,57 +7547,91 @@ Sebep: %3</translation>
         <translation>Eklentiyi Devre Dışı Bırak</translation>
     </message>
     <message>
-        <location line="+73" />
+        <location line="+112" />
+        <source>Terms and Conditions</source>
+        <translation>Hüküm ve Koşullar</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Accept</source>
+        <translation>Kabul Et</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Decline</source>
+        <translation>Reddet</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>The plugin %1 requires you to accept the following terms and conditions:</source>
+        <translation>%1 eklentisi, aşağıdaki hüküm ve koşulları kabul etmenizi gerektiriyor:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <location line="+33" />
+        <source>You did not accept the terms and conditions</source>
+        <translation>Hüküm ve koşulları kabul etmediniz</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Cannot load plugin because dependency failed to load: %1(%2)
 Reason: %3</source>
         <translation>Bağımlılık yüklenemediği için eklenti yüklenemiyor: %1(%2)
 Sebep: %3</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+133" />
+        <location line="+104" />
+        <source>Plugin not found.</source>
+        <translation>Eklenti bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>It does not exist.</source>
+        <translation>Mevcut değil.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/optionsparser.cpp" line="+124" />
         <source>The plugin &quot;%1&quot; is specified twice for testing.</source>
         <translation>&quot;%1&quot; eklentisi test için iki kez belirtildi.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+18" />
-        <location line="+47" />
-        <location line="+25" />
+        <location line="+5" />
+        <location line="+16" />
+        <location line="+24" />
+        <location line="+23" />
         <source>The plugin &quot;%1&quot; does not exist.</source>
         <translation>&quot;%1&quot; eklentisi mevcut değil.</translation>
     </message>
     <message>
-        <location line="-79" />
+        <location line="-52" />
         <source>The plugin &quot;%1&quot; is not tested.</source>
         <translation>&quot;%1&quot; eklentisi test edilmedi.</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Cannot request scenario &quot;%1&quot; as it was already requested.</source>
-        <translation>Zaten istendiği için &quot;%1&quot; senaryosu istenemiyor.</translation>
+        <translation type="vanished">Zaten istendiği için &quot;%1&quot; senaryosu istenemiyor.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+126" />
         <source>Unknown option %1</source>
         <translation>Bilinmeyen seçenek %1</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+18" />
         <source>The option %1 requires an argument.</source>
         <translation>%1 seçeneği bir bağımsız değişken gerektiriyor.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1071" />
+        <location filename="../../../src/libs/extensionsystem/pluginspec.cpp" line="+1275" />
         <source>Resolving dependencies failed because state != Read</source>
         <translation>Bağımlılıklar çözümlenemedi çünkü durum != Oku</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not resolve dependency &apos;%1(%2)&apos;</source>
-        <translation>&apos;%1(%2)&apos; bağımlılığı çözülemedi</translation>
+        <translation type="vanished">&apos;%1(%2)&apos; bağımlılığı çözülemedi</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+94" />
         <source>Loading the library failed because state != Resolved</source>
         <translation>durum != Çözüldüğü için kitaplığın yüklenmesi başarısız oldu</translation>
     </message>
@@ -5969,7 +7641,7 @@ Sebep: %3</translation>
         <translation>Eklenti geçerli değil (IPlugin&apos;den türetilmemiş)</translation>
     </message>
     <message>
-        <location line="-416" />
+        <location line="-518" />
         <source>&quot;%1&quot; is missing</source>
         <translation>&quot;%1&quot; eksik</translation>
     </message>
@@ -6019,13 +7691,24 @@ Sebep: %3</translation>
         <translation>Eklenti meta verileri bulunamadı</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+89" />
+        <source>Plugin id &quot;%1&quot; must be lowercase</source>
+        <translation>&quot;%1&quot; eklenti kimliği küçük harf olmalıdır</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <location line="+5" />
+        <source>Terms and conditions: %1</source>
+        <translation>Hüküm ve koşullar: %1</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>Invalid platform specification &quot;%1&quot;: %2</source>
         <translation>Geçersiz platform özelliği &quot;%1&quot;: %2</translation>
     </message>
     <message>
         <location line="+18" />
-        <location line="+5" />
+        <location line="+3" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -6051,7 +7734,12 @@ Sebep: %3</translation>
         <translation>Bağımsız Değişken: &quot;%1&quot; boş</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+89" />
+        <source>Could not resolve the dependency on plugin &quot;%1(%2)&quot;</source>
+        <translation>&quot;%1(%2)&quot; eklentisine olan bağımlılık çözümlenemedi</translation>
+    </message>
+    <message>
+        <location line="+115" />
         <source>Initializing the plugin failed because state != Loaded</source>
         <translation>Eklenti başlatılamadı çünkü durum != Yüklendi</translation>
     </message>
@@ -6066,7 +7754,17 @@ Sebep: %3</translation>
         <translation>Eklenti başlatma başarısız oldu: %1</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+5" />
+        <source>Plugin initialization threw an exception: %1</source>
+        <translation>Eklenti başlatma bir özel durum oluşturdu: %1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Plugin initialization threw an unknown exception</source>
+        <translation>Eklenti başlatma bilinmeyen bir özel durum oluşturdu</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Cannot perform extensionsInitialized because state != Initialized</source>
         <translation>extensionsInitialized gerçekleştirilemiyor çünkü durum != Başlatıldı</translation>
     </message>
@@ -6081,8 +7779,18 @@ Sebep: %3</translation>
         <translation>Dahili hata: delayInitialize gerçekleştirmek için eklenti örneği yok</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+42" />
-        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-71" />
+        <location line="+97" />
+        <source>Cannot remove system plugins.</source>
+        <translation>Sistem eklentileri kaldırılamaz.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Could not determine root folder.</source>
+        <translation>Kök klasör belirlenemedi.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/extensionsystem/pluginerroroverview.cpp" line="+53" />
+        <location filename="../../../src/libs/extensionsystem/pluginmanager.cpp" line="-391" />
         <source>Continue</source>
         <translation>Devam etmek</translation>
     </message>
@@ -6300,18 +8008,23 @@ Would you like to overwrite it?</source>
         <translation>Resim görüntüleyici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+87" />
+        <location filename="../../../src/plugins/imageviewer/imageviewerfile.cpp" line="+80" />
+        <source>File not readable.</source>
+        <translation>Dosya okunabilir değil.</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>Image format not supported.</source>
         <translation>Resim formatı desteklenmiyor.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <source>Failed to read SVG image.</source>
         <translation>SVG görüntüsü okunamadı.</translation>
     </message>
     <message>
         <location line="+13" />
-        <location line="+15" />
+        <location line="+13" />
         <source>Failed to read image.</source>
         <translation>Resim okunamadı.</translation>
     </message>
@@ -6423,37 +8136,57 @@ Bunların üzerine yazmak ister misiniz?</translation>
 <context>
     <name>QtC::LanguageClient</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+257" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="+245" />
         <source>Error %1</source>
         <translation>Hata %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+63" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="+77" />
         <source>Deprecated</source>
         <translation>Kullanımdan kaldırılmış</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Incoming</source>
         <translation>Gelen</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Outgoing</source>
         <translation>Dışa dönük</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+70" />
         <source>Bases</source>
         <translation>Üs</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+23" />
         <source>Derived</source>
         <translation>Türetilmiş</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+35" />
+        <source>Open in Editor</source>
+        <translation>Düzenleyicide Aç</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Open %1 Hierarchy</source>
+        <translation>%1 Hiyerarşisini Aç</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Call</source>
+        <translation>Çağrı</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Type</source>
+        <translation>Tür</translation>
+    </message>
+    <message>
+        <location line="+46" />
         <source>Call Hierarchy</source>
         <translation>Hiyerarşiyi ara</translation>
     </message>
@@ -6463,13 +8196,18 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>İmleç konumu altındaki sembol için çağrı hiyerarşisini yeniden yükler.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/client.cpp" line="+397" />
         <source>%1 for %2</source>
         <extracomment>&lt;language client&gt; for &lt;project&gt;</extracomment>
-        <translation>%2 için %1</translation>
+        <translation type="vanished">%2 için %1</translation>
     </message>
     <message>
-        <location line="+230" />
+        <location filename="../../../src/plugins/languageclient/client.cpp" line="+392" />
+        <source>%1 for %2 (%3, %4)</source>
+        <extracomment>for example: MyServer for MyProject (Qt 1.2.3, Release)</extracomment>
+        <translation>%1, %2 için (%3, %4)</translation>
+    </message>
+    <message>
+        <location line="+251" />
         <source>uninitialized</source>
         <extracomment>language client state</extracomment>
         <translation>sınırsız</translation>
@@ -6511,14 +8249,20 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>hata</translation>
     </message>
     <message>
-        <location line="+1342" />
+        <location line="+2" />
+        <source>failed to shutdown</source>
+        <extracomment>language client state</extracomment>
+        <translation>kapatılamadı</translation>
+    </message>
+    <message>
+        <location line="+1458" />
         <source>Invalid parameter in &quot;%1&quot;:
 %2</source>
         <translation>&quot;%1&quot; de geçersiz parametre:
  %2</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+215" />
         <source>Language Server &quot;%1&quot; Initialization Error</source>
         <translation>Dil Sunucusu &quot;%1&quot; Başlatma Hatası</translation>
     </message>
@@ -6528,12 +8272,12 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>Başlatma Hatası: %1.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+9" />
         <source>Initialize result is invalid.</source>
         <translation>Başlatma sonucu geçersizdir.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Server Info is invalid.</source>
         <translation>Sunucu bilgileri geçersiz.</translation>
     </message>
@@ -6543,12 +8287,11 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>Başlatma sonucu yok.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/diagnosticmanager.cpp" line="+187" />
         <source>Copy to Clipboard</source>
-        <translation>Panoya Kopyala</translation>
+        <translation type="vanished">Panoya Kopyala</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+22" />
+        <location filename="../../../src/plugins/languageclient/languageclient_global.h" line="+23" />
         <source>Language Client</source>
         <translation>Dil Müşterisi</translation>
     </message>
@@ -6598,33 +8341,35 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>Mesajın &quot;%1&quot; mime türü işlenemez.</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+78" />
         <source>Cannot send data to unstarted server %1</source>
         <translation>Düzensiz sunucuya veri gönderilemiyor %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+178" />
+        <location filename="../../../src/plugins/languageclient/languageclientmanager.cpp" line="+183" />
         <source>Unexpectedly finished. Restarting in %1 seconds.</source>
         <translation>Beklenmedik bir şekilde bitti. %1 saniye içinde yeniden başlatma.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Unexpectedly finished.</source>
         <translation>Beklenmedik bir şekilde bitti.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+220" />
-        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+85" />
+        <location filename="../../../src/plugins/languageclient/callandtypehierarchy.cpp" line="-230" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+224" />
+        <location filename="../../../src/plugins/languageclient/lspinspector.cpp" line="+91" />
         <source>Expand All</source>
         <translation>Hepsini genişlet</translation>
     </message>
     <message>
         <location line="+2" />
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+2" />
         <source>Collapse All</source>
         <translation>Hepsini çökert</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+57" />
+        <location filename="../../../src/plugins/languageclient/languageclientplugin.cpp" line="+61" />
         <source>Generic StdIO Language Server</source>
         <translation>Jenerik stdio dil sunucusu</translation>
     </message>
@@ -6644,7 +8389,7 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>Geçerli belgede dil sunucusu tarafından sağlanan sorunlar.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+185" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+233" />
         <source>&amp;Add</source>
         <translation>&amp;Eklemek</translation>
     </message>
@@ -6654,32 +8399,37 @@ Bunların üzerine yazmak ister misiniz?</translation>
         <translation>&amp;Silmek</translation>
     </message>
     <message>
-        <location line="+106" />
+        <location line="+111" />
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location line="+513" />
+        <location line="+219" />
         <source>Always On</source>
         <translation>Her zaman açık</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Requires an Open File</source>
         <translation>Açık bir dosya gerektirir</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Start Server per Project</source>
         <translation>Proje başına Sunucuyu Başlat</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+38" />
+        <source>Enabled:</source>
+        <translation>Etkin:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="+140" />
         <source>Set MIME Types...</source>
         <translation>Mime Türleri Set ...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="-52" />
         <source>File pattern</source>
         <translation>Dosya deseni</translation>
     </message>
@@ -6691,67 +8441,87 @@ Example: *.cpp%1*.h</source>
  Örnek: *.cpp%1 *.h</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+34" />
         <source>Failed to parse JSON at %1: %2</source>
         <translation>JSON&apos;u %1&apos;de ayrıştıramadı: %2</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>Language server-specific JSON to pass via &quot;initializationOptions&quot; field of &quot;initialize&quot; request.</source>
         <translation>Dil sunucusuna özgü JSON, &quot;başlatma&quot; isteğinin &quot;BaşlatmaPtions&quot; alanı üzerinden geçecek.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-49" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-11" />
         <source>Language:</source>
         <translation>Dil:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+4" />
         <source>File pattern:</source>
         <translation>Dosya Deseni:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Startup behavior:</source>
         <translation>Başlangıç ​​Davranışı:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+13" />
         <source>Initialization options:</source>
         <translation>Başlatma Seçenekleri:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location filename="../../../src/plugins/languageclient/mimetypesaspect.cpp" line="-56" />
         <source>Select MIME Types</source>
         <translation>MIME Türlerini Seçin</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+5" />
         <source>Filter</source>
         <translation>Filtre</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location filename="../../../src/plugins/languageclient/languageclientsettings.cpp" line="+279" />
         <source>Executable:</source>
         <translation>Yürütülebilir:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Arguments:</source>
         <translation>Argümanlar:</translation>
     </message>
     <message>
-        <location line="+93" />
+        <location line="+149" />
         <source>JSON Error</source>
         <translation>Json hatası</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+117" />
+        <source>Project Specific Language Servers</source>
+        <translation>Projeye Özgü Dil Sunucuları</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Use Global Settings</source>
+        <translation>Genel Ayarları Kullan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enabled</source>
+        <translation>Etkin</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Disabled</source>
+        <translation>Devre dışı</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>Workspace Configuration</source>
         <translation>Çalışma alanı yapılandırması</translation>
     </message>
@@ -6763,12 +8533,12 @@ See the documentation of the specific language server for valid settings.</sourc
  Geçerli ayarlar için belirli dil sunucusunun belgesine bakın.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+29" />
         <source>Language Server</source>
         <translation>Dil sunucusu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+39" />
+        <location filename="../../../src/plugins/languageclient/languageclientsymbolsupport.cpp" line="+42" />
         <source>Search Again to update results and re-enable Replace</source>
         <translation>Sonuçları güncellemek için tekrar arayın ve değiştirin değiştirin</translation>
     </message>
@@ -6787,7 +8557,7 @@ See the documentation of the specific language server for valid settings.</sourc
  %1</translation>
     </message>
     <message>
-        <location line="+331" />
+        <location line="+329" />
         <location line="+227" />
         <source>Find References with %1 for:</source>
         <translation>%1 ile referansları bulun:</translation>
@@ -6808,12 +8578,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Değiştirmeleri görmek için yazmaya başlayın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+158" />
+        <location filename="../../../src/plugins/languageclient/languageclientutils.cpp" line="+155" />
         <source>Show available quick fixes</source>
         <translation>Mevcut hızlı düzeltmeleri göster</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+126" />
         <source>Restart %1</source>
         <translation>%1</translation>
     </message>
@@ -6828,49 +8598,56 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Üstesinden gelmek...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+226" />
+        <source>Set up %1 language server (%2).</source>
+        <translation>%1 dil sunucusunu kur (%2).</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Set Up</source>
+        <translation>Kur</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>Install npm Package</source>
         <translation>NPM Paketini Yükle</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Running &quot;%1&quot; to install %2.</source>
         <translation>%2 yüklemek için &quot; %1&quot; çalıştırın.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+9" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>&quot;%1&quot; in kurulumu zaman aşımı ile iptal edildi.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>&quot;%1&quot; in kurulumu kullanıcı tarafından iptal edildi.</translation>
+        <translation type="vanished">&quot;%1&quot; in kurulumu kullanıcı tarafından iptal edildi.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-5" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
         <translation>&quot; %1&quot; yükleme %2 çıkış kodu ile başarısız oldu.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="-36" />
         <source>Install %1 language server via npm.</source>
         <translation>NPM üzerinden %1 dil sunucusunu yükleyin.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Setup %1 language server (%2).</source>
-        <translation>%1 Dil Sunucusu ( %2).</translation>
+        <translation type="vanished">%1 Dil Sunucusu ( %2).</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Install</source>
         <translation>Düzenlemek</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Setup</source>
-        <translation>Kurmak</translation>
+        <translation type="vanished">Kurmak</translation>
     </message>
     <message>
         <location line="+10" />
@@ -6898,12 +8675,12 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Seçenekler:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+20" />
         <source>Server Capabilities</source>
         <translation>Sunucu özellikleri</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+54" />
         <source>Client Message</source>
         <translation>Müşteri mesajı</translation>
     </message>
@@ -6923,22 +8700,32 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Günlük dosyası</translation>
     </message>
     <message>
-        <location line="+104" />
+        <location line="+108" />
+        <source>No client selected</source>
+        <translation>İstemci seçilmedi</translation>
+    </message>
+    <message>
+        <location line="+29" />
         <source>Language Client Inspector</source>
         <translation>Dil Müşteri Müfettişi</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>&lt;Select&gt;</source>
         <translation>&lt;Select&gt;</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+48" />
         <source>Language Server:</source>
         <translation>Dil Sunucusu:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+0" />
+        <source>Send message</source>
+        <translation>İleti gönder</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Log</source>
         <translation>Kayıt</translation>
     </message>
@@ -6948,15 +8735,25 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Yetenekler</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-45" />
         <source>Clear</source>
         <translation>Temizlemek</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
+        <source>Sort Alphabetically</source>
+        <translation>Alfabetik Sırala</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>&lt;Select Symbol&gt;</source>
+        <translation>&lt;Sembol Seç&gt;</translation>
     </message>
 </context>
 <context>
     <name>QtC::LanguageServerProtocol</name>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+84" />
+        <location filename="../../../src/libs/languageserverprotocol/basemessage.cpp" line="+75" />
         <source>Cannot decode content with &quot;%1&quot;. Falling back to &quot;%2&quot;.</source>
         <translation>İçeriği &quot;%1&quot; ile kod çözemez. &quot;%2&quot; e geri dönüyor.</translation>
     </message>
@@ -6966,7 +8763,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>&quot;%1&quot; de bir tamsayı bekleniyor, ancak &quot;%2&quot; var.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+80" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.cpp" line="+78" />
         <source>Could not parse JSON message: &quot;%1&quot;.</source>
         <translation>JSON mesajını ayrıştıramadı: &quot;%1&quot;.</translation>
     </message>
@@ -6976,17 +8773,17 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Bir JSON nesnesi bekleniyor, ancak bir JSON &quot;%1&quot; değeri var.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-91" />
+        <location filename="../../../src/libs/languageserverprotocol/jsonrpcmessages.h" line="-79" />
         <source>No parameters in &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; de parametre yok.</translation>
     </message>
     <message>
-        <location line="+213" />
+        <location line="+201" />
         <source>No ID set in &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; de kimlik ayarlanmaz.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+451" />
+        <location filename="../../../src/libs/languageserverprotocol/lsptypes.cpp" line="+449" />
         <source>Create %1</source>
         <translation>%1 Oluştur</translation>
     </message>
@@ -7002,9 +8799,172 @@ See the documentation of the specific language server for valid settings.</sourc
     </message>
 </context>
 <context>
+    <name>QtC::Mcp</name>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpcommands.cpp" line="+1197" />
+        <source>No action found with ID &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; kimliğine sahip eylem bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command &quot;%1&quot; has no associated action.</source>
+        <translation>&quot;%1&quot; komutunun ilişkili bir eylemi yok.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Action &quot;%1&quot; is disabled.</source>
+        <translation>&quot;%1&quot; eylemi devre dışı.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverinspector.cpp" line="+77" />
+        <source>Expand All</source>
+        <translation>Tümünü Genişlet</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>Client Message</source>
+        <translation>İstemci İletisi</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Messages</source>
+        <translation>İletiler</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Server Message</source>
+        <translation>Sunucu İletisi</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Log File</source>
+        <translation>Günlük Dosyası</translation>
+    </message>
+    <message>
+        <location line="+65" />
+        <source>MCP Server Inspector</source>
+        <translation>MCP Sunucu Denetçisi</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>&lt;Select&gt;</source>
+        <translation>&lt;Seç&gt;</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Clear</source>
+        <translation>Temizle</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Session:</source>
+        <translation>Oturum:</translation>
+    </message>
+    <message>
+        <location line="+73" />
+        <source>Unknown</source>
+        <translation>Bilinmiyor</translation>
+    </message>
+    <message>
+        <location line="+45" />
+        <source>Global</source>
+        <translation>Genel</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/mcpserver/mcpserverplugin.cpp" line="+70" />
+        <source>Localhost (127.0.0.1)</source>
+        <translation>Yerel makine (127.0.0.1)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Any (0.0.0.0)</source>
+        <translation>Herhangi (0.0.0.0)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Custom</source>
+        <translation>Özel</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Invalid IP address.</source>
+        <translation>Geçersiz IP adresi.</translation>
+    </message>
+    <message>
+        <location line="+61" />
+        <source>MCP Server</source>
+        <translation>MCP Sunucusu</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Inspect MCP Server...</source>
+        <translation>MCP Sunucusunu Denetle...</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to start MCP server on &quot;%1:%2&quot;.</source>
+        <translation>MCP sunucusu &quot;%1:%2&quot; üzerinde başlatılamadı.</translation>
+    </message>
+    <message>
+        <location line="+82" />
+        <source>Enable MCP Server</source>
+        <translation>MCP Sunucusunu Etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>The address the MCP Server should listen on for incoming connections.</source>
+        <translation>MCP Sunucusunun gelen bağlantılar için dinleyeceği adres.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Port:</source>
+        <translation>Bağlantı noktası:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatic</source>
+        <translation>Otomatik</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The port for the MCP Server to listen on. Leave on 0 to auto-select a free port.</source>
+        <translation>MCP Sunucusunun dinleyeceği bağlantı noktası. Boş bir bağlantı noktası otomatik seçmek için 0 bırakın.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Enable Cross Origin access:</source>
+        <translation>Çapraz Kaynak erişimini etkinleştir:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable Cross-Origin Resource Sharing (CORS) for the MCP Server. This is necessary if you want to connect to the server from a web application.</source>
+        <translation>MCP Sunucusu için Çapraz Kaynak Paylaşımını (CORS) etkinleştirin. Sunucuya bir web uygulamasından bağlanmak istiyorsanız bu gereklidir.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Address copied to clipboard.</source>
+        <translation>Adres panoya kopyalandı.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>The MCP Server is running, listening on: %1.</source>
+        <translation>MCP Sunucusu çalışıyor, dinlenen adres: %1.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The MCP Server is not running.</source>
+        <translation>MCP Sunucusu çalışmıyor.</translation>
+    </message>
+    <message>
+        <location line="+23" />
+        <source>Status:</source>
+        <translation>Durum:</translation>
+    </message>
+</context>
+<context>
     <name>QtC::OpenMV</name>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+756" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginhistogram.cpp" line="+803" />
         <location line="+34" />
         <source>Value %L1</source>
         <translation>Değer %L1</translation>
@@ -7066,11 +9026,11 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">Lütfen WiFi ağınızı buraya girin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+145" />
-        <location line="+43" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+148" />
+        <location line="+44" />
         <location line="+7" />
         <location line="+7" />
-        <location line="+36" />
+        <location line="+45" />
         <location line="+21" />
         <location line="+11" />
         <location line="+20" />
@@ -7083,68 +9043,68 @@ See the documentation of the specific language server for valid settings.</sourc
         <location line="+130" />
         <location line="+7" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+158" />
-        <location line="+988" />
+        <location line="+974" />
         <source>Dataset Editor</source>
         <translation>Veri Kümesi Düzenleyicisi</translation>
     </message>
     <message>
-        <location line="-369" />
+        <location line="-379" />
         <source>Please enter a class name</source>
         <translation>Lütfen bir sınıf adı girin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+289" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+285" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+606" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+608" />
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+522" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+518" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+241" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+231" />
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="+45" />
         <location line="+7" />
-        <location line="+75" />
+        <location line="+84" />
         <location line="+107" />
         <location line="+130" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-897" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-883" />
         <location line="+19" />
         <location line="+111" />
-        <location line="+1980" />
+        <location line="+1976" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+192" />
         <location line="+203" />
-        <location line="+454" />
+        <location line="+463" />
         <location line="+13" />
         <location line="+169" />
-        <location line="+146" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+897" />
-        <location line="+290" />
-        <location line="+1610" />
-        <location line="+1142" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+760" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+561" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+905" />
+        <location line="+301" />
+        <location line="+1628" />
+        <location line="+1143" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+764" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+565" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+275" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+562" />
+        <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+278" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+565" />
         <location line="+19" />
         <location line="+11" />
-        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+109" />
+        <location filename="../../../src/plugins/openmv/views/openmvpluginfb.cpp" line="+111" />
         <location line="+7" />
         <source>Error: %L1!</source>
         <translation>Hata: %L1!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-312" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4209" />
-        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+469" />
+        <location filename="../../../src/plugins/openmv/openmvdataseteditor.cpp" line="-321" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4202" />
+        <location filename="../../../src/plugins/openmv/openmvpluginparse.cpp" line="+471" />
         <location line="+34" />
         <location line="+48" />
         <location line="+9" />
@@ -7157,24 +9117,24 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>&quot;%L1&quot; oluşturulamadı!</translation>
     </message>
     <message>
-        <location line="+36" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3111" />
-        <location line="+1577" />
+        <location line="+45" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+3116" />
+        <location line="+1553" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+363" />
         <source>Failed to save the image file for an unknown reason!</source>
         <translation>Resim dosyası bilinmeyen bir nedenle kaydedilemedi!</translation>
     </message>
     <message>
         <location line="+16" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+721" />
-        <location line="+355" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+726" />
+        <location line="+515" />
         <source>Delete</source>
         <translation>Silmek</translation>
     </message>
     <message>
         <location line="+5" />
         <location line="+107" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-425" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-585" />
         <source>Are you sure you want to permanetly delete &quot;%L1&quot;?</source>
         <translation>&quot;%L1&quot;i kalıcı olarak silmek istediğinizden emin misiniz?</translation>
     </message>
@@ -7201,9 +9161,9 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation>Bilinmeyen bir nedenle dosya yeniden adlandırılamadı!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6261" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+63" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+62" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-6304" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+64" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+64" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; dosyası &quot;%2&quot; konumuna kopyalanamadı.</translation>
     </message>
@@ -7224,7 +9184,7 @@ See the documentation of the specific language server for valid settings.</sourc
         <translation type="vanished">-override_read_stall_timeout için bağımsız değişken eksik</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+89" />
         <source>Missing argument for -serial_number_filter</source>
         <translation>-serial_number_filter için bağımsız değişken eksik</translation>
     </message>
@@ -7237,7 +9197,22 @@ Please close any programs that are viewing/editing OpenMV IDE&apos;s application
 Lütfen OpenMV IDE&apos;nin uygulama verilerini görüntüleyen/düzenleyen programları kapatın ve ardından OpenMV IDE&apos;yi yeniden başlatın!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1733" />
+        <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+1311" />
+        <source>No documentation here</source>
+        <translation>Burada belge yok</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>No documentation for &quot;%1&quot;</source>
+        <translation>&quot;%1&quot; için belge yok</translation>
+    </message>
+    <message>
+        <location line="+462" />
+        <source>Context Help</source>
+        <translation>Bağlamsal Yardım</translation>
+    </message>
+    <message>
+        <location line="+321" />
         <source>Edit Grayscale threshold with Threshold Editor</source>
         <translation>Threshold Editor ile Gri Tonlama eşiğini düzenleyin</translation>
     </message>
@@ -7247,7 +9222,7 @@ Lütfen OpenMV IDE&apos;nin uygulama verilerini görüntüleyen/düzenleyen prog
         <translation>Threshold Editor ile LAB eşiğini düzenleyin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+470" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+471" />
         <source>Missing argument for -form_key</source>
         <translation>-form_key için bağımsız değişken eksik</translation>
     </message>
@@ -7264,7 +9239,7 @@ Lütfen OpenMV IDE&apos;nin uygulama verilerini görüntüleyen/düzenleyen prog
         <translation type="vanished">OpenMV IDE&apos;si</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+101" />
         <source>untitled_$.py</source>
         <translation>untitled_$.py</translation>
     </message>
@@ -7277,7 +9252,7 @@ Lütfen OpenMV IDE&apos;nin uygulama verilerini görüntüleyen/düzenleyen prog
         <translation type="vanished">-override_per_command_wait için eksik bağımsız değişken</translation>
     </message>
     <message>
-        <location line="-481" />
+        <location line="-542" />
         <source>Invalid argument (%1) for -auto_update</source>
         <translation>-auto_update için geçersiz bağımsız değişken (%1)</translation>
     </message>
@@ -7287,7 +9262,7 @@ Lütfen OpenMV IDE&apos;nin uygulama verilerini görüntüleyen/düzenleyen prog
         <translation>-auto_update için eksik bağımsız değişken</translation>
     </message>
     <message>
-        <location line="+269" />
+        <location line="+268" />
         <source>Error in parsing &lt;user_resources&gt;/openmvide/firmware/settings.json - %L1!
 
 Check the json file for errors and fix them.</source>
@@ -7300,7 +9275,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation type="vanished">Hata okuma &lt;user_resources&gt; /openmvide/firmware/settings.json: %l1.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="+182" />
         <source>Form Key</source>
         <translation>Form Anahtarı</translation>
     </message>
@@ -7310,7 +9285,12 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>Lütfen form anahtarını giriniz</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+67" />
+        <source>Leave Settings</source>
+        <translation>Ayarlardan Çık</translation>
+    </message>
+    <message>
+        <location line="+79" />
         <location line="+7" />
         <location line="+7" />
         <source>New File</source>
@@ -7335,7 +9315,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+82" />
+        <location filename="../../../src/plugins/openmv/openmvthirdpartysettings.cpp" line="+84" />
         <source>Examples</source>
         <translation>örnekler</translation>
     </message>
@@ -7436,33 +9416,33 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+267" />
-        <location line="+4500" />
+        <location line="+4493" />
         <location line="+59" />
         <source>Open Terminal</source>
         <translation>Terminali Aç</translation>
     </message>
     <message>
-        <location line="-4554" />
+        <location line="-4547" />
         <source>Machine Vision</source>
         <translation>Makine vizyonu</translation>
     </message>
     <message>
         <location line="+182" />
-        <location line="+4403" />
-        <location line="+75" />
+        <location line="+4396" />
+        <location line="+69" />
         <source>Threshold Editor</source>
         <translation>Eşik Düzenleyici</translation>
     </message>
     <message>
-        <location line="-4473" />
-        <location line="+4550" />
+        <location line="-4460" />
+        <location line="+4537" />
         <location filename="../../../src/plugins/openmv/tools/keypointseditor.cpp" line="+216" />
         <source>Keypoints Editor</source>
         <translation>Anahtar Nokta Editörü</translation>
     </message>
     <message>
-        <location line="-4541" />
-        <location line="+4705" />
+        <location line="-4528" />
+        <location line="+4686" />
         <location line="+97" />
         <location line="+24" />
         <location line="+11" />
@@ -7471,7 +9451,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>AprilTag Oluşturucu</translation>
     </message>
     <message>
-        <location line="-4852" />
+        <location line="-4833" />
         <source>TAG16H5 Family (30 Tags)</source>
         <translation>TAG16H5 Ailesi (30 Etiket)</translation>
     </message>
@@ -7506,18 +9486,18 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>QR Kodu Oluşturucu</translation>
     </message>
     <message>
-        <location line="-1410" />
-        <location line="+1420" />
+        <location line="-1475" />
+        <location line="+1485" />
         <location line="+14" />
         <location line="+14" />
-        <location line="+409" />
-        <location line="+1184" />
+        <location line="+411" />
+        <location line="+1161" />
         <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-304" />
         <source>Failed to open: &quot;%L1&quot;</source>
         <translation>Açılamadı: &quot;%L1&quot;</translation>
     </message>
     <message>
-        <location line="-1617" />
+        <location line="-1596" />
         <source>DataMatrix Generator</source>
         <translation>DataMatrix Oluşturucu</translation>
     </message>
@@ -7544,13 +9524,13 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+225" />
-        <location line="+2957" />
-        <location line="+1423" />
+        <location line="+2962" />
+        <location line="+1399" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+37" />
         <location line="+65" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-392" />
         <location line="+374" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1119" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="+1144" />
         <location line="+204" />
         <source>Please add a file extension!</source>
         <translation>Lütfen bir dosya uzantısı ekleyin!</translation>
@@ -7565,7 +9545,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>Çıktı dosyasının üzerine yazılamıyor!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4590" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4571" />
         <source>Video Tools</source>
         <translation>Video Araçları</translation>
     </message>
@@ -7665,37 +9645,37 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+239" />
         <location line="+141" />
         <location line="+67" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-376" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+219" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-370" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+221" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+0" />
-        <location line="+1979" />
+        <location line="+1975" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
         <location line="+326" />
-        <location line="+703" />
-        <location line="+146" />
+        <location line="+712" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
-        <location line="+428" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3447" />
-        <location line="+255" />
-        <location line="+400" />
-        <location line="+1610" />
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+977" />
+        <location line="+416" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3471" />
+        <location line="+249" />
+        <location line="+411" />
+        <location line="+1628" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="+989" />
         <location line="+301" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="-147" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1558" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-1583" />
         <location line="+85" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Cancel</source>
         <translation>İptal etmek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4405" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-4386" />
         <source>Upload to Edge Impulse Project</source>
         <translation>Edge Impulse Projesine Yükle</translation>
     </message>
@@ -7732,7 +9712,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>OpenMV Belgeleri</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <source>OpenMV Forums</source>
         <translation>OpenMV Forumları</translation>
     </message>
@@ -7786,21 +9766,21 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation type="vanished">OpenMV Görüntüleyici</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+74" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+76" />
         <location line="+54" />
         <location line="+9" />
         <location line="+9" />
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-223" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-217" />
         <location line="+87" />
         <location line="+57" />
         <location line="+37" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+62" />
-        <location line="+29" />
-        <location line="+27" />
+        <location line="+23" />
+        <location line="+21" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-354" />
         <location line="+37" />
@@ -7817,7 +9797,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+36" />
         <location line="+26" />
         <location line="+17" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+117" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="+119" />
         <location line="+54" />
         <location line="+32" />
         <location line="+28" />
@@ -7831,16 +9811,16 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+122" />
         <location line="+11" />
         <location line="+61" />
-        <location line="+19" />
+        <location line="+13" />
         <location line="+13" />
         <location line="+9" />
         <location line="+42" />
-        <location line="+40" />
-        <location line="+41" />
-        <location line="+26" />
-        <location line="+18" />
+        <location line="+34" />
+        <location line="+35" />
+        <location line="+20" />
+        <location line="+12" />
         <location line="+23" />
-        <location line="+18" />
+        <location line="+12" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-130" />
         <location line="+101" />
         <location line="+9" />
@@ -7851,38 +9831,38 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+32" />
         <location line="+26" />
         <location line="+34" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-145" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-133" />
         <location line="+35" />
         <location line="+14" />
         <location line="+35" />
-        <location line="+22" />
         <location line="+16" />
+        <location line="+10" />
         <location line="+13" />
         <location line="+9" />
         <location line="+16" />
         <location line="+14" />
         <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+17" />
-        <location line="+1231" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1571" />
+        <location line="+1208" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1589" />
         <location line="+6" />
         <location line="+27" />
         <location line="+153" />
         <location line="+9" />
         <location line="+96" />
         <location line="+40" />
-        <location line="+479" />
+        <location line="+480" />
         <location line="+148" />
-        <location line="+34" />
-        <location line="+100" />
+        <location line="+35" />
+        <location line="+102" />
         <location line="+58" />
         <location line="+70" />
-        <location line="+13" />
+        <location line="+14" />
         <location line="+84" />
         <location line="+10" />
         <location line="+12" />
-        <location line="+29" />
-        <location line="+38" />
-        <location line="+86" />
+        <location line="+40" />
+        <location line="+39" />
+        <location line="+87" />
         <location line="+9" />
         <location line="+35" />
         <location line="+9" />
@@ -7893,7 +9873,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+5" />
         <location line="+72" />
         <location line="+118" />
-        <location line="+90" />
+        <location line="+91" />
         <location line="+82" />
         <location line="+9" />
         <location line="+9" />
@@ -7912,11 +9892,11 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <location line="+154" />
         <location line="+229" />
         <location line="+33" />
-        <location line="+399" />
+        <location line="+398" />
         <location line="+17" />
         <location line="+14" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+777" />
-        <location line="+48" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+765" />
+        <location line="+42" />
         <source>Connect</source>
         <translation>Bağlamak</translation>
     </message>
@@ -7932,12 +9912,12 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+9" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-933" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-932" />
         <source>Only firmware recovery is supported using the Alif Semiconductor&apos;s SE Tools.</source>
         <translation>ALIF Semiconductor&apos;ın SE araçları kullanılarak yalnızca ürün yazılımı kurtarma desteklenir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1217" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-1194" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+179" />
         <location line="+26" />
         <location line="+7" />
@@ -7955,8 +9935,8 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>Durdur (komut dosyasını durdur)</translation>
     </message>
     <message>
-        <location line="+70" />
-        <location line="+297" />
+        <location line="+48" />
+        <location line="+302" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-60" />
         <location line="+166" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="+50" />
@@ -7964,9 +9944,9 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>Çerçeve Arabelleği</translation>
     </message>
     <message>
-        <location line="-290" />
+        <location line="-294" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-159" />
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2961" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="+2965" />
         <location line="+665" />
         <location line="+435" />
         <source>Record</source>
@@ -7979,7 +9959,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation>Çerçeve Arabelleğini Kaydet</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+5" />
         <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-507" />
         <location line="+400" />
@@ -8101,8 +10081,8 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
         <translation type="vanished">Çözünürlük (g:%1, h:%2)</translation>
     </message>
     <message>
-        <location line="-1486" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2554" />
+        <location line="-1468" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2584" />
         <source>Load Custom Firmware</source>
         <translation>Özel ürün yazılımı yükleyin</translation>
     </message>
@@ -8134,7 +10114,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+0" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+692" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+852" />
         <location line="+6" />
         <source>Load ROMFS onto OpenMV Cam</source>
         <translation>ROMFS&apos;yi OpenMV Cam&apos;e Yükle</translation>
@@ -8171,7 +10151,7 @@ json dosyasında hata olup olmadığını denetleyin ve düzeltin.</translation>
     </message>
     <message>
         <location line="+8" />
-        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/settingseditor.cpp" line="+190" />
         <location line="+346" />
         <location line="+12" />
         <location line="+9" />
@@ -8230,9 +10210,9 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <location line="+34" />
         <location line="+30" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="+66" />
         <location line="+9" />
-        <location line="+86" />
+        <location line="+89" />
         <location line="+15" />
         <source>Copy/Convert Python File</source>
         <translation>Python dosyasını kopyala/dönüştür</translation>
@@ -8254,7 +10234,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <location line="+7" />
         <location line="+33" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-885" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1045" />
         <location line="+27" />
         <source>Convert Model</source>
         <translation>Model Dönüştür</translation>
@@ -8320,7 +10300,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation>Lisans</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+40" />
         <location line="+8" />
         <source>About %1</source>
         <translation>%1 Hakkında</translation>
@@ -8336,25 +10316,25 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation>&lt;p&gt;&lt;b&gt;%L4 %L1 Hakkında&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Yazar: Ibrahim Abdelkader ve Kwabena W. Agyeman&lt;/p&gt;&lt;p&gt;&lt;b&gt;FABRİKA SÜRÜMÜ&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Yalnızca lisanslı üreticilere yöneliktir.&lt;/p&gt;&lt;p&gt;&lt;b&gt;GNU GENEL KAMU LİSANSI&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Telif Hakkı (C) %L2 %L3&lt;/p&gt;&lt;p&gt;Bu program aşağıdakiler ümidiyle dağıtılmaktadır: faydalı olacaktır ancak HERHANGİ BİR GARANTİ OLMAKSIZIN; TİCARİ ELVERİŞLİLİK veya BELİRLİ BİR AMACA UYGUNLUK garantisi dahi olmaksızın. Daha fazla ayrıntı için &lt;a href=&quot;https://github.com/openmv/qt-creator/raw/master/LICENSE.GPL3-EXCEPT&quot;&gt;GNU Genel Kamu Lisansı&lt;/a&gt;&apos;na bakın.&lt;/p&gt;&lt;p&gt;&lt;b&gt;Sorularınız veya Yorumlarınız mı var?&lt;/b&gt;&lt;/p&gt;&lt;p&gt;Bize &lt;a href=&quot;mailto:openmv@openmv.io&quot;&gt;openmv@openmv.io&lt;/a&gt; adresinden ulaşın.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+193" />
+        <location line="+173" />
         <source>Select the Frame Buffer source, or turn it off for maximum performance</source>
         <translation>Kare Arabelleği kaynağını seçin veya en yüksek performans için kapatın</translation>
     </message>
     <message>
         <location line="+5" />
-        <location line="+2091" />
+        <location line="+2105" />
         <source>Off</source>
         <translation>Kapalı</translation>
     </message>
     <message>
-        <location line="-2090" />
-        <location line="+2094" />
+        <location line="-2104" />
+        <location line="+2108" />
         <location line="+6" />
         <source>On</source>
         <translation>Açık</translation>
     </message>
     <message>
-        <location line="-2071" />
+        <location line="-2085" />
         <source>JPG Mode</source>
         <translation>JPG Modu</translation>
     </message>
@@ -8377,7 +10357,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation>FPS: %L1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+384" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+388" />
         <source>Close</source>
         <translation>Kapalı</translation>
     </message>
@@ -8397,8 +10377,8 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation>Veri Yakalama</translation>
     </message>
     <message>
-        <location line="+65" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3745" />
+        <location line="+64" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3774" />
         <source>Board:</source>
         <translation>Pano:</translation>
     </message>
@@ -8463,7 +10443,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+400" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3978" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-4001" />
         <source>Update Available</source>
         <translation>Güncelleme uygun</translation>
     </message>
@@ -8472,7 +10452,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation type="vanished">OpenMV IDE&apos;nin (%L1.%L2.%L3) yeni bir sürümü indirilebilir.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Download</source>
         <translation>İndirmek</translation>
     </message>
@@ -8485,7 +10465,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation type="vanished">Başka bir uygulama, OpenMV Cam yayın bulma bağlantı noktasını kullanıyor. Lütfen bu uygulamayı kapatın ve WiFi programlamayı etkinleştirmek için OpenMV IDE&apos;yi yeniden başlatın.</translation>
     </message>
     <message>
-        <location line="+463" />
+        <location line="+460" />
         <source>Documents Folder Error</source>
         <translation>Belgeler Klasörü Hatası</translation>
     </message>
@@ -8495,7 +10475,7 @@ Farklı bir ad seçmek ister misiniz?</translation>
         <translation>Belgeler klasörü oluşturulamadı!</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+39" />
         <source>GitHub Copilot</source>
         <translation>Github Copilot</translation>
     </message>
@@ -8555,27 +10535,27 @@ OpenMV Cam&apos;inizin donanım yazılımı, bir donanım arızası nedeniyle pa
     </message>
     <message>
         <location line="+99" />
-        <location line="+1414" />
+        <location line="+1423" />
         <source>Serial Port - %L1 - %L2 BPS</source>
         <translation>Seri Bağlantı Noktası - %L1 - %L2 BPS</translation>
     </message>
     <message>
-        <location line="-1382" />
+        <location line="-1391" />
         <location line="+106" />
         <location line="+96" />
         <location line="+101" />
         <location line="+96" />
-        <location line="+1029" />
-        <location line="+146" />
+        <location line="+1038" />
+        <location line="+140" />
         <location line="+114" />
-        <location line="+130" />
+        <location line="+124" />
         <location line="+114" />
         <location line="+117" />
         <source>Connecting... (30 second timeout)</source>
         <translation>Bağlanıyor... (30 saniye zaman aşımı)</translation>
     </message>
     <message>
-        <location line="-2022" />
+        <location line="-2019" />
         <source>
 
 Try doing:
@@ -8628,12 +10608,12 @@ sudo adduser %L1 arama
     </message>
     <message>
         <location line="+17" />
-        <location line="+1472" />
+        <location line="+1475" />
         <source>UDP Server Connection - %1</source>
         <translation>UDP Sunucu Bağlantısı - %1</translation>
     </message>
     <message>
-        <location line="-1398" />
+        <location line="-1401" />
         <source>Invalid port argument (%1) for -open_udp_server_terminal</source>
         <translation>-open_udp_server_terminal için geçersiz bağlantı noktası bağımsız değişkeni (%1)</translation>
     </message>
@@ -8664,12 +10644,12 @@ sudo adduser %L1 arama
     </message>
     <message>
         <location line="+17" />
-        <location line="+1519" />
+        <location line="+1516" />
         <source>TCP Server Connection - %1</source>
         <translation>TCP Sunucu Bağlantısı - %1</translation>
     </message>
     <message>
-        <location line="-1445" />
+        <location line="-1442" />
         <source>Invalid port argument (%1) for -open_tcp_server_terminal</source>
         <translation>-open_tcp_server_terminal için geçersiz bağlantı noktası bağımsız değişkeni (%1)</translation>
     </message>
@@ -8698,7 +10678,7 @@ sudo adduser %L1 arama
         <location line="+6" />
         <location line="+8" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3192" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3216" />
         <location line="+10" />
         <location line="+8" />
         <location line="+23" />
@@ -8859,19 +10839,19 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation type="vanished">Ayarları Yapılandır</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+425" />
-        <location line="+20" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+424" />
+        <location line="+21" />
         <source>Save Script</source>
         <translation>Komut Dosyasını Kaydet</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-20" />
         <source>Strip comments and convert spaces to tabs?</source>
         <translation>Yorumları çıkar ve boşlukları sekmelere dönüştür?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+112" />
-        <location line="+7" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+120" />
+        <location line="+8" />
         <location line="+18" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-75" />
         <location line="+7" />
@@ -8880,14 +10860,14 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Resmi Kaydet</translation>
     </message>
     <message>
-        <location line="-23" />
-        <location line="+1236" />
+        <location line="-24" />
+        <location line="+1219" />
         <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-23" />
         <source>Image Files (*.bmp *.jpg *.jpeg *.png *.ppm)</source>
         <translation>Görüntü Dosyaları (*.bmp *.jpg *.jpeg *.png *.ppm)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+48" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="+49" />
         <location line="+8" />
         <location line="+17" />
         <location line="+15" />
@@ -8920,7 +10900,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Tanımlayıcıyı Kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+86" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+80" />
         <location line="+80" />
         <location line="+21" />
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-37" />
@@ -8928,7 +10908,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Anahtar Nokta Dosyaları (*.lbp *.orb)</translation>
     </message>
     <message>
-        <location line="-1112" />
+        <location line="-1088" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -8936,20 +10916,20 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Açık dosya</translation>
     </message>
     <message>
-        <location line="-4752" />
+        <location line="-4824" />
         <location line="+8" />
         <location line="+10" />
         <location line="+11" />
-        <location line="+28" />
+        <location line="+27" />
         <location line="+28" />
         <location line="+6" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3176" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-3206" />
         <location line="+9" />
         <location line="+13" />
         <location line="+65" />
         <location line="+6" />
         <location filename="../../../src/plugins/openmv/openmvplugindoc.cpp" line="+45" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-784" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-769" />
         <location line="+36" />
         <location line="+7" />
         <location line="+8" />
@@ -8972,7 +10952,7 @@ Lütfen %1 uygulama verilerini görüntüleyen/düzenleyen tüm programları kap
 v4.3.0 öncesi %2 sürümlerinde bu dosya yoktur ve kaynaklar yüklenirken silinmiş olurdu.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+30" />
         <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-424" />
         <location line="+126" />
         <location line="+51" />
@@ -8985,7 +10965,7 @@ v4.3.0 öncesi %2 sürümlerinde bu dosya yoktur ve kaynaklar yüklenirken silin
         <translation>Üçüncü Taraf Depolar</translation>
     </message>
     <message>
-        <location line="+1496" />
+        <location line="+1564" />
         <source>&lt;p&gt;&lt;b&gt;Release Notes&lt;/b&gt;&lt;/p&gt;</source>
         <translation>&lt;p&gt;&lt;b&gt;Sürüm Notları&lt;/b&gt;&lt;/p&gt;</translation>
     </message>
@@ -9015,7 +10995,7 @@ v4.3.0 öncesi %2 sürümlerinde bu dosya yoktur ve kaynaklar yüklenirken silin
         <translation>Kare Arabelleği - Çözünürlük (w:%1, h:%2) - Odak (%3)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+714" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="+697" />
         <source>Camera serial port -- click to give this camera a friendly name</source>
         <translation>Kamera seri bağlantı noktası -- bu kameraya kolay bir ad vermek için tıklayın</translation>
     </message>
@@ -9025,7 +11005,7 @@ v4.3.0 öncesi %2 sürümlerinde bu dosya yoktur ve kaynaklar yüklenirken silin
         <translation>%5 uygulamasının yeni bir sürümü (%L1.%L2.%L3) indirilebilir. &lt;a href=&quot;%L4&quot;&gt;Sürüm notlarına&lt;/a&gt; bakın.</translation>
     </message>
     <message>
-        <location line="+124" />
+        <location line="+118" />
         <source>Connect (Network available)</source>
         <translation>Bağlan (Ağ kullanılabilir)</translation>
     </message>
@@ -9045,7 +11025,7 @@ v4.3.0 öncesi %2 sürümlerinde bu dosya yoktur ve kaynaklar yüklenirken silin
         <translation>-auto_run, görüntüleyici modunda komut satırında okunabilir bir metin betik dosyası bağımsız değişkeni gerektirir.</translation>
     </message>
     <message>
-        <location line="+290" />
+        <location line="+307" />
         <source>Thanks for using the OpenMV Cam and %1!
 
 Your OpenMV Cam&apos;s onboard LED blinks with diffent colors to indicate its state:
@@ -9108,7 +11088,7 @@ Would you like to register your OpenMV Cam now?</source>
 OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
-        <location line="+604" />
+        <location line="+613" />
         <location line="+7" />
         <location line="+6" />
         <location line="+7" />
@@ -9129,12 +11109,12 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-474" />
-        <location line="+38" />
+        <location line="+37" />
         <source>Select Drive</source>
         <translation>Drive&apos;ı seçin</translation>
     </message>
     <message>
-        <location line="-37" />
+        <location line="-36" />
         <source>No valid drives were found to associate with your OpenMV Cam!</source>
         <translation>OpenMV Cam&apos;inizle ilişkilendirilecek geçerli sürücü bulunamadı!</translation>
     </message>
@@ -9153,7 +11133,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Kamera üzerindeki FPS ve IDE ekran FPS&apos;si</translation>
     </message>
     <message>
-        <location line="+111" />
+        <location line="+110" />
         <source>Please associate a drive with your OpenMV Cam</source>
         <translation>Lütfen bir sürücüyü OpenMV Cam&apos;inizle ilişkilendirin</translation>
     </message>
@@ -9235,14 +11215,14 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Kod Profilcisi Yoklaması (ms)</translation>
     </message>
     <message>
-        <location line="+442" />
+        <location line="+443" />
         <location line="+26" />
         <location line="+7" />
         <source>Failed to flush &quot;%L1&quot;!</source>
         <translation>&quot;%L1&quot; temizlenemedi!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2835" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-2858" />
         <location line="+7" />
         <source>Stream JPG-compressed images for higher performance</source>
         <translation>Daha yüksek performans için JPG ile sıkıştırılmış görüntüleri aktar</translation>
@@ -9284,7 +11264,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Bu bölmenin neyi görüntüleyeceğini seçin</translation>
     </message>
     <message>
-        <location line="+114" />
+        <location line="+117" />
         <source>Frame Buffer (%1)</source>
         <translation>Kare Arabelleği (%1)</translation>
     </message>
@@ -9305,19 +11285,19 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+262" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3390" />
-        <location line="+431" />
-        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-639" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+3420" />
+        <location line="+430" />
+        <location filename="../../../src/plugins/openmv/openmvpluginprotocol.cpp" line="-640" />
         <source>No Drive</source>
         <translation>Sürücü Yok</translation>
     </message>
     <message>
-        <location line="+1966" />
+        <location line="+1980" />
         <source>OpenMV Cam Error</source>
         <translation>OpenMV Cam Hatası</translation>
     </message>
     <message>
-        <location line="+392" />
+        <location line="+398" />
         <location line="+12" />
         <location line="+31" />
         <location line="+9" />
@@ -9326,14 +11306,14 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <location line="+17" />
         <location line="+9" />
         <location line="+8" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
         <location line="+9" />
         <location line="+82" />
         <location line="+24" />
-        <location line="+14" />
+        <location line="+8" />
         <location line="+92" />
         <location line="+16" />
         <location line="+7" />
@@ -9343,7 +11323,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Yeni Terminal</translation>
     </message>
     <message>
-        <location line="-641" />
+        <location line="-629" />
         <source>Connect to serial port</source>
         <translation>Seri bağlantı noktasına bağlanın</translation>
     </message>
@@ -9364,7 +11344,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+31" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2154" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2156" />
         <source>Please select a serial port</source>
         <translation>Lütfen bir seri bağlantı noktası seçin</translation>
     </message>
@@ -9375,7 +11355,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+96" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+249" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+251" />
         <source>Try doing:
 
 </source>
@@ -9391,15 +11371,15 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+17" />
-        <location line="+139" />
+        <location line="+133" />
         <location line="+7" />
-        <location line="+237" />
+        <location line="+231" />
         <location line="+7" />
         <source>Invalid string: &quot;%L1&quot;!</source>
         <translation>Geçersiz dize: &quot;%L1&quot;!</translation>
     </message>
     <message>
-        <location line="-381" />
+        <location line="-369" />
         <source>No serial ports found!</source>
         <translation>Seri bağlantı noktası bulunamadı!</translation>
     </message>
@@ -9409,41 +11389,41 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Bir UDP sunucusuna istemci olarak bağlanın veya bir UDP Sunucusu başlatın.</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location line="+244" />
+        <location line="+1" />
+        <location line="+238" />
         <source> Connect to a Server </source>
         <translation> Bir Sunucuya Bağlan </translation>
     </message>
     <message>
-        <location line="-243" />
-        <location line="+244" />
+        <location line="-238" />
+        <location line="+238" />
         <source> Start a Server </source>
         <translation> Sunucu Başlat </translation>
     </message>
     <message>
-        <location line="-234" />
-        <location line="+244" />
+        <location line="-231" />
+        <location line="+238" />
         <source>Please enter a IP address (or domain name) and port (e.g. xxx.xxx.xxx.xxx:xxxx)</source>
         <translation>Lütfen bir IP adresi (veya etki alanı adı) ve bağlantı noktası (ör. xxx.xxx.xxx.xxx:xxxx) girin</translation>
     </message>
     <message>
-        <location line="-222" />
+        <location line="-216" />
         <source>UDP Client Connection - %1</source>
         <translation>UDP İstemci Bağlantısı - %1</translation>
     </message>
     <message>
         <location line="+102" />
-        <location line="+244" />
+        <location line="+238" />
         <source>Please enter a port number (enter 0 for any random free port)</source>
         <translation>Lütfen bir bağlantı noktası numarası girin (herhangi bir rastgele boş bağlantı noktası için 0 girin)</translation>
     </message>
     <message>
-        <location line="-138" />
+        <location line="-132" />
         <source>Connect to a TCP server as a client or start a TCP Server?</source>
         <translation>İstemci olarak bir TCP sunucusuna bağlanmak mı yoksa bir TCP Sunucusu başlatmak mı?</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>TCP Client Connection - %1</source>
         <translation>TCP İstemci Bağlantısı - %1</translation>
     </message>
@@ -9463,17 +11443,17 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Kaynak görüntü konumu?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Frame Buffer </source>
         <translation> Çerçeve Arabelleği </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Image File </source>
         <translation> Görüntü dosyası </translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+16" />
         <location line="+71" />
         <source>The selected threshold tuple will be updated on close.</source>
         <translation>Seçilen eşik demeti kapanışta güncellenecektir.</translation>
@@ -9490,22 +11470,22 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="+70" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+924" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="+1084" />
         <source>What would you like to do?</source>
         <translation>Ne yapmak istersin?</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+1" />
         <source> Edit File </source>
         <translation> Dosya düzenle </translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+0" />
         <source> Merge Files </source>
         <translation> Dosyaları Birleştir </translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+9" />
         <location line="+65" />
         <location line="+7" />
         <source>Edit Keypoints</source>
@@ -9606,36 +11586,36 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation type="vanished">Yeni OpenMV IDE kaynakları mevcuttur (örn. örnekler, donanım yazılımı, belgeler vb.).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2063" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2089" />
         <source>Install</source>
         <translation>Düzenlemek</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location line="+400" />
+        <location line="+4" />
+        <location line="+411" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+266" />
-        <location line="+165" />
-        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+175" />
+        <location line="+168" />
+        <location filename="../../../src/plugins/openmv/tools/bossac.cpp" line="+193" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+362" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="+371" />
         <location line="+46" />
         <location line="+74" />
         <location line="+46" />
         <location line="+73" />
         <location line="+47" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+685" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+701" />
         <location line="+50" />
-        <location line="+925" />
+        <location line="+825" />
         <location line="+50" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+223" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+235" />
         <location line="+51" />
-        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+97" />
+        <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="+98" />
         <location line="+57" />
         <source>Downloading...</source>
         <translation>indiriliyor...</translation>
     </message>
     <message>
-        <location line="-379" />
+        <location line="-390" />
         <source>Installing...</source>
         <translation>yükleniyor...</translation>
     </message>
@@ -9657,13 +11637,13 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
     </message>
     <message>
         <location line="-27" />
-        <location line="+290" />
+        <location line="+301" />
         <source>Cannot open the resources file &quot;%L1&quot;!</source>
         <translation>&quot;%L1&quot; kaynak dosyası açılamıyor!</translation>
     </message>
     <message>
-        <location line="-262" />
-        <location line="+289" />
+        <location line="-273" />
+        <location line="+300" />
         <source>Network request failed &quot;%L1&quot;!</source>
         <translation>Ağ isteği başarısız oldu &quot;%L1&quot;!</translation>
     </message>
@@ -9672,49 +11652,49 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation type="vanished">Firmware Binary ( *.bin *.dfu *.img)</translation>
     </message>
     <message>
-        <location line="-244" />
-        <location line="+279" />
-        <location line="+945" />
-        <location line="+231" />
-        <location line="+2873" />
+        <location line="-255" />
+        <location line="+290" />
+        <location line="+949" />
+        <location line="+232" />
+        <location line="+2887" />
         <location line="+78" />
         <source>Erase internal FAT file system</source>
         <translation>Dahili yağ dosya sistemini silin</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+279" />
-        <location line="+947" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+290" />
+        <location line="+951" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>If you enable this option all files on your OpenMV Cam&apos;s internal FAT file system will be deleted. This does not erase files on any removable SD card (if inserted).</source>
         <translation>Bu seçeneği etkinleştirirseniz, OpenMV kameranın dahili yağ dosya sistemindeki tüm dosyalar silinir. Bu, çıkarılabilir SD kartındaki dosyaları silmez (eklenirse).</translation>
     </message>
     <message>
-        <location line="-4403" />
-        <location line="+1226" />
-        <location line="+230" />
-        <location line="+2872" />
+        <location line="-4433" />
+        <location line="+1241" />
+        <location line="+231" />
+        <location line="+2886" />
         <location line="+78" />
         <source>Reset ROMFS file system</source>
         <translation>ROMFS Dosya Sistemini Sıfırla</translation>
     </message>
     <message>
-        <location line="-4402" />
-        <location line="+1227" />
-        <location line="+229" />
-        <location line="+2871" />
+        <location line="-4432" />
+        <location line="+1242" />
+        <location line="+230" />
+        <location line="+2885" />
         <location line="+78" />
         <source>If you enable this option the ROM file system on your OpenMV Cam will be reset back to default.</source>
         <translation>Bu seçeneği etkinleştirirseniz, OpenMV kameranızdaki ROM dosyası sistemi varsayılan olarak tekrar sıfırlanır.</translation>
     </message>
     <message>
-        <location line="-4302" />
+        <location line="-4315" />
         <location line="+7" />
         <location line="+16" />
         <location line="+13" />
-        <location line="+113" />
+        <location line="+107" />
         <location filename="../../../src/plugins/openmv/views/openmvboardinfoview.cpp" line="-5" />
         <source>Bootloader</source>
         <translation>Önyükleyici</translation>
@@ -9730,12 +11710,12 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>OpenMV Cam önyükleyicisine girmeye zorlayın. OpenMV Cam önyükleyicisinin eski kartlarda otomatik olarak çıkmamasına neden olabilir.</translation>
     </message>
     <message>
-        <location line="+918" />
+        <location line="+922" />
         <source>Install the latest release firmware (v%L1.%L2.%L3)</source>
         <translation>En son sürüm ürün yazılımını yükleyin (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+1098" />
+        <location line="+1113" />
         <location line="+194" />
         <source>Failed to copy firmware files to temporary directory!</source>
         <translation>Firmware dosyaları geçici dizine kopyalanamadı!</translation>
@@ -9775,7 +11755,7 @@ OpenMV Cam&apos;inizi şimdi kaydettirmek ister misiniz?</translation>
         <translation>Bilinmiyor (0x%1)</translation>
     </message>
     <message>
-        <location line="+699" />
+        <location line="+698" />
         <source>Your OpenMV Cam RT1062 is connected, but %L1 does not have Input Monitoring permission on this Mac. Without it, firmware updates for the RT1062 will fail with a &quot;UsbHidPeripheral() cannot open USB HID device&quot; error, because macOS blocks the NXP flashing tools (blhost, sdphost) that %L1 uses from opening the RT1062&apos;s USB HID bootloader.
 
 To grant access, open the Apple menu, go to System Settings, click Privacy &amp; Security in the sidebar, click Input Monitoring, and enable %L1 in the list. Then quit and reopen %L1 so the new grant takes effect (macOS reads privacy grants at launch).
@@ -9799,7 +11779,7 @@ Bunu önlemek için Apple menüsünü açın, Sistem Ayarları&apos;na gidin, ke
     <message>
         <location line="+568" />
         <location line="+10" />
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+84" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="+89" />
         <location line="+16" />
         <source>Run Script</source>
         <translation>Betiği Çalıştır</translation>
@@ -9817,7 +11797,7 @@ Bunu önlemek için Apple menüsünü açın, Sistem Ayarları&apos;na gidin, ke
         <translation>Hata: &quot;%L1&quot; açılamıyor!</translation>
     </message>
     <message>
-        <location line="+229" />
+        <location line="+230" />
         <source>You can find more examples under the File -&gt; Examples menu.
 
 In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Learning -&gt; TensorFlow examples.</source>
@@ -9826,7 +11806,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
 Özellikle Görüntü İşleme -&gt; Renk İzleme ve Makine Öğrenimi -&gt; TensorFlow örneklerine göz atın.</translation>
     </message>
     <message>
-        <location line="-4274" />
+        <location line="-4304" />
         <location line="+5" />
         <location filename="../../../src/plugins/openmv/openmvprofile.cpp" line="-72" />
         <location line="+4" />
@@ -9851,17 +11831,17 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
     </message>
     <message>
         <location line="+21" />
-        <location line="+310" />
+        <location line="+321" />
         <source>Run</source>
         <translation>Koşmak</translation>
     </message>
     <message>
-        <location line="-173" />
+        <location line="-167" />
         <source>&quot;%L1&quot; is not a file!</source>
         <translation>&quot;%L1&quot; bir dosya değil!</translation>
     </message>
     <message>
-        <location line="+135" />
+        <location line="+129" />
         <source>Update ROMFS file system</source>
         <translation>ROMFS Dosya Sistemini Güncelle</translation>
     </message>
@@ -9889,7 +11869,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation>Bilinmeyen Kurul</translation>
     </message>
     <message>
-        <location line="+457" />
+        <location line="+459" />
         <source>A board in DFU mode was detected. What would you like to do?</source>
         <translation>DFU modunda bir kart algılandı. Ne yapmak istersin?</translation>
     </message>
@@ -9898,7 +11878,7 @@ In particular, checkout the Image Processing -&gt; Color-Tracking and Machine Le
         <translation type="vanished">En son sürüm üretici yazılımını kurun (v%L1.%L2.%L3)</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Load a specific firmware</source>
         <translation>Belirli bir üretici yazılımı yükleyin</translation>
     </message>
@@ -9925,7 +11905,7 @@ Please select a bootloader.dfu file and try again. Note that loading the firmwar
  Lütfen bir bootloader.dfu dosyasını seçin ve tekrar deneyin. FriMware.dfu veya OpenMv.dfu&apos;nun (bootloader + ürün yazılımı) yüklenmesinin, çipin ROM bootloader&apos;daki bir hatadan dolayı STM32H7 kartlarında çalışmayabileceğini unutmayın!</translation>
     </message>
     <message>
-        <location line="+1020" />
+        <location line="+1035" />
         <source>Only loading *.bin and *.img files are supported for the internal bootloader!</source>
         <translation>Dahili önyükleyici için yalnızca *.bin ve *.img dosyaları yükleme desteklenir!</translation>
     </message>
@@ -9961,10 +11941,10 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="-73" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-324" />
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1453" />
-        <location line="+262" />
-        <location line="+705" />
-        <location line="+2375" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-1471" />
+        <location line="+265" />
+        <location line="+719" />
+        <location line="+2376" />
         <source>Please select the board type</source>
         <translation>Lütfen pano tipini seçin</translation>
     </message>
@@ -9973,24 +11953,24 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation type="vanished">Dahili dosya sistemi silinsin mi?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2960" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="-2974" />
         <source>No released firmware available for the attached board!</source>
         <translation>Ekli kart için yayınlanmış ürün yazılımı yok!</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+78" />
         <source>Please select a DFU Device</source>
         <translation>Lütfen bir DFU Cihazı seçin</translation>
     </message>
     <message>
-        <location line="-88" />
-        <location line="+175" />
+        <location line="-100" />
+        <location line="+188" />
         <location line="+44" />
         <source>Please update the bootloader to the latest version and install the SoftDevice to flash the OpenMV firmware. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Lütfen önyükleyiciyi en son sürüme güncelleyin ve OpenMV sabit yazılımını yüklemek için SoftDevice&apos;i kurun. Daha fazla bilgi &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; adresinde bulunabilir.</translation>
     </message>
     <message>
-        <location line="-2376" />
+        <location line="-2399" />
         <source>Checking development examples...</source>
         <translation>Geliştirme örnekleri denetleniyor...</translation>
     </message>
@@ -10031,7 +12011,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Yeni %2 kaynakları kullanılabilir (ör. örnekler, aygıt yazılımı, belgeler vb.). &lt;a href=&quot;%L1&quot;&gt;Sürüm notlarına&lt;/a&gt; bakın.</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+25" />
         <source>The downloaded resources file &quot;%L1&quot; failed its checksum. Please try again later.</source>
         <translation>İndirilen kaynak dosyası &quot;%L1&quot; sağlama toplamı denetiminden geçemedi. Lütfen daha sonra tekrar deneyin.</translation>
     </message>
@@ -10052,7 +12032,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Aygıt Yazılımı İkili Dosyası (*.bin *.dfu *.img *.zip)</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+150" />
         <source>The zip &quot;%L1&quot; does not contain a firmware image!</source>
         <translation>&quot;%L1&quot; zip dosyası bir bellenim görüntüsü içermiyor!</translation>
     </message>
@@ -10062,13 +12042,13 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Aygıt yazılımı zip dosyası &quot;%L1&quot; açılamıyor!</translation>
     </message>
     <message>
-        <location line="+182" />
-        <location line="+4031" />
+        <location line="+176" />
+        <location line="+4050" />
         <source>Warning: Upgrading to the new firmware version requires the FAT file system to be erased.</source>
         <translation>Uyarı: Yeni ürün yazılımı sürümüne yükseltme, yağ dosya sisteminin silinmesini gerektirir.</translation>
     </message>
     <message>
-        <location line="-3953" />
+        <location line="-3972" />
         <location line="+9" />
         <source>Unable to download the latest development firmware!</source>
         <translation>En son geliştirme aygıt yazılımı indirilemiyor!</translation>
@@ -10123,7 +12103,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>Seri bağlantı noktası:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+6" />
         <source>Name:</source>
         <translation>Ad:</translation>
     </message>
@@ -10137,7 +12117,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
 %1</translation>
     </message>
     <message>
-        <location line="+191" />
+        <location line="+194" />
         <source>Just erase the internal FAT file system</source>
         <translation>Sadece dahili yağ dosya sistemini silin</translation>
     </message>
@@ -10152,14 +12132,14 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
         <translation>ROM Dosya Sistemini Sıfırla</translation>
     </message>
     <message>
-        <location line="+233" />
-        <location line="+2874" />
+        <location line="+234" />
+        <location line="+2888" />
         <source>Upgrade options:</source>
         <translation>Yükseltme Seçenekleri:</translation>
     </message>
     <message>
-        <location line="-2783" />
-        <location line="+174" />
+        <location line="-2797" />
+        <location line="+187" />
         <location line="+44" />
         <source>Please short REC to GND and reset your board. More information can be found on &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt;</source>
         <translation>Lütfen REC&apos;i GND&apos;ye kısa devre yapın ve kartınızı sıfırlayın. Daha fazla bilgi &lt;a href=&quot;https://docs.arduino.cc&quot;&gt;https://docs.arduino.cc&lt;/a&gt; adresinde bulunabilir.</translation>
@@ -10190,7 +12170,7 @@ OpenMV recommends only loading the bootloader.dfu to repair the bootloader.</sou
     </message>
     <message>
         <location line="+72" />
-        <location line="+208" />
+        <location line="+209" />
         <location line="+778" />
         <source>Timeout error while getting board architecture!</source>
         <translation>Kart mimarisi alınırken zaman aşımı hatası!</translation>
@@ -10215,7 +12195,7 @@ DFU yeniden programlamaya atlamak için iptale basın.</translation>
     </message>
     <message>
         <location line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-583" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-547" />
         <source>Reconnect your OpenMV Cam...</source>
         <translation>OpenMV Cam&apos;ınızı yeniden bağlayın...</translation>
     </message>
@@ -10254,46 +12234,46 @@ Devam etmek?</translation>
         <translation>Siliniyor...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-173" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-155" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+56" />
         <location line="+65" />
         <location line="+78" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+334" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-90" />
-        <location line="+22" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-78" />
+        <location line="+16" />
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+47" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
         <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-780" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+228" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
-        <location line="+41" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
+        <location line="+230" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>Timeout Error!</source>
         <translation>Zaman Aşımı Hatası!</translation>
     </message>
@@ -10304,12 +12284,12 @@ Devam etmek?</translation>
         <translation>Programlama...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+24" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+20" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+14" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+52" />
         <location line="+60" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+17" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+11" />
         <source>Onboard Data Flash Erased!
 
 </source>
@@ -10355,12 +12335,12 @@ Devam etmek?</translation>
     <message>
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginalifbootloader.cpp" line="+100" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="+1" />
-        <location line="+139" />
+        <location line="+127" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-11" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+1" />
-        <location line="+188" />
-        <location line="+41" />
+        <location line="+164" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="-91" />
         <location line="+32" />
         <location line="+27" />
@@ -10400,7 +12380,7 @@ Bu durumda, OpenMV Cam&apos;inizin dahili flash sürücü montajını gördüğ�
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1331" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1189" />
         <source>Preparing the bootloader tools... (this can take a few seconds)</source>
         <translation>Önyükleyici araçları hazırlanıyor... (bu birkaç saniye sürebilir)</translation>
     </message>
@@ -10485,8 +12465,8 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-1" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+111" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-1" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-42" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-36" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginimxbootloader.cpp" line="+1" />
         <location line="+59" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-1" />
@@ -10494,13 +12474,13 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <translation>OpenMV Cam&apos;iniz yerleşik kendi kendini testini saydıktan ve çalıştırmayı bitirdikten sonra Tamam düğmesine tıklayın (mavi led yanıp sönüyor - bu biraz zaman alıyor).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-341" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginarduinodfubootloader.cpp" line="-323" />
         <source>DFU Util may not be stable on this platform. If loading fails please use a regular computer.</source>
         <translation>DFU Util bu platformda kararlı olmayabilir. Yükleme başarısız olursa lütfen normal bir bilgisayar kullanın.</translation>
     </message>
     <message>
         <location line="+87" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-453" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-417" />
         <source>No DFU settings for the selected board type!</source>
         <translation>Seçilen kart tipi için DFU ayarı yok!</translation>
     </message>
@@ -10513,47 +12493,47 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
     <message>
         <location line="+32" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+43" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-82" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-70" />
         <source>Erasing Disk</source>
         <translation>Diski Silme</translation>
     </message>
     <message>
-        <location line="+59" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+83" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+781" />
+        <location line="+53" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+77" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+678" />
         <source>Read ROMFS</source>
         <translation>ROMFS okuyun</translation>
     </message>
     <message>
         <location line="+19" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+44" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+38" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+1" />
         <source>Write ROMFS</source>
         <translation>ROMFS yaz</translation>
     </message>
     <message>
         <location line="+25" />
-        <location line="+28" />
-        <location line="+24" />
+        <location line="+22" />
+        <location line="+18" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbossacbootloader.cpp" line="-7" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+59" />
-        <location line="+25" />
-        <location line="+40" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+75" />
-        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-614" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-989" />
-        <location line="+990" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="+53" />
+        <location line="+19" />
+        <location line="+34" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="+63" />
+        <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="-587" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-889" />
+        <location line="+890" />
         <source>Flashing Firmware</source>
         <translation>Yanıp Sönen Donanım Yazılımı</translation>
     </message>
     <message>
-        <location line="-48" />
-        <location line="+29" />
-        <location line="+41" />
+        <location line="-36" />
+        <location line="+23" />
+        <location line="+35" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="+14" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-59" />
-        <location line="+26" />
-        <location line="+41" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-47" />
+        <location line="+20" />
+        <location line="+35" />
         <source>DFU firmware update failed!</source>
         <translation>DFU üretici yazılımı güncellemesi başarısız oldu!</translation>
     </message>
@@ -10561,7 +12541,7 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <location line="-13" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginbootloader.cpp" line="-16" />
         <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-22" />
-        <location line="+41" />
+        <location line="+35" />
         <source>DFU firmware update complete!
 
 </source>
@@ -10593,7 +12573,7 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-104" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvpluginpicotoolbootloader.cpp" line="-92" />
         <source>Your %1 doesn&apos;t have an ROM file system.</source>
         <translation>%1&apos;inizde bir ROM dosya sistemi yoktur.</translation>
     </message>
@@ -10626,7 +12606,7 @@ OpenMV Cam&apos;inizin SBL Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <translation>Seçilen cihaz için PicoTool ayarı yok!</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+113" />
         <source>PicoTool firmware update complete!
 
 </source>
@@ -10795,13 +12775,13 @@ OpenMV Cam&apos;inizin DFU Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <translation>Donanım Yazılımı Sürümü: %L1.%L2.%L3</translation>
     </message>
     <message>
-        <location line="-2459" />
-        <location line="+2464" />
+        <location line="-2477" />
+        <location line="+2482" />
         <source>Serial Port: %L1</source>
         <translation>Seri Bağlantı Noktası: %L1</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+104" />
         <source> - [ out of date - click here to updgrade ]</source>
         <translation> - [ güncel değil - güncellemek için buraya tıklayın ]</translation>
     </message>
@@ -10926,7 +12906,7 @@ OpenMV Cam&apos;inizin DFU Önyükleyicisi numaralandırıldıktan sonra Tamam d
         <translation type="vanished">Başlangıç</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+843" />
+        <location filename="../../../src/plugins/openmv/openmvpluginconnect.cpp" line="+844" />
         <source>More Examples</source>
         <translation>Daha fazla örnek</translation>
     </message>
@@ -11102,7 +13082,7 @@ Would you like OpenMV IDE to copy it to your OpenMV Cam?</source>
 OpenMV IDE&apos;nin onu OpenMV Cam&apos;inize kopyalamasını ister misiniz?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-584" />
+        <location filename="../../../src/plugins/openmv/openmvterminal.cpp" line="-589" />
         <location line="+7" />
         <location line="+18" />
         <location line="+11" />
@@ -11121,12 +13101,12 @@ OpenMV IDE&apos;nin onu OpenMV Cam&apos;inize kopyalamasını ister misiniz?</tr
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/openmvmodelzoo.cpp" line="+189" />
-        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5035" />
+        <location filename="../../../src/plugins/openmv/openmvplugin.cpp" line="-5016" />
         <location line="+9" />
         <location line="+56" />
         <location line="+7" />
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-393" />
-        <location line="+352" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-553" />
+        <location line="+512" />
         <source>Model Zoo</source>
         <translation>Model Hayvanat Bahçesi</translation>
     </message>
@@ -11212,21 +13192,21 @@ OpenMV IDE&apos;nin onu OpenMV Cam&apos;inize kopyalamasını ister misiniz?</tr
         <translation>BOSSAC</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-475" />
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-149" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-474" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="-151" />
         <source>Get Devices</source>
         <translation>Cihazları Alın</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+0" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-422" />
-        <location line="+85" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-419" />
+        <location line="+87" />
         <source>Query failed!</source>
         <translation>Sorgu başarısız!</translation>
     </message>
     <message>
-        <location line="+162" />
+        <location line="+161" />
         <source>DfuSe</source>
         <translation>DfuSe</translation>
     </message>
@@ -11241,7 +13221,7 @@ OpenMV IDE&apos;nin onu OpenMV Cam&apos;inize kopyalamasını ister misiniz?</tr
         <translation>DFU Kullanımı</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+151" />
         <source>This may take a while, coffee break?</source>
         <translation>Bu biraz zaman alabilir mi, kahve molası?</translation>
     </message>
@@ -11298,7 +13278,7 @@ Yüzde
 %1%</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-156" />
+        <location filename="../../../src/plugins/openmv/tools/dfu-util.cpp" line="-164" />
         <location line="+47" />
         <location filename="../../../src/plugins/openmv/tools/edgeimpulse.cpp" line="+57" />
         <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="+33" />
@@ -11430,79 +13410,79 @@ Yüklemek için bir veri kümesi açın.</translation>
         <translation>Lütfen bir Edge Impluse Projesi API Anahtarı girin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-1073" />
-        <location line="+148" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-973" />
+        <location line="+157" />
         <location line="+36" />
-        <location line="+49" />
-        <location line="+53" />
-        <location line="+35" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+44" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+49" />
-        <location line="+42" />
         <location line="+43" />
-        <location line="+40" />
-        <location line="+48" />
-        <location line="+135" />
+        <location line="+47" />
+        <location line="+29" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+38" />
+        <location line="+36" />
+        <location line="+44" />
         <location line="+45" />
-        <location line="+50" />
-        <location line="+51" />
-        <location line="+42" />
-        <location line="+52" />
-        <location line="+42" />
-        <location line="+50" />
-        <location line="+42" />
+        <location line="+36" />
+        <location line="+43" />
+        <location line="+36" />
+        <location line="+37" />
+        <location line="+34" />
         <location line="+41" />
+        <location line="+144" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+45" />
+        <location line="+36" />
+        <location line="+46" />
+        <location line="+36" />
+        <location line="+44" />
+        <location line="+36" />
+        <location line="+35" />
         <source>NXP IMX</source>
         <translation>NXP IMX</translation>
     </message>
     <message>
-        <location line="-1274" />
+        <location line="-1138" />
         <source>Waiting for the flashloader to enumerate...</source>
         <translation>Flashloader&apos;ın numaralandırılması bekleniyor...</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+22" />
         <source>The i.MX flashloader did not enumerate.</source>
         <translation>i.MX flashloader USB üzerinde numaralandırılmadı.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/alif.cpp" line="+0" />
         <location line="+32" />
-        <location line="+255" />
+        <location line="+258" />
         <location line="+10" />
         <location line="+48" />
-        <location line="+56" />
-        <location line="+97" />
-        <location line="+44" />
-        <location line="+37" />
-        <location line="+35" />
-        <location line="+21" />
+        <location line="+50" />
+        <location line="+91" />
+        <location line="+38" />
+        <location line="+31" />
+        <location line="+29" />
+        <location line="+15" />
         <source>Alif Tools</source>
         <translation>ALIF Araçları</translation>
     </message>
     <message>
-        <location line="-602" />
+        <location line="-569" />
         <source>Please turn on the hard maintenance mode switch, it not enabled, and then press the user button on your OpenMV Cam.</source>
         <translation>Lütfen sabit bakım modu anahtarını açın, etkinleştirilmez ve ardından OpenMV kameranızdaki kullanıcı düğmesine basın.</translation>
     </message>
     <message>
-        <location line="+255" />
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-140" />
-        <location line="+975" />
+        <location line="+258" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-125" />
+        <location line="+875" />
         <source>This feature is not supported on this machine!</source>
         <translation>Bu özellik bu makinede desteklenmiyor!</translation>
     </message>
     <message>
-        <location line="+182" />
+        <location line="+170" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after after recovery.</source>
@@ -11511,7 +13491,7 @@ The camera must be power cycled after after recovery.</source>
 Kurtarma işleminden sonra kameranın gücü kapatılmalıdır.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+142" />
         <source>Please disconnect your OpenMV Cam from your computer, turn off the hard maintenance mode switch, if enabled. Leave your OpenMV Cam unconnected until instructed to reconnect it.</source>
         <translation>Lütfen OpenMV Cam&apos;ınızın bilgisayarınızla olan bağlantısını kesin, etkinleştirilmişse donanım bakım modu anahtarını kapatın. OpenMV Cam&apos;inizi yeniden bağlama talimatı verilene kadar bağlantısız bırakın.</translation>
     </message>
@@ -11520,7 +13500,7 @@ Kurtarma işleminden sonra kameranın gücü kapatılmalıdır.</translation>
         <translation type="vanished">Lütfen OpenMV kameranızı bilgisayarınızdan ayırın, etkin bakım modu anahtarını kapatın, etkinse OpenMV kameranızı bilgisayarınıza yeniden bağlayın ve ardından Tamam&apos;a basın.</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="-100" />
         <source>Please disconnect and then reconnect your OpenMV Cam from your computer and then press Ok.
 
 The camera must be power cycled after a system package update.</source>
@@ -11529,16 +13509,16 @@ The camera must be power cycled after a system package update.</source>
 Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-479" />
-        <location line="+51" />
-        <location line="+91" />
-        <location line="+353" />
-        <location line="+51" />
-        <location line="+50" />
-        <location line="+94" />
-        <location line="+92" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+395" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+332" />
+        <location filename="../../../src/plugins/openmv/tools/imx.cpp" line="-445" />
+        <location line="+45" />
+        <location line="+79" />
+        <location line="+337" />
+        <location line="+45" />
+        <location line="+44" />
+        <location line="+82" />
+        <location line="+80" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+401" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+338" />
         <source>This command takes a while to execute. Please be patient.</source>
         <translation>Bu komutun yürütülmesi biraz zaman alır. Lütfen sabırlı olun.</translation>
     </message>
@@ -11558,7 +13538,7 @@ Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</tran
         <translation>Tamamlamak</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+66" />
+        <location filename="../../../src/plugins/openmv/tools/picotool.cpp" line="+68" />
         <source>PicoTool</source>
         <translation>Pico Aracı</translation>
     </message>
@@ -11658,7 +13638,7 @@ Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</tran
         <translation>Kapatmadan önce yukarıdaki eşiği kopyalayın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-485" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-495" />
         <source>Reading File...</source>
         <translation>Dosya Okunuyor...</translation>
     </message>
@@ -11690,12 +13670,12 @@ Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</tran
     </message>
     <message>
         <location line="-77" />
-        <location line="+737" />
+        <location line="+742" />
         <source>Transcoding File...</source>
         <translation>Kod Dönüştürme Dosyası...</translation>
     </message>
     <message>
-        <location line="-726" />
+        <location line="-731" />
         <location line="+36" />
         <location line="+11" />
         <location line="+18" />
@@ -11754,12 +13734,12 @@ Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</tran
         <translation type="vanished">Giriş Biçimlerini Alın</translation>
     </message>
     <message>
-        <location line="+288" />
-        <location line="+101" />
+        <location line="+292" />
+        <location line="+109" />
         <location line="+10" />
-        <location line="+154" />
+        <location line="+147" />
         <location line="+15" />
-        <location line="+458" />
+        <location line="+478" />
         <location line="+12" />
         <location line="+10" />
         <location line="+12" />
@@ -11787,30 +13767,30 @@ Bir sistem paketi güncellemesinden sonra kamera güç döndürülmelidir.</tran
         <translation type="vanished">ffmpeg başlatılamadı!</translation>
     </message>
     <message>
-        <location line="-1323" />
-        <location line="+85" />
+        <location line="-1340" />
+        <location line="+87" />
         <source>FFmpeg is not supported on this platform.</source>
         <translation>FFmpeg bu platformda desteklenmiyor.</translation>
     </message>
     <message>
-        <location line="-82" />
-        <location line="+85" />
+        <location line="-84" />
+        <location line="+87" />
         <source>The FFmpeg executable was not found (the installation may be incomplete).</source>
         <translation>FFmpeg yürütülebilir dosyası bulunamadı (kurulum eksik olabilir).</translation>
     </message>
     <message>
-        <location line="-83" />
-        <location line="+85" />
+        <location line="-85" />
+        <location line="+87" />
         <source>Get Formats</source>
         <translation>Biçimleri Al</translation>
     </message>
     <message>
-        <location line="+101" />
+        <location line="+95" />
         <source>Converting</source>
         <translation>Dönüştürme</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+110" />
         <source>FFMPEG is not supported on this platform.</source>
         <translation>FFMPEG bu platformda desteklenmiyor.</translation>
     </message>
@@ -11828,7 +13808,7 @@ Your OpenMV IDE installation may be incomplete.</source>
 OpenMV IDE kurulumunuz eksik olabilir.</translation>
     </message>
     <message>
-        <location line="+154" />
+        <location line="+147" />
         <source>Unable to write to output video file!</source>
         <translation>Çıkış video dosyasına yazılamıyor!</translation>
     </message>
@@ -11838,19 +13818,19 @@ OpenMV IDE kurulumunuz eksik olabilir.</translation>
         <translation>Çıkış video dosyası açılamıyor!</translation>
     </message>
     <message>
-        <location line="+212" />
-        <location line="+453" />
+        <location line="+222" />
+        <location line="+463" />
         <source>Play Video</source>
         <translation>Video oynatmak</translation>
     </message>
     <message>
-        <location line="-452" />
+        <location line="-462" />
         <source>Video playback is not supported on this platform.</source>
         <translation>Video oynatma bu platformda desteklenmiyor.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+200" />
+        <location line="+210" />
         <source>Failed to launch ffplay!</source>
         <translation>ffplay başlatılamadı!</translation>
     </message>
@@ -11957,7 +13937,7 @@ OpenMV IDE kurulumunuz eksik olabilir.</translation>
         <translation>Videoyu Kaydet</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+89" />
+        <location filename="../../../src/plugins/openmv/tools/loaderdialog.cpp" line="+99" />
         <source>Busy</source>
         <translation>Meşgul</translation>
     </message>
@@ -11977,7 +13957,7 @@ OpenMV IDE kurulumunuz eksik olabilir.</translation>
         <translation type="vanished">Seçilen dosya adı için eşleşen arayüz yok!</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-968" />
+        <location filename="../../../src/plugins/openmv/openmvromfs.cpp" line="-1129" />
         <source>Please select the target</source>
         <translation>Lütfen Hedefi Seçin</translation>
     </message>
@@ -11998,7 +13978,7 @@ OpenMV IDE will just copy the model as is.</source>
 OpenMV ide, modeli olduğu gibi kopyalayacaktır.</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+60" />
         <source>The model has already been converted for the Ethos-U NPU.
 
 %1 will just copy the model as is.</source>
@@ -12034,7 +14014,9 @@ OpenMV ide, modeli olduğu gibi kopyalayacaktır.</translation>
         <location line="+8" />
         <location line="+15" />
         <location line="+8" />
-        <location line="+155" />
+        <location line="+175" />
+        <location line="+69" />
+        <location line="+71" />
         <location line="+8" />
         <location line="+13" />
         <location line="+12" />
@@ -12053,7 +14035,7 @@ OpenMV ide, modeli olduğu gibi kopyalayacaktır.</translation>
         <translation>ROMFS Düzenle</translation>
     </message>
     <message>
-        <location line="-842" />
+        <location line="-1002" />
         <location line="+111" />
         <source>A folder with the same name already exists!</source>
         <translation>Aynı adı taşıyan bir klasör zaten var!</translation>
@@ -12111,29 +14093,29 @@ OpenMV ide, modeli olduğu gibi kopyalayacaktır.</translation>
         <location line="+6" />
         <location line="+15" />
         <location line="+19" />
-        <location line="+356" />
+        <location line="+516" />
         <source>Extract File</source>
         <translation>Çıkarma Dosyası</translation>
     </message>
     <message>
-        <location line="-362" />
+        <location line="-522" />
         <source>View/Edit</source>
         <translation>Görüntüle/Düzenle</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+353" />
+        <location line="+513" />
         <source>Add File</source>
         <translation>Dosya Ekle</translation>
     </message>
     <message>
-        <location line="-352" />
-        <location line="+354" />
+        <location line="-512" />
+        <location line="+514" />
         <source>New Folder</source>
         <translation>Yeni klasör</translation>
     </message>
     <message>
-        <location line="-266" />
+        <location line="-426" />
         <source>The ROMFS write did not complete, so the ROM file system on your OpenMV Cam may be incomplete.
 
 </source>
@@ -12169,7 +14151,14 @@ Your OpenMV Cam is still in bootloader mode: click Connect and use the bootloade
 OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya sistemini yeniden düzenlemek için önyükleyici seçeneklerini kullanın.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+15" />
+        <source>No board type was chosen.</source>
+        <translation>Hiçbir kart türü seçilmedi.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <location line="+8" />
+        <location line="+184" />
         <location line="+13" />
         <location line="+389" />
         <location line="+11" />
@@ -12177,13 +14166,34 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>ROMFS bu tahtada desteklenmiyor!</translation>
     </message>
     <message>
-        <location line="-337" />
+        <location line="-597" />
+        <source>No ROMFS target was chosen.</source>
+        <translation>Hiçbir ROMFS hedefi seçilmedi.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Reading the ROMFS from the camera failed.</source>
+        <translation>ROMFS&apos;nin kameradan okunması başarısız oldu.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+194" />
         <location line="+42" />
         <source>Failed to unpack ROMFS!</source>
         <translation>ROMFS paketini açamadı!</translation>
     </message>
     <message>
-        <location line="-19" />
+        <location line="-207" />
+        <source>The ROMFS image is %L1 bytes but the board&apos;s ROMFS holds %L2 bytes.</source>
+        <translation>ROMFS görüntüsü %L1 bayt, ancak kartın ROMFS alanı %L2 bayt alıyor.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>Writing the ROMFS to the camera failed.</source>
+        <translation>ROMFS&apos;nin kameraya yazılması başarısız oldu.</translation>
+    </message>
+    <message>
+        <location line="+154" />
         <location line="+27" />
         <source>OpenMV ROMFS</source>
         <translation>OpenMV ROMFS</translation>
@@ -12225,12 +14235,12 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>OpenMV kameranın ROM dosya sistemini sıfırlamak istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-97" />
+        <location filename="../../../src/plugins/openmv/tools/mpy-cross.cpp" line="-100" />
         <source>What do you want to do?</source>
         <translation>Ne yapmak istiyorsun?</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Just copy the script</source>
         <translation>Sadece senaryoyu kopyalayın</translation>
     </message>
@@ -12250,40 +14260,40 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>Bayt koduna derlen</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+14" />
         <source>&lt;a href=&quot;https://pypi.org/project/mpy-cross/&quot;&gt;MPY Cross Compilier CLI Options&lt;/a&gt;</source>
         <translation>&lt;a href = &quot;https://pypi.org/project/mpy-cross/&quot;&gt; mpy Cross Compilier CLI seçenekleri &lt;/a&gt;</translation>
     </message>
     <message>
         <location line="+15" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-243" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-224" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-244" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-225" />
         <source>Advanced</source>
         <translation>Gelişmiş</translation>
     </message>
     <message>
-        <location line="+86" />
-        <location line="+112" />
+        <location line="+87" />
+        <location line="+120" />
         <source>MPY Cross Compilier</source>
         <translation>MPY Çapraz Derleyici</translation>
     </message>
     <message>
-        <location line="-112" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+87" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+52" />
+        <location line="-120" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+88" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+53" />
         <source>Compiling</source>
         <translation>Derleme</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+121" />
         <source>The MPY Cross Compilier is not supported on this platform.</source>
         <translation>MPY Cross derleyicisi bu platformda desteklenmez.</translation>
     </message>
     <message>
         <location line="+25" />
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+188" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="+187" />
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="+191" />
-        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-867" />
+        <location filename="../../../src/plugins/openmv/tools/videotools.cpp" line="-880" />
         <source>Success - Press Ok to close the window</source>
         <translation>Başarı - Pencereyi kapatmak için Tamam&apos;a basın</translation>
     </message>
@@ -12296,18 +14306,18 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>Arıza - Pencereyi kapatmak için iptal basın</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-371" />
+        <location filename="../../../src/plugins/openmv/tools/stedgeai.cpp" line="-374" />
         <location line="+13" />
         <location line="+13" />
         <location line="+9" />
-        <location line="+111" />
+        <location line="+115" />
         <location line="+14" />
         <location line="+154" />
         <source>STEdgeAI Compilier</source>
         <translation>Doyurucu</translation>
     </message>
     <message>
-        <location line="-300" />
+        <location line="-304" />
         <source>Failed to copy JSON file!</source>
         <translation>JSON dosyasını kopyalayamadı!</translation>
     </message>
@@ -12318,12 +14328,12 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-283" />
+        <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-286" />
         <source>Please specify the compiler settings:</source>
         <translation>Lütfen derleyici ayarlarını belirtin:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Maximum Optimization</source>
         <translation>Maksimum optimizasyon</translation>
     </message>
@@ -12343,7 +14353,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>Optimizasyon yok</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbosity 2</source>
         <translation>-Derbozluk 2</translation>
     </message>
@@ -12353,7 +14363,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>&lt;a href = &quot;%1&quot;&gt; Stedgeai çekirdek CLI seçenekleri &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>--mapping-recap</source>
         <translation>-Mapping-Recap</translation>
     </message>
@@ -12367,7 +14377,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation type="vanished">&lt;a href = &quot;%1&quot;&gt; Stedgeai Yer değiştirme CLI Seçenekleri &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+76" />
         <location line="+14" />
         <source>Failed to open JSON file!</source>
         <translation>JSON dosyasını açamadı!</translation>
@@ -12385,12 +14395,12 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
     <message>
         <location filename="../../../src/plugins/openmv/tools/vela.cpp" line="-13" />
         <location line="+9" />
-        <location line="+247" />
+        <location line="+250" />
         <source>Vela Compilier</source>
         <translation>Vela derleyicisi</translation>
     </message>
     <message>
-        <location line="-239" />
+        <location line="-241" />
         <source>Optimize for Performance</source>
         <translation>Performans için optimize et</translation>
     </message>
@@ -12400,7 +14410,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>Boyut için optimize et</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+13" />
         <source>--verbose-progress</source>
         <translation>--verbose-Progress</translation>
     </message>
@@ -12410,7 +14420,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>&lt;a href = &quot;https://gitlab.arm.com/arfial-intigence/ethos-u/ethos-u-vela//blob/main/options.md&quot;&gt; vela derleyicisi CLI seçenekleri &lt;/a&gt;</translation>
     </message>
     <message>
-        <location line="+67" />
+        <location line="+68" />
         <source>Vela</source>
         <translation>Vela</translation>
     </message>
@@ -12421,7 +14431,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
     </message>
     <message>
         <location filename="../../../src/plugins/openmv/tools/stcubeprogrammer.cpp" line="-95" />
-        <location line="+151" />
+        <location line="+159" />
         <source>STM32 Programmer</source>
         <translation>STM32 programcı</translation>
     </message>
@@ -12431,7 +14441,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>STM32 programcısı bu platformda desteklenmez.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-695" />
+        <location filename="../../../src/plugins/openmv/bootloaders/openmvplugindfubootloader.cpp" line="-659" />
         <source>the detected board</source>
         <translation>tespit edilen kart</translation>
     </message>
@@ -12461,12 +14471,12 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
         <translation>Bir önyükleyici görüntüsü yazmak için OpenMV Cam&apos;iniz önyükleyici kurtarma modunda olmalıdır. Kamerayı çıkarın, bir atlama teliyle BOOT0/SBL/RECOVERY&apos;yi 3.3V&apos;a bağlayın ve ardından yeniden denemeden önce kamerayı tekrar takın.</translation>
     </message>
     <message>
-        <location line="+488" />
+        <location line="+482" />
         <source>DFU ROMFS read failed!</source>
         <translation>DFU ile ROMFS okuma başarısız oldu!</translation>
     </message>
     <message>
-        <location line="+40" />
+        <location line="+34" />
         <source>DFU ROMFS write failed!</source>
         <translation>DFU ile ROMFS yazma başarısız oldu!</translation>
     </message>
@@ -12483,7 +14493,7 @@ OpenMV Cam hâlâ önyükleyici modunda: Bağlan&apos;a tıklayın ve ROM dosya 
     <message>
         <location line="+174" />
         <location line="+5" />
-        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+786" />
+        <location filename="../../../src/plugins/openmv/tools/wifidebug.cpp" line="+788" />
         <location line="+5" />
         <source>Show text</source>
         <translation>Metni göster</translation>
@@ -12728,7 +14738,7 @@ Kaydetmeden önce bunları düzeltin veya temizleyin.</translation>
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1231" />
+        <location filename="../../../src/plugins/openmv/openmvthirdparty.cpp" line="-1246" />
         <source>&quot;%L1&quot; config.json - %L2</source>
         <translation>&quot;%L1&quot; config.json - %L2</translation>
     </message>
@@ -12753,7 +14763,7 @@ Kaydetmeden önce bunları düzeltin veya temizleyin.</translation>
         <translation>&quot;%L1&quot; - yüklenemedi: %L2</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+54" />
         <source>&quot;%L1&quot; - failed to update &quot;%L2&quot;: %L3</source>
         <translation>&quot;%L1&quot; - &quot;%L2&quot; güncellenemedi: %L3</translation>
     </message>
@@ -12970,7 +14980,7 @@ Install now?</source>
         <translation>&quot;%L1&quot; yüklü değil</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+34" />
         <source>&quot;%L1&quot; board &quot;%L2&quot; (%L3) overlaps the bootloader id of &quot;%L4&quot; (%L5)</source>
         <translation>&quot;%L1&quot; kartı &quot;%L2&quot; (%L3), &quot;%L4&quot; (%L5) önyükleyici kimliğiyle çakışıyor</translation>
     </message>
@@ -13129,7 +15139,7 @@ This deletes its boards, firmware, and examples.</source>
 Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+37" />
         <source>OpenMV</source>
         <translation>OpenMV</translation>
     </message>
@@ -13367,7 +15377,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>%L1 örnek (%L2)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3912" />
+        <location filename="../../../src/plugins/openmv/views/openmvchannelsview.cpp" line="-3913" />
         <source>%L1 kHz</source>
         <translation>%L1 kHz</translation>
     </message>
@@ -13481,12 +15491,12 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
     </message>
     <message>
         <location line="+6" />
-        <location line="+867" />
+        <location line="+868" />
         <source>Spectrum</source>
         <translation>Spektrum</translation>
     </message>
     <message>
-        <location line="-864" />
+        <location line="-865" />
         <source>Averaging</source>
         <translation>Ortalama Alma</translation>
     </message>
@@ -13587,7 +15597,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>%1 min %2 max %3 rms %4</translation>
     </message>
     <message>
-        <location line="+212" />
+        <location line="+213" />
         <source>Connect a camera to view channels</source>
         <translation>Kanalları görüntülemek için bir kamera bağlayın</translation>
     </message>
@@ -14019,6 +16029,16 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <source>%L1/s</source>
         <translation>%L1/s</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/openmv/openmvaimode.cpp" line="+68" />
+        <source>AI</source>
+        <translation>Yapay Zekâ</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>The agentic chat (ACP Client plugin) is not available.</source>
+        <translation>Aracı sohbet (ACP İstemci eklentisi) kullanılamıyor.</translation>
+    </message>
 </context>
 <context>
     <name>QtC::ProjectExplorer</name>
@@ -14027,89 +16047,42 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">Bu sihirbaz, basit bir birim test projesi oluşturur.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/jsonwizards_tr.h" line="+4" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+126" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="+5" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
+        <location line="+23" />
+        <location line="+305" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+145" />
+        <location line="+20" />
         <source>Project Location</source>
         <translation>Proje yeri</translation>
     </message>
     <message>
-        <location line="-618" />
-        <location line="+40" />
-        <location line="+30" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+19" />
-        <location line="+1" />
-        <location line="+18" />
-        <location line="+1" />
-        <location line="+22" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+1" />
-        <location line="+33" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+29" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+29" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-931" />
+        <location line="+25" />
         <location line="+26" />
         <location line="+25" />
-        <location line="+25" />
-        <location line="+79" />
+        <location line="+23" />
+        <location line="+83" />
         <location line="+1" />
         <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+32" />
-        <location line="+1" />
-        <location line="+17" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+12" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+13" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+8" />
-        <location line="+1" />
-        <location line="+11" />
         <location line="+1" />
         <location line="+10" />
         <location line="+1" />
@@ -14123,6 +16096,58 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <location line="+1" />
         <location line="+8" />
         <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+11" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+35" />
+        <location line="+1" />
+        <location line="+8" />
+        <location line="+1" />
+        <location line="+10" />
+        <location line="+22" />
+        <location line="+43" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+19" />
+        <location line="+11" />
+        <location line="+14" />
+        <location line="+21" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+28" />
+        <location line="+17" />
+        <location line="+52" />
+        <location line="+1" />
+        <location line="+17" />
+        <location line="+1" />
+        <location line="+22" />
+        <location line="+1" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
+        <location line="+1" />
+        <location line="+12" />
+        <location line="+20" />
         <source>Location</source>
         <translation>Konum</translation>
     </message>
@@ -14131,7 +16156,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">Qt Testi</translation>
     </message>
     <message>
-        <location line="-171" />
+        <location line="-574" />
         <source>Google Test</source>
         <translation>Google Testi</translation>
     </message>
@@ -14151,49 +16176,49 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>yakalama2</translation>
     </message>
     <message>
-        <location line="-192" />
-        <location line="+26" />
+        <location line="-358" />
         <location line="+25" />
-        <location line="+142" />
+        <location line="+26" />
+        <location line="+308" />
         <source>Test framework:</source>
         <translation>Test çerçevesi:</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-283" />
         <source>GUI Application</source>
         <translation>GUI Uygulaması</translation>
     </message>
     <message>
-        <location line="+49" />
-        <location line="+25" />
-        <location line="+145" />
+        <location line="-75" />
+        <location line="+51" />
+        <location line="+311" />
         <source>Test suite name:</source>
         <translation>Test paketi adı:</translation>
     </message>
     <message>
-        <location line="-221" />
-        <location line="+25" />
+        <location line="-361" />
+        <location line="+24" />
         <location line="+27" />
-        <location line="+25" />
         <location line="+21" />
-        <location line="+124" />
+        <location line="+23" />
+        <location line="+267" />
         <source>Test case name:</source>
         <translation>Test durumu adı:</translation>
     </message>
     <message>
-        <location line="-221" />
+        <location line="-289" />
         <source>Requires QApplication</source>
         <translation>QApplication gerektirir</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+23" />
         <source>Generate setup code</source>
         <translation>Kurulum kodu oluştur</translation>
     </message>
     <message>
-        <location line="-96" />
-        <location line="+97" />
-        <location line="+123" />
+        <location line="-21" />
+        <location line="+22" />
+        <location line="+266" />
         <source>Generate initialization and cleanup code</source>
         <translation>Başlatma ve temizleme kodu oluştur</translation>
     </message>
@@ -14202,17 +16227,17 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">C++11&apos;i etkinleştir</translation>
     </message>
     <message>
-        <location line="-145" />
+        <location line="-311" />
         <source>Googletest source directory (optional):</source>
         <translation>Googletest kaynak dizini (isteğe bağlı):</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-51" />
         <source>Boost include directory (optional):</source>
         <translation>Boost dizini içerir (isteğe bağlı):</translation>
     </message>
     <message>
-        <location line="-27" />
+        <location line="+24" />
         <source>Catch2 include directory (optional):</source>
         <translation>Catch2 dizini içerir (isteğe bağlı):</translation>
     </message>
@@ -14222,257 +16247,262 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Qt kitaplıklarını kullanma</translation>
     </message>
     <message>
-        <location line="-509" />
-        <location line="+29" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-25" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+22" />
         <location line="+25" />
-        <location line="+21" />
+        <location line="+299" />
+        <location line="+22" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+135" />
+        <location line="+49" />
+        <location line="+45" />
         <source>qmake</source>
         <translation>qmake</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+31" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-759" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+133" />
+        <location line="+51" />
+        <location line="+46" />
         <source>CMake</source>
         <translation>CMake</translation>
     </message>
     <message>
-        <location line="-551" />
-        <location line="+20" />
-        <location line="+145" />
-        <location line="+136" />
-        <location line="+19" />
-        <location line="+43" />
-        <location line="+92" />
+        <location line="-760" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+299" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+184" />
+        <location line="+47" />
         <source>Qbs</source>
         <translation>Qbs</translation>
     </message>
     <message>
-        <location line="-582" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
-        <location line="+92" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
+        <location line="+300" />
         <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build system:</source>
         <translation>Yapı sistemi:</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="-761" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Project and Test Information</source>
         <translation>Proje ve Test Bilgileri</translation>
     </message>
     <message>
-        <location line="-569" />
-        <location line="+192" />
-        <location line="+20" />
-        <location line="+18" />
-        <location line="+4" />
-        <location line="+17" />
-        <location line="+22" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
-        <location line="+43" />
+        <location line="-98" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+25" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+59" />
+        <location line="+201" />
+        <location line="+80" />
+        <location line="+115" />
+        <location line="+17" />
+        <location line="+3" />
+        <location line="+15" />
+        <location line="+16" />
+        <location line="+68" />
+        <location line="+20" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+29" />
+        <location line="+162" />
         <source>Details</source>
         <translation>Detaylar</translation>
     </message>
     <message>
-        <location line="-720" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-932" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+252" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+126" />
         <source>Kit Selection</source>
         <translation>Takım Seçimi</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+759" />
-        <location line="+2" />
+        <location line="+302" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+797" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+890" />
         <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+7" />
         <source>Kits</source>
         <translation>Kitler</translation>
     </message>
     <message>
-        <location line="-598" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+19" />
         <location line="+8" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
         <source>Project Management</source>
         <translation>Proje Yönetimi</translation>
     </message>
     <message>
-        <location line="-874" />
-        <location line="+29" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+11" />
-        <location line="+144" />
-        <location line="+18" />
-        <location line="+22" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+15" />
-        <location line="+14" />
-        <location line="+18" />
-        <location line="+44" />
-        <location line="+28" />
-        <location line="+12" />
-        <location line="+28" />
-        <location line="+19" />
-        <location line="+22" />
+        <location line="-934" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <location line="+23" />
         <location line="+19" />
         <location line="+27" />
         <location line="+9" />
-        <location line="+9" />
-        <location line="+9" />
-        <location line="+24" />
-        <location line="+9" />
-        <location line="+17" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
-        <location line="+14" />
-        <location line="+9" />
-        <location line="+12" />
-        <location line="+9" />
         <location line="+11" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+305" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+12" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+17" />
+        <location line="+27" />
+        <location line="+9" />
+        <location line="+9" />
+        <location line="+22" />
+        <location line="+44" />
+        <location line="+11" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
+        <location line="+12" />
+        <location line="+14" />
+        <location line="+20" />
+        <location line="+15" />
+        <location line="+19" />
+        <location line="+35" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+29" />
+        <location line="+16" />
+        <location line="+31" />
+        <location line="+134" />
+        <location line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="+309" />
         <source>Summary</source>
         <translation>Özet</translation>
     </message>
@@ -14481,10 +16511,9 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">Yeni bir birim test projesi oluşturur. Birim testleri, kodun kullanıma uygun olduğunu ve gerileme olmadığını doğrulamanıza olanak tanır.</translation>
     </message>
     <message>
-        <location line="-542" />
-        <location line="+102" />
-        <location line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+107" />
+        <location line="-389" />
+        <location line="+103" />
+        <location line="+95" />
         <source>Other Project</source>
         <translation>Diğer Proje</translation>
     </message>
@@ -14493,36 +16522,36 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">Otomatik Test Projesi</translation>
     </message>
     <message>
-        <location line="+123" />
+        <location line="-639" />
         <source>Fully qualified name, including namespaces</source>
         <translation>Ad alanları da dahil olmak üzere tam nitelikli ad</translation>
     </message>
     <message>
-        <location line="-395" />
-        <location line="+39" />
-        <location line="+22" />
-        <location line="+99" />
-        <location line="+236" />
+        <location line="+1" />
         <location line="+22" />
         <location line="+19" />
+        <location line="+275" />
+        <location line="+144" />
+        <location line="+35" />
+        <location line="+159" />
         <source>Class name:</source>
         <translation>Sınıf adı:</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+357" />
+        <location line="-653" />
         <location line="+42" />
+        <location line="+418" />
         <source>&lt;Custom&gt;</source>
         <translation>&lt;Özel&gt;</translation>
     </message>
     <message>
-        <location line="-438" />
-        <location line="+40" />
-        <location line="+21" />
-        <location line="+106" />
-        <location line="+230" />
+        <location line="-459" />
         <location line="+21" />
         <location line="+21" />
+        <location line="+280" />
+        <location line="+138" />
+        <location line="+34" />
+        <location line="+159" />
         <source>Base class:</source>
         <translation>Temel sınıf:</translation>
     </message>
@@ -14531,7 +16560,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">%{TemelCB}</translation>
     </message>
     <message>
-        <location line="-41" />
+        <location line="-652" />
         <source>Include QObject</source>
         <translation>QObject&apos;i dahil et</translation>
     </message>
@@ -14573,10 +16602,10 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++hdr&apos;))}}</translation>
     </message>
     <message>
-        <location line="-403" />
-        <location line="+172" />
-        <location line="+232" />
+        <location line="+1" />
         <location line="+19" />
+        <location line="+301" />
+        <location line="+326" />
         <source>Header file:</source>
         <translation>Başlık dosyası:</translation>
     </message>
@@ -14585,54 +16614,55 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">%{JS: Cpp.classToFileName(value(&apos;Class&apos;), Util.preferredSuffix(&apos;text/x-c++src&apos;))}}</translation>
     </message>
     <message>
-        <location line="-422" />
-        <location line="+39" />
-        <location line="+21" />
-        <location line="+112" />
-        <location line="+232" />
+        <location line="-645" />
         <location line="+19" />
         <location line="+19" />
-        <location line="+58" />
+        <location line="+200" />
         <location line="+1" />
+        <location line="+81" />
+        <location line="+132" />
+        <location line="+34" />
+        <location line="+160" />
         <source>Source file:</source>
         <translation>Kaynak dosyası:</translation>
     </message>
     <message>
-        <location line="-624" />
+        <location line="-645" />
+        <location line="+19" />
+        <location line="+19" />
+        <location line="+201" />
+        <location line="+427" />
+        <location line="+34" />
         <location line="+20" />
         <location line="+21" />
-        <location line="+21" />
-        <location line="+18" />
-        <location line="+448" />
         <location line="+19" />
-        <location line="+19" />
-        <location line="+59" />
         <location filename="../../../src/plugins/projectexplorer/customwizard/customwizardpage.cpp" line="+412" />
         <source>Path:</source>
         <translation>Yol:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location line="+21" />
-        <location line="+344" />
+        <location line="-759" />
         <location line="+38" />
+        <location line="+413" />
+        <location line="+34" />
         <source>Define Class</source>
         <translation>Sınıfı Tanımla</translation>
     </message>
     <message>
-        <location line="-34" />
+        <location line="-481" />
         <source>Creates a C++ header and a source file for a new class that you can add to a C++ project.</source>
         <translation>Bir C++ projesine ekleyebileceğiniz yeni bir sınıf için bir C++ başlığı ve kaynak dosyası oluşturur.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+176" />
-        <location line="+77" />
+        <location line="+46" />
+        <location line="+9" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+100" />
         <source>C/C++</source>
         <translation>C/C++</translation>
     </message>
     <message>
-        <location line="-252" />
+        <location line="-54" />
         <source>C++ Class</source>
         <translation>C++ Sınıfı</translation>
     </message>
@@ -14673,16 +16703,16 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+113" />
-        <location line="+56" />
+        <location line="+47" />
+        <location line="+75" />
+        <location line="+45" />
         <location line="+9" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+62" />
         <source>Qt</source>
         <translation>Qt</translation>
     </message>
     <message>
-        <location line="-197" />
+        <location line="-237" />
         <source>Qt Item Model</source>
         <translation>Qt Ürün Modeli</translation>
     </message>
@@ -14722,19 +16752,18 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+207" />
+        <location line="+140" />
         <source>Python</source>
         <translation>Piton</translation>
     </message>
     <message>
-        <location line="-206" />
+        <location line="-139" />
         <source>Python Class</source>
         <translation>Python Sınıfı</translation>
     </message>
     <message>
-        <location line="-195" />
         <source>Creates a CMake-based test project for which a code snippet can be entered.</source>
-        <translation>Kod parçacığının girilebileceği CMake tabanlı bir test projesi oluşturur.</translation>
+        <translation type="vanished">Kod parçacığının girilebileceği CMake tabanlı bir test projesi oluşturur.</translation>
     </message>
     <message>
         <source>int main(int argc, char *argv[])
@@ -14747,47 +16776,39 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
 }</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Code:</source>
-        <translation>kod:</translation>
+        <translation type="vanished">kod:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore</source>
-        <translation>QtCore</translation>
+        <translation type="vanished">QtCore</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>QtCore, QtWidgets</source>
-        <translation>QtCore, QtWidget&apos;lar</translation>
+        <translation type="vanished">QtCore, QtWidget&apos;lar</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Use Qt Modules:</source>
-        <translation>Qt Modüllerini kullanın:</translation>
+        <translation type="vanished">Qt Modüllerini kullanın:</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Application bundle (macOS)</source>
-        <translation>Uygulama paketi (macOS)</translation>
+        <translation type="vanished">Uygulama paketi (macOS)</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Define Code snippet</source>
-        <translation>Kod snippet&apos;ini tanımlayın</translation>
+        <translation type="vanished">Kod snippet&apos;ini tanımlayın</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Code snippet</source>
-        <translation>Kod snippet&apos;i</translation>
+        <translation type="vanished">Kod snippet&apos;i</translation>
+    </message>
+    <message>
+        <source>Code Snippet</source>
+        <translation type="vanished">Kod Parçacığı</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>Code Snippet</source>
-        <translation>Kod Parçacığı</translation>
-    </message>
-    <message>
-        <location line="+316" />
         <source>Creates a header file that you can add to a C/C++ project.</source>
         <translation>Bir C/C++ projesine ekleyebileceğiniz bir başlık dosyası oluşturur.</translation>
     </message>
@@ -14797,7 +16818,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>C/C++ Başlık Dosyası</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+7" />
         <source>Creates a source file that you can add to a C/C++ project.</source>
         <translation>Bir C/C++ projesine ekleyebileceğiniz bir kaynak dosya oluşturur.</translation>
     </message>
@@ -14807,7 +16828,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>C/C++ Kaynak Dosyası</translation>
     </message>
     <message>
-        <location line="-53" />
+        <location line="+3" />
         <source>Choose a Form Template</source>
         <translation>Bir Form Şablonu Seçin</translation>
     </message>
@@ -14825,12 +16846,14 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation type="vanished">Qt Tasarımcı Formu</translation>
     </message>
     <message>
-        <location line="-139" />
+        <location line="+14" />
         <source>Creates a fragment shader in the Desktop OpenGL Shading Language (GLSL). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>Masaüstü OpenGL Gölgelendirme Dili&apos;nde (GLSL) bir parça gölgelendirici oluşturur. Parça gölgelendiriciler, OpenGL ile oluşturulan üçgenler, noktalar ve çizgiler için son piksel renklerini oluşturur.</translation>
     </message>
     <message>
-        <location line="-17" />
+        <location line="+1" />
+        <location line="+9" />
+        <location line="+9" />
         <location line="+9" />
         <location line="+9" />
         <location line="+9" />
@@ -14838,7 +16861,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>GLSL</translation>
     </message>
     <message>
-        <location line="-8" />
+        <location line="-44" />
         <source>Fragment Shader (Desktop OpenGL)</source>
         <translation>Parça Gölgelendirici (Masaüstü OpenGL)</translation>
     </message>
@@ -14853,7 +16876,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Vertex Shader (Masaüstü OpenGL)</translation>
     </message>
     <message>
-        <location line="-29" />
+        <location line="+7" />
         <source>Creates a fragment shader in the OpenGL/ES 2.0 Shading Language (GLSL/ES). Fragment shaders generate the final pixel colors for triangles, points and lines rendered with OpenGL.</source>
         <translation>OpenGL/ES 2.0 Gölgelendirme Dili&apos;nde (GLSL/ES) bir parça gölgelendirici oluşturur. Parça gölgelendiriciler, OpenGL ile oluşturulan üçgenler, noktalar ve çizgiler için son piksel renklerini oluşturur.</translation>
     </message>
@@ -14873,7 +16896,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Köşe Gölgelendirici (OpenGL/ES 2.0)</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+25" />
         <source>Creates a Java file with boilerplate code.</source>
         <translation>Ortak kod içeren bir Java dosyası oluşturur.</translation>
     </message>
@@ -14888,7 +16911,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Java Dosyası</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+5" />
         <source>Stateless library</source>
         <translation>Durum bilgisi olmayan kitaplık</translation>
     </message>
@@ -14909,73 +16932,63 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>JS Dosyası</translation>
     </message>
     <message>
-        <location line="-74" />
         <source>Model name:</source>
-        <translation>Model adı:</translation>
+        <translation type="vanished">Model adı:</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location line="+21" />
+        <location line="+63" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+121" />
         <source>Location:</source>
         <translation>Konum:</translation>
     </message>
     <message>
-        <location line="-20" />
-        <location line="+21" />
+        <location line="+1" />
         <source>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; exists in the filesystem.</source>
         <translation>&quot;%{JS: Util.toNativeSeparators(value(&apos;TargetPath&apos;))}&quot; dosya sisteminde var.</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model Name and Location</source>
-        <translation>Model Adı ve Yeri</translation>
+        <translation type="vanished">Model Adı ve Yeri</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Creates a new empty model with an empty diagram.</source>
-        <translation>Boş bir diyagramla yeni bir boş model oluşturur.</translation>
+        <translation type="vanished">Boş bir diyagramla yeni bir boş model oluşturur.</translation>
     </message>
     <message>
-        <location line="-11" />
-        <location line="+12" />
-        <location line="+21" />
+        <location line="+6" />
         <source>Modeling</source>
         <translation>modelleme</translation>
     </message>
     <message>
-        <location line="-20" />
         <source>Model</source>
-        <translation>modeli</translation>
+        <translation type="vanished">modeli</translation>
     </message>
     <message>
-        <location line="-14" />
         <source>Creates a scratch model using a temporary file.</source>
-        <translation>Geçici bir dosya kullanarak bir karalama modeli oluşturur.</translation>
+        <translation type="vanished">Geçici bir dosya kullanarak bir karalama modeli oluşturur.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Scratch Model</source>
-        <translation>Çizik Modeli</translation>
+        <translation type="vanished">Çizik Modeli</translation>
     </message>
     <message>
-        <location line="+54" />
+        <location line="-54" />
         <source>Creates an empty Nim file using UTF-8 charset.</source>
         <translation>UTF-8 karakter kümesini kullanarak boş bir Nim dosyası oluşturur.</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+68" />
+        <location line="+9" />
         <source>Nim</source>
         <translation>Nim</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-8" />
         <source>Nim File</source>
         <translation>Nim Dosyası</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+7" />
         <source>Creates an empty Nim script file using UTF-8 charset.</source>
         <translation>UTF-8 karakter kümesini kullanarak boş bir Nim komut dosyası oluşturur.</translation>
     </message>
@@ -14995,7 +17008,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Python Dosyası</translation>
     </message>
     <message>
-        <location line="-49" />
+        <location line="+7" />
         <source>Creates a Qt Resource file (.qrc).</source>
         <translation>Bir Qt Kaynak dosyası (.qrc) oluşturur.</translation>
     </message>
@@ -15005,7 +17018,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Qt Kaynak Dosyası</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+7" />
         <source>Creates a QML file with boilerplate code, starting with &quot;import QtQuick&quot;.</source>
         <translation>&quot;QtQuick&apos;i içe aktar&quot; ile başlayan ortak kod içeren bir QML dosyası oluşturur.</translation>
     </message>
@@ -15015,21 +17028,21 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>QML Dosyası (Qt Hızlı 2)</translation>
     </message>
     <message>
-        <location line="-61" />
+        <location line="+3" />
         <source>Creates a scratch buffer using a temporary file.</source>
         <translation>Geçici bir dosya kullanarak bir karalama arabelleği oluşturur.</translation>
     </message>
     <message>
-        <location line="-51" />
-        <location line="+52" />
-        <location line="+68" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+105" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+551" />
+        <location line="-49" />
+        <location line="+50" />
+        <location line="+48" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+221" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+371" />
         <source>General</source>
         <translation>Genel</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-391" />
         <source>This wizard creates a simple unit test project using Boost.</source>
         <translation>Bu sihirbaz Boost kullanarak basit bir birim test projesi oluşturur.</translation>
     </message>
@@ -15054,21 +17067,21 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Boost kullanarak yeni bir birim test projesi oluşturur. Birim testleri, kodun kullanıma uygun olduğunu ve regresyon olmadığını doğrulamanızı sağlar.</translation>
     </message>
     <message>
-        <location line="-50" />
+        <location line="+1" />
         <location line="+26" />
         <location line="+25" />
+        <location line="+23" />
         <location line="+25" />
-        <location line="+21" />
         <source>Test Project</source>
         <translation>Test projesi</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="-98" />
         <source>Boost Test Project</source>
         <translation>Test Projesi Artırın</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Catch2.</source>
         <translation>Bu sihirbaz Catch2 kullanan basit bir birim test projesi oluşturur.</translation>
     </message>
@@ -15103,7 +17116,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Catch2 Test Projesi</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Google Test.</source>
         <translation>Bu sihirbaz Google Testini kullanarak basit bir birim test projesi oluşturur.</translation>
     </message>
@@ -15133,12 +17146,18 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Google Test Projesi</translation>
     </message>
     <message>
-        <location line="-95" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Test.</source>
         <translation>Bu sihirbaz, QT testi kullanarak basit bir birim test projesi oluşturur.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+8" />
+        <location line="+25" />
+        <source>CMake for Qt5 and Qt 6</source>
+        <translation>Qt5 ve Qt 6 için CMake</translation>
+    </message>
+    <message>
+        <location line="-15" />
         <source>Creates a new unit test project using Qt Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>QT testi kullanarak yeni bir birim test projesi oluşturur. Birim testleri, kodun kullanıma uygun olduğunu ve regresyon olmadığını doğrulamanızı sağlar.</translation>
     </message>
@@ -15148,12 +17167,30 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>QT Test Projesi</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+3" />
         <source>This wizard creates a simple unit test project using Qt Quick Test.</source>
         <translation>Bu sihirbaz, QT Quick testi kullanılarak basit bir birim test projesi oluşturur.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+6" />
+        <location line="+266" />
+        <source>Qt6 and higher</source>
+        <translation>Qt6 ve üzeri</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt5 and higher</source>
+        <translation>Qt5 ve üzeri</translation>
+    </message>
+    <message>
+        <location line="-265" />
+        <location line="+266" />
+        <source>Qt code compatibility:</source>
+        <translation>Qt kodu uyumluluğu:</translation>
+    </message>
+    <message>
+        <location line="-254" />
         <source>Creates a new unit test project using Qt Quick Test. Unit tests allow you to verify that the code is fit for use and that there are no regressions.</source>
         <translation>QT Hızlı Testini kullanarak yeni bir birim test projesi oluşturur. Birim testleri, kodun kullanıma uygun olduğunu ve regresyon olmadığını doğrulamanızı sağlar.</translation>
     </message>
@@ -15168,12 +17205,11 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>QQuickItem dahil</translation>
     </message>
     <message>
-        <location line="-131" />
         <source>Creates a CMake-based test project where you can enter a code snippet to compile and check it.</source>
-        <translation>Derlemek ve kontrol etmek için bir kod snippet girebileceğiniz CMake tabanlı bir test projesi oluşturur.</translation>
+        <translation type="vanished">Derlemek ve kontrol etmek için bir kod snippet girebileceğiniz CMake tabanlı bir test projesi oluşturur.</translation>
     </message>
     <message>
-        <location line="+350" />
+        <location line="+77" />
         <source>Creates a Qt Widgets Designer form that you can add to a Qt Widget Project. This is useful if you already have an existing class for the UI business logic.</source>
         <translation>Bir QT widget projesine ekleyebileceğiniz bir QT Widgets tasarımcı formu oluşturur. Bu, kullanıcı arayüzü iş mantığı için mevcut bir sınıfınız varsa kullanışlıdır.</translation>
     </message>
@@ -15183,7 +17219,31 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Qt Widgets Tasarımcı Formu</translation>
     </message>
     <message>
-        <location line="-104" />
+        <location line="+43" />
+        <source>Creates a fragment shader in Vulkan-compatible GLSL. Fragment shaders generate the final pixel colors for triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Vulkan uyumlu GLSL ile bir parça gölgelendiricisi oluşturur. Parça gölgelendiriciler, işlenecek üçgenler, noktalar ve çizgiler için nihai piksel renklerini üretir.
+Qt6 veya sonrasını hedeflerken kullanın.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fragment Shader (Vulkan-compatible)</source>
+        <translation>Parça Gölgelendirici (Vulkan uyumlu)</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Creates a vertex shader in Vulkan-compatible GLSL. Vertex shaders transform the positions, normals and texture coordinates of triangles, points and lines to be rendered.
+Use this when targeting Qt6 or later.</source>
+        <translation>Vulkan uyumlu GLSL ile bir köşe gölgelendiricisi oluşturur. Köşe gölgelendiriciler, işlenecek üçgenlerin, noktaların ve çizgilerin konumlarını, normallerini ve doku koordinatlarını dönüştürür.
+Qt6 veya sonrasını hedeflerken kullanın.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Vertex Shader (Vulkan-compatible)</source>
+        <translation>Köşe Gölgelendirici (Vulkan uyumlu)</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>Creates a markdown file.</source>
         <translation>Bir markdown dosyası oluşturur.</translation>
     </message>
@@ -15193,12 +17253,12 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>İşaretleme dosyası</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+50" />
         <source>Scratch Buffer</source>
         <translation>Çizik Tamponu</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+3" />
         <source>State chart name:</source>
         <translation>Durum tablosu adı:</translation>
     </message>
@@ -15218,7 +17278,7 @@ Bu işlem kartlarını, bellenimini ve örneklerini siler.</translation>
         <translation>Devlet Tablosu</translation>
     </message>
     <message>
-        <location line="-68" />
+        <location line="+3" />
         <source>You must tell Qt Creator which test framework is used inside the project.
 
 You should not mix multiple test frameworks in a project.</source>
@@ -15242,7 +17302,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Catch2 Sürümü:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>Test Information</source>
         <translation>Test bilgileri</translation>
     </message>
@@ -15258,7 +17318,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Test kasası</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+7" />
         <source>Creates an empty file.</source>
         <translation>Boş bir dosya oluşturur.</translation>
     </message>
@@ -15268,7 +17328,7 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Boş dosya</translation>
     </message>
     <message>
-        <location line="-96" />
+        <location line="+7" />
         <source>Creates a translation file that you can add to a Qt project.</source>
         <translation>Bir QT projesine ekleyebileceğiniz bir çeviri dosyası oluşturur.</translation>
     </message>
@@ -15278,61 +17338,76 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>Qt Çeviri Dosyası</translation>
     </message>
     <message>
-        <location line="-722" />
+        <location line="+3" />
         <source>This wizard creates a simple Qt-based console application.</source>
         <translation>Bu sihirbaz basit bir Qt tabanlı konsol uygulaması oluşturur.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+20" />
-        <location line="+143" />
-        <location line="+138" />
-        <location line="+19" />
+        <location line="+4" />
+        <location line="+363" />
+        <source>CMake with Qt 5 Compatibility</source>
+        <translation>Qt 5 Uyumluluklu CMake</translation>
+    </message>
+    <message>
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+229" />
         <source>Meson</source>
         <translation>Meson</translation>
     </message>
     <message>
-        <location line="-350" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-360" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Define Build System</source>
         <translation>Derleme Sistemini Tanımla</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+32" />
-        <location line="+20" />
-        <location line="+144" />
-        <location line="+137" />
-        <location line="+19" />
-        <location line="+42" />
+        <location line="-362" />
+        <location line="+21" />
+        <location line="+94" />
+        <location line="+18" />
+        <location line="+132" />
+        <location line="+51" />
+        <location line="+47" />
         <source>Build System</source>
         <translation>Yapı Sistemi</translation>
     </message>
     <message>
-        <location line="-361" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-362" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation File</source>
         <translation>Çeviri Dosyası</translation>
     </message>
     <message>
-        <location line="-410" />
-        <location line="+173" />
-        <location line="+170" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="-533" />
+        <location line="+44" />
+        <location line="+281" />
+        <location line="+47" />
+        <location line="+162" />
         <source>Translation</source>
         <translation>Tercüme</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-347" />
+        <location line="+69" />
+        <location line="+30" />
+        <location line="+20" />
+        <location line="+190" />
+        <source>Project name must use only letters, digits, or underscores.</source>
+        <translation>Proje adı yalnızca harf, rakam veya alt çizgi içermelidir.</translation>
+    </message>
+    <message>
+        <location line="-286" />
         <source>Define Python Interpreter</source>
         <translation>Python tercümanını tanımla</translation>
     </message>
@@ -15347,22 +17422,26 @@ You should not mix multiple test frameworks in a project.</source>
         <translation>QT Widgets Designer tabanlı widget (UI dosyası) içeren Python uygulaması için bir QT oluşturur. Python dönüşümüne .ui gerektirir.</translation>
     </message>
     <message>
-        <location line="-52" />
         <source>Qt 6.4</source>
-        <translation>Qt 6.4</translation>
+        <translation type="vanished">Qt 6.4</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+74" />
         <source>Qt 6.5</source>
         <translation>Qt 6.5</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Creates a Qt Quick application that can have both QML and C++ code. You can build the application and deploy it to desktop, embedded, and mobile target platforms.</source>
         <translation>Hem QML hem de C ++ koduna sahip olabilen bir QT hızlı uygulaması oluşturur. Uygulamayı oluşturabilir ve masaüstü, gömülü ve mobil hedef platformlarına dağıtabilirsiniz.</translation>
     </message>
     <message>
-        <location line="+90" />
+        <location line="+37" />
+        <source>Creates a project with a structure that is compatible both with Qt Design Studio and with Qt Creator. It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
+        <translation>Hem Qt Design Studio hem de Qt Creator ile uyumlu yapıda bir proje oluşturur. Qt Design Studio&apos;da görsel olarak düzenleyebileceğiniz bir .ui.qml formu içerir.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Creates a Qt Quick UI project for previewing and prototyping designs.
 
 To develop a full application, create a Qt Quick Application project instead.</source>
@@ -15371,7 +17450,7 @@ To develop a full application, create a Qt Quick Application project instead.</s
  Tam bir uygulama geliştirmek için bunun yerine bir QT Hızlı Uygulama Projesi oluşturun.</translation>
     </message>
     <message>
-        <location line="-108" />
+        <location line="+31" />
         <source>Creates a widget-based Qt application that contains a Qt Widgets Designer-based main window and C++ source and header files to implement the application logic.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15388,31 +17467,32 @@ Preselects a desktop Qt for building the application if available.</source>
 Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.</translation>
     </message>
     <message>
-        <location line="-172" />
-        <location line="+173" />
-        <location line="+18" />
-        <location line="+180" />
+        <location line="-371" />
+        <location line="+296" />
+        <location line="+29" />
+        <location line="+47" />
+        <location line="+134" />
         <source>Application (Qt)</source>
         <translation>Uygulama (Qt)</translation>
     </message>
     <message>
-        <location line="-370" />
+        <location line="-505" />
         <source>Qt Console Application</source>
         <translation>Qt Konsol Uygulaması</translation>
     </message>
     <message>
-        <location line="+302" />
+        <location line="+3" />
         <source>This wizard creates a C++ library project.</source>
         <translation>Bu sihirbaz bir C++ kitaplık projesi oluşturur.</translation>
     </message>
     <message>
-        <location line="-146" />
-        <location line="+156" />
+        <location line="+10" />
+        <location line="+342" />
         <source>Specify basic information about the classes for which you want to generate skeleton source code files.</source>
         <translation>İskelet kaynak kod dosyaları oluşturmak istediğiniz sınıflar hakkında temel bilgileri belirtin.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-341" />
         <source>Shared Library</source>
         <translation>Paylaşılan Kitaplık</translation>
     </message>
@@ -15427,9 +17507,10 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Qt Eklentisi</translation>
     </message>
     <message>
-        <location line="-397" />
-        <location line="+398" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+61" />
+        <location line="+1" />
+        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+64" />
         <source>Type:</source>
         <translation>Tip:</translation>
     </message>
@@ -15438,7 +17519,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation type="vanished">%{JS: değer(&apos;Tür&apos;) === &apos;qtplugin&apos;? value(&apos;BaseClassName&apos;).slice(1) : (value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1))}</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-44" />
         <source>QAccessiblePlugin</source>
         <translation>QErişilebilirEklenti</translation>
     </message>
@@ -15474,12 +17555,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
     </message>
     <message>
         <location line="+2" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+485" />
-        <location line="+18" />
-        <location line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-202" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+243" />
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="+264" />
         <source>None</source>
         <translation>Hiçbiri</translation>
     </message>
@@ -15504,14 +17580,14 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Qt modülü:</translation>
     </message>
     <message>
-        <location line="-147" />
-        <location line="+22" />
-        <location line="+39" />
+        <location line="+3" />
+        <location line="+115" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+14" />
-        <location line="+60" />
-        <location line="+28" />
-        <location line="+40" />
+        <location line="+104" />
+        <location line="+27" />
+        <location line="+18" />
+        <location line="+191" />
         <source>Define Project Details</source>
         <translation>Proje Ayrıntılarını Tanımla</translation>
     </message>
@@ -15520,38 +17596,38 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation type="vanished">Bir C++ kitaplığı oluşturur. Bu, aşağıdakileri oluşturmak için kullanılabilir:&lt;ul&gt;&lt;li&gt;&lt;tt&gt;QPluginLoader&lt;/tt&gt; ve çalışma zamanı (Eklentiler) ile kullanım için paylaşılan bir C++ kitaplığı&lt;/li&gt;&lt;li&gt;başka biriyle kullanım için paylaşılan veya statik bir C++ kitaplığı bağlantı zamanında proje&lt;/li&gt;&lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-485" />
-        <location line="+62" />
-        <location line="+364" />
-        <location line="+68" />
+        <location line="-481" />
+        <location line="+18" />
+        <location line="+214" />
+        <location line="+258" />
         <source>Library</source>
         <translation>Kütüphane</translation>
     </message>
     <message>
-        <location line="-67" />
+        <location line="-489" />
         <source>C++ Library</source>
         <translation>C++ Kitaplığı</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="+9" />
         <source>Creates a simple Nim application.</source>
         <translation>Basit bir Nim uygulaması oluşturur.</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+68" />
-        <location line="+11" />
-        <location line="+270" />
+        <location line="+1" />
+        <location line="+40" />
+        <location line="+18" />
+        <location line="+18" />
         <source>Non-Qt Project</source>
         <translation>Qt Olmayan Proje</translation>
     </message>
     <message>
-        <location line="-269" />
+        <location line="-75" />
         <source>Nim Application</source>
         <translation>Nim Uygulaması</translation>
     </message>
     <message>
-        <location line="-114" />
+        <location line="+5" />
         <source>Binary</source>
         <translation>İkili</translation>
     </message>
@@ -15567,12 +17643,12 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
     </message>
     <message>
         <location line="+1" />
-        <location line="+478" />
+        <location line="+456" />
         <source>Description:</source>
         <translation>Tanım:</translation>
     </message>
     <message>
-        <location line="-477" />
+        <location line="-455" />
         <source>0.1.0</source>
         <translation>0.1.0</translation>
     </message>
@@ -15633,18 +17709,20 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
     </message>
     <message>
         <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1303" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+833" />
         <source>Other</source>
         <translation>Diğer</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+462" />
+        <location line="+440" />
         <source>License:</source>
         <translation>Lisans:</translation>
     </message>
     <message>
-        <location line="-461" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+864" />
+        <location line="-439" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1306" />
         <source>C</source>
         <translation>C</translation>
     </message>
@@ -15685,21 +17763,21 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
     </message>
     <message>
         <location line="+1" />
-        <location line="+89" />
+        <location line="+287" />
         <location line="+1" />
-        <location line="+19" />
+        <location line="+33" />
         <location line="+1" />
-        <location line="+18" />
+        <location line="+17" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
         <location line="+1" />
         <source>Configuration</source>
         <translation>Yapılandırma</translation>
     </message>
     <message>
-        <location line="-165" />
+        <location line="-377" />
         <source>Creates a Nim application with Nimble.</source>
         <translation>Nimble ile bir Nim uygulaması oluşturur.</translation>
     </message>
@@ -15709,7 +17787,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Çevik Uygulama</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+16" />
         <source>Creates a simple C application with no dependencies.</source>
         <translation>Bağımlılıkları olmayan basit bir C uygulaması oluşturur.</translation>
     </message>
@@ -15719,7 +17797,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Düz C Uygulaması</translation>
     </message>
     <message>
-        <location line="+279" />
+        <location line="+16" />
         <source>Creates a simple C++ application with no dependencies.</source>
         <translation>Bağımlılığı olmayan basit bir C++ uygulaması oluşturur.</translation>
     </message>
@@ -15729,7 +17807,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Düz C++ Uygulaması</translation>
     </message>
     <message>
-        <location line="+75" />
+        <location line="+3" />
         <source>This wizard creates an empty .pro file.</source>
         <translation>Bu sihirbaz boş bir .pro dosyası oluşturur.</translation>
     </message>
@@ -15748,20 +17826,20 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation type="vanished">PySide sürümü:</translation>
     </message>
     <message>
-        <location line="-118" />
+        <location line="+12" />
         <source>Creates a Qt for Python application that contains only the main code for a QApplication.</source>
         <translation>QApplication için yalnızca ana kodu içeren bir Qt for Python uygulaması oluşturur.</translation>
     </message>
     <message>
-        <location line="-53" />
-        <location line="+21" />
-        <location line="+18" />
+        <location line="+1" />
+        <location line="+20" />
         <location line="+15" />
+        <location line="+19" />
         <source>Application (Qt for Python)</source>
         <translation>Uygulama (Python için Qt)</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-53" />
         <source>Empty Application</source>
         <translation>Boş Uygulama</translation>
     </message>
@@ -15778,13 +17856,11 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation type="vanished">%{JS: Util.fileName(&apos;%{ProjectName}&apos;, &apos;pyproject&apos;)}</translation>
     </message>
     <message>
-        <location line="-67" />
-        <location line="+21" />
         <source>Project file:</source>
-        <translation>Proje dosyası:</translation>
+        <translation type="vanished">Proje dosyası:</translation>
     </message>
     <message>
-        <location line="-10" />
+        <location line="+18" />
         <source>Creates a Qt for Python application that contains an empty window.</source>
         <translation>Boş bir pencere içeren bir Qt for Python uygulaması oluşturur.</translation>
     </message>
@@ -15794,15 +17870,15 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Boş Pencere</translation>
     </message>
     <message>
-        <location line="-10" />
-        <location line="+21" />
+        <location line="-29" />
+        <location line="+20" />
         <location line="+15" />
-        <location line="+18" />
+        <location line="+19" />
         <source>PySide 6</source>
         <translation>PySide 6</translation>
     </message>
     <message>
-        <location line="-259" />
+        <location line="-204" />
         <source>Creates a project containing a single main.cpp file with a stub implementation and no graphical UI.
 
 Preselects a desktop Qt for building the application if available.</source>
@@ -15811,39 +17887,32 @@ Preselects a desktop Qt for building the application if available.</source>
  Uygulamayı oluşturmak için bir masaüstü QT&apos;yi hazırlar.</translation>
     </message>
     <message>
-        <location line="+343" />
+        <location line="+44" />
         <source>Creates a C++ library. You can create:&lt;ul&gt;&lt;li&gt;a shared C++ library for use with &lt;tt&gt;QPluginLoader&lt;/tt&gt; and runtime (Plugins)&lt;/li&gt;&lt;li&gt;a shared or static C++ library for use with another project at linktime&lt;/li&gt;&lt;/ul&gt;</source>
         <translation>Bir C ++ kitaplığı oluşturur. Oluşturabilirsiniz: &lt;ul&gt; &lt;li&gt; &lt;TT&gt; qpluginloader &lt;/tt&gt; ve çalışma zamanı (eklentiler) ile kullanılmak üzere paylaşılan bir C ++ kitaplığı &lt;/li&gt; &lt;li&gt; Paylaşılan veya statik bir C ++ Kütüphanesi LinkTime&apos;da başka bir projeyle kullanmak için &lt;/li&gt; &lt;/ul&gt;</translation>
     </message>
     <message>
-        <location line="-137" />
-        <location line="+21" />
-        <location line="+33" />
         <source>PySide 2</source>
-        <translation>Pyside 2</translation>
+        <translation type="vanished">Pyside 2</translation>
     </message>
     <message>
-        <location line="-18" />
         <source>PySide 5.15</source>
-        <translation>PySide 5.15</translation>
+        <translation type="vanished">PySide 5.15</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.14</source>
-        <translation>PySide 5.14</translation>
+        <translation type="vanished">PySide 5.14</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.13</source>
-        <translation>PySide 5.13</translation>
+        <translation type="vanished">PySide 5.13</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>PySide 5.12</source>
-        <translation>PySide 5.12</translation>
+        <translation type="vanished">PySide 5.12</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+148" />
         <source>Creates a Qt Quick application that contains an empty window.</source>
         <translation>Boş bir pencere içeren bir Qt Quick uygulaması oluşturur.</translation>
     </message>
@@ -15857,50 +17926,174 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Qt Designer tabanlı bir parçacık (ui dosyası) içeren bir Qt for Python uygulaması oluşturur - .ui&apos;den Python&apos;a dönüştürme gerektirir</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+19" />
         <source>Window UI</source>
         <translation>Pencere kullanıcı arabirimi</translation>
     </message>
     <message>
-        <location line="-274" />
-        <location line="+219" />
-        <location line="+175" />
+        <location line="+3" />
+        <source>This wizard creates a Qt Interface Framework project.</source>
+        <translation>Bu sihirbaz bir Qt Interface Framework projesi oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Configure the interface that describes data exchanged between frontend and backend.</source>
+        <translation>Ön uç ile arka uç arasında alışverişi yapılan verileri tanımlayan arayüzü yapılandırın.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Name of the created project, starting with an upper case letter.</source>
+        <translation>Oluşturulan projenin adı, büyük harfle başlamalıdır.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Interface name:</source>
+        <translation>Arayüz adı:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Name of the interface that becomes a part of the created module, starting with an upper case letter.</source>
+        <translation>Oluşturulan modülün parçası olacak arayüzün adı, büyük harfle başlamalıdır.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Add sample code to the project</source>
+        <translation>Projeye örnek kod ekle</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Includes basic constructs, otherwise an empty project is created.</source>
+        <translation>Temel yapıları içerir, aksi hâlde boş bir proje oluşturulur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a zoned interface</source>
+        <translation>Bölgeli arayüz oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>A zoned interface has corresponding elements for all data in multiple zones.</source>
+        <translation>Bölgeli bir arayüz, birden çok bölgedeki tüm veriler için karşılık gelen öğelere sahiptir.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Backend setup:</source>
+        <translation>Arka uç kurulumu:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a simulation backend</source>
+        <translation>Benzetim arka ucu oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a simulation backend which is scriptable from QML.</source>
+        <translation>QML&apos;den betiklenebilen bir benzetim arka ucu oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a production backend implementation</source>
+        <translation>Üretim arka ucu uygulaması oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Creates a full, native implementation backend.</source>
+        <translation>Tam, yerel bir uygulama arka ucu oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects backend</source>
+        <translation>Qt Remote Objects arka ucu oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a backend that can connect to the server side by using Qt Remote Objects technology.</source>
+        <translation>Qt Remote Objects teknolojisi kullanarak sunucu tarafına bağlanabilen bir arka uç oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects simulation server</source>
+        <translation>Qt Remote Objects benzetim sunucusu oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a simulation server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Qt Remote Objects arka ucunun bağlanabileceği bir benzetim sunucusu oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generate a Qt Remote Objects production server</source>
+        <translation>Qt Remote Objects üretim sunucusu oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Generates a natively implemented server that can be connected by the Qt Remote Objects backend.</source>
+        <translation>Qt Remote Objects arka ucunun bağlanabileceği, yerel olarak uygulanmış bir sunucu oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>If no functioning backend is selected, the sample code of the frontend UI will not work and may even throw errors.</source>
+        <translation>İşlevsel bir arka uç seçilmezse ön uç arayüzünün örnek kodu çalışmaz ve hatta hata verebilir.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure Interface</source>
+        <translation>Arayüzü Yapılandır</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Configure</source>
+        <translation>Yapılandır</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Creates a Qt Interface Framework project with a configured frontend and optional backends.</source>
+        <translation>Yapılandırılmış bir ön uç ve isteğe bağlı arka uçlarla bir Qt Interface Framework projesi oluşturur.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Qt Interface Framework Project</source>
+        <translation>Qt Interface Framework Projesi</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+51" />
         <source>Qt 6.2</source>
         <translation>Qt 6.2</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.15</source>
         <translation>Qt 5.15</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.14</source>
         <translation>Qt 5.14</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.13</source>
         <translation>Qt 5.13</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+394" />
+        <location line="-50" />
+        <location line="+51" />
         <source>Qt 5.12</source>
         <translation>Qt 5.12</translation>
     </message>
     <message>
-        <location line="-393" />
-        <location line="+217" />
-        <location line="+177" />
+        <location line="-50" />
+        <location line="+24" />
+        <location line="+27" />
         <source>Minimum required Qt version:</source>
         <translation>Minimum gerekli Qt sürümü:</translation>
     </message>
     <message>
-        <location line="-393" />
+        <location line="-50" />
         <source>MyItem</source>
         <translation>Benim eşyam</translation>
     </message>
@@ -15940,17 +18133,33 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation>Qt Hızlı 2 Uzantı Eklentisi</translation>
     </message>
     <message>
+        <location line="+8" />
+        <source>Qt 6.8</source>
+        <translation>Qt 6.8</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Qt 6.10</source>
+        <translation>Qt 6.10</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Set QT_QML_GENERATE_QMLLS_INI to ON in CMake</source>
+        <translation>CMake&apos;te QT_QML_GENERATE_QMLLS_INI değerini ON yap</translation>
+    </message>
+    <message>
+        <location line="+43" />
         <source>Create a project that you can open in Qt Design Studio</source>
-        <translation type="vanished">Qt Design Studio&apos;da açabileceğiniz bir proje oluşturun</translation>
+        <translation>Qt Design Studio&apos;da açabileceğiniz bir proje oluşturun</translation>
     </message>
     <message>
         <source>Create a project with a structure that is compatible both with Qt Design Studio (via .qmlproject) and with Qt Creator (via CMakeLists.txt). It contains a .ui.qml form that you can visually edit in Qt Design Studio.</source>
         <translation type="vanished">Hem Qt Design Studio (.qmlproject aracılığıyla) hem de Qt Creator (CMakeLists.txt aracılığıyla) ile uyumlu bir yapıya sahip bir proje oluşturun. Qt Design Studio&apos;da görsel olarak düzenleyebileceğiniz bir .ui.qml formu içerir.</translation>
     </message>
     <message>
-        <location line="+199" />
-        <location line="+94" />
-        <location line="+88" />
+        <location line="-48" />
+        <location line="+32" />
+        <location line="+18" />
         <source>Use Qt Virtual Keyboard</source>
         <translation>Qt Sanal Klavyeyi Kullanın</translation>
     </message>
@@ -15963,12 +18172,12 @@ Preselects a desktop Qt for building the application if available.</source>
         <translation type="vanished">Boş bir pencere içeren bir Qt Quick uygulaması oluşturur. İsteğe bağlı olarak, bir Qt Design Studio projesi oluşturabilirsiniz.</translation>
     </message>
     <message>
-        <location line="-169" />
+        <location line="-36" />
         <source>Qt Quick Application</source>
         <translation>Qt Hızlı Uygulama</translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+27" />
         <source>Creates a Qt Quick application that contains an empty window.
 
 Use this &quot;compat&quot; version if you want to use other build systems than CMake or Qt versions lower than 6.</source>
@@ -15990,12 +18199,12 @@ Use this only if you are prototyping. You cannot create a full application with 
 Bunu yalnızca prototip yapıyorsanız kullanın. Bununla tam bir uygulama oluşturamazsınız. Bunun yerine bir Qt Hızlı Uygulama projesi kullanmayı düşünün.</translation>
     </message>
     <message>
-        <location line="-90" />
+        <location line="+16" />
         <source>Qt Quick UI Prototype</source>
         <translation>Qt Hızlı UI Prototipi</translation>
     </message>
     <message>
-        <location line="-135" />
+        <location line="+3" />
         <source>This wizard generates a Qt Widgets Application project. The application derives by default from QApplication and includes an empty widget.</source>
         <translation>Bu sihirbaz bir Qt Widgets Uygulama projesi oluşturur. Uygulama, varsayılan olarak QApplication&apos;dan türetilir ve boş bir pencere öğesi içerir.</translation>
     </message>
@@ -16004,7 +18213,7 @@ Bunu yalnızca prototip yapıyorsanız kullanın. Bununla tam bir uygulama oluş
         <translation type="vanished">%{JS: değer(&apos;Temel Sınıf&apos;)? value(&apos;BaseClass&apos;).slice(1) : &apos;Sınıfım&apos;}</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Generate form</source>
         <translation>form oluştur</translation>
     </message>
@@ -16036,28 +18245,28 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Qt Widget Uygulaması</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+5" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Please configure &lt;b&gt;%{vcsName}&lt;/b&gt; now.</source>
         <translation>Lütfen şimdi &lt;b&gt;%{vcsName}&lt;/b&gt; öğesini yapılandırın.</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+52" />
+        <location line="+23" />
         <location line="+19" />
-        <location line="+41" />
         <source>Repository:</source>
         <translation>Depo:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="-93" />
+        <location line="+34" />
         <location line="+18" />
+        <location line="+23" />
+        <location line="+19" />
         <source>Repository URL is not valid</source>
         <translation>Havuz URL&apos;si geçerli değil</translation>
     </message>
@@ -16066,24 +18275,24 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation type="vanished">%{defaultDir}</translation>
     </message>
     <message>
-        <location line="-78" />
-        <location line="+20" />
+        <location line="-92" />
+        <location line="+54" />
         <location line="+21" />
-        <location line="+39" />
+        <location line="+19" />
         <source>Directory:</source>
         <translation>dizin:</translation>
     </message>
     <message>
-        <location line="-79" />
-        <location line="+20" />
+        <location line="-93" />
+        <location line="+33" />
         <location line="+21" />
-        <location line="+20" />
+        <location line="+21" />
         <location line="+19" />
         <source>&quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; exists in the filesystem.</source>
         <translation>Dosya sisteminde &quot;%{JS: Util.toNativeSeparators(&apos;%{TargetPath}&apos;)}&quot; var.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-93" />
         <source>Use existing directory</source>
         <translation>Mevcut dizini kullan</translation>
     </message>
@@ -16158,23 +18367,22 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Revizyon:</translation>
     </message>
     <message>
-        <location line="-91" />
-        <location line="+19" />
-        <location line="+75" />
+        <location line="+3" />
+        <location line="+60" />
+        <location line="+20" />
         <source>Specify repository URL, checkout directory, and path.</source>
         <translation>Depo URL&apos;sini, ödeme dizini ve yolu belirtin.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Running Bazaar branch...</source>
         <translation>Koşu Çarşısı şubesi...</translation>
     </message>
     <message>
         <location line="+1" />
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-252" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+493" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+228" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+366" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+132" />
         <source>Clone</source>
         <translation>Klon</translation>
     </message>
@@ -16184,22 +18392,22 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Bir Bazaar şubesini klonlar ve içerilen projeyi yüklemeye çalışır.</translation>
     </message>
     <message>
-        <location line="-93" />
-        <location line="+19" />
-        <location line="+23" />
+        <location line="+1" />
         <location line="+18" />
-        <location line="+34" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+3" />
+        <location line="+23" />
+        <location line="+19" />
+        <location line="+20" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.h" line="+111" />
         <source>Import Project</source>
         <translation>Projeyi İçe Aktar</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-79" />
         <source>Bazaar Clone (Or Branch)</source>
         <translation>Çarşı Klonu (Veya Şubesi)</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="+6" />
         <source>Module:</source>
         <translation>modül:</translation>
     </message>
@@ -16214,19 +18422,19 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>CVS kontrolü çalıştırılıyor...</translation>
     </message>
     <message>
-        <location line="-59" />
         <location line="+1" />
-        <location line="+18" />
         <location line="+1" />
         <location line="+22" />
         <location line="+1" />
-        <location line="+17" />
+        <location line="+18" />
+        <location line="+1" />
+        <location line="+19" />
         <location line="+1" />
         <source>Checkout</source>
         <translation>Çıkış yapmak</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-61" />
         <source>Checks out a CVS repository and tries to load the contained project.</source>
         <translation>Bir CVS deposunu kontrol eder ve içerilen projeyi yüklemeye çalışır.</translation>
     </message>
@@ -16236,7 +18444,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>CVS Kontrolü</translation>
     </message>
     <message>
-        <location line="-33" />
+        <location line="+8" />
         <source>&lt;default branch&gt;</source>
         <translation>&lt;varsayılan dal&gt;</translation>
     </message>
@@ -16276,7 +18484,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Git Klonu</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+14" />
         <source>Running Mercurial clone...</source>
         <translation>Mercurial klonu çalıştırılıyor...</translation>
     </message>
@@ -16291,7 +18499,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Mercurial Klonu</translation>
     </message>
     <message>
-        <location line="-28" />
+        <location line="+11" />
         <source>Trust Server Certificate</source>
         <translation>Güven Sunucusu Sertifikası</translation>
     </message>
@@ -16311,7 +18519,62 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Yıkım Kontrolü</translation>
     </message>
     <message>
-        <location line="+337" />
+        <location line="+6" />
+        <source>Request passthrough</source>
+        <translation>Geçişi iste</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for passthrough mode.</source>
+        <translation>Geçiş kipi için izin iste.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request hand tracking</source>
+        <translation>El takibi iste</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for hand tracking.</source>
+        <translation>El takibi için izin iste.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request spatial anchors</source>
+        <translation>Uzamsal çapa iste</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Request permissions for anchors API.</source>
+        <translation>Çapa API&apos;si için izin iste.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>XR Features</source>
+        <translation>XR Özellikleri</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Features</source>
+        <translation>Özellikler</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kit Selection: For Apple Vision Pro, select any kit.</source>
+        <translation>Kit Seçimi: Apple Vision Pro için herhangi bir kit seçin.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Creates a Qt Quick 3D XR application with QML and C++ code. You can build and deploy the application to desktop VR and standalone XR platforms. For the Apple Vision Pro, you can develop in Qt Creator but must deploy the CMake project with XCode.</source>
+        <translation>QML ve C++ koduyla bir Qt Quick 3D XR uygulaması oluşturur. Uygulamayı masaüstü VR ve bağımsız XR platformlarına derleyip dağıtabilirsiniz. Apple Vision Pro için Qt Creator&apos;da geliştirme yapabilirsiniz ancak CMake projesini XCode ile dağıtmanız gerekir.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>XR Application</source>
+        <translation>XR Uygulaması</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>This wizard creates a custom Qt Creator plugin.</source>
         <translation>Bu sihirbaz, özel bir Qt Creator eklentisi oluşturur.</translation>
     </message>
@@ -16321,11 +18584,16 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Özel Qt Creator eklentiniz hakkında ayrıntıları belirtin.</translation>
     </message>
     <message>
+        <location line="+22" />
+        <source>Qt Creator C++ Plugin</source>
+        <translation>Qt Creator C++ Eklentisi</translation>
+    </message>
+    <message>
         <source>%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</source>
         <translation type="vanished">%{JS: value(&apos;ProjectName&apos;).charAt(0).toUpperCase() + value(&apos;ProjectName&apos;).slice(1)}</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-21" />
         <source>Plugin name:</source>
         <translation>Eklenti adı:</translation>
     </message>
@@ -16379,12 +18647,11 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Özel bir Qt Creator eklentisi oluşturur.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Qt Creator Plugin</source>
-        <translation>Qt Yaratıcı Eklenti</translation>
+        <translation type="vanished">Qt Yaratıcı Eklenti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+149" />
+        <location filename="../../../src/plugins/coreplugin/session.cpp" line="+159" />
         <source>S&amp;essions</source>
         <translation>S &amp;Essions</translation>
     </message>
@@ -16404,7 +18671,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Mevcut oturumun adı.</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+154" />
         <source>Delete Session</source>
         <translation>Oturumu Sil</translation>
     </message>
@@ -16426,7 +18693,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
  %1</translation>
     </message>
     <message>
-        <location line="+315" />
+        <location line="+339" />
         <source>Error while restoring session</source>
         <translation>Oturumu geri yüklerken hata</translation>
     </message>
@@ -16436,33 +18703,33 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>%1 oturumu geri yükleyemedi</translation>
     </message>
     <message>
-        <location line="+44" />
+        <location line="+39" />
         <source>Loading Session</source>
         <translation>Yükleme oturumu</translation>
     </message>
     <message>
-        <location line="+47" />
-        <location line="+49" />
+        <location line="+46" />
+        <location line="+48" />
         <source>Error while saving session</source>
         <translation>Oturumu Kaydederken Hata</translation>
     </message>
     <message>
-        <location line="-48" />
+        <location line="-47" />
         <source>Could not save session %1</source>
         <translation>%1 oturumu kaydedemedi</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+48" />
         <source>Could not save session to file &quot;%1&quot;</source>
         <translation>&quot;%1&quot; dosyası için oturumu kaydetemedi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+90" />
+        <location filename="../../../src/plugins/coreplugin/sessiondialog.cpp" line="+98" />
         <source>Enter the name of the session:</source>
         <translation>Oturumun adını girin:</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+43" />
         <source>Session Manager</source>
         <translation>Oturum yöneticisi</translation>
     </message>
@@ -16502,7 +18769,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Seans nedir?</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+55" />
+        <location filename="../../../src/plugins/coreplugin/sessionmodel.cpp" line="+54" />
         <source>Session</source>
         <translation>Oturum</translation>
     </message>
@@ -16512,7 +18779,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Son Değiştirilmiş</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="+126" />
         <location line="+11" />
         <source>New Session Name</source>
         <translation>Yeni Oturum Adı</translation>
@@ -16538,7 +18805,7 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Kl&amp;on ve açık</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+23" />
         <source>Rename Session</source>
         <translation>Oturumu Yeniden Adlandır</translation>
     </message>
@@ -16553,17 +18820,17 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>&amp;Yeniden Adlandır</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+189" />
+        <location filename="../../../src/plugins/projectexplorer/abiwidget.cpp" line="+173" />
         <source>&lt;custom&gt;</source>
         <translation>&lt;custy&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+98" />
+        <location filename="../../../src/plugins/projectexplorer/abstractprocessstep.cpp" line="+95" />
         <source>Configuration is faulty. Check the Issues view for details.</source>
         <translation>Yapılandırma hatalıdır. Ayrıntılar için sorun görünümünü kontrol edin.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+78" />
         <source>Could not create directory &quot;%1&quot;</source>
         <translation>&quot;%1&quot; dizini oluşturulamadı</translation>
     </message>
@@ -16573,44 +18840,41 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>&quot;%1&quot; programı mevcut değildir veya yürütülebilir değildir.</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+42" />
         <source>Starting: &quot;%1&quot; %2</source>
         <translation>Başlangıç: &quot; %1&quot; %2</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The process &quot;%1&quot; exited normally.</source>
-        <translation>&quot;%1&quot; işlemi normalden çıktı.</translation>
+        <translation type="vanished">&quot;%1&quot; işlemi normalden çıktı.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>The process &quot;%1&quot; exited with code %2.</source>
-        <translation>&quot; %1&quot; işlemi %2 kodu ile çıkmıştır.</translation>
+        <translation type="vanished">&quot; %1&quot; işlemi %2 kodu ile çıkmıştır.</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Could not start process &quot;%1&quot; %2.</source>
-        <translation>&quot;%1&quot; işlemi başlatılamadı %2.</translation>
+        <translation type="vanished">&quot;%1&quot; işlemi başlatılamadı %2.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>The process &quot;%1&quot; crashed.</source>
-        <translation>&quot;%1&quot; süreci çöktü.</translation>
+        <translation type="vanished">&quot;%1&quot; süreci çöktü.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/addrunconfigdialog.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+57" />
         <source>[none]</source>
         <translation>[hiçbiri]</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-291" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-64" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+80" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-699" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+15" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+231" />
         <source>Name</source>
         <translation>İsim</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigdialogs.cpp" line="+0" />
         <source>Source</source>
         <translation>Kaynak</translation>
     </message>
@@ -16630,7 +18894,22 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Yaratmak</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+23" />
+        <location line="+38" />
+        <source>Remove Run Configurations</source>
+        <translation>Çalıştırma Yapılandırmalarını Kaldır</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Filter run configurations by name</source>
+        <translation>Çalıştırma yapılandırmalarını ada göre süz</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Remove Selected</source>
+        <translation>Seçileni Kaldır</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfilter.cpp" line="+24" />
         <source>Files in Any Project</source>
         <translation>Herhangi bir projedeki dosyalar</translation>
     </message>
@@ -16640,18 +18919,19 @@ Varsa, uygulamayı oluşturmak için bir masaüstü Qt&apos;yi önceden seçer.<
         <translation>Tüm açık projelerin dosyalarını bulur. Verilen satır numarasına atlamak için &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Suster&gt;&quot; ekleyin. Sütun numarasına da atlamak için başka bir &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Sune&gt;&quot; ekleyin.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1969" />
+        <location filename="../../../src/plugins/projectexplorer/allprojectsfind.cpp" line="+40" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+2228" />
         <source>All Projects</source>
         <translation>Tüm Projeler</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>All Projects:</source>
         <translation>Tüm Projeler:</translation>
     </message>
     <message>
         <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+158" />
         <source>Filter: %1
 Excluding: %2
 %3</source>
@@ -16660,7 +18940,7 @@ Excluding: %2
  %3</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+73" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+78" />
         <source>Attach debugger to this process</source>
         <translation>Bu sürece hata ayıklayıcı ekleyin</translation>
     </message>
@@ -16670,7 +18950,33 @@ Excluding: %2
         <translation>Hata Ayıklayıcısı %1&apos;e ekleyin</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="+266" />
+        <source>Category</source>
+        <translation>Kategori</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+1570" />
+        <source>Debug</source>
+        <translation>Hata Ayıkla</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Critical</source>
+        <translation>Kritik</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Fatal</source>
+        <translation>Ölümcül</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Info</source>
+        <translation>Bilgi</translation>
+    </message>
+    <message>
+        <location line="+36" />
         <source>Stop</source>
         <translation>Durmak</translation>
     </message>
@@ -16706,12 +19012,12 @@ Excluding: %2
     </message>
     <message>
         <location line="+3" />
-        <location line="+737" />
+        <location line="+968" />
         <source>Application Output</source>
         <translation>Uygulama Çıkışı</translation>
     </message>
     <message>
-        <location line="-727" />
+        <location line="-959" />
         <source>Re-run this run-configuration.</source>
         <translation>Bu çalışma yapılandırmasını yeniden çalıştırın.</translation>
     </message>
@@ -16721,45 +19027,74 @@ Excluding: %2
         <translation>Çalışmayı bırak programı.</translation>
     </message>
     <message>
-        <location line="+232" />
+        <location line="+249" />
         <source>application-output-%1.txt</source>
         <extracomment>file name suggested for saving application output, %1 = run configuration display name</extracomment>
         <translation>Uygulama-çıktı-%1.txt</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+36" />
         <source>Application Output Window</source>
         <translation>Uygulama Çıktı Penceresi</translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+34" />
+        <source>Filter Qt Internal Log Categories</source>
+        <translation>Qt Dahili Günlük Kategorilerini Süz</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Filter categories by regular expression</source>
+        <translation>Kategorileri düzenli ifadeyle süz</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Invalid regular expression: %1</source>
+        <translation>Geçersiz düzenli ifade: %1</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Uncheck All</source>
+        <translation>Tüm İşaretleri Kaldır</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Uncheck All %1</source>
+        <translation>Tüm %1 İşaretlerini Kaldır</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Check All %1</source>
+        <translation>Tüm %1 Öğelerini İşaretle</translation>
+    </message>
+    <message>
+        <location line="+304" />
         <source>PID %1</source>
         <translation>PID %1</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+604" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="+1063" />
         <source>Invalid</source>
         <translation>Geçersiz</translation>
     </message>
     <message>
-        <location line="+109" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+250" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+299" />
         <source>Word-wrap output</source>
         <translation>Kelime sarısı çıkışı</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-8" />
         <source>Clear old output on a new run</source>
         <translation>Yeni bir koşuda eski çıkışı net</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Merge stderr and stdout</source>
         <translation>Stderr ve Stdout&apos;u birleştirin</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-19" />
         <source>Always</source>
         <translation>Her zaman</translation>
     </message>
@@ -16774,45 +19109,64 @@ Excluding: %2
         <translation>Yalnızca ilk çıktıda</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+13" />
+        <location line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+6" />
+        <source>Discard excessive output</source>
+        <translation>Aşırı çıktıyı at</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+11" />
+        <source>Overwrite background color</source>
+        <translation>Arka plan rengini geçersiz kıl</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Customize background color of the application output.
+Note: existing output will not get recolored.</source>
+        <translation>Uygulama çıktısının arka plan rengini özelleştirin.
+Not: Mevcut çıktı yeniden renklendirilmez.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="+10" />
         <source>Limit output to %1 characters</source>
         <translation>Çıktıyı %1 karakterle sınırlayın</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="-55" />
         <source>Open Application Output when running:</source>
         <translation>Çalışırken uygulama çıktısını açın:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Open Application Output when debugging:</source>
         <translation>Hata ayıklama sırasında uygulama çıktısını açın:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+146" />
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+55" />
+        <location filename="../../../src/plugins/projectexplorer/baseprojectwizarddialog.cpp" line="+112" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+99" />
         <source>untitled</source>
         <extracomment>File path suggestion for a new project. If you choose to translate it, make sure it is a valid path name without blanks and using only ascii chars.</extracomment>
         <translation>açıklıksız</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+51" />
+        <location filename="../../../src/plugins/projectexplorer/buildaspects.cpp" line="+48" />
         <source>Build directory:</source>
         <translation>Yapı Dizini:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+19" />
         <source>The build directory is not reachable from the build device.</source>
         <translation>Yapı dizinine derleme cihazından ulaşılamaz.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+21" />
         <source>Shadow build:</source>
         <translation>Gölge Yapısı:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+119" />
         <source>Build directory contains potentially problematic character &quot;%1&quot;.</source>
         <translation>Build dizin potansiyel olarak sorunlu &quot;%1&quot; karakter içerir.</translation>
     </message>
@@ -16822,15 +19176,16 @@ Excluding: %2
         <translation>Bu uyarı &lt;a href=&quot;dummy&quot;&gt;buradan&lt;/a&gt; gizlenebilir.</translation>
     </message>
     <message>
-        <location line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+65" />
+        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="+92" />
         <source>Separate debug info:</source>
         <translation>Ayrı hata ayıklama bilgileri:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+130" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1653" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1494" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="+172" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+276" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1887" />
         <source>Build Environment</source>
         <translation>Çevre Yapmak</translation>
     </message>
@@ -16840,14 +19195,14 @@ Excluding: %2
         <translation>Net Sistem Ortamı</translation>
     </message>
     <message>
-        <location line="+39" />
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+165" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+123" />
+        <location line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+195" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="+323" />
         <source>Custom Output Parsers</source>
         <translation>Özel Çıkış Ayrıştırıcıları</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+2" />
         <source>Parse standard output during build</source>
         <translation>Yapı sırasında standart çıkışı ayrıştır</translation>
     </message>
@@ -16857,29 +19212,34 @@ Excluding: %2
         <translation>Çıkış ayrıştırıcılarının stderr yerine stdout&apos;ta teşhis aramasını sağlar.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+635" />
+        <location line="+75" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+77" />
         <source>Build Settings</source>
         <translation>Ayarlar Oluştur</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+4" />
+        <location line="+9" />
+        <source>The project root directory. May differ from Project:Path for some build systems.</source>
+        <translation>Proje kök dizini. Bazı derleme sistemlerinde Project:Path değerinden farklı olabilir.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <location line="+3" />
         <source>Build directory</source>
         <translation>Dizini Yap</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Name of the build configuration</source>
         <translation>Yapı yapılandırmasının adı</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Variables in the build configuration&apos;s environment</source>
         <translation>Yapı yapılandırmasının ortamındaki değişkenler</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+30" />
         <source>Tooltip in target selector:</source>
         <translation>Hedef seçicide araç ipucu:</translation>
     </message>
@@ -16889,8 +19249,9 @@ Excluding: %2
         <translation>Yapı yapılandırmasını vururken bir araç ipucu olarak görünür</translation>
     </message>
     <message>
-        <location line="+281" />
+        <location line="+842" />
         <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-3" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-4" />
         <source>System Environment</source>
         <translation>Sistem ortamı</translation>
     </message>
@@ -16906,7 +19267,24 @@ Excluding: %2
         <translation>Proje başarıyla ayrıştırılmadı.</translation>
     </message>
     <message>
-        <location line="+52" />
+        <location line="+401" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-2" />
+        <source>Default</source>
+        <translation>Varsayılan</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Release</source>
+        <translation>Sürüm</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Profile</source>
+        <translation>Profil</translation>
+    </message>
+    <message>
+        <location line="-1359" />
+        <location line="+1002" />
         <source>Main file of the project</source>
         <translation>Projenin ana dosyası</translation>
     </message>
@@ -16936,7 +19314,7 @@ Excluding: %2
         <translation>Projenin aktif yapı yapılandırmasının türü</translation>
     </message>
     <message>
-        <location line="+50" />
+        <location line="+113" />
         <source>No build device is set for the kit &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; kiti için yapı cihazı ayarlanmamıştır.</translation>
     </message>
@@ -16956,14 +19334,14 @@ Excluding: %2
         <translation>&quot;%1&quot; oluşturma cihazı derleme dizine ulaşamaz.</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+182" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+186" />
         <source>Finished %1 of %n steps</source>
         <translation>
             <numerusform>%n adımdan %1 tanesi tamamlandı</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+111" />
         <source>Stop Applications</source>
         <translation>Uygulamaları Durdurun</translation>
     </message>
@@ -16983,7 +19361,7 @@ Excluding: %2
         <translation>Yapı cihazı %1 ( %2) yapısına hazırlanamadı.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+113" />
         <source>Compile</source>
         <comment>Category for compiler issues listed under &apos;Issues&apos;</comment>
         <translation>Derlemek</translation>
@@ -17027,13 +19405,13 @@ Excluding: %2
         <translation>Testler yaparken bulunan sorunlar.</translation>
     </message>
     <message>
-        <location line="+151" />
+        <location line="+157" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+96" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+115" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+130" />
         <location line="+9" />
         <location line="+100" />
         <location line="+8" />
-        <location line="+59" />
+        <location line="+60" />
         <source>Clean</source>
         <extracomment>Displayed name for a &quot;cleaning&quot; build step
 ----------
@@ -17043,10 +19421,10 @@ Display name of the clean build step list. Used as part of the labels in the pro
     <message>
         <location line="+4" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+727" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-204" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+755" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-205" />
         <location line="+111" />
-        <location line="+121" />
+        <location line="+122" />
         <source>Deploy</source>
         <extracomment>Displayed name for a deploy step
 ----------
@@ -17054,11 +19432,11 @@ Display name of the deploy build step list. Used as part of the labels in the pr
         <translation>Dağıtmak</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+3" />
         <location filename="../../../src/plugins/projectexplorer/buildsteplist.cpp" line="-8" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-52" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-60" />
         <source>Build</source>
         <extracomment>Displayed name for a normal build step
 ----------
@@ -17066,7 +19444,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>İnşa etmek</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/buildmanager.cpp" line="+40" />
         <source>Build/Deployment canceled</source>
         <translation>İnşa/dağıtım iptal edildi</translation>
     </message>
@@ -17086,34 +19464,34 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Devre dışı bırakma %1.</translation>
     </message>
     <message>
-        <location line="+24" />
-        <location line="+104" />
+        <location line="+27" />
+        <location line="+136" />
         <source>Error while building/deploying project %1 (kit: %2)</source>
         <translation>Proje %1 (Kit: %2) oluştururken/dağıtılırken hata</translation>
     </message>
     <message>
-        <location line="-100" />
+        <location line="-131" />
         <source>The kit %1 has configuration issues which might be the root cause for this problem.</source>
         <translation>KIT %1, bu sorunun temel nedeni olabilecek yapılandırma sorunlarına sahiptir.</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location line="+98" />
+        <location line="+5" />
+        <location line="+128" />
         <source>When executing step &quot;%1&quot;</source>
         <translation>&quot;%1&quot; adımı yürütürken</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/buildpropertiessettings.cpp" line="-51" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+118" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+532" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="+539" />
         <source>Enable</source>
         <translation>Olanak vermek</translation>
     </message>
     <message>
         <location line="+0" />
         <location filename="../../../src/plugins/projectexplorer/buildstepspage.cpp" line="+0" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-296" />
-        <location line="+296" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-301" />
+        <location line="+301" />
         <location line="+6" />
         <source>Disable</source>
         <translation>Devre dışı bırakmak</translation>
@@ -17124,7 +19502,7 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Proje Varsayılan&apos;ı kullanın</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <source>Default build directory:</source>
         <translation>Varsayılan oluşturma dizini:</translation>
     </message>
@@ -17134,7 +19512,17 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Varsayılan derleme dizinini oluşturmak için kullanılan şablon.&lt;br&gt;&lt;br&gt;Varsayılan değer, &lt;tt&gt;%1&lt;/tt&gt; ortam değişkeni kullanılarak ayarlanabilir.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
+        <source>Default working directory:</source>
+        <translation>Varsayılan çalışma dizini:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Template used to construct the default working directory of a run configuration.&lt;br&gt;&lt;br&gt;The default value can be set using the environment variable &lt;tt&gt;%1&lt;/tt&gt;.</source>
+        <translation>Bir çalıştırma yapılandırmasının varsayılan çalışma dizinini oluşturmak için kullanılan şablon.&lt;br&gt;&lt;br&gt;Varsayılan değer &lt;tt&gt;%1&lt;/tt&gt; ortam değişkeniyle ayarlanabilir.</translation>
+    </message>
+    <message>
+        <location line="+14" />
         <source>QML debugging:</source>
         <translation>QML hata ayıklama:</translation>
     </message>
@@ -17149,72 +19537,74 @@ Display name of the build build step list. Used as part of the labels in the pro
         <translation>Varsayılan oluşturma özellikleri</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/buildsettingspropertiespage.cpp" line="+13" />
         <source>No build settings available</source>
         <translation>Yapı Ayarı Mevcut Yok</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Edit build configuration:</source>
-        <translation>Düzenleme Yapılandırmasını Düzenle:</translation>
+        <translation type="vanished">Düzenleme Yapılandırmasını Düzenle:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+13" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+79" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+290" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+42" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+291" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+162" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+259" />
         <source>Add</source>
         <translation>Eklemek</translation>
     </message>
     <message>
-        <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-78" />
+        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-112" />
         <location filename="../../../src/plugins/projectexplorer/deploymentdataview.cpp" line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-476" />
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-481" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+1" />
-        <location line="+11" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+25" />
+        <location line="+290" />
         <source>Remove</source>
         <translation>Kaldırmak</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location line="+158" />
+        <location line="+1" />
+        <location line="+169" />
         <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+157" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-10" />
-        <location line="+12" />
-        <location line="+216" />
-        <location line="+103" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-289" />
+        <location line="+117" />
+        <location line="+175" />
+        <location line="+215" />
         <source>Rename...</source>
         <translation>Yeniden isimlendirmek...</translation>
     </message>
     <message>
-        <location line="-153" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-318" />
+        <location line="-168" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-214" />
         <source>Clone...</source>
         <translation>Klon...</translation>
     </message>
     <message>
-        <location line="+116" />
+        <location line="+5" />
+        <source>Active build configuration:</source>
+        <translation>Etkin derleme yapılandırması:</translation>
+    </message>
+    <message>
+        <location line="+122" />
         <source>New Configuration</source>
         <translation>Yeni yapılandırma</translation>
     </message>
     <message>
         <location line="+1" />
-        <location line="+62" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+145" />
+        <location line="+67" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+97" />
         <source>New configuration name:</source>
         <translation>Yeni yapılandırma adı:</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>New name for build configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Yapı yapılandırması için yeni isim &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+25" />
         <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-1" />
         <source>Clone Configuration</source>
         <extracomment>Title of a the cloned BuildConfiguration window, text of the window
@@ -17223,14 +19613,14 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Klon Yapılandırması</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+45" />
         <source>Cancel Build &amp;&amp; Remove Build Configuration</source>
         <translation>Build&apos;i iptal edin &amp;&amp; Yapı Yapılandırmasını Kaldır</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+142" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-128" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1003" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-306" />
         <source>Do Not Remove</source>
         <translation>Çıkarmayın</translation>
     </message>
@@ -17275,13 +19665,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Öğeyi kaldır</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+101" />
         <source>%1 Steps</source>
         <extracomment>%1 is the name returned by BuildStepList::displayName</extracomment>
         <translation>%1 adım</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+17" />
         <source>No %1 Steps</source>
         <translation>%1 adım yok</translation>
     </message>
@@ -17306,7 +19696,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Oluştururken yapı adımını kaldıramaz</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+394" />
+        <location filename="../../../src/plugins/projectexplorer/buildsystem.cpp" line="+403" />
         <source>The project is currently being parsed.</source>
         <translation>Proje şu anda ayrıştırılıyor.</translation>
     </message>
@@ -17331,13 +19721,13 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Kod Stili</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-206" />
-        <location line="+230" />
+        <location filename="../../../src/plugins/projectexplorer/compileoutputwindow.cpp" line="-266" />
+        <location line="+292" />
         <source>Compile Output</source>
         <translation>Çıktı derlemek</translation>
     </message>
     <message>
-        <location line="-219" />
+        <location line="-281" />
         <source>compile-output.txt</source>
         <extracomment>file name suggested for saving compile output</extracomment>
         <translation>derleme-output.txt</translation>
@@ -17358,9 +19748,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>O</translation>
     </message>
     <message>
-        <location line="+145" />
+        <location line="+22" />
+        <source>Discarded excessive compile output.</source>
+        <translation>Aşırı derleme çıktısı atıldı.</translation>
+    </message>
+    <message>
+        <location line="+169" />
         <source>Open Compile Output when building</source>
         <translation>İnşa ederken Derleme Çıktısını Açın</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Discards compile output that continuously comes in faster than it can be handled.</source>
+        <translation>İşlenebileceğinden daha hızlı gelen derleme çıktısını atar.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/copystep.cpp" line="+27" />
@@ -17397,7 +19797,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Dizin özyinelemeli kopyala</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/copytaskhandler.cpp" line="+24" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+155" />
         <source>error:</source>
         <extracomment>Task is of type: error</extracomment>
         <translation>hata:</translation>
@@ -17409,7 +19809,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>uyarı:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+18" />
+        <location line="+151" />
+        <source>Querying %1...</source>
+        <translation>%1 sorgulanıyor...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Get help from %1</source>
+        <translation>%1 yardımını al</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ask the %1 LLM to help with this issue.</source>
+        <translation>Bu sorunda yardımcı olması için %1 LLM&apos;sinden destek iste.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfilter.cpp" line="+19" />
         <source>Files in Current Project</source>
         <translation>Mevcut projedeki dosyalar</translation>
     </message>
@@ -17419,44 +19834,78 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mevcut belgenin projesinden dosyaları bulur. Verilen satır numarasına atlamak için &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Suster&gt;&quot; ekleyin. Sütun numarasına da atlamak için başka bir &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Sune&gt;&quot; ekleyin.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="+65" />
         <source>Project &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; projesi</translation>
+        <translation type="vanished">&quot;%1&quot; projesi</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Current Project</source>
-        <translation>Mevcut proje</translation>
+        <translation type="vanished">Mevcut proje</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location filename="../../../src/plugins/projectexplorer/currentprojectfind.cpp" line="-60" />
+        <source>Single Project</source>
+        <translation>Tek Proje</translation>
+    </message>
+    <message>
+        <location line="+67" />
         <source>Project &quot;%1&quot;:</source>
         <translation>&quot;%1&quot; projesi:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+55" />
-        <location line="+17" />
+        <location line="+7" />
+        <source>Project:</source>
+        <translation>Proje:</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Current</source>
+        <translation>Geçerli</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customexecutablerunconfiguration.cpp" line="+51" />
+        <location line="+34" />
         <source>Custom Executable</source>
         <translation>Özel yürütülebilir</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1718" />
+        <location line="-33" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+1978" />
         <source>Run %1</source>
         <translation>Koşu %1</translation>
     </message>
     <message>
         <location line="+7" />
-        <source>You need to set an executable in the custom run configuration.</source>
-        <translation>Özel çalışma yapılandırmasında bir yürütülebilir dosyayı ayarlamanız gerekir.</translation>
+        <source>No executable configured in the custom run configuration.</source>
+        <translation>Özel çalıştırma yapılandırmasında yürütülebilir dosya yapılandırılmamış.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+101" />
+        <location line="+5" />
+        <source>Go to the %1 run configuration and set up an executable.</source>
+        <extracomment>%1 = display name of the run configuration</extracomment>
+        <translation>%1 çalıştırma yapılandırmasına gidin ve bir çalıştırılabilir dosya ayarlayın.</translation>
+    </message>
+    <message>
+        <source>You need to set an executable in the custom run configuration.</source>
+        <translation type="vanished">Özel çalışma yapılandırmasında bir yürütülebilir dosyayı ayarlamanız gerekir.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparser.cpp" line="+150" />
+        <source>Failed to read custom output parsers from &quot;%1&quot;: %2</source>
+        <translation>Özel çıktı ayrıştırıcıları &quot;%1&quot; konumundan okunamadı: %2</translation>
+    </message>
+    <message>
+        <location line="+94" />
         <source>Custom output parsers scan command line output for user-provided error patterns&lt;br&gt;to create entries in Issues.&lt;br&gt;The parsers can be configured &lt;a href=&quot;dummy&quot;&gt;here&lt;/a&gt;.</source>
         <translation>Özel çıktı ayrıştırıcıları, Sorunlar bölümünde girdiler oluşturmak için&lt;br&gt;kullanıcının sağladığı hata desenleri açısından komut satırı çıktısını tarar.&lt;br&gt;Ayrıştırıcılar &lt;a href=&quot;dummy&quot;&gt;buradan&lt;/a&gt; yapılandırılabilir.</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+67" />
+        <source>%1 (project default)</source>
+        <extracomment>%1 = parser display name</extracomment>
+        <translation>%1 (proje varsayılanı)</translation>
+    </message>
+    <message>
+        <location line="+53" />
         <source>There are no custom parsers active</source>
         <translation>Aktif özel ayrıştırıcı yok</translation>
     </message>
@@ -17537,8 +19986,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     <message>
         <location line="-25" />
         <location line="+29" />
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+189" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+803" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="+98" />
         <source>Test</source>
         <translation>Test</translation>
     </message>
@@ -17562,19 +20011,19 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+743" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+47" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+47" />
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/appoutputpane.cpp" line="-934" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+1" />
         <source>Warning</source>
         <translation>Uyarı</translation>
     </message>
     <message>
-        <location line="+253" />
+        <location filename="../../../src/plugins/projectexplorer/customparserconfigdialog.cpp" line="+253" />
         <source>Not applicable:</source>
         <translation>Uygulanamaz:</translation>
     </message>
@@ -17594,16 +20043,56 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Desen mesajla eşleşmez.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-8" />
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-208" />
+        <source>Build default</source>
+        <translation>Varsayılanı derle</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run default</source>
+        <translation>Varsayılanı çalıştır</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The name of the custom parser.</source>
+        <translation>Özel ayrıştırıcının adı.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>This custom parser is used by default for all build configurations of the project.</source>
+        <translation>Bu özel ayrıştırıcı, projenin tüm derleme yapılandırmaları için varsayılan olarak kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>This custom parser is used by default for all run configurations of the project.</source>
+        <translation>Bu özel ayrıştırıcı, projenin tüm çalıştırma yapılandırmaları için varsayılan olarak kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <source>Cannot modify parser because it was auto-imported.</source>
+        <translation>Ayrıştırıcı otomatik içe aktarıldığı için değiştirilemiyor.</translation>
+    </message>
+    <message>
+        <location line="+109" />
         <source>Custom output parsers defined here can be enabled individually in the project&apos;s build or run settings.</source>
         <translation>Burada tanımlanan özel çıkış ayrıştırıcıları, projenin oluşturma veya çalışma ayarlarında ayrı ayrı etkinleştirilebilir.</translation>
     </message>
     <message>
         <location line="+7" />
         <location filename="../../../src/plugins/projectexplorer/environmentwidget.cpp" line="-1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-290" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+205" />
         <source>Add...</source>
         <translation>Eklemek...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Export...</source>
+        <translation>Dışa Aktar...</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Import...</source>
+        <translation>İçe Aktar...</translation>
     </message>
     <message>
         <location line="+15" />
@@ -17611,37 +20100,62 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Yeni ayrıştırıcı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+55" />
-        <location line="+511" />
+        <location line="+32" />
+        <source>Save Parsers</source>
+        <translation>Ayrıştırıcıları Kaydet</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Load Parsers</source>
+        <translation>Ayrıştırıcıları Yükle</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>*.json</source>
+        <translation>*.json</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Error Loading Parsers</source>
+        <translation>Ayrıştırıcılar Yüklenirken Hata</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Error loading parsers: %1</source>
+        <translation>Ayrıştırıcılar yüklenirken hata: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customtoolchain.cpp" line="+54" />
+        <location line="+480" />
         <source>Custom</source>
         <translation>Gelenek</translation>
     </message>
     <message>
-        <location line="-235" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+367" />
-        <location line="+925" />
+        <location line="-203" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+388" />
+        <location line="+957" />
         <source>GCC</source>
         <translation>GCC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-917" />
-        <location line="+922" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1715" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-949" />
+        <location line="+954" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="+1820" />
         <source>Clang</source>
         <translation>Klişe</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-926" />
-        <location line="+936" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-958" />
+        <location line="+968" />
         <source>ICC</source>
         <translation>ICC</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-868" />
-        <location line="+992" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-854" />
+        <location line="+1002" />
         <source>MSVC</source>
         <translation>MSVC</translation>
     </message>
@@ -17654,11 +20168,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+0" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+586" />
         <source>Empty</source>
         <translation>Boş</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+54" />
         <source>MACRO[=VALUE]</source>
         <translation>Makro [= değer]</translation>
     </message>
@@ -17683,22 +20198,18 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Virgülle ayrılmış mkspecler listesi.</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+420" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-323" />
-        <location line="+7" />
         <source>&amp;Compiler path:</source>
-        <translation>&amp;Derleyici yolu:</translation>
+        <translation type="vanished">&amp;Derleyici yolu:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&amp;Make path:</source>
         <translation>&amp;Yol Yap:</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-188" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="+484" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-464" />
         <source>&amp;ABI:</source>
         <translation>&amp;Abi:</translation>
     </message>
@@ -17743,7 +20254,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bu dairesel bir bağımlılık yaratacaktır.</translation>
     </message>
     <message>
-        <location line="+133" />
+        <location line="+128" />
         <source>Synchronize configuration</source>
         <translation>Yapılandırmayı senkronize edin</translation>
     </message>
@@ -17753,12 +20264,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Aktif kiti senkronize edin, yapılandırmayı projeler arasında oluşturun ve dağıtın.</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+6" />
+        <source>Deploy dependencies</source>
+        <translation>Bağımlılıkları dağıt</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Do not just build dependencies, but deploy them as well.</source>
+        <translation>Yalnızca bağımlılıkları derlemeyin, onları dağıtın da.</translation>
+    </message>
+    <message>
+        <location line="+31" />
         <source>Dependencies</source>
         <translation>Bağımlılık</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+33" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+38" />
         <source>Deploy locally</source>
         <extracomment>Default DeployConfiguration display name</extracomment>
         <translation>Yerel olarak konuşlandır</translation>
@@ -17784,65 +20305,104 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Yapı sisteminden dağıtım verilerini geçersiz kılın</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/desktoprunconfiguration.cpp" line="+101" />
         <source>Qt Run Configuration</source>
-        <translation>Qt Run Yapılandırması</translation>
+        <translation type="vanished">Qt Run Yapılandırması</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+45" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevice.cpp" line="+301" />
         <source>Local PC</source>
         <translation>Yerel bilgisayar</translation>
     </message>
     <message>
         <location line="+1" />
         <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopdevicefactory.cpp" line="+25" />
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+410" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+299" />
         <source>Desktop</source>
         <translation>Masaüstü</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/desktopprocesssignaloperation.cpp" line="+69" />
+        <location line="-236" />
         <source>Cannot kill process with pid %1: %2</source>
         <translation>%1: %2 ile süreci öldüremiyor</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+6" />
         <source>Cannot interrupt process with pid %1: %2</source>
         <translation>%1: %2 ile PID ile işlemi kesintiye uğratamıyor</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+18" />
         <source>Cannot open process.</source>
         <translation>Süreci açamıyor.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location line="+97" />
+        <location line="+100" />
         <source>Invalid process id.</source>
         <translation>Geçersiz İşlem Kimliği.</translation>
     </message>
     <message>
-        <location line="-46" />
+        <location line="-47" />
         <source>Cannot open process: %1</source>
         <translation>Süreci açamıyor: %1</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+10" />
         <source>DebugBreakProcess failed:</source>
         <translation>DebugbreakProcess başarısız oldu:</translation>
     </message>
     <message>
-        <location line="+10" />
-        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
-        <translation>%1 yok. %2&apos;yi kendiniz inşa ederseniz, https://code.qt.io/cgit/qt-creator/binary-artifacts.git/ adresine bakın.</translation>
+        <location line="+11" />
+        <source>%1 does not exist. Your %2 installation seems to be corrupt.</source>
+        <translation>%1 yok. %2 kurulumunuz bozuk görünüyor.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+64" />
+        <source>You will need at least one port for QML debugging.</source>
+        <translation>QML hata ayıklaması için en az bir bağlantı noktasına ihtiyacınız olacak.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Run Auto-Detection Now</source>
+        <translation>Otomatik Algılamayı Şimdi Çalıştır</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Machine type:</source>
+        <translation>Makine türü:</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Physical Device</source>
+        <translation>Fiziksel Aygıt</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-478" />
+        <source>Free ports:</source>
+        <translation>Boş bağlantı noktaları:</translation>
+    </message>
+    <message>
+        <location line="+169" />
+        <source>&quot;%1&quot; can only handle local files.</source>
+        <translation>&quot;%1&quot; yalnızca yerel dosyaları işleyebilir.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Device &quot;%1&quot; is not ready to use.</source>
+        <translation>&quot;%1&quot; aygıtı kullanıma hazır değil.</translation>
+    </message>
+    <message>
+        <source>%1 does not exist. If you built %2 yourself, check out https://code.qt.io/cgit/qt-creator/binary-artifacts.git/.</source>
+        <translation type="vanished">%1 yok. %2&apos;yi kendiniz inşa ederseniz, https://code.qt.io/cgit/qt-creator/binary-artifacts.git/ adresine bakın.</translation>
+    </message>
+    <message>
+        <location line="-245" />
         <source>Cannot start %1. Check src\tools\win64interrupt\win64interrupt.c for more information.</source>
         <translation>%1 başlayamaz. Daha fazla bilgi için SRC \ Tools \ Win64 Interrupt \ Win64 Interrupt.c&apos;yi kontrol edin.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>could not break the process.</source>
         <translation>Süreci bozamadı.</translation>
     </message>
@@ -17864,7 +20424,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bu kit için bir cihaz kurulmamıştır. Bir cihaz eklemek ister misiniz?</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+31" />
         <source>Check for a configured device</source>
         <translation>Yapılandırılmış bir cihaz olup olmadığını kontrol edin</translation>
     </message>
@@ -17879,23 +20439,39 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mevcut Cihaz Türleri:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+415" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanager.cpp" line="+414" />
         <source>No device for path &quot;%1&quot;</source>
         <translation>&quot;%1&quot; yolu için cihaz yok</translation>
     </message>
     <message>
         <location line="+10" />
         <location line="+14" />
+        <location line="+9" />
+        <location line="+17" />
+        <source>No device found for path &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; yolu için aygıt bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="-35" />
+        <source>No file access for device &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; aygıtı için dosya erişimi yok.</translation>
+    </message>
+    <message>
         <source>No device found for path &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; yolu için cihaz bulunamadı</translation>
+        <translation type="vanished">&quot;%1&quot; yolu için cihaz bulunamadı</translation>
     </message>
     <message>
-        <location line="-9" />
         <source>No file access for device &quot;%1&quot;</source>
-        <translation>&quot;%1&quot; cihaz için dosya erişimi yok</translation>
+        <translation type="vanished">&quot;%1&quot; cihaz için dosya erişimi yok</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+154" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicemanagermodel.cpp" line="+162" />
+        <source>All</source>
+        <comment>All devices</comment>
+        <translation>Tümü</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>%1 (default for %2)</source>
         <translation>%1 ( %2 için varsayılan)</translation>
     </message>
@@ -17935,22 +20511,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Uzaktan hata</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-253" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicesettingspage.cpp" line="-305" />
         <source>&amp;Device:</source>
         <translation>&amp;Cihaz:</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+11" />
         <source>Type Specific</source>
         <translation>Türe Özel</translation>
     </message>
     <message>
         <location line="+2" />
+        <location line="+157" />
         <source>&amp;Remove</source>
         <translation>&amp;Kaldırmak</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-156" />
         <source>Set As Default</source>
         <translation>Varsayılan olarak ayarlayın</translation>
     </message>
@@ -17960,7 +20537,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&amp;Eklemek...</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>&amp;Start Wizard to Add Device...</source>
         <translation>&amp;Cihaz eklemek için sihirbaz başlatın ...</translation>
     </message>
@@ -17971,7 +20548,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>%1 ekle</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+36" />
         <source>&amp;Name:</source>
         <translation>&amp;İsim:</translation>
     </message>
@@ -17986,7 +20563,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Mevcut Durum:</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+96" />
+        <source>&amp;Restore</source>
+        <translation>&amp;Geri Yükle</translation>
+    </message>
+    <message>
+        <location line="+21" />
         <source>Yes (id is &quot;%1&quot;)</source>
         <translation>Evet (id &quot;%1&quot;)</translation>
     </message>
@@ -18001,8 +20583,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Çalışma süreçlerini göster ...</translation>
     </message>
     <message>
-        <location line="+55" />
-        <location line="+2" />
+        <location line="+60" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2848" />
         <source>Devices</source>
         <translation>Cihazlar</translation>
     </message>
@@ -18022,24 +20604,23 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Cihaz testi başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/deviceusedportsgatherer.cpp" line="+81" />
         <source>Remote error output was: %1</source>
-        <translation>Uzaktan hata çıkışı: %1</translation>
+        <translation type="vanished">Uzaktan hata çıkışı: %1</translation>
     </message>
     <message numerus="yes">
-        <location line="+41" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="+498" />
         <source>Found %n free ports.</source>
         <translation>
             <numerusform>%n boş bağlantı noktası bulundu.</numerusform>
         </translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-12" />
         <source>Checking available ports...</source>
         <translation>Mevcut bağlantı noktalarını kontrol etmek ...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+70" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/filetransfer.cpp" line="+71" />
         <source>No device set for test transfer.</source>
         <translation>Test aktarımı için aygıt seti yok.</translation>
     </message>
@@ -18069,7 +20650,81 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>genel dosya kopyası</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-429" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/idevice.cpp" line="-434" />
+        <source>Search in PATH</source>
+        <translation>PATH içinde ara</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Search in Qt installation</source>
+        <translation>Qt kurulumunda ara</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Search in directories</source>
+        <translation>Dizinlerde ara</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Semicolon-separated list of directories</source>
+        <translation>Dizinlerin noktalı virgülle ayrılmış listesi</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select the paths on the device that should be scanned for binaries.</source>
+        <translation>Aygıtta ikili dosyalar için taranacak yolları seçin.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create kits</source>
+        <translation>Kitler oluştur</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Set up kits for this device&apos;s toolchains.</source>
+        <translation>Bu aygıtın araç zincirleri için kitler kur.</translation>
+    </message>
+    <message>
+        <location line="+158" />
+        <source>Device is not connected.</source>
+        <translation>Aygıt bağlı değil.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Leave empty to look up executable in $PATH</source>
+        <translation>Yürütülebilir dosyayı $PATH içinde aramak için boş bırakın</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Use SSH port forwarding for debugging</source>
+        <translation>Hata ayıklama için SSH bağlantı noktası yönlendirmeyi kullan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enable debugging on remote targets that cannot expose GDB server ports.
+The SSH tunneling is used to map the remote GDB server port to localhost.
+The local and remote ports are determined automatically.</source>
+        <translation>GDB sunucu bağlantı noktalarını dışa açamayan uzak hedeflerde hata ayıklamayı etkinleştirir.
+Uzak GDB sunucu bağlantı noktasını localhost&apos;a eşlemek için SSH tünellemesi kullanılır.
+Yerel ve uzak bağlantı noktaları otomatik olarak belirlenir.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Access via:</source>
+        <translation>Erişim yolu:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select the device to connect through.</source>
+        <translation>Bağlanılacak aygıtı seçin.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Direct</source>
+        <translation>Doğrudan</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>The device name cannot be empty.</source>
         <translation>Cihaz adı boş olamaz.</translation>
     </message>
@@ -18079,18 +20734,37 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bu isme sahip bir cihaz zaten var.</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+22" />
+        <source>Enter lists and ranges like this: &quot;1024,1026-1028,1030&quot;.</source>
+        <translation>Listeleri ve aralıkları şöyle girin: &quot;1024,1026-1028,1030&quot;.</translation>
+    </message>
+    <message>
+        <location line="+39" />
         <source>Opening a terminal is not supported.</source>
         <translation>Bir terminal açmak desteklenmez.</translation>
     </message>
     <message>
-        <location line="+121" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+519" />
+        <location line="+42" />
+        <source>The file &quot;%1&quot; cannot be handled by the device &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; dosyası &quot;%2&quot; aygıtı tarafından işlenemiyor.</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Sourcing a script is not supported on this platform.</source>
+        <translation>Bu platformda betik kaynak alma desteklenmiyor.</translation>
+    </message>
+    <message>
+        <location line="+33" />
         <source>Device</source>
         <translation>Cihaz</translation>
     </message>
     <message>
-        <location line="+245" />
+        <location line="+122" />
+        <source>No signal operation recipe is available for this device.</source>
+        <translation>Bu aygıt için kullanılabilir sinyal işlemi tarifi yok.</translation>
+    </message>
+    <message>
+        <location line="+179" />
         <source>Ready to use</source>
         <translation>Kullanıma Hazır</translation>
     </message>
@@ -18110,22 +20784,45 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bilinmeyen</translation>
     </message>
     <message>
-        <location line="+113" />
+        <location line="+105" />
+        <source>Run Tools on This Device</source>
+        <translation>Araçları Bu Aygıtta Çalıştır</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Source and Build Tools on This Device</source>
+        <translation>Bu Aygıttaki Kaynak ve Derleme Araçları</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Auto-Detection</source>
+        <translation>Otomatik Algılama</translation>
+    </message>
+    <message>
+        <location line="+59" />
         <source>localSource() not implemented for this device type.</source>
         <translation>LocalSource () Bu cihaz türü için uygulanmadı.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+19" />
+        <source>No path specified for SignalOperationData.</source>
+        <translation>SignalOperationData için yol belirtilmedi.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No valid PID specified for SignalOperationData.</source>
+        <translation>SignalOperationData için geçerli PID belirtilmedi.</translation>
+    </message>
+    <message>
         <source>No device for given path: &quot;%1&quot;.</source>
-        <translation>Verilen yol için cihaz yok: &quot;%1&quot;.</translation>
+        <translation type="vanished">Verilen yol için cihaz yok: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Device for path &quot;%1&quot; does not support killing processes.</source>
-        <translation>&quot;%1&quot; yolu için cihaz öldürme süreçlerini desteklemez.</translation>
+        <translation type="vanished">&quot;%1&quot; yolu için cihaz öldürme süreçlerini desteklemez.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+68" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/processlist.cpp" line="+74" />
         <source>Process ID</source>
         <translation>İşlem kimliği</translation>
     </message>
@@ -18135,53 +20832,57 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Komut satırı</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Fetching process list. This might take a while.</source>
         <translation>İşlem Listesi Alın. Bu biraz zaman alabilir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettingspage.cpp" line="+61" />
-        <location line="+2" />
+        <location line="+24" />
+        <source>Failed to fetch process list.</source>
+        <translation>İşlem listesi alınamadı.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshsettings.cpp" line="+172" />
         <source>SSH</source>
         <translation>SSH</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-88" />
         <source>Enable connection sharing:</source>
         <translation>Bağlantı paylaşımını etkinleştir:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Connection sharing timeout:</source>
         <translation>Bağlantı Paylaşımı Zaman Aşımı:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Path to ssh executable:</source>
         <translation>SSH Yürütülebilir Kalabaya Yol:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to sftp executable:</source>
         <translation>SFTP YAPILMASI YAPILIR:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-askpass executable:</source>
         <translation>SSH-ASKPass Yürütülebilir Kalabaya Yol:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>Path to ssh-keygen executable:</source>
         <translation>SSH-Keygen Yolu Yürütülebilir Mayıs:</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="-12" />
         <source> minutes</source>
         <translation>dakikalar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+78" />
+        <location filename="../../../src/plugins/projectexplorer/editorconfiguration.cpp" line="+74" />
         <source>Project %1</source>
         <comment>Settings, %1 is a language (C++ or QML)</comment>
         <translation>Proje %1</translation>
@@ -18193,7 +20894,8 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Proje</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+56" />
+        <location filename="../../../src/plugins/projectexplorer/editorsettingspropertiespage.cpp" line="+54" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+149" />
         <source>Restore Global</source>
         <translation>Global&apos;i Geri Yükle</translation>
     </message>
@@ -18203,40 +20905,35 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Ekran Ayarları</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Display right &amp;margin at column:</source>
-        <translation>Sütunda Doğru ve &amp;Marjı Görüntüle:</translation>
+        <translation type="vanished">Sütunda Doğru ve &amp;Marjı Görüntüle:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Use context-specific margin</source>
-        <translation>Bağlama özgü marjı kullanın</translation>
+        <translation type="vanished">Bağlama özgü marjı kullanın</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>If available, use a different margin. For example, the ColumnLimit from the ClangFormat plugin.</source>
-        <translation>Varsa, farklı bir marj kullanın. Örneğin, Clangformat eklentisinden sütunlim.</translation>
+        <translation type="vanished">Varsa, farklı bir marj kullanın. Örneğin, Clangformat eklentisinden sütunlim.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+73" />
         <source>Editor</source>
         <translation>Editör</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-96" />
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="+496" />
-        <location line="+49" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2916" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspect.cpp" line="-138" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-32" />
         <source>Environment</source>
         <translation>Çevre</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/environmentaspectwidget.cpp" line="+37" />
         <source>Base environment for this run configuration:</source>
         <translation>Bu çalışma yapılandırması için temel ortam:</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+25" />
         <source>Show in Application Output when running</source>
         <translation>Çalışırken uygulama çıktısında gösterin</translation>
     </message>
@@ -18247,12 +20944,12 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
     </message>
     <message>
         <location line="+22" />
-        <location line="+419" />
+        <location line="+424" />
         <source>Choose Directory</source>
         <translation>Dizin seçin</translation>
     </message>
     <message>
-        <location line="-285" />
+        <location line="-290" />
         <source>Ed&amp;it</source>
         <translation>&amp;Düzenlemek</translation>
     </message>
@@ -18292,7 +20989,7 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Bu ortamın kurulmasıyla bir terminal açın.</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+135" />
         <source>Unset &lt;a href=&quot;%1&quot;&gt;&lt;b&gt;%1&lt;/b&gt;&lt;/a&gt;</source>
         <translation>Set &lt;a href = &quot;%1&quot;&gt; &lt;b&gt;%1 &lt;/b&gt; &lt;/a&gt;</translation>
     </message>
@@ -18334,17 +21031,17 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>&lt;b&gt;%1 &lt;/b&gt; kullanın ve</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+28" />
+        <location filename="../../../src/plugins/projectexplorer/filesinallprojectsfind.cpp" line="+27" />
         <source>Files in All Project Directories</source>
         <translation>Tüm proje dizinlerindeki dosyalar</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+43" />
         <source>Files in All Project Directories:</source>
         <translation>Tüm proje dizinlerindeki dosyalar:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+83" />
+        <location filename="../../../src/plugins/projectexplorer/filterkitaspectsdialog.cpp" line="+84" />
         <source>Setting</source>
         <translation>Ayar</translation>
     </message>
@@ -18354,18 +21051,22 @@ Title of a the cloned RunConfiguration window, text of the window</extracomment>
         <translation>Görünür</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1361" />
-        <location line="+929" />
+        <location filename="../../../src/plugins/projectexplorer/gcctoolchain.cpp" line="-1450" />
+        <location line="+961" />
         <source>MinGW</source>
         <translation>Mingw</translation>
     </message>
     <message>
-        <location line="-877" />
         <source>%1 (%2, %3 %4 at %5)</source>
-        <translation>%1 ( %2, %3 %4, %5)</translation>
+        <translation type="vanished">%1 ( %2, %3 %4, %5)</translation>
     </message>
     <message>
-        <location line="+1259" />
+        <location line="-885" />
+        <source>%1 (%2 %3 at &quot;%4&quot;)</source>
+        <translation>%1 (%2 %3, &quot;%4&quot; konumunda)</translation>
+    </message>
+    <message>
+        <location line="+1330" />
         <source>Override for code model</source>
         <translation>Kod modeli için geçersiz kılma</translation>
     </message>
@@ -18377,7 +21078,7 @@ fails because Clang does not understand the target architecture.</source>
  Başarısız çünkü Clang hedef mimariyi anlamıyor.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+39" />
         <source>Platform codegen flags:</source>
         <translation>Platform CodeGen bayrakları:</translation>
     </message>
@@ -18392,7 +21093,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Hedef Üçlü:</translation>
     </message>
     <message>
-        <location line="+27" />
+        <location line="+25" />
         <source>Parent toolchain:</source>
         <translation>Ana araç zinciri:</translation>
     </message>
@@ -18417,22 +21118,22 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Metin düzeltilmesi için girişi düzenler.</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Field is not an object.</source>
         <translation>Alan bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Field has no name.</source>
         <translation>Alanın adı yok.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has no type.</source>
         <translation>&quot;%1&quot; alanının türü yoktur.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Field &quot;%1&quot; has unsupported type &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; alanının desteklenmemiş &quot;%2&quot; türüne sahiptir.</translation>
     </message>
@@ -18442,102 +21143,102 @@ fails because Clang does not understand the target architecture.</source>
         <translation>&quot; %1&quot; alanı ayrıştırırken: %2</translation>
     </message>
     <message>
-        <location line="+208" />
+        <location line="+206" />
         <source>Label (&quot;%1&quot;) data is not an object.</source>
         <translation>Etiket (&quot;%1&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Label (&quot;%1&quot;) has no trText.</source>
         <translation>Etiket (&quot;%1&quot;) TRTEXT yoktur.</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+27" />
         <source>Spacer (&quot;%1&quot;) data is not an object.</source>
         <translation>Aracı (&quot;%1&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Spacer (&quot;%1&quot;) property &quot;factor&quot; is no integer value.</source>
         <translation>Aracı (&quot;%1&quot;) özelliği &quot;faktörü&quot; tamsayı değeri değildir.</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>LineEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>LineRedit (&quot;%1&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>LineEdit (&quot;%1&quot;) has an invalid regular expression &quot;%2&quot; in &quot;validator&quot;.</source>
         <translation>LineRedit (&quot;%1&quot;), &quot;Doğrulayıcı&quot; da geçersiz düzenli &quot;%2&quot; ifadesine sahiptir.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+13" />
         <source>LineEdit (&quot;%1&quot;) has an invalid value &quot;%2&quot; in &quot;completion&quot;.</source>
         <translation>LineRedit (&quot;%1&quot;) &quot;tamamlama&quot; da geçersiz &quot;%2&quot; değerine sahiptir.</translation>
     </message>
     <message>
-        <location line="+166" />
+        <location line="+164" />
         <source>TextEdit (&quot;%1&quot;) data is not an object.</source>
         <translation>Textedit (&quot;%1&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+80" />
         <source>PathChooser data is not an object.</source>
         <translation>PathChooser verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+25" />
         <source>kind &quot;%1&quot; is not one of the supported &quot;existingDirectory&quot;, &quot;directory&quot;, &quot;file&quot;, &quot;saveFile&quot;, &quot;existingCommand&quot;, &quot;command&quot;, &quot;any&quot;.</source>
         <translation>Kind &quot;%1&quot;, desteklenen &quot;mevcutDirectory&quot;, &quot;dizin&quot;, &quot;dosya&quot;, &quot;savefile&quot;, &quot;mevcutCommand&quot;, &quot;komut&quot;, &quot;any&quot; değil.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+79" />
         <source>CheckBox (&quot;%1&quot;) data is not an object.</source>
         <translation>Onay kutusu (&quot;%1&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>CheckBox (&quot;%1&quot;) values for checked and unchecked state are identical.</source>
         <translation>Kontrol kutusu (&quot;%1&quot;) işaretli ve kontrolsüz durum için değerler aynıdır.</translation>
     </message>
     <message>
-        <location line="+80" />
+        <location line="+87" />
         <source>No JSON lists allowed inside List items.</source>
         <translation>Liste öğelerinin içinde JSON listesine izin verilmez.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>No &quot;key&quot; found in List items.</source>
         <translation>Liste öğelerinde &quot;anahtar&quot; bulunmadı.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>%1 (&quot;%2&quot;) data is not an object.</source>
         <translation>%1 (&quot;%2&quot;) verileri bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>%1 (&quot;%2&quot;) &quot;index&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;dizin&quot; bir tamsayı değeri değildir.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>%1 (&quot;%2&quot;) &quot;disabledIndex&quot; is not an integer value.</source>
         <translation>%1 (&quot;%2&quot;) &quot;DisablIndex&quot; bir tamsayı değeri değildir.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; missing.</source>
         <translation>%1 (&quot;%2&quot;) &quot;öğeler&quot; eksik.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>%1 (&quot;%2&quot;) &quot;items&quot; is not a JSON list.</source>
         <translation>%1 (&quot;%2&quot;) &quot;öğeler&quot; bir JSON listesi değildir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonkitspage.cpp" line="+48" />
         <source>At least one required feature is not present.</source>
         <translation>En az bir gerekli özellik mevcut değildir.</translation>
     </message>
@@ -18552,7 +21253,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>En az bir tercih edilen özellik mevcut değildir.</translation>
     </message>
     <message>
-        <location line="+78" />
+        <location line="+85" />
         <source>Feature list is set and not of type list.</source>
         <translation>Özellik listesi ayarlanmış ve tür listesinde değil.</translation>
     </message>
@@ -18567,7 +21268,7 @@ fails because Clang does not understand the target architecture.</source>
         <translation>Özellik listesi öğesi bir dize veya nesne değildir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+161" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonsummarypage.cpp" line="+193" />
         <source>Failed to Commit to Version Control</source>
         <translation>Sürüm kontrolünü taahhüt edemedi</translation>
     </message>
@@ -18584,7 +21285,7 @@ fails because Clang does not understand the target architecture.</source>
     </message>
     <message>
         <location line="-11" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+184" />
         <source>Failed to add subproject &quot;%1&quot;
 to project &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; alt projesi eklenemedi
@@ -18592,20 +21293,25 @@ to project &quot;%2&quot;.</source>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="+7" />
         <source>Failed to add one or more files to project
 &quot;%1&quot; (%2).</source>
         <translation>Projeye bir veya daha fazla dosya ekleyemedi
  &quot;%1&quot; (%2).</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+76" />
+        <location line="+83" />
+        <source>Subproject &quot;%1&quot; outside of &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; alt projesi &quot;%2&quot; dışında.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizard.cpp" line="+75" />
         <source>Project File</source>
         <translation>Proje dosyası</translation>
     </message>
     <message>
         <location line="+12" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3120" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+3111" />
         <source>Choose Project File</source>
         <translation>Proje dosyasını seçin</translation>
     </message>
@@ -18615,12 +21321,12 @@ to project &quot;%2&quot;.</source>
         <translation>Proje birden fazla proje dosyası içeriyor. Kullanmak istediğiniz kişiyi seçin.</translation>
     </message>
     <message>
-        <location line="+33" />
+        <location line="+35" />
         <source>Check whether a variable exists.&lt;br&gt;Returns &quot;true&quot; if it does and an empty string if not.</source>
         <translation>Bir değişkenin var olup olmadığını denetler.&lt;br&gt;Varsa &quot;true&quot;, yoksa boş bir dize döndürür.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+42" />
         <source>Could not determine target path. &quot;TargetPath&quot; was not set on any page.</source>
         <translation>Hedef yolu belirleyemedi. &quot;TargetPath&quot; herhangi bir sayfaya ayarlanmadı.</translation>
     </message>
@@ -18640,32 +21346,32 @@ to project &quot;%2&quot;.</source>
         <translation>Seçenekler nesnesinde &apos;anahtar&apos; yok.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+84" />
         <source>Failed to Overwrite Files</source>
         <translation>Dosyaların üzerine yazılamadı</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Format Files</source>
         <translation>Dosyaları biçimlendiremedi</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>Failed to Write Files</source>
         <translation>Dosya yazamadı</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>Failed to Post-Process Files</source>
         <translation>İşlem sonrası dosyalardan geçemedi</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Polish Files</source>
         <translation>Polonyalamamış dosyalar</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Failed to Open Files</source>
         <translation>Dosyaları açamadı</translation>
     </message>
@@ -18707,66 +21413,65 @@ to project &quot;%2&quot;.</source>
         <translation>Projeyi açamıyor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+151" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfactory.cpp" line="+157" />
         <source>Generator is not a object.</source>
         <translation>Jeneratör bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Generator has no typeId set.</source>
         <translation>Jeneratörün TypeID seti yoktur.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>TypeId &quot;%1&quot; of generator is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>Jeneratörün tipi &quot;%1&quot; bilinmemektedir. Desteklenen tipidler: &quot;%2&quot;.</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location line="+241" />
+        <location line="+57" />
+        <location line="+240" />
         <source>Path &quot;%1&quot; does not exist when checking JSON wizard search paths.</source>
         <translation>JSON Sihirbazı arama yollarını kontrol ederken &quot;%1&quot; yolu mevcut değildir.</translation>
     </message>
     <message>
-        <location line="-228" />
+        <location line="-227" />
         <source>Checking &quot;%1&quot; for %2.</source>
         <translation>%2 için &quot; %1&quot; kontrolü.</translation>
     </message>
     <message>
         <location line="+24" />
-        <location line="+233" />
+        <location line="+232" />
         <source>* Failed to parse &quot;%1&quot;:%2:%3: %4</source>
         <translation>* &quot;%1&quot; den ayrılamadı:%2:%3:%4</translation>
     </message>
     <message>
-        <location line="-223" />
         <source>* Did not find a JSON object in &quot;%1&quot;.
 </source>
-        <translation>* &quot;%1&quot; de bir JSON nesnesi bulamadı.</translation>
+        <translation type="vanished">* &quot;%1&quot; de bir JSON nesnesi bulamadı.</translation>
     </message>
     <message>
-        <location line="+6" />
-        <location line="+234" />
+        <location line="-215" />
+        <location line="+232" />
         <source>* Configuration found and parsed.</source>
         <translation>* Yapılandırma bulundu ve ayrıştırıldı.</translation>
     </message>
     <message>
-        <location line="-224" />
+        <location line="-222" />
         <source>JsonWizard: &quot;%1&quot; not found.</source>
         <translation>Jsonwizard: &quot;%1&quot; bulunamadı.</translation>
     </message>
     <message>
-        <location line="+96" />
+        <location line="+94" />
         <source>Page is not an object.</source>
         <translation>Sayfa bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+10" />
         <source>Page has no typeId set.</source>
         <translation>Sayfanın TypeID seti yoktur.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>TypeId &quot;%1&quot; of page is unknown. Supported typeIds are: &quot;%2&quot;.</source>
         <translation>Sayfanın tipi &quot;%1&quot; bilinmemektedir. Desteklenen tipidler: &quot;%2&quot;.</translation>
     </message>
@@ -18776,7 +21481,8 @@ to project &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; typied sayfası geçersiz &quot;dizin&quot; bulunur.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="-140" />
+        <location line="+232" />
         <source>* Did not find a JSON object in &quot;%1&quot;.</source>
         <translation>* &quot;%1&quot; de bir JSON nesnesi bulamadı.</translation>
     </message>
@@ -18786,22 +21492,22 @@ to project &quot;%2&quot;.</source>
         <translation>* Sürüm %1 Desteklenmiyor.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+6" />
         <source>* Failed to create: %1</source>
         <translation>* Oluşturulamadı: %1</translation>
     </message>
     <message>
-        <location line="+227" />
+        <location line="+232" />
         <source>key not found.</source>
         <translation>Anahtar bulunamadı.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+5" />
         <source>Expected an object or a list.</source>
         <translation>Bir nesne veya liste bekleniyor.</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+28" />
         <source>The platform selected for the wizard.</source>
         <translation>Sihirbaz için seçilen platform.</translation>
     </message>
@@ -18831,62 +21537,66 @@ to project &quot;%2&quot;.</source>
         <translation>Kimlik seti yok.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No category is set.</source>
         <translation>Hiçbir kategori ayarlanmadı.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Icon file &quot;%1&quot; not found.</source>
         <translation>Simge dosyası &quot;%1&quot; bulunamadı.</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+18" />
         <source>Image file &quot;%1&quot; not found.</source>
         <translation>Görüntü dosyası &quot;%1&quot; bulunamadı.</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+15" />
         <source>No displayName set.</source>
         <translation>DisplayName Set Yok.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No displayCategory set.</source>
         <translation>DisplayCategory Seti yok.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+6" />
         <source>No description set.</source>
         <translation>Açıklama seti yok.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>When parsing &quot;generators&quot;: %1</source>
         <translation>&quot;Jeneratörler&quot; ü ayrıştırırken: %1</translation>
     </message>
     <message>
-        <location line="+15" />
-        <source>When parsing &quot;pages&quot;: %1</source>
-        <translation>&quot;Sayfaları&quot; ayrıştırırken: %1</translation>
+        <location line="+19" />
+        <source>No valid typeId.</source>
+        <translation>Geçerli typeId yok.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+83" />
+        <source>When parsing &quot;pages&quot;: %1</source>
+        <translation type="vanished">&quot;Sayfaları&quot; ayrıştırırken: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardfilegenerator.cpp" line="+78" />
         <source>Files data list entry is not an object.</source>
         <translation>Dosyalar veri listesi girişi bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Source and target are both empty.</source>
         <translation>Kaynak ve hedef her ikisi de boş.</translation>
     </message>
     <message>
-        <location line="+57" />
+        <location line="+53" />
         <source>When processing &quot;%1&quot;:&lt;br&gt;%2</source>
         <translation>&quot;%1&quot; işlerken: &lt;br&gt;%2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+164" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardgeneratorfactory.cpp" line="+158" />
         <source>%1 [folder]</source>
         <translation>%1 [klasör]</translation>
     </message>
@@ -18913,7 +21623,12 @@ to project &quot;%2&quot;.</source>
         <translation>&quot; %1&quot; sayfasının alanlarını ayrıştırırken: %2</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+6" />
+        <source>No fields found.</source>
+        <translation>Alan bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+44" />
         <source>&quot;data&quot; for a &quot;File&quot; page needs to be unset or an empty object.</source>
         <translation>&quot;Dosya&quot; sayfası için &quot;veriler&quot; sayfası veya boş bir nesne olmalıdır.</translation>
     </message>
@@ -18923,12 +21638,12 @@ to project &quot;%2&quot;.</source>
         <translation>&quot;Kitler&quot; sayfasında &quot; %1&quot; ayrıştırma hatası: %2</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>&quot;data&quot; must be a JSON object for &quot;Kits&quot; pages.</source>
         <translation>&quot;Veri&quot; &quot;kitler&quot; sayfaları için bir JSON nesnesi olmalıdır.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>&quot;Kits&quot; page requires a &quot;%1&quot; set.</source>
         <translation>&quot;Kitler&quot; sayfası &quot;%1&quot; seti gerektirir.</translation>
     </message>
@@ -18938,38 +21653,39 @@ to project &quot;%2&quot;.</source>
         <translation>&quot;Veri&quot; boş olmalı veya &quot;proje&quot; sayfaları için bir JSON nesnesi olmalıdır.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Invalid regular expression &quot;%1&quot; in &quot;%2&quot;. %3</source>
         <translation>Geçersiz düzenli ifade &quot;%1&quot; in &quot;%2&quot;. %3</translation>
     </message>
     <message>
-        <location line="+46" />
+        <location line="+47" />
         <source>&quot;data&quot; for a &quot;Summary&quot; page can be unset or needs to be an object.</source>
         <translation>&quot;Özet&quot; sayfası için &quot;veriler&quot; yazılamaz veya bir nesne olması gerekir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+50" />
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonwizardscannergenerator.cpp" line="+48" />
         <source>Key is not an object.</source>
         <translation>Anahtar bir nesne değildir.</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="+9" />
         <source>Pattern &quot;%1&quot; is no valid regular expression.</source>
         <translation>&quot;%1&quot; paterni geçerli bir ifade değildir.</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>ScannerGenerator: Binary pattern &quot;%1&quot; not valid.</source>
         <translation>ScannerGenerator: İkili desen &quot;%1&quot; geçerli değil.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+65" />
-        <location line="+688" />
+        <location filename="../../../src/plugins/projectexplorer/kit.cpp" line="+111" />
+        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-137" />
         <source>Unnamed</source>
         <translation>İsimsiz</translation>
     </message>
     <message>
-        <location line="-686" />
+        <location line="-51" />
         <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+0" />
         <source>Kit</source>
         <translation>Set</translation>
@@ -19000,13 +21716,14 @@ to project &quot;%2&quot;.</source>
         <translation>Kitin kimliği.</translation>
     </message>
     <message>
-        <location line="+669" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+319" />
+        <location line="+118" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-1" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-220" />
         <source>Clone of %1</source>
         <translation>%1 klonu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitaspects.cpp" line="-1479" />
+        <location filename="../../../src/plugins/projectexplorer/sysrootkitaspect.cpp" line="+76" />
         <source>Sysroot</source>
         <translation>Sysroot</translation>
     </message>
@@ -19037,49 +21754,86 @@ to project &quot;%2&quot;.</source>
         <translation>Sys kökü</translation>
     </message>
     <message>
-        <location line="+112" />
         <source>&lt;No compiler&gt;</source>
-        <translation>&lt;Derleyici yok&gt;</translation>
+        <translation type="vanished">&lt;Derleyici yok&gt;</translation>
     </message>
     <message>
-        <location line="+94" />
-        <location line="+133" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainkitaspect.cpp" line="+203" />
+        <location line="+190" />
         <location line="+15" />
         <source>Compiler</source>
         <translation>Derleyici</translation>
     </message>
     <message>
-        <location line="-147" />
+        <location line="-204" />
         <source>The compiler to use for building.&lt;br&gt;Make sure the compiler will produce binaries compatible with the target device, Qt version and other libraries used.</source>
         <translation>Derleme için kullanılacak derleyici.&lt;br&gt;Derleyicinin hedef aygıt, Qt sürümü ve kullanılan diğer kitaplıklarla uyumlu ikili dosyalar üreteceğinden emin olun.</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+21" />
         <source>Compilers produce code for different ABIs: %1</source>
         <translation>Derleyiciler farklı ABI&apos;ler için kod üretir: %1</translation>
     </message>
     <message>
-        <location line="+108" />
+        <location line="+168" />
+        <location line="+18" />
+        <location line="+13" />
+        <source>None</source>
+        <comment>No compiler</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="-10" />
         <source>Path to the compiler executable</source>
         <translation>Derleyiciye Yol Yürütülebilir</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Compiler for different languages</source>
         <translation>Farklı diller için derleyici</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+7" />
         <source>Compiler executable for different languages</source>
         <translation>Farklı diller için derleyici yürütülebilir</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+81" />
+        <source>Found toolchain: %1.</source>
+        <translation>Araç zinciri bulundu: %1.</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Removing toolchain: %1.</source>
+        <translation>Araç zinciri kaldırılıyor: %1.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Toolchain: %1.</source>
+        <translation>Araç zinciri: %1.</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Expected a JSON object for toolchain detection, got: %1.</source>
+        <translation>Araç zinciri algılama için bir JSON nesnesi bekleniyordu, alınan: %1.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>No toolchains found in JSON object for detection.</source>
+        <translation>Algılama için JSON nesnesinde araç zinciri bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Unknown language in toolchain detection: %1.</source>
+        <translation>Araç zinciri algılamada bilinmeyen dil: %1.</translation>
+    </message>
+    <message>
+        <location line="+158" />
         <source>No compiler set in kit.</source>
         <translation>Kitte derleyici yok.</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+222" />
         <source>Run device type</source>
         <translation>Cihaz Türünü Çalıştırın</translation>
     </message>
@@ -19089,18 +21843,69 @@ to project &quot;%2&quot;.</source>
         <translation>Uygulamaları çalıştırmak için cihaz türü.</translation>
     </message>
     <message>
-        <location line="+27" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+235" />
+        <location line="-181" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-632" />
         <source>Unknown device type</source>
         <translation>Bilinmeyen cihaz türü</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="-40" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="+240" />
+        <source>Device:</source>
+        <translation>Aygıt:</translation>
+    </message>
+    <message>
+        <location line="+45" />
         <source>Device type</source>
         <translation>Cihaz türü</translation>
     </message>
     <message>
-        <location line="+140" />
+        <location line="+47" />
+        <source>No run device set.</source>
+        <translation>Çalıştırma aygıtı ayarlanmadı.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Build device is incompatible with this kit.</source>
+        <translation>Derleme aygıtı bu kitle uyumsuz.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Run device is incompatible with this kit.</source>
+        <translation>Çalıştırma aygıtı bu kitle uyumsuz.</translation>
+    </message>
+    <message>
+        <location line="+54" />
+        <source>Host address (%1)</source>
+        <translation>Ana makine adresi (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>SSH port (%1)</source>
+        <translation>SSH bağlantı noktası (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>User name (%1)</source>
+        <translation>Kullanıcı adı (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Private key file (%1)</source>
+        <translation>Özel anahtar dosyası (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device name (%1)</source>
+        <translation>Aygıt adı (%1)</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Device root directory (%1)</source>
+        <translation>Aygıt kök dizini (%1)</translation>
+    </message>
+    <message>
+        <location line="+107" />
         <source>Run device</source>
         <translation>Cihaz</translation>
     </message>
@@ -19110,129 +21915,245 @@ to project &quot;%2&quot;.</source>
         <translation>Uygulamaları çalıştırmak için cihaz.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+58" />
+        <source>Build device type</source>
+        <translation>Derleme aygıtı türü</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The type of device to build on.</source>
+        <translation>Derleme yapılacak aygıt türü.</translation>
+    </message>
+    <message>
         <source>No device set.</source>
-        <translation>Cihaz seti yok.</translation>
+        <translation type="vanished">Cihaz seti yok.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Device is incompatible with this kit.</source>
-        <translation>Cihaz bu kitle uyumsuzdur.</translation>
+        <translation type="vanished">Cihaz bu kitle uyumsuzdur.</translation>
     </message>
     <message>
-        <location line="+43" />
-        <location line="+258" />
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+798" />
+        <location line="-209" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="+803" />
         <source>Unconfigured</source>
         <translation>Yapılmamış</translation>
     </message>
     <message>
-        <location line="-252" />
         <source>Host address</source>
-        <translation>Ana bilgisayar adresi</translation>
+        <translation type="vanished">Ana bilgisayar adresi</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>SSH port</source>
-        <translation>SSH Limanı</translation>
+        <translation type="vanished">SSH Limanı</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/sshparameters.cpp" line="-8" />
+        <source>Enable to specify a private key file to use for authentication, otherwise the default mechanism is used for authentication (password, .sshconfig and the default private key).</source>
+        <translation>Kimlik doğrulama için kullanılacak bir özel anahtar dosyası belirtmek üzere etkinleştirin; aksi hâlde kimlik doğrulama için varsayılan mekanizma kullanılır (parola, .sshconfig ve varsayılan özel anahtar).</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Use specific key:</source>
+        <translation>Belirli anahtarı kullan:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The device&apos;s SSH host key checking mode.</source>
+        <translation>Aygıtın SSH anahtar denetimi kipi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Host key check:</source>
+        <translation>Ana makine anahtarı denetimi:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>No host key checking.</source>
+        <translation>Anahtar denetimi yok.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Strict</source>
+        <translation>Sıkı</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Strict host key checking.</source>
+        <translation>Sıkı anahtar denetimi.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow No Match</source>
+        <translation>Eşleşmemeye İzin Ver</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Allow host key checking.</source>
+        <translation>Ana makine anahtarı denetimine izin ver.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Host name or IP address</source>
+        <translation>Ana makine adı veya IP adresi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s host name or IP address.</source>
+        <translation>Aygıtın ana bilgisayar adı veya IP adresi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Host name:</source>
+        <translation>Ana makine adı:</translation>
+    </message>
+    <message>
+        <location line="+3" />
         <source>User name</source>
         <translation>Kullanıcı adı</translation>
     </message>
     <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH user name.</source>
+        <translation>Aygıtın SSH kullanıcı adı.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>User name:</source>
+        <translation>Kullanıcı adı:</translation>
+    </message>
+    <message>
         <location line="+4" />
+        <source>The device&apos;s SSH port number.</source>
+        <translation>Aygıtın SSH bağlantı noktası numarası.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>SSH port:</source>
+        <translation>SSH bağlantı noktası:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Private key file</source>
         <translation>Özel Anahtar Dosyası</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
+        <source>The device&apos;s private key file.</source>
+        <translation>Aygıtın özel anahtar dosyası.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Private key file:</source>
+        <translation>Özel anahtar dosyası:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Timeout:</source>
+        <translation>Zaman aşımı:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The device&apos;s SSH connection timeout.</source>
+        <translation>Aygıtın SSH bağlantı zaman aşımı.</translation>
+    </message>
+    <message>
         <source>Device name</source>
-        <translation>Cihaz adı</translation>
+        <translation type="vanished">Cihaz adı</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Device root directory</source>
-        <translation>Cihaz Kök Dizini</translation>
+        <translation type="vanished">Cihaz Kök Dizini</translation>
     </message>
     <message>
-        <location line="+186" />
-        <location line="+46" />
+        <location filename="../../../src/plugins/projectexplorer/devicesupport/devicekitaspects.cpp" line="+270" />
         <source>Build device</source>
         <translation>Cihaz Oluştur</translation>
     </message>
     <message>
-        <location line="-45" />
+        <location line="+1" />
         <source>The device used to build applications on.</source>
         <translation>Cihaz üzerinde uygulamalar oluşturmak için kullanılır.</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="-316" />
         <source>No build device set.</source>
         <translation>Yapı cihazı seti yok.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Build host address</source>
-        <translation>Ana Bilgisayar Adresi Oluştur</translation>
+        <translation type="vanished">Ana Bilgisayar Adresi Oluştur</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build SSH port</source>
-        <translation>SSH bağlantı noktası oluştur</translation>
+        <translation type="vanished">SSH bağlantı noktası oluştur</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build user name</source>
-        <translation>Kullanıcı Adı Oluştur</translation>
+        <translation type="vanished">Kullanıcı Adı Oluştur</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build private key file</source>
-        <translation>Özel Anahtar Dosyası Oluşturun</translation>
+        <translation type="vanished">Özel Anahtar Dosyası Oluşturun</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Build device name</source>
-        <translation>Cihaz Adı ​​Oluştur</translation>
+        <translation type="vanished">Cihaz Adı ​​Oluştur</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Build device root directory</source>
-        <translation>Cihaz Kök Dizini Oluşturun</translation>
+        <translation type="vanished">Cihaz Kök Dizini Oluşturun</translation>
     </message>
     <message>
-        <location line="+110" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+34" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-171" />
         <source>Change...</source>
         <translation>Değiştirmek...</translation>
     </message>
     <message>
-        <location line="+19" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="+153" />
         <source>No changes to apply.</source>
-        <translation>Uygulanacak değişiklik yok.</translation>
+        <translation type="vanished">Uygulanacak değişiklik yok.</translation>
     </message>
     <message>
-        <location line="+39" />
         <source>Force UTF-8 MSVC compiler output</source>
-        <translation>UTF-8 MSVC derleyici çıkışı kuvveti</translation>
+        <translation type="vanished">UTF-8 MSVC derleyici çıkışı kuvveti</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="-181" />
+        <source>Edit Build Environment...</source>
+        <translation>Derleme Ortamını Düzenle...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Edit Run Environment...</source>
+        <translation>Çalıştırma Ortamını Düzenle...</translation>
+    </message>
+    <message>
+        <location line="+81" />
+        <source>Edit Build Environment</source>
+        <translation>Derleme Ortamını Düzenle</translation>
+    </message>
+    <message>
+        <location line="+31" />
+        <source>Edit Run Environment</source>
+        <translation>Çalıştırma Ortamını Düzenle</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Force UTF-8 MSVC output</source>
+        <translation>UTF-8 MSVC çıktısını zorla</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>Either switches MSVC to English or keeps the language and just forces UTF-8 output (may vary depending on the used MSVC compiler).</source>
         <translation>MSVC&apos;yi İngilizce olarak değiştirir veya dili tutar ve sadece UTF-8 çıkışını zorlar (kullanılan MSVC derleyicisine bağlı olarak değişebilir).</translation>
     </message>
     <message>
-        <location line="+42" />
+        <location line="+44" />
         <source>Additional build environment settings when using this kit.</source>
         <translation>Bu kiti kullanırken ek yapı ortam ayarları.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>The environment setting value is invalid.</source>
-        <translation>Çevre ayar değeri geçersizdir.</translation>
+        <translation type="vanished">Çevre ayar değeri geçersizdir.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/projectexplorer/kitchooser.cpp" line="+93" />
@@ -19240,29 +22161,65 @@ to project &quot;%2&quot;.</source>
         <translation>Aktif Proje Kiti: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="-52" />
+        <location filename="../../../src/plugins/projectexplorer/kitmanager.cpp" line="+132" />
+        <source>%1 on %2</source>
+        <extracomment>&lt;abi&gt; on &lt;device display name&gt;</extracomment>
+        <translation>%1, %2 üzerinde</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Desktop (%1)</source>
         <translation>Masaüstü (%1)</translation>
     </message>
     <message>
-        <location line="+131" />
+        <location line="-49" />
         <source>Loading Kits</source>
         <translation>Yükleme kitleri</translation>
     </message>
     <message>
-        <location line="+293" />
+        <location filename="../../../src/plugins/projectexplorer/kitaspect.cpp" line="+197" />
         <source>Mark as Mutable</source>
         <translation>Değişken olarak işaretleyin</translation>
     </message>
     <message>
-        <location line="+56" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+303" />
+        <location line="+187" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+410" />
         <source>Manage...</source>
         <translation>Üstesinden gelmek...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitmanagerconfigwidget.cpp" line="+50" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+47" />
+        <location line="+135" />
+        <source>Kit aspect factory &quot;%1&quot; does not support creating aspects from JSON.</source>
+        <translation>&quot;%1&quot; kit görünümü fabrikası, JSON&apos;dan görünüm oluşturmayı desteklemiyor.</translation>
+    </message>
+    <message>
+        <location line="+27" />
+        <source>Auto detecting kits for device: %1</source>
+        <translation>Aygıt için kitler otomatik algılanıyor: %1</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>Found kit: %1.</source>
+        <translation>Kit bulundu: %1.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Removing kits for device: %1.</source>
+        <translation>Aygıt için kitler kaldırılıyor: %1.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Removing kit: %1.</source>
+        <translation>Kit kaldırılıyor: %1.</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Kit: %1.</source>
+        <translation>Kit: %1.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="+150" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+49" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
@@ -19277,12 +22234,12 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Dizin adları oluşturmaya uygun kit adı. Bu değer, örneğin gölge derleme dizininin adını belirleyen &lt;i&gt;%1&lt;/i&gt; değişkeni için kullanılır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>File system name:</source>
         <translation>Dosya Sistemi Adı:</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+5" />
         <source>Kit icon.</source>
         <translation>Kit simgesi.</translation>
     </message>
@@ -19297,12 +22254,17 @@ to project &quot;%2&quot;.</source>
         <translation>Cihaz Varsayılan simgesine sıfırlayın</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="-271" />
         <source>Display name is not unique.</source>
         <translation>Ekran adı benzersiz değil.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+303" />
+        <source>Set as the default kit to use when creating a new project.</source>
+        <translation>Yeni proje oluştururken kullanılacak varsayılan kit olarak ayarla.</translation>
+    </message>
+    <message>
+        <location line="+248" />
         <source>Default for %1</source>
         <translation>%1 için varsayılan</translation>
     </message>
@@ -19317,18 +22279,16 @@ to project &quot;%2&quot;.</source>
         <translation>Görüntüler ( *.png *.xpm *.jpg)</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-427" />
         <source>%1 (default)</source>
         <extracomment>Mark up a kit as the default one.</extracomment>
-        <translation>%1 (varsayılan)</translation>
+        <translation type="vanished">%1 (varsayılan)</translation>
     </message>
     <message>
-        <location line="+428" />
         <source>Make Default</source>
-        <translation>Varsayılan yapmak</translation>
+        <translation type="vanished">Varsayılan yapmak</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-327" />
         <source>Settings Filter...</source>
         <translation>Ayarlar filtresi ...</translation>
     </message>
@@ -19348,7 +22308,7 @@ to project &quot;%2&quot;.</source>
         <translation>Varsayılan olarak hangi kit ayarlarının görüntüleneceğini seçin.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/makestep.cpp" line="+59" />
         <source>Make arguments:</source>
         <translation>Tartışmalar yapın:</translation>
     </message>
@@ -19428,29 +22388,27 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;code&gt; makeFlags &lt;/code&gt; ortam değişkeni ile çatışma yok.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1397" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2084" />
+        <location filename="../../../src/plugins/projectexplorer/miniprojecttargetselector.cpp" line="-1424" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-2403" />
         <source>Run Without Deployment</source>
         <translation>Dağı olmadan çalıştırın</translation>
     </message>
     <message>
-        <location line="+593" />
-        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+215" />
+        <location line="+615" />
+        <location filename="../../../src/plugins/projectexplorer/project.cpp" line="+229" />
         <source>Project</source>
         <translation>Proje</translation>
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-396" />
-        <location line="+383" />
-        <location line="+74" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+130" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-407" />
+        <location line="+393" />
+        <location line="+75" />
         <source>Run</source>
         <translation>Koşmak</translation>
     </message>
     <message>
-        <location line="+802" />
+        <location line="+807" />
         <source>&lt;b&gt;Project:&lt;/b&gt; %1</source>
         <translation>&lt;b&gt; Proje: &lt;/b&gt; %1</translation>
     </message>
@@ -19485,7 +22443,7 @@ to project &quot;%2&quot;.</source>
         <translation>%1</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+17" />
         <source>Project: &lt;b&gt;%1&lt;/b&gt;&lt;br/&gt;</source>
         <translation>Proje: &lt;b&gt;%1 &lt;/b&gt; &lt;br/&gt;</translation>
     </message>
@@ -19515,49 +22473,54 @@ to project &quot;%2&quot;.</source>
         <translation>&lt;Style Type = Text/CSS&gt; A: Link {Color: RGB (128, 128, 255);} &lt;/style&gt; Proje &lt;b&gt;%1 &lt;/b&gt; Henüz yapılandırılmadı &lt;br/&gt; &lt;Br /&gt; &gt; &lt;A href = &quot;ProjectMode&quot; proje modunda yapılandırabilirsiniz &lt;/a&gt; &lt;br/&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-555" />
+        <location filename="../../../src/plugins/projectexplorer/msvctoolchain.cpp" line="-611" />
         <source>Falling back to use the cached environment for &quot;%1&quot; after:</source>
         <translation>Önbelleğe alınmış ortamı &quot;%1&quot; için kullanmak için geri dönmek:</translation>
     </message>
     <message>
-        <location line="+483" />
-        <location line="+71" />
-        <location line="+177" />
+        <location line="+538" />
+        <location line="+72" />
+        <location line="+150" />
         <source>Initialization:</source>
         <translation>Başlatma:</translation>
     </message>
     <message>
-        <location line="-197" />
-        <location line="+170" />
+        <location line="-219" />
+        <source>No MSVC toolchains were found. You need to install Visual Studio or the Visual Studio Build Tools.</source>
+        <translation>MSVC araç zinciri bulunamadı. Visual Studio veya Visual Studio Build Tools kurmanız gerekir.</translation>
+    </message>
+    <message>
+        <location line="+49" />
+        <location line="+148" />
         <source>&lt;empty&gt;</source>
         <translation>&lt;arm&gt;</translation>
     </message>
     <message>
-        <location line="-154" />
+        <location line="-132" />
         <source>Additional arguments for the vcvarsall.bat call</source>
         <translation>Vcvarsall.bat çağrısı için ek argümanlar</translation>
     </message>
     <message>
-        <location line="+796" />
+        <location line="-683" />
         <source>Failed to retrieve MSVC Environment from &quot;%1&quot;:
 %2</source>
         <translation>MSVC ortamını &quot;%1&quot; den alamadı:
  %2</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+1428" />
         <source>clang-cl</source>
         <translation>clang cl</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/osparser.cpp" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/outputparsers.cpp" line="+43" />
         <source>The process cannot access the file because it is being used by another process.
 Please close all running instances of your application before starting a build.</source>
         <translation>İşlem, başka bir işlem tarafından kullanıldığı için dosyaya erişemez.
  Bir derlemeye başlamadan önce lütfen uygulamanızın tüm çalışan örneklerini kapatın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+44" />
+        <location filename="../../../src/plugins/projectexplorer/parseissuesdialog.cpp" line="+49" />
         <source>Parse Build Output</source>
         <translation>Ayrıştırma Yapı Çıkışı</translation>
     </message>
@@ -19607,7 +22570,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Kitten ayrıştırıcılar kullanın:</translation>
     </message>
     <message>
-        <location line="+18" />
+        <location line="+12" />
         <source>Cannot Parse</source>
         <translation>Ayrıştıramaz</translation>
     </message>
@@ -19617,26 +22580,26 @@ Please close all running instances of your application before starting a build.<
         <translation>Ayrıştırılamaz: Seçilen kit bir çıkış ayrıştırıcısı sağlamaz.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+31" />
+        <location filename="../../../src/plugins/projectexplorer/processstep.cpp" line="+30" />
         <source>Command:</source>
         <translation>Emretmek:</translation>
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+192" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-203" />
         <source>Arguments:</source>
         <translation>Argümanlar:</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-594" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-766" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="+4" />
         <source>Working directory:</source>
         <translation>Çalışma Dizini:</translation>
     </message>
     <message>
-        <location line="+17" />
         <location line="+25" />
+        <location line="+36" />
         <source>Custom Process Step</source>
         <extracomment>Default ProcessStep display name</extracomment>
         <translation>Özel Süreç Adımı</translation>
@@ -19647,13 +22610,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Proje adı</translation>
     </message>
     <message>
-        <location line="+282" />
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-194" />
+        <location line="+482" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="-88" />
         <source>Kit is not valid.</source>
         <translation>Kit geçerli değil.</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+12" />
+        <source>Kit has no build device.</source>
+        <translation>Kitin derleme aygıtı yok.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Build device &quot;%2&quot; cannot handle project file &quot;%1&quot;.</source>
+        <translation>&quot;%2&quot; derleme aygıtı &quot;%1&quot; proje dosyasını işleyemiyor.</translation>
+    </message>
+    <message>
+        <location line="+56" />
         <source>Incompatible Kit</source>
         <translation>Uyumsuz kit</translation>
     </message>
@@ -19688,37 +22661,39 @@ Please close all running instances of your application before starting a build.<
         <translation>Bazı yapılandırmalar kopyalanamadı.</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+99" />
         <source>Could not load kits in a reasonable amount of time.</source>
         <translation>Kitleri makul bir sürede yükleyemedi.</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Select the Root Directory</source>
         <translation>Kök dizini seçin</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+90" />
         <source>Project &quot;%1&quot; was configured for kit &quot;%2&quot; with id %3, which does not exist anymore. You can create a new kit or copy the steps of the vanished kit to another kit in %4 mode.</source>
         <translation>&quot;%1&quot; projesi, artık mevcut olmayan%3&apos;le &quot;%2&quot; kiti için yapılandırıldı. Yeni bir kit oluşturabilir veya kaybolmuş kitin adımlarını %4 modunda başka bir kite kopyalayabilirsiniz.</translation>
     </message>
     <message>
         <location line="+4" />
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1133" />
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+643" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="+26" />
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+47" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+450" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-1267" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="+666" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-698" />
+        <location line="+726" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.h" line="+25" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+1047" />
         <source>Projects</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Projeler</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+321" />
         <source>Could not find any qml_*.qm file at &quot;%1&quot;</source>
         <translation>&quot;%1&quot; de herhangi bir QML _*. QM dosyası bulamadı</translation>
     </message>
     <message>
-        <location line="+87" />
+        <location line="+71" />
         <source>%1: Name.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: İsim.</translation>
@@ -19760,13 +22735,13 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Aktif yapı yapılandırmasının tam derleme yolu.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>%1: Variables in the active build environment.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Aktif yapı ortamında değişkenler.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>%1: Name of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Etkin çalışma yapılandırmasının adı.</translation>
@@ -19778,45 +22753,61 @@ Please close all running instances of your application before starting a build.<
         <translation>%1: Etkin çalışma yapılandırmasının yürütülebilir.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+11" />
         <source>%1: Variables in the environment of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Etkin çalışma yapılandırmasının ortamındaki değişkenler.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+11" />
         <source>%1: Working directory of the active run configuration.</source>
         <extracomment>%1 is something like &quot;Active project&quot;</extracomment>
         <translation>%1: Etkin çalışma yapılandırmasının çalışma dizini.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/projectcommentssettings.cpp" line="+148" />
         <source>Documentation Comments</source>
         <translation>Dokümantasyon Yorumları</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectconfigurationmodel.cpp" line="+101" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+814" />
         <source>unavailable</source>
         <translation>müsait olmayan</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+37" />
         <source>Project Environment</source>
         <translation>Proje ortamı</translation>
     </message>
     <message>
-        <location line="+81" />
+        <location line="+56" />
         <source>Deploy Configuration</source>
         <extracomment>Display name of the default deploy configuration</extracomment>
         <translation>Yapılandırmayı dağıtın</translation>
     </message>
     <message>
-        <location line="+402" />
+        <location line="+12" />
+        <source>SSH executable:</source>
+        <translation>SSH yürütülebilir dosyası:</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Ninja executable:</source>
+        <translation>Ninja yürütülebilir dosyası:</translation>
+    </message>
+    <message>
+        <location line="+388" />
+        <source>SDKs</source>
+        <translation>SDK&apos;lar</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location line="+82" />
         <source>C++</source>
         <translation>C ++</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+110" />
         <location line="+5" />
         <source>Open...</source>
         <translation>Açık...</translation>
@@ -19837,7 +22828,12 @@ Please close all running instances of your application before starting a build.<
         <translation>&amp;Hata ayıklamaya başlayın</translation>
     </message>
     <message>
-        <location line="+82" />
+        <location line="+6" />
+        <source>&amp;Analyze</source>
+        <translation>&amp;Çözümle</translation>
+    </message>
+    <message>
+        <location line="+92" />
         <source>Open With</source>
         <translation>Açılmak</translation>
     </message>
@@ -19847,12 +22843,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Yeni proje ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Load Project...</source>
-        <translation>Yük projesi ...</translation>
+        <translation type="vanished">Yük projesi ...</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+14" />
         <source>Open Workspace...</source>
         <translation>Açık çalışma alanı ...</translation>
     </message>
@@ -19862,23 +22857,24 @@ Please close all running instances of your application before starting a build.<
         <translation>Dosya</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location filename="../../../src/plugins/projectexplorer/environmentkitaspect.cpp" line="+32" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+48" />
         <source>Run Environment</source>
         <translation>Çevre Çevresi</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="+28" />
         <source>Recent P&amp;rojects</source>
         <translation>Son P &amp;Rojects</translation>
     </message>
     <message>
         <location line="+12" />
-        <location line="+347" />
+        <location line="+348" />
         <source>Close Project</source>
         <translation>Yakın Proje</translation>
     </message>
     <message>
-        <location line="-347" />
+        <location line="-348" />
         <source>Close Pro&amp;ject &quot;%1&quot;</source>
         <translation>&quot;%1&quot; pro&amp;jesini kapat</translation>
     </message>
@@ -19889,12 +22885,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+0" />
-        <location line="+328" />
+        <location line="+329" />
         <source>Close All Files in Project &quot;%1&quot;</source>
         <translation>&quot;%1&quot; projesindeki tüm dosyaları kapatın</translation>
     </message>
     <message>
-        <location line="-316" />
+        <location line="-317" />
         <source>Close Pro&amp;ject</source>
         <translation>Yakın Pro&amp;je</translation>
     </message>
@@ -19923,12 +22919,12 @@ Please close all running instances of your application before starting a build.<
         <location line="+9" />
         <location line="+102" />
         <location line="+8" />
-        <location line="+65" />
+        <location line="+66" />
         <source>Rebuild</source>
         <translation>Yeniden inşa etmek</translation>
     </message>
     <message>
-        <location line="-182" />
+        <location line="-183" />
         <source>Rebuild All Projects</source>
         <translation>Tüm projeleri yeniden inşa et</translation>
     </message>
@@ -19998,12 +22994,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Tüm konfigürasyonlar için projeyi yeniden oluşturun</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Clean Project</source>
-        <translation>Temiz Proje</translation>
+        <translation type="vanished">Temiz Proje</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+17" />
         <source>Clean Project for All Configurations</source>
         <translation>Tüm konfigürasyonlar için projeyi temizleyin</translation>
     </message>
@@ -20013,7 +23008,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Yapı iptal et</translation>
     </message>
     <message>
-        <location line="+32" />
+        <location line="+33" />
         <location line="+30" />
         <source>Build Without Dependencies</source>
         <translation>Bağımlılık Olmadan Oluştur</translation>
@@ -20067,12 +23062,12 @@ Please close all running instances of your application before starting a build.<
     </message>
     <message>
         <location line="+9" />
-        <location line="+1621" />
+        <location line="+1874" />
         <source>Close Project &quot;%1&quot;</source>
         <translation>&quot;%1&quot; projesini kapat</translation>
     </message>
     <message>
-        <location line="-1614" />
+        <location line="-1867" />
         <source>Close Other Projects</source>
         <translation>Diğer projeleri kapatın</translation>
     </message>
@@ -20108,7 +23103,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Dosyayı sil ...</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
         <source>Set as Active Project</source>
         <translation>Aktif proje olarak ayarlayın</translation>
     </message>
@@ -20143,7 +23138,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Hızlı Anahtar Kiti Seçici</translation>
     </message>
     <message>
-        <location line="+228" />
+        <location line="+248" />
         <source>Current Build Environment</source>
         <translation>Mevcut Yapı Ortamı</translation>
     </message>
@@ -20153,7 +23148,7 @@ Please close all running instances of your application before starting a build.<
         <translation>Mevcut çalışma ortamı</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+14" />
         <source>Active build environment of the active project.</source>
         <translation>Aktif projenin aktif yapı ortamı.</translation>
     </message>
@@ -20163,12 +23158,11 @@ Please close all running instances of your application before starting a build.<
         <translation>Aktif projenin aktif çalışma ortamı.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>Load Project</source>
-        <translation>Yük projesi</translation>
+        <translation type="vanished">Yük projesi</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+52" />
         <source>Open Workspace</source>
         <translation>Açım Alanı</translation>
     </message>
@@ -20198,18 +23192,71 @@ Please close all running instances of your application before starting a build.<
         <translation>Yapım sürecini iptal etmek ve projeyi yine de boşaltmak istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+62" />
         <source>Sanitizer</source>
         <comment>Category for sanitizer issues listed under &apos;Issues&apos;</comment>
-        <translation>Dezenfektan</translation>
+        <translation type="vanished">Dezenfektan</translation>
+    </message>
+    <message>
+        <source>Memory handling issues that the address sanitizer found.</source>
+        <translation type="vanished">Adres dezenfektanın bulduğu bellek işleme sorunları.</translation>
+    </message>
+    <message>
+        <location line="-959" />
+        <source>Open Project...</source>
+        <translation>Proje Aç...</translation>
+    </message>
+    <message>
+        <location line="+214" />
+        <source>Build Active Project</source>
+        <translation>Etkin Projeyi Derle</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <source>Clean Active Project</source>
+        <translation>Etkin Projeyi Temizle</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Run Active Project</source>
+        <translation>Etkin Projeyi Çalıştır</translation>
+    </message>
+    <message>
+        <location line="+185" />
+        <source>Create Header File</source>
+        <translation>Başlık Dosyası Oluştur</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Create Source File</source>
+        <translation>Kaynak Dosyası Oluştur</translation>
+    </message>
+    <message>
+        <location line="+77" />
+        <source>Edit Active Build Configuration</source>
+        <translation>Etkin Derleme Yapılandırmasını Düzenle</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Memory handling issues that the address sanitizer found.</source>
-        <translation>Adres dezenfektanın bulduğu bellek işleme sorunları.</translation>
+        <source>Ctrl+E, Ctrl+B</source>
+        <translation>Ctrl+E, Ctrl+B</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+12" />
+        <source>Edit Active Run Configuration</source>
+        <translation>Etkin Çalıştırma Yapılandırmasını Düzenle</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+E, Ctrl+R</source>
+        <translation>Ctrl+E, Ctrl+R</translation>
+    </message>
+    <message>
+        <location line="+280" />
+        <source>Open Project</source>
+        <translation>Projeyi Aç</translation>
+    </message>
+    <message>
+        <location line="+138" />
         <source>My Tasks</source>
         <translation>Görevlerim</translation>
     </message>
@@ -20219,18 +23266,23 @@ Please close all running instances of your application before starting a build.<
         <translation>Bir Görev Listesi dosyasındaki sorunlar (.tasks).</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+3" />
+        <source>Issues not covered by a more specialized category.</source>
+        <translation>Daha özel bir kategoriyle kapsanmayan sorunlar.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Parse Build Output...</source>
         <translation>Ayrıştırma Yapı Çıkışı ...</translation>
     </message>
     <message>
-        <location line="+65" />
+        <location line="+62" />
         <source>New Project</source>
         <comment>Title of dialog</comment>
         <translation>Yeni proje</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="+156" />
         <source>Failed to Open Project</source>
         <translation>Proje açılamadı</translation>
     </message>
@@ -20240,12 +23292,37 @@ Please close all running instances of your application before starting a build.<
         <translation>&lt;h3&gt; Proje zaten açık &lt;/h3&gt;</translation>
     </message>
     <message>
-        <location line="+48" />
+        <location line="+68" />
+        <source>Cannot open project &quot;%1&quot;: Plugin is not loaded.</source>
+        <translation>&quot;%1&quot; projesi açılamıyor: Eklenti yüklenmedi.</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Failed opening project &quot;%1&quot;: No plugin can open project type &quot;%2&quot;.</source>
         <translation>Başarısız Açılış Projesi &quot;%1&quot;: Hiçbir eklenti &quot;%2&quot; proje türünü açamaz.</translation>
     </message>
     <message>
-        <location line="+195" />
+        <location line="+235" />
+        <source>The following files could not be renamed in the file system:%1</source>
+        <translation>Aşağıdaki dosyalar dosya sisteminde yeniden adlandırılamadı:%1</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>These files were renamed in the file system, but project files were not updated:%1</source>
+        <translation>Bu dosyalar dosya sisteminde yeniden adlandırıldı, ancak proje dosyaları güncellenmedi:%1</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>These files were renamed in the file system, but the project structure was not updated (context lost or not supported):%1</source>
+        <translation>Bu dosyalar dosya sisteminde yeniden adlandırıldı, ancak proje yapısı güncellenmedi (bağlam kayboldu veya desteklenmiyor):%1</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Renaming Issues</source>
+        <translation>Yeniden Adlandırma Sorunları</translation>
+    </message>
+    <message>
+        <location line="+90" />
         <source>Ignore All Errors?</source>
         <translation>Tüm hataları görmezden gelin mi?</translation>
     </message>
@@ -20267,45 +23344,48 @@ Do you want to ignore them?</source>
         <translation>Çalışması gereken yapılandırma artık mevcut değil.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+158" />
         <source>Always save files before build</source>
         <translation>Oluşturmadan önce her zaman dosyaları kaydedin</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+22" />
         <source>Open Project in &quot;%1&quot;</source>
         <translation>&quot;%1&quot; de açık proje</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+11" />
         <source>Open Project &quot;%1&quot;</source>
         <translation>&quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="+19" />
+        <location line="+3" />
+        <source>The project is already open.</source>
+        <translation>Proje zaten açık.</translation>
+    </message>
+    <message>
+        <location line="+26" />
         <source>The file &quot;%1&quot; was renamed to &quot;%2&quot;, but the following projects could not be automatically changed: %3</source>
         <translation>&quot;%1&quot; dosyası &quot;%2&quot; olarak yeniden adlandırıldı, ancak aşağıdaki projeler otomatik olarak değiştirilemedi:%3</translation>
     </message>
     <message>
         <location line="+6" />
         <location line="+20" />
-        <location line="+1109" />
-        <location line="+26" />
         <source>Project Editing Failed</source>
         <translation>Proje düzenleme başarısız oldu</translation>
     </message>
     <message>
-        <location line="-1139" />
+        <location line="-4" />
         <source>The following projects failed to automatically remove the file: %1</source>
         <translation>Aşağıdaki projeler dosyayı otomatik olarak kaldıramadı: %1</translation>
     </message>
     <message>
-        <location line="+62" />
+        <location line="+105" />
         <source>Building &quot;%1&quot; is disabled: %2&lt;br&gt;</source>
         <translation>&quot; %1&quot; binası devre dışı bırakıldı: %2 &lt;br&gt;</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <location line="+22" />
         <source>No project loaded.</source>
         <translation>Proje yüklenmedi.</translation>
@@ -20357,7 +23437,7 @@ Do you want to ignore them?</source>
         <translation>Yapım sürecini iptal etmek ve %1&apos;i kapatmak ister misiniz?</translation>
     </message>
     <message>
-        <location line="+164" />
+        <location line="+159" />
         <source>No active project.</source>
         <translation>Aktif proje yok.</translation>
     </message>
@@ -20387,23 +23467,23 @@ Do you want to ignore them?</source>
         <translation>&quot;%1&quot; çalıştırılamıyor.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>A run action is already scheduled for the active project.</source>
         <translation>Aktif proje için zaten bir çalışma eylemi planlanmıştır.</translation>
     </message>
     <message>
-        <location line="+305" />
+        <location line="+332" />
         <source>%1 in %2</source>
         <translation>%2 içinde %1</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+33" />
         <source>New File</source>
         <comment>Title of dialog</comment>
         <translation>Yeni dosya</translation>
     </message>
     <message>
-        <location line="+29" />
+        <location line="+66" />
         <source>New Subproject</source>
         <comment>Title of dialog</comment>
         <translation>Yeni alt proje</translation>
@@ -20434,15 +23514,28 @@ Do you want to ignore them?</source>
         <translation>Projeye dosya eklemek başarısız oldu</translation>
     </message>
     <message>
-        <location line="+87" />
-        <location line="+40" />
+        <location line="+79" />
+        <source>Failed to open terminal.</source>
+        <translation>Terminal açılamadı.</translation>
+    </message>
+    <message>
+        <location line="+341" />
+        <source>Enable %1 Plugin</source>
+        <translation>%1 Eklentisini Etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The plugin &quot;%1&quot; is required to open projects of type &quot;%2&quot; Do you want to enable it now?</source>
+        <translation>&quot;%2&quot; türündeki projeleri açmak için &quot;%1&quot; eklentisi gerekiyor. Şimdi etkinleştirmek ister misiniz?</translation>
+    </message>
+    <message>
         <source>Failed opening terminal.
 %1</source>
-        <translation>Başarısız açma terminali.
+        <translation type="vanished">Başarısız açma terminali.
  %1</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="-313" />
         <source>Remove More Files?</source>
         <translation>Daha fazla dosyayı kaldırın mı?</translation>
     </message>
@@ -20466,12 +23559,12 @@ Please try again.</source>
  Lütfen tekrar deneyin.</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Could not remove file &quot;%1&quot; from project &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; dosyasını &quot;%2&quot; projesinden kaldıramadı.</translation>
     </message>
     <message>
-        <location line="+36" />
+        <location line="+30" />
         <source>_copy</source>
         <translation>_COPY</translation>
     </message>
@@ -20487,17 +23580,17 @@ Please try again.</source>
     </message>
     <message>
         <location line="+11" />
-        <location line="+10" />
+        <location line="+9" />
         <source>Duplicating File Failed</source>
         <translation>Dosyayı çoğaltma başarısız oldu</translation>
     </message>
     <message>
-        <location line="-9" />
+        <location line="-8" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3.</source>
         <translation>&quot;%1&quot; dosyasını &quot;%2&quot; olarak kopyalayamadı:%3.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Failed to add new file &quot;%1&quot; to the project.</source>
         <translation>Projeye yeni &quot;%1&quot; dosyası eklenemedi.</translation>
     </message>
@@ -20522,36 +23615,32 @@ Please try again.</source>
         <translation>%1 dosyasını silemedi.</translation>
     </message>
     <message>
-        <location line="+37" />
         <source>The project file %1 cannot be automatically changed.
 
 Rename %2 to %3 anyway?</source>
-        <translation>%1 proje dosyası otomatik olarak değiştirilemez.
+        <translation type="vanished">%1 proje dosyası otomatik olarak değiştirilemez.
 
  Yine de %2 ila %3 olarak adlandırın mı?</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>The file %1 was renamed to %2, but the project file %3 could not be automatically changed.</source>
-        <translation>%1 dosyası %2 olarak yeniden adlandırıldı, ancak %3 proje dosyası otomatik olarak değiştirilemedi.</translation>
+        <translation type="vanished">%1 dosyası %2 olarak yeniden adlandırıldı, ancak %3 proje dosyası otomatik olarak değiştirilemedi.</translation>
     </message>
     <message>
-        <location line="+15" />
         <source>The file %1 could not be renamed %2.</source>
-        <translation>%1 dosyası %2 olarak yeniden adlandırılamadı.</translation>
+        <translation type="vanished">%1 dosyası %2 olarak yeniden adlandırılamadı.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Cannot Rename File</source>
-        <translation>Dosyayı yeniden adlandırılamıyor</translation>
+        <translation type="vanished">Dosyayı yeniden adlandırılamıyor</translation>
     </message>
     <message>
-        <location line="+192" />
+        <location line="+220" />
         <source>Locates files from all project directories. Append &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the given line number. Append another &quot;+&lt;number&gt;&quot; or &quot;:&lt;number&gt;&quot; to jump to the column number as well.</source>
         <translation>Tüm proje dizinlerinden dosyaları bulur. Verilen satır numarasına atlamak için &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Suster&gt;&quot; ekleyin. Sütun numarasına da atlamak için başka bir &quot;+&lt;Suster&gt;&quot; veya &quot;: &lt;Sune&gt;&quot; ekleyin.</translation>
     </message>
     <message>
-        <location line="+102" />
+        <location line="+99" />
         <source>Run Run Configuration</source>
         <translation>Çalıştırma yapılandırmasını çalıştır</translation>
     </message>
@@ -20588,9 +23677,13 @@ Rename %2 to %3 anyway?</source>
         <translation>Etkin projenin etkin çalışma yapılandırmasını değiştirir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
         <source>Auto-detected</source>
-        <translation>Otomatik olarak tespit edilen</translation>
+        <translation type="vanished">Otomatik olarak tespit edilen</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+15" />
+        <source>Automatically Managed</source>
+        <translation>Otomatik Yönetilen</translation>
     </message>
     <message>
         <location line="+5" />
@@ -20598,110 +23691,177 @@ Rename %2 to %3 anyway?</source>
         <translation>Otomatik olarak %1 veya yükleyici tarafından yönetilir.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/kitoptionspage.cpp" line="-294" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorerconstants.cpp" line="+6" />
         <source>Manual</source>
         <translation>Manuel</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-222" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-31" />
         <source>s</source>
         <extracomment>Suffix for &quot;seconds&quot;</extracomment>
         <translation>S</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>The amount of seconds to wait between a &quot;soft kill&quot; and a &quot;hard kill&quot; of a running application.</source>
         <translation>&quot;Yumuşak öldürme&quot; ile çalışan bir uygulamanın &quot;sert öldürme&quot; arasında beklemek için saniye.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-130" />
         <source>Current directory</source>
         <translation>Mevcut dizin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Directory</source>
         <translation>Dizin</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Close source files along with project</source>
         <translation>Project ile birlikte kaynak dosyalarını kapatın</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Save all files before build</source>
         <translation>Oluşturmadan önce tüm dosyaları kaydedin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Always deploy project before running it</source>
         <translation>Her zaman çalıştırmadan önce proje dağıtın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Add linker library search paths to run environment</source>
         <translation>Çevreyi çalıştırmak için bağlayıcı kitaplık arama yolları ekleyin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Always ask before stopping applications</source>
         <translation>Uygulamaları durdurmadan önce daima sorun</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+5" />
         <source>Create suitable run configurations automatically</source>
         <translation>Uygun çalışma yapılandırmalarını otomatik olarak oluşturun</translation>
     </message>
     <message>
+        <location line="+4" />
+        <source>Keep run configurations in sync:</source>
+        <translation>Çalıştırma yapılandırmalarını eşzamanlı tut:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Whether adding, removing or editing a run configuration in one build configuration should update other build configurations accordingly.</source>
+        <translation>Bir derleme yapılandırmasında çalıştırma yapılandırması eklemenin, kaldırmanın veya düzenlemenin diğer derleme yapılandırmalarını buna göre güncelleyip güncellemeyeceği.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Do Not Sync</source>
+        <translation>Eşzamanlama</translation>
+    </message>
+    <message>
         <location line="+1" />
+        <source>All build configurations have their own set of run configurations.</source>
+        <translation>Tüm derleme yapılandırmalarının kendi çalıştırma yapılandırmaları kümesi vardır.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Within One Kit</source>
+        <translation>Tek Kit İçinde Eşzamanla</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Build configurations in the same kit keep their run configurations in sync.</source>
+        <translation>Aynı kitteki derleme yapılandırmaları, çalıştırma yapılandırmalarını eşzamanlı tutar.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Sync Across All Kits</source>
+        <translation>Tüm Kitlerde Eşzamanla</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>All build configurations in a project keep their run configurations in sync, even across kits.</source>
+        <translation>Bir projedeki tüm derleme yapılandırmaları, kitler arasında bile çalıştırma yapılandırmalarını eşzamanlı tutar.</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Clear issues list on new build</source>
         <translation>Yeni yapıda açık sorunlar listesi</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Abort on error when building all projects</source>
         <translation>Tüm projeleri oluştururken hatayı iptal edin</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>Start build processes with low priority</source>
         <translation>Düşük öncelikli oluşturma işlemlerini başlatın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Warn against build directories with spaces or non-ASCII characters</source>
         <translation>Mekan veya ASCII olmayan karakterlere sahip derleme dizinlerine karşı uyarın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Some legacy build tools do not deal well with paths that contain &quot;special&quot; characters such as spaces, potentially resulting in spurious build errors.&lt;p&gt;Uncheck this option if you do not work with such tools.</source>
         <translation>Bazı eski yapı araçları, boşluklar gibi &quot;özel&quot; karakterler içeren yollarla iyi ilgilenmez, bu da potansiyel olarak sahte yapı hatalarına neden olur. &lt;p&gt; Bu tür araçlarla çalışmıyorsanız bu seçeneği işaretleyin.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
+        <source>Show Only Suitable Kits</source>
+        <translation>Yalnızca Uygun Kitleri Göster</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Show Only Active Kits</source>
+        <translation>Yalnızca Etkin Kitleri Göster</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Kits listed in &quot;Projects&quot; mode:</source>
+        <translation>&quot;Projeler&quot; kipinde listelenen kitler:</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Do Not Build Anything</source>
         <translation>Hiçbir şey inşa etmeyin</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build the Whole Project</source>
         <translation>Tüm projeyi oluşturun</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Build Only the Application to Be Run</source>
         <translation>Yalnızca çalıştırılacak uygulamayı oluşturun</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+247" />
+        <location line="+46" />
+        <source>Building and Running</source>
+        <translation>Derleme ve Çalıştırma</translation>
+    </message>
+    <message>
         <source>All</source>
-        <translation>Tüm</translation>
+        <translation type="vanished">Tüm</translation>
+    </message>
+    <message>
+        <location line="-283" />
+        <source>Same Project</source>
+        <translation>Aynı proje</translation>
     </message>
     <message>
         <location line="+1" />
-        <source>Same Project</source>
-        <translation>Aynı proje</translation>
+        <source>All</source>
+        <comment>Stop all projects</comment>
+        <translation>Tümü</translation>
     </message>
     <message>
         <location line="+1" />
@@ -20709,12 +23869,12 @@ Rename %2 to %3 anyway?</source>
         <translation>Aynı derleme dizin</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Same Application</source>
         <translation>Aynı uygulama</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+6" />
         <source>Enabled</source>
         <translation>Etkinleştirilmiş</translation>
     </message>
@@ -20729,32 +23889,30 @@ Rename %2 to %3 anyway?</source>
         <translation>Projeden çıkarıldı</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+14" />
         <source>Use jom instead of nmake</source>
         <translation>Nmake yerine Jom kullanın</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Show all kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode</source>
-        <translation>&quot;Build &amp; run&quot; daki tüm kitleri &quot;Projeler&quot; modunda göster</translation>
+        <translation type="vanished">&quot;Build &amp; run&quot; daki tüm kitleri &quot;Projeler&quot; modunda göster</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Show also inactive kits in &quot;Build &amp; Run&quot; in &quot;Projects&quot; mode.</source>
-        <translation>Ayrıca &quot;Projeler&quot; modunda &quot;Build &amp; Run&quot; da aktif olmayan kitleri gösterin.</translation>
+        <translation type="vanished">Ayrıca &quot;Projeler&quot; modunda &quot;Build &amp; Run&quot; da aktif olmayan kitleri gösterin.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Environment changes to apply to run configurations, but not build configurations.</source>
         <translation>Çevre çalıştırma konfigürasyonlarını uygulamak için uygulanacak, ancak yapılandırmalar yapmayın.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Application environment:</source>
         <translation>Uygulama Ortamı:</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+25" />
         <source>Projects Directory</source>
         <translation>Projeler Dizini</translation>
     </message>
@@ -20769,33 +23927,39 @@ Rename %2 to %3 anyway?</source>
         <translation>Yap ve Koş</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-89" />
         <source>Build before deploying:</source>
         <translation>Konuşlandırmadan önce inşa edin:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Stop applications before building:</source>
         <translation>Oluşturmadan önce uygulamaları durdurun:</translation>
     </message>
     <message>
         <location line="+1" />
+        <source>None</source>
+        <comment>Stop applications before building: None</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+10" />
         <source>Default for &quot;Run in terminal&quot;:</source>
         <translation>&quot;Terminalde Çalıştır&quot; için varsayılan:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+10" />
         <source>Time to wait before force-stopping applications:</source>
         <translation>Kuvvet durdurma uygulamalarından önce bekleme zamanı:</translation>
     </message>
     <message>
-        <location line="+125" />
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-191" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorer.cpp" line="-3770" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="+37" />
         <source>Build &amp; Run</source>
         <translation>İnşa et ve çalıştır</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-30" />
+        <location filename="../../../src/plugins/projectexplorer/projectfilewizardextension.cpp" line="-28" />
         <source>Open project anyway?</source>
         <translation>Yine de açık proje?</translation>
     </message>
@@ -20805,7 +23969,7 @@ Rename %2 to %3 anyway?</source>
         <translation>Sürüm kontrol hatası</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+87" />
+        <location filename="../../../src/plugins/projectexplorer/projectimporter.cpp" line="+88" />
         <source>No Build Found</source>
         <translation>Yapı bulunamadı</translation>
     </message>
@@ -20825,7 +23989,12 @@ Rename %2 to %3 anyway?</source>
         <translation>İthalat Yapımı</translation>
     </message>
     <message>
-        <location line="+83" />
+        <location line="+34" />
+        <source>%1 (imported)</source>
+        <translation>%1 (içe aktarılan)</translation>
+    </message>
+    <message>
+        <location line="+50" />
         <source>%1 - temporary</source>
         <translation>%1 - Geçici</translation>
     </message>
@@ -20835,12 +24004,27 @@ Rename %2 to %3 anyway?</source>
         <translation>İthal kit</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+407" />
+        <location filename="../../../src/plugins/projectexplorer/projectmanager.cpp" line="+74" />
+        <source>Failed to load settings from &quot;%1&quot;: %2</source>
+        <translation>Ayarlar &quot;%1&quot; konumundan yüklenemedi: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Is a directory, but must be a file.</source>
+        <translation>Bir dizin, ancak dosya olmalı.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Is a file, but must be a directory.</source>
+        <translation>Bir dosya, ancak dizin olmalı.</translation>
+    </message>
+    <message>
+        <location line="+371" />
         <source>Untitled</source>
         <translation>Açıklıksız</translation>
     </message>
     <message>
-        <location line="+205" />
+        <location line="+220" />
         <source>Failed to restore project files</source>
         <translation>Proje dosyalarını geri yükleyemedi</translation>
     </message>
@@ -20860,24 +24044,24 @@ Rename %2 to %3 anyway?</source>
         <translation>Oturumdan projeleri kaldırın</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+215" />
+        <location filename="../../../src/plugins/projectexplorer/projectmodels.cpp" line="+255" />
         <source>No kits are enabled for this project. Enable kits in the &quot;Projects&quot; mode.</source>
         <translation>Bu proje için hiçbir kit etkinleştirilmemiştir. &quot;Projeler&quot; modundaki kitleri etkinleştirin.</translation>
     </message>
     <message>
-        <location line="+89" />
+        <location line="+115" />
         <source>Rename More Files?</source>
         <translation>Daha fazla dosyayı yeniden adlandırın mı?</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Would you like to rename these files as well?
     %1</source>
         <translation>Bu dosyaları da yeniden adlandırmak ister misiniz?
  %1</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+355" />
         <source>Choose Drop Action</source>
         <translation>Bırak eylemini seçin</translation>
     </message>
@@ -20959,17 +24143,22 @@ What should %1 do now?</source>
         <translation>Başarısızlık Güncelleme Projesi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+201" />
+        <location filename="../../../src/plugins/projectexplorer/projecttree.cpp" line="+307" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is generated.</source>
         <translation>&lt;b&gt; Uyarı: &lt;/b&gt; Bu dosya oluşturulur.</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
+        <source>&lt;b&gt;Warning:&lt;/b&gt; This file is inside the build directory.</source>
+        <translation>&lt;b&gt;Uyarı:&lt;/b&gt; Bu dosya derleme dizininin içinde.</translation>
+    </message>
+    <message>
+        <location line="+16" />
         <source>&lt;b&gt;Warning:&lt;/b&gt; This file is outside the project directory.</source>
         <translation>&lt;b&gt; Uyarı: &lt;/b&gt; Bu dosya proje dizininin dışında.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-412" />
+        <location filename="../../../src/plugins/projectexplorer/projecttreewidget.cpp" line="-418" />
         <source>Simplify Tree</source>
         <translation>Ağacı basitleştirin</translation>
     </message>
@@ -21014,7 +24203,7 @@ What should %1 do now?</source>
         <translation>Editörle senkronize edin</translation>
     </message>
     <message>
-        <location line="+146" />
+        <location line="+152" />
         <source>Filter Tree</source>
         <translation>Filtre ağacı</translation>
     </message>
@@ -21029,7 +24218,7 @@ What should %1 do now?</source>
         <translation>Alt+x</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-620" />
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-595" />
         <source>Open Session #%1</source>
         <translation>Oturum Oturum #%1</translation>
     </message>
@@ -21051,23 +24240,23 @@ What should %1 do now?</source>
         <translation type="vanished">Ctrl+Shift+%1</translation>
     </message>
     <message>
-        <location line="+56" />
+        <location line="+43" />
         <source>Open %1 &quot;%2&quot;</source>
         <translation>%1 &quot; %2&quot;</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Open %1 &quot;%2&quot; (%3)</source>
         <translation>%1 &quot;%2&quot; (%3)</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+182" />
         <source>session</source>
         <comment>Appears in &quot;Open session &lt;name&gt;&quot;</comment>
         <translation>oturum</translation>
     </message>
     <message>
-        <location line="+130" />
+        <location line="-8" />
         <source>%1 (last session)</source>
         <translation>%1 (son oturum)</translation>
     </message>
@@ -21077,39 +24266,39 @@ What should %1 do now?</source>
         <translation>%1 (mevcut oturum)</translation>
     </message>
     <message>
-        <location line="+70" />
+        <location line="-74" />
         <source>Rename</source>
         <translation>Yeniden isimlendirmek</translation>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+175" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+182" />
         <source>Delete</source>
         <translation>Silmek</translation>
     </message>
     <message>
-        <location line="+125" />
+        <location line="+313" />
         <source>project</source>
         <comment>Appears in &quot;Open project &lt;name&gt;&quot;</comment>
         <translation>proje</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+23" />
         <source>Remove Project from Recent Projects</source>
         <translation>Son projelerden projeyi kaldırın</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Clear Recent Project List</source>
         <translation>Son Proje Listesini Temizle</translation>
     </message>
     <message>
-        <location line="+61" />
+        <location line="+63" />
         <source>Sessions</source>
         <translation>Oturumlar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-384" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1316" />
         <source>Use Regular Expressions</source>
         <translation>Normal ifadeler kullanın</translation>
     </message>
@@ -21124,7 +24313,7 @@ What should %1 do now?</source>
         <translation>Eşleşmeyen çizgileri göster</translation>
     </message>
     <message>
-        <location line="+118" />
+        <location line="+226" />
         <source>The project was configured for kits that no longer exist. Select one of the following options in the context menu to restore the project&apos;s settings:</source>
         <translation>Proje artık var olmayan kitler için yapılandırıldı. Projenin ayarlarını geri yüklemek için Bağlam menüsünde aşağıdaki seçeneklerden birini seçin:</translation>
     </message>
@@ -21145,7 +24334,7 @@ What should %1 do now?</source>
         <translation>%1 (%2)</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+12" />
         <source>Create a New Kit</source>
         <translation>Yeni Bir Kit Oluşturun</translation>
     </message>
@@ -21165,23 +24354,28 @@ What should %1 do now?</source>
         <translation>Yok olan tüm hedefleri kaldırın</translation>
     </message>
     <message>
-        <location line="+49" />
+        <location line="+469" />
+        <source>Click to enable target, click again to make active</source>
+        <translation>Hedefi etkinleştirmek için tıklayın, etkin yapmak için yeniden tıklayın</translation>
+    </message>
+    <message>
+        <location line="+555" />
         <source>Vanished Targets</source>
         <translation>Yok olan hedefler</translation>
     </message>
     <message>
-        <location line="+100" />
+        <location line="+3" />
         <source>Project Settings</source>
         <translation>Proje Ayarları</translation>
     </message>
     <message>
-        <location line="+268" />
-        <location line="+196" />
+        <location line="+56" />
+        <location line="+238" />
         <source>Import Existing Build...</source>
         <translation>Mevcut yapıyı içe aktarın ...</translation>
     </message>
     <message>
-        <location line="-184" />
+        <location line="-226" />
         <source>Project Selector</source>
         <translation>Proje Seçici</translation>
     </message>
@@ -21191,44 +24385,44 @@ What should %1 do now?</source>
         <translation>Aktif proje</translation>
     </message>
     <message>
-        <location line="+10" />
-        <location line="+173" />
+        <location line="+12" />
+        <location line="+213" />
         <source>Manage Kits...</source>
         <translation>Kitleri yönetin ...</translation>
     </message>
     <message>
-        <location line="-146" />
+        <location line="-175" />
         <source>Build System Output</source>
         <translation>Sistem çıktısı oluştur</translation>
     </message>
     <message>
-        <location line="+181" />
+        <location line="+209" />
         <source>Import Directory</source>
         <translation>İçe Aktar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-157" />
+        <location filename="../../../src/plugins/projectexplorer/projectwizardpage.cpp" line="-160" />
         <source>The files are implicitly added to the projects:</source>
         <translation>Dosyalar dolaylı olarak projelere eklenir:</translation>
     </message>
     <message>
         <location line="+65" />
-        <location line="+177" />
+        <location line="+181" />
         <source>&lt;None&gt;</source>
         <translation>&lt;Nese&gt;</translation>
     </message>
     <message>
-        <location line="-175" />
+        <location line="-179" />
         <source>&lt;Implicitly Add&gt;</source>
         <translation>&lt;Dolaylı olarak ekle&gt;</translation>
     </message>
     <message>
-        <location line="+63" />
+        <location line="+65" />
         <source>Add to &amp;version control:</source>
         <translation>&amp;Ve sürüm kontrolüne ekleyin:</translation>
     </message>
     <message>
-        <location line="+88" />
+        <location line="+89" />
         <source>Add as a subproject to project:</source>
         <translation>Projeye bir alt proje olarak ekleyin:</translation>
     </message>
@@ -21238,17 +24432,17 @@ What should %1 do now?</source>
         <translation>Ekle &amp;Proje:</translation>
     </message>
     <message>
-        <location line="+74" />
+        <location line="+75" />
         <source>A version control system repository could not be created in &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; de bir sürüm kontrol sistemi deposu oluşturulamadı.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Failed to add &quot;%1&quot; to the version control system.</source>
         <translation>Sürüm kontrol sistemine &quot;%1&quot; eklenemedi.</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+101" />
         <source>Files to be added:</source>
         <translation>Eklenecek dosyalar:</translation>
     </message>
@@ -21258,7 +24452,7 @@ What should %1 do now?</source>
         <translation>Eklenecek dosyalar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/removetaskhandler.cpp" line="+23" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="-131" />
         <source>Remove</source>
         <comment>Name of the action triggering the removetaskhandler</comment>
         <translation>Kaldırmak</translation>
@@ -21269,40 +24463,60 @@ What should %1 do now?</source>
         <translation>Görev listesinden görevi kaldırın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+151" />
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="+57" />
+        <location filename="../../../src/plugins/projectexplorer/deployconfiguration.cpp" line="+4" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="-716" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-192" />
         <source>Run Settings</source>
         <translation>Ayarları Çalıştır</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location filename="../../../src/plugins/projectexplorer/runconfiguration.cpp" line="+163" />
         <source>Variables in the run environment.</source>
         <translation>Çalışma ortamında değişkenler.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-158" />
         <source>The run configuration&apos;s working directory.</source>
         <translation>Run Configuration&apos;ın çalışma dizini.</translation>
     </message>
     <message>
+        <location line="-111" />
+        <source>Use &lt;a href=&quot;dummy&quot;&gt;global settings&lt;/a&gt;</source>
+        <translation>&lt;a href=&quot;dummy&quot;&gt;Genel ayarları&lt;/a&gt; kullan</translation>
+    </message>
+    <message>
         <location line="+5" />
+        <source>Use global settings</source>
+        <translation>Genel ayarları kullan</translation>
+    </message>
+    <message>
+        <location line="+52" />
+        <source>Use Global Settings</source>
+        <translation>Genel Ayarları Kullan</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Use Customized Settings</source>
+        <translation>Özelleştirilmiş Ayarları Kullan</translation>
+    </message>
+    <message>
+        <location line="+221" />
         <source>The run configuration&apos;s name.</source>
         <translation>Çalışma yapılandırmasının adı.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>The run configuration&apos;s executable.</source>
         <translation>RUN yapılandırmasının yürütülebilir dosyası.</translation>
     </message>
     <message>
-        <location line="+31" />
         <source>No build system active</source>
-        <translation>Yapı Sistemi Aktif Yok</translation>
+        <translation type="vanished">Yapı Sistemi Aktif Yok</translation>
     </message>
     <message>
-        <location line="+306" />
+        <location line="+292" />
         <source>Run on %{Device:Name}</source>
-        <extracomment>Shown in Run configuration if no executable is given, %1 is device name</extracomment>
+        <extracomment>Shown in Run configuration if no executable is given</extracomment>
         <translation>%{Cihaz: Name}</translation>
     </message>
     <message>
@@ -21312,12 +24526,12 @@ What should %1 do now?</source>
         <translation>%1 ( %{Cihaz: Name})</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-156" />
+        <location filename="../../../src/plugins/projectexplorer/runconfigurationaspects.cpp" line="-109" />
         <source>Terminal</source>
         <translation>terminal</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+18" />
         <source>Run in terminal</source>
         <translation>Terminal&apos;de koş</translation>
     </message>
@@ -21327,33 +24541,33 @@ What should %1 do now?</source>
         <translation>Çalışma dizini</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+24" />
         <source>Select Working Directory</source>
         <translation>Çalışma dizinini seçin</translation>
     </message>
     <message>
         <location line="+9" />
-        <location line="+303" />
+        <location line="+289" />
         <source>Reset to Default</source>
         <translation>Varsayılan olarak sıfırlayın</translation>
     </message>
     <message>
-        <location line="-181" />
+        <location line="-168" />
         <source>Arguments</source>
         <translation>Argümanlar</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+1" />
         <source>Command line arguments:</source>
         <translation>Komut satırı bağımsız değişkenleri:</translation>
     </message>
     <message>
-        <location line="+147" />
+        <location line="+139" />
         <source>Toggle multi-line mode.</source>
         <translation>Çok satırlı modu değiştirin.</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+62" />
         <source>Executable</source>
         <translation>Yürütülebilir</translation>
     </message>
@@ -21364,12 +24578,12 @@ What should %1 do now?</source>
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-15" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-18" />
         <source>Executable:</source>
         <translation>Yürütülebilir:</translation>
     </message>
     <message>
-        <location line="+95" />
+        <location line="+100" />
         <source>Alternate executable on device:</source>
         <translation>Cihazda alternatif yürütülebilir:</translation>
     </message>
@@ -21379,7 +24593,7 @@ What should %1 do now?</source>
         <translation>Bunun yerine bu komutu kullan</translation>
     </message>
     <message>
-        <location line="+115" />
+        <location line="+117" />
         <source>Add build library search path to DYLD_LIBRARY_PATH and DYLD_FRAMEWORK_PATH</source>
         <translation>Dyld_library_path ve dyld_framework_path&apos;e oluşturma kütüphanesi arama yolu ekleyin</translation>
     </message>
@@ -21394,7 +24608,17 @@ What should %1 do now?</source>
         <translation>LD_LIBRARRY_PATH&apos;a oluşturma kütüphanesi arama yolu ekleyin</translation>
     </message>
     <message>
-        <location line="+20" />
+        <location line="+22" />
+        <source>Use the Qt VNC platform for display</source>
+        <translation>Görüntü için Qt VNC platformunu kullan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Sets QT_QPA_PLATFORM=vnc which forwards the Qt application&apos;s UI to a built-in VNC server. Connect to the application UI with a VNC client. See the application output for details.</source>
+        <translation>QT_QPA_PLATFORM=vnc ayarlar; bu, Qt uygulamasının arayüzünü yerleşik bir VNC sunucusuna yönlendirir. Uygulama arayüzüne bir VNC istemcisiyle bağlanın. Ayrıntılar için uygulama çıktısına bakın.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Use debug version of frameworks (DYLD_IMAGE_SUFFIX=_debug)</source>
         <translation>Frameworks&apos;in hata ayıklama sürümünü kullanın (dyld_image_suffix = _debug)</translation>
     </message>
@@ -21404,7 +24628,32 @@ What should %1 do now?</source>
         <translation>Kök Kullanıcı olarak çalıştırın</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+17" />
+        <source>Run as User</source>
+        <translation>Kullanıcı Olarak Çalıştır</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Run as user:</source>
+        <translation>Kullanıcı olarak çalıştır:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>root</source>
+        <translation>kök</translation>
+    </message>
+    <message>
+        <location line="+57" />
+        <source>Enable logging category filtering</source>
+        <translation>Günlük kategorisi filtrelemeyi etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Enables filtering for logging categories (QLoggingCategory) in the Application Output. Requires Qt 6.11 or later.</source>
+        <translation>Uygulama Çıktısında günlük kategorileri (QLoggingCategory) için filtrelemeyi etkinleştirir. Qt 6.11 veya sonrasını gerektirir.</translation>
+    </message>
+    <message>
+        <location line="+40" />
         <source>Emulator</source>
         <translation>Emülatör</translation>
     </message>
@@ -21414,22 +24663,39 @@ What should %1 do now?</source>
         <translation>Başlatıcı:</translation>
     </message>
     <message>
-        <location line="+58" />
+        <location line="+62" />
+        <source>Use X11 forwarding:</source>
+        <translation>X11 yönlendirmeyi kullan:</translation>
+    </message>
+    <message>
         <source>X11 Forwarding:</source>
-        <translation>X11 yönlendirme:</translation>
+        <translation type="vanished">X11 yönlendirme:</translation>
     </message>
     <message>
-        <location line="+4" />
         <source>Forward to local display</source>
-        <translation>Yerel ekrana iletin</translation>
+        <translation type="vanished">Yerel ekrana iletin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-14" />
         <source>Unexpected run control state %1 when worker %2 started.</source>
-        <translation>Beklenmedik çalışma kontrol durumu %1 İşçi %2 başladığında.</translation>
+        <translation type="vanished">Beklenmedik çalışma kontrol durumu %1 İşçi %2 başladığında.</translation>
     </message>
     <message>
-        <location line="+324" />
+        <location filename="../../../src/plugins/projectexplorer/runcontrol.cpp" line="-206" />
+        <source>No recipe producer.</source>
+        <translation>Tarif üreticisi yok.</translation>
+    </message>
+    <message>
+        <location line="+203" />
+        <source>Cannot use ports gatherer. No device is set.</source>
+        <translation>Bağlantı noktası toplayıcı kullanılamıyor. Aygıt ayarlanmamış.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>No free ports found.</source>
+        <translation>Boş bağlantı noktası bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+319" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; is still running.&lt;center/&gt;&lt;center&gt;Force it to quit?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</source>
         <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;center&gt;&lt;i&gt;%1&lt;/i&gt; hâlâ çalışıyor.&lt;center/&gt;&lt;center&gt;Zorla kapatılsın mı?&lt;/center&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
@@ -21449,108 +24715,114 @@ What should %1 do now?</source>
         <translation>&amp;Koşmaya devam et</translation>
     </message>
     <message>
-        <location line="+246" />
+        <location line="+206" />
+        <source>Stopping process forcefully...</source>
+        <translation>İşlem zorla durduruluyor...</translation>
+    </message>
+    <message>
+        <location line="+7" />
         <source>Cannot retrieve debugging output.</source>
         <translation>Hata ayıklama çıkışını alamıyor.</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+77" />
+        <source>Requesting process to stop...</source>
+        <translation>İşlemin durdurulması isteniyor...</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Process unexpectedly did not finish.</source>
+        <translation>İşlem beklenmedik şekilde bitmedi.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Connectivity lost?</source>
+        <translation>Bağlantı kesildi mi?</translation>
+    </message>
+    <message>
         <source>User requested stop. Shutting down...</source>
-        <translation>Kullanıcı istenen durak. Kapatma ...</translation>
+        <translation type="vanished">Kullanıcı istenen durak. Kapatma ...</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Remote process did not finish in time. Connectivity lost?</source>
-        <translation>Uzaktan işlem zamanında bitmedi. Bağlantı kayboldu mu?</translation>
+        <translation type="vanished">Uzaktan işlem zamanında bitmedi. Bağlantı kayboldu mu?</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="-130" />
         <source>Cannot run: No command given.</source>
         <translation>Koşulamaz: Komut verilmez.</translation>
     </message>
     <message>
-        <location line="+54" />
         <source>%1 exited with code %2</source>
-        <translation>%1 Kodla Çıktı %2</translation>
+        <translation type="vanished">%1 Kodla Çıktı %2</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>%1 crashed.</source>
-        <translation>%1 çöktü.</translation>
+        <translation type="vanished">%1 çöktü.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>The process was ended forcefully.</source>
-        <translation>Süreç zorla sona erdi.</translation>
+        <translation type="vanished">Süreç zorla sona erdi.</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="-41" />
         <source>Starting %1...</source>
         <translation>Başlangıç ​​%1 ...</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Environment:</source>
         <translation>Çevre:</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location line="-15" />
         <source>No executable specified.</source>
         <translation>Yürütilebilir belirtilmedi.</translation>
     </message>
     <message>
-        <location line="+279" />
         <source>The process failed to start.</source>
-        <translation>Süreç başlayamadı.</translation>
+        <translation type="vanished">Süreç başlayamadı.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>An unknown error in the process occurred.</source>
-        <translation>Süreçte bilinmeyen bir hata oluştu.</translation>
+        <translation type="vanished">Süreçte bilinmeyen bir hata oluştu.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Either the invoked program &quot;%1&quot; is missing, or you may have insufficient permissions to invoke the program.</source>
-        <translation>Çağırılan &quot;%1&quot; programı eksiktir veya programı çağırmak için yeterli izinleriniz olabilir.</translation>
+        <translation type="vanished">Çağırılan &quot;%1&quot; programı eksiktir veya programı çağırmak için yeterli izinleriniz olabilir.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>The process crashed.</source>
-        <translation>Süreç çöktü.</translation>
+        <translation type="vanished">Süreç çöktü.</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>An error occurred when attempting to write to the process. For example, the process may not be running, or it may have closed its input channel.</source>
-        <translation>Sürece yazmaya çalışırken bir hata oluştu. Örneğin, işlem çalışmıyor olabilir veya giriş kanalını kapatmış olabilir.</translation>
+        <translation type="vanished">Sürece yazmaya çalışırken bir hata oluştu. Örneğin, işlem çalışmıyor olabilir veya giriş kanalını kapatmış olabilir.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>An error occurred when attempting to read from the process. For example, the process may not be running.</source>
-        <translation>Süreçten okumaya çalışırken bir hata oluştu. Örneğin, süreç çalışmıyor olabilir.</translation>
+        <translation type="vanished">Süreçten okumaya çalışırken bir hata oluştu. Örneğin, süreç çalışmıyor olabilir.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="-186" />
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-317" />
+        <location filename="../../../src/plugins/projectexplorer/runsettingspropertiespage.cpp" line="+13" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-15" />
         <source>Remove All</source>
         <translation>Hepsini kaldır</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Deployment</source>
-        <translation>Dağıtım</translation>
+        <translation type="vanished">Dağıtım</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Method:</source>
-        <translation>Yöntem:</translation>
+        <translation type="vanished">Yöntem:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Run configuration:</source>
-        <translation>Çalıştırma Yapılandırması:</translation>
+        <translation type="vanished">Çalıştırma Yapılandırması:</translation>
     </message>
     <message>
-        <location line="+153" />
+        <location line="+138" />
         <source>Remove Run Configuration?</source>
         <translation>Çalıştırma yapılandırmasını kaldırılsın mı?</translation>
     </message>
@@ -21560,7 +24832,7 @@ What should %1 do now?</source>
         <translation>RUN yapılandırmasını gerçekten &lt;b&gt;%1 &lt;/b&gt; silmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+36" />
         <source>Remove Run Configurations?</source>
         <translation>Çalıştırma yapılandırmalarını kaldırılsın mı?</translation>
     </message>
@@ -21570,17 +24842,37 @@ What should %1 do now?</source>
         <translation>Tüm çalışma yapılandırmalarını gerçekten silmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+41" />
         <source>New name for run configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Çalışma yapılandırması için yeni isim &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="-426" />
         <source>Cancel Build &amp;&amp; Remove Deploy Configuration</source>
         <translation>Dağıtım yapılandırmasını iptal edin ve dağıtım yapılandırmasını iptal edin</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-325" />
+        <source>Clone From Run Configuration</source>
+        <translation>Çalıştırma Yapılandırmasından Klonla</translation>
+    </message>
+    <message>
+        <location line="+42" />
+        <source>There are no other run configurations.</source>
+        <translation>Başka çalıştırma yapılandırması yok.</translation>
+    </message>
+    <message>
+        <location line="+194" />
+        <source>Deploy Settings</source>
+        <translation>Dağıtım Ayarları</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Active deployment configuration:</source>
+        <translation>Etkin dağıtım yapılandırması:</translation>
+    </message>
+    <message>
+        <location line="+81" />
         <source>Remove Deploy Configuration %1?</source>
         <translation>Dağıtım yapılandırmasını kaldır %1?</translation>
     </message>
@@ -21605,12 +24897,27 @@ What should %1 do now?</source>
         <translation>Dağıtım yapılandırmasını gerçekten silmek istiyor musunuz &lt;b&gt;%1 &lt;/b&gt;?</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+24" />
         <source>New name for deploy configuration &lt;b&gt;%1&lt;/b&gt;:</source>
         <translation>Dağıtım Yapılandırması için Yeni Ad &lt;b&gt;%1 &lt;/b&gt;:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+542" />
+        <location line="+172" />
+        <source>Bulk Remove...</source>
+        <translation>Toplu Kaldır...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Clone into This...</source>
+        <translation>Buraya Klonla...</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Active run configuration:</source>
+        <translation>Etkin çalıştırma yapılandırması:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/selectablefilesmodel.cpp" line="+537" />
         <source>Source directory:</source>
         <translation>Kaynak Dizini:</translation>
     </message>
@@ -21658,12 +24965,12 @@ Bu dosyalar korunur.</numerusform>
         <translation>Dosyaları Düzenle</translation>
     </message>
     <message>
-        <location line="+34" />
+        <location line="+30" />
         <source>Add Existing Directory</source>
         <translation>Mevcut dizini ekleyin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/showineditortaskhandler.cpp" line="+35" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+29" />
         <source>Show in Editor</source>
         <translation>Editörde gösteri</translation>
     </message>
@@ -21673,12 +24980,14 @@ Bu dosyalar korunur.</numerusform>
         <translation>Bir editörde görev konumunu gösterin.</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/projectexplorer/projectwelcomepage.cpp" line="-689" />
         <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="-16" />
         <source>Files</source>
+        <extracomment>title in expanded session items in welcome mode</extracomment>
         <translation>Dosyalar</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+11" />
         <source>Import Existing Project</source>
         <translation>Mevcut projeyi içe aktarın</translation>
     </message>
@@ -21688,12 +24997,13 @@ Bu dosyalar korunur.</numerusform>
         <translation>Proje Adı ve Konumu</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/jsonwizards_tr.h" line="-314" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+1" />
         <source>Project name:</source>
         <translation>Proje Adı:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/simpleprojectwizard.cpp" line="+5" />
         <source>File Selection</source>
         <translation>Dosya Seçimi</translation>
     </message>
@@ -21708,68 +25018,63 @@ Bu dosyalar korunur.</numerusform>
         <translation>qmake, CMake, Qbs, Meson veya Autotools kullanmayan mevcut projeleri içe aktarır.&lt;p&gt;Bu, %1 uygulamasını bir kod düzenleyicisi ve hata ayıklama ile çözümleme araçları için bir başlatıcı olarak kullanmanıza olanak tanıyan bir proje dosyası oluşturur. Projeyi derlemek isterseniz, oluşturulan proje dosyasını düzenlemeniz gerekebilir.</translation>
     </message>
     <message>
-        <location line="+172" />
+        <location line="+162" />
         <source>Unknown build system &quot;%1&quot;</source>
         <translation>Bilinmeyen Yapı Sistemi &quot;%1&quot;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/target.cpp" line="+135" />
         <source>Target Settings</source>
-        <translation>Hedef ayarlar</translation>
+        <translation type="vanished">Hedef ayarlar</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location filename="../../../src/plugins/projectexplorer/buildconfiguration.cpp" line="-1359" />
         <source>Source directory</source>
         <translation>Kaynak dizin</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+9" />
         <source>Build system</source>
         <translation>Oluşturma sistemi</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+3" />
         <source>Name of current project</source>
         <translation>Mevcut projenin adı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsettingspanel.cpp" line="-517" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-1070" />
         <source>&amp;Configure Project</source>
         <translation>&amp;Projeyi Yapılandırın</translation>
     </message>
     <message>
-        <location line="+91" />
+        <location filename="../../../src/plugins/projectexplorer/projectexplorersettings.cpp" line="-40" />
         <source>Show All Kits</source>
         <translation>Tüm kitleri göster</translation>
     </message>
     <message>
-        <location line="+0" />
         <source>Hide Inactive Kits</source>
-        <translation>Aktif olmayan kitleri gizle</translation>
+        <translation type="vanished">Aktif olmayan kitleri gizle</translation>
     </message>
     <message>
-        <location line="+36" />
         <source>No kit defined in this project.</source>
-        <translation>Bu projede tanımlanmadı.</translation>
+        <translation type="vanished">Bu projede tanımlanmadı.</translation>
     </message>
     <message>
-        <location line="+14" />
-        <location line="+12" />
+        <location filename="../../../src/plugins/projectexplorer/projectwindow.cpp" line="-2" />
         <source>Configure Project</source>
         <translation>Projeyi Yapılandırma</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+180" />
         <source>Kit is unsuited for project</source>
         <translation>Kit proje için uygun değil</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Click to activate</source>
-        <translation>Etkinleştirmek için tıklayın</translation>
+        <translation type="vanished">Etkinleştirmek için tıklayın</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+79" />
         <source>Enable Kit for Project &quot;%1&quot;</source>
         <translation>&quot;%1&quot; projesi için kiti etkinleştir</translation>
     </message>
@@ -21814,12 +25119,11 @@ Bu dosyalar korunur.</numerusform>
         <translation>Başka bir kitin adımlarını kopyalayın ...</translation>
     </message>
     <message>
-        <location line="+199" />
         <source>Enable Kit</source>
-        <translation>Kiti Etkinleştir</translation>
+        <translation type="vanished">Kiti Etkinleştir</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+29" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetuppage.cpp" line="+370" />
         <source>No suitable kits found.</source>
         <translation>Uygun kit bulunamadı.</translation>
     </message>
@@ -21839,18 +25143,23 @@ Bu dosyalar korunur.</numerusform>
         <translation>Kitleri ismine göre filtreye yazın ...</translation>
     </message>
     <message>
-        <location line="+144" />
+        <location line="+2" />
+        <source>Hide unsuitable kits</source>
+        <translation>Uygun olmayan kitleri gizle</translation>
+    </message>
+    <message>
+        <location line="-305" />
         <source>Select Kits for Your Project</source>
         <translation>Projeniz için kitleri seçin</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+108" />
         <source>The following kits can be used for project &lt;b&gt;%1&lt;/b&gt;:</source>
         <comment>%1: Project name</comment>
         <translation>Aşağıdaki kitler &lt;b&gt;%1 &lt;/b&gt; projesi için kullanılabilir:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+359" />
+        <location filename="../../../src/plugins/projectexplorer/targetsetupwidget.cpp" line="+411" />
         <source>&lt;b&gt;Error:&lt;/b&gt; </source>
         <comment>Severity is Task::Error</comment>
         <translation>&lt;b&gt; Hata: &lt;/b&gt;</translation>
@@ -21862,12 +25171,12 @@ Bu dosyalar korunur.</numerusform>
         <translation>&lt;b&gt; Uyarı: &lt;/b&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+63" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="+75" />
         <source>%1 needs a compiler set up to build. Configure a compiler in the kit options.</source>
         <translation>%1, oluşturmak için ayarlanmış bir derleyiciye ihtiyaç duyar. Kit seçeneklerinde bir derleyici yapılandırın.</translation>
     </message>
     <message>
-        <location line="+143" />
+        <location line="+196" />
         <source>Error:</source>
         <translation>Hata:</translation>
     </message>
@@ -21877,7 +25186,7 @@ Bu dosyalar korunur.</numerusform>
         <translation>Uyarı:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+110" />
+        <location filename="../../../src/plugins/projectexplorer/taskfile.cpp" line="+111" />
         <source>Cannot open task file %1: %2</source>
         <translation>Görev dosyasını açılamıyor %1: %2</translation>
     </message>
@@ -21902,7 +25211,7 @@ Bu dosyalar korunur.</numerusform>
         <translation>Görev dosyalarını izlemeyi bırakın.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskhub.cpp" line="-18" />
+        <location filename="../../../src/plugins/projectexplorer/task.cpp" line="-292" />
         <source>Taskhub Error</source>
         <translation>TaskHub Hatası</translation>
     </message>
@@ -21912,42 +25221,46 @@ Bu dosyalar korunur.</numerusform>
         <translation>TaskHub uyarısı</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+20" />
         <source>Build Issue</source>
         <translation>Sorunu oluşturmak</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+185" />
+        <location filename="../../../src/plugins/projectexplorer/taskwindow.cpp" line="+138" />
         <source>Issues</source>
         <translation>Sorunlar</translation>
     </message>
     <message>
-        <location line="+53" />
+        <location line="+44" />
         <source>Show Warnings</source>
         <translation>Uyarıları Göster</translation>
     </message>
     <message>
         <location line="+4" />
+        <source>Create Issues From External Build Output...</source>
+        <translation>Harici Derleme Çıktısından Sorunlar Oluştur...</translation>
+    </message>
+    <message>
+        <location line="+5" />
         <source>Filter by categories</source>
         <translation>Kategorilere göre filtre</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-160" />
+        <location filename="../../../src/plugins/projectexplorer/toolchainoptionspage.cpp" line="-429" />
         <source>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</source>
         <translation>&lt;nobr&gt;&lt;b&gt;ABI:&lt;/b&gt; %1</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>not up-to-date</source>
-        <translation>güncel değil</translation>
+        <translation type="vanished">güncel değil</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>This toolchain is invalid.</source>
         <translation>Bu araç zinciri geçersiz.</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+54" />
         <source>Toolchain Auto-detection Settings</source>
         <translation>Toolchain Otomatik Alınma Ayarları</translation>
     </message>
@@ -21966,43 +25279,59 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
  Özel bir çapraz derleyici kullanmadan 32 bit x86 ikili oluşturmayı planlıyorsanız bunu etkinleştirin.</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+102" />
         <source>Type</source>
         <translation>Tip</translation>
     </message>
     <message>
-        <location line="+84" />
+        <location line="+0" />
+        <source>Language</source>
+        <translation>Dil</translation>
+    </message>
+    <message>
+        <location line="+265" />
         <source>Re-detect</source>
         <translation>Yeniden tespit etmek</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+1" />
         <source>Auto-detection Settings...</source>
         <translation>Otomatik tespit ayarları ...</translation>
     </message>
     <message>
-        <location line="+251" />
-        <location line="+8" />
+        <location line="-74" />
+        <location line="+7" />
         <source>Duplicate Compilers Detected</source>
         <translation>Yinelenen derleyiciler tespit edildi</translation>
     </message>
     <message>
-        <location line="-7" />
+        <location line="-378" />
+        <source>None</source>
+        <comment>Toolchain bundle display name</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Not all compilers are set up correctly.</source>
+        <translation>Tüm derleyiciler doğru şekilde ayarlanmadı.</translation>
+    </message>
+    <message>
+        <location line="+356" />
         <source>The following compiler was already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;It was not configured again.</source>
         <translation>Aşağıdaki derleyici zaten yapılandırılmıştır: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; Tekrar yapılandırılmamıştır.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+7" />
         <source>The following compilers were already configured:&lt;br&gt;&amp;nbsp;%1&lt;br&gt;They were not configured again.</source>
         <translation>Aşağıdaki derleyiciler zaten yapılandırılmıştır: &lt;br&gt; &amp; nbsp;%1 &lt;br&gt; Tekrar yapılandırılmamıştır.</translation>
     </message>
     <message>
-        <location line="+76" />
+        <location line="+334" />
         <source>Compilers</source>
         <translation>Derleyiciler</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/vcsannotatetaskhandler.cpp" line="+43" />
+        <location filename="../../../src/plugins/projectexplorer/taskhandlers.cpp" line="+33" />
         <source>&amp;Annotate</source>
         <translation>&amp;Ek açıklama</translation>
     </message>
@@ -22018,6 +25347,9 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
     </message>
     <message>
         <location line="+8" />
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="+299" />
+        <location line="+161" />
+        <location line="+27" />
         <source>Cancel</source>
         <translation>İptal etmek</translation>
     </message>
@@ -22027,12 +25359,26 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Uygulamaların durmasını bekliyorum.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-3" />
         <source>You can edit this configuration inside the .qtcreator/project.json file.</source>
-        <translation>Bu yapılandırmayı .qtcreator/Project.json dosyası içinde düzenleyebilirsiniz.</translation>
+        <translation type="vanished">Bu yapılandırmayı .qtcreator/Project.json dosyası içinde düzenleyebilirsiniz.</translation>
     </message>
     <message>
-        <location line="+137" />
+        <location filename="../../../src/plugins/projectexplorer/workspaceproject.cpp" line="-4" />
+        <source>Clone the configuration to change it. Or, make the changes in the .qtcreator/project.json file.</source>
+        <translation>Yapılandırmayı değiştirmek için klonlayın. Ya da değişiklikleri .qtcreator/project.json dosyasında yapın.</translation>
+    </message>
+    <message>
+        <location line="+136" />
+        <source>Workspace Manager</source>
+        <translation>Çalışma Alanı Yöneticisi</translation>
+    </message>
+    <message>
+        <location line="+108" />
+        <source>Copy of %1</source>
+        <translation>%1 kopyası</translation>
+    </message>
+    <message>
+        <location line="+176" />
         <source>Exclude from Project</source>
         <translation>Projeden hariç</translation>
     </message>
@@ -22042,23 +25388,293 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Yeniden işleme alanı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+56" />
-        <location line="+183" />
+        <location filename="../../../src/plugins/projectexplorer/xcodebuildparser.cpp" line="+61" />
+        <location line="+170" />
         <source>Replacing signature</source>
         <translation>İmzanın Değiştirilmesi</translation>
     </message>
     <message>
-        <location line="-167" />
-        <location line="+145" />
-        <location line="+12" />
+        <location line="-154" />
+        <location line="+134" />
+        <location line="+11" />
         <source>Xcodebuild failed.</source>
         <translation>Xcodebuild başarısız oldu.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/detailederrorview.cpp" line="+32" />
+        <source>Copy</source>
+        <translation>Kopyala</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/jsonwizard/jsonprojectpage.cpp" line="+42" />
+        <source>None</source>
+        <comment>Add to project: None</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchain.cpp" line="+969" />
+        <source>%1 at &quot;%2&quot;</source>
+        <extracomment>toolchain &apos;name&apos; at &apos;path&apos;</extracomment>
+        <translation>%1, &quot;%2&quot; konumunda</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainconfigwidget.cpp" line="+109" />
+        <source>&amp;Compiler path</source>
+        <translation>&amp;Derleyici yolu</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>%1 compiler path</source>
+        <extracomment>%1 = programming language</extracomment>
+        <translation>%1 derleyici yolu</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Provide manually</source>
+        <translation>Elle belirt</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/toolchainmanager.cpp" line="+288" />
+        <location line="+2" />
+        <source>None</source>
+        <comment>No compiler language</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>None</source>
+        <comment>No compiler category</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/userfileaccessor.cpp" line="+149" />
+        <source>Failed to copy project user settings from &quot;%1&quot; to new default location &quot;%2&quot;: %3</source>
+        <translation>Proje kullanıcı ayarları &quot;%1&quot; konumundan yeni varsayılan &quot;%2&quot; konumuna kopyalanamadı: %3</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/windowsappsdksettings.cpp" line="-391" />
+        <source>Could not open &quot;%1&quot; for writing: %2.</source>
+        <translation>&quot;%1&quot; yazmak için açılamadı: %2.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Windows Configuration</source>
+        <translation>Windows Yapılandırması</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>All changes on this page take effect immediately.</source>
+        <translation>Bu sayfadaki tüm değişiklikler hemen geçerli olur.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Select the download path of NuGet and Windows App SDK.</source>
+        <translation>NuGet ve Windows App SDK için indirme yolunu seçin.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select Download Path</source>
+        <translation>İndirme Yolunu Seç</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select the path of NuGet.</source>
+        <translation>NuGet yolunu seçin.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Select nuget.exe File</source>
+        <translation>nuget.exe Dosyasını Seç</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Download NuGet</source>
+        <translation>NuGet&apos;i İndir</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download NuGet.
+
+NuGet is needed for downloading Windows App SDK.</source>
+        <translation>NuGet&apos;i otomatik olarak indir.
+
+NuGet, Windows App SDK&apos;yı indirmek için gereklidir.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Select the path of the Windows App SDK.</source>
+        <translation>Windows App SDK yolunu seçin.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download Windows App SDK</source>
+        <translation>Windows App SDK&apos;yı İndir</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Automatically download Windows App SDK with NuGet.
+
+If the automatic download fails, Qt Creator proposes to open the download URL
+in the system browser for manual download.</source>
+        <translation>Windows App SDK&apos;yı NuGet ile otomatik olarak indir.
+
+Otomatik indirme başarısız olursa Qt Creator, el ile indirmek için indirme URL&apos;sini
+sistem tarayıcısında açmayı önerir.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download path exists.</source>
+        <translation>İndirme yolu mevcut.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>NuGet path exists.</source>
+        <translation>NuGet yolu mevcut.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK path exists.</source>
+        <translation>Windows App SDK yolu mevcut.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Windows App SDK settings are OK.</source>
+        <translation>Windows App SDK ayarları tamam.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Windows App SDK settings have errors.</source>
+        <translation>Windows App SDK ayarlarında hatalar var.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Select Windows App SDK Path</source>
+        <translation>Windows App SDK Yolunu Seç</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Download Path</source>
+        <translation>İndirme Yolu</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Download location:</source>
+        <translation>İndirme konumu:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>NuGet</source>
+        <translation>NuGet</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>NuGet location:</source>
+        <translation>NuGet konumu:</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Windows App SDK Settings</source>
+        <translation>Windows App SDK Ayarları</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows App SDK location:</source>
+        <translation>Windows App SDK konumu:</translation>
+    </message>
+    <message>
+        <location line="+75" />
+        <source>NuGet download failed.</source>
+        <translation>NuGet indirmesi başarısız oldu.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open NuGet URL for manual download?</source>
+        <translation>Elle indirmek için NuGet URL&apos;si açılsın mı?</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <location line="+188" />
+        <source>Open Download URL</source>
+        <translation>İndirme URL&apos;sini Aç</translation>
+    </message>
+    <message>
+        <location line="-176" />
+        <location line="+83" />
+        <source>Downloading</source>
+        <translation>İndiriliyor</translation>
+    </message>
+    <message>
+        <location line="-82" />
+        <source>Downloading NuGet...</source>
+        <translation>NuGet indiriliyor...</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>The SDK Tools download URL is empty.</source>
+        <translation>SDK Araçları indirme URL&apos;si boş.</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>Encountered SSL errors, download is aborted.</source>
+        <translation>SSL hataları oluştu, indirme iptal edildi.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Downloading NuGet from URL %1 has failed: %2.</source>
+        <translation>NuGet&apos;in %1 URL&apos;sinden indirilmesi başarısız oldu: %2.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Download from %1 was redirected.</source>
+        <translation>%1 adresinden indirme yönlendirildi.</translation>
+    </message>
+    <message>
+        <location line="+36" />
+        <source>The selected download path (%1) for NuGet already exists.
+Select a different path.</source>
+        <translation>NuGet için seçilen indirme yolu (%1) zaten var.\nFarklı bir yol seçin.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <location line="+37" />
+        <source>Download path is not configured.</source>
+        <translation>İndirme yolu yapılandırılmadı.</translation>
+    </message>
+    <message>
+        <location line="-18" />
+        <source>Downloading Windows App SDK</source>
+        <translation>Windows App SDK indiriliyor</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Windows App SDK is already configured.</source>
+        <translation>Windows App SDK zaten yapılandırılmış.</translation>
+    </message>
+    <message>
+        <location line="+18" />
+        <source>Downloading Windows App SDK...</source>
+        <translation>Windows App SDK indiriliyor...</translation>
+    </message>
+    <message>
+        <location line="+22" />
+        <source>Windows App SDK download failed.</source>
+        <translation>Windows App SDK indirmesi başarısız oldu.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Open Windows App SDK URL for manual download?</source>
+        <translation>Elle indirmek için Windows App SDK URL&apos;si açılsın mı?</translation>
+    </message>
+    <message>
+        <location line="+64" />
+        <source>Windows App SDK</source>
+        <translation>Windows App SDK</translation>
     </message>
 </context>
 <context>
     <name>QtC::Python</name>
     <message>
-        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+93" />
+        <location filename="../../../src/plugins/python/pipsupport.cpp" line="+64" />
         <source>Update Requirements</source>
         <translation>Güncelleme Gereksinimleri</translation>
     </message>
@@ -22089,22 +25705,25 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Paketleri yükleyin</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+37" />
+        <source>Installing &quot;%1&quot; failed: %2</source>
+        <translation>&quot;%1&quot; kurulumu başarısız oldu: %2</translation>
+    </message>
+    <message>
+        <location line="+6" />
         <source>The installation of &quot;%1&quot; was canceled by timeout.</source>
         <translation>&quot;%1&quot; in kurulumu zaman aşımı ile iptal edildi.</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>The installation of &quot;%1&quot; was canceled by the user.</source>
-        <translation>&quot;%1&quot; in kurulumu kullanıcı tarafından iptal edildi.</translation>
+        <translation type="vanished">&quot;%1&quot; in kurulumu kullanıcı tarafından iptal edildi.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Installing &quot;%1&quot; failed with exit code %2.</source>
-        <translation>&quot; %1&quot; yükleme %2 çıkış kodu ile başarısız oldu.</translation>
+        <translation type="vanished">&quot; %1&quot; yükleme %2 çıkış kodu ile başarısız oldu.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+51" />
+        <location filename="../../../src/plugins/python/pythoneditor.cpp" line="+50" />
         <location line="+47" />
         <source>REPL</source>
         <translation>Yerine geçmek</translation>
@@ -22140,7 +25759,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Etkileşimli Python açık. Hiçbir şeyi içe aktarmak, geçerli dosyayı içe aktarmak veya her şeyi (*) geçerli dosyadan içe aktarmak.</translation>
     </message>
     <message>
-        <location line="+159" />
+        <location line="+151" />
         <source>No Python Selected</source>
         <translation>Python seçilmedi</translation>
     </message>
@@ -22155,14 +25774,18 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python Tercümanları Yönetin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+60" />
-        <source>None</source>
-        <translation>Hiçbiri</translation>
+        <location line="+56" />
+        <source>Python Editor</source>
+        <translation>Python Düzenleyici</translation>
     </message>
     <message>
-        <location line="+33" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+353" />
-        <location line="+215" />
+        <source>None</source>
+        <translation type="vanished">Hiçbiri</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pythonkitaspect.cpp" line="+90" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+546" />
         <source>Python</source>
         <translation>Python</translation>
     </message>
@@ -22172,9 +25795,13 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python tabanlı projeler için kullanılan tercüman.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>No Python setup.</source>
-        <translation>Python kurulumu yok.</translation>
+        <translation type="vanished">Python kurulumu yok.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>No Python set up.</source>
+        <translation>Python ayarlanmadı.</translation>
     </message>
     <message>
         <location line="+3" />
@@ -22187,7 +25814,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python &quot;%1&quot; yürütülebilir değildir.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+10" />
         <source>Python &quot;%1&quot; does not contain a usable pip. pip is needed to install Python packages from the Python Package Index, like PySide and the Python language server. To use any of that functionality ensure that pip is installed for that Python.</source>
         <translation>Python &quot;%1&quot; kullanılabilir bir PIP içermez. PIP, Python Paket Dizininden Python Paket Dizini&apos;nden Python Paket Dizininden ve Python Dil Sunucusu&apos;nu kurmak için gereklidir. Bu işlevlerden herhangi birini kullanmak için PIP&apos;nin bu python için yüklü olduğundan emin olun.</translation>
     </message>
@@ -22207,12 +25834,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Python Tercüman Yolu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+229" />
+        <location filename="../../../src/plugins/python/pythonlanguageclient.cpp" line="+273" />
         <source>Python Language Server (%1)</source>
         <translation>Python Dil Sunucusu (%1)</translation>
     </message>
     <message>
-        <location line="+328" />
+        <location line="+345" />
         <source>Install Python language server (PyLS) for %1 (%2). The language server provides Python specific completion and annotation.</source>
         <translation>%1 ( %2) için Python Dil Sunucusunu (Pyls) yükleyin. Dil sunucusu Python&apos;a özgü tamamlama ve ek açıklama sağlar.</translation>
     </message>
@@ -22227,32 +25854,42 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>%1 ( %2) için Python Dil Sunucusunu (Pyls) güncelleyin.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Always Update</source>
         <translation>Her zaman güncelle</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Update</source>
         <translation>Güncelleme</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+7" />
         <source>Never</source>
         <translation>Asla</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+84" />
+        <location filename="../../../src/plugins/python/pythonplugin.cpp" line="+77" />
         <source>Issues parsed from Python runtime output.</source>
         <translation>Python çalışma zamanı çıktısından ayrıştırılan sorunlar.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonproject.cpp" line="+41" />
+        <location line="-37" />
         <source>No Python interpreter set for kit &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; kiti için Python tercümanı yok.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+111" />
+        <location filename="../../../src/plugins/python/pythonrunconfiguration.cpp" line="+96" />
+        <source>👉 Click here to install %1 (requires pip)</source>
+        <translation>👉 %1 kurmak için buraya tıklayın (pip gerektirir)</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>PySide6</source>
+        <translation>PySide6</translation>
+    </message>
+    <message>
+        <location line="+63" />
         <source>Buffered output</source>
         <translation>Tamponlu çıktı</translation>
     </message>
@@ -22267,8 +25904,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Senaryo:</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="+706" />
+        <location line="+7" />
         <source>Python:</source>
         <translation>Python:</translation>
     </message>
@@ -22278,19 +25914,17 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Koşu %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-1170" />
-        <location line="+283" />
+        <location filename="../../../src/plugins/python/pythonsettings.cpp" line="-383" />
+        <location line="+1267" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
     <message>
-        <location line="-282" />
-        <location line="+283" />
         <source>Executable</source>
-        <translation>Yürütülebilir</translation>
+        <translation type="vanished">Yürütülebilir</translation>
     </message>
     <message>
-        <location line="-205" />
+        <location line="-1335" />
         <source>Executable is empty.</source>
         <translation>Yürütülebilir boştur.</translation>
     </message>
@@ -22305,56 +25939,106 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>&quot;%1&quot; yürütülebilir bir dosya değildir.</translation>
     </message>
     <message>
-        <location line="+16" />
-        <location line="+186" />
+        <location line="+131" />
+        <location line="+1202" />
         <source>&amp;Add</source>
         <translation>&amp;Eklemek</translation>
     </message>
     <message>
-        <location line="-184" />
-        <location line="+185" />
+        <location line="-1200" />
+        <location line="+1201" />
         <source>&amp;Delete</source>
         <translation>&amp;Silmek</translation>
     </message>
     <message>
-        <location line="-183" />
-        <location line="+185" />
+        <location line="-1199" />
+        <location line="+1201" />
         <source>&amp;Make Default</source>
         <translation>&amp;Varsayılan Yap</translation>
     </message>
     <message>
-        <location line="-183" />
+        <location line="-1199" />
         <source>&amp;Generate Kit</source>
         <translation>&amp;Kit Oluştur</translation>
     </message>
     <message>
         <location line="+3" />
-        <location line="+179" />
+        <location line="+1195" />
         <source>&amp;Clean Up</source>
         <translation>&amp;Temizlemek</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-1194" />
         <source>Remove all Python interpreters without a valid executable.</source>
         <translation>Geçerli bir yürütülebilir yapılabilir olmadan tüm Python tercümanlarını kaldırın.</translation>
     </message>
     <message>
-        <location line="+138" />
+        <location line="+890" />
+        <source>Venv creation failed:
+%1</source>
+        <translation>Venv oluşturma başarısız oldu:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation terminated abnormally:
+%1</source>
+        <translation>Venv oluşturma olağan dışı sonlandı:\n%1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Venv creation could not be started:
+%1</source>
+        <translation>Venv oluşturma başlatılamadı:\n%1</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Venv creation canceled.</source>
+        <translation>Venv oluşturma iptal edildi.</translation>
+    </message>
+    <message>
+        <location line="+202" />
+        <source>Found &quot;%1&quot; (%2).</source>
+        <translation>&quot;%1&quot; bulundu (%2).</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Removing Python: %1.</source>
+        <translation>Python kaldırılıyor: %1.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Python: %1.</source>
+        <translation>Python: %1.</translation>
+    </message>
+    <message>
+        <location line="+62" />
         <source>Interpreters</source>
         <translation>Tercümanlar</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="-1022" />
         <source>Plugins:</source>
         <translation>Eklentiler:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-326" />
+        <source>None</source>
+        <comment>No Python interpreter</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+86" />
+        <location line="+1267" />
+        <source>Executable:</source>
+        <translation>Çalıştırılabilir dosya:</translation>
+    </message>
+    <message>
+        <location line="-1026" />
         <source>Use Python Language Server</source>
         <translation>Python Dil Sunucusu kullanın</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+20" />
         <source>For a complete list of available options, consult the [Python LSP Server configuration documentation](%1).</source>
         <translation>Mevcut seçeneklerin tam bir listesi için [Python LSP Server Yapılandırma Belgeleri] &apos;ye (%1) danışın.</translation>
     </message>
@@ -22364,12 +26048,12 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Gelişmiş</translation>
     </message>
     <message>
-        <location line="+99" />
+        <location line="+103" />
         <source>Language Server Configuration</source>
         <translation>Dil Sunucusu Yapılandırması</translation>
     </message>
     <message>
-        <location line="+489" />
+        <location line="+518" />
         <source>Python interpreter:</source>
         <translation>Python Tercüman:</translation>
     </message>
@@ -22389,46 +26073,67 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Yaratmak</translation>
     </message>
     <message>
-        <location line="+34" />
-        <location filename="../../../src/plugins/python/pythonutils.cpp" line="+185" />
+        <location line="+48" />
         <source>Create Python venv</source>
         <translation>Python Venv Oluştur</translation>
     </message>
     <message>
-        <location line="+151" />
         <source>Searching Python binaries...</source>
-        <translation>Python İkili Arama ...</translation>
+        <translation type="vanished">Python İkili Arama ...</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Found &quot;%1&quot; (%2)</source>
-        <translation>&quot;%1&quot; bulundu (%2)</translation>
+        <translation type="vanished">&quot;%1&quot; bulundu (%2)</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Removing Python</source>
-        <translation>Python&apos;u Çıkarma</translation>
+        <translation type="vanished">Python&apos;u Çıkarma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+91" />
+        <location filename="../../../src/plugins/python/pythonwizardpage.cpp" line="+90" />
         <source>&quot;data&quot; of a Python wizard page expects a map with &quot;items&quot; containing a list of objects.</source>
         <translation>Bir Python Sihirbazı sayfasının &quot;verileri&quot;, nesne listesi içeren &quot;öğeler&quot; içeren bir harita bekler.</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+5" />
         <source>An item of Python wizard page data expects a &quot;trKey&quot; field containing the UI visible string for that Python version and a &quot;value&quot; field containing an object with a &quot;PySideVersion&quot; field used for import statements in the Python files.</source>
         <translation>Bir Python Sihirbazı sayfası verileri, bu Python sürümü için UI görünür dizesini ve Python dosyalarında içe aktarma ifadeleri için kullanılan &quot;pysideersion&quot; alanına sahip bir nesne içeren bir &quot;değer&quot; alanı içeren bir &quot;trkey&quot; alanı bekler.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+14" />
         <source>PySide version:</source>
         <translation>Pyside Versiyonu:</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/python/pyprojecttoml.cpp" line="+20" />
+        <source>Parsing error: %1</source>
+        <translation>Ayrıştırma hatası: %1</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Type error: &quot;%1&quot; must be a &quot;%2&quot;, not a &quot;%3&quot;.</source>
+        <translation>Tür hatası: &quot;%1&quot; bir &quot;%2&quot; olmalı, &quot;%3&quot; değil.</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Missing node error: &quot;%1&quot; table must contain a &quot;%2&quot; node.</source>
+        <translation>Eksik düğüm hatası: &quot;%1&quot; tablosu bir &quot;%2&quot; düğümü içermelidir.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Node &quot;%1&quot; is empty.</source>
+        <translation>&quot;%1&quot; düğümü boş.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>File &quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; dosyası yok.</translation>
     </message>
 </context>
 <context>
     <name>QtC::QmlJS</name>
     <message>
-        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+363" />
+        <location filename="../../../src/libs/utils/qrcparser.cpp" line="+370" />
         <location line="+9" />
         <source>XML error on line %1, col %2: %3</source>
         <translation>%1 satırında XML hatası, sütun %2: %3</translation>
@@ -22442,7 +26147,7 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::TabbedEditor</name>
     <message>
-        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+130" />
+        <location filename="../../../src/plugins/tabbededitor/tabbar.cpp" line="+135" />
         <source>Move tab left</source>
         <translation>Sekmeyi sola taşı</translation>
     </message>
@@ -22460,20 +26165,402 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
 <context>
     <name>QtC::Terminal</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+562" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="+102" />
+        <source>Connecting...</source>
+        <translation>Bağlanılıyor...</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&quot;%1&quot; is not executable.</source>
+        <translation>&quot;%1&quot; çalıştırılabilir değil.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Failed to start shell: %1</source>
+        <translation>Kabuk başlatılamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Shell process exited with code %1.</source>
+        <translation>Kabuk işlemi %1 koduyla çıktı.</translation>
+    </message>
+    <message>
+        <location line="+28" />
+        <source>Process exited with code: %1.</source>
+        <translation>İşlem şu kodla çıktı: %1.</translation>
+    </message>
+    <message>
+        <location line="+308" />
+        <source>Zoom: %1%</source>
+        <translation>Yakınlaştırma: %1%</translation>
+    </message>
+    <message>
+        <location line="+286" />
+        <source>Copy</source>
+        <translation>Kopyala</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Paste</source>
+        <translation>Yapıştır</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Clear Shell</source>
+        <translation>Kabuğu Temizle</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Select All</source>
+        <translation>Tümünü Seç</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+566" />
         <source>Clear Selection</source>
         <translation>Açık seçim</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Move Cursor Word Left</source>
+        <translation>İmleci Bir Sözcük Sola Taşı</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Move Cursor Word Right</source>
+        <translation>İmleci Bir Sözcük Sağa Taşı</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Word Left</source>
+        <translation>Soldaki Sözcüğü Sil</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Delete Line Left</source>
+        <translation>Soldaki Satırı Sil</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalpane.cpp" line="+61" />
+        <source>Close Tab</source>
+        <translation>Sekmeyi Kapat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close All Tabs</source>
+        <translation>Tüm Sekmeleri Kapat</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Close Other Tabs</source>
+        <translation>Diğer Sekmeleri Kapat</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location line="+164" />
+        <location filename="../../../src/plugins/terminal/terminalplugin.cpp" line="+45" />
+        <source>Shell</source>
+        <translation>Kabuk</translation>
+    </message>
+    <message>
+        <location line="-124" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-169" />
+        <source>Configure...</source>
+        <translation>Yapılandır...</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Insert Macro Variable</source>
+        <translation>Makro Değişkeni Ekle</translation>
+    </message>
+    <message>
+        <location line="+228" />
+        <source>New Shell</source>
+        <translation>Yeni Kabuk</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Create a new shell.</source>
+        <translation>Yeni bir kabuk oluştur.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <location filename="../../../src/plugins/terminal/terminalwidget.cpp" line="-350" />
+        <source>Close Shell</source>
+        <translation>Kabuğu Kapat</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Close the current shell.</source>
+        <translation>Geçerli kabuğu kapat.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Next Shell</source>
+        <translation>Sonraki Kabuk</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Previous Shell</source>
+        <translation>Önceki Kabuk</translation>
+    </message>
+    <message>
+        <location line="+51" />
+        <source>Devices</source>
+        <translation>Aygıtlar</translation>
+    </message>
+    <message>
+        <location line="+313" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>%{%1} Geçerli Değeri: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/terminal/terminalsettings.cpp" line="+154" />
+        <source>WSL Bash</source>
+        <translation>WSL Bash</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Git Bash</source>
+        <translation>Git Bash</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>PowerShell 7</source>
+        <translation>PowerShell 7</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Windows PowerShell</source>
+        <translation>Windows PowerShell</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Command Prompt</source>
+        <translation>Komut İstemi</translation>
+    </message>
+    <message>
+        <location line="+83" />
+        <source>The color used for %1.</source>
+        <translation>%1 için kullanılan renk.</translation>
+    </message>
+    <message>
+        <location line="+43" />
+        <source>Failed to open file.</source>
+        <translation>Dosya açılamadı.</translation>
+    </message>
+    <message>
+        <location line="+74" />
+        <location line="+66" />
+        <source>JSON parsing error: &quot;%1&quot;, at offset: %2</source>
+        <translation>JSON ayrıştırma hatası: &quot;%1&quot;, konum: %2</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>No colors found.</source>
+        <translation>Renk bulunamadı.</translation>
+    </message>
+    <message>
+        <location line="+59" />
+        <source>Invalid color format.</source>
+        <translation>Geçersiz renk biçimi.</translation>
+    </message>
+    <message>
+        <location line="+112" />
+        <source>Unknown color scheme format.</source>
+        <translation>Bilinmeyen renk şeması biçimi.</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Use internal terminal</source>
+        <translation>Dahili terminali kullan</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Uses the internal terminal when &quot;Run In Terminal&quot; is enabled and for &quot;Open Terminal here&quot;.</source>
+        <translation>&quot;Terminalde Çalıştır&quot; etkinleştirildiğinde ve &quot;Terminali Burada Aç&quot; için dahili terminali kullanır.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Family:</source>
+        <translation>Aile:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>The font family used in the terminal.</source>
+        <translation>Terminalde kullanılan yazı tipi ailesi.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Size:</source>
+        <translation>Boyut:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The font size used in the terminal (in points).</source>
+        <translation>Terminalde kullanılan yazı tipi boyutu (punto).</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Zoom:</source>
+        <translation>Yakınlaştırma:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Scales the font size. Ctrl+wheel zooms a single shell for the session.</source>
+        <translation>Yazı tipi boyutunu ölçekler. Ctrl+tekerlek, oturum boyunca tek bir kabuğu yakınlaştırır.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Line spacing:</source>
+        <translation>Satır aralığı:</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>The height of each line, as a percentage of the font&apos;s.</source>
+        <translation>Her satırın yüksekliği, yazı tipinin yüzdesi olarak.</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Allow blinking cursor</source>
+        <translation>Yanıp sönen imlece izin ver</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Allow the cursor to blink.</source>
+        <translation>İmlecin yanıp sönmesine izin ver.</translation>
+    </message>
+    <message>
+        <location line="+10" />
+        <source>Shell path:</source>
+        <translation>Kabuk yolu:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The shell executable to be started.</source>
+        <translation>Başlatılacak kabuk yürütülebilir dosyası.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Shell arguments:</source>
+        <translation>Kabuk bağımsız değişkenleri:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>The arguments to be passed to the shell.</source>
+        <translation>Kabuğa iletilecek bağımsız değişkenler.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Send escape key to terminal</source>
+        <translation>Terminale Esc tuşunu gönder</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Sends the escape key to the terminal when pressed instead of closing the terminal.</source>
+        <translation>Basıldığında terminali kapatmak yerine terminale Esc tuşunu gönderir.</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Sends Esc to terminal instead of %1.</source>
+        <translation>%1 yerine terminale Esc gönderir.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Press %1 to send Esc to terminal.</source>
+        <translation>Terminale Esc göndermek için %1 tuşuna basın.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Block shortcuts in terminal</source>
+        <translation>Terminalde kısayolları engelle</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Keeps Qt Creator shortcuts from interfering with the terminal.</source>
+        <translation>Qt Creator kısayollarının terminalle çakışmasını engeller.</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>%1 shortcuts are blocked when focus is inside the terminal.</source>
+        <translation>Odak terminalin içindeyken %1 kısayolları engellenir.</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 shortcuts take precedence.</source>
+        <translation>%1 kısayolları öncelikli olur.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Audible bell</source>
+        <translation>Sesli uyarı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Makes the terminal beep when a bell character is received.</source>
+        <translation>Terminal bir zil karakteri aldığında bip sesi çıkarır.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enable mouse tracking</source>
+        <translation>Fare izlemeyi etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Enables mouse tracking in the terminal.</source>
+        <translation>Terminalde fare izlemeyi etkinleştirir.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Enable live reflow (experimental)</source>
+        <translation>Canlı yeniden akışı etkinleştir (deneysel)</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Wraps and reflows text when resizing the terminal. Note that this does not work properly with all shells and prompts.</source>
+        <translation>Terminal yeniden boyutlandırıldığında metni sarar ve yeniden akıtır. Bunun tüm kabuk ve istemlerle düzgün çalışmadığını unutmayın.</translation>
+    </message>
+    <message>
+        <location line="+109" />
+        <source>General</source>
+        <translation>Genel</translation>
+    </message>
+    <message>
+        <location line="+14" />
+        <source>Font</source>
+        <translation>Yazı Tipi</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Default Shell</source>
+        <translation>Varsayılan Kabuk</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <source>The shell the + button opens. Automatic picks the best one installed and follows changes to what is installed.</source>
+        <translation>+ düğmesinin açtığı kabuk. Otomatik, kurulu olanların en iyisini seçer ve kurulu olanlardaki değişiklikleri izler.</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Automatic (%1)</source>
+        <translation>Otomatik (%1)</translation>
     </message>
 </context>
 <context>
     <name>QtC::TextEditor</name>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+67" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+35" />
         <source>Full</source>
         <translation>Tam dolu</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
+        <source>None</source>
+        <comment>Case-sensitivity: None</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+1" />
         <source>First Letter</source>
         <translation>İlk harf</translation>
     </message>
@@ -22498,32 +26585,32 @@ Enable this if you plan to create 32-bit x86 binaries without using a dedicated 
         <translation>Tamamlamayı etkinleştir:</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+6" />
         <source>Timeout in ms:</source>
         <translation>ms cinsinden zaman aşımı:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Character threshold:</source>
         <translation>Karakter eşiği:</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+26" />
         <source>Autocomplete common &amp;prefix</source>
         <translation>Ortak &amp;ön eki otomatik tamamlama</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+2" />
         <source>Inserts the common prefix of available completion items.</source>
         <translation>Mevcut tamamlama öğelerinin ortak önekini ekler.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+8" />
         <source>Automatically split strings</source>
         <translation>Dizeleri otomatik olarak böl</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+3" />
         <source>Splits a string into two lines by adding an end quote at the cursor position when you press Enter and a start quote to the next line, before the rest of the string.
 
 In addition, Shift+Enter inserts an escape character at the cursor position and moves the rest of the string to the next line.</source>
@@ -22532,57 +26619,57 @@ In addition, Shift+Enter inserts an escape character at the cursor position and 
 Ayrıca Shift+Enter, imleç konumuna bir kaçış karakteri ekler ve dizenin geri kalanını bir sonraki satıra taşır.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-35" />
         <source>Insert opening or closing brackets</source>
         <translation>Açılış veya kapanış parantezlerini yerleştirin</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+11" />
         <source>Insert closing quote</source>
         <translation>Kapanış teklifini ekle</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-7" />
         <source>Surround text selection with brackets</source>
         <translation>Metin seçimini parantez içine alın</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching bracket and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Eşleşen bir parantez yazarken ve bir metin seçimi varken, seçimi kaldırmak yerine, onu karşılık gelen karakterlerle çevreler.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+22" />
         <source>Insert &amp;space after function name</source>
         <translation>İşlev adından sonra &amp;boşluk ekle</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-13" />
         <source>Surround text selection with quotes</source>
         <translation>Metin seçimini tırnak içine alın</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>When typing a matching quote and there is a text selection, instead of removing the selection, surrounds it with the corresponding characters.</source>
         <translation>Eşleşen bir alıntı yazarken ve bir metin seçimi varken, seçimi kaldırmak yerine, onu karşılık gelen karakterlerle çevreler.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+26" />
         <source>Animate automatically inserted text</source>
         <translation>Otomatik olarak eklenen metni canlandırın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Show a visual hint when for example a brace or a quote is automatically inserted by the editor.</source>
         <translation>Örneğin, düzenleyici tarafından otomatik olarak bir ayraç veya alıntı eklendiğinde görsel bir ipucu gösterin.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Highlight automatically inserted text</source>
         <translation>Otomatik olarak eklenen metni vurgulayın</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+4" />
         <source>Skip automatically inserted character when typing</source>
         <translation>Yazarken otomatik olarak eklenen karakteri atla</translation>
     </message>
@@ -22592,17 +26679,17 @@ Ayrıca Shift+Enter, imleç konumuna bir kaçış karakteri ekler ve dizenin ger
         <translation>Tamamlandıktan sonra manuel olarak veya sekmeye basarak yeniden yazılırsa, otomatik olarak eklenen karakteri atlayın.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Remove automatically inserted text on backspace</source>
         <translation>Backspace&apos;de otomatik olarak eklenen metni kaldır</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Remove the automatically inserted character if the trigger is deleted by backspace after the completion.</source>
         <translation>Tamamlandıktan sonra tetikleyici geri silme ile silinirse, otomatik olarak eklenen karakteri kaldırın.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Overwrite closing punctuation</source>
         <translation>Kapanış noktalama işaretinin üzerine yaz</translation>
     </message>
@@ -22612,12 +26699,12 @@ Ayrıca Shift+Enter, imleç konumuna bir kaçış karakteri ekler ve dizenin ger
         <translation>Kapatma parantezlerinin ve alıntıların üzerine otomatik olarak yaz.</translation>
     </message>
     <message>
-        <location line="+72" />
+        <location line="+17" />
         <source>&amp;Automatically Insert Matching Characters</source>
         <translation>Eşleşen k&amp;arakterleri otomatik olarak ekleyin</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+91" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+103" />
         <source>Enable Doxygen blocks</source>
         <translation>Doxygen bloklarını etkinleştir</translation>
     </message>
@@ -22665,25 +26752,25 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">&amp;Eşleşen karakterleri otomatik olarak ekle</translation>
     </message>
     <message>
-        <location line="+66" />
+        <location line="+68" />
         <source>Documentation Comments</source>
         <translation>Dokümantasyon Yorumları</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+96" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+48" />
         <source>Completion</source>
         <translation>tamamlama</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+126" />
         <location line="+79" />
-        <location line="+252" />
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+327" />
+        <location line="+261" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="+321" />
         <source>Error</source>
         <translation>Hata</translation>
     </message>
     <message>
-        <location line="-330" />
+        <location line="-339" />
         <source>Not a valid trigger. A valid trigger can only contain letters, numbers, or underscores, where the first character is limited to letter or underscore.</source>
         <translation>Geçerli bir tetikleyici değil. Geçerli bir tetikleyici yalnızca harfler, sayılar veya alt çizgiler içerebilir; burada ilk karakter harf veya alt çizgi ile sınırlıdır.</translation>
     </message>
@@ -22703,7 +26790,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Snippet geri alınırken hata oluştu.</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+100" />
         <source>Revert Built-in</source>
         <translation>Yerleşik Geri Döndür</translation>
     </message>
@@ -22713,17 +26800,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Grup:</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+5" />
         <source>Add</source>
         <translation>Eklemek</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+9" />
         <source>Restore Removed Built-ins</source>
         <translation>Kaldırılan Yerleşikleri Geri Yükle</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+4" />
         <source>Reset All</source>
         <translation>Hepsini sıfırla</translation>
     </message>
@@ -22738,7 +26825,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Parçacık seçilmedi.</translation>
     </message>
     <message>
-        <location line="+97" />
+        <location line="+98" />
         <source>Snippets</source>
         <translation>Parçacıklar</translation>
     </message>
@@ -22747,9 +26834,13 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation type="vanished">Satır: 9999, Sütun: 999</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+195" />
         <source>Cursors: %2</source>
-        <translation>İmleçler: %2</translation>
+        <translation type="vanished">İmleçler: %2</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+202" />
+        <source>Cursors: %1</source>
+        <translation>İmleçler: %1</translation>
     </message>
     <message>
         <location line="+8" />
@@ -22783,6 +26874,11 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
     </message>
     <message>
         <location line="+3" />
+        <source>Selected lines:</source>
+        <translation>Seçili satırlar:</translation>
+    </message>
+    <message>
+        <location line="+20" />
         <source>Position in document:</source>
         <translation>Belgedeki konum:</translation>
     </message>
@@ -22792,7 +26888,50 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Çapa:</translation>
     </message>
     <message>
-        <location line="+917" />
+        <location line="+49" />
+        <location line="+42" />
+        <source>Spaces</source>
+        <translation>Boşluklar</translation>
+    </message>
+    <message>
+        <location line="-39" />
+        <location line="+42" />
+        <source>Tabs</source>
+        <translation>Sekmeler</translation>
+    </message>
+    <message>
+        <location line="-37" />
+        <source>Indentation settings: %1 (%2)</source>
+        <extracomment>%1=policy, %2=size</extracomment>
+        <translation>Girinti ayarları: %1 (%2)</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Document Settings</source>
+        <translation>Belge Ayarları</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Tab Settings</source>
+        <translation>Sekme Ayarları</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Indent Size</source>
+        <translation>Girinti Boyutu</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <source>Tab Size</source>
+        <translation>Sekme Boyutu</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Global Settings...</source>
+        <translation>Genel Ayarlar...</translation>
+    </message>
+    <message>
+        <location line="+935" />
         <source>Unix Line Endings (LF)</source>
         <translation>Unix Line Sonları (LF)</translation>
     </message>
@@ -22802,17 +26941,17 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Windows Line Sonları (CRLF)</translation>
     </message>
     <message>
-        <location line="+71" />
+        <location line="+70" />
         <source>Other annotations</source>
         <translation>Diğer ek açıklamalar</translation>
     </message>
     <message>
-        <location line="+273" />
+        <location line="+326" />
         <source>Print Document</source>
         <translation>Belgeyi Yazdır</translation>
     </message>
     <message>
-        <location line="+367" />
+        <location line="+380" />
         <source>File Error</source>
         <translation>Dosya hatası</translation>
     </message>
@@ -22827,7 +26966,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>CRLF</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>The text is too large to be displayed (%1 MB).</source>
         <translation>Metin görüntülenemeyecek kadar büyük (%1 MB).</translation>
     </message>
@@ -22842,32 +26981,84 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Kodlama Seç</translation>
     </message>
     <message>
-        <location line="+1297" />
+        <location line="+1295" />
         <source>Snippet Parse Error</source>
         <translation>Parçacık Ayrıştırma Hatası</translation>
     </message>
     <message>
-        <location line="+522" />
+        <location line="+554" />
         <source>A highlight definition was not found for this file. Would you like to download additional highlight definition files?</source>
         <translation>Bu dosya için bir vurgu tanımı bulunamadı. Ek vurgu tanımı dosyaları indirmek ister misiniz?</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="+21" />
         <source>More than one highlight definition was found for this file. Which one should be used to highlight this file?</source>
         <translation>Bu dosya için birden fazla vurgu tanımı bulundu. Bu dosyayı vurgulamak için hangisi kullanılmalıdır?</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+8" />
         <source>Remember My Choice</source>
         <translation>Seçimimi hatırla</translation>
     </message>
     <message>
-        <location line="+3822" />
+        <location line="+762" />
+        <source>Apply</source>
+        <translation>Uygula</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply the current suggestion.</source>
+        <translation>Geçerli öneriyi uygula.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply one Word</source>
+        <translation>Bir Sözcüğü Uygula</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one word of the current suggestion.</source>
+        <translation>Geçerli önerinin bir sözcüğünü uygula.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Apply Line</source>
+        <translation>Satırı Uygula</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Apply one line of the current suggestion.</source>
+        <translation>Geçerli önerinin bir satırını uygula.</translation>
+    </message>
+    <message>
+        <location line="+2917" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-28" />
+        <source>Fold Recursively</source>
+        <translation>Özyinelemeli Katla</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Fold All</source>
+        <translation>Tümünü Katla</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
+        <source>Unfold Recursively</source>
+        <translation>Özyinelemeli Aç</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Unfold All</source>
+        <translation>Tümünü Aç</translation>
+    </message>
+    <message>
+        <location line="+474" />
         <source>Zoom: %1%</source>
         <translation>Yakınlaştırma: %1%</translation>
     </message>
     <message>
-        <location line="+1851" />
+        <location line="+1876" />
         <source>Delete UTF-8 BOM on Save</source>
         <translation>Kaydederken UTF-8 Malzeme Listesini Sil</translation>
     </message>
@@ -22877,27 +27068,27 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>Kaydederken UTF-8 Malzeme Listesi Ekle</translation>
     </message>
     <message>
-        <location line="+605" />
+        <location line="+641" />
         <source>Could not find definition.</source>
         <translation>Tanımı bulamadım.</translation>
     </message>
     <message>
-        <location line="-9882" />
+        <location line="-10575" />
         <source>Line: %1, Col: %2</source>
         <translation>Satır: %1, Sütun: %2</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+45" />
         <source>&amp;Clean whitespace</source>
         <translation>&amp;Boşlukları temizle</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+10" />
         <source>In entire &amp;document</source>
         <translation>Tüm &amp;belgede</translation>
     </message>
     <message>
-        <location line="-4" />
+        <location line="+15" />
         <source>Clean indentation</source>
         <translation>Temiz girinti</translation>
     </message>
@@ -22907,7 +27098,7 @@ if the comment starts with &quot;/*!&quot; or &quot;//!&quot;.</source>
         <translation>&amp;Dosyanın sonunda yeni satır olmasını sağla</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+22" />
+        <location filename="../../../src/plugins/texteditor/tabsettingswidget.cpp" line="+23" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Influences the indentation of continuation lines.
 
@@ -22960,22 +27151,48 @@ Devam çizgilerinin girintisini etkiler.
 &lt;/ul&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+52" />
+        <source>Default &amp;indent size:</source>
+        <translation>Varsayılan &amp;girinti boyutu:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Align continuation lines:</source>
+        <translation>Devam satırlarını hizala:</translation>
+    </message>
+    <message>
+        <location line="+23" />
         <source>Tabs And Indentation</source>
         <translation>Sekmeler ve Girinti</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-47" />
         <source>&lt;i&gt;Code indentation is configured in &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; and &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; settings.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Kod girintisi, &lt;a href=&quot;C++&quot;&gt;C++&lt;/a&gt; ve &lt;a href=&quot;QtQuick&quot;&gt;Qt Quick&lt;/a&gt; ayarlarında yapılandırılır.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+4" />
         <source>The text editor indentation setting is used for non-code files only. See the C++ and Qt Quick coding style settings to configure indentation for code files.</source>
         <translation>Metin düzenleyici girinti ayarı yalnızca kod olmayan dosyalar için kullanılır. Kod dosyaları için girintiyi yapılandırmak üzere C++ ve Qt Hızlı kodlama stili ayarlarına bakın.</translation>
     </message>
     <message>
-        <location line="+5" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+158" />
+        <source>Auto detect</source>
+        <translation>Otomatik algıla</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>%1 tries to detect the indentation settings based on the file contents. It will fallback to the settings below if the detection fails.</source>
+        <translation>%1, girinti ayarlarını dosya içeriğine göre algılamaya çalışır. Algılama başarısız olursa aşağıdaki ayarlara geri döner.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Default tab policy:</source>
+        <translation>Varsayılan sekme ilkesi:</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Spaces Only</source>
         <translation>Yalnızca Alanlar</translation>
     </message>
@@ -22985,9 +27202,8 @@ Devam çizgilerinin girintisini etkiler.
         <translation>Yalnızca Sekmeler</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Mixed</source>
-        <translation>Karışık</translation>
+        <translation type="vanished">Karışık</translation>
     </message>
     <message>
         <location line="+2" />
@@ -22995,12 +27211,11 @@ Devam çizgilerinin girintisini etkiler.
         <translation>Sekme &amp;boyutu:</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>&amp;Indent size:</source>
-        <translation>&amp;Girinti boyutu:</translation>
+        <translation type="vanished">&amp;Girinti boyutu:</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+8" />
         <source>Not At All</source>
         <translation>Hiç de bile</translation>
     </message>
@@ -23015,44 +27230,41 @@ Devam çizgilerinin girintisini etkiler.
         <translation>Normal Girintili</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Serial Terminal Tab size:</source>
         <translation>Seri Terminal Sekme boyutu:</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Tab policy:</source>
-        <translation>Sekme politikası:</translation>
+        <translation type="vanished">Sekme politikası:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-65" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+24" />
         <source>Enable automatic &amp;indentation</source>
         <translation>Otomatik &amp;girintiyi etkinleştir</translation>
     </message>
     <message>
-        <location line="-23" />
+        <location line="+4" />
         <source>Never</source>
         <translation>Asla</translation>
     </message>
     <message>
-        <location line="+1" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-236" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="-148" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>Always</source>
         <translation>Her zaman</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+1" />
         <source>In Leading White Space</source>
         <translation>Önde Gelen Beyaz Boşlukta</translation>
     </message>
     <message>
-        <location line="+3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-9" />
         <source>None</source>
-        <translation>Hiçbiri</translation>
+        <translation type="vanished">Hiçbiri</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+7" />
         <source>Follows Previous Indents</source>
         <translation>Önceki Girintileri Takip Eder</translation>
     </message>
@@ -23062,7 +27274,7 @@ Devam çizgilerinin girintisini etkiler.
         <translation>girintileri kaldır</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 Specifies how backspace interacts with indentation.
 
@@ -23093,28 +27305,39 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
 </translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+22" />
         <source>Prefer single line comments</source>
         <translation>Tek satır yorumları tercih edin</translation>
     </message>
     <message>
-        <location line="+5" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-61" />
+        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="-63" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="+2" />
         <source>Automatic</source>
         <translation>Otomatik</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-33" />
+        <source>Tab key performs auto-indent:</source>
+        <translation>Sekme tuşu otomatik girinti yapar:</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>None</source>
+        <comment>Backspace indentation: None</comment>
+        <translation>Yok</translation>
+    </message>
+    <message>
+        <location line="+30" />
         <source>At Line Start</source>
         <translation>Hatta Başlangıçta</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>After Whitespace</source>
         <translation>Whitespace&apos;den sonra</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+2" />
         <source>Specifies where single line comments should be positioned.</source>
         <translation>Tek satır yorumların nerede konumlandırılması gerektiğini belirtir.</translation>
     </message>
@@ -23134,12 +27357,12 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>%1: Yorum, önde gelen boşluklardan sonra yerleştirilir.</translation>
     </message>
     <message>
-        <location line="+22" />
+        <location line="+7" />
         <source>Preferred comment position:</source>
         <translation>Tercih Edilen Yorum Pozisyonu:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/storagesettings.cpp" line="+12" />
         <source>Skip clean whitespace for file types:</source>
         <translation>Dosya türleri için temiz boşlukları atlayın:</translation>
     </message>
@@ -23149,32 +27372,32 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Listelenen dosya kalıpları için, sondaki boşlukları kesmeyin.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+6" />
         <source>List of wildcard-aware file patterns, separated by commas or semicolons.</source>
         <translation>Virgül veya noktalı virgülle ayrılmış, joker karakter kullanan dosya kalıplarının listesi.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="-18" />
         <source>Always writes a newline character at the end of the file.</source>
         <translation>Dosyanın sonuna her zaman yeni satır karakteri yazar.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-19" />
         <source>Removes trailing whitespace upon saving.</source>
         <translation>Kaydettikten sonra sondaki boşlukları kaldırır.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+25" />
         <source>Corrects leading whitespace according to tab settings.</source>
         <translation>Sekme ayarlarına göre baştaki boşlukları düzeltir.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="-15" />
         <source>Cleans whitespace in entire document instead of only for changed parts.</source>
         <translation>Yalnızca değiştirilen kısımlar yerine tüm belgedeki boşlukları temizler.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+60" />
         <source>Add If Encoding Is UTF-8</source>
         <translation>Kodlama UTF-8 ise Ekle</translation>
     </message>
@@ -23189,7 +27412,7 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Her Zaman Sil</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+3" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;
 &lt;p&gt;How text editors should deal with UTF-8 Byte Order Marks. The options are:&lt;/p&gt;
 &lt;ul &gt;&lt;li&gt;&lt;i&gt;Add If Encoding Is UTF-8:&lt;/i&gt; always add a BOM when saving a file in UTF-8 encoding. Note that this will not work if the encoding is &lt;i&gt;System&lt;/i&gt;, as the text editor does not know what it actually is.&lt;/li&gt;
@@ -23206,22 +27429,22 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
 &lt;p&gt;Bu ayar, UTF-16 ve UTF-32 Malzeme Listelerinin kullanımını &lt;b&gt;etkilemez&lt;/b&gt;.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+11" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="+24" />
         <source>Hide mouse cursor while typing</source>
         <translation>Yazarken fare imlecini gizle</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+10" />
         <source>Enable scroll &amp;wheel zooming</source>
         <translation>&amp;Kaydırma ve tekerlek yakınlaştırmayı etkinleştir</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+21" />
         <source>Enable built-in camel case &amp;navigation</source>
         <translation>Yerleşik deve kasası &amp;navigasyonunu etkinleştir</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+11" />
         <source>Enable smart selection changing</source>
         <translation>Akıllı seçim değiştirmeyi etkinleştir</translation>
     </message>
@@ -23231,7 +27454,7 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Blok Seç Yukarı / Aşağı eylemlerinin kullanılması artık daha akıllı seçimler sağlayacaktır.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-7" />
         <source>Show help tooltips using keyboard shortcut (Alt)</source>
         <translation>Klavye kısayolunu (Alt) kullanarak yardım araç ipuçlarını göster</translation>
     </message>
@@ -23241,22 +27464,22 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Alt&apos;a basmak, içeriğe duyarlı yardım veya tip bilgilerini araç ipuçları olarak görüntüler.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-20" />
         <source>On Mouseover</source>
         <translation>Fareyle Üzerine Geldiğinde</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+5" />
         <source>On Shift+Mouseover</source>
         <translation>Shift+Mouseover&apos;da</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="+33" />
         <source>Typing</source>
         <translation>Yazıyor</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+15" />
         <source>Cleanups Upon Saving</source>
         <translation>Kaydettikten Sonra Yapılan Temizlemeler</translation>
     </message>
@@ -23266,108 +27489,111 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Dosya diske kaydedilmeden hemen önce otomatik olarak gerçekleştirilen temizleme eylemleri.</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>File Encodings</source>
-        <translation>Dosya Kodlamaları</translation>
+        <translation type="vanished">Dosya Kodlamaları</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Mouse and Keyboard</source>
-        <translation>fare ve klavye</translation>
+        <translation type="vanished">fare ve klavye</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location filename="../../../src/plugins/texteditor/typingsettings.cpp" line="-46" />
         <source>Backspace indentation:</source>
         <translation>Geri boşluk girintisi:</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-10" />
         <source>Default encoding:</source>
         <translation>Varsayılan kodlama:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+9" />
         <source>UTF-8 BOM:</source>
         <translation>UTF-8 Malzeme Listesi:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+16" />
         <source>Default line endings:</source>
         <translation>Varsayılan satır sonları:</translation>
     </message>
     <message>
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-7" />
         <location line="+11" />
         <source>Show help tooltips using the mouse:</source>
         <translation>Fareyi kullanarak yardım ipuçlarını göster:</translation>
     </message>
     <message>
-        <location line="+152" />
+        <location line="-8" />
         <source>Displays context-sensitive help or type information on mouseover.</source>
         <translation>Bağlama duyarlı yardımı veya fareyle üzerine gelindiğinde bilgileri yazın.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+5" />
         <source>Displays context-sensitive help or type information on Shift+Mouseover.</source>
         <translation>Bağlama duyarlı yardım veya tip bilgilerini Shift+Mouseover ile görüntüler.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+139" />
-        <location line="+201" />
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="+232" />
+        <location line="+129" />
         <source>Display</source>
         <translation>Görüntülemek</translation>
     </message>
     <message>
-        <location line="-256" />
+        <location line="-318" />
         <source>Display line &amp;numbers</source>
         <translation>Satır &amp;numaralarını göster</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+49" />
         <source>Mark &amp;text changes</source>
         <translation>&amp;Metin değişikliklerini işaretle</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+12" />
         <source>Auto-fold first &amp;comment</source>
         <translation>İlk &amp;yorumu otomatik katla</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-36" />
         <source>Display &amp;folding markers</source>
         <translation>Ekran &amp;katlama işaretleri</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="-17" />
         <source>&amp;Visualize whitespace</source>
         <translation>&amp;Boşluğu görselleştir</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="+21" />
         <source>Highlight current &amp;line</source>
         <translation>Geçerli &amp;çizgiyi vurgula</translation>
     </message>
     <message>
-        <location line="-39" />
+        <location line="-25" />
         <source>Enable text &amp;wrapping</source>
         <translation>Metin &amp;sarmalamayı etkinleştir</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+157" />
         <source>&lt;i&gt;Set &lt;a href=&quot;font zoom&quot;&gt;font line spacing&lt;/a&gt; to 100% to enable text wrapping option.&lt;/i&gt;</source>
         <translation>&lt;i&gt;Metin kaydırma seçeneğini etkinleştirmek için &lt;a href=&quot;font zoom&quot;&gt;yazı tipi satır aralığını&lt;/a&gt; yüzde 100 yapın.&lt;/i&gt;</translation>
     </message>
     <message>
-        <location line="+20" />
         <source>Display right &amp;margin at column:</source>
-        <translation>&amp;Sütunda sağ kenar boşluğunu görüntüle:</translation>
+        <translation type="vanished">&amp;Sütunda sağ kenar boşluğunu görüntüle:</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location filename="../../../src/plugins/texteditor/marginsettings.cpp" line="+32" />
+        <source>Display right &amp;margin after column:</source>
+        <translation>Sağ &amp;kenar boşluğunu şu sütundan sonra göster:</translation>
+    </message>
+    <message>
+        <location line="+4" />
         <source>Tint whole margin area</source>
         <translation>Tüm kenar boşluğu alanını renklendir</translation>
     </message>
     <message>
-        <location line="+8" />
+        <location line="+9" />
         <source>Use context-specific margin</source>
         <translation>Bağlama özgü kenar boşluğu kullan</translation>
     </message>
@@ -23377,62 +27603,77 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Varsa, farklı bir kenar boşluğu kullanın. Örneğin, ClangFormat eklentisinden ColumnLimit.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+20" />
+        <source>Editor content width:</source>
+        <translation>Düzenleyici içerik genişliği:</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>100% means that whole width of editor window is used to display text content (default).&lt;br&gt;50% means that half of editor width is used to display text content.&lt;br&gt;Remaining 50% is divided as left and right margins while centering the content.</source>
+        <translation>100% değeri, düzenleyici penceresinin tüm genişliğinin metin içeriğini göstermek için kullanıldığı anlamına gelir (varsayılan).&lt;br&gt;50% değeri, düzenleyici genişliğinin yarısının metin içeriğini göstermek için kullanıldığı anlamına gelir.&lt;br&gt;Kalan 50%, içerik ortalanırken sol ve sağ kenar boşlukları olarak bölünür.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/displaysettings.cpp" line="-120" />
         <source>&amp;Animate matching parentheses</source>
         <translation>&amp;Eşleşen parantezleri canlandır</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+66" />
         <source>Highlight search results on the scrollbar</source>
         <translation>Kaydırma çubuğunda arama sonuçlarını vurgulayın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
         <source>Animate navigation within file</source>
         <translation>Dosya içinde gezinmeyi canlandırın</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="-78" />
         <source>Highlight &amp;blocks</source>
         <translation>&amp;blokları vurgula</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+32" />
         <source>Center &amp;cursor on scroll</source>
         <translation>Kaydırmada &amp;imleci ortala</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-56" />
         <source>Visualize indent</source>
         <translation>Girintiyi görselleştir</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+86" />
         <source>Display file line ending</source>
         <translation>Dosya satırı sonunu göster</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-12" />
         <source>Display file encoding</source>
         <translation>Dosya kodlamasını göster</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-10" />
         <source>Always open links in another split</source>
         <translation>Bağlantıları her zaman başka bir bölmede aç</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-32" />
         <source>&amp;Highlight matching parentheses</source>
         <translation>&amp;Eşleşen parantezleri vurgula</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-36" />
         <source>Shows tabs and spaces.</source>
         <translation>Sekmeleri ve boşlukları gösterir.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+94" />
+        <source>Display tab settings</source>
+        <translation>Sekme ayarlarını göster</translation>
+    </message>
+    <message>
+        <location line="+22" />
         <source>&amp;Highlight selection</source>
         <translation>&amp;Vurgu Seçimi</translation>
     </message>
@@ -23442,7 +27683,7 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Seçilen metnin oluşumlarına kaydırma çubuğuna renkli bir arka plan ve bir işaret ekler.</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+10" />
         <source>Next to editor content</source>
         <translation>Düzenleyici içeriğinin yanında</translation>
     </message>
@@ -23457,12 +27698,17 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation>Sağ tarafta hizalanmış</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Between lines</source>
         <translation>satırlar arasında</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+8" />
+        <source>Enable minimap</source>
+        <translation>Mini haritayı etkinleştir</translation>
+    </message>
+    <message>
+        <location line="+89" />
         <source>Line Annotations</source>
         <translation>Satır ek açıklamaları</translation>
     </message>
@@ -23471,27 +27717,27 @@ Backspace&apos;in girinti ile nasıl etkileşime girdiğini belirtir.
         <translation type="vanished">Satır ek açıklamaları</translation>
     </message>
     <message>
-        <location line="+14" />
+        <location line="-69" />
         <source>Margin</source>
         <translation>kenar boşluğu</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+15" />
         <source>Wrapping</source>
         <translation>Sarma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/behaviorsettingswidget.cpp" line="-220" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettings.cpp" line="-18" />
         <source>Enable &amp;mouse navigation</source>
         <translation>&amp;Fareyle gezinmeyi etkinleştir</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+547" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+571" />
         <source>Copy Color Scheme</source>
         <translation>Renk Şemasını Kopyala</translation>
     </message>
     <message>
-        <location line="-434" />
+        <location line="-458" />
         <location line="+6" />
         <source>%</source>
         <translation>%</translation>
@@ -23519,7 +27765,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>&quot;%1&quot; Teması için Renk Şeması</translation>
     </message>
     <message>
-        <location line="+16" />
+        <location line="+27" />
         <source>Zoom:</source>
         <translation>Yakınlaştırma:</translation>
     </message>
@@ -23529,7 +27775,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Satır aralığı:</translation>
     </message>
     <message>
-        <location line="+370" />
+        <location line="+383" />
         <location line="+92" />
         <source>Color scheme name:</source>
         <translation>Renk şeması adı:</translation>
@@ -23540,7 +27786,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>%1 (kopya)</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+46" />
         <source>Delete Color Scheme</source>
         <translation>Renk Şemasını Sil</translation>
     </message>
@@ -23550,14 +27796,14 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Bu renk düzenini kalıcı olarak silmek istediğinizden emin misiniz?</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+30" />
         <location line="+13" />
         <source>Import Color Scheme</source>
         <translation>Renk Şemasını İçe Aktar</translation>
     </message>
     <message>
         <location line="-11" />
-        <location line="+49" />
+        <location line="+48" />
         <source>Color scheme (*.xml);;All files (*)</source>
         <translation>Renk şeması (*.xml);;Tüm dosyalar (*)</translation>
     </message>
@@ -23567,8 +27813,8 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Renk Şemasını Dışa Aktar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+41" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-233" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="+38" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="-238" />
         <source>Remove</source>
         <translation>Kaldırmak</translation>
     </message>
@@ -23587,12 +27833,17 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation type="vanished">Şuanki ayarlar:</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+4" />
+        <source>The selected configuration is read-only. Copy the configuration for editing.</source>
+        <translation>Seçili yapılandırma salt okunur. Düzenlemek için yapılandırmayı kopyalayın.</translation>
+    </message>
+    <message>
+        <location line="+8" />
         <source>Custom settings:</source>
         <translation>Özel Ayarlar:</translation>
     </message>
     <message>
-        <location line="+105" />
+        <location line="+107" />
         <source>Copy Code Style</source>
         <translation>Kod Stilini Kopyala</translation>
     </message>
@@ -23618,8 +27869,8 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
     </message>
     <message>
         <location line="+6" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-534" />
-        <location line="+460" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-557" />
+        <location line="+485" />
         <source>Delete</source>
         <translation>Silmek</translation>
     </message>
@@ -23631,22 +27882,22 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
     </message>
     <message>
         <location line="-8" />
-        <location line="+21" />
+        <location line="+20" />
         <source>Code styles (*.xml);;All files (*)</source>
         <translation>Kod stilleri (*.xml);;Tüm dosyalar (*)</translation>
     </message>
     <message>
-        <location line="-12" />
+        <location line="-11" />
         <source>Cannot import code style from &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; den kod stili içe aktarılamıyor.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Export Code Style</source>
         <translation>Kod Stilini Dışa Aktar</translation>
     </message>
     <message>
-        <location line="+68" />
+        <location line="+73" />
         <source>%1 [proxy: %2]</source>
         <translation>%1 [proxy: %2]</translation>
     </message>
@@ -23661,7 +27912,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>%1 [özelleştirilebilir]</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+89" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+87" />
         <source>Color Scheme Changed</source>
         <translation>Renk Düzeni Değiştirildi</translation>
     </message>
@@ -23676,7 +27927,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>At</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+69" />
+        <location filename="../../../src/plugins/texteditor/findincurrentfile.cpp" line="+75" />
         <source>Current File</source>
         <translation>Geçerli Dosya</translation>
     </message>
@@ -23694,19 +27945,19 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
     </message>
     <message>
         <location line="+7" />
-        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+106" />
+        <location filename="../../../src/plugins/texteditor/findinopenfiles.cpp" line="+107" />
         <source>Please note that this only searches files that have been saved to disk.</source>
         <translation>Lütfen bunun yalnızca diske kaydedilmiş dosyaları aradığını unutmayın.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/colorschemeedit.cpp" line="+191" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-526" />
-        <location line="+628" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-549" />
+        <location line="+651" />
         <source>Font</source>
         <translation>Yazı tipi</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-625" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-637" />
         <source>Family:</source>
         <translation>Aile:</translation>
     </message>
@@ -23789,7 +28040,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Renk:</translation>
     </message>
     <message>
-        <location line="+492" />
+        <location line="+495" />
         <source>No Underline</source>
         <translation>Alt Çizgi Yok</translation>
     </message>
@@ -23824,18 +28075,18 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Tire-Nokta-Nokta Altı Çizili</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-67" />
+        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="-78" />
         <source>Antialias</source>
         <translation>Kenar yumuşatma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-254" />
+        <location filename="../../../src/plugins/texteditor/codestyleselectorwidget.cpp" line="-265" />
         <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+30" />
         <source>Copy...</source>
         <translation>Kopyala...</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+21" />
+        <location filename="../../../src/plugins/texteditor/linenumberfilter.cpp" line="+22" />
         <source>Line in Current Document</source>
         <translation>Geçerli Belgedeki Satır</translation>
     </message>
@@ -23847,10 +28098,10 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
     <message>
         <location line="+1" />
         <source>&lt;line&gt;:&lt;column&gt;</source>
-        <translation type="unfinished"></translation>
+        <translation>&lt;line&gt;:&lt;column&gt;</translation>
     </message>
     <message>
-        <location line="+28" />
+        <location line="+25" />
         <source>Line %1, Column %2</source>
         <translation>Satır %1, Sütun %2</translation>
     </message>
@@ -23865,7 +28116,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>%1 sütunu</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-239" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-208" />
         <source>Trigger Completion</source>
         <translation>Tetikleyici Tamamlama</translation>
     </message>
@@ -23905,13 +28156,13 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>İçerik Menüsünü Göster</translation>
     </message>
     <message>
-        <location line="-215" />
+        <location line="-216" />
         <source>Text</source>
         <comment>SnippetProvider</comment>
         <translation>Metin</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+39" />
         <source>Selected text within the current document.</source>
         <translation>Geçerli belge içinde seçilen metin.</translation>
     </message>
@@ -24014,7 +28265,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>&amp;Paragrafı Yeniden Sar</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3765" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+4031" />
         <source>Go to line number...</source>
         <translation>Satır numarasına git...</translation>
     </message>
@@ -24294,7 +28545,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Sıralama çizgileri</translation>
     </message>
     <message>
-        <location line="+59" />
+        <location line="+53" />
         <source>Go to Previous Word (Camel Case)</source>
         <translation>Önceki Word&apos;e Git (Deve Kılıfı)</translation>
     </message>
@@ -24318,7 +28569,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation type="vanished">&amp;Seçili Satırları Sırala</translation>
     </message>
     <message>
-        <location line="-80" />
+        <location line="-74" />
         <source>Meta+Shift+S</source>
         <translation>Meta+Shift+S</translation>
     </message>
@@ -24328,33 +28579,33 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Alt+Shift+S</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="+3389" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+3" />
         <source>Fold</source>
         <translation>Katlamak</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+4" />
         <source>Unfold</source>
         <translation>açmak</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="+10" />
         <source>Toggle &amp;Fold All</source>
         <translation>Tümünü &amp;Katla</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Reset Font Size</source>
-        <translation>Yazı Tipi Boyutunu Sıfırla</translation>
+        <translation type="vanished">Yazı Tipi Boyutunu Sıfırla</translation>
     </message>
     <message>
         <source>Meta+0</source>
         <translation type="vanished">Meta+0</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+0</source>
-        <translation>Ctrl+0</translation>
+        <translation type="vanished">Ctrl+0</translation>
     </message>
     <message>
         <location line="+20" />
@@ -24468,7 +28719,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation type="vanished">Seçimli Sonraki Kelime Camel Vakasına Git</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="-66" />
         <source>Ctrl+&lt;</source>
         <translation>Ctrl+&lt;</translation>
     </message>
@@ -24478,27 +28729,23 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Ctrl+&gt;</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Increase Font Size</source>
-        <translation>Yazı Tipi Boyutunu Artır</translation>
+        <translation type="vanished">Yazı Tipi Boyutunu Artır</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl++</source>
-        <translation>Ctrl++</translation>
+        <translation type="vanished">Ctrl++</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Decrease Font Size</source>
-        <translation>Yazı Tipi Boyutunu Azalt</translation>
+        <translation type="vanished">Yazı Tipi Boyutunu Azalt</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Ctrl+-</source>
-        <translation>Ctrl+-</translation>
+        <translation type="vanished">Ctrl+-</translation>
     </message>
     <message>
-        <location line="-178" />
+        <location line="-167" />
         <source>Ctrl+{</source>
         <translation>Ctrl+{</translation>
     </message>
@@ -24548,7 +28795,7 @@ Yüzde 100&apos;den küçük bir değer, grafiklerin üst üste binmesine ve hiz
         <translation>Ctrl+Alt+Aşağı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-255" />
+        <location filename="../../../src/plugins/texteditor/texteditorsettings.cpp" line="-257" />
         <source>Text</source>
         <translation>Metin</translation>
     </message>
@@ -25061,6 +29308,16 @@ Kullanıcı tanımlı işleçlerin stilini belirlemek için Aşırı Yüklenmiş
     </message>
     <message>
         <location line="+2" />
+        <source>Attribute</source>
+        <translation>Öznitelik</translation>
+    </message>
+    <message>
+        <location line="+0" />
+        <source>Attributes.</source>
+        <translation>Öznitelikler.</translation>
+    </message>
+    <message>
+        <location line="+2" />
         <source>Comment</source>
         <translation>Yorum</translation>
     </message>
@@ -25307,6 +29564,26 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         <translation>Uyarı tanılama bağlamlarının altı çizili rengi.</translation>
     </message>
     <message>
+        <location line="+5" />
+        <source>Info</source>
+        <translation>Bilgi</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of info diagnostics.</source>
+        <translation>Bilgi tanılarının alt çizgi rengi.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Info Context</source>
+        <translation>Bilgi Bağlamı</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Underline color of the contexts of info diagnostics.</source>
+        <translation>Bilgi tanılarının bağlamlarının alt çizgi rengi.</translation>
+    </message>
+    <message>
         <location line="+7" />
         <source>Output Argument</source>
         <translation>Çıktı Argümanı</translation>
@@ -25425,29 +29702,23 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         <translation>küresel</translation>
     </message>
     <message>
-        <location line="+68" />
-        <location filename="../../../src/plugins/texteditor/commentssettings.cpp" line="+63" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="+247" />
-        <location filename="../../../src/plugins/texteditor/displaysettingspage.cpp" line="+210" />
-        <location filename="../../../src/plugins/texteditor/fontsettingspage.cpp" line="+664" />
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="+161" />
-        <location filename="../../../src/plugins/texteditor/snippets/snippetssettingspage.cpp" line="+235" />
+        <location filename="../../../src/plugins/texteditor/texteditorplugin.cpp" line="-279" />
         <source>Text Editor</source>
         <translation>Metin düzeltici</translation>
     </message>
     <message>
-        <location line="-3" />
-        <location filename="../../../src/plugins/texteditor/completionsettingspage.cpp" line="-109" />
+        <location filename="../../../src/plugins/texteditor/behaviorsettingspage.cpp" line="+72" />
+        <location filename="../../../src/plugins/texteditor/completionsettings.cpp" line="+89" />
         <source>Behavior</source>
         <translation>Davranış</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+302" />
+        <location filename="../../../src/plugins/texteditor/colorscheme.cpp" line="+254" />
         <source>Not a color scheme file.</source>
         <translation>Renk düzeni dosyası değil.</translation>
     </message>
     <message>
-        <location filename="../../../../build/share/qtcreator/translations/snippets_tr.h" line="+24" />
+        <location filename="../../../build/Desktop_Qt_6_12_0_MinGW_64_bit_Release/share/qtcreator/translations/snippets_tr.h" line="+5" />
         <source>derived from QObject</source>
         <comment>group:&apos;C++&apos; trigger:&apos;class&apos;</comment>
         <translation>QObject&apos;ten türetilen</translation>
@@ -25518,7 +29789,7 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         <translation type="vanished">(tür isim OKU isim YAZ setAdı NOTIFY isimDeğiştirildi)</translation>
     </message>
     <message>
-        <location line="-18" />
+        <location line="+3" />
         <source>with targets</source>
         <comment>group:&apos;QML&apos; trigger:&apos;NumberAnimation&apos;</comment>
         <translation>hedefleri olan</translation>
@@ -25542,7 +29813,7 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         <translation>hedef ile</translation>
     </message>
     <message>
-        <location line="-16" />
+        <location line="+3" />
         <source>QuickTest Test Case</source>
         <comment>group:&apos;QML&apos; trigger:&apos;TestCase&apos;</comment>
         <translation>QuickTest Test Kılıfı</translation>
@@ -25596,12 +29867,12 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         <translation>örnek</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+139" />
+        <location filename="../../../src/plugins/texteditor/basefilefind.cpp" line="+140" />
         <source>Internal</source>
         <translation>Dahili</translation>
     </message>
     <message>
-        <location line="+219" />
+        <location line="+224" />
         <source>Searching</source>
         <translation>Aranıyor</translation>
     </message>
@@ -25620,27 +29891,33 @@ Yorumlarda ve dizelerde boşluklara uygulanmaz.</translation>
         </translation>
     </message>
     <message>
-        <location line="+178" />
+        <location line="+174" />
         <source>Aborting replace.</source>
         <translation>Değiştirme iptal ediliyor.</translation>
     </message>
     <message>
         <location filename="../../../src/plugins/texteditor/codeassist/functionhintproposalwidget.cpp" line="+371" />
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="+185" />
         <source>%1 of %2</source>
         <translation>%2&apos;nin %1&apos;i</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+52" />
+        <location filename="../../../src/plugins/texteditor/codestyleeditor.cpp" line="+39" />
+        <source>All changes below take effect immediately.</source>
+        <translation>Aşağıdaki tüm değişiklikler hemen geçerli olur.</translation>
+    </message>
+    <message>
+        <location line="+15" />
         <source>Edit preview contents to see how the current settings are applied to custom code snippets. Changes in the preview do not affect the current settings.</source>
         <translation>Geçerli ayarların özel kod parçacıklarına nasıl uygulandığını görmek için önizleme içeriğini düzenleyin. Ön izlemedeki değişiklikler geçerli ayarları etkilemez.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="+42" />
+        <location filename="../../../src/plugins/texteditor/extraencodingsettings.cpp" line="-3" />
         <source>Unix (LF)</source>
         <translation>Unix (LF)</translation>
     </message>
     <message>
-        <location line="+0" />
+        <location line="+1" />
         <source>Windows (CRLF)</source>
         <translation>Pencereler (CRLF)</translation>
     </message>
@@ -25699,7 +29976,7 @@ Hariç: %3
 %1</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+166" />
+        <location filename="../../../src/plugins/texteditor/fontsettings.cpp" line="+167" />
         <source>Unused variable</source>
         <translation>kullanılmayan değişken</translation>
     </message>
@@ -25714,12 +29991,12 @@ Hariç: %3
         <translation type="vanished">Metin düzeltici</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+22" />
         <source>Cannot read file &quot;%1&quot;: %2.</source>
         <translation>&quot;%1&quot; dosyası okunamıyor: %2.</translation>
     </message>
     <message>
-        <location line="+15" />
+        <location line="+16" />
         <source>Cannot call %1 or some other error occurred. Timeout reached while formatting file %2.</source>
         <translation>%1 aranamıyor veya başka bir hata oluştu. %2 dosyası biçimlendirilirken zaman aşımına uğradı.</translation>
     </message>
@@ -25729,12 +30006,12 @@ Hariç: %3
         <translation type="vanished">Metin düzeltici</translation>
     </message>
     <message>
-        <location line="-25" />
+        <location line="-26" />
         <source>Failed to format: %1.</source>
         <translation>Biçimlendirilemedi: %1.</translation>
     </message>
     <message>
-        <location line="+175" />
+        <location line="+174" />
         <source>Error in text formatting: %1</source>
         <translation>Metin biçimlendirmesinde hata: %1</translation>
     </message>
@@ -25754,28 +30031,27 @@ Hariç: %3
         <translation>Dosya değiştirildi.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+196" />
+        <location filename="../../../src/plugins/texteditor/highlighterhelper.cpp" line="+219" />
         <source>Highlighter updates: done</source>
         <translation>Fosforlu kalem güncellemeleri: tamamlandı</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+10" />
         <source>Highlighter updates:</source>
         <translation>Vurgulayıcı güncellemeleri:</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="+7" />
         <source>Highlighter updates: starting</source>
         <translation>Fosforlu kalem güncellemeleri: başlangıç</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/highlightersettingspage.cpp" line="-86" />
         <source>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Highlight definitions are provided by the &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; engine.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</source>
-        <translation>&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vurgulama tanımları &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; motoru tarafından sağlanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
+        <translation type="vanished">&lt;html&gt;&lt;head/&gt;&lt;body&gt;&lt;p&gt;Vurgulama tanımları &lt;a href=&quot;https://api.kde.org/frameworks/syntax-highlighting/html/index.html&quot;&gt;KSyntaxHighlighting&lt;/a&gt; motoru tarafından sağlanır.&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</translation>
     </message>
     <message>
-        <location line="+4" />
-        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-180" />
+        <location filename="../../../src/plugins/texteditor/highlightersettings.cpp" line="+86" />
+        <location filename="../../../src/plugins/texteditor/texteditor.cpp" line="-3735" />
         <source>Download Definitions</source>
         <translation>Tanımları İndir</translation>
     </message>
@@ -25785,7 +30061,7 @@ Hariç: %3
         <translation>Eksik indirin ve mevcut sözdizimi tanım dosyalarını güncelleyin.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+12" />
         <source>Reload Definitions</source>
         <translation>Tanımları Yeniden Yükle</translation>
     </message>
@@ -25795,7 +30071,7 @@ Hariç: %3
         <translation>Harici olarak değiştirilen tanım dosyalarını yeniden yükleyin.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+7" />
         <source>Reset Remembered Definitions</source>
         <translation>Hatırlanan Tanımları Sıfırla</translation>
     </message>
@@ -25805,27 +30081,40 @@ Hariç: %3
         <translation>Birden fazla vurgulayıcı tanımıyla ilişkilendirilebilen dosyalar için hatırlanan tanımları sıfırlayın.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="-26" />
         <source>Syntax Highlight Definition Files</source>
         <translation>Sözdizimi Vurgu Tanım Dosyaları</translation>
     </message>
     <message>
-        <location line="+3" />
+        <location line="-38" />
+        <source>Skip update check for files matching:</source>
+        <translation>Şuna uyan dosyalar için güncelleme denetimini atla:</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Skip syntax highlighting for files matching:</source>
+        <translation>Şuna uyan dosyalar için sözdizimi vurgulamayı atla:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Highlight definitions are provided by the %1 engine.</source>
+        <translation>Vurgulama tanımları %1 motoru tarafından sağlanır.</translation>
+    </message>
+    <message>
+        <location line="+28" />
         <source>User Highlight Definition Files</source>
         <translation>Kullanıcı Vurgu Tanım Dosyaları</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>Ignored file patterns:</source>
-        <translation>Yok sayılan dosya kalıpları:</translation>
+        <translation type="vanished">Yok sayılan dosya kalıpları:</translation>
     </message>
     <message>
-        <location line="+8" />
         <source>Download finished</source>
-        <translation>İndirme tamamlandı</translation>
+        <translation type="vanished">İndirme tamamlandı</translation>
     </message>
     <message>
-        <location line="+39" />
+        <location line="+62" />
         <source>Generic Highlighter</source>
         <translation>Genel Fosforlu Kalem</translation>
     </message>
@@ -25845,23 +30134,22 @@ Hariç: %3
         <translation>Filtre ağacı</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/languageclient/languageclientoutline.cpp" line="+154" />
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+11" />
+        <location line="+11" />
         <source>Sort Alphabetically</source>
         <translation>Alfabetik Sırala</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/outlinefactory.cpp" line="+126" />
+        <location line="+125" />
         <source>Outline</source>
         <translation>Anahat</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+223" />
+        <location filename="../../../src/plugins/texteditor/refactoringchanges.cpp" line="+219" />
         <source>Refactoring cannot be applied.</source>
         <translation>Yeniden düzenleme uygulanamaz.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+226" />
+        <location filename="../../../src/plugins/texteditor/snippets/snippet.cpp" line="+225" />
         <source>Expected delimiter after mangler ID.</source>
         <translation>Yönetici kimliğinden sonra sınırlayıcı bekleniyor.</translation>
     </message>
@@ -25881,17 +30169,16 @@ Hariç: %3
         <translation>Kullanıcı parçacığı dizini %1 oluşturulamıyor</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+401" />
         <source>Diff Against Current File</source>
-        <translation>Geçerli Dosyaya Karşı Fark</translation>
+        <translation type="vanished">Geçerli Dosyaya Karşı Fark</translation>
     </message>
     <message>
-        <location line="+425" />
+        <location filename="../../../src/plugins/texteditor/textdocument.cpp" line="+801" />
         <source>Opening File</source>
         <translation>Dosya Açma</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+300" />
+        <location filename="../../../src/plugins/texteditor/textmark.cpp" line="+306" />
         <source>Show inline annotations for %1</source>
         <translation>%1 için satır içi açıklamaları göster</translation>
     </message>
@@ -25912,9 +30199,9 @@ Hariç: %3
         <translation>Yer işareti</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+25" />
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+225" />
-        <location line="+827" />
+        <location filename="../../../src/plugins/texteditor/bookmarkfilter.cpp" line="+26" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="+223" />
+        <location line="+867" />
         <source>Bookmarks</source>
         <translation>Yer imleri</translation>
     </message>
@@ -25924,17 +30211,17 @@ Hariç: %3
         <translation>Yer işaretlerini bulur. Dosya adına göre, yer işareti satırındaki metinle veya yer işareti not metnine göre filtreleyin.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-788" />
+        <location filename="../../../src/plugins/texteditor/bookmarkmanager.cpp" line="-620" />
         <source>Move Up</source>
         <translation>Yükselmek</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-6" />
         <source>Move Down</source>
         <translation>Aşağı hareket etmek</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="-189" />
         <source>&amp;Edit</source>
         <translation>&amp;Düzenlemek</translation>
     </message>
@@ -25949,7 +30236,7 @@ Hariç: %3
         <translation>Hepsini kaldır</translation>
     </message>
     <message>
-        <location line="+47" />
+        <location line="+45" />
         <source>Remove All Bookmarks</source>
         <translation>Tüm yer işaretlerini kaldırın</translation>
     </message>
@@ -25960,14 +30247,14 @@ Hariç: %3
     </message>
     <message>
         <location line="+29" />
-        <location line="+44" />
-        <location line="+516" />
+        <location line="+45" />
+        <location line="+536" />
         <source>Edit Bookmark</source>
         <translation>Düzenle Yer İşareti</translation>
     </message>
     <message>
-        <location line="-559" />
-        <location line="+27" />
+        <location line="-580" />
+        <location line="+28" />
         <source>Toggle Bookmark</source>
         <translation>Bookmark&apos;ı değiştirin</translation>
     </message>
@@ -25997,7 +30284,27 @@ Hariç: %3
         <translation>Belgede Sonraki Yer İşareti</translation>
     </message>
     <message>
-        <location line="+473" />
+        <location line="+11" />
+        <source>Ctrl+Alt+.</source>
+        <translation>Ctrl+Alt+.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Ctrl+Alt+,</source>
+        <translation>Ctrl+Alt+,</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Sort by Filenames</source>
+        <translation>Dosya Adlarına Göre Sırala</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Ctrl+Alt+P</source>
+        <translation>Ctrl+Alt+P</translation>
+    </message>
+    <message>
+        <location line="+470" />
         <source>Note text:</source>
         <translation>Not Metin:</translation>
     </message>
@@ -26007,12 +30314,17 @@ Hariç: %3
         <translation>Satır Numarası:</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+158" />
+        <location filename="../../../src/plugins/texteditor/jsoneditor.cpp" line="+169" />
         <source>JSON Editor</source>
         <translation>JSON Editör</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+9" />
+        <location filename="../../../src/plugins/texteditor/markdowneditor.cpp" line="+541" />
+        <source>Markdown Editor</source>
+        <translation>Markdown Düzenleyici</translation>
+    </message>
+    <message>
+        <location line="+9" />
         <source>Emphasis</source>
         <translation>Vurgu</translation>
     </message>
@@ -26056,21 +30368,36 @@ Hariç: %3
         <source>Reloads the type hierarchy for the symbol under the cursor.</source>
         <translation>İmleç altındaki sembol için tip hiyerarşisini yeniden yükler.</translation>
     </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/plaintexteditorfactory.cpp" line="+39" />
+        <source>Plain Text Editor</source>
+        <translation>Düz Metin Düzenleyici</translation>
+    </message>
+    <message>
+        <location filename="../../../src/plugins/texteditor/textsuggestion.cpp" line="-32" />
+        <source>Select Previous Suggestion</source>
+        <translation>Önceki Öneriyi Seç</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Select Next Suggestion</source>
+        <translation>Sonraki Öneriyi Seç</translation>
+    </message>
 </context>
 <context>
     <name>QtC::Utils</name>
     <message>
-        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+83" />
+        <location filename="../../../src/libs/utils/classnamevalidatinglineedit.cpp" line="+79" />
         <source>The class name must not contain namespace delimiters.</source>
         <translation>Sınıf adı, ad alanı sınırlayıcıları içermemelidir.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>Please enter a class name.</source>
         <translation>Lütfen bir sınıf adı girin.</translation>
     </message>
     <message>
-        <location line="+4" />
+        <location line="+3" />
         <source>The class name contains invalid characters.</source>
         <translation>Sınıf adı geçersiz karakterler içeriyor.</translation>
     </message>
@@ -26110,12 +30437,21 @@ Hariç: %3
         <translation>&quot;%1&quot; çalıştırılamıyor: %2</translation>
     </message>
     <message>
-        <location line="+109" />
+        <location line="+6" />
+        <source>
+Process exited with code %1.
+Press Return to close this window...</source>
+        <translation>
+İşlem %1 koduyla sonlandı.
+Bu pencereyi kapatmak için Enter tuşuna basın...</translation>
+    </message>
+    <message>
+        <location line="+112" />
         <source>Failed to start terminal process. The stub exited before the inferior was started.</source>
         <translation>Terminal işlemini başlatamadı. İnferior başlamadan önce çıktı.</translation>
     </message>
     <message>
-        <location line="+60" />
+        <location line="+59" />
         <source>Cannot set permissions on temporary directory &quot;%1&quot;: %2</source>
         <translation>Geçici dizinde &quot; %1&quot;: %2</translation>
     </message>
@@ -26149,9 +30485,8 @@ Hariç: %3
         <translation>&quot;%1&quot; soketi oluşturulamıyor: %2</translation>
     </message>
     <message>
-        <location line="-171" />
         <source>Press &lt;RETURN&gt; to close this window...</source>
-        <translation>Bu pencereyi kapatmak için &lt;GERİ DÖN&gt;&apos;e basın...</translation>
+        <translation type="vanished">Bu pencereyi kapatmak için &lt;GERİ DÖN&gt;&apos;e basın...</translation>
     </message>
     <message>
         <source>Cannot obtain a handle to the inferior: %1</source>
@@ -26162,7 +30497,7 @@ Hariç: %3
         <translation type="vanished">Alt öğeden çıkış durumu alınamıyor: %1</translation>
     </message>
     <message numerus="yes">
-        <location filename="../../../src/libs/utils/filesearch.cpp" line="+205" />
+        <location filename="../../../src/libs/utils/filesearch.cpp" line="+218" />
         <source>%1: canceled. %n occurrences found in %2 files.</source>
         <translation>
             <numerusform>%1: iptal edildi. %2 dosyada %n oluşum bulundu.</numerusform>
@@ -26176,7 +30511,7 @@ Hariç: %3
         </translation>
     </message>
     <message>
-        <location line="+280" />
+        <location line="+281" />
         <source>Fi&amp;le pattern:</source>
         <translation>&amp;Dosya modeli:</translation>
     </message>
@@ -26216,23 +30551,23 @@ Hariç: %3
     </message>
     <message>
         <location line="+1" />
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+648" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="+710" />
         <source>Path:</source>
         <translation>Yol:</translation>
     </message>
     <message>
         <location line="+20" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+141" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+140" />
         <source>Location</source>
         <translation>Konum</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+75" />
         <source>The default suffix if you do not explicitly specify a file extension is &quot;.%1&quot;.</source>
         <translation>Açıkça bir dosya uzantısı belirtmezseniz, varsayılan sonek &quot;.%1&quot; olur.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-376" />
+        <location filename="../../../src/libs/utils/pathchooser.cpp" line="-447" />
         <source>Local</source>
         <translation>Yerel</translation>
     </message>
@@ -26242,7 +30577,7 @@ Hariç: %3
         <translation>Uzak</translation>
     </message>
     <message>
-        <location line="+41" />
+        <location line="+46" />
         <source>Choose...</source>
         <translation>Seçmek...</translation>
     </message>
@@ -26252,29 +30587,34 @@ Hariç: %3
         <translation>Araştır...</translation>
     </message>
     <message>
-        <location line="+98" />
+        <location line="+166" />
         <source>Choose Directory</source>
         <translation>Dizini Seçin</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+8" />
         <source>Choose Executable</source>
         <translation>Yürütülebilir Dosyayı Seçin</translation>
     </message>
     <message>
-        <location line="+11" />
-        <location line="+11" />
-        <location line="+9" />
+        <location line="+10" />
+        <location line="+10" />
+        <location line="+8" />
         <source>Choose File</source>
         <translation>Dosya seçin</translation>
     </message>
     <message>
-        <location line="+176" />
+        <location line="+180" />
         <source>The path &quot;%1&quot; expanded to an empty string.</source>
         <translation>&quot;%1&quot; yolu boş bir dizeye genişletildi.</translation>
     </message>
     <message>
-        <location line="-72" />
+        <location line="+119" />
+        <source>Alternatives</source>
+        <translation>Alternatifler</translation>
+    </message>
+    <message>
+        <location line="-192" />
         <location line="+10" />
         <location line="+20" />
         <source>The path &quot;%1&quot; does not exist.</source>
@@ -26317,13 +30657,13 @@ Hariç: %3
         <translation type="vanished">Tam yol: &quot;%1&quot;</translation>
     </message>
     <message>
-        <location line="-58" />
-        <location line="+74" />
+        <location line="-56" />
+        <location line="+72" />
         <source>The path must not be empty.</source>
         <translation>Yol boş olmamalıdır.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+101" />
+        <location filename="../../../src/libs/utils/pathlisteditor.cpp" line="+106" />
         <source>Insert...</source>
         <translation>Sokmak...</translation>
     </message>
@@ -26338,22 +30678,32 @@ Hariç: %3
         <translation>Temizlemek</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-71" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="-69" />
         <source>Introduction and Project Location</source>
         <translation>Tanıtım ve Proje Yeri</translation>
     </message>
     <message>
-        <location line="+17" />
+        <location line="+16" />
         <source>Use as default project location</source>
         <translation>Varsayılan proje konumu olarak kullan</translation>
     </message>
     <message>
-        <location line="+13" />
+        <location line="+12" />
         <source>Enter project name</source>
         <translation>proje adını girin</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+7" />
+        <source>Add to project:</source>
+        <translation>Projeye ekle:</translation>
+    </message>
+    <message>
+        <location line="+104" />
+        <source>Chosen project wizard does not support the build system.</source>
+        <translation>Seçilen proje sihirbazı derleme sistemini desteklemiyor.</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Directory &quot;%1&quot; will be created.</source>
         <translation>&quot;%1&quot; dizini oluşturulacak.</translation>
     </message>
@@ -26368,22 +30718,22 @@ Hariç: %3
         <translation>Bu ada sahip bir dosya zaten var.</translation>
     </message>
     <message>
-        <location line="+92" />
+        <location line="+101" />
         <source>Project name is invalid.</source>
         <translation>Proje adı geçersiz.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Invalid character &quot;.&quot;.</source>
         <translation>Geçersiz karakter &quot;.&quot;.</translation>
     </message>
     <message>
-        <location line="+7" />
+        <location line="+5" />
         <source>Invalid character &quot;%1&quot; found.</source>
         <translation>Geçersiz karakter &quot;%1&quot; bulundu.</translation>
     </message>
     <message>
-        <location line="-232" />
+        <location line="-250" />
         <source>Name:</source>
         <translation>İsim:</translation>
     </message>
@@ -26393,7 +30743,7 @@ Hariç: %3
         <translation>Şurada oluştur:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/reloadpromptutils.cpp" line="+21" />
         <source>File Changed</source>
         <translation>Dosya Değiştirildi</translation>
     </message>
@@ -26419,18 +30769,18 @@ Hariç: %3
         <translation>Varsayılan davranış Düzen &gt; Tercihler &gt; Ortam &gt; Sistem&apos;de ayarlanabilir.</translation>
     </message>
     <message>
-        <location line="+20" />
-        <location line="+35" />
+        <location line="+19" />
+        <location line="+34" />
         <source>&amp;Close</source>
         <translation>&amp;Kapalı</translation>
     </message>
     <message>
-        <location line="-31" />
+        <location line="-30" />
         <source>No to All &amp;&amp; &amp;Diff</source>
         <translation>Tümüne Hayır &amp;&amp; &amp;Fark</translation>
     </message>
     <message>
-        <location line="+25" />
+        <location line="+24" />
         <source>File Has Been Removed</source>
         <translation>Dosya Kaldırıldı</translation>
     </message>
@@ -26481,9 +30831,8 @@ Hariç: %3
     %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+89" />
-        <location line="+33" />
-        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+401" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="+747" />
+        <location filename="../../../src/libs/utils/persistentsettings.cpp" line="+400" />
         <source>File Error</source>
         <translation>Dosya hatası</translation>
     </message>
@@ -26496,61 +30845,68 @@ Hariç: %3
         <translation type="vanished">%1 çalışma alanı geri yüklenemedi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+112" />
         <source>File format not supported.</source>
-        <translation>Dosya formatı desteklenmiyor.</translation>
+        <translation type="vanished">Dosya formatı desteklenmiyor.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Could not find any unarchiving executable in PATH (%1).</source>
-        <translation>PATH (%1) içinde herhangi bir arşivden çıkarma çalıştırılabilir dosyası bulunamadı.</translation>
+        <translation type="vanished">PATH (%1) içinde herhangi bir arşivden çıkarma çalıştırılabilir dosyası bulunamadı.</translation>
     </message>
     <message>
-        <location line="+18" />
         <source>No source file set.</source>
-        <translation>Kaynak dosya kümesi yok.</translation>
+        <translation type="vanished">Kaynak dosya kümesi yok.</translation>
     </message>
     <message>
-        <location line="+5" />
         <source>No destination directory set.</source>
-        <translation>Hedef dizin seti yok.</translation>
+        <translation type="vanished">Hedef dizin seti yok.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Failed to open output file.</source>
-        <translation>Çıktı dosyasını açılamadı.</translation>
+        <translation type="vanished">Çıktı dosyasını açılamadı.</translation>
     </message>
     <message>
-        <location line="+9" />
         <source>Failed to write output file.</source>
-        <translation>Çıktı dosyası yazılamadı.</translation>
+        <translation type="vanished">Çıktı dosyası yazılamadı.</translation>
     </message>
     <message>
-        <location line="+12" />
-        <location line="+21" />
         <source>Command failed.</source>
-        <translation>Komut başarısız oldu.</translation>
+        <translation type="vanished">Komut başarısız oldu.</translation>
     </message>
     <message>
-        <location line="-16" />
-        <location line="+20" />
         <source>Running %1
 in &quot;%2&quot;.
 
 </source>
         <comment>Running &lt;cmd&gt; in &lt;workingdirectory&gt;</comment>
-        <translation>%1 çalıştırılıyor
+        <translation type="vanished">%1 çalıştırılıyor
 &quot;%2&quot; içinde.
 
 </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+1208" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="+1328" />
+        <location line="+678" />
         <source>Reset</source>
         <translation>Sıfırla</translation>
     </message>
     <message>
-        <location line="+1385" />
+        <location line="+1" />
+        <source>Reset to default.</source>
+        <comment>Color</comment>
+        <translation>Varsayılana sıfırla.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Reset to Default</source>
+        <translation>Varsayılana Sıfırla</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Press and hold to reset to default.</source>
+        <translation>Varsayılana sıfırlamak için basılı tutun.</translation>
+    </message>
+    <message>
+        <location line="+945" />
         <source>Enable</source>
         <translation>Olanak vermek</translation>
     </message>
@@ -26563,6 +30919,11 @@ in &quot;%2&quot;.
         <location line="+1" />
         <source>Default</source>
         <translation>Varsayılan</translation>
+    </message>
+    <message>
+        <location line="+1774" />
+        <source>Change...</source>
+        <translation>Değiştir...</translation>
     </message>
     <message>
         <source>Leave at Default</source>
@@ -26586,7 +30947,7 @@ in &quot;%2&quot;.
         <translation type="vanished">Detayları gizle...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+331" />
+        <location filename="../../../src/libs/utils/checkablemessagebox.cpp" line="+313" />
         <source>Do not &amp;ask again</source>
         <translation>Tekr&amp;ar sorma</translation>
     </message>
@@ -26596,12 +30957,12 @@ in &quot;%2&quot;.
         <translation>Tekrar gö&amp;sterme</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/clangutils.cpp" line="+49" />
+        <location filename="../../../src/libs/utils/clangutils.cpp" line="+55" />
         <source>No clangd executable specified.</source>
         <translation>Clangd yürütülebilir dosyası belirtilmedi.</translation>
     </message>
     <message>
-        <location line="+9" />
+        <location line="+7" />
         <source>Failed to retrieve clangd version: Unexpected clangd output.</source>
         <translation>Clangd sürümü alınamadı: Beklenmeyen clangd çıktısı.</translation>
     </message>
@@ -26628,7 +30989,7 @@ in &quot;%2&quot;.
         <translation type="vanished">%1, %2&apos;ye kopyalanamıyor, yazılabilir bir dizin değil.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+255" />
+        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="+273" />
         <source>Failed to copy recursively from &quot;%1&quot; to &quot;%2&quot; while trying to create tar archive from source: %3</source>
         <translation>Şu kaynaktan tar arşivi oluşturulmaya çalışılırken &quot;%1&quot;den &quot;%2&quot;ye ardışık olarak kopyalanamadı: %3</translation>
     </message>
@@ -26650,18 +31011,17 @@ in &quot;%2&quot;.
         <translation type="vanished">&quot;%1&quot; için createTempFile uygulanmadı</translation>
     </message>
     <message>
-        <location line="-139" />
-        <location line="+409" />
+        <location line="-136" />
         <source>Path &quot;%1&quot; exists but is not a writable directory.</source>
         <translation>&quot;%1&quot; yolu var, ancak yazılabilir bir dizin değildir.</translation>
     </message>
     <message>
-        <location line="-356" />
+        <location line="+41" />
         <source>copyFile is not implemented for &quot;%1&quot;.</source>
         <translation>Copyfile &quot;%1&quot; için uygulanmaz.</translation>
     </message>
     <message>
-        <location line="+30" />
+        <location line="+37" />
         <source>Cannot copy from &quot;%1&quot;, it is not a directory.</source>
         <translation>&quot;%1&quot; den kopyalayamaz, bir dizin değildir.</translation>
     </message>
@@ -26671,54 +31031,136 @@ in &quot;%2&quot;.
         <translation>&quot;%1&quot; i &quot;%2&quot; ni kopyalayamaz:%3</translation>
     </message>
     <message>
-        <location line="+103" />
         <source>fileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>FileContents &quot;%1&quot; için uygulanmaz.</translation>
+        <translation type="vanished">FileContents &quot;%1&quot; için uygulanmaz.</translation>
+    </message>
+    <message>
+        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">WriteFilecontents &quot;%1&quot; için uygulanmaz.</translation>
+    </message>
+    <message>
+        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
+        <translation type="vanished">CreateTempfile &quot;%1&quot; için uygulanmaz.</translation>
+    </message>
+    <message>
+        <source>watch is not implemented.</source>
+        <translation type="vanished">İzleme uygulanmadı.</translation>
+    </message>
+    <message>
+        <location line="-173" />
+        <source>Function &quot;%1&quot; is not implemented for &quot;%2&quot;.</source>
+        <translation>&quot;%1&quot; işlevi &quot;%2&quot; için uygulanmadı.</translation>
+    </message>
+    <message>
+        <location line="+140" />
+        <source>createSymLink is not implemented for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için createSymLink uygulanmadı.</translation>
+    </message>
+    <message>
+        <location line="+103" />
+        <source>renameFile is not implemented for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için renameFile uygulanmadı.</translation>
+    </message>
+    <message>
+        <location line="+330" />
+        <source>Failed to watch &quot;%1&quot;, it does not exist.</source>
+        <translation>&quot;%1&quot; izlenemedi, mevcut değil.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to watch &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; izlenemedi.</translation>
+    </message>
+    <message>
+        <location line="+16" />
+        <source>Failed to remove watcher for &quot;%1&quot;, it was not found.</source>
+        <translation>&quot;%1&quot; için izleyici kaldırılamadı, bulunamadı.</translation>
     </message>
     <message>
         <location line="+10" />
-        <source>writeFileContents is not implemented for &quot;%1&quot;.</source>
-        <translation>WriteFilecontents &quot;%1&quot; için uygulanmaz.</translation>
+        <source>Failed to remove watcher for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için izleyici kaldırılamadı.</translation>
     </message>
     <message>
-        <location line="+66" />
-        <source>createTempFile is not implemented for &quot;%1&quot;.</source>
-        <translation>CreateTempfile &quot;%1&quot; için uygulanmaz.</translation>
+        <location line="+202" />
+        <location line="+583" />
+        <source>Could not create file &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; dosyası oluşturulamadı.</translation>
     </message>
     <message>
-        <location line="+7" />
-        <source>watch is not implemented.</source>
-        <translation>İzleme uygulanmadı.</translation>
+        <location line="-576" />
+        <location line="+588" />
+        <source>Could not create directory &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; dizini oluşturulamadı.</translation>
     </message>
     <message>
-        <location line="+180" />
+        <location line="-568" />
         <source>Refusing to remove the standard directory &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; standart dizini kaldırmayı reddetmek.</translation>
     </message>
     <message>
-        <location line="+12" />
+        <location line="+8" />
         <source>Refusing to remove root directory.</source>
         <translation>Kök dizini kaldırmayı reddetme.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+4" />
         <source>Refusing to remove your home directory.</source>
         <translation>Ana dizininizi kaldırmayı reddetmek.</translation>
     </message>
     <message>
-        <location line="+37" />
+        <location line="+35" />
         <source>Failed to remove directory &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; dizini kaldırılamadı.</translation>
     </message>
     <message>
-        <location line="+6" />
+        <location line="+3" />
         <source>Failed to remove file &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; dosyası kaldırılamadı.</translation>
     </message>
     <message>
-        <location line="+551" />
+        <location line="+140" />
+        <source>Could not open file &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; dosyası açılamadı.</translation>
+    </message>
+    <message>
+        <location line="+55" />
+        <source>Could not create temporary directory in &quot;%1&quot; (%2).</source>
+        <translation>&quot;%1&quot; içinde geçici dizin oluşturulamadı (%2).</translation>
+    </message>
+    <message>
+        <location line="+88" />
+        <source>Could not change permissions for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için izinler değiştirilemedi.</translation>
+    </message>
+    <message>
+        <location line="+124" />
+        <source>Failed to determine if &quot;%1&quot; and &quot;%2&quot; refer to the same file: %3</source>
+        <translation>&quot;%1&quot; ile &quot;%2&quot; öğelerinin aynı dosyaya işaret edip etmediği belirlenemedi: %3</translation>
+    </message>
+    <message>
+        <location line="+26" />
+        <source>Command &quot;%1&quot; failed: %2</source>
+        <translation>&quot;%1&quot; komutu başarısız oldu: %2</translation>
+    </message>
+    <message>
+        <location line="+150" />
+        <source>Failed to create symbolic link for file &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>&quot;%1&quot; dosyası için &quot;%2&quot; konumunda sembolik bağlantı oluşturulamadı: %3</translation>
+    </message>
+    <message>
+        <location line="+135" />
+        <source>Failed creating temporary directory &quot;%1&quot; (too many tries).</source>
+        <translation>&quot;%1&quot; geçici dizini oluşturulamadı (çok fazla deneme).</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Failed creating temporary files &quot;%1&quot; (too many tries).</source>
+        <translation>&quot;%1&quot; geçici dosyaları oluşturulamadı (çok fazla deneme).</translation>
+    </message>
+    <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries).</source>
-        <translation>Geçici dosya &quot;%1&quot; (çok fazla deneme) oluşturulmada başarısız oldu.</translation>
+        <translation type="vanished">Geçici dosya &quot;%1&quot; (çok fazla deneme) oluşturulmada başarısız oldu.</translation>
     </message>
     <message>
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;.</source>
@@ -26733,7 +31175,7 @@ in &quot;%2&quot;.
         <translation type="vanished">&quot;%1&quot; Dosyası açılamadı</translation>
     </message>
     <message>
-        <location line="-449" />
+        <location line="-568" />
         <source>Cannot read &quot;%1&quot;: %2</source>
         <translation>&quot;%1&quot; okunamıyor: %2</translation>
     </message>
@@ -26750,23 +31192,38 @@ in &quot;%2&quot;.
         <translation type="vanished">&quot;%1&quot; (%2) içinde geçici dosya oluşturulamadı</translation>
     </message>
     <message>
-        <location line="-87" />
-        <location line="+406" />
+        <location line="-139" />
+        <location line="+555" />
         <source>Failed to copy file &quot;%1&quot; to &quot;%2&quot;: %3</source>
         <translation>&quot;%1&quot; dosyası &quot;%2&quot; konumuna kopyalanamadı: %3</translation>
     </message>
     <message>
-        <location line="-333" />
+        <location line="-525" />
+        <source>createSymlinkWindows() called unexpectedly on a non-Windows platform.</source>
+        <translation>createSymlinkWindows() Windows dışı bir platformda beklenmedik şekilde çağrıldı.</translation>
+    </message>
+    <message>
+        <location line="+13" />
+        <source>Failed to create symbolic link to &quot;%1&quot; at &quot;%2&quot;: %3</source>
+        <translation>&quot;%1&quot; için &quot;%2&quot; konumunda sembolik bağlantı oluşturulamadı: %3</translation>
+    </message>
+    <message>
+        <location line="+12" />
+        <location line="+530" />
+        <source>Failed to rename file &quot;%1&quot; to &quot;%2&quot;: %3</source>
+        <translation>&quot;%1&quot; dosyası &quot;%2&quot; olarak yeniden adlandırılamadı: %3</translation>
+    </message>
+    <message>
+        <location line="-460" />
         <source>File &quot;%1&quot; does not exist.</source>
         <translation>&quot;%1&quot; dosyası yok.</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Could not open File &quot;%1&quot;.</source>
-        <translation>&quot;%1&quot; dosyasını açamadı.</translation>
+        <translation type="vanished">&quot;%1&quot; dosyasını açamadı.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+27" />
         <source>Could not open file &quot;%1&quot; for writing.</source>
         <translation>Yazmak için &quot;%1&quot; dosyasını açamadı.</translation>
     </message>
@@ -26783,24 +31240,21 @@ in &quot;%2&quot;.
         <translation>&quot;%1&quot; de (%2) geçici dosya oluşturulamadı.</translation>
     </message>
     <message>
-        <location line="+138" />
         <source>Device is not connected</source>
-        <translation>Cihaz bağlı değil</translation>
+        <translation type="vanished">Cihaz bağlı değil</translation>
     </message>
     <message>
-        <location line="+202" />
+        <location line="+465" />
         <source>Failed reading file &quot;%1&quot;: %2</source>
         <translation>&quot;%1&quot; dosyası okunamadı: %2</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>Failed writing file &quot;%1&quot;: %2</source>
-        <translation>&quot;%1&quot; dosyası yazılamadı: %2</translation>
+        <translation type="vanished">&quot;%1&quot; dosyası yazılamadı: %2</translation>
     </message>
     <message>
-        <location line="+25" />
         <source>Failed creating temporary file &quot;%1&quot;: %2</source>
-        <translation>&quot;%1&quot; geçici dosyası oluşturulamadı: %2</translation>
+        <translation type="vanished">&quot;%1&quot; geçici dosyası oluşturulamadı: %2</translation>
     </message>
     <message>
         <source>Failed creating temporary file &quot;%1&quot; (too many tries)</source>
@@ -26808,6 +31262,7 @@ in &quot;%2&quot;.
     </message>
     <message>
         <location filename="../../../src/libs/utils/differ.cpp" line="+922" />
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-1015" />
         <source>Delete</source>
         <translation>Silmek</translation>
     </message>
@@ -26864,7 +31319,7 @@ in &quot;%2&quot;.
         </translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="+21" />
         <source>string table seems to be at 0x%1</source>
         <translation>string tablosu 0x%1&apos;de görünüyor</translation>
     </message>
@@ -26874,7 +31329,7 @@ in &quot;%2&quot;.
         <translation>dosyanın sonundaki bölüm adı %1 / %2</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+18" />
+        <location filename="../../../src/libs/utils/environmentdialog.cpp" line="+23" />
         <source>Edit Environment</source>
         <translation>Ortamı Düzenle</translation>
     </message>
@@ -26895,7 +31350,7 @@ Bir değişkeni silmek için, adını üzerinde başka hiçbir şey olmayan bir 
 Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ekleyin.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+448" />
+        <location filename="../../../src/libs/utils/fancylineedit.cpp" line="+454" />
         <source>Filter</source>
         <translation>filtre</translation>
     </message>
@@ -26905,7 +31360,7 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>Metni temizle</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+287" />
+        <location filename="../../../src/libs/utils/fancymainwindow.cpp" line="+291" />
         <source>Central Widget</source>
         <translation>Merkezi Widget</translation>
     </message>
@@ -26919,34 +31374,34 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation type="vanished">Görünüm Başlık Çubuklarını Otomatik Olarak Gizle</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+93" />
-        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+92" />
-        <location line="+105" />
+        <location filename="../../../src/libs/utils/filenamevalidatinglineedit.cpp" line="+92" />
+        <location filename="../../../src/libs/utils/projectintropage.cpp" line="+107" />
+        <location line="+116" />
         <source>Name is empty.</source>
         <translation>İsim boş.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name contains white space.</source>
         <translation>Ad boşluk içeriyor.</translation>
     </message>
     <message>
-        <location line="+2" />
+        <location line="+1" />
         <source>Invalid character &quot;%1&quot;.</source>
         <translation>Geçersiz karakter &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+9" />
         <source>Invalid characters &quot;%1&quot;.</source>
         <translation>Geçersiz karakterler &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location line="+10" />
+        <location line="+8" />
         <source>Name matches MS Windows device (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</source>
         <translation>Ad, MS Windows cihazıyla eşleşir (CON, AUX, PRN, NUL, COM1, COM2, ..., COM9, LPT1, LPT2, ..., LPT9)</translation>
     </message>
     <message>
-        <location line="+35" />
+        <location line="+34" />
         <source>File extension %1 is required:</source>
         <translation>%1 dosya uzantısı gerekli:</translation>
     </message>
@@ -26956,7 +31411,37 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>%1 dosya uzantıları gereklidir:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filepath.cpp" line="+1098" />
+        <location filename="../../../src/libs/utils/filepath.cpp" line="+453" />
+        <source>Internal DeviceFileAccess error: watch() did not return a result.</source>
+        <translation>Dahili DeviceFileAccess hatası: watch() sonuç döndürmedi.</translation>
+    </message>
+    <message>
+        <location line="+446" />
+        <source>Could not find temporary directory on device %1</source>
+        <translation>%1 aygıtında geçici dizin bulunamadı</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <source>Could not create temporary file: %1</source>
+        <translation>Geçici dosya oluşturulamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+25" />
+        <source>Could not create temporary directory: %1</source>
+        <translation>Geçici dizin oluşturulamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+161" />
+        <source>No device hook set.</source>
+        <translation>Aygıt kancası ayarlanmadı.</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Cannot reach remote path &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; uzak yoluna ulaşılamıyor.</translation>
+    </message>
+    <message>
+        <location line="+556" />
         <source>%1 on %2</source>
         <comment>File on device</comment>
         <translation>%2 üzerinde %1</translation>
@@ -26968,7 +31453,7 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>%3 üzerinde %1 %2</translation>
     </message>
     <message>
-        <location line="+869" />
+        <location line="+1232" />
         <source>Error while trying to copy file: %1</source>
         <translation>Dosyayı kopyalamaya çalışırken hata oluştu: %1</translation>
     </message>
@@ -26983,49 +31468,52 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>&quot;%1&quot; için izinler ayarlanamadı</translation>
     </message>
     <message>
-        <location line="+250" />
+        <location line="+23" />
+        <source>Cannot create symbolic link to &quot;%1&quot; at &quot;%2&quot;: Paths do not refer to the same device.</source>
+        <translation>&quot;%2&quot; konumunda &quot;%1&quot; için sembolik bağlantı oluşturulamıyor: Yollar aynı aygıta işaret etmiyor.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to move %1 to %2. Removing the source file failed: %3</source>
+        <translation>%1, %2 konumuna taşınamadı. Kaynak dosya kaldırılamadı: %3</translation>
+    </message>
+    <message>
+        <location line="+398" />
         <source>No &quot;localSource&quot; device hook set.</source>
         <translation>&quot;localSource&quot; aygıt kanca seti yok.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filesystemmodel.cpp" line="+754" />
         <source>My Computer</source>
-        <translation>Benim bilgisayarım</translation>
+        <translation type="vanished">Benim bilgisayarım</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Computer</source>
-        <translation>Bilgisayar</translation>
+        <translation type="vanished">Bilgisayar</translation>
     </message>
     <message>
-        <location line="+756" />
         <source>Name</source>
-        <translation>İsim</translation>
+        <translation type="vanished">İsim</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Size</source>
-        <translation>Boyut</translation>
+        <translation type="vanished">Boyut</translation>
     </message>
     <message>
-        <location line="+3" />
         <source>Kind</source>
         <comment>Match OS X Finder</comment>
-        <translation>Tür</translation>
+        <translation type="vanished">Tür</translation>
     </message>
     <message>
-        <location line="+1" />
         <source>Type</source>
         <comment>All other platforms</comment>
-        <translation>Tip</translation>
+        <translation type="vanished">Tip</translation>
     </message>
     <message>
-        <location line="+6" />
         <source>Date Modified</source>
-        <translation>Değiştirilme tarihi</translation>
+        <translation type="vanished">Değiştirilme tarihi</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+23" />
+        <location filename="../../../src/libs/utils/fileutils.cpp" line="-672" />
         <source>Cannot write file %1: %2</source>
         <translation>%1 dosyası yazılamıyor: %2</translation>
     </message>
@@ -27035,12 +31523,12 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>%1 dosyası yazılamıyor. Disk dolu?</translation>
     </message>
     <message>
-        <location line="+38" />
+        <location line="+36" />
         <source>%1: Is a reserved filename on Windows. Cannot save.</source>
         <translation>%1: Windows&apos;ta ayrılmış bir dosya adıdır. Kaydedilemez.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+16" />
         <source>Cannot overwrite file %1: %2</source>
         <translation>%1 dosyasının üzerine yazılamıyor: %2</translation>
     </message>
@@ -27050,13 +31538,13 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>%1 dosyası oluşturulamıyor: %2</translation>
     </message>
     <message>
-        <location line="+45" />
+        <location line="+34" />
         <source>Cannot create temporary file in %1: %2</source>
         <translation>%1: %2&apos;de geçici dosya oluşturulamıyor</translation>
     </message>
     <message>
-        <location line="+15" />
-        <location line="+8" />
+        <location line="+14" />
+        <location line="+7" />
         <source>Cannot create temporary file %1: %2</source>
         <translation>Geçici dosya oluşturulamıyor %1: %2</translation>
     </message>
@@ -27071,34 +31559,45 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>Mevcut &quot;%1&quot; dosyasının üzerine yazılsın mı?</translation>
     </message>
     <message>
-        <location line="+21" />
+        <location line="+24" />
         <source>Could not copy file &quot;%1&quot; to &quot;%2&quot;.</source>
         <translation>&quot;%1&quot; dosyası &quot;%2&quot; konumuna kopyalanamadı.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/devicefileaccess.cpp" line="-1026" />
-        <location line="+409" />
-        <location filename="../../../src/libs/utils/fileutils.cpp" line="+366" />
+        <location line="+312" />
+        <source>Failed to create directory &quot;%1&quot;: %2</source>
+        <translation>&quot;%1&quot; dizini oluşturulamadı: %2</translation>
+    </message>
+    <message>
+        <location line="+30" />
+        <source>File %1 does not exist.</source>
+        <translation>%1 dosyası yok.</translation>
+    </message>
+    <message>
+        <location line="+105" />
+        <source>Failed to set up scratch buffer in &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; içinde karalama arabelleği kurulamadı.</translation>
+    </message>
+    <message>
         <source>Failed to create directory &quot;%1&quot;.</source>
-        <translation>&quot;%1&quot; dizini oluşturulamadı.</translation>
+        <translation type="vanished">&quot;%1&quot; dizini oluşturulamadı.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/hostosinfo.cpp" line="+84" />
         <source>Cannot create OpenGL context.</source>
-        <translation>OpenGL bağlamı oluşturulamıyor.</translation>
+        <translation type="vanished">OpenGL bağlamı oluşturulamıyor.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/infobar.cpp" line="+303" />
+        <location filename="../../../src/libs/utils/infobar.cpp" line="+498" />
         <source>&amp;Show Details</source>
         <translation>&amp;Detayları göster</translation>
     </message>
     <message>
-        <location line="+43" />
+        <location line="+96" />
         <source>Do Not Show Again</source>
         <translation>Tekrar gösterme</translation>
     </message>
     <message>
-        <location line="+23" />
+        <location line="-22" />
         <source>Close</source>
         <translation>Kapalı</translation>
     </message>
@@ -27146,52 +31645,49 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         </translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launcherinterface.cpp" line="+122" />
         <source>Failed to start process launcher at &quot;%1&quot;: %2</source>
-        <translation>&quot;%1&quot; konumunda işlem başlatıcı başlatılamadı: %2</translation>
+        <translation type="vanished">&quot;%1&quot; konumunda işlem başlatıcı başlatılamadı: %2</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Process launcher closed unexpectedly: %1</source>
-        <translation>İşlem başlatıcı beklenmedik şekilde kapatıldı: %1</translation>
+        <translation type="vanished">İşlem başlatıcı beklenmedik şekilde kapatıldı: %1</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/launchersocket.cpp" line="+222" />
         <source>Process launcher socket error.</source>
-        <translation>İşlem başlatıcı yuva hatası.</translation>
+        <translation type="vanished">İşlem başlatıcı yuva hatası.</translation>
     </message>
     <message>
-        <location line="+239" />
         <source>Internal socket error: %1</source>
-        <translation>Dahili soket hatası: %1</translation>
+        <translation type="vanished">Dahili soket hatası: %1</translation>
     </message>
     <message>
-        <location line="+135" />
         <source>Socket error: %1</source>
-        <translation>Soket hatası: %1</translation>
+        <translation type="vanished">Soket hatası: %1</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Internal protocol error: invalid packet size %1.</source>
-        <translation>Dahili protokol hatası: geçersiz paket boyutu %1.</translation>
+        <translation type="vanished">Dahili protokol hatası: geçersiz paket boyutu %1.</translation>
     </message>
     <message>
-        <location line="+13" />
         <source>Internal protocol error: invalid packet type %1.</source>
-        <translation>Dahili protokol hatası: geçersiz paket türü %1.</translation>
+        <translation type="vanished">Dahili protokol hatası: geçersiz paket türü %1.</translation>
     </message>
     <message>
-        <location line="+14" />
         <source>Launcher socket closed unexpectedly.</source>
-        <translation>Başlatıcı soketi beklenmedik bir şekilde kapandı.</translation>
+        <translation type="vanished">Başlatıcı soketi beklenmedik bir şekilde kapandı.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+269" />
+        <location filename="../../../src/libs/utils/macroexpander.cpp" line="+382" />
         <source>Infinite recursion error</source>
         <translation>Sonsuz özyineleme hatası</translation>
     </message>
     <message>
-        <location line="+127" />
+        <location line="+52" />
+        <source>Failed to expand macros in process arguments: %1</source>
+        <translation>İşlem bağımsız değişkenlerindeki makrolar genişletilemedi: %1</translation>
+    </message>
+    <message>
+        <location line="+108" />
         <source>%1: Full path including file name.</source>
         <translation>%1: Dosya adı dahil tam yol.</translation>
     </message>
@@ -27221,27 +31717,32 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation>%1: Yol ve sonek olmadan dosya temel adı.</translation>
     </message>
     <message>
-        <location line="+69" />
+        <location line="+6" />
+        <source>%1: File name of the parent directory.</source>
+        <translation>%1: Üst dizinin dosya adı.</translation>
+    </message>
+    <message>
+        <location line="+104" />
         <source>Global variables</source>
         <translation>Genel değişkenler</translation>
     </message>
     <message>
-        <location line="+1" />
+        <location line="+4" />
         <source>Access environment variables.</source>
         <translation>Ortam değişkenlerine erişin.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+111" />
+        <location filename="../../../src/libs/utils/minimizableinfobars.cpp" line="+124" />
         <source>Minimize</source>
         <translation>küçültmek</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+35" />
+        <location filename="../../../src/libs/utils/environmentmodel.cpp" line="+38" />
         <source>&lt;UNSET&gt;</source>
         <translation>&lt;AYARLAMAYI BIRAK&gt;</translation>
     </message>
     <message>
-        <location line="+156" />
+        <location line="+191" />
         <source>Variable</source>
         <translation>Değişken</translation>
     </message>
@@ -27261,7 +31762,6 @@ Bir değişkeni devre dışı bırakmak için satırın önüne &quot;#&quot; ek
         <translation type="vanished">&lt;DEĞER&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+60" />
         <source>Enter one environment variable per line.
 To set or change a variable, use VARIABLE=VALUE.
 To disable a variable, prefix this line with &quot;#&quot;.
@@ -27270,7 +31770,7 @@ To prepend to a variable, use VARIABLE=+VALUE.
 Existing variables can be referenced in a VALUE with ${OTHER}.
 To clear a variable, put its name on a line with nothing else on it.
 Lines starting with &quot;##&quot; will be treated as comments.</source>
-        <translation>Satır başına bir ortam değişkeni girin.
+        <translation type="vanished">Satır başına bir ortam değişkeni girin.
  Bir değişkeni ayarlamak veya değiştirmek için değişken = değer kullanın.
  Bir değişkeni devre dışı bırakmak için bu satırı &quot;#&quot; ile ön ekleyin.
  Bir değişkene eklemek için değişken+= değer kullanın.
@@ -27280,7 +31780,39 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
  &quot;##&quot; ile başlayan satırlar yorum olarak değerlendirilecektir.</translation>
     </message>
     <message>
-        <location line="+112" />
+        <location filename="../../../src/libs/utils/namevaluesdialog.cpp" line="+65" />
+        <source>The file can be a simple text file containing key/value pairs,
+or a script to be evaluated by the system shell.</source>
+        <translation>Dosya, anahtar/değer çiftleri içeren basit bir metin dosyası\nveya sistem kabuğu tarafından değerlendirilecek bir betik olabilir.</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Enter one environment variable per line.
+To set or change a variable, use VARIABLE=VALUE.
+To disable a variable, prefix this line with &quot;#&quot;.
+To append to a variable, use VARIABLE+=VALUE.
+To prepend to a variable, use VARIABLE=+VALUE.
+Existing variables can be referenced in a VALUE with ${OTHER}.
+To clear a variable, put its name on a line with nothing else on it.
+Lines starting with &quot;##&quot; will be treated as comments.
+</source>
+        <translation>Her satıra bir ortam değişkeni girin.
+Bir değişkeni ayarlamak veya değiştirmek için VARIABLE=VALUE kullanın.
+Bir değişkeni devre dışı bırakmak için satırın başına &quot;#&quot; koyun.
+Bir değişkene eklemek için VARIABLE+=VALUE kullanın.
+Bir değişkenin başına eklemek için VARIABLE=+VALUE kullanın.
+Mevcut değişkenlere VALUE içinde ${OTHER} ile başvurulabilir.
+Bir değişkeni temizlemek için adını tek başına bir satıra yazın.
+&quot;##&quot; ile başlayan satırlar açıklama olarak değerlendirilir.
+</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <source>Get variables from text file or shell script:</source>
+        <translation>Değişkenleri metin dosyasından veya kabuk betiğinden al:</translation>
+    </message>
+    <message>
+        <location line="+128" />
         <source>&amp;OK</source>
         <translation>&amp;TAMAM</translation>
     </message>
@@ -27290,7 +31822,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&amp;İptal etmek</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+267" />
+        <location filename="../../../src/libs/utils/qtcprocess.cpp" line="+280" />
         <source>Error in command line.</source>
         <translation>Komut satırında hata.</translation>
     </message>
@@ -27300,17 +31832,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&quot;%1&quot; programı yok veya çalıştırılamaz.</translation>
     </message>
     <message>
-        <location line="+79" />
+        <location line="+52" />
         <source>The program &quot;%1&quot; could not be found.</source>
         <translation>&quot;%1&quot; programı bulunamadı.</translation>
     </message>
     <message>
-        <location line="+908" />
+        <location line="+814" />
+        <source>No executable specified.</source>
+        <translation>Yürütülebilir dosya belirtilmedi.</translation>
+    </message>
+    <message>
+        <location line="+19" />
         <source>Failed to create process interface for &quot;%1&quot;.</source>
         <translation>&quot;%1&quot; için işlem arayüzü oluşturulamadı.</translation>
     </message>
     <message>
-        <location line="+163" />
+        <location line="+179" />
         <source>Process Not Responding</source>
         <translation>İşlem Yanıt Vermiyor</translation>
     </message>
@@ -27330,7 +31867,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>İşlem sonlandırılsın mı?</translation>
     </message>
     <message>
-        <location line="+233" />
+        <location line="+238" />
         <source>The command &quot;%1&quot; finished successfully.</source>
         <translation>&quot;%1&quot; komutu başarıyla tamamlandı.</translation>
     </message>
@@ -27355,11 +31892,26 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&quot; %1&quot; komutu %2 ms sonra iptal edildi.</translation>
     </message>
     <message>
+        <location line="+19" />
+        <source>Standard error output was:</source>
+        <translation>Standart hata çıktısı:</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Standard output was:</source>
+        <translation>Standart çıktı:</translation>
+    </message>
+    <message>
+        <location line="+456" />
+        <source>Either the invoked program is missing, or you may have insufficient permissions to invoke the program.</source>
+        <translation>Çağrılan program eksik veya programı çağırmak için yeterli izinlere sahip olmayabilirsiniz.</translation>
+    </message>
+    <message>
         <source>The command &quot;%1&quot; did not respond within the timeout limit (%2 s).</source>
         <translation type="vanished">&quot;%1&quot; komutu, zaman aşımı sınırı (%2 s) içinde yanıt vermedi.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+21" />
+        <location filename="../../../src/libs/utils/removefiledialog.cpp" line="+22" />
         <source>Remove File</source>
         <translation>Dosyayı Kaldır</translation>
     </message>
@@ -27389,7 +31941,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Kaldırılacak klasör:</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+114" />
+        <location filename="../../../src/libs/utils/settingsaccessor.cpp" line="+107" />
         <source>Failed to Read File</source>
         <translation>Dosya Okunamadı</translation>
     </message>
@@ -27410,18 +31962,18 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Yazacak bir şey yoktu.</translation>
     </message>
     <message>
-        <location line="+101" />
-        <location line="+265" />
+        <location line="+100" />
+        <location line="+261" />
         <source>No Valid Settings Found</source>
         <translation>Geçerli Ayar Bulunamadı</translation>
     </message>
     <message>
-        <location line="-264" />
+        <location line="-260" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were unsuitable for the current version of %2, for instance because they were written by an incompatible version of %2, or because a different settings path was used.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Geçerli bir ayar dosyası bulunamadı.&lt;/p&gt;&lt;p&gt;&quot;%1&quot; dizininde bulunan tüm ayar dosyaları, örneğin %2&apos;nin uyumsuz bir sürümü tarafından yazıldığı için mevcut %2 sürümü için uygun değildi. 2 veya farklı bir ayar yolu kullanıldığı için.&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+265" />
+        <location line="+261" />
         <source>&lt;p&gt;No valid settings file could be found.&lt;/p&gt;&lt;p&gt;All settings files found in directory &quot;%1&quot; were either too new or too old to be read.&lt;/p&gt;</source>
         <translation>&lt;p&gt;Geçerli ayar dosyası bulunamadı.&lt;/p&gt;&lt;p&gt;&quot;%1&quot; dizininde bulunan tüm ayar dosyaları ya çok yeni ya da okunamayacak kadar eskiydi.&lt;/p&gt;</translation>
     </message>
@@ -27446,7 +31998,7 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&lt;p&gt;Bu %1 örneği tarafından oluşturulan ayar dosyası bulunamadı.&lt;/p&gt;&lt;p&gt;Bu projeyle daha önce başka bir makinede veya farklı bir ayar yolu kullanarak çalıştınız mı?&lt;/p&gt;&lt;p&gt;Hala çalışıyor musunuz? &quot;%2&quot; ayar dosyasını yüklemek ister misiniz?&lt;/p&gt;</translation>
     </message>
     <message>
-        <location line="+55" />
+        <location line="+54" />
         <source>Unsupported Merge Settings File</source>
         <translation>Desteklenmeyen Birleştirme Ayarları Dosyası</translation>
     </message>
@@ -27456,72 +32008,71 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>&quot;%1&quot;, %2 tarafından desteklenmiyor. Yine de yüklemeyi denemek istiyor musunuz?</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/aspects.cpp" line="+92" />
-        <location line="+952" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+32" />
+        <location filename="../../../src/libs/utils/aspects.cpp" line="-1646" />
+        <location line="+1039" />
         <source>Add</source>
         <translation>Eklemek</translation>
     </message>
     <message>
-        <location line="-951" />
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="+1" />
-        <location line="+83" />
+        <location line="-1038" />
+        <location line="+1043" />
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="+661" />
+        <location line="+39" />
         <source>Remove</source>
         <translation>Kaldırmak</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/settingsselector.cpp" line="-82" />
         <source>Rename</source>
-        <translation>Yeniden isimlendirmek</translation>
+        <translation type="vanished">Yeniden isimlendirmek</translation>
     </message>
     <message>
-        <location line="+83" />
         <source>Do you really want to delete the configuration &lt;b&gt;%1&lt;/b&gt;?</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; yapılandırmasını gerçekten silmek istiyor musunuz?</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; yapılandırmasını gerçekten silmek istiyor musunuz?</translation>
     </message>
     <message>
-        <location line="+23" />
         <source>New name for configuration &lt;b&gt;%1&lt;/b&gt;:</source>
-        <translation>&lt;b&gt;%1&lt;/b&gt; yapılandırması için yeni ad:</translation>
+        <translation type="vanished">&lt;b&gt;%1&lt;/b&gt; yapılandırması için yeni ad:</translation>
     </message>
     <message>
-        <location line="+2" />
         <source>Rename...</source>
-        <translation>Yeniden isimlendirmek...</translation>
+        <translation type="vanished">Yeniden isimlendirmek...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/stringutils.cpp" line="+366" />
+        <location filename="../../../src/libs/utils/stringutils.cpp" line="+439" />
         <source>Elapsed time: %1.</source>
         <translation>Geçen süre: %1.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+196" />
-        <location line="+76" />
+        <location filename="../../../src/libs/utils/textfileformat.cpp" line="+138" />
+        <location line="+31" />
         <source>Out of memory.</source>
         <translation>Bellek yetersiz.</translation>
     </message>
     <message>
-        <location line="-65" />
+        <location line="-18" />
         <source>An encoding error was encountered.</source>
         <translation>Bir kodlama hatasıyla karşılaşıldı.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/unixutils.cpp" line="+34" />
         <source>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Variable&lt;/th&gt;&lt;th&gt;Expands to&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;directory of current file&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;file name (with full path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;file name (without path)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</source>
-        <translation>&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Değişken&lt;/th&gt;&lt;th&gt;Şuna genişler&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;geçerli dosyanın dizini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;dosya adı (tam yol ile)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;dosya adı (yol olmadan)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
+        <translation type="vanished">&lt;table border=1 cellspacing=0 cellpadding=3&gt;&lt;tr&gt;&lt;th&gt;Değişken&lt;/th&gt;&lt;th&gt;Şuna genişler&lt;/th&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%d&lt;/td&gt;&lt;td&gt;geçerli dosyanın dizini&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%f&lt;/td&gt;&lt;td&gt;dosya adı (tam yol ile)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%n&lt;/td&gt;&lt;td&gt;dosya adı (yol olmadan)&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td&gt;%%&lt;/td&gt;&lt;td&gt;%&lt;/td&gt;&lt;/tr&gt;&lt;/table&gt;</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+86" />
+        <location filename="../../../src/libs/utils/variablechooser.cpp" line="+69" />
         <source>Insert Variable</source>
         <translation>Değişken Ekle</translation>
     </message>
     <message>
-        <location line="+106" />
         <source>Current Value: %1</source>
-        <translation>Geçerli Değer: %1</translation>
+        <translation type="vanished">Geçerli Değer: %1</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+118" />
+        <source>Current Value of %{%1}: %2</source>
+        <translation>%{%1} Geçerli Değeri: %2</translation>
+    </message>
+    <message>
+        <location line="+25" />
         <source>Insert Unexpanded Value</source>
         <translation>Genişletilmemiş Değer Ekle</translation>
     </message>
@@ -27537,56 +32088,49 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Genişletilmiş Değer Ekle</translation>
     </message>
     <message>
-        <location line="+31" />
+        <location line="+32" />
         <source>Select a variable to insert.</source>
         <translation>Eklemek için bir değişken seçin.</translation>
     </message>
     <message>
-        <location line="+121" />
+        <location line="+115" />
         <source>Variables</source>
         <translation>Değişkenler</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/wizard.cpp" line="+123" />
+        <location filename="../../../src/libs/utils/wizard.cpp" line="+124" />
         <source>...</source>
         <translation>...</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/deviceshell.cpp" line="+189" />
         <source>The process failed to start.</source>
-        <translation>Süreç başlayamadı.</translation>
+        <translation type="vanished">Süreç başlayamadı.</translation>
     </message>
     <message>
-        <location line="+34" />
         <source>Failed to install shell script: %1
 %2</source>
-        <translation>Kabuk komut dosyası yüklenemedi: %1
+        <translation type="vanished">Kabuk komut dosyası yüklenemedi: %1
  %2</translation>
     </message>
     <message>
-        <location line="+17" />
         <source>Timeout while trying to check for %1.</source>
-        <translation>%1 olup olmadığını kontrol etmeye çalışırken zaman aşımı.</translation>
+        <translation type="vanished">%1 olup olmadığını kontrol etmeye çalışırken zaman aşımı.</translation>
     </message>
     <message>
-        <location line="+7" />
         <source>Command &quot;%1&quot; was not found.</source>
-        <translation>&quot;%1&quot; komutu bulunamadı.</translation>
+        <translation type="vanished">&quot;%1&quot; komutu bulunamadı.</translation>
     </message>
     <message>
-        <location line="+10" />
         <source>Script installation was forced to fail.</source>
-        <translation>Komut dosyası kurulumu başarısız olmak zorunda kaldı.</translation>
+        <translation type="vanished">Komut dosyası kurulumu başarısız olmak zorunda kaldı.</translation>
     </message>
     <message>
-        <location line="+26" />
         <source>Timeout while waiting for shell script installation.</source>
-        <translation>Kabuk komut dosyası kurulumunu beklerken zaman aşımı.</translation>
+        <translation type="vanished">Kabuk komut dosyası kurulumunu beklerken zaman aşımı.</translation>
     </message>
     <message>
-        <location line="+11" />
         <source>Failed to install shell script: %1</source>
-        <translation>Kabuk komut dosyası yüklenemedi: %1</translation>
+        <translation type="vanished">Kabuk komut dosyası yüklenemedi: %1</translation>
     </message>
     <message>
         <location filename="../../../src/libs/utils/externalterminalprocessimpl.cpp" line="+124" />
@@ -27595,22 +32139,22 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
     </message>
     <message>
         <location line="+28" />
-        <location line="+45" />
+        <location line="+48" />
         <source>Failed to start terminal process: &quot;%1&quot;.</source>
         <translation>Terminal sürecini başlatılamadı: &quot;%1&quot;.</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+135" />
+        <location filename="../../../src/libs/utils/filestreamermanager.cpp" line="+129" />
         <source>Failed copying file.</source>
         <translation>Kopyalama dosyası başarısız.</translation>
     </message>
     <message>
-        <location line="+24" />
+        <location line="+17" />
         <source>Failed reading file.</source>
         <translation>Başarısız okuma dosyası.</translation>
     </message>
     <message>
-        <location line="+26" />
+        <location line="+20" />
         <source>Failed writing file.</source>
         <translation>Başarısız yazma dosyası.</translation>
     </message>
@@ -27620,12 +32164,12 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>LUA Arayüz Seti Yok</translation>
     </message>
     <message>
-        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+25" />
+        <location filename="../../../src/libs/utils/passworddialog.cpp" line="+26" />
         <source>Show/Hide Password</source>
         <translation>Şifreyi Göster/Gizle</translation>
     </message>
     <message>
-        <location line="+94" />
+        <location line="+92" />
         <source>User:</source>
         <translation>Kullanıcı:</translation>
     </message>
@@ -27640,9 +32184,269 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <translation>Herhangi bir kabuk bulamadım.</translation>
     </message>
     <message>
-        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+160" />
+        <location filename="../../../src/plugins/projectexplorer/processparameters.cpp" line="+167" />
         <source>Invalid command</source>
         <translation>Geçersiz Komut</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/crashreporting.cpp" line="+113" />
+        <source>%1 uses %2 for collecting crashes and sending them to Sentry for processing. %2 may capture arbitrary contents from crashed process’ memory, including user sensitive information, URLs, and whatever other content users have trusted %1 with. The collected crash reports are however only used for the sole purpose of fixing bugs.</source>
+        <extracomment>%1 = application name, %2 crash backend name (Google Crashpad or Google Breakpad)</extracomment>
+        <translation>%1, çökmeleri toplamak ve işlenmek üzere Sentry&apos;ye göndermek için %2 kullanır. %2, çöken işlemin belleğinden kullanıcıya ait hassas bilgiler, URL&apos;ler ve kullanıcıların %1 uygulamasına emanet ettiği her türlü içerik dahil rastgele içerik yakalayabilir. Toplanan çökme raporları yalnızca hataları gidermek amacıyla kullanılır.</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>More information:</source>
+        <translation>Daha fazla bilgi:</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 Overview</source>
+        <translation>%1 Genel Bakış</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>%1 security policy</source>
+        <translation>%1 güvenlik ilkesi</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/environment.cpp" line="+817" />
+        <location filename="../../../src/libs/utils/namevalueitem.cpp" line="+105" />
+        <source>No changes to apply.</source>
+        <translation>Uygulanacak değişiklik yok.</translation>
+    </message>
+    <message>
+        <location line="+50" />
+        <source>Failed to get environment variables from device: %1</source>
+        <extracomment>%1 = error message</extracomment>
+        <translation>Aygıttan ortam değişkenleri alınamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+20" />
+        <location line="+18" />
+        <source>Failed to get environment variables from &quot;%1&quot;: %2</source>
+        <extracomment>%1 = batch file path, %2 = error message</extracomment>
+        <translation>&quot;%1&quot; konumundan ortam değişkenleri alınamadı: %2</translation>
+    </message>
+    <message>
+        <location line="+11" />
+        <location line="+8" />
+        <source>Failed to get environment variables from &quot;%1&quot;: Unexpected output</source>
+        <extracomment>%1 = batch file path</extracomment>
+        <translation>&quot;%1&quot; konumundan ortam değişkenleri alınamadı: Beklenmeyen çıktı</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/groupedmodel.cpp" line="-386" />
+        <source>%1 (Default)</source>
+        <extracomment>%1 = some list item&apos;s name</extracomment>
+        <translation>%1 (Varsayılan)</translation>
+    </message>
+    <message>
+        <location line="+335" />
+        <source>Clone</source>
+        <translation>Klonla</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Make Default</source>
+        <translation>Varsayılan Yap</translation>
+    </message>
+    <message>
+        <location line="+47" />
+        <source>Restore</source>
+        <translation>Geri Yükle</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/plaintextedit/widgettextcontrol.cpp" line="-41" />
+        <source>&amp;Undo</source>
+        <translation>&amp;Geri Al</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&amp;Redo</source>
+        <translation>Yin&amp;ele</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>Cu&amp;t</source>
+        <translation>Ke&amp;s</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>&amp;Copy</source>
+        <translation>&amp;Kopyala</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>Copy &amp;Link Location</source>
+        <translation>Bağlantı &amp;Konumunu Kopyala</translation>
+    </message>
+    <message>
+        <location line="+8" />
+        <source>&amp;Paste</source>
+        <translation>&amp;Yapıştır</translation>
+    </message>
+    <message>
+        <location line="+15" />
+        <source>Select All</source>
+        <translation>Tümünü Seç</translation>
+    </message>
+    <message>
+        <location line="+1011" />
+        <source>Insert Unicode Control Character</source>
+        <translation>Unicode Denetim Karakteri Ekle</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/portlist.cpp" line="+229" />
+        <source>Remote error output was: %1</source>
+        <translation>Uzaktaki hata çıktısı: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/processinfo.cpp" line="+41" />
+        <source>&quot;%1&quot; does not exist.</source>
+        <translation>&quot;%1&quot; yok.</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>&quot;find&quot; is not an existing executable</source>
+        <translation>&quot;find&quot; mevcut bir çalıştırılabilir dosya değil</translation>
+    </message>
+    <message>
+        <location line="+21" />
+        <location line="+54" />
+        <location line="+4" />
+        <location line="+64" />
+        <source>Failed to run %1: %2</source>
+        <translation>%1 çalıştırılamadı: %2</translation>
+    </message>
+    <message>
+        <location line="-41" />
+        <source>&quot;ps&quot; is not an existing executable.</source>
+        <translation>&quot;ps&quot; mevcut bir çalıştırılabilir dosya değil.</translation>
+    </message>
+    <message>
+        <location line="+34" />
+        <source>&quot;pidin&quot; is not an existing executable.</source>
+        <translation>&quot;pidin&quot; mevcut bir çalıştırılabilir dosya değil.</translation>
+    </message>
+    <message>
+        <location line="+44" />
+        <source>Failed to run ps: %1</source>
+        <translation>ps çalıştırılamadı: %1</translation>
+    </message>
+    <message>
+        <location line="+4" />
+        <source>Failed to run pidin: %1
+%2</source>
+        <translation>pidin çalıştırılamadı: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Failed to check /proc: %1
+%2</source>
+        <translation>/proc denetlenemedi: %1
+%2</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Failed to create snapshot: %1</source>
+        <translation>Anlık görüntü oluşturulamadı: %1</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/progressdialog.cpp" line="+14" />
+        <source>Cancel</source>
+        <translation>İptal</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/result.cpp" line="+76" />
+        <source>Internal error: %1.</source>
+        <translation>Dahili hata: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Not implemented error: %1.</source>
+        <translation>Uygulanmadı hatası: %1.</translation>
+    </message>
+    <message>
+        <location line="+2" />
+        <source>Unknown error: %1.</source>
+        <translation>Bilinmeyen hata: %1.</translation>
+    </message>
+    <message>
+        <location line="+19" />
+        <source>Unknown reason.</source>
+        <translation>Bilinmeyen neden.</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/terminalcommand.cpp" line="+146" />
+        <source>Open Command Prompt Here</source>
+        <translation>Komut İstemini Burada Aç</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Open Terminal Here</source>
+        <translation>Terminali Burada Aç</translation>
+    </message>
+    <message>
+        <location line="+7" />
+        <source>The terminal emulator to use for opening a terminal.</source>
+        <translation>Terminal açmak için kullanılacak terminal öykünücüsü.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>Command:</source>
+        <translation>Komut:</translation>
+    </message>
+    <message>
+        <location line="+6" />
+        <source>Command line arguments used for &quot;%1&quot;.</source>
+        <translation>&quot;%1&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;%1&quot; arguments:</source>
+        <translation>&quot;%1&quot; bağımsız değişkenleri:</translation>
+    </message>
+    <message>
+        <location line="+5" />
+        <source>Command line arguments used for &quot;Run in terminal&quot;.</source>
+        <translation>&quot;Terminalde çalıştır&quot; için kullanılan komut satırı bağımsız değişkenleri.</translation>
+    </message>
+    <message>
+        <location line="+1" />
+        <source>&quot;Run in Terminal&quot; arguments:</source>
+        <translation>&quot;Terminalde Çalıştır&quot; bağımsız değişkenleri:</translation>
+    </message>
+    <message>
+        <location line="+17" />
+        <source>Run in Terminal</source>
+        <translation>Terminalde Çalıştır</translation>
+    </message>
+    <message>
+        <location line="+9" />
+        <source>Customize...</source>
+        <translation>Özelleştir...</translation>
+    </message>
+    <message>
+        <location line="+3" />
+        <source>Presets</source>
+        <translation>Ön ayarlar</translation>
+    </message>
+    <message>
+        <location line="+29" />
+        <source>Select Terminal Emulator</source>
+        <translation>Terminal Öykünücüsü Seç</translation>
+    </message>
+    <message>
+        <location filename="../../../src/libs/utils/unarchiver.cpp" line="+167" />
+        <source>Not an archive.</source>
+        <translation>Bir arşiv değil.</translation>
+    </message>
+    <message>
+        <location line="+68" />
+        <source>Canceled.</source>
+        <translation>İptal edildi.</translation>
     </message>
 </context>
 <context>
@@ -27652,6 +32456,14 @@ Lines starting with &quot;##&quot; will be treated as comments.</source>
         <source></source>
         <comment>Snippets are text fragments that can be inserted into an editor via the usual completion mechanics using a trigger text. The translated text (trigger variant) is used to disambiguate between snippets with the same trigger.</comment>
         <translation></translation>
+    </message>
+</context>
+<context>
+    <name>Tr::Tr</name>
+    <message>
+        <location filename="../../../src/plugins/projectexplorer/customparserssettingspage.cpp" line="-14" />
+        <source>Error saving parsers: %1</source>
+        <translation>Ayrıştırıcılar kaydedilirken hata: %1</translation>
     </message>
 </context>
 </TS>
