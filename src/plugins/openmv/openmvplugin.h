@@ -831,6 +831,11 @@ private:
     QByteArray m_mcpTerminalLog;
     qint64 m_mcpTerminalDropped = 0;
     QString m_lastScriptError;
+    // MCP: the running script is one the agent sent (openmv_script_run's
+    // `text`), not the editor's: its errors go to the agent only (its <stdin>
+    // is not the current editor's script). Its `name`, for lastError.
+    bool m_agentScript = false;
+    QString m_agentScriptName;
     // MCP: what the Frame Buffer title shows, kept for openmv_framebuffer_get.
     QSize m_mcpFbResolution;
     QRect m_mcpFbRoi;

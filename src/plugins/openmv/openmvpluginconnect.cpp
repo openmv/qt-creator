@@ -5067,6 +5067,7 @@ void OpenMVPlugin::startClicked()
             m_channelsView->clear();
             clearErrorMark();
 
+            m_agentScript = false; // the editor's script (see errorFilter())
             m_iodevice->scriptExec(stripComments(contents));
             m_iodevice->jpegEnable(jpgCompressEnabled());
             applyFrameBufferSource();

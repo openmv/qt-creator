@@ -832,6 +832,9 @@ void OpenMVPlugin::registerMcpTools()
                         call.note(QStringLiteral("stopped the running script first"));
                     }
 
+                    m_agentScript = true;
+                    m_agentScriptName = args.value(QStringLiteral("name")).toString();
+                    clearErrorMark();
                     m_iodevice->scriptExec(args.value(QStringLiteral("text")).toString().toUtf8());
                     bool done = awaitSignal(m_iodevice, &OpenMVPluginIO::scriptExecDone, call.remainingMs());
                     bool timedOut = m_iodevice->getTimeout();

@@ -4866,7 +4866,10 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
 
         TextEditor::BaseTextEditor *editor = Q_NULLPTR;
 
-        if(!builtinModule)
+        // A script the agent sent is not the editor's: <stdin> is not the current
+        // editor's script, and the agent gets the error (lastError) and the chat
+        // shows it, so neither the editor nor a dialog is touched.
+        if(!builtinModule && !m_agentScript)
         {
             Core::EditorManager::cutForwardNavigationHistory();
             Core::EditorManager::addCurrentPositionToNavigationHistory();
@@ -4910,9 +4913,14 @@ void OpenMVPlugin::errorFilter(const QByteArray &data)
             connect(editor->textDocument(), &QObject::destroyed, this, &OpenMVPlugin::clearErrorMark, Qt::UniqueConnection);
         }
 
-        OMVUI::asyncBox(QMessageBox::Critical, Core::ICore::dialogParent(), QString(), errorMessage);
+        if(!m_agentScript)
+        {
+            OMVUI::asyncBox(QMessageBox::Critical, Core::ICore::dialogParent(), QString(), errorMessage);
+        }
 
-        m_lastScriptError = QStringLiteral("%1:%2: %3").arg(fileName).arg(lineNumber).arg(errorMessage);
+        const QString errorFile = (m_agentScript && (fileName == QStringLiteral("<stdin>")) && !m_agentScriptName.isEmpty())
+            ? m_agentScriptName : fileName;
+        m_lastScriptError = QStringLiteral("%1:%2: %3").arg(errorFile).arg(lineNumber).arg(errorMessage);
 
         m_errorFilterString = m_errorFilterString.mid(index + match.capturedLength(0));
     }
