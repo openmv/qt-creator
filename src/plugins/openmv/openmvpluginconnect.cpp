@@ -4442,6 +4442,20 @@ void OpenMVPlugin::connectClicked(bool forceBootloader,
         // box's event loop while m_working was still true, so updateCam()
         // silently ignored "Yes".
         deferNormal([this, promptFirmwareUpgrade] {
+            // The N6's CSI can't keep up with the OV5640's ~80 MB/s parallel bursts
+            // yet (needs the H7-style MDMA line-buffer FIFO), so every snapshot()
+            // times out. Remove once the N6 supports it.
+            if ((!m_autoConnect) && (m_boardType == QStringLiteral("N6"))
+            && m_sensorType.split(QStringLiteral(", ")).contains(QStringLiteral("OV5640")))
+            {
+                OMVUI::warning(Core::ICore::dialogParent(),
+                    Tr::tr("Connect"),
+                    Tr::tr("The OpenMV N6 does not support the OV5640 sensor yet. The OV5640 sends image "
+                           "data faster than the N6 can currently receive it, so taking a snapshot will fail "
+                           "with \"Frame capture has timed out\".\n\n"
+                           "Please use a different camera module with the OpenMV N6 for now."));
+            }
+
             if ((!m_autoConnect) && (m_boardType == QStringLiteral("IMXRT1060")) && isMacHidAccessDeniedForOpenMVIDE())
             {
                 OMVUI::warning(Core::ICore::dialogParent(),
