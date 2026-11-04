@@ -33,6 +33,8 @@
 #include <QDir>
 #include <QPromise>
 #include <QPushButton>
+#include <QFontDatabase> // OPENMV-DIFF
+#include <QRegularExpression> // OPENMV-DIFF
 #include <QStandardItemModel>
 #include <QUuid>
 #include <QtTaskTree/QNetworkReplyWrapper>
@@ -49,6 +51,49 @@ using SharedTempFile = std::shared_ptr<TemporaryFilePath>;
 // Persistent icon cache: stores themed SVGs under userResourcePath("acpclient/icons")
 // keyed by a hash of the URL. Survives restarts.
 
+// OPENMV-DIFF //
+// Qt's SVG renderer takes a quoted font-family list ("'SF Mono', 'Fira Code',
+// monospace", as some registry icons carry) as one family name minus its first
+// and last character, and QFontDatabase then warns about that name on startup
+// while it builds its alias table. Replace each list with the first family that
+// is installed, or the system's fixed/general font for a generic name, so the
+// renderer always asks for a family that exists.
+static QString installedFamilyFor(const QString &familyList)
+{
+    QStringList generic;
+    for (QString family : familyList.split(QLatin1Char(','))) {
+        family = family.trimmed();
+        if (family.size() >= 2 && (family.startsWith(QLatin1Char('\'')) || family.startsWith(QLatin1Char('"')))
+            && family.endsWith(family.at(0)))
+            family = family.mid(1, family.size() - 2);
+        if (family.isEmpty())
+            continue;
+        if (QFontDatabase::hasFamily(family))
+            return family;
+        generic << family.toLower();
+    }
+    const bool mono = generic.contains(QLatin1String("monospace")) || generic.contains(QLatin1String("ui-monospace"));
+    return QFontDatabase::systemFont(mono ? QFontDatabase::FixedFont : QFontDatabase::GeneralFont).family();
+}
+
+static QByteArray sanitizeSvgFontFamilies(QByteArray data)
+{
+    if (!data.contains("font-family"))
+        return data;
+    static const QRegularExpression list(QStringLiteral(R"((font-family\s*[:=]\s*"?)([^;"]+))"));
+    QString text = QString::fromUtf8(data);
+    QString out;
+    qsizetype last = 0;
+    for (QRegularExpressionMatchIterator it = list.globalMatch(text); it.hasNext();) {
+        const QRegularExpressionMatch m = it.next();
+        out += text.mid(last, m.capturedStart(2) - last) + installedFamilyFor(m.captured(2));
+        last = m.capturedEnd(2);
+    }
+    out += text.mid(last);
+    return out.toUtf8();
+}
+// OPENMV-DIFF //
+
 static Result<> createSvgFile(
     QByteArray data,
     const FilePath &destPath,
@@ -56,6 +101,7 @@ static Result<> createSvgFile(
     const std::shared_ptr<QPromise<QIcon>> &promise)
 {
     data.replace("currentColor", themeColor.toUtf8());
+    data = sanitizeSvgFontFamilies(data); // OPENMV-DIFF
     co_await destPath.parentDir().ensureWritableDir();
     co_await destPath.writeFileContents(data);
 
@@ -90,6 +136,13 @@ static void fetchIconToPersistentCache(const QString &url, const std::shared_ptr
     if (destPath.isFile()) {
         // OPENMV-DIFF //
         // promise->addResult(QIcon(destPath.toFSPathString()));
+        //
+        // Icons cached before font-family lists were sanitized are fixed in place.
+        if (const Result<QByteArray> cached = destPath.fileContents()) {
+            const QByteArray fixed = sanitizeSvgFontFamilies(*cached);
+            if (fixed != *cached)
+                destPath.writeFileContents(fixed);
+        }
         const QIcon icon(destPath.toFSPathString());
         loadedIcons.insert(destPath, icon);
         promise->addResult(icon);
