@@ -64,7 +64,9 @@ using namespace Utils;
 namespace Core::Internal {
 
 const char pageKeyC[] = "General/LastPreferencePage";
-const char sortKeyC[] = "General/SortCategories";
+// OPENMV-DIFF //
+// const char sortKeyC[] = "General/SortCategories";
+// OPENMV-DIFF //
 const int categoryIconSize = 24;
 
 class SettingsTab;

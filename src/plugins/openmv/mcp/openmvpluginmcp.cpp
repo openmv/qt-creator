@@ -1964,7 +1964,7 @@ void OpenMVPlugin::registerMcpTools()
     // The Dataset Editor dock: a folder of <class>.class folders of numbered
     // JPEG snapshots of the frame buffer, plus labels.txt and a capture script.
 
-    auto triggerCommand = [this, runFlow](OMVMCP::Call &call, const char *id) -> bool {
+    auto triggerCommand = [runFlow](OMVMCP::Call &call, const char *id) -> bool {
         Core::Command *command = Core::ActionManager::command(Utils::Id::fromString(QString::fromLatin1(id)));
         if(!command || !command->action() || !command->action()->isEnabled()) return false;
         runFlow(call, [command] { command->action()->trigger(); });
@@ -2019,7 +2019,7 @@ void OpenMVPlugin::registerMcpTools()
                 .description(QStringLiteral("Creates a new dataset in `path` exactly like Tools > Dataset Editor > New Dataset: writes a dataset_capture_script.py, opens it in the editor and opens the Dataset Editor on the folder. A non-empty folder is wiped first, which needs confirm:true."))
                 .annotations(ToolAnnotations{}.readOnlyHint(false).destructiveHint(true))
                 .inputSchema(in),
-            [this, triggerCommand, gateDestructive, datasetInfo](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
+            [triggerCommand, gateDestructive, datasetInfo](const CallToolRequestParams &params, const Mcp::ToolInterface &toolInterface) -> Utils::Result<> {
                 auto body = [&]() -> CallToolResult {
                 const QJsonObject args = params.argumentsAsObject();
                 const QString path = args.value(QStringLiteral("path")).toString();

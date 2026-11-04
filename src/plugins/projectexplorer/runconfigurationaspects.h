@@ -157,8 +157,15 @@ class PROJECTEXPLORER_EXPORT RunAsRootAspect : public Utils::BoolAspect
     Q_OBJECT
 
 public:
-    [[deprecated("Use RunAsAspect instead")]] RunAsRootAspect(
-        Utils::AspectContainer *container = nullptr);
+    // OPENMV-DIFF //
+    // [[deprecated("Use RunAsAspect instead")]] RunAsRootAspect(
+    //     Utils::AspectContainer *container = nullptr);
+    //
+    // The attribute fires from moc's own metatype registration of the class
+    // (-Wdeprecated-declarations in every TU that includes this header); OpenMV
+    // never uses the aspect, so the deprecation is dropped rather than warned.
+    RunAsRootAspect(Utils::AspectContainer *container = nullptr);
+    // OPENMV-DIFF //
 };
 
 class PROJECTEXPLORER_EXPORT RunAsAspect : public Utils::AspectContainer

@@ -28,6 +28,13 @@ using namespace Utils;
 using namespace std::chrono;
 using namespace std::chrono_literals;
 
+// OPENMV-DIFF //
+// gcc 13 (arm64 Linux) reports a false -Wmaybe-uninitialized when a QueueItem,
+// whose std::optional<JavaScriptOutput> may be disengaged, is moved.
+QT_WARNING_PUSH
+QT_WARNING_DISABLE_GCC("-Wmaybe-uninitialized")
+// OPENMV-DIFF //
+
 static const char s_initData[] = R"(
     function abs(x) { return Math.abs(x); }
     function acos(x) { return Math.acos(x); }
@@ -436,3 +443,7 @@ LocatorMatcherTasks JavaScriptFilter::matchers()
 } // namespace Core::Internal
 
 #include "javascriptfilter.moc"
+
+// OPENMV-DIFF //
+QT_WARNING_POP
+// OPENMV-DIFF //

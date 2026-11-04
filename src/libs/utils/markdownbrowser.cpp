@@ -892,7 +892,7 @@ void MarkdownBrowser::postProcessDocument(bool firstTime)
     const auto inFrame = [this](const QTextBlock &block) {
         return block.isValid() && QTextCursor(block).currentFrame() != document()->rootFrame();
     };
-    const auto collapse = [&updateBlocker](const QTextBlock &block) {
+    const auto collapse = [](const QTextBlock &block) {
         QTextBlockFormat format = block.blockFormat();
         format.setLineHeight(0, QTextBlockFormat::FixedHeight);
         format.setTopMargin(0);

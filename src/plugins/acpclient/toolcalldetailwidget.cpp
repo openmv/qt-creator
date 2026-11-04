@@ -632,7 +632,7 @@ void ToolCallDetailWidget::addImagesFrom(const QJsonValue &value)
             addImage(data.toLatin1());
         return;
     }
-    for (const QString key : {QStringLiteral("content"), QStringLiteral("resource")})
+    for (const QString &key : {QStringLiteral("content"), QStringLiteral("resource")})
         addImagesFrom(object.value(key));
 }
 

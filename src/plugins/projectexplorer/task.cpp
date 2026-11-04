@@ -87,8 +87,16 @@ static QIcon taskTypeIcon(Task::TaskType t)
                              Utils::Icons::CRITICAL.icon(),
                              Utils::Icons::WARNING.icon()};
 
-    if (t < 0 || t > 2)
+    // OPENMV-DIFF //
+    // if (t < 0 || t > 2)
+    //     t = Task::Unknown;
+    //
+    // TaskType is a char enum; where char is unsigned (arm64 Linux) gcc flags
+    // "t < 0" as always false (-Wtype-limits). One unsigned comparison covers
+    // both a negative value (wraps high) and one past the icon table.
+    if (unsigned(t) > 2u)
         t = Task::Unknown;
+    // OPENMV-DIFF //
 
     return icons[t];
 }

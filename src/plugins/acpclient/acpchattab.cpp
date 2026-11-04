@@ -836,13 +836,17 @@ QString AcpChatTab::toolTip() const
 }
 // OPENMV-DIFF //
 
-static IDocument *currentNonTemporaryDocument()
-{
-    IDocument *currentDocument = EditorManager::currentDocument();
-    if (currentDocument && (currentDocument->filePath().isEmpty() || currentDocument->isTemporary()))
-        return nullptr;
-    return currentDocument;
-}
+// OPENMV-DIFF //
+// Its only caller (in showSessionPicker) is commented out.
+//
+// static IDocument *currentNonTemporaryDocument()
+// {
+//     IDocument *currentDocument = EditorManager::currentDocument();
+//     if (currentDocument && (currentDocument->filePath().isEmpty() || currentDocument->isTemporary()))
+//         return nullptr;
+//     return currentDocument;
+// }
+// OPENMV-DIFF //
 
 void AcpChatTab::showSessionPicker()
 {

@@ -31,7 +31,11 @@ constexpr OsType hostOs()
     return OsTypeWindows;
 #elif defined(Q_OS_LINUX)
     return OsTypeLinux;
-#elif defined(Q_OS_MAC)
+// OPENMV-DIFF //
+// #elif defined(Q_OS_MAC)
+// OPENMV-DIFF //
+#elif defined(Q_OS_MACOS) // Q_OS_MAC is deprecated in Qt 6.12 (warns in Objective-C++ TUs)
+// OPENMV-DIFF //
     return OsTypeMac;
 #elif defined(Q_OS_UNIX)
     return OsTypeOtherUnix;

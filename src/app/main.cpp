@@ -106,27 +106,26 @@ const char HELP_OPTION4[] = "--help";
 const char VERSION_OPTION[] = "-version";
 const char VERSION_OPTION2[] = "--version";
 const char CLIENT_OPTION[] = "-client";
-const char CLIENTID_OPTION[] = "-clientid";
+// const char CLIENTID_OPTION[] = "-clientid";
 const char SETTINGS_OPTION[] = "-settingspath";
 const char INSTALL_SETTINGS_OPTION[] = "-installsettingspath";
 // OPENMV-DIFF //
 // OpenMV strips command-line option handling down to -language (see parseCommandLine
-// below). The constants below are kept defined because upstream 20.0.2 code (help/
-// theme/single-instance paths) still references several of them; leaving them defined
-// is harmless since the stripped parser never acts on the disabled ones.
+// below). Only the constants upstream 20.0.2 code (help/theme paths) still references
+// stay defined; the rest are commented out so they don't warn as unused.
 // OPENMV-DIFF //
-const char TEST_OPTION[] = "-test";
-const char STYLE_OPTION[] = "-style";
-const char QML_LITE_DESIGNER_OPTION[] = "-qml-lite-designer";
-const char TEMPORARY_CLEAN_SETTINGS1[] = "-temporarycleansettings";
-const char TEMPORARY_CLEAN_SETTINGS2[] = "-tcs";
-const char PID_OPTION[] = "-pid";
-const char BLOCK_OPTION[] = "-block";
-const char PLUGINPATH_OPTION[] = "-pluginpath";
+// const char TEST_OPTION[] = "-test";
+// const char STYLE_OPTION[] = "-style";
+// const char QML_LITE_DESIGNER_OPTION[] = "-qml-lite-designer";
+// const char TEMPORARY_CLEAN_SETTINGS1[] = "-temporarycleansettings";
+// const char TEMPORARY_CLEAN_SETTINGS2[] = "-tcs";
+// const char PID_OPTION[] = "-pid";
+// const char BLOCK_OPTION[] = "-block";
+// const char PLUGINPATH_OPTION[] = "-pluginpath";
 const char LANGUAGE_OPTION[] = "-language";
 const char LIST_THEMES_OPTION[] = "-list-themes";
-const char USER_LIBRARY_PATH_OPTION[] = "-user-library-path"; // hidden option for qtcreator.sh
-const char TRACE_ON_WARNING_OPTION[] = "-trace-on-warning";
+// const char USER_LIBRARY_PATH_OPTION[] = "-user-library-path"; // hidden option for qtcreator.sh
+// const char TRACE_ON_WARNING_OPTION[] = "-trace-on-warning";
 
 // Helpers for displaying messages. Note that there is no console on Windows.
 
