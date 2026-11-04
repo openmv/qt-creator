@@ -139,6 +139,25 @@ void AcpStdioTransport::start()
     }
     // OPENMV-DIFF //
 
+    // OPENMV-DIFF //
+    // A command found only through the extra search paths (/opt/homebrew/bin
+    // for an app launched from the Dock, say) may be a script that resolves
+    // its interpreter again via "#!/usr/bin/env node", which fails with the
+    // launcher's PATH. Put the command's own directory on the child's PATH.
+    if (!bundledEnv && !m_cmd.executable().isAbsolutePath()) {
+        const FilePath found = m_cmd.executable().searchInPath(FileUtils::usefulExtraSearchPaths());
+        if (found.isExecutableFile()) {
+            Environment env = m_env ? *m_env : found.deviceEnvironment();
+            const FilePath dir = found.parentDir();
+            if (!env.path().contains(dir)) {
+                env.prependOrSetPath(dir);
+                bundledEnv = env;
+                qCInfo(logStdio) << "Adding" << dir.toUserOutput() << "to PATH for" << m_cmd.executable().toUserOutput();
+            }
+        }
+    }
+    // OPENMV-DIFF //
+
     FilePath executable = m_cmd.executable();
     if (executable.isEmpty()) {
         emit errorOccurred(Tr::tr("No command configured for ACP server."));
