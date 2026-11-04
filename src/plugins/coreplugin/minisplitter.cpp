@@ -107,6 +107,11 @@ public:
         // composited from the parent automatically. The 1px line look comes from painting only
         // contentsRect(). Masks left stale pixels behind whenever they shrank (the uncovered
         // region belonged to nobody who repainted it).
+        //
+        // Hover events only arrive with WA_Hover set. The Fusion style sets it for splitter
+        // handles when polishing widgets (so the halo worked on Windows/Linux), the macOS style
+        // does not -- set it here so the halo and cursor work the same everywhere.
+        setAttribute(Qt::WA_Hover, true);
         // OPENMV-DIFF //
     }
 
