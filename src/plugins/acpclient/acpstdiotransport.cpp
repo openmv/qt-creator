@@ -22,20 +22,32 @@ namespace AcpClient::Internal {
 Utils::FilePath bundledNodeBinDir()
 {
     using namespace Utils;
-    FilePath dir;
+    // The directory holding the node binary: <prefix>/bin on Unix layouts,
+    // the prefix itself on Windows. The host's own layout comes first; the
+    // other ones are tried too so an Intel build under Rosetta, or a build
+    // that shipped only one of them, still finds something that runs.
+    QStringList candidates;
     if (HostOsInfo::isWindowsHost()) {
-        dir = Core::ICore::resourcePath("node/windows");
+        candidates << "node/windows";
     } else if (HostOsInfo::isMacHost()) {
-        dir = Core::ICore::resourcePath(
-            ((HostOsInfo::hostArchitecture() == OsArchArm64) || HostOsInfo::isRunningUnderRosetta())
-                ? QString("node/mac-aarch64/bin") : QString("node/mac/bin"));
+        const bool arm = (HostOsInfo::hostArchitecture() == OsArchArm64) || HostOsInfo::isRunningUnderRosetta();
+        candidates << (arm ? QStringLiteral("node/mac-aarch64/bin") : QStringLiteral("node/mac/bin"))
+                   << (arm ? QStringLiteral("node/mac/bin") : QStringLiteral("node/mac-aarch64/bin"));
     } else if (HostOsInfo::isLinuxHost()) {
         const QString arch = QSysInfo::buildCpuArchitecture();
-        if (arch == "x86_64") dir = Core::ICore::resourcePath("node/linux-x64/bin");
-        else if (arch == "arm") dir = Core::ICore::resourcePath("node/linux-armv7/bin");
-        else if (arch == "arm64") dir = Core::ICore::resourcePath("node/linux-arm64/bin");
+        if (arch == "x86_64") candidates << "node/linux-x64/bin";
+        else if (arch == "arm") candidates << "node/linux-armv7/bin";
+        else if (arch == "arm64") candidates << "node/linux-arm64/bin";
     }
-    return (dir.isEmpty() || !dir.exists()) ? FilePath() : dir;
+    const QString nodeName = HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node");
+    for (const QString &candidate : std::as_const(candidates)) {
+        const FilePath dir = Core::ICore::resourcePath(candidate);
+        if (dir.pathAppended(nodeName).isExecutableFile())
+            return dir;
+    }
+    qWarning() << "OpenMV IDE's bundled Node.js was not found under"
+               << Core::ICore::resourcePath("node").toUserOutput() << "(tried" << candidates << ")";
+    return FilePath();
 }
 
 } // namespace AcpClient::Internal
@@ -139,13 +151,33 @@ void AcpStdioTransport::start()
             // Report the originally configured path in the error message, which is more likely to
             // be helpful to the user than the searched path
             executable = m_cmd.executable();
-            const QString errorMessage
-                = executable.isAbsolutePath()
-                      ? Tr::tr("Command not found: \"%1\". Check that it exists and is executable.")
-                      : Tr::tr(
-                            "Command not found: \"%1\". Check that it is executable and on your "
-                            "PATH.");
-            emit errorOccurred(errorMessage.arg(executable.toUserOutput()));
+            // OPENMV-DIFF //
+            // const QString errorMessage
+            //     = executable.isAbsolutePath()
+            //           ? Tr::tr("Command not found: \"%1\". Check that it exists and is executable.")
+            //           : Tr::tr(
+            //                 "Command not found: \"%1\". Check that it is executable and on your "
+            //                 "PATH.");
+            // emit errorOccurred(errorMessage.arg(executable.toUserOutput()));
+            const QString base = QFileInfo(executable.fileName()).completeBaseName();
+            const bool nodeTool = (base == "npx") || (base == "node") || (base == "npm");
+            QString errorMessage;
+            if (executable.isAbsolutePath()) {
+                errorMessage = Tr::tr("Command not found: \"%1\". Check that it exists and is executable.")
+                                   .arg(executable.toUserOutput());
+            } else if (nodeTool) {
+                // The fallback above found no bundled Node.js either: say where
+                // it looked, since that is the part the user can't guess.
+                errorMessage = Tr::tr("Command not found: \"%1\". It is not on your PATH, and the Node.js "
+                                      "bundled with OpenMV IDE is missing under \"%2\".")
+                                   .arg(executable.toUserOutput(),
+                                        Core::ICore::resourcePath("node").toUserOutput());
+            } else {
+                errorMessage = Tr::tr("Command not found: \"%1\". Check that it is executable and on your "
+                                      "PATH.").arg(executable.toUserOutput());
+            }
+            emit errorOccurred(errorMessage);
+            // OPENMV-DIFF //
             emit finished();
             return;
         }
