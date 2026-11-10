@@ -26,6 +26,7 @@ add_qtc_plugin(OpenMV
     openmvpluginparse.cpp
     openmvplugindoc.cpp
     openmveject.cpp openmveject.h
+    openmvsharedaccess.cpp openmvsharedaccess.h
     openmvpluginserialport.cpp openmvpluginserialport.h
     openmvpluginio.cpp openmvpluginio.h
     views/openmvpluginfb.cpp views/openmvpluginfb.h
@@ -97,7 +98,10 @@ target_sources(OpenMV
 target_link_libraries(OpenMV PRIVATE Qt${QT_VERSION_MAJOR}::GuiPrivate)
 
 if (WIN32)
-    target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32 user32)
+    target_link_libraries(OpenMV PRIVATE setupapi cfgmgr32 user32 advapi32)
+    # The precompiled header undefines CALLBACK and DELETE after including windows.h,
+    # which breaks the COM headers aclapi.h pulls in.
+    set_source_files_properties(openmvsharedaccess.cpp PROPERTIES SKIP_PRECOMPILE_HEADERS ON)
 endif()
 
 # Qt 6.12 no longer provides a zlib target to link against. Qt 6.5 exported

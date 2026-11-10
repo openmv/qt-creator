@@ -42,6 +42,7 @@
 #include "protocol/omv_debug.h"
 #include "protocol/omv_image.h"
 #include "protocol/omv_transport.h"
+#include "openmvsharedaccess.h"
 
 #include <QGuiApplication>
 
@@ -411,6 +412,11 @@ Utils::Result<> OpenMVPlugin::initialize(const QStringList &arguments)
     int minor = 0;
     int patch = 0;
     QJsonObject resourcesSettings;
+
+    // The shared resources are updated by whichever account runs a new version first,
+    // so every account needs to be able to modify what another account copied there.
+    grantUsersModifyAccess(Core::ICore::allUsersResourcePath().parentDir().toFSPathString(),
+                           {Core::ICore::allUsersResourcePath().toFSPathString()});
 
     QFile resourcesSettingsFile(Core::ICore::allUsersResourcePath(QStringLiteral("../%1.json").arg(Core::Constants::IDE_CASED_ID)).toFSPathString());
 
