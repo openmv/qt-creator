@@ -141,6 +141,11 @@ def signFile(file, args):
         return
     print("Success")
 
+def isSigned(file):
+    # Qt's DLLs, for example, already carry their vendor's signature.
+    return signtoolAvailable and \
+        not os.system("signtool verify /pa /q " + file.replace("/", "\\") + " > nul 2>&1")
+
 def try_signFile(file, args=""):
     print("Signing %s... " % file, end='')
     try: signFile(file, args)
@@ -185,9 +190,10 @@ def main():
             try_signFile(target)
     else:
 
-        # Only digitally sign all files on windows during a release...
+        # Only digitally sign all files on windows during a release (each signature
+        # uses up signing quota). Smart App Control refuses to load unsigned DLLs.
         if is_latest_commit_equal_to_tag() and sys.platform.startswith("win"):
-            extensions = ["*.[eE][xX][eE]"] # "*.[dD][lL][lL]"
+            extensions = ["*.[eE][xX][eE]", "*.[dD][lL][lL]"]
             excludeNames = ["dpinst_x86.exe", "dpinst_amd64.exe",
                             "dpinst-x86.exe", "dpinst-amd64.exe",
                             "vcredist_x86.exe", "vcredist_x64.exe"]
@@ -202,8 +208,9 @@ def main():
                 paths = dirnames + filenames
                 for extension in extensions:
                     for path in fnmatch.filter(paths, extension):
-                        if not isExcludedName(path):
-                            try_signFile(os.path.join(dirpath, path))
+                        file = os.path.join(dirpath, path)
+                        if not isExcludedName(path) and not isSigned(file):
+                            try_signFile(file)
 
         elif sys.platform == "darwin":
             for dirpath, dirnames, filenames in os.walk(target):
