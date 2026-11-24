@@ -41,6 +41,8 @@
 #include <utils/qtcprocess.h>
 #include <utils/theme/theme.h>
 
+#include <QCryptographicHash>
+
 #ifdef Q_OS_WIN
 #include <windows.h>
 #endif
@@ -55,6 +57,21 @@ namespace OpenMV {
 namespace Internal {
 
 QMutex imx_working;
+
+// spsdk caches its device database in one per-user folder keyed only by the
+// spsdk version, and fingerprints it by the data files' mtimes. Every IDE
+// install (release, dev build, a second copy) has different mtimes, so they
+// keep invalidating each other's cache; the rebuild that follows takes
+// seconds (under a 10s FileLock) and makes the first bootloader probe after
+// switching installs time out. Give each spsdk install its own cache.
+static QString imxSpsdkCacheFolder()
+{
+    const QByteArray key = QCryptographicHash::hash(
+        Core::ICore::resourcePath(QStringLiteral("spsdk")).toFSPathString().toUtf8(),
+        QCryptographicHash::Sha1).toHex().left(12);
+    return Core::ICore::allUsersResourcePath(QStringLiteral("spsdk-cache/") +
+        QString::fromLatin1(key)).toFSPathString();
+}
 
 // The bundled python interpreter and the spsdk package dir for this host, or
 // empty FilePaths when unsupported. (Factored out of the three call sites that
@@ -205,6 +222,7 @@ Utils::Process *imxArmCatcher(const QJsonObject &obj, const QString &pidvidKey,
     Utils::Environment env = process->environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
+    env.prependOrSet("SPSDK_CACHE_FOLDER", imxSpsdkCacheFolder());
     env.prependOrSet("PYTHONPATH", spsdk.path());
     process->setEnvironment(env);
 
@@ -541,8 +559,11 @@ bool imxGetDevice(QJsonObject &obj)
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
+    env.prependOrSet("SPSDK_CACHE_FOLDER", imxSpsdkCacheFolder());
 
-    std::chrono::seconds timeout(10);
+    // Generous: a cold spsdk database rebuild alone can take ~10s. A missing
+    // device makes blhost fail fast, so this only bounds a hung probe.
+    std::chrono::seconds timeout(30);
     process.setProcessChannelMode(QProcess::MergedChannels);
 
     Utils::FilePath pythonPath, binary;
@@ -648,6 +669,7 @@ bool imxDownloadBootloaderAndFirmware(QJsonObject &obj, bool forceFlashFSErase, 
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
+    env.prependOrSet("SPSDK_CACHE_FOLDER", imxSpsdkCacheFolder());
 
     Utils::QtcSettings *settings = Core::ICore::settings();
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), Tr::tr("Flashing Firmware"), process, settings, QStringLiteral(LAST_LOADERDIALOG_TERMINAL_WINDOW_GEOMETRY),
@@ -1536,6 +1558,7 @@ bool imxDownloadFirmware(QJsonObject &obj, bool forceFlashFSErase, bool justEras
     Utils::Environment env = process.environment();
     env.prependOrSet("PYTHONIOENCODING", QStringLiteral("utf-8"));
     env.prependOrSet("PYTHONPYCACHEPREFIX", Core::ICore::allUsersResourcePath(QStringLiteral("pycache")).toFSPathString());
+    env.prependOrSet("SPSDK_CACHE_FOLDER", imxSpsdkCacheFolder());
 
     Utils::QtcSettings *settings = Core::ICore::settings();
     LoaderDialog *dialog = new LoaderDialog(Tr::tr("NXP IMX"), ((romfsAccess == OPENMV_ROMFS_READ) ? Tr::tr("Read ROMFS") :
