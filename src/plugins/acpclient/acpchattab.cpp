@@ -547,8 +547,12 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         m_chatPanel->setAgentInfo(name, version, iconUrl);
         updateTitle();
     });
+    // OPENMV-DIFF //
+    // connect(m_controller, &AcpChatController::authenticationRequired,
+    //         this, [this](const QList<Acp::AuthMethod> &methods) {
     connect(m_controller, &AcpChatController::authenticationRequired,
-            this, [this](const QList<Acp::AuthMethod> &methods) {
+            this, [this](const QList<AuthChoice> &methods) {
+    // OPENMV-DIFF //
         // Show auth inline in chat instead of a separate page
         m_stack->setCurrentIndex(2);
         m_chatPanel->addAuthenticationRequest(methods);
@@ -559,6 +563,15 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         m_chatPanel->showAuthenticationError(
             Tr::tr("Authentication failed: %1").arg(error));
     });
+    // OPENMV-DIFF //
+    connect(m_controller, &AcpChatController::authenticationInProgress,
+            m_chatPanel, &ChatPanel::showAuthenticationProgress);
+    connect(m_controller, &AcpChatController::authenticationSucceeded,
+            this, [this](const QString &message) {
+        m_chatPanel->resolveAuthentication(message);
+        m_chatPanel->setSendEnabled(true);
+    });
+    // OPENMV-DIFF //
     // OPENMV-DIFF //
     // A rename elsewhere (the session picker, or another tab on the same session).
     connect(&AcpSettings::instance(), &AcpSettings::chatTitleChanged,
@@ -1308,6 +1321,23 @@ void AcpChatTab::showEvent(QShowEvent *event)
         connectToConfiguredServer(m_currentServerId, m_currentServerName);
         revealCancelLater(); // the IDE reopened this chat, the user didn't pick it
     }
+}
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+bool AcpChatTab::canSignIn() const
+{
+    return m_controller->isInitialized() && m_controller->canSignIn();
+}
+
+QString AcpChatTab::agentDisplayName() const
+{
+    return m_controller->agentName().isEmpty() ? m_currentServerName : m_controller->agentName();
+}
+
+void AcpChatTab::requestSignIn()
+{
+    m_controller->requestSignIn();
 }
 // OPENMV-DIFF //
 

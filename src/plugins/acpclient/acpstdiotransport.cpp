@@ -59,6 +59,73 @@ using namespace Utils;
 
 namespace AcpClient::Internal {
 
+// OPENMV-DIFF //
+AgentLaunch resolveAgentLaunch(const Utils::CommandLine &cmdIn,
+                               const std::optional<Utils::Environment> &envIn)
+{
+    using namespace Utils;
+    CommandLine resolved = cmdIn;
+    std::optional<Environment> bundledEnv;
+    // Registry agents launch through npx/node/npm. When none is installed on
+    // the machine, fall back to the Node.js OpenMV IDE ships (for Copilot) and
+    // put its bin directory first on PATH so "#!/usr/bin/env node" resolves.
+    // The transport resolves before its existence check, so that check sees the
+    // real command.
+    {
+        const QString tool = cmdIn.executable().fileName();
+        const bool nodeTool = (tool == "npx") || (tool == "node") || (tool == "npm")
+                              || (tool == "npx.cmd") || (tool == "node.exe") || (tool == "npm.cmd");
+        if (nodeTool && !cmdIn.executable().isAbsolutePath()
+            && !cmdIn.executable().searchInPath(FileUtils::usefulExtraSearchPaths()).isExecutableFile()) {
+            const FilePath binDir = bundledNodeBinDir();
+            if (!binDir.isEmpty()) {
+                const QString base = QFileInfo(tool).completeBaseName();
+                const FilePath node = binDir.pathAppended(HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node"));
+                // npm/npx are JavaScript: run their CLI through the bundled node
+                // rather than the bin/ launcher (a copied symlink that no longer
+                // finds its own lib/). Layouts: <prefix>/lib/node_modules/npm on
+                // Unix, <prefix>/node_modules/npm on Windows.
+                const FilePath npmBin = HostOsInfo::isWindowsHost()
+                    ? binDir.pathAppended("node_modules/npm/bin")
+                    : binDir.parentDir().pathAppended("lib/node_modules/npm/bin");
+                CommandLine cmd = cmdIn;
+                if (base == "node" && node.exists()) {
+                    cmd.setExecutable(node);
+                } else if ((base == "npx" || base == "npm") && node.exists()
+                           && npmBin.pathAppended(base + "-cli.js").exists()) {
+                    cmd = CommandLine(node, {npmBin.pathAppended(base + "-cli.js").path()});
+                    cmd.addArgs(cmdIn.arguments(), CommandLine::Raw);
+                }
+                if (cmd.executable() != cmdIn.executable()) {
+                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << cmd.toUserOutput();
+                    resolved = cmd;
+                    bundledEnv = envIn ? *envIn : resolved.executable().deviceEnvironment();
+                    bundledEnv->prependOrSetPath(binDir);
+                }
+            }
+        }
+    }
+
+    // A command found only through the extra search paths (/opt/homebrew/bin
+    // for an app launched from the Dock, say) may be a script that resolves
+    // its interpreter again via "#!/usr/bin/env node", which fails with the
+    // launcher's PATH. Put the command's own directory on the child's PATH.
+    if (!bundledEnv && !resolved.executable().isAbsolutePath()) {
+        const FilePath found = resolved.executable().searchInPath(FileUtils::usefulExtraSearchPaths());
+        if (found.isExecutableFile()) {
+            Environment env = envIn ? *envIn : found.deviceEnvironment();
+            const FilePath dir = found.parentDir();
+            if (!env.path().contains(dir)) {
+                env.prependOrSetPath(dir);
+                bundledEnv = env;
+                qCInfo(logStdio) << "Adding" << dir.toUserOutput() << "to PATH for" << resolved.executable().toUserOutput();
+            }
+        }
+    }
+    return {resolved, bundledEnv};
+}
+// OPENMV-DIFF //
+
 AcpStdioTransport::AcpStdioTransport(QObject *parent)
     : AcpTransport(parent)
 {}
@@ -98,64 +165,11 @@ void AcpStdioTransport::start()
     m_stderrBuffer.clear();
 
     // OPENMV-DIFF //
-    // Registry agents launch through npx/node/npm. When none is installed on
-    // the machine, fall back to the Node.js OpenMV IDE ships (for Copilot) and
-    // put its bin directory first on PATH so "#!/usr/bin/env node" resolves.
-    // Done before the existence check below so that check sees the real command.
-    std::optional<Environment> bundledEnv;
-    {
-        const QString tool = m_cmd.executable().fileName();
-        const bool nodeTool = (tool == "npx") || (tool == "node") || (tool == "npm")
-                              || (tool == "npx.cmd") || (tool == "node.exe") || (tool == "npm.cmd");
-        if (nodeTool && !m_cmd.executable().isAbsolutePath()
-            && !m_cmd.executable().searchInPath(FileUtils::usefulExtraSearchPaths()).isExecutableFile()) {
-            const FilePath binDir = bundledNodeBinDir();
-            if (!binDir.isEmpty()) {
-                const QString base = QFileInfo(tool).completeBaseName();
-                const FilePath node = binDir.pathAppended(HostOsInfo::isWindowsHost() ? QString("node.exe") : QString("node"));
-                // npm/npx are JavaScript: run their CLI through the bundled node
-                // rather than the bin/ launcher (a copied symlink that no longer
-                // finds its own lib/). Layouts: <prefix>/lib/node_modules/npm on
-                // Unix, <prefix>/node_modules/npm on Windows.
-                const FilePath npmBin = HostOsInfo::isWindowsHost()
-                    ? binDir.pathAppended("node_modules/npm/bin")
-                    : binDir.parentDir().pathAppended("lib/node_modules/npm/bin");
-                CommandLine cmd = m_cmd;
-                if (base == "node" && node.exists()) {
-                    cmd.setExecutable(node);
-                } else if ((base == "npx" || base == "npm") && node.exists()
-                           && npmBin.pathAppended(base + "-cli.js").exists()) {
-                    cmd = CommandLine(node, {npmBin.pathAppended(base + "-cli.js").path()});
-                    cmd.addArgs(m_cmd.arguments(), CommandLine::Raw);
-                }
-                if (cmd.executable() != m_cmd.executable()) {
-                    qCInfo(logStdio) << "Using the bundled Node.js for" << tool << ":" << cmd.toUserOutput();
-                    m_cmd = cmd;
-                    bundledEnv = m_env ? *m_env : m_cmd.executable().deviceEnvironment();
-                    bundledEnv->prependOrSetPath(binDir);
-                }
-            }
-        }
-    }
-    // OPENMV-DIFF //
-
-    // OPENMV-DIFF //
-    // A command found only through the extra search paths (/opt/homebrew/bin
-    // for an app launched from the Dock, say) may be a script that resolves
-    // its interpreter again via "#!/usr/bin/env node", which fails with the
-    // launcher's PATH. Put the command's own directory on the child's PATH.
-    if (!bundledEnv && !m_cmd.executable().isAbsolutePath()) {
-        const FilePath found = m_cmd.executable().searchInPath(FileUtils::usefulExtraSearchPaths());
-        if (found.isExecutableFile()) {
-            Environment env = m_env ? *m_env : found.deviceEnvironment();
-            const FilePath dir = found.parentDir();
-            if (!env.path().contains(dir)) {
-                env.prependOrSetPath(dir);
-                bundledEnv = env;
-                qCInfo(logStdio) << "Adding" << dir.toUserOutput() << "to PATH for" << m_cmd.executable().toUserOutput();
-            }
-        }
-    }
+    // npx/node/npm through the bundled Node.js when the machine has none, and
+    // the command's own directory on PATH (see resolveAgentLaunch).
+    const AgentLaunch launch = resolveAgentLaunch(m_cmd, m_env);
+    m_cmd = launch.command;
+    const std::optional<Environment> bundledEnv = launch.environment;
     // OPENMV-DIFF //
 
     FilePath executable = m_cmd.executable();

@@ -19,6 +19,17 @@ namespace AcpClient::Internal {
 // The bin directory of the Node.js OpenMV IDE ships, or empty: used when the
 // machine has no npx/node/npm of its own.
 Utils::FilePath bundledNodeBinDir();
+
+// How an agent's configured command actually launches: npx/node/npm through
+// the bundled Node.js when the machine has none, and the command's own
+// directory on PATH. `environment` is set only when it had to change.
+struct AgentLaunch
+{
+    Utils::CommandLine command;
+    std::optional<Utils::Environment> environment;
+};
+AgentLaunch resolveAgentLaunch(const Utils::CommandLine &command,
+                               const std::optional<Utils::Environment> &environment);
 // OPENMV-DIFF //
 
 class AcpStdioTransport : public AcpTransport

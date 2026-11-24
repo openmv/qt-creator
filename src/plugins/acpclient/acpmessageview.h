@@ -5,6 +5,10 @@
 
 #include <acp/acp.h>
 
+#include "acpauthchoice.h" // OPENMV-DIFF
+
+#include <QMap> // OPENMV-DIFF
+
 #include <QHash>
 // OPENMV-DIFF //
 #include <QPointer>
@@ -74,16 +78,25 @@ public:
     void addPermissionRequest(const QJsonValue &id,
                               const Acp::RequestPermissionRequest &request);
 
-    void addAuthenticationRequest(const QList<Acp::AuthMethod> &methods);
+    // OPENMV-DIFF //
+    // void addAuthenticationRequest(const QList<Acp::AuthMethod> &methods);
+    // void showAuthenticationError(const QString &error);
+    // void resolveAuthentication();
+    void addAuthenticationRequest(const QList<AuthChoice> &choices);
     void showAuthenticationError(const QString &error);
-    void resolveAuthentication();
+    void showAuthenticationProgress(const QString &message);
+    void resolveAuthentication(const QString &message = {});
+    // OPENMV-DIFF //
 
     SessionPickerWidget *addSessionPicker();
 
 signals:
     void permissionOptionSelected(const QJsonValue &id, const QString &optionId);
     void permissionCancelled(const QJsonValue &id);
-    void authenticateRequested(const QString &methodId);
+    // OPENMV-DIFF //
+    // void authenticateRequested(const QString &methodId);
+    void authenticateRequested(const QString &methodId, const QMap<QString, QString> &values);
+    // OPENMV-DIFF //
 
 protected:
     void resizeEvent(QResizeEvent *event) override;

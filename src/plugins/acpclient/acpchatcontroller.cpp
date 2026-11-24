@@ -17,6 +17,7 @@
 #include <utils/filepath.h>
 // OPENMV-DIFF //
 #include <utils/temporarydirectory.h>
+#include <utils/qtcprocess.h>
 // OPENMV-DIFF //
 
 #include <texteditor/textdocument.h>
@@ -102,16 +103,29 @@ void AcpChatController::connectToServer(const QString &serverId)
     const AcpSettings::ServerInfo &serverInfo = *it;
     m_serverName = serverInfo.name;
     m_iconUrl = serverInfo.iconUrl;
+    m_serverId = serverId; // OPENMV-DIFF
 
     const CommandLine &cmdLine = serverInfo.launchCommand;
     auto *transport = new AcpStdioTransport(this);
     const FilePath command = cmdLine.executable();
     transport->setCommandLine(CommandLine(command, cmdLine.arguments(), CommandLine::Raw));
-    if (serverInfo.envChanges.hasItems()) {
+    // OPENMV-DIFF //
+    // if (serverInfo.envChanges.hasItems()) {
+    //     Environment env = command.deviceEnvironment();
+    //     serverInfo.envChanges.modifyEnvironment(env, nullptr);
+    //     transport->setEnvironment(env);
+    // }
+    //
+    // Plus any environment variables the user gave to sign in (env_var methods).
+    const QMap<QString, QString> signInEnv = signInEnvironment().value(serverId);
+    if (serverInfo.envChanges.hasItems() || !signInEnv.isEmpty()) {
         Environment env = command.deviceEnvironment();
         serverInfo.envChanges.modifyEnvironment(env, nullptr);
+        for (auto it = signInEnv.begin(); it != signInEnv.end(); ++it)
+            env.set(it.key(), it.value());
         transport->setEnvironment(env);
     }
+    // OPENMV-DIFF //
     m_transport = transport;
 
     m_client = new AcpClientObject(m_transport, this);
@@ -133,8 +147,18 @@ void AcpChatController::connectToServer(const QString &serverId)
 
     connect(m_client, &AcpClientObject::stateChanged,
             this, &AcpChatController::connectionStateChanged);
+    // OPENMV-DIFF //
+    // connect(m_client, &AcpClientObject::sessionUpdate,
+    //         this, &AcpChatController::sessionUpdate);
+    //
+    // A session reloaded after signing in replays its history, which the chat
+    // already shows.
     connect(m_client, &AcpClientObject::sessionUpdate,
-            this, &AcpChatController::sessionUpdate);
+            this, [this](const QString &sessionId, const Acp::SessionUpdate &update) {
+        if (sessionId != m_hiddenReplaySessionId)
+            emit sessionUpdate(sessionId, update);
+    });
+    // OPENMV-DIFF //
     connect(m_client, &AcpClientObject::usageUpdated,
             this, &AcpChatController::usageUpdated); // OPENMV-DIFF
     connect(m_client, &AcpClientObject::initializeResult,
@@ -158,7 +182,20 @@ void AcpChatController::connectToServer(const QString &serverId)
         caps.fs(fsCaps);
         initReq.clientCapabilities(caps);
 
-        m_client->initialize(initReq);
+        // OPENMV-DIFF //
+        // m_client->initialize(initReq);
+        //
+        // The raw authMethods carry what the protocol types drop (terminal args,
+        // env vars, _meta); then whatever a relaunch was for (see relaunchAgent).
+        m_client->initialize(initReq, [this](const QJsonObject &result,
+                                             const std::optional<Error> &error) {
+            if (error)
+                return;
+            m_authChoices = AuthChoice::fromJson(result.value("authMethods").toArray());
+            if (const std::function<void()> after = std::exchange(m_afterInitialize, {}))
+                after();
+        });
+        // OPENMV-DIFF //
     });
 
     m_transport->start();
@@ -200,11 +237,22 @@ void AcpChatController::disconnectFromServer()
     m_agentVersion.clear();
     m_serverName.clear();
     m_authMethods.clear();
+    // OPENMV-DIFF //
+    m_authChoices.clear();
+    m_serverId.clear();
+    m_hiddenReplaySessionId.clear();
+    // OPENMV-DIFF //
     m_agentCapabilities.reset();
     m_initialized = false;
 
-    if (wasConnected)
+    // OPENMV-DIFF //
+    // if (wasConnected)
+    //     emit connectionStateChanged(AcpClientObject::State::Disconnected);
+    //
+    // Not while relaunching to sign in: the chat would clear itself.
+    if (wasConnected && !m_relaunching)
         emit connectionStateChanged(AcpClientObject::State::Disconnected);
+    // OPENMV-DIFF //
 }
 
 void AcpChatController::createNewSession(const FilePath &workingDirectory)
@@ -217,10 +265,15 @@ void AcpChatController::createNewSession(const FilePath &workingDirectory)
     m_client->newSession(buildNewSessionRequest(),
                          [this](const QJsonObject &result, const std::optional<Error> &error) {
         if (error) {
-            if (error->code() == ErrorCode::Authentication_required && !m_authMethods.isEmpty()) {
-                emit authenticationRequired(m_authMethods);
+            // OPENMV-DIFF //
+            // if (error->code() == ErrorCode::Authentication_required && !m_authMethods.isEmpty()) {
+            //     emit authenticationRequired(m_authMethods);
+            //     return;
+            // }
+            const FilePath cwd = m_workingDirectory;
+            if (handleAuthRequired(*error, [this, cwd] { createNewSession(cwd); }))
                 return;
-            }
+            // OPENMV-DIFF //
             emit errorOccurred(Tr::tr("Session error: %1").arg(error->message()));
             return;
         }
@@ -473,7 +526,14 @@ void AcpChatController::sendPrompt(const QList<OutgoingMessage> &messages,
     request.prompt(content);
 
     m_client->prompt(request, [this](const QJsonObject &result, const std::optional<Error> &error) {
-        if (error) {
+        // OPENMV-DIFF //
+        // if (error) {
+        //
+        // Signed out mid-chat (an expired login): ask to sign in again, then the
+        // session carries on and the message can be sent again.
+        if (error && handleAuthRequired(*error, {})) {
+        } else if (error) {
+        // OPENMV-DIFF //
             emit errorOccurred(Tr::tr("Prompt error: %1").arg(error->message()));
         } else {
             auto response = fromJson<PromptResponse>(QJsonValue(result));
@@ -494,27 +554,209 @@ void AcpChatController::cancelPrompt()
     m_client->cancelSession(cancel);
 }
 
-void AcpChatController::authenticate(const QString &methodId)
+// OPENMV-DIFF //
+// void AcpChatController::authenticate(const QString &methodId)
+// {
+//     if (!m_client || !m_initialized)
+//         return;
+//
+//     AuthenticateRequest req;
+//     req.methodId(methodId);
+//     m_client->authenticate(req, [this](const QJsonObject &result, const std::optional<Error> &error) {
+//         Q_UNUSED(result)
+//         if (error) {
+//             QString errorMsg = error->message();
+//             if (const std::optional<QJsonValue> data = error->data(); data->isString()) {
+//                 if (auto dataString = data->toString(); !dataString.isEmpty())
+//                     errorMsg.append("\n" + dataString);
+//             }
+//             emit authenticationFailed(errorMsg);
+//             return;
+//         }
+//         createNewSession();
+//     });
+// }
+
+void AcpChatController::authenticate(const QString &methodId, const QMap<QString, QString> &values)
 {
     if (!m_client || !m_initialized)
         return;
 
+    const auto it = std::find_if(m_authChoices.cbegin(), m_authChoices.cend(),
+                                 [&methodId](const AuthChoice &c) { return c.id == methodId; });
+    if (it == m_authChoices.cend()) {
+        emit authenticationFailed(Tr::tr("The agent no longer offers this sign-in method."));
+        return;
+    }
+    const AuthChoice choice = *it;
+
+    switch (choice.kind) {
+    case AuthChoice::Kind::Agent:
+        sendAuthenticate(choice, values);
+        break;
+    case AuthChoice::Kind::Terminal:
+        runTerminalSignIn(choice);
+        break;
+    case AuthChoice::Kind::EnvVar: {
+        // The agent reads the variables from its own environment, so it is
+        // started again with them set (for the rest of this IDE session), then
+        // told to sign in with them.
+        QMap<QString, QString> &env = signInEnvironment()[m_serverId];
+        for (const AuthField &field : choice.fields) {
+            const QString value = values.value(field.key).trimmed();
+            if (!value.isEmpty())
+                env.insert(field.key, value);
+        }
+        relaunchAgent([this, choice] { sendAuthenticate(choice, {}); });
+        break;
+    }
+    }
+}
+
+void AcpChatController::requestSignIn()
+{
+    if (m_authChoices.isEmpty())
+        return;
+    m_resumeAfterSignIn = {}; // the session, if any, carries on
+    emit authenticationRequired(m_authChoices);
+}
+
+bool AcpChatController::handleAuthRequired(const Error &error, const std::function<void()> &resume)
+{
+    if (error.code() != ErrorCode::Authentication_required || m_authChoices.isEmpty())
+        return false;
+    m_resumeAfterSignIn = resume;
+    emit authenticationRequired(m_authChoices);
+    return true;
+}
+
+void AcpChatController::sendAuthenticate(const AuthChoice &choice, const QMap<QString, QString> &values)
+{
     AuthenticateRequest req;
-    req.methodId(methodId);
+    req.methodId(choice.id);
+    if (choice.metaKey == "api-key") {
+        req._meta(QJsonObject{{"api-key", values.value("api-key").trimmed()}});
+    } else if (choice.metaKey == "gateway") {
+        req._meta(QJsonObject{{"gateway", QJsonObject{{"baseUrl", values.value("baseUrl").trimmed()}}}});
+    }
     m_client->authenticate(req, [this](const QJsonObject &result, const std::optional<Error> &error) {
         Q_UNUSED(result)
         if (error) {
             QString errorMsg = error->message();
-            if (const std::optional<QJsonValue> data = error->data(); data->isString()) {
+            if (const std::optional<QJsonValue> data = error->data(); data && data->isString()) {
                 if (auto dataString = data->toString(); !dataString.isEmpty())
                     errorMsg.append("\n" + dataString);
             }
             emit authenticationFailed(errorMsg);
             return;
         }
-        createNewSession();
+        finishSignIn();
     });
 }
+
+void AcpChatController::runTerminalSignIn(const AuthChoice &choice)
+{
+    // The agent's own command with the method's arguments, launched the way the
+    // agent itself is (bundled Node.js, PATH), in the Shell pane so the user can
+    // follow its prompts; exit status 0 means signed in.
+    const QList<AcpSettings::ServerInfo> servers = AcpSettings::servers();
+    const auto server = std::find_if(servers.begin(), servers.end(),
+                                     [this](const AcpSettings::ServerInfo &s) { return s.id == m_serverId; });
+    if (server == servers.end()) {
+        emit authenticationFailed(Tr::tr("This agent is no longer available."));
+        return;
+    }
+    CommandLine command(server->launchCommand.executable(), server->launchCommand.arguments(),
+                        CommandLine::Raw);
+    command.addArgs(choice.args);
+    Environment env = command.executable().deviceEnvironment();
+    server->envChanges.modifyEnvironment(env, nullptr);
+    const QMap<QString, QString> signInEnv = signInEnvironment().value(m_serverId);
+    for (auto it = signInEnv.begin(); it != signInEnv.end(); ++it)
+        env.set(it.key(), it.value());
+    for (auto it = choice.env.begin(); it != choice.env.end(); ++it)
+        env.set(it.key(), it.value());
+    const AgentLaunch launch = resolveAgentLaunch(command, env);
+
+    if (m_signInProcess)
+        m_signInProcess->deleteLater();
+    m_signInProcess = new Process(this);
+    m_signInProcess->setTerminalMode(TerminalMode::Run);
+    m_signInProcess->setCommand(launch.command);
+    m_signInProcess->setEnvironment(launch.environment.value_or(env));
+    m_signInProcess->setWorkingDirectory(withDefaultWorkingDirectory(m_workingDirectory));
+    Process *process = m_signInProcess;
+    connect(process, &Process::done, this, [this, process] {
+        const bool ok = process->exitStatus() == QProcess::NormalExit && process->exitCode() == 0;
+        const bool startFailed = process->result() == ProcessResult::StartFailed;
+        const QString errorString = process->errorString();
+        const int exitCode = process->exitCode();
+        if (m_signInProcess == process)
+            m_signInProcess = nullptr;
+        process->deleteLater();
+        if (!ok) {
+            emit authenticationFailed(
+                startFailed ? Tr::tr("Could not start the sign-in command: %1").arg(errorString)
+                            : Tr::tr("Sign-in did not finish (exit code %1).").arg(exitCode));
+            return;
+        }
+        // The agent reads its credentials when it starts.
+        relaunchAgent([this] { finishSignIn(); });
+    });
+    emit authenticationInProgress(
+        Tr::tr("Finish signing in to %1 in the Shell pane below.").arg(m_serverName));
+    process->start();
+}
+
+std::function<void()> AcpChatController::resumeCurrentSession()
+{
+    const QString sessionId = m_sessionId;
+    const FilePath cwd = m_workingDirectory;
+    if (sessionId.isEmpty())
+        return [this, cwd] { createNewSession(cwd); };
+    return [this, sessionId, cwd] {
+        if (!supportsLoadSession()) {
+            emit errorOccurred(Tr::tr("Signed in. This agent cannot reopen the chat, so it "
+                                      "continues in a new session without the earlier messages."));
+            createNewSession(cwd);
+            return;
+        }
+        m_hiddenReplaySessionId = sessionId;
+        loadSession(sessionId, cwd);
+    };
+}
+
+void AcpChatController::relaunchAgent(const std::function<void()> &afterInitialize)
+{
+    // Restart the agent process without the chat noticing (no Disconnected),
+    // then carry on: sign in, and reopen the session it had, or redo what
+    // needed signing in.
+    if (!m_resumeAfterSignIn)
+        m_resumeAfterSignIn = resumeCurrentSession();
+    const QString serverId = m_serverId;
+    if (m_client)
+        m_client->disconnect(this);
+    if (m_transport)
+        m_transport->disconnect(this);
+    m_relaunching = true;
+    connectToServer(serverId); // disconnects first
+    m_relaunching = false;
+    m_afterInitialize = afterInitialize;
+}
+
+void AcpChatController::finishSignIn()
+{
+    emit authenticationSucceeded(Tr::tr("Signed in to %1.").arg(m_serverName));
+    if (const std::function<void()> resume = std::exchange(m_resumeAfterSignIn, {}))
+        resume();
+}
+
+QHash<QString, QMap<QString, QString>> &AcpChatController::signInEnvironment()
+{
+    static QHash<QString, QMap<QString, QString>> environment; // server id -> variables
+    return environment;
+}
+// OPENMV-DIFF //
 
 void AcpChatController::setConfigOption(const QString &configId, const QString &value)
 {
@@ -562,7 +804,13 @@ void AcpChatController::onInitializeResult(const InitializeResponse &response)
 
     emit agentInfoReceived(m_agentName, m_agentVersion, m_iconUrl);
 
-    emit sessionSelectionRequired();
+    // OPENMV-DIFF //
+    // emit sessionSelectionRequired();
+    //
+    // Not after a relaunch to sign in: the chat carries on (see relaunchAgent).
+    if (!m_afterInitialize)
+        emit sessionSelectionRequired();
+    // OPENMV-DIFF //
 }
 
 static QList<McpServer> buildMcpServers()
@@ -725,10 +973,25 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
 
     m_client->loadSession(req, [this, sessionId](const QJsonObject &result,
                                                   const std::optional<Error> &error) {
+        // OPENMV-DIFF //
+        // if (error) {
+        //     emit errorOccurred(Tr::tr("Failed to load session: %1").arg(error->message()));
+        //     return;
+        // }
+        const bool hiddenReplay = std::exchange(m_hiddenReplaySessionId, {}) == sessionId;
+        const FilePath cwd = m_workingDirectory;
+        if (error && handleAuthRequired(*error, [this, sessionId, cwd, hiddenReplay] {
+                if (hiddenReplay)
+                    m_hiddenReplaySessionId = sessionId;
+                loadSession(sessionId, cwd);
+            })) {
+            return;
+        }
         if (error) {
             emit errorOccurred(Tr::tr("Failed to load session: %1").arg(error->message()));
             return;
         }
+        // OPENMV-DIFF //
         m_sessionId = sessionId;
         forgetSentEditorState(); // OPENMV-DIFF
         emit sessionLoaded(m_sessionId);

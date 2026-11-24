@@ -48,6 +48,12 @@ public:
 
     QString title() const;
     // OPENMV-DIFF //
+    // The connected agent offers a way to sign in (the tab menu's "Sign In...").
+    bool canSignIn() const;
+    QString agentDisplayName() const;
+    void requestSignIn();
+    // OPENMV-DIFF //
+    // OPENMV-DIFF //
     QWidget *sessionToolBar() const; // shown in the AI mode's bar above the tabs
     QIcon icon() const { return m_icon; }     // the agent's logo
     QString toolTip() const;                  // agent name + full chat title

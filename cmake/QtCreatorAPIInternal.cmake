@@ -352,6 +352,19 @@ function(enable_pch target)
       return()
     endif()
 
+    # OPENMV-DIFF #
+    # Executables compile with -fPIE on Linux while the shared PCH targets are
+    # static libraries built with -fPIC, so gcc rejects the PCH for them
+    # (-Winvalid-pch) and compiles without it anyway. There are only a few small
+    # executables: skip the PCH for them instead of warning.
+    if (NOT MSVC AND NOT APPLE)
+      get_target_property(_pch_target_type "${target}" TYPE)
+      if (_pch_target_type STREQUAL "EXECUTABLE")
+        return()
+      endif()
+    endif()
+    # OPENMV-DIFF #
+
     # static libs are maybe used by other projects, so they can not reuse same pch files
     if (MSVC)
         get_target_property(target_type "${target}" TYPE)

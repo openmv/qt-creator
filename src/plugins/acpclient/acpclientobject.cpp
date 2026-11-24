@@ -40,7 +40,20 @@ void AcpClientObject::setInspector(AcpInspector *inspector, const QString &clien
 
 void AcpClientObject::initialize(const InitializeRequest &request, ResponseCallback callback)
 {
-    sendRequest(QStringLiteral("initialize"), Acp::toJson(request), [this, callback](const QJsonObject &result, const std::optional<Error> &error) {
+    // OPENMV-DIFF //
+    // sendRequest(QStringLiteral("initialize"), Acp::toJson(request), [this, callback](const QJsonObject &result, const std::optional<Error> &error) {
+    //
+    // Say the client can run terminal sign-in (clientCapabilities.auth.terminal,
+    // newer than the generated protocol types): agents such as Claude only offer
+    // their login methods to clients that do (see AcpChatController::authenticate).
+    QJsonObject params = Acp::toJson(request);
+    QJsonObject capabilities = params.value("clientCapabilities").toObject();
+    QJsonObject auth = capabilities.value("auth").toObject();
+    auth.insert("terminal", true);
+    capabilities.insert("auth", auth);
+    params.insert("clientCapabilities", capabilities);
+    sendRequest(QStringLiteral("initialize"), params, [this, callback](const QJsonObject &result, const std::optional<Error> &error) {
+    // OPENMV-DIFF //
         if (!error) {
             setState(State::Initialized);
             auto resp = fromJson<InitializeResponse>(QJsonValue(result));

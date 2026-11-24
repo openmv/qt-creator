@@ -1495,7 +1495,10 @@ void ChatPanel::addPermissionRequest(const QJsonValue &id,
             this, &ChatPanel::permissionCancelled, Qt::UniqueConnection);
 }
 
-void ChatPanel::addAuthenticationRequest(const QList<Acp::AuthMethod> &methods)
+// OPENMV-DIFF //
+// void ChatPanel::addAuthenticationRequest(const QList<Acp::AuthMethod> &methods)
+void ChatPanel::addAuthenticationRequest(const QList<AuthChoice> &methods)
+// OPENMV-DIFF //
 {
     m_messageView->addAuthenticationRequest(methods);
     connect(m_messageView, &AcpMessageView::authenticateRequested,
@@ -1507,9 +1510,22 @@ void ChatPanel::showAuthenticationError(const QString &error)
     m_messageView->showAuthenticationError(error);
 }
 
-void ChatPanel::resolveAuthentication()
+// OPENMV-DIFF //
+void ChatPanel::showAuthenticationProgress(const QString &message)
 {
-    m_messageView->resolveAuthentication();
+    m_messageView->showAuthenticationProgress(message);
+}
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// void ChatPanel::resolveAuthentication()
+void ChatPanel::resolveAuthentication(const QString &message)
+// OPENMV-DIFF //
+{
+    // OPENMV-DIFF //
+    // m_messageView->resolveAuthentication();
+    m_messageView->resolveAuthentication(message);
+    // OPENMV-DIFF //
 }
 
 SessionPickerWidget *ChatPanel::addSessionPicker()

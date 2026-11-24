@@ -13,6 +13,7 @@ add_qtc_plugin(AcpClient
   LONG_DESCRIPTION_MD AcpClientDescription.md
   SOURCES
     acpclientapi.h
+    acpauthchoice.cpp acpauthchoice.h
     acpchatcontroller.cpp acpchatcontroller.h
     acpchattab.cpp acpchattab.h
     acpchatwidget.cpp acpchatwidget.h

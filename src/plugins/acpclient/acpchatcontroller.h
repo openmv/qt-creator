@@ -3,6 +3,7 @@
 
 #pragma once
 
+#include "acpauthchoice.h" // OPENMV-DIFF
 #include "acpclientobject.h"
 
 #include <acp/acp.h>
@@ -11,12 +12,17 @@
 #include <QObject>
 // OPENMV-DIFF //
 #include <QHash>
+#include <QMap>
 // OPENMV-DIFF //
+
+#include <functional>
 // OPENMV-DIFF //
 #include <QImage>
 // OPENMV-DIFF //
 
 #include <utils/filepath.h>
+
+namespace Utils { class Process; }
 
 namespace AcpClient::Internal {
 
@@ -72,7 +78,17 @@ public:
     void sendPrompt(const QList<OutgoingMessage> &messages, bool includeCurrentEditor = true);
     // OPENMV-DIFF //
     void cancelPrompt();
-    void authenticate(const QString &methodId);
+    // OPENMV-DIFF //
+    // void authenticate(const QString &methodId);
+    //
+    // Sign in with one of the agent's methods (see AuthChoice). `values` holds
+    // what the user typed for the method's fields, keyed by AuthField::key.
+    void authenticate(const QString &methodId, const QMap<QString, QString> &values = {});
+    // Ask for sign-in now (the chat's "Sign In..." action), not only after a
+    // request fails with "authentication required".
+    void requestSignIn();
+    bool canSignIn() const { return !m_authChoices.isEmpty(); }
+    // OPENMV-DIFF //
     void setConfigOption(const QString &configId, const QString &value);
     void sendPermissionResponse(const QJsonValue &id, const QString &optionId);
     void sendPermissionCancelled(const QJsonValue &id);
@@ -109,7 +125,13 @@ signals:
     void usageUpdated(const QString &sessionId, qint64 used, qint64 size, double cost,
                       const QString &currency);
     // OPENMV-DIFF //
-    void authenticationRequired(const QList<Acp::AuthMethod> &methods);
+    // OPENMV-DIFF //
+    // void authenticationRequired(const QList<Acp::AuthMethod> &methods);
+    void authenticationRequired(const QList<AcpClient::Internal::AuthChoice> &choices);
+    // A terminal sign-in is running in the Shell pane.
+    void authenticationInProgress(const QString &message);
+    void authenticationSucceeded(const QString &message);
+    // OPENMV-DIFF //
     void authenticationFailed(const QString &error);
     void permissionRequested(const QJsonValue &id, const Acp::RequestPermissionRequest &request);
     void promptFinished();
@@ -134,6 +156,28 @@ private:
     QString m_serverName;
     QString m_iconUrl;
     QList<Acp::AuthMethod> m_authMethods;
+    // OPENMV-DIFF //
+    // Sign-in (see authenticate): the methods as the agent sent them; what to
+    // redo once signed in (create or reload the session); what to run instead
+    // of asking for a session when a relaunched agent has initialized; and a
+    // replay to hide while a session is reloaded after a relaunch.
+    QList<AuthChoice> m_authChoices;
+    QString m_serverId;
+    std::function<void()> m_resumeAfterSignIn;
+    std::function<void()> m_afterInitialize;
+    bool m_relaunching = false;
+    QString m_hiddenReplaySessionId;
+    Utils::Process *m_signInProcess = nullptr;
+    bool handleAuthRequired(const Acp::Error &error, const std::function<void()> &resume);
+    void sendAuthenticate(const AuthChoice &choice, const QMap<QString, QString> &values);
+    void runTerminalSignIn(const AuthChoice &choice);
+    void relaunchAgent(const std::function<void()> &afterInitialize);
+    void finishSignIn();
+    std::function<void()> resumeCurrentSession();
+    // Environment variables given to sign in (env_var methods), per agent, for
+    // the rest of this IDE session; every chat with that agent starts with them.
+    static QHash<QString, QMap<QString, QString>> &signInEnvironment();
+    // OPENMV-DIFF //
     std::optional<Acp::AgentCapabilities> m_agentCapabilities;
     bool m_initialized = false;
     // OPENMV-DIFF //

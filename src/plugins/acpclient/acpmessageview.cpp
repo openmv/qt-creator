@@ -40,6 +40,8 @@
 
 #include <QAbstractTextDocumentLayout>
 #include <QComboBox>
+#include <QLineEdit> // OPENMV-DIFF
+#include <QFormLayout> // OPENMV-DIFF
 #include <QDateTime>
 #include <QHBoxLayout>
 #include <QLabel>
@@ -1157,45 +1159,159 @@ private:
 // AuthenticationWidget — inline widget for authentication flow
 // ---------------------------------------------------------------------------
 
+// OPENMV-DIFF //
+// class AuthenticationWidget : public CollapsibleFrame
+// {
+//     Q_OBJECT
+//
+// public:
+//     explicit AuthenticationWidget(const QList<Acp::AuthMethod> &methods,
+//                                   QWidget *parent = nullptr)
+//         : CollapsibleFrame(parent)
+//     {
+//         setFrameShape(QFrame::NoFrame);
+//         setCollapsible(false);
+//
+//         auto *icon = new QLabel(QStringLiteral("\U0001F512"), this); // 🔒
+//         m_headerLayout->addWidget(icon);
+//
+//         auto *label = new QLabel(QStringLiteral("<b>Authentication Required</b>"), this);
+//         label->setTextFormat(Qt::RichText);
+//         m_headerLayout->addWidget(label, 1);
+//
+//         // Method selector (only shown if multiple methods)
+//         m_methodCombo = new QComboBox(this);
+//         for (const Acp::AuthMethod &method : methods) {
+//             const auto *agent = std::get_if<Acp::AuthMethodAgent>(&method);
+//             QTC_ASSERT(agent, continue);
+//             m_methodCombo->addItem(agent->name(), agent->id());
+//         }
+//         m_methodCombo->setVisible(methods.size() > 1);
+//         m_bodyLayout->addWidget(m_methodCombo);
+//
+//         // Description label
+//         m_descriptionLabel = new QLabel(this);
+//         m_descriptionLabel->setWordWrap(true);
+//         QPalette descPal = m_descriptionLabel->palette();
+//         descPal.setColor(QPalette::WindowText, descPal.color(QPalette::PlaceholderText));
+//         m_descriptionLabel->setPalette(descPal);
+//         m_descriptionLabel->hide();
+//         m_bodyLayout->addWidget(m_descriptionLabel);
+//
+//         // Error label
+//         m_errorLabel = new QLabel(this);
+//         m_errorLabel->setWordWrap(true);
+//         QPalette errorPal = m_errorLabel->palette();
+//         errorPal.setColor(QPalette::WindowText, QColor(0xfc, 0x8c, 0x8c));
+//         m_errorLabel->setPalette(errorPal);
+//         m_errorLabel->hide();
+//         m_bodyLayout->addWidget(m_errorLabel);
+//
+//         // Buttons
+//         auto *buttonLayout = new QHBoxLayout;
+//         buttonLayout->setSpacing(6);
+//
+//         m_authButton = new QPushButton(Tr::tr("Authenticate"), this);
+//         buttonLayout->addWidget(m_authButton);
+//         buttonLayout->addStretch();
+//         m_bodyLayout->addLayout(buttonLayout);
+//
+//         // Status label (shown after resolution)
+//         m_statusLabel = new QLabel(this);
+//         m_statusLabel->setTextFormat(Qt::RichText);
+//         m_statusLabel->hide();
+//         m_bodyLayout->addWidget(m_statusLabel);
+//
+//         // Update description when method changes
+//         auto updateDescription = [this, methods] {
+//             const int idx = m_methodCombo->currentIndex();
+//             if (idx >= 0 && idx < methods.size()) {
+//                 const auto *agent = std::get_if<Acp::AuthMethodAgent>(&methods.at(idx));
+//                 QTC_ASSERT(agent, return);
+//                 const auto &desc = agent->description();
+//                 if (desc.has_value() && !desc->isEmpty()) {
+//                     m_descriptionLabel->setText(*desc);
+//                     m_descriptionLabel->show();
+//                     return;
+//                 }
+//             }
+//             m_descriptionLabel->hide();
+//         };
+//         updateDescription();
+//         QObject::connect(m_methodCombo, &QComboBox::currentIndexChanged,
+//                          this, updateDescription);
+//
+//         QObject::connect(m_authButton, &QPushButton::clicked, this, [this] {
+//             m_errorLabel->hide();
+//             const QString methodId = m_methodCombo->currentData().toString();
+//             if (!methodId.isEmpty())
+//                 emit authenticateRequested(methodId);
+//         });
+//     }
+//
+//     void showError(const QString &error)
+//     {
+//         m_errorLabel->setText(error);
+//         m_errorLabel->show();
+//         m_authButton->setEnabled(true);
+//     }
+//
+//     void setResolved()
+//     {
+//         m_authButton->setEnabled(false);
+//         m_methodCombo->setEnabled(false);
+//         m_errorLabel->hide();
+//         m_statusLabel->setText(
+//             QStringLiteral("<i>%1</i>").arg(Tr::tr("Authenticated").toHtmlEscaped()));
+//         m_statusLabel->show();
+//     }
+//
+// One card for every agent's way of signing in (see AuthChoice): pick the
+// method, fill in its fields (API key, gateway URL, environment variables),
+// then Sign In. A terminal method runs in the Shell pane; the card says so and
+// waits for it.
 class AuthenticationWidget : public CollapsibleFrame
 {
     Q_OBJECT
 
 public:
-    explicit AuthenticationWidget(const QList<Acp::AuthMethod> &methods,
+    explicit AuthenticationWidget(const QList<AuthChoice> &choices,
                                   QWidget *parent = nullptr)
         : CollapsibleFrame(parent)
+        , m_choices(choices)
     {
         setFrameShape(QFrame::NoFrame);
         setCollapsible(false);
 
-        auto *icon = new QLabel(QStringLiteral("\U0001F512"), this); // 🔒
+        auto *icon = new QLabel(QStringLiteral("\U0001F512"), this); // lock
         m_headerLayout->addWidget(icon);
 
-        auto *label = new QLabel(QStringLiteral("<b>Authentication Required</b>"), this);
+        auto *label = new QLabel(QStringLiteral("<b>%1</b>").arg(Tr::tr("Sign In").toHtmlEscaped()), this);
         label->setTextFormat(Qt::RichText);
         m_headerLayout->addWidget(label, 1);
 
         // Method selector (only shown if multiple methods)
         m_methodCombo = new QComboBox(this);
-        for (const Acp::AuthMethod &method : methods) {
-            const auto *agent = std::get_if<Acp::AuthMethodAgent>(&method);
-            QTC_ASSERT(agent, continue);
-            m_methodCombo->addItem(agent->name(), agent->id());
-        }
-        m_methodCombo->setVisible(methods.size() > 1);
+        for (const AuthChoice &choice : choices)
+            m_methodCombo->addItem(choice.name, choice.id);
+        m_methodCombo->setVisible(choices.size() > 1);
         m_bodyLayout->addWidget(m_methodCombo);
 
-        // Description label
         m_descriptionLabel = new QLabel(this);
         m_descriptionLabel->setWordWrap(true);
+        m_descriptionLabel->setTextFormat(Qt::RichText);
+        m_descriptionLabel->setOpenExternalLinks(true);
         QPalette descPal = m_descriptionLabel->palette();
         descPal.setColor(QPalette::WindowText, descPal.color(QPalette::PlaceholderText));
         m_descriptionLabel->setPalette(descPal);
-        m_descriptionLabel->hide();
         m_bodyLayout->addWidget(m_descriptionLabel);
 
-        // Error label
+        m_fieldsWidget = new QWidget(this);
+        m_fieldsLayout = new QFormLayout(m_fieldsWidget);
+        m_fieldsLayout->setContentsMargins(0, 0, 0, 0);
+        m_fieldsLayout->setFieldGrowthPolicy(QFormLayout::ExpandingFieldsGrow);
+        m_bodyLayout->addWidget(m_fieldsWidget);
+
         m_errorLabel = new QLabel(this);
         m_errorLabel->setWordWrap(true);
         QPalette errorPal = m_errorLabel->palette();
@@ -1204,67 +1320,118 @@ public:
         m_errorLabel->hide();
         m_bodyLayout->addWidget(m_errorLabel);
 
-        // Buttons
         auto *buttonLayout = new QHBoxLayout;
         buttonLayout->setSpacing(6);
-
-        m_authButton = new QPushButton(Tr::tr("Authenticate"), this);
+        m_authButton = new QPushButton(Tr::tr("Sign In"), this);
         buttonLayout->addWidget(m_authButton);
         buttonLayout->addStretch();
         m_bodyLayout->addLayout(buttonLayout);
 
-        // Status label (shown after resolution)
         m_statusLabel = new QLabel(this);
+        m_statusLabel->setWordWrap(true);
         m_statusLabel->setTextFormat(Qt::RichText);
         m_statusLabel->hide();
         m_bodyLayout->addWidget(m_statusLabel);
 
-        // Update description when method changes
-        auto updateDescription = [this, methods] {
-            const int idx = m_methodCombo->currentIndex();
-            if (idx >= 0 && idx < methods.size()) {
-                const auto *agent = std::get_if<Acp::AuthMethodAgent>(&methods.at(idx));
-                QTC_ASSERT(agent, return);
-                const auto &desc = agent->description();
-                if (desc.has_value() && !desc->isEmpty()) {
-                    m_descriptionLabel->setText(*desc);
-                    m_descriptionLabel->show();
-                    return;
-                }
-            }
-            m_descriptionLabel->hide();
-        };
-        updateDescription();
+        updateMethod();
         QObject::connect(m_methodCombo, &QComboBox::currentIndexChanged,
-                         this, updateDescription);
+                         this, &AuthenticationWidget::updateMethod);
 
         QObject::connect(m_authButton, &QPushButton::clicked, this, [this] {
+            const int idx = m_methodCombo->currentIndex();
+            if (idx < 0 || idx >= m_choices.size())
+                return;
+            QMap<QString, QString> values;
+            for (const AuthField &field : m_choices.at(idx).fields) {
+                const QString value = m_fieldEdits.value(field.key)->text().trimmed();
+                if (value.isEmpty() && !field.optional) {
+                    showError(Tr::tr("Enter %1").arg(QString(field.label).remove(QLatin1Char(':'))));
+                    return;
+                }
+                values.insert(field.key, value);
+            }
             m_errorLabel->hide();
-            const QString methodId = m_methodCombo->currentData().toString();
-            if (!methodId.isEmpty())
-                emit authenticateRequested(methodId);
+            m_statusLabel->hide();
+            m_authButton->setEnabled(false);
+            emit authenticateRequested(m_choices.at(idx).id, values);
         });
     }
 
     void showError(const QString &error)
     {
+        m_statusLabel->hide();
         m_errorLabel->setText(error);
         m_errorLabel->show();
         m_authButton->setEnabled(true);
     }
 
-    void setResolved()
+    void showProgress(const QString &message)
+    {
+        m_errorLabel->hide();
+        m_statusLabel->setText(QStringLiteral("<i>%1</i>").arg(message.toHtmlEscaped()));
+        m_statusLabel->show();
+        m_authButton->setEnabled(false);
+    }
+
+    void setResolved(const QString &message = {})
     {
         m_authButton->setEnabled(false);
         m_methodCombo->setEnabled(false);
+        m_fieldsWidget->setEnabled(false);
         m_errorLabel->hide();
-        m_statusLabel->setText(
-            QStringLiteral("<i>%1</i>").arg(Tr::tr("Authenticated").toHtmlEscaped()));
+        m_statusLabel->setText(QStringLiteral("<i>%1</i>")
+                                   .arg((message.isEmpty() ? Tr::tr("Signed in.") : message)
+                                            .toHtmlEscaped()));
         m_statusLabel->show();
     }
 
+private:
+    void updateMethod()
+    {
+        while (m_fieldsLayout->rowCount() > 0)
+            m_fieldsLayout->removeRow(0);
+        m_fieldEdits.clear();
+
+        const int idx = m_methodCombo->currentIndex();
+        if (idx < 0 || idx >= m_choices.size())
+            return;
+        const AuthChoice &choice = m_choices.at(idx);
+
+        QString text = choice.description.toHtmlEscaped();
+        if (choice.kind == AuthChoice::Kind::Terminal) {
+            const QString note = Tr::tr("Opens the agent's sign-in in the Shell pane below.");
+            text = text.isEmpty() ? note.toHtmlEscaped()
+                                  : text + QStringLiteral("<br>") + note.toHtmlEscaped();
+        }
+        if (!choice.link.isEmpty()) {
+            text += QStringLiteral("%1<a href=\"%2\">%3</a>")
+                        .arg(text.isEmpty() ? QString() : QStringLiteral(" "),
+                             choice.link.toHtmlEscaped(), Tr::tr("Get a key").toHtmlEscaped());
+        }
+        m_descriptionLabel->setText(text);
+        m_descriptionLabel->setVisible(!text.isEmpty());
+
+        for (const AuthField &field : choice.fields) {
+            auto *edit = new QLineEdit(m_fieldsWidget);
+            if (field.secret)
+                edit->setEchoMode(QLineEdit::Password);
+            if (field.optional)
+                edit->setPlaceholderText(Tr::tr("Optional"));
+            QObject::connect(edit, &QLineEdit::returnPressed, m_authButton, &QPushButton::click);
+            m_fieldsLayout->addRow(field.label, edit);
+            m_fieldEdits.insert(field.key, edit);
+        }
+        m_fieldsWidget->setVisible(!choice.fields.isEmpty());
+    }
+
+    QList<AuthChoice> m_choices;
+    QWidget *m_fieldsWidget = nullptr;
+    QFormLayout *m_fieldsLayout = nullptr;
+    QHash<QString, QLineEdit *> m_fieldEdits;
+
 signals:
-    void authenticateRequested(const QString &methodId);
+    void authenticateRequested(const QString &methodId, const QMap<QString, QString> &values);
+// OPENMV-DIFF //
 
 protected:
     void paintEvent(QPaintEvent *) override
@@ -1884,12 +2051,20 @@ void AcpMessageView::addPermissionRequest(const QJsonValue &id,
     addWidget(widget);
 }
 
-void AcpMessageView::addAuthenticationRequest(const QList<Acp::AuthMethod> &methods)
+// OPENMV-DIFF //
+// void AcpMessageView::addAuthenticationRequest(const QList<Acp::AuthMethod> &methods)
+void AcpMessageView::addAuthenticationRequest(const QList<AuthChoice> &choices)
+// OPENMV-DIFF //
 {
     finishAgentMessage();
     finishToolCallGroup();
 
-    m_currentAuthWidget = new AuthenticationWidget(methods, m_container);
+    // OPENMV-DIFF //
+    // m_currentAuthWidget = new AuthenticationWidget(methods, m_container);
+    if (m_currentAuthWidget) // an earlier card still waiting: this one replaces it
+        m_currentAuthWidget->setResolved(Tr::tr("Replaced by the request below."));
+    m_currentAuthWidget = new AuthenticationWidget(choices, m_container);
+    // OPENMV-DIFF //
     connect(m_currentAuthWidget, &AuthenticationWidget::authenticateRequested,
             this, &AcpMessageView::authenticateRequested);
     addWidget(m_currentAuthWidget);
@@ -1901,10 +2076,24 @@ void AcpMessageView::showAuthenticationError(const QString &error)
         m_currentAuthWidget->showError(error);
 }
 
-void AcpMessageView::resolveAuthentication()
+// OPENMV-DIFF //
+void AcpMessageView::showAuthenticationProgress(const QString &message)
+{
+    if (m_currentAuthWidget)
+        m_currentAuthWidget->showProgress(message);
+}
+// OPENMV-DIFF //
+
+// OPENMV-DIFF //
+// void AcpMessageView::resolveAuthentication()
+void AcpMessageView::resolveAuthentication(const QString &message)
+// OPENMV-DIFF //
 {
     if (m_currentAuthWidget) {
-        m_currentAuthWidget->setResolved();
+        // OPENMV-DIFF //
+        // m_currentAuthWidget->setResolved();
+        m_currentAuthWidget->setResolved(message);
+        // OPENMV-DIFF //
         m_currentAuthWidget = nullptr;
     }
 }

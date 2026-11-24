@@ -190,11 +190,21 @@ public:
             QAction *rename = menu.addAction(Tr::tr("Rename Chat..."));
             QAction *close = menu.addAction(Tr::tr("Close Chat"));
             close->setEnabled(m_bar->tabButton(index, QTabBar::RightSide) != nullptr);
+            // Sign in again (an expired login, or another account) without
+            // waiting for a request to fail.
+            auto *chat = qobject_cast<AcpChatTab *>(m_stack->widget(index));
+            QAction *signIn = nullptr;
+            if (chat && chat->canSignIn()) {
+                menu.addSeparator();
+                signIn = menu.addAction(Tr::tr("Sign In to %1...").arg(chat->agentDisplayName()));
+            }
             QAction *chosen = menu.exec(m_bar->mapToGlobal(pos));
             if (chosen == rename)
                 emit renameRequested(index);
             else if (chosen == close)
                 emit tabCloseRequested(index);
+            else if (chosen && chosen == signIn)
+                chat->requestSignIn();
         });
         connect(m_bar, &QTabBar::tabMoved, this, [this](int from, int to) {
             QWidget *w = m_stack->widget(from);
