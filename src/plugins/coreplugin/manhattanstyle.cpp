@@ -1130,6 +1130,15 @@ void ManhattanStyle::drawControl(
             if (panelWidget(widget)) {
                 painter->save();
                 QRect editRect = subControlRect(CC_ComboBox, cb, SC_ComboBoxEditField, widget);
+                // OPENMV-DIFF //
+                // The macOS style's edit field leaves room for the native bezel's
+                // shadow along the bottom, which a toolbar combo box doesn't draw,
+                // so its text sat high: centre it on the whole height instead.
+                if (HostOsInfo::isMacHost()) {
+                    editRect.setTop(cb->rect.top());
+                    editRect.setBottom(cb->rect.bottom());
+                }
+                // OPENMV-DIFF //
                 QPalette customPal = cb->palette;
                 const bool drawIcon =
                     !(widget && widget->property(StyleHelper::C_HIDE_ICON).toBool());
