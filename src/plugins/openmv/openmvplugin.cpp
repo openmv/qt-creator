@@ -253,6 +253,29 @@ QUrl OpenMVPlugin::localChangelogUrl(const QString &product, const QString &vers
 
 void OpenMVPlugin::openUrlOrWarn(const QUrl &url)
 {
+    // macOS drops the "#anchor" of a local file it opens in the browser, so the
+    // docs opened at the top of the page instead of at the symbol. Open a small
+    // page that redirects to the full URL instead.
+    if(Utils::HostOsInfo::isMacHost() && url.isLocalFile() && url.hasFragment())
+    {
+        const QString target = url.toString(QUrl::FullyEncoded).toHtmlEscaped();
+        QFile redirect(QDir::temp().filePath(QStringLiteral("openmv-ide-docs.html")));
+
+        if(redirect.open(QIODevice::WriteOnly | QIODevice::Truncate))
+        {
+            redirect.write(QStringLiteral("<!DOCTYPE html><html><head><meta charset=\"utf-8\">"
+                                          "<meta http-equiv=\"refresh\" content=\"0; url=%1\">"
+                                          "<script>location.replace(\"%1\");</script></head><body></body></html>")
+                           .arg(target).toUtf8());
+            redirect.close();
+
+            if(QDesktopServices::openUrl(QUrl::fromLocalFile(redirect.fileName())))
+            {
+                return;
+            }
+        }
+    }
+
     if(!QDesktopServices::openUrl(url))
     {
         OMVUI::critical(Core::ICore::dialogParent(),
