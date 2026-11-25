@@ -2004,15 +2004,21 @@ bool OpenMVPlugin::loadDocs(bool update_resoruces, bool update_editors)
                                             };
                                             QTextCursor at(widget->textDocument()->document());
                                             at.setPosition(position);
+                                            const Utils::FilePath hoveredFile = widget->textDocument()->filePath();
+                                            const int hoveredLine = at.blockNumber() + 1; // links are 1-based
 
                                             const LanguageServerProtocol::MessageId id = client->symbolSupport().findLinkAt(widget->textDocument(), at,
-                                                [this, guard, globalPos, entry, expected, text, originalToolTip, showOriginalToolTip, stillHovering] (const Utils::Link &link) {
+                                                [this, guard, globalPos, entry, expected, text, originalToolTip, showOriginalToolTip, stillHovering, hoveredFile, hoveredLine] (const Utils::Link &link) {
                                                     if(!stillHovering())
                                                     {
                                                         return;
                                                     }
 
-                                                    if(!link.hasValidTarget())
+                                                    // No definition, or one pointing back at the word under the
+                                                    // mouse (the server could not follow it): not the user's own
+                                                    // symbol, so the one documented entry applies.
+                                                    if(!link.hasValidTarget()
+                                                    || ((link.targetFilePath == hoveredFile) && (link.target.line == hoveredLine)))
                                                     {
                                                         Utils::ToolTip::show(globalPos, entry, guard);
                                                         return;
