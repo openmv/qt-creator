@@ -1268,8 +1268,9 @@ private:
 //
 // One card for every agent's way of signing in (see AuthChoice): pick the
 // method, fill in its fields (API key, gateway URL, environment variables),
-// then Sign In. A terminal method runs in the Shell pane; the card says so and
-// waits for it.
+// then Sign In. A terminal method signs in through the browser; the card shows
+// the link (for when the browser doesn't open) and takes a code if the page
+// gives one.
 class AuthenticationWidget : public CollapsibleFrame
 {
     Q_OBJECT
@@ -1330,8 +1331,32 @@ public:
         m_statusLabel = new QLabel(this);
         m_statusLabel->setWordWrap(true);
         m_statusLabel->setTextFormat(Qt::RichText);
+        m_statusLabel->setOpenExternalLinks(true);
         m_statusLabel->hide();
         m_bodyLayout->addWidget(m_statusLabel);
+
+        // A code the sign-in page shows, for logins that ask for one.
+        m_codeWidget = new QWidget(this);
+        auto *codeLayout = new QHBoxLayout(m_codeWidget);
+        codeLayout->setContentsMargins(0, 0, 0, 0);
+        codeLayout->setSpacing(6);
+        m_codeEdit = new QLineEdit(m_codeWidget);
+        styleField(m_codeEdit);
+        m_codeEdit->setPlaceholderText(Tr::tr("Code from the sign-in page, if it shows one"));
+        auto *codeButton = new QPushButton(Tr::tr("Submit Code"), m_codeWidget);
+        codeLayout->addWidget(m_codeEdit, 1);
+        codeLayout->addWidget(codeButton);
+        m_codeWidget->hide();
+        m_bodyLayout->addWidget(m_codeWidget);
+        const auto submitCode = [this] {
+            const QString code = m_codeEdit->text().trimmed();
+            if (code.isEmpty())
+                return;
+            m_codeEdit->clear();
+            emit signInCodeEntered(code);
+        };
+        QObject::connect(codeButton, &QPushButton::clicked, this, submitCode);
+        QObject::connect(m_codeEdit, &QLineEdit::returnPressed, this, submitCode);
 
         updateMethod();
         QObject::connect(m_methodCombo, &QComboBox::currentIndexChanged,
@@ -1359,6 +1384,7 @@ public:
 
     void showError(const QString &error)
     {
+        m_codeWidget->hide();
         m_statusLabel->hide();
         m_errorLabel->setText(error);
         m_errorLabel->show();
@@ -1373,8 +1399,20 @@ public:
         m_authButton->setEnabled(false);
     }
 
+    void showLink(const QString &url)
+    {
+        m_progressText = m_statusLabel->text();
+        m_statusLabel->setText(
+            QStringLiteral("%1<br><a href=\"%2\">%3</a>")
+                .arg(m_progressText, url.toHtmlEscaped(),
+                     Tr::tr("Open the sign-in page").toHtmlEscaped()));
+        m_statusLabel->show();
+        m_codeWidget->show();
+    }
+
     void setResolved(const QString &message = {})
     {
+        m_codeWidget->hide();
         m_authButton->setEnabled(false);
         m_methodCombo->setEnabled(false);
         m_fieldsWidget->setEnabled(false);
@@ -1386,6 +1424,19 @@ public:
     }
 
 private:
+    // The chat's text fields look (the session picker's and command palette's
+    // filter): a row's height, rounded, on the muted background, no frame.
+    void styleField(QLineEdit *edit)
+    {
+        edit->setFrame(false);
+        edit->setFixedHeight(edit->fontMetrics().height() + 2 * PaddingVS + 2);
+        edit->setStyleSheet(QString("QLineEdit { background: %1; border-radius: %2px;"
+                                    " padding-left: %3px; padding-right: %3px; }")
+                                .arg(Utils::creatorColor(Utils::Theme::Token_Background_Muted).name())
+                                .arg(RadiusS)
+                                .arg(PaddingHM - 2));
+    }
+
     void updateMethod()
     {
         while (m_fieldsLayout->rowCount() > 0)
@@ -1399,7 +1450,7 @@ private:
 
         QString text = choice.description.toHtmlEscaped();
         if (choice.kind == AuthChoice::Kind::Terminal) {
-            const QString note = Tr::tr("Opens the agent's sign-in in the Shell pane below.");
+            const QString note = Tr::tr("Signs in through your browser.");
             text = text.isEmpty() ? note.toHtmlEscaped()
                                   : text + QStringLiteral("<br>") + note.toHtmlEscaped();
         }
@@ -1413,6 +1464,7 @@ private:
 
         for (const AuthField &field : choice.fields) {
             auto *edit = new QLineEdit(m_fieldsWidget);
+            styleField(edit);
             if (field.secret)
                 edit->setEchoMode(QLineEdit::Password);
             if (field.optional)
@@ -1428,9 +1480,13 @@ private:
     QWidget *m_fieldsWidget = nullptr;
     QFormLayout *m_fieldsLayout = nullptr;
     QHash<QString, QLineEdit *> m_fieldEdits;
+    QWidget *m_codeWidget = nullptr;
+    QLineEdit *m_codeEdit = nullptr;
+    QString m_progressText;
 
 signals:
     void authenticateRequested(const QString &methodId, const QMap<QString, QString> &values);
+    void signInCodeEntered(const QString &code);
 // OPENMV-DIFF //
 
 protected:
@@ -2067,6 +2123,8 @@ void AcpMessageView::addAuthenticationRequest(const QList<AuthChoice> &choices)
     // OPENMV-DIFF //
     connect(m_currentAuthWidget, &AuthenticationWidget::authenticateRequested,
             this, &AcpMessageView::authenticateRequested);
+    connect(m_currentAuthWidget, &AuthenticationWidget::signInCodeEntered,
+            this, &AcpMessageView::signInCodeEntered); // OPENMV-DIFF
     addWidget(m_currentAuthWidget);
 }
 
@@ -2081,6 +2139,12 @@ void AcpMessageView::showAuthenticationProgress(const QString &message)
 {
     if (m_currentAuthWidget)
         m_currentAuthWidget->showProgress(message);
+}
+
+void AcpMessageView::showAuthenticationLink(const QString &url)
+{
+    if (m_currentAuthWidget)
+        m_currentAuthWidget->showLink(url);
 }
 // OPENMV-DIFF //
 

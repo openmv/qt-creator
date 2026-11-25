@@ -61,6 +61,9 @@ signals:
     // OPENMV-DIFF //
     // The agent's report of how full the session's context is (usage_update, newer
     // than the ACP library here); cost is negative when not reported.
+    // OPENMV-DIFF //
+    void authStatusChanged(bool authenticated);
+    // OPENMV-DIFF //
     void usageUpdated(const QString &sessionId, qint64 used, qint64 size, double cost,
                       const QString &currency);
     // OPENMV-DIFF //

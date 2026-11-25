@@ -107,6 +107,7 @@ public:
     void addAuthenticationRequest(const QList<AuthChoice> &choices);
     void showAuthenticationError(const QString &error);
     void showAuthenticationProgress(const QString &message);
+    void showAuthenticationLink(const QString &url);
     void resolveAuthentication(const QString &message = {});
     // OPENMV-DIFF //
 
@@ -129,6 +130,7 @@ signals:
     // OPENMV-DIFF //
     // void authenticateRequested(const QString &methodId);
     void authenticateRequested(const QString &methodId, const QMap<QString, QString> &values);
+    void signInCodeEntered(const QString &code);
     // OPENMV-DIFF //
 
 private:

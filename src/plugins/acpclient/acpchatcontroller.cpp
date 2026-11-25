@@ -18,6 +18,7 @@
 // OPENMV-DIFF //
 #include <utils/temporarydirectory.h>
 #include <utils/qtcprocess.h>
+#include <utils/processinterface.h>
 // OPENMV-DIFF //
 
 #include <texteditor/textdocument.h>
@@ -37,6 +38,7 @@
 #include <QDir>
 #include <QStandardPaths>
 // OPENMV-DIFF //
+#include <QRegularExpression> // OPENMV-DIFF
 #include <QUuid>
 // OPENMV-DIFF //
 // OPENMV-DIFF //
@@ -163,6 +165,15 @@ void AcpChatController::connectToServer(const QString &serverId)
             this, &AcpChatController::usageUpdated); // OPENMV-DIFF
     connect(m_client, &AcpClientObject::initializeResult,
             this, &AcpChatController::onInitializeResult);
+    // OPENMV-DIFF //
+    // An agent that reports it is signed out (at start, or a login that
+    // expired) gets the sign-in card at once, before a request fails.
+    connect(m_client, &AcpClientObject::authStatusChanged, this, [this](bool authenticated) {
+        const bool wasSignedOut = std::exchange(m_signedOut, !authenticated);
+        if (!authenticated && !wasSignedOut)
+            offerSignInIfSignedOut();
+    });
+    // OPENMV-DIFF //
     connect(m_client, &AcpClientObject::errorOccurred,
             this, &AcpChatController::errorOccurred);
 
@@ -239,6 +250,7 @@ void AcpChatController::disconnectFromServer()
     m_authMethods.clear();
     // OPENMV-DIFF //
     m_authChoices.clear();
+    m_signedOut = false;
     m_serverId.clear();
     m_hiddenReplaySessionId.clear();
     // OPENMV-DIFF //
@@ -286,6 +298,7 @@ void AcpChatController::createNewSession(const FilePath &workingDirectory)
         m_sessionId = response->sessionId();
         forgetSentEditorState(); // OPENMV-DIFF
         emit sessionCreated(m_sessionId);
+        offerSignInIfSignedOut(); // OPENMV-DIFF
 
         if (const auto &opts = response->configOptions(); opts.has_value() && !opts->isEmpty()) {
             qCDebug(logController) << "Session configOptions raw array size:" << opts->size();
@@ -621,6 +634,16 @@ void AcpChatController::requestSignIn()
     emit authenticationRequired(m_authChoices);
 }
 
+void AcpChatController::offerSignInIfSignedOut()
+{
+    // Only once a chat is open: before that the user is still choosing how to
+    // start one, and the card would take over that page.
+    if (!m_signedOut || m_sessionId.isEmpty() || m_authChoices.isEmpty() || m_signInProcess)
+        return;
+    m_resumeAfterSignIn = {}; // the session carries on
+    emit authenticationRequired(m_authChoices);
+}
+
 bool AcpChatController::handleAuthRequired(const Error &error, const std::function<void()> &resume)
 {
     if (error.code() != ErrorCode::Authentication_required || m_authChoices.isEmpty())
@@ -657,8 +680,11 @@ void AcpChatController::sendAuthenticate(const AuthChoice &choice, const QMap<QS
 void AcpChatController::runTerminalSignIn(const AuthChoice &choice)
 {
     // The agent's own command with the method's arguments, launched the way the
-    // agent itself is (bundled Node.js, PATH), in the Shell pane so the user can
-    // follow its prompts; exit status 0 means signed in.
+    // agent itself is (bundled Node.js, PATH). It runs hidden in a pseudo
+    // terminal, as these logins expect one: the link it prints goes on the
+    // sign-in card (the command opens the browser itself, the card's link is
+    // for when it can't), a code it asks for can be typed on the card, and
+    // exit status 0 means signed in (the browser's callback lands back in it).
     const QList<AcpSettings::ServerInfo> servers = AcpSettings::servers();
     const auto server = std::find_if(servers.begin(), servers.end(),
                                      [this](const AcpSettings::ServerInfo &s) { return s.id == m_serverId; });
@@ -678,15 +704,35 @@ void AcpChatController::runTerminalSignIn(const AuthChoice &choice)
         env.set(it.key(), it.value());
     const AgentLaunch launch = resolveAgentLaunch(command, env);
 
-    if (m_signInProcess)
+    if (m_signInProcess) {
+        m_signInProcess->disconnect(this);
+        m_signInProcess->kill();
         m_signInProcess->deleteLater();
+    }
     m_signInProcess = new Process(this);
-    m_signInProcess->setTerminalMode(TerminalMode::Run);
+    Pty::Data pty;
+    pty.resize(QSize(2000, 50)); // wide enough that a long sign-in link stays on one line
+    m_signInProcess->setPtyData(pty);
+    m_signInProcess->setProcessMode(ProcessMode::Writer);
     m_signInProcess->setCommand(launch.command);
     m_signInProcess->setEnvironment(launch.environment.value_or(env));
     m_signInProcess->setWorkingDirectory(withDefaultWorkingDirectory(m_workingDirectory));
     Process *process = m_signInProcess;
-    connect(process, &Process::done, this, [this, process] {
+    auto output = std::make_shared<QString>();
+    auto linkShown = std::make_shared<bool>(false);
+    connect(process, &Process::readyReadStandardOutput, this, [this, process, output, linkShown] {
+        static const QRegularExpression ansi(QStringLiteral(R"(\x1b\[[0-9;?]*[A-Za-z]|\x1b\][^\x07]*\x07)"));
+        static const QRegularExpression link(QStringLiteral(R"(https://\S+)"));
+        output->append(QString::fromUtf8(process->readAllRawStandardOutput()).remove(ansi));
+        if (*linkShown)
+            return;
+        const QRegularExpressionMatch m = link.match(*output);
+        if (!m.hasMatch())
+            return;
+        *linkShown = true;
+        emit authenticationLinkReady(m.captured());
+    });
+    connect(process, &Process::done, this, [this, process, output] {
         const bool ok = process->exitStatus() == QProcess::NormalExit && process->exitCode() == 0;
         const bool startFailed = process->result() == ProcessResult::StartFailed;
         const QString errorString = process->errorString();
@@ -695,17 +741,29 @@ void AcpChatController::runTerminalSignIn(const AuthChoice &choice)
             m_signInProcess = nullptr;
         process->deleteLater();
         if (!ok) {
-            emit authenticationFailed(
-                startFailed ? Tr::tr("Could not start the sign-in command: %1").arg(errorString)
-                            : Tr::tr("Sign-in did not finish (exit code %1).").arg(exitCode));
+            // The command's last words say why (a refused code, a timeout).
+            QStringList lines = output->split(QRegularExpression("[\r\n]+"), Qt::SkipEmptyParts);
+            const QString last = lines.isEmpty() ? QString() : lines.last().trimmed();
+            QString message = startFailed
+                ? Tr::tr("Could not start the sign-in command: %1").arg(errorString)
+                : Tr::tr("Sign-in did not finish (exit code %1).").arg(exitCode);
+            if (!startFailed && !last.isEmpty())
+                message += QLatin1Char(' ') + last;
+            emit authenticationFailed(message);
             return;
         }
         // The agent reads its credentials when it starts.
         relaunchAgent([this] { finishSignIn(); });
     });
     emit authenticationInProgress(
-        Tr::tr("Finish signing in to %1 in the Shell pane below.").arg(m_serverName));
+        Tr::tr("Finish signing in to %1 in your browser.").arg(m_serverName));
     process->start();
+}
+
+void AcpChatController::sendSignInCode(const QString &code)
+{
+    if (m_signInProcess && m_signInProcess->state() == QProcess::Running)
+        m_signInProcess->writeRaw(code.trimmed().toUtf8() + "\r");
 }
 
 std::function<void()> AcpChatController::resumeCurrentSession()
@@ -987,6 +1045,15 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
             })) {
             return;
         }
+        // Reopening the chat after signing in failed: most often a session made
+        // while signed out, which the agent never saved as it had no messages.
+        // Carry on in a new session in the same folder.
+        if (error && hiddenReplay) {
+            qCInfo(logController) << "Could not reopen" << sessionId << "after signing in:"
+                                  << error->message() << "- starting a new session";
+            createNewSession(cwd);
+            return;
+        }
         if (error) {
             emit errorOccurred(Tr::tr("Failed to load session: %1").arg(error->message()));
             return;
@@ -995,6 +1062,7 @@ void AcpChatController::loadSession(const QString &sessionId, const FilePath &wo
         m_sessionId = sessionId;
         forgetSentEditorState(); // OPENMV-DIFF
         emit sessionLoaded(m_sessionId);
+        offerSignInIfSignedOut(); // OPENMV-DIFF
 
         auto resp = fromJson<LoadSessionResponse>(QJsonValue(result));
         if (resp) {

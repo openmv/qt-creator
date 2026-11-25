@@ -566,6 +566,10 @@ AcpChatTab::AcpChatTab(QWidget *parent)
     // OPENMV-DIFF //
     connect(m_controller, &AcpChatController::authenticationInProgress,
             m_chatPanel, &ChatPanel::showAuthenticationProgress);
+    connect(m_controller, &AcpChatController::authenticationLinkReady,
+            m_chatPanel, &ChatPanel::showAuthenticationLink);
+    connect(m_chatPanel, &ChatPanel::signInCodeEntered,
+            m_controller, &AcpChatController::sendSignInCode);
     connect(m_controller, &AcpChatController::authenticationSucceeded,
             this, [this](const QString &message) {
         m_chatPanel->resolveAuthentication(message);

@@ -88,6 +88,8 @@ public:
     // request fails with "authentication required".
     void requestSignIn();
     bool canSignIn() const { return !m_authChoices.isEmpty(); }
+    // A code the browser sign-in page showed, for a login that asks for one.
+    void sendSignInCode(const QString &code);
     // OPENMV-DIFF //
     void setConfigOption(const QString &configId, const QString &value);
     void sendPermissionResponse(const QJsonValue &id, const QString &optionId);
@@ -128,8 +130,10 @@ signals:
     // OPENMV-DIFF //
     // void authenticationRequired(const QList<Acp::AuthMethod> &methods);
     void authenticationRequired(const QList<AcpClient::Internal::AuthChoice> &choices);
-    // A terminal sign-in is running in the Shell pane.
+    // A terminal sign-in is running (in the background, see runTerminalSignIn),
+    // and the link it opens in the browser.
     void authenticationInProgress(const QString &message);
+    void authenticationLinkReady(const QString &url);
     void authenticationSucceeded(const QString &message);
     // OPENMV-DIFF //
     void authenticationFailed(const QString &error);
@@ -166,8 +170,10 @@ private:
     std::function<void()> m_resumeAfterSignIn;
     std::function<void()> m_afterInitialize;
     bool m_relaunching = false;
+    bool m_signedOut = false; // the agent reported auth/status_update "unauthenticated"
     QString m_hiddenReplaySessionId;
     Utils::Process *m_signInProcess = nullptr;
+    void offerSignInIfSignedOut();
     bool handleAuthRequired(const Acp::Error &error, const std::function<void()> &resume);
     void sendAuthenticate(const AuthChoice &choice, const QMap<QString, QString> &values);
     void runTerminalSignIn(const AuthChoice &choice);

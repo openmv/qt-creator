@@ -230,6 +230,12 @@ void AcpClientObject::handleNotification(const QString &method, const QJsonObjec
     //     qCWarning(logClient) << "Unknown notification method:" << method;
     // }
     // OPENMV-DIFF //
+    } else if (method == QLatin1String("auth/status_update")) {
+        // The agent's sign-in state (pushed at start and whenever it changes):
+        // "authenticated" or "unauthenticated" (newer than the ACP library here).
+        const QString state = params.value("state").toString();
+        if (!state.isEmpty())
+            emit authStatusChanged(state == QLatin1String("authenticated"));
     } else if (method.startsWith(QLatin1Char('_'))) {
         // ACP extension methods (agent-specific, e.g. "_auth/status_update") are
         // meant to be ignored by clients that don't know them; don't warn.

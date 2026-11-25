@@ -75,6 +75,24 @@ public:
         return QSize(0, QTabBar::minimumSizeHint().height());
     }
 
+    // At least as wide as the tab's icon, name, padding and close button need.
+    // The macOS style leaves the icon and button out of a styled tab's width, so
+    // the centered name was clipped on both sides; elsewhere this changes
+    // nothing (the style's width is already enough).
+    QSize tabSizeHint(int index) const override
+    {
+        QSize size = Utils::DocumentTabBar::tabSizeHint(index);
+        int needed = fontMetrics().horizontalAdvance(tabText(index)) + 2 * 8 + 8; // the tab QSS's padding
+        if (!tabIcon(index).isNull())
+            needed += iconSize().width() + 6;
+        for (const ButtonPosition side : {QTabBar::LeftSide, QTabBar::RightSide}) {
+            if (const QWidget *button = tabButton(index, side))
+                needed += button->sizeHint().width() + 4;
+        }
+        size.setWidth(qMax(size.width(), needed));
+        return size;
+    }
+
     // Where the current tab is drawn. While a tab is dragged (and while it slides
     // back into place afterwards) QTabBar draws it with a temporary child widget
     // that it positions during its own paintEvent; that is the only child that is

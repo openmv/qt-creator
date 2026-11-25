@@ -1501,6 +1501,8 @@ void ChatPanel::addAuthenticationRequest(const QList<AuthChoice> &methods)
 // OPENMV-DIFF //
 {
     m_messageView->addAuthenticationRequest(methods);
+    connect(m_messageView, &AcpMessageView::signInCodeEntered,
+            this, &ChatPanel::signInCodeEntered, Qt::UniqueConnection); // OPENMV-DIFF
     connect(m_messageView, &AcpMessageView::authenticateRequested,
             this, &ChatPanel::authenticateRequested, Qt::UniqueConnection);
 }
@@ -1514,6 +1516,11 @@ void ChatPanel::showAuthenticationError(const QString &error)
 void ChatPanel::showAuthenticationProgress(const QString &message)
 {
     m_messageView->showAuthenticationProgress(message);
+}
+
+void ChatPanel::showAuthenticationLink(const QString &url)
+{
+    m_messageView->showAuthenticationLink(url);
 }
 // OPENMV-DIFF //
 
