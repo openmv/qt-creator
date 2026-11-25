@@ -1196,14 +1196,15 @@ void AcpChatTab::updateTitle()
     // OPENMV-DIFF //
     // m_title = m_currentServerName.isEmpty() ? Tr::tr("New Chat") : m_currentServerName;
     // OPENMV-DIFF //
-    // The chat's own title, else the start of the first message (first line, cut
-    // to a tab's length), else the agent's name until something is said.
+    // The chat's own title, else the start of the first message (first line),
+    // else the agent's name until something is said; cut to a tab's length (the
+    // tooltip has the whole title).
     QString title = !m_customTitle.isEmpty() ? m_customTitle : m_agentTitle;
-    if (title.isEmpty() && !m_firstPrompt.isEmpty()) {
-        title = m_firstPrompt.section(QLatin1Char('\n'), 0, 0).simplified();
-        if (title.size() > 32)
-            title = title.left(31).trimmed() + QChar(0x2026); // ...
-    }
+    if (title.isEmpty() && !m_firstPrompt.isEmpty())
+        title = m_firstPrompt.section(QLatin1Char('\n'), 0, 0);
+    title = title.simplified();
+    if (title.size() > 32)
+        title = title.left(31).trimmed() + QChar(0x2026); // ...
     if (title.isEmpty())
         title = m_currentServerName;
     m_title = title.isEmpty() ? Tr::tr("New Chat") : title;
