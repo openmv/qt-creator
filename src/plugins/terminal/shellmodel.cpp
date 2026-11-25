@@ -2,6 +2,8 @@
 // SPDX-License-Identifier: LicenseRef-Qt-Commercial OR GPL-3.0+ OR GPL-3.0 WITH Qt-GPL-exception-1.0
 
 #include "shellmodel.h"
+
+#include <algorithm> // OPENMV-DIFF
 // OPENMV-DIFF //
 #include "terminalsettings.h"
 // OPENMV-DIFF //
@@ -193,10 +195,29 @@ ShellModelPrivate::ShellModelPrivate()
         });
 
         // ... and filter out non-existing shells.
-        localShells = Utils::transform(Utils::filtered(shells, &FilePath::exists),
-                                       [&iconProvider](const FilePath &shell) {
-                                           return ShellItemBuilder(iconProvider, shell).item();
-                                       });
+        // OPENMV-DIFF //
+        // localShells = Utils::transform(Utils::filtered(shells, &FilePath::exists),
+        //                                [&iconProvider](const FilePath &shell) {
+        //                                    return ShellItemBuilder(iconProvider, shell).item();
+        //                                });
+        // Best first, like the Windows list: the user's login shell, then the
+        // common interactive shells, then sh, then the rest in /etc/shells order.
+        FilePaths existing = Utils::filtered(shells, &FilePath::exists);
+        const QString loginShell = FilePath::fromUserInput(qtcEnvironmentVariable("SHELL")).fileName();
+        const QStringList preferred{"zsh", "bash", "fish", "sh"};
+        const auto rank = [&](const FilePath &shell) {
+            const QString name = shell.fileName();
+            if (!loginShell.isEmpty() && name == loginShell)
+                return 0;
+            const int i = preferred.indexOf(name);
+            return i >= 0 ? 1 + i : 1 + int(preferred.size());
+        };
+        std::stable_sort(existing.begin(), existing.end(),
+                         [&](const FilePath &a, const FilePath &b) { return rank(a) < rank(b); });
+        localShells = Utils::transform(existing, [&iconProvider](const FilePath &shell) {
+            return ShellItemBuilder(iconProvider, shell).item();
+        });
+        // OPENMV-DIFF //
     }
 }
 
