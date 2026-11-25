@@ -19,6 +19,7 @@
 #include <QCheckBox>
 #include <QComboBox>
 #include <QDockWidget>
+#include <QFocusFrame> // OPENMV-DIFF
 #include <QFormLayout>
 #include <QGroupBox>
 #include <QLabel>
@@ -661,9 +662,54 @@ static void drawPrimitiveTweakedForDarkTheme(QStyle::PrimitiveElement element,
     painter->restore();
 }
 
+
+// OPENMV-DIFF //
+// Qt's macOS style still draws the pre-macOS 26 text field: a square box.
+// AppKit's fields (and Qt's own combo boxes) are rounded with a hairline
+// border, so line edits and spin boxes stood out on every settings page.
+// Draw them the AppKit way; Windows and Linux use other styles.
+static constexpr qreal kMacFieldRadius = 5.0;
+
+static bool isMacTextField(const QWidget *widget, const QStyleOption *option)
+{
+    if (!HostOsInfo::isMacHost() || !widget || !qobject_cast<const QLineEdit *>(widget))
+        return false;
+    if (qobject_cast<const QComboBox *>(widget->parentWidget()))
+        return false; // an editable combo box draws its own field
+    const auto frame = qstyleoption_cast<const QStyleOptionFrame *>(option);
+    return frame && frame->lineWidth > 0; // frameless editors (item views) stay flat
+}
+
+static void drawMacTextField(const QStyleOption *option, QPainter *painter)
+{
+    painter->save();
+    painter->setRenderHint(QPainter::Antialiasing);
+    const QRectF r = QRectF(option->rect).adjusted(0.5, 0.5, -0.5, -0.5);
+    if (!(option->state & QStyle::State_Enabled))
+        painter->setOpacity(0.5);
+    QColor border = option->palette.color(QPalette::Text);
+    border.setAlphaF(0.28);
+    painter->setPen(QPen(border, 1));
+    // The theme's field colour (what the combo boxes are filled with), not the
+    // near-black base Qt's macOS style puts in a line edit's palette.
+    const Theme *theme = creatorTheme();
+    painter->setBrush(theme ? theme->palette().color(QPalette::Base) : option->palette.base().color());
+    painter->drawRoundedRect(r, kMacFieldRadius, kMacFieldRadius);
+    painter->restore();
+}
+// OPENMV-DIFF //
+
 void ManhattanStyle::drawPrimitive(PrimitiveElement element, const QStyleOption *option,
                                    QPainter *painter, const QWidget *widget) const
 {
+    // OPENMV-DIFF //
+    if ((element == PE_PanelLineEdit || element == PE_FrameLineEdit) && !panelWidget(widget)
+        && isMacTextField(widget, option)) {
+        if (element == PE_PanelLineEdit)
+            drawMacTextField(option, painter);
+        return;
+    }
+    // OPENMV-DIFF //
     if (panelWidget(widget)) {
         drawPrimitiveForPanelWidget(element, option, painter, widget);
     } else if (
@@ -964,6 +1010,25 @@ void ManhattanStyle::drawControl(
         QPainter *painter,
         const QWidget *widget) const
 {
+    // OPENMV-DIFF //
+    // The focus ring around a rounded field follows its corners.
+    if (element == CE_FocusFrame && HostOsInfo::isMacHost()) {
+        const auto *focusFrame = qobject_cast<const QFocusFrame *>(widget);
+        const QWidget *target = focusFrame ? focusFrame->widget() : nullptr;
+        if (qobject_cast<const QLineEdit *>(target) || qobject_cast<const QAbstractSpinBox *>(target)) {
+            painter->save();
+            painter->setRenderHint(QPainter::Antialiasing);
+            QColor ring = option->palette.color(QPalette::Highlight);
+            ring.setAlphaF(0.65);
+            painter->setPen(QPen(ring, 3));
+            painter->setBrush(Qt::NoBrush);
+            const QRectF r = QRectF(option->rect).adjusted(1.5, 1.5, -1.5, -1.5);
+            painter->drawRoundedRect(r, kMacFieldRadius + 1.5, kMacFieldRadius + 1.5);
+            painter->restore();
+            return;
+        }
+    }
+    // OPENMV-DIFF //
     if (!panelWidget(widget) && !qobject_cast<const QMenu *>(widget)) {
         // Workaround for QTBUG-136215
         if constexpr (HostOsInfo::isMacHost()) {
