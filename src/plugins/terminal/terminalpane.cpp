@@ -295,7 +295,7 @@ QWidget *TerminalPane::outputWidget(QWidget *parent)
         // macOS centres a document-mode tab's label; lay it out left to right
         // like the other platforms (and the AI chat tabs).
 #ifdef Q_OS_MAC
-        m_tabWidget.tabBar()->setStyle(new Utils::MacDocumentTabStyle);
+        Utils::MacDocumentTabStyle::applyTo(m_tabWidget.tabBar());
 #endif
         // OPENMV-DIFF //
         // OPENMV-DIFF //

@@ -16,6 +16,9 @@
 #include <QPainter>
 #include <QProxyStyle>
 #include <QStyleOption>
+#include <QTabBar>
+#include <QAbstractButton>
+#include <QChildEvent>
 
 namespace Utils {
 
@@ -29,12 +32,66 @@ class MacDocumentTabStyle : public QProxyStyle
 public:
     MacDocumentTabStyle() : QProxyStyle() {} // no base: the application style, not owned
 
+    // Style a tab bar and the close buttons it creates for its tabs (a style
+    // does not reach a widget's children by itself).
+    static void applyTo(QTabBar *tabBar)
+    {
+        auto *style = new MacDocumentTabStyle;
+        style->setParent(tabBar);
+        tabBar->setStyle(style);
+        tabBar->installEventFilter(style);
+    }
+
+protected:
+    bool eventFilter(QObject *watched, QEvent *event) override
+    {
+        if (event->type() == QEvent::ChildPolished) {
+            auto *child = static_cast<QChildEvent *>(event)->child();
+            if (auto *button = qobject_cast<QAbstractButton *>(child)) {
+                if (button->style() != this)
+                    button->setStyle(this);
+            }
+        }
+        return QProxyStyle::eventFilter(watched, event);
+    }
+
+public:
+
     int styleHint(StyleHint hint, const QStyleOption *option = nullptr, const QWidget *widget = nullptr,
                   QStyleHintReturn *returnData = nullptr) const override
     {
         if (hint == QStyle::SH_TabBar_Alignment)
             return Qt::AlignLeft;
+        // Close buttons on the right, as on the other platforms (macOS: left).
+        if (hint == QStyle::SH_TabBar_CloseButtonPosition)
+            return QTabBar::RightSide;
         return QProxyStyle::styleHint(hint, option, widget, returnData);
+    }
+
+    int pixelMetric(PixelMetric metric, const QStyleOption *option = nullptr,
+                    const QWidget *widget = nullptr) const override
+    {
+        // The editor and chat tabs' 20x20 close button.
+        if (metric == PM_TabCloseIndicatorWidth || metric == PM_TabCloseIndicatorHeight)
+            return 20;
+        return QProxyStyle::pixelMetric(metric, option, widget);
+    }
+
+    // A tab bar's own close buttons drawn like the editor tabs': the same
+    // icon, always shown, with the theme's hover tint.
+    void drawPrimitive(PrimitiveElement element, const QStyleOption *option, QPainter *painter,
+                       const QWidget *widget = nullptr) const override
+    {
+        if (element != PE_IndicatorTabClose) {
+            QProxyStyle::drawPrimitive(element, option, painter, widget);
+            return;
+        }
+        if ((option->state & State_MouseOver) && (option->state & State_Enabled))
+            painter->fillRect(option->rect, creatorColor(Theme::BackgroundColorHover));
+        const bool dark = creatorTheme() && creatorTheme()->flag(Theme::DarkUserInterface);
+        const QIcon icon(dark ? QLatin1String(":/icons/close_button_light_grey.png")
+                              : QLatin1String(":/icons/close_button_dark.png"));
+        icon.paint(painter, option->rect, Qt::AlignCenter);
     }
 
     void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter,
@@ -49,6 +106,18 @@ public:
             painter->setClipRect(tab->rect.adjusted(0, 0, -1, 0), Qt::IntersectClip);
             QProxyStyle::drawControl(element, option, painter, widget);
             painter->restore();
+            // The current tab's sides, so it stands apart from the tabs next to
+            // it (what the AI chat tab bar draws for itself).
+            if (tab->state & State_Selected) {
+                painter->save();
+                painter->setPen(creatorColor(Theme::SplitterColor));
+                const QRect r = tab->rect;
+                if (tab->position != QStyleOptionTab::Beginning
+                    && tab->position != QStyleOptionTab::OnlyOneTab)
+                    painter->drawLine(r.left(), r.top(), r.left(), r.bottom());
+                painter->drawLine(r.right(), r.top(), r.right(), r.bottom());
+                painter->restore();
+            }
             return;
         }
         if (element != CE_TabBarTabLabel || !tab) {
