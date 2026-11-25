@@ -24,6 +24,7 @@
 #include <utils/macroexpander.h>
 #include <utils/terminalhooks.h>
 #include <utils/utilsicons.h>
+#include <utils/macdocumenttabstyle.h> // OPENMV-DIFF
 
 #include <QDir> // OPENMV-DIFF
 // OPENMV-DIFF //
@@ -290,6 +291,13 @@ QWidget *TerminalPane::outputWidget(QWidget *parent)
         // Document mode turns the tab bar's base line back on: a second divider
         // under the one the tab bar draws itself.
         m_tabWidget.tabBar()->setDrawBase(false);
+        // OPENMV-DIFF //
+        // macOS centres a document-mode tab's label; lay it out left to right
+        // like the other platforms (and the AI chat tabs).
+#ifdef Q_OS_MAC
+        m_tabWidget.tabBar()->setStyle(new Utils::MacDocumentTabStyle);
+#endif
+        // OPENMV-DIFF //
         // OPENMV-DIFF //
         m_tabWidget.setTabsClosable(true);
         m_tabWidget.setMovable(true);
