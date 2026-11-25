@@ -752,7 +752,10 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         // A chat reopened after a restart: load its session (replays the history)
         // instead of offering the picker, if the agent can.
         const QString restoreId = std::exchange(m_restoreSessionId, QString());
-        if (!restoreId.isEmpty() && m_controller->supportsLoadSession()) {
+        // A chat nothing was ever said in has no session worth reopening (the
+        // agent doesn't keep an empty one): it simply starts afresh.
+        const bool hadMessages = !m_firstPrompt.isEmpty() || !m_agentTitle.isEmpty() || !m_customTitle.isEmpty();
+        if (!restoreId.isEmpty() && hadMessages && m_controller->supportsLoadSession()) {
             m_loadingRestoredSession = true;
             showLoading();
             m_controller->loadSession(restoreId,
@@ -784,12 +787,17 @@ AcpChatTab::AcpChatTab(QWidget *parent)
             m_stack->setCurrentIndex(2);
         if (std::exchange(m_loadingRestoredSession, false)) {
             // The agent no longer has the chat (agents drop old sessions after
-            // a while): not an error of the user's making, so say so calmly and
-            // offer the picker.
+            // a while): not an error of the user's making. Say so quietly, drop
+            // the stale title and offer the picker.
+            const QString title = m_title;
+            m_customTitle.clear();
+            m_agentTitle.clear();
+            m_firstPrompt.clear();
+            updateTitle();
             showSessionPicker();
-            m_chatPanel->addErrorMessage(
-                Tr::tr("The earlier chat could not be reopened, the agent no longer has it (%1). "
-                       "Choose another chat or start a new one.").arg(msg));
+            m_chatPanel->addStatusMessage(
+                Tr::tr("\"%1\" could not be reopened: the agent no longer has that chat. "
+                       "Choose another one or start a new chat.").arg(title));
             return;
         }
         // OPENMV-DIFF //
