@@ -91,14 +91,22 @@ static ApplicationProgressView *sharedProgressView = nil;
         // correct resolution).
         NSString *customIconPath = [[[NSBundle mainBundle] bundlePath]
             stringByAppendingPathComponent:@"Icon\r"];
-        if ([[NSFileManager defaultManager] fileExistsAtPath:customIconPath]) {
-            dockIcon = [[NSApp applicationIconImage] retain];
-            userCustomIcon = true;
-        } else {
-            dockIcon = [[NSImage alloc]
-                initByReferencingFile:(Core::ICore::resourcePath("icon.png").path().toNSString())];
-            userCustomIcon = false;
-        }
+        // OPENMV-DIFF //
+        // if ([[NSFileManager defaultManager] fileExistsAtPath:customIconPath]) {
+        //     dockIcon = [[NSApp applicationIconImage] retain];
+        //     userCustomIcon = true;
+        // } else {
+        //     dockIcon = [[NSImage alloc]
+        //         initByReferencingFile:(Core::ICore::resourcePath("icon.png").path().toNSString())];
+        //     userCustomIcon = false;
+        // }
+        // OpenMV IDE ships no Resources/icon.png (Qt Creator's polygonal logo):
+        // drawing it left the Dock tile blank. Draw the app's own icon (from
+        // its .icns, already padded like any app icon) at full size instead.
+        Q_UNUSED(customIconPath)
+        dockIcon = [[NSApp applicationIconImage] retain];
+        userCustomIcon = true;
+        // OPENMV-DIFF //
     }
     NSRect boundary = [self bounds];
     NSRect iconRect = boundary;
