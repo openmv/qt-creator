@@ -17,6 +17,9 @@
 #include <QTabWidget>
 // OPENMV-DIFF //
 #include <QApplication>
+#include <QStyleOption>
+#include <QProxyStyle>
+#include <QPainter>
 #include <QStackedWidget>
 #include <utils/theme/theme.h>
 // OPENMV-DIFF //
@@ -50,6 +53,59 @@ namespace AcpClient::Internal {
 // bar's look (its stylesheet is applied by the TabbedEditor plugin by object
 // name) and span the full width; the trailing "New Chat" tab is the new-tab
 // control, so it has no close button and there is no toolbar.
+#ifdef Q_OS_MAC
+// The macOS style lays a document-mode tab's label out symmetrically (room for
+// a close button on both sides, text centred in what is left), so a long name
+// clips at both ends even when the tab is wide enough. Lay it out left to
+// right instead: icon, text, close button, like the editor tabs on the other
+// platforms.
+class ChatTabBarStyle : public QProxyStyle
+{
+public:
+    ChatTabBarStyle() : QProxyStyle() {} // no base: the application style, not owned
+
+    int styleHint(StyleHint hint, const QStyleOption *option = nullptr, const QWidget *widget = nullptr,
+                  QStyleHintReturn *returnData = nullptr) const override
+    {
+        if (hint == QStyle::SH_TabBar_Alignment)
+            return Qt::AlignLeft;
+        return QProxyStyle::styleHint(hint, option, widget, returnData);
+    }
+
+    void drawControl(ControlElement element, const QStyleOption *option, QPainter *painter,
+                     const QWidget *widget) const override
+    {
+        const auto *tab = qstyleoption_cast<const QStyleOptionTab *>(option);
+        if (element != CE_TabBarTabLabel || !tab) {
+            QProxyStyle::drawControl(element, option, painter, widget);
+            return;
+        }
+        const QRect r = tab->rect;
+        int left = r.left() + 8;
+        int right = r.right() - 8;
+        if (tab->leftButtonSize.width() > 0)
+            left += tab->leftButtonSize.width() + 4;
+        if (tab->rightButtonSize.width() > 0)
+            right -= tab->rightButtonSize.width() + 4;
+        if (!tab->icon.isNull()) {
+            const QSize iconSize = tab->iconSize.isValid() ? tab->iconSize : QSize(16, 16);
+            const QRect iconRect(left, r.center().y() - iconSize.height() / 2, iconSize.width(), iconSize.height());
+            tab->icon.paint(painter, iconRect, Qt::AlignCenter,
+                            (tab->state & State_Enabled) ? QIcon::Normal : QIcon::Disabled,
+                            (tab->state & State_Selected) ? QIcon::On : QIcon::Off);
+            left += iconSize.width() + 4;
+        }
+        const QRect textRect(left, r.top(), qMax(0, right - left + 1), r.height());
+        // The theme's text colour (what the editor tabs use), not the palette's
+        // window text, which the native style does not use for tabs either.
+        QPalette palette = tab->palette;
+        palette.setColor(QPalette::WindowText, Utils::creatorColor(Utils::Theme::TextColorNormal));
+        proxy()->drawItemText(painter, textRect, Qt::AlignLeft | Qt::AlignVCenter | Qt::TextShowMnemonic,
+                              palette, tab->state & State_Enabled, tab->text, QPalette::WindowText);
+    }
+};
+#endif
+
 class ChatTabBar : public Utils::DocumentTabBar
 {
 public:
@@ -64,6 +120,9 @@ public:
         setDrawBase(false);
         setUsesScrollButtons(true); // OPENMV-DIFF: like the editor tabs, when they overflow
         setElideMode(Qt::ElideNone); // like the editor tabs: never truncate the name
+#ifdef Q_OS_MAC
+        setStyle(new ChatTabBarStyle);
+#endif
         const QString tabStyle = qApp->property("openmv.tabBarStyleSheet").toString();
         if (!tabStyle.isEmpty())
             setStyleSheet(tabStyle);

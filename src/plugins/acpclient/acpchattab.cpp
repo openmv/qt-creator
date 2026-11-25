@@ -782,8 +782,16 @@ AcpChatTab::AcpChatTab(QWidget *parent)
         // list) to show the error; a reopened chat also gets the picker.
         if (std::exchange(m_loadingSession, false))
             m_stack->setCurrentIndex(2);
-        if (std::exchange(m_loadingRestoredSession, false))
+        if (std::exchange(m_loadingRestoredSession, false)) {
+            // The agent no longer has the chat (agents drop old sessions after
+            // a while): not an error of the user's making, so say so calmly and
+            // offer the picker.
             showSessionPicker();
+            m_chatPanel->addErrorMessage(
+                Tr::tr("The earlier chat could not be reopened, the agent no longer has it (%1). "
+                       "Choose another chat or start a new one.").arg(msg));
+            return;
+        }
         // OPENMV-DIFF //
         if (m_stack->currentIndex() == 3)
             m_stack->setCurrentIndex(0);
