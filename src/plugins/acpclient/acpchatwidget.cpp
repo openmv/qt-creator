@@ -76,6 +76,16 @@ public:
                      const QWidget *widget) const override
     {
         const auto *tab = qstyleoption_cast<const QStyleOptionTab *>(option);
+        if (element == CE_TabBarTabShape && tab) {
+            // The native shape ends in a 1px separator along the tab's right
+            // edge, which the other platforms don't have; the tab bar draws the
+            // current tab's own side lines itself.
+            painter->save();
+            painter->setClipRect(tab->rect.adjusted(0, 0, -1, 0), Qt::IntersectClip);
+            QProxyStyle::drawControl(element, option, painter, widget);
+            painter->restore();
+            return;
+        }
         if (element != CE_TabBarTabLabel || !tab) {
             QProxyStyle::drawControl(element, option, painter, widget);
             return;
